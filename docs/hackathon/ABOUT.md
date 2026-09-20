@@ -1,0 +1,55 @@
+Connect your coding agent to AWS, build a real application, and ship it live for a chance to win $5,000 in AWS credits and an AWS Builder swag bundle.
+
+Open to anyone with an AWS account, new or existing. Pick one of five app categories and a lane, Community or Startup. Shipping live is the whole point. [Terms Apply](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules)
+
+**Who can enter:** Open to builders 18 or older with a Builder Center profile. See [Rules ](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules)for country and employee exclusions.
+
+**How to qualify:** Every submission must include:
+
+* A coding agent connected to the AWS console, with documented proof of the connection
+* A live application running on AWS, reachable by a public URL
+* One of five app categories (below)
+* A lane: Community or Startup
+* An original application that has not been published before
+* Your project shows your development process, how the coding agent helped you ship, your category and lane, and a link to the live app
+
+**The ship gate:** Shipping is pass-or-fail. Your project has to be live on AWS and reachable by the judges and the AI scoring system. A project that is not live does not advance to judging, no matter how strong the idea is.
+
+**How submissions are judged:** Judging runs in two rounds after the ship gate:
+
+* Round 1, AI scoring: every qualifying submission is scored on creativity and storytelling, technical innovation, community and market impact, and communication quality. The top submissions advance.
+* Round 2, human judging: a panel of AWS experts reviews the shortlist and selects five winners across the categories.
+
+**App categories:** Every project fits one of five categories:
+
+* **Workplace efficiency:** Apps that help people and teams get more done: task automation, team dashboards, workflow engines.
+* **Daily life enhancement:** Apps that make everyday life easier: smart home controls, personal assistants, habit trackers.
+* **Commercial potential:** Apps built with a business in mind: SaaS tools, marketplace apps, vertical solutions.
+* **Personal expression:** Apps that help people create and share: art generators, music tools, content platforms.
+* **Social good:** Measurable improvements for underserved populations across three focus areas: **Education** (quality learning, skill-building, workforce development), **Health** (better health outcomes, access to quality food and health services), and **Climate resilience** (adapting to and withstanding climate-related challenges).
+
+**Community or Startup lane:** On top of your category, you pick one lane. The lane is about intent and audience, not the technology you use. Any category project can run in either lane.
+
+* **Startup:** A project pushed toward becoming a product, with a story about where it is headed. Best for builders thinking about product-market fit, a first user base, or a path to a real business.
+* **Community:** A project that helps a group the builder belongs to, such as a class, a local meetup, or an open-source project. Best for builders solving a problem for people around them.
+
+**Social Good category and AWS Social Impact Credits:** Builder Center and Zero to Shipped is partnering with the [AWS Skilling and Social Impact team](https://aws.amazon.com/about-aws/our-impact/) to develop the Social Good category criteria so that participating organizations can be eligible for [AWS Social Impact Credits](https://pulse.amazon/application/9XSD9BPP?source=zerotoshipped2026). Projects that deliver measurable impact and meet the eligibility requirements may qualify to apply for these credits, which provide access to AI and cloud resources.
+
+**How to tag your submission:** Tags route your project to the right category and lane for scoring, so every submission must carry two tags: one app category tag and one lane tag. Add them on your project in Builder Center before the deadline.
+
+* **App category tag (pick one):** #workplace-efficiency, #daily-life-enhancement, #commercial-potential, #social-good, or #personal-expression.
+* **Lane tag (pick one):** #startup or #community.
+
+**Prizes:** Five winning projects will be selected. Each winning project receives $5,000 in AWS credits, and one AWS Builder swag bundle worth about $600 (jacket, backpack, and keyboard). Each winning project team participant will also receive an official winner's certificate, and a custom digital badge. Total prize pool: $28,000.
+
+**Timeline**
+
+| Hackathon Milestone           | Date               |
+| ----------------------------- | ------------------ |
+| Launch                        | September 18       |
+| Projects due by               | October 2          |
+| Gate 1 (AI and human scoring) | Week of October 5  |
+| Gate 2 (human judging)        | Week of October 12 |
+| Winners Announced             | Week of October 19 |
+
+NO PURCHASE NECESSARY. VOID WHERE PROHIBITED.

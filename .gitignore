@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# uv
+.uv/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.tfvars
+
+# Build output
+dist/
+build/
+*.zip
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/

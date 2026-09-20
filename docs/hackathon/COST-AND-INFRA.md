@@ -1,0 +1,89 @@
+# What this project actually costs
+
+Checked against account 905543840246 on 2026-09-20, not assumed.
+
+`aws freetier get-free-tier-usage` returns seven rows for this account and
+**every one is `Always Free`**. There are no `12 Months Free` rows. The old
+12-month EC2 / RDS / S3 allowances do not apply here. Month-to-date net
+amortized cost is $0.00 — credits are absorbing the EC2 instance.
+
+So the only two things that matter: the Always Free allowances, which never
+expire and apply to every account, and the $50 of credits expiring next month.
+
+## Always Free — never expires, applies to us
+
+| Service | Allowance per month | What we'd use |
+| --- | --- | --- |
+| Lambda | 1,000,000 requests + 400,000 GB-seconds | a few thousand requests |
+| Lambda Function URL | no additional charge — part of Lambda | 1 endpoint |
+| DynamoDB | 25 GB storage; on-demand 2.5 M read + 1 M write request units | a few MB, a few thousand ops |
+| CloudFront | 1 TB out + 10 M requests + 2 M Functions invocations | well under a GB |
+| CloudWatch Logs | 5 GB ingestion | a few MB |
+| SNS / SQS | 1 M requests each | unused |
+
+A hackathon demo does not come within three orders of magnitude of any of these.
+
+## Not free — and what it actually comes to
+
+| Service | Rate | Our usage | Cost |
+| --- | --- | --- | --- |
+| S3 | ~$0.023/GB-month + request charges | a ~20 MB static site | **under $0.01/month** |
+| Bedrock Nova Lite | $0.06 / $0.24 per M tokens in/out | ~2,000 explanation calls ≈ 1.6 M in, 0.4 M out | **~$0.19 total** |
+| Bedrock Claude Haiku 4.5 | ~$1 / $5 per M tokens | same volume, if we upgrade for quality | **~$3.60 total** |
+| EC2 t4g.medium | ~$0.0336/hr | already running, by choice | ~$24/month, paid from credits |
+
+**The whole project, excluding the EC2 you're deliberately burning credits on,
+costs under one dollar for the entire hackathon.**
+
+## The actual insight
+
+Money is not the constraint. The constraint is that **$50 expires next month**,
+and expiring credits are worth nothing.
+
+That inverts one decision. Bedrock is the only line item in this project that
+costs real money, and it is the one that directly affects output quality. So
+don't economize on the model — economize on servers. Use Claude Haiku 4.5 for
+the explanation layer instead of Nova Lite if it reads better, and let the
+credits absorb it. Total difference is about three dollars against a balance
+that evaporates regardless.
+
+Keep Nova Lite for the menu-parsing calls, where the job is classification into
+a fixed catalog and a cheaper model is genuinely sufficient.
+
+## Correction on the EC2 box
+
+Last turn I suggested stopping it. That was wrong given your situation — the
+credits expire next month whether or not you spend them, so running the
+instance converts something worthless into something useful. Keep it.
+
+It stays out of the request path for a different reason, which still holds: the
+ship gate is evaluated from Oct 2 through the week of Oct 19, and an instance
+in the critical path is the likeliest way to lose the entire submission. The
+judged URL is CloudFront and Lambda. The box is yours for whatever else you want
+— building, video rendering, other hackathons.
+
+## Final stack
+
+```
+S3 + CloudFront          static frontend, HTTPS          ~$0.01/mo
+Lambda + Function URL    solve · frontier · audit · parse · explain    free
+DynamoDB (on-demand)     shared menu library + usage counters          free
+Bedrock                  Nova Lite for parsing, Haiku 4.5 for prose    ~$4 total
+CloudWatch Logs          structured logs, Logs Insights for metrics    free
+```
+
+DynamoDB earns its place only because of the shared menu library — strangers
+landing on the site pick from menus other people already added, which is the
+feature that makes the product generic rather than personal. If that feature is
+cut, the table goes with it and the app still works from bundled presets.
+
+Five services. No API Gateway, no Textract, no Step Functions, no EC2 in the
+request path — each omission justified in the write-up.
+
+## Sources
+
+- [AWS Free Tier now offers $200 in credits and 6-month free plan](https://aws.amazon.com/about-aws/whats-new/2025/07/aws-free-tier-credits-month-free-plan/)
+- [AWS Free Tier in 2026 — what actually stays free](https://dev.to/aiunplugged/aws-free-tier-in-2026-what-actually-stays-free-5bcp)
+- [AWS Free Tier Explained: What's Actually Free in 2026](https://spot.rackspace.com/blog/aws-free-tier)
+- [Amazon CloudFront pricing](https://aws.amazon.com/cloudfront/pricing/)
+- [Amazon Bedrock pricing in 2026](https://www.cloudzero.com/blog/amazon-bedrock-pricing/)

@@ -1,0 +1,18 @@
+[project]
+name = "plategap"
+version = "0.1.0"
+description = "Turns a fixed campus meal plan into the cheapest way to close its nutrition gaps."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "scipy>=1.14",
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["solver"]
