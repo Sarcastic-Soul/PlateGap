@@ -40,13 +40,13 @@ export const MAX_DISHES_PER_MEAL = 40;
    carries one word and an icon. */
 export const TABS = [
   { id: 'plan', label: 'The gap', icon: 'target',
-    hint: 'What your meal plan leaves out, and the cheapest way to close it' },
+    hint: 'What it leaves out, and what closing it costs' },
   { id: 'frontier', label: 'Spending', icon: 'trending-down',
-    hint: 'What each rupee buys: how much of the gap your money closes' },
+    hint: 'What each rupee of it buys' },
   { id: 'audit', label: 'Kitchen', icon: 'chef-hat',
-    hint: 'For whoever writes the menu: the one addition that saves the most' },
+    hint: 'The one menu change worth making' },
   { id: 'build', label: 'Build', icon: 'square-pen',
-    hint: 'Build a menu of your own, and share it as a link' },
+    hint: 'Make a menu of your own' },
   { id: 'data', label: 'Sources', icon: 'book-open',
-    hint: 'Where the numbers come from, and what this does not know' }
+    hint: 'Where the numbers come from' }
 ];

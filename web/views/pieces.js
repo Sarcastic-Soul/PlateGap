@@ -1,6 +1,6 @@
 /* Small things several tabs need. */
 
-import { html } from '../vendor/preact.js';
+import { html, useState } from '../vendor/preact.js';
 import { DAY_NAMES } from '../lib/constants.js';
 import {
   preciseMoney, round, dishName, nutrientName, nutrientUnit
@@ -8,12 +8,40 @@ import {
 import { state, update, isCustom, dishesOn, customTotal } from '../lib/store.js';
 import { Icon } from '../lib/icons.js';
 
-export function Stat({ value, label }) {
+export function Stat({ value, label, hero }) {
   return html`
-    <div class="stat">
+    <div class=${'stat' + (hero ? ' hero' : '')}>
       <div class="value">${value}</div>
       <div class="label">${label}</div>
     </div>`;
+}
+
+/* An explanation, out of the way until it is wanted.
+ *
+ * Every panel on this page used to carry a paragraph saying what it meant,
+ * and all of them together were the first four hundred words a new reader
+ * met -- before a single number. The paragraphs are unchanged; they are
+ * behind this.
+ *
+ * `popovertarget` and `popover` are the browser's own, so there is no
+ * JavaScript here at all: no open state, no outside-click listener, no
+ * z-index, and nothing that can leave a panel stuck open. The popover goes
+ * in the top layer, so opening one never moves the page underneath it. */
+let popovers = 0;
+
+export function Info({ label, children }) {
+  const [id] = useState(function () { popovers += 1; return 'info-' + popovers; });
+  const said = label || 'What this means';
+  return html`
+    <button class="info" type="button" popovertarget=${id}
+      aria-label=${said} title=${said}>
+      <${Icon} name="info" size=${14} />
+    </button>
+    ${/* "auto" spelled out, not a bare `popover` attribute: `popover` is an
+         enumerated attribute whose invalid-value default is "manual", and a
+         bare one arrives here as the string "true" -- which is invalid, so
+         the popover would neither close on Escape nor on a click outside. */ ''}
+    <div id=${id} popover="auto">${children}</div>`;
 }
 
 /* Everything that is true but not the answer.

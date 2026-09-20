@@ -49,23 +49,42 @@ function Costs({ costs }) {
     </div>`;
 }
 
+/* One recommendation, in the shape the table wants it. A function rather
+   than a component because it returns a <tr>, and a <tr> has to be a direct
+   child of the <tbody> it belongs to. */
+function Row(r, currency) {
+  const why = r.drivers.filter(function (d) { return d.contribution < 0; })
+    .map(function (d) {
+      return d.kind === 'floor' ? nutrientName(d.key) : d.key;
+    }).join(', ');
+  return html`
+    <tr key=${r.id || r.name}>
+      <td>
+        <div>${r.name}${r.proxy
+          ? html`<span class="pill warn"> estimated</span>` : null}</div>
+        <div class="why">${why ? 'mainly a cheap route to ' + why : ''}</div>
+        <${Costs} costs=${r.costs} />
+      </td>
+      <td class="num">${plural(r.days.length, 'day')}</td>
+      <td class="num">${money(r.monthlySaving, currency)}</td>
+      <td class="num"><b>${money(r.monthlySavingAllStudents, currency)}</b></td>
+    </tr>`;
+}
+
+/* A strip rather than a panel. It used to be a panel with a heading, which
+   put a control above the answer and made the first thing on the tab a thing
+   to fiddle with rather than a number to read. */
 function Students() {
   const [shown, setShown] = useState(state.students);
   return html`
-    <section class="panel">
-      <h2 class="with-icon">
-        <${Icon} name="user" />
-        <span>Who eats here</span>
-      </h2>
-      <label class="field">
-        <span>Students on this meal plan: <b>${shown}</b></span>
-        <input type="range" min="1" max="5000" step="1" value=${shown}
-          onInput=${function (event) { setShown(event.target.value); }}
-          onChange=${function (event) {
-            update({ students: parseInt(event.target.value, 10) });
-          }} />
-      </label>
-    </section>`;
+    <label class="field strip">
+      <span><${Icon} name="user" /> Students on this meal plan: <b>${shown}</b></span>
+      <input type="range" min="1" max="5000" step="1" value=${shown}
+        onInput=${function (event) { setShown(event.target.value); }}
+        onChange=${function (event) {
+          update({ students: parseInt(event.target.value, 10) });
+        }} />
+    </label>`;
 }
 
 export function AuditTab() {
@@ -81,17 +100,25 @@ export function AuditTab() {
 
   const currency = data.currency;
 
-  return html`
-    <${Students} />
+  /* The heading says "the one addition that saves the most", and the answer
+     is the first row. Five is enough to see the shape of the ranking and to
+     notice that the second and third are close; the other five are a fold
+     away for anyone actually writing a menu. */
+  const top = data.recommendations.slice(0, 5);
+  const rest = data.recommendations.slice(5, 10);
 
+  return html`
     <div class="headline">
-      <${Stat} value=${money(data.baselineMonthlySpendAllStudents, currency)}
-        label="spent out of pocket each month, across everyone" />
+      <${Stat} hero value=${money(data.baselineMonthlySpendAllStudents, currency)}
+        label=${'a month, out of the pockets of ' + state.students
+          + ' students, to patch what this menu leaves out'} />
       <${Stat} value=${money(data.baselineMonthlySpend, currency)}
-        label="per student per month" />
+        label="per student, per month" />
       <${Stat} value=${data.recommendations.length + ''}
         label="menu changes worth making" />
     </div>
+
+    <${Students} />
 
     ${!data.recommendations.length ? html`
       <p class="note">Nothing in the catalog would reduce what students have to
@@ -108,27 +135,14 @@ export function AuditTab() {
             <th class="num">Saves each student</th>
             <th class="num">Saves everyone, a month</th>
           </tr></thead>
-          <tbody>
-            ${data.recommendations.slice(0, 10).map(function (r) {
-              const why = r.drivers.filter(function (d) { return d.contribution < 0; })
-                .map(function (d) {
-                  return d.kind === 'floor' ? nutrientName(d.key) : d.key;
-                }).join(', ');
-              return html`
-                <tr key=${r.id || r.name}>
-                  <td>
-                    <div>${r.name}${r.proxy
-                      ? html`<span class="pill warn"> estimated</span>` : null}</div>
-                    <div class="why">${why ? 'mainly a cheap route to ' + why : ''}</div>
-                    <${Costs} costs=${r.costs} />
-                  </td>
-                  <td class="num">${plural(r.days.length, 'day')}</td>
-                  <td class="num">${money(r.monthlySaving, currency)}</td>
-                  <td class="num"><b>${money(r.monthlySavingAllStudents, currency)}</b></td>
-                </tr>`;
-            })}
-          </tbody>
+          <tbody>${top.map(function (r) { return Row(r, currency); })}</tbody>
         </table>
+        ${rest.length ? html`
+          <${More} label=${rest.length + ' more worth making'}>
+            <table>
+              <tbody>${rest.map(function (r) { return Row(r, currency); })}</tbody>
+            </table>
+          <//>` : null}
         <${More} label="How these were found">
           <p class="note">Found by pricing every dish in the catalog against the
           dual values of the solved menu. A dish only improves things if its

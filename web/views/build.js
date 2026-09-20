@@ -11,7 +11,7 @@ import {
 } from '../lib/store.js';
 import { encodeMenu, shareUrl, updateFragment } from '../lib/link.js';
 import { Icon } from '../lib/icons.js';
-import { More } from './pieces.js';
+import { More, Info } from './pieces.js';
 
 /* Editing the menu changes what the link has to say, so the two move
    together and every other tab re-solves off the back of it. */
@@ -146,14 +146,19 @@ export function BuildTab() {
     return html`
       <section class="panel empty">
         <${Icon} name="square-pen" size=${28} />
-        <h2>Build your own menu</h2>
-        <p>The presets are three real timetables, and yours is not one of them.
-        Pick dishes from the catalog, meal by meal and day by day, and every
-        other tab solves against what you built instead of against a preset.</p>
-        <p class="note">${'The catalog has ' + state.catalog.dishes.length
-          + ' dishes, each costed from its ingredient recipe in stated grams. '
-          + 'Nothing you build is sent anywhere or stored: it lives in this '
-          + 'page, and in a link you can copy.'}</p>
+        <h2>
+          <span>Build your own menu</span>
+          <${Info} label="What you are building from">
+            <p>${'The catalog has ' + state.catalog.dishes.length + ' dishes, '
+              + 'each costed from its ingredient recipe in stated grams rather '
+              + 'than estimated at dish level.'}</p>
+            <p>Nothing you build is sent anywhere or stored. It lives in this
+            page and in a link you can copy, and the browser never sends the
+            part of a link after the # to a server.</p>
+          <//>
+        </h2>
+        <p>Pick dishes meal by meal, and every other tab solves against yours
+        instead of against a preset.</p>
         <button class="chip action" type="button" onClick=${function () {
           changedMenu({ menuId: CUSTOM, prices: {} });
         }}>Start an empty menu</button>
@@ -191,10 +196,17 @@ export function BuildTab() {
       <p class="note">${encoded
         ? dishCount(customTotal()) + ' across ' + plural(
             DAY_ORDER.filter(function (day) { return dishesOn(day); }).length, 'day')
-          + '. The whole menu is inside that link — ' + link.length
-          + ' characters of it — so there is nothing to store and nothing to '
-          + 'sign into. The browser never sends the part after the # to a server.'
-        : 'Add a dish and a link that restores this menu will appear here.'}</p>
+          + '.'
+        : 'Add a dish and a link that restores this menu will appear here.'}
+        ${encoded ? html`
+          <${Info} label="About the link">
+            <p>${'The whole menu is inside that link — ' + link.length
+              + ' characters of it — so there is nothing to store and nothing '
+              + 'to sign into.'}</p>
+            <p>The browser never sends the part of a URL after the # to a
+            server, so a menu you share travels between the two of you and
+            nowhere else.</p>
+          <//>` : null}</p>
     </section>
 
     <section class="panel">

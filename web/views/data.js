@@ -3,7 +3,7 @@
 import { html } from '../vendor/preact.js';
 import { state, currentMenu } from '../lib/store.js';
 import { Icon } from '../lib/icons.js';
-import { More } from './pieces.js';
+import { More, Info } from './pieces.js';
 
 export function DataTab() {
   const notes = state.presets.notes;
@@ -38,17 +38,19 @@ export function DataTab() {
       <h2 class="with-icon">
         <${Icon} name="scale" />
         <span>Reference intakes</span>
+        <${Info} label="Why there are two">
+          <p>These disagree with each other, sometimes sharply. Iron for an
+          adult man is 19 mg under the Indian reference and 8 mg under the
+          American one, because the Indian figure assumes a largely
+          plant-based diet and poorer absorption.</p>
+          <p>Neither is the truth for everyone, which is why you pick.</p>
+        <//>
       </h2>
       <ul>
         ${state.presets.regions.map(function (region) {
           return html`<li key=${region.id}><b>${region.name}</b>${' — ' + region.citation}</li>`;
         })}
       </ul>
-      <p class="note">These disagree with each other, sometimes sharply. Iron
-      for an adult man is 19 mg under the Indian reference and 8 mg under the
-      American one, because the Indian figure assumes a largely plant-based
-      diet and poorer absorption. Neither is the truth for everyone, which is
-      why you pick.</p>
     </section>
 
     <section class="panel">

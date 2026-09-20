@@ -27,8 +27,12 @@
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
+/* The dark palette, written once and applied twice: under the system
+   preference for anyone who has not chosen, and under an explicit
+   `data-theme="dark"` for anyone who has. `:root:not([data-theme="light"])`
+   is what lets the toggle say "light" on a machine set to dark. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #14150f;
     --panel: #1c1e17;
     --ink: #eceadf;
@@ -41,6 +45,20 @@
     --short: #e08a72;
     --short-soft: #2e1e19;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #14150f;
+  --panel: #1c1e17;
+  --ink: #eceadf;
+  --muted: #9a9684;
+  --line: #2e3127;
+  --accent: #6fbf8f;
+  --accent-soft: #1e2b22;
+  --warn: #d9a25a;
+  --warn-soft: #2d2618;
+  --short: #e08a72;
+  --short-soft: #2e1e19;
 }
 
 * { box-sizing: border-box; }
@@ -60,7 +78,29 @@ header.masthead {
   padding: var(--s5) var(--s5) var(--s4);
 }
 
-.masthead-inner { max-width: 1180px; margin: 0 auto; }
+.masthead-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s4);
+}
+
+/* Three states, one control: light, dark, and whatever the machine says.
+   It is an icon and a tooltip rather than an icon and a label, because the
+   label would be the fourth thing on a line that is already the title. */
+.theme {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: var(--s2);
+  line-height: 0;
+  cursor: pointer;
+}
+
+.theme:hover { color: var(--ink); border-color: var(--muted); }
 
 h1 {
   margin: 0;
@@ -112,6 +152,23 @@ aside > * + * { margin-top: var(--s4); }
 }
 
 label.field { display: block; margin-bottom: var(--s3); }
+
+/* A control that belongs beside the answer rather than above it: one line,
+   label on the left, the slider taking whatever is left. */
+.field.strip {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  margin-bottom: 0;
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.field.strip > span { margin-bottom: 0; white-space: nowrap; }
+.field.strip > span b { color: var(--ink); }
+.field.strip input[type="range"] { flex: 1; min-width: 0; }
 
 label.field > span {
   display: block;
@@ -198,6 +255,27 @@ input[type="range"] { width: 100%; }
 
 .stat .label { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
+/* The one number a person came for, given the weight to say so. Four boxes of
+   equal size make a reader do the ranking; this does it for them. */
+.stat.hero {
+  flex: 1 1 100%;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.stat.hero .value {
+  font-size: 44px;
+  line-height: 1.1;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.stat.hero .label { font-size: 14px; color: var(--ink); margin-top: var(--s1); }
+
+@media (min-width: 720px) {
+  .stat.hero { flex: 2 1 320px; }
+}
+
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 
 th {
@@ -223,7 +301,7 @@ tr:last-child td { border-bottom: 0; }
 
 .bar {
   position: relative;
-  height: 7px;
+  height: 10px;
   border-radius: 4px;
   background: var(--line);
   overflow: hidden;
@@ -278,6 +356,7 @@ input.price-input { width: 84px; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--s4);
+  align-items: start;
 }
 
 /* `height: auto` with a viewBox, rather than a fixed height and
@@ -486,6 +565,56 @@ h2.with-icon .icon { align-self: center; color: var(--muted); }
   font-size: 13px;
 }
 
+/* ------------------------------------------------- the explanations
+ *
+ * Every panel used to carry a paragraph saying what it meant. None of it was
+ * wrong and all of it was in the way: a first-time reader met four hundred
+ * words before the first number. The words are all still here, behind an "i"
+ * -- and behind the browser's own popover, which is declarative HTML, needs
+ * no JavaScript, closes on a click anywhere else and puts itself in the top
+ * layer so it never moves the page underneath it. */
+.info {
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 2px;
+  line-height: 0;
+  cursor: help;
+  flex: none;
+}
+
+.info:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Most of these hang off an <h2>, which is small, upper-case and letter-
+   spaced -- none of which a paragraph should inherit. */
+[popover] {
+  max-width: 46ch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--ink);
+  padding: var(--s4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  text-transform: none;
+  letter-spacing: normal;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 0.28);
+}
+
+[popover]::backdrop { background: rgb(0 0 0 / 0.12); }
+[popover] > :first-child { margin-top: 0; }
+[popover] > :last-child { margin-bottom: 0; }
+[popover] p + p { margin-bottom: 0; }
+
+/* A browser too old for `popover` ignores the attribute and would show the
+   panel inline, which is the wall of text this replaced. Hiding it there
+   costs nothing: the "i" is decoration, not the answer. */
+@supports not selector([popover]) {
+  [popover], .info { display: none; }
+}
+
 /* ---------------------------------------------------------------- folds */
 
 .more {
@@ -560,6 +689,8 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
 
 .shortfall:last-of-type { border-bottom: 0; }
 .shortfall-name { font-weight: 600; }
+.shortfall .bar { height: 14px; border-radius: 7px; }
+.shortfall .bar > i { border-radius: 7px; }
 .shortfall-gap { font-size: 13px; color: var(--muted); text-align: right; }
 
 @media (max-width: 620px) {

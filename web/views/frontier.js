@@ -6,7 +6,7 @@ import { solveKey } from '../lib/store.js';
 import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
 import { Icon } from '../lib/icons.js';
-import { Stat, More, Skeleton, Failed, AskForDishes, emptyBuild } from './pieces.js';
+import { Stat, More, Info, Skeleton, Failed, AskForDishes, emptyBuild } from './pieces.js';
 
 /* The plot area, in viewBox units. `padL` is wide enough for "none left" at
    the label size: the axis captions sit outside the plot rather than on top
@@ -117,22 +117,26 @@ export function FrontierTab() {
 
   return html`
     <div class="headline">
-      <${Stat} value=${preciseMoney(data.spendToCloseGap, currency)}
-        label="a day closes every target" />
-      <${Stat} value=${curve[0].targetsMissed + ''}
+      <${Stat} hero value=${preciseMoney(data.spendToCloseGap, currency)}
+        label="a day closes every target — and most of the gap closes for far less" />
+      <${Stat} value=${curve[0].targetsMissed + ' of ' + data.floorCount}
         label="targets missed spending nothing" />
-      <${Stat} value=${data.floorCount + ''} label="targets in total" />
     </div>
 
     <section class="panel">
       <h2 class="with-icon">
         <${Icon} name="trending-down" />
         <span>${'How much of the gap each ' + (currency.symbol || 'unit') + ' closes'}</span>
+        <${Info} label="How to read this">
+          <p>The curve is convex and it flattens, which is the part worth
+          reading. The first coins buy a great deal of nutrition and the last
+          ones buy very little — the knee is where spending stops being worth
+          it.</p>
+          <p>Every point is its own solve: the cheapest plate reachable on
+          that budget, not the first one interpolated between two others.</p>
+        <//>
       </h2>
       <${Chart} curve=${curve} currency=${currency} />
-      <p class="note">The curve is convex and it flattens, which is the part
-      worth reading. The first coins buy a great deal of nutrition and the last
-      ones buy very little — the knee is where spending stops being worth it.</p>
     </section>
 
     <${More} label="The same thing as numbers">

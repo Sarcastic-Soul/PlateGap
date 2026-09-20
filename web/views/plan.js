@@ -10,7 +10,7 @@ import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
 import { Icon } from '../lib/icons.js';
 import {
-  Stat, More, NutrientTable, describeRow, Skeleton, Failed,
+  Stat, More, Info, NutrientTable, describeRow, Skeleton, Failed,
   AskForDishes, emptyBuild
 } from './pieces.js';
 
@@ -44,6 +44,15 @@ function Shortfalls({ shortfalls }) {
         <span>${'Short on ' + sentence(shortfalls.map(function (s) {
           return s.name.toLowerCase();
         }))}</span>
+        <${Info} label="How this was worked out">
+          <p>${'This is the menu eaten as well as it can possibly be eaten: '
+            + 'the food from ' + providerNoun() + ' chosen optimally, within '
+            + 'what is actually served and within what you could actually get '
+            + 'through in a day.'}</p>
+          <p>Nobody eats optimally, so a real shortfall is wider than this
+          one. It is a lower bound, which is the honest direction for a number
+          like this to be wrong in.</p>
+        <//>
       </h2>
       ${shown.map(function (s) {
         return html`<${ShortfallRow} key=${s.name} item=${s} />`;
@@ -54,9 +63,6 @@ function Shortfalls({ shortfalls }) {
             return html`<${ShortfallRow} key=${s.name} item=${s} />`;
           })}
         <//>` : null}
-      <p class="note">${'Eaten as well as it can possibly be eaten — the food '
-        + 'from ' + providerNoun() + ' chosen optimally, within what is '
-        + 'actually served and what you could actually get through in a day.'}</p>
     </section>`;
 }
 
@@ -150,14 +156,12 @@ function Covered({ shortfall, answer }) {
 
   return html`
     <div class="headline">
+      <${Stat} hero value=${worthOfThePlan(withoutThePlan, currency)}
+        label="a day to buy the same targets if the plan did not exist" />
       <${Stat} value=${targets + ' of ' + targets}
         label=${'targets met from ' + providerNoun() + ' alone'} />
-      <${Stat} value=${preciseMoney(0, currency)}
-        label="you need to spend on top of your fee" />
       <${Stat} value=${Math.round(answer.plateGrams) + ' g'}
-        label=${'of food it takes — ' + usedShare + '% of what you said you can eat'} />
-      <${Stat} value=${worthOfThePlan(withoutThePlan, currency)}
-        label="a day to buy the same targets if the plan did not exist" />
+        label=${'of food it takes — ' + usedShare + '% of what you can eat'} />
     </div>
 
     <section class="panel">
@@ -242,14 +246,12 @@ export function PlanTab() {
       ? html`<${Covered} shortfall=${shortfall} answer=${answer} />`
       : html`
         <div class="headline">
-          <${Stat} value=${missed + ' of ' + total}
-            label="targets the menu alone cannot reach" />
+          <${Stat} hero value=${money(answer.spendExact * 30, currency)}
+            label="a month, on top of a fee you have already paid" />
           <${Stat} value=${preciseMoney(answer.spendExact, currency)}
             label="a day to close the gap" />
-          <${Stat} value=${money(answer.spendExact * 30, currency)}
-            label="a month, on top of your fee" />
-          <${Stat} value=${Math.round(answer.plateGrams) + ' g'}
-            label="of food on the plan" />
+          <${Stat} value=${missed + ' of ' + total}
+            label="targets the menu alone cannot reach" />
         </div>
         <${Shortfalls} shortfalls=${shortfall.shortfalls} />`}
 
@@ -286,6 +288,13 @@ export function PlanTab() {
         <h2 class="with-icon">
           <${Icon} name="shopping-basket" />
           <span>${'Buy yourself — ' + preciseMoney(answer.spendExact, currency)}</span>
+          <${Info} label="About these prices">
+            <p>Prices are seed defaults for your region and are almost
+            certainly wrong for your campus. They are not survey data.</p>
+            <p>Change one and everything re-solves — including which items get
+            bought at all, since the cheapest way to reach a target depends on
+            what the things cost.</p>
+          <//>
         </h2>
         ${answer.buy.length ? html`
           <table>
@@ -320,8 +329,6 @@ export function PlanTab() {
             </tbody>
           </table>`
         : html`<p class="note">Nothing. The menu covers it.</p>`}
-        <p class="note">Prices are seed defaults for your region — almost
-        certainly wrong for your campus. Change one and everything re-solves.</p>
       </section>
     </div>
 

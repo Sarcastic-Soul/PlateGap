@@ -179,6 +179,64 @@ function Sidebar() {
     </aside>`;
 }
 
+/* Light, dark, or whatever the machine says -- in one control, because
+ * three radio buttons for a preference this small would be three more things
+ * on screen. `web/theme.js` has already applied the stored choice by the time
+ * this renders; all this does is change it.
+ *
+ * "System" is the default and it is a real third state, not the absence of a
+ * choice: someone whose laptop switches at sunset should not have to come
+ * back and switch this too. */
+const THEMES = [
+  { id: 'system', icon: 'monitor', label: 'Theme: following your system' },
+  { id: 'light', icon: 'sun', label: 'Theme: light' },
+  { id: 'dark', icon: 'moon', label: 'Theme: dark' }
+];
+
+const THEME_KEY = 'plategap-theme';
+
+function storedTheme() {
+  try {
+    const chosen = window.localStorage.getItem(THEME_KEY);
+    return chosen === 'light' || chosen === 'dark' ? chosen : 'system';
+  } catch (ignored) {
+    return 'system';
+  }
+}
+
+function ThemeToggle() {
+  const [theme, setTheme] = useState(storedTheme);
+  const at = THEMES.findIndex(function (t) { return t.id === theme; });
+  const now = THEMES[at < 0 ? 0 : at];
+  const next = THEMES[((at < 0 ? 0 : at) + 1) % THEMES.length];
+
+  function cycle() {
+    const root = document.documentElement;
+    if (next.id === 'system') {
+      root.removeAttribute('data-theme');
+    } else {
+      root.setAttribute('data-theme', next.id);
+    }
+    try {
+      if (next.id === 'system') {
+        window.localStorage.removeItem(THEME_KEY);
+      } else {
+        window.localStorage.setItem(THEME_KEY, next.id);
+      }
+    } catch (ignored) {
+      /* The page still changes; only the memory of it is lost. */
+    }
+    setTheme(next.id);
+  }
+
+  return html`
+    <button class="theme" type="button" onClick=${cycle}
+      title=${now.label + ' — click for ' + next.label.toLowerCase().slice(7)}
+      aria-label=${now.label}>
+      <${Icon} name=${now.icon} size=${18} />
+    </button>`;
+}
+
 /* The sidebar before the presets have landed.
  *
  * Without it the first paint was a single narrow column -- <main> is a
@@ -300,6 +358,11 @@ function boot() {
   const mount = document.getElementById('app');
   mount.textContent = '';
   render(html`<${App} />`, mount);
+
+  /* The toggle lives in the masthead, which is static HTML -- the title is
+     on screen before any JavaScript runs and should stay that way -- so it
+     is rendered into its own slot rather than being folded into the app. */
+  render(html`<${ThemeToggle} />`, document.getElementById('theme'));
 
   Promise.all([post('presets'), post('catalog')]).then(function (both) {
     state.presets = both[0];

@@ -5,11 +5,23 @@
  * without importing a render tree.
  */
 
+/* Digits in groups, in whatever grouping the reader's browser uses -- which
+   is 2,71,698 on an Indian locale and 271,698 on an American one, both of
+   which are easier to take in at a glance than 271698. The audit across a
+   whole hostel produces six-figure numbers routinely, and an ungrouped one
+   has to be counted rather than read. */
+function grouped(value, decimals) {
+  return value.toLocaleString(undefined, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+}
+
 export function money(value, currency) {
   if (value === null || value === undefined) { return '—'; }
   const decimals = currency ? currency.decimals : 2;
   const symbol = currency ? currency.symbol : '';
-  return symbol + value.toFixed(decimals);
+  return symbol + grouped(value, decimals);
 }
 
 /* Shadow prices are often far smaller than one unit of currency. Rounding a
@@ -24,13 +36,13 @@ export function preciseMoney(value, currency) {
   /* A spend that came back as 4e-17 is a floating point residue, not a
      price. Left alone the rule below dutifully prints it as "$0.0000",
      which reads like a number that was measured. */
-  if (magnitude < 1e-9) { return symbol + (0).toFixed(decimals); }
+  if (magnitude < 1e-9) { return symbol + grouped(0, decimals); }
   if (magnitude > 0 && magnitude < 1) {
     decimals = Math.max(decimals, Math.min(4, 2 - Math.floor(Math.log(magnitude) / Math.LN10)));
   } else {
     decimals = Math.max(decimals, magnitude < 10 ? 2 : 0);
   }
-  return symbol + value.toFixed(decimals);
+  return symbol + grouped(value, decimals);
 }
 
 export function plural(count, word) {

@@ -22,6 +22,17 @@ SITE = os.environ.get("SITE", "http://127.0.0.1:8123")
 # Idle is "no `.loading` element anywhere". Checked with a locator rather than
 # `wait_for_function`, because the live site serves `script-src 'self'` and a
 # string predicate would be evaluated in the page's own world and blocked.
+async def showing(page):
+    """How many popovers are open.
+
+    Playwright's own selector engine does not know `:popover-open`, so this
+    asks the page, where it is a real pseudo-class.
+    """
+    return await page.evaluate(
+        "() => [...document.querySelectorAll('[popover]')]"
+        ".filter(e => e.matches(':popover-open')).length")
+
+
 async def settle(page):
     await page.wait_for_timeout(250)
     await expect(page.locator(".loading")).to_have_count(0, timeout=40_000)
@@ -69,17 +80,56 @@ async def main():
         page = await b.new_page(viewport={"width": 1440, "height": 1000})
         page.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
         page.on("pageerror", lambda e: errors.append(str(e)))
-        await page.goto(SITE, wait_until="commit")
-
         # The shell is drawn before any answer is: the sidebar and the tab bar
         # are both on screen while the first solve is still in flight, so the
-        # page does not go from one column to two once it lands.
+        # page does not go from one column to two once it lands. The API is
+        # held back for a moment so that "while in flight" is a state the test
+        # can actually stand in rather than a race it has to win.
+        async def unhurried(route):
+            if route.request.method == "POST":
+                await asyncio.sleep(1.5)
+            await route.continue_()
+
+        await page.route("**/*", unhurried)
+        await page.goto(SITE, wait_until="commit")
         await page.wait_for_selector(".skeleton", timeout=20_000)
-        assert await page.locator(".tabs .tab").count() == 5
-        assert await page.locator("aside").count() == 1
-        assert await page.locator(".skeleton").count() == 1
+        shell = await page.evaluate(
+            "() => ({"
+            " skeletons: document.querySelectorAll('.skeleton').length,"
+            " tabs: document.querySelectorAll('.tabs .tab').length,"
+            " asides: document.querySelectorAll('aside').length })")
+        assert shell == {"skeletons": 1, "tabs": 5, "asides": 1}, shell
 
         await settle(page)
+        await page.unroute_all(behavior="ignoreErrors")
+
+        # One number leads the page, and it is the money.
+        assert await page.locator(".stat.hero").count() == 1
+
+        # The explanations are behind the browser's own popover: nothing on
+        # screen until asked for, gone again on Escape.
+        info = page.locator("#view .info").first
+        assert await showing(page) == 0
+        await info.click()
+        await page.wait_for_timeout(200)
+        assert await showing(page) == 1
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(200)
+        assert await showing(page) == 0
+
+        # Light, dark, system -- and the choice survives a reload, which is
+        # the only part of it a stylesheet cannot do on its own.
+        theme = page.locator("#theme .theme")
+        assert await page.evaluate("document.documentElement.dataset.theme") is None
+        await theme.click()
+        assert await page.evaluate("document.documentElement.dataset.theme") == "light"
+        await theme.click()
+        assert await page.evaluate("document.documentElement.dataset.theme") == "dark"
+        await page.reload(wait_until="domcontentloaded")
+        assert await page.evaluate("document.documentElement.dataset.theme") == "dark"
+        await settle(page)
+        await page.locator("#theme .theme").click()
+        assert await page.evaluate("document.documentElement.dataset.theme") is None
 
         # The "You" controls are folded away by default, and the fold says
         # what is inside it. Everything below is behind that one click.
