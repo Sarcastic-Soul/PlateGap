@@ -56,10 +56,35 @@ variable "lambda_memory_mb" {
   default     = 1769
 }
 
+variable "scan_model" {
+  description = <<-TEXT
+    The Bedrock model `scan` uses to transcribe an uploaded menu, or "off".
+
+    This exists as a variable because it is the kill switch. The Function URL
+    is public and unauthenticated, and `scan` is the only action that costs
+    real money per call -- about $0.0004 of Nova Lite for a page of PDF. The
+    reserved concurrency of 10 and the ten-second read bound that to roughly
+    one call a second, so a determined stranger could spend tens of dollars a
+    day and nothing else would stop them.
+
+    Setting this to "off" makes `scan` return 200 with `read: false` and the
+    paste box carries on doing the same job. That is a `terraform apply` or a
+    single `aws lambda update-function-configuration` away.
+  TEXT
+  type        = string
+  default     = "amazon.nova-lite-v1:0"
+}
+
 variable "lambda_timeout_seconds" {
-  description = "Hard stop for one request. The slowest action is the weekly audit."
+  description = <<-TEXT
+    Hard stop for one request. The slowest action is `scan`, which waits on
+    Bedrock to read an uploaded menu -- measured at about ten seconds for a
+    page of PDF, against a fifteen second read timeout in `menuscan`. The
+    solver's own worst case, the weekly audit, is a few seconds. This leaves
+    room for a slow page without ever being the thing that gives up first.
+  TEXT
   type        = number
-  default     = 20
+  default     = 30
 }
 
 variable "allowed_origin" {

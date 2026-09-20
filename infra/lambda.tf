@@ -117,7 +117,8 @@ resource "aws_lambda_function" "solver" {
 
   environment {
     variables = {
-      ALLOWED_ORIGIN = var.allowed_origin
+      ALLOWED_ORIGIN      = var.allowed_origin
+      PLATEGAP_SCAN_MODEL = var.scan_model
     }
   }
 

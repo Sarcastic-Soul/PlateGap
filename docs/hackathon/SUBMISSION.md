@@ -102,13 +102,23 @@ cap; market items have a price and no cap. That single formulation is what lets
 one LP answer "what is free food worth to you" and "what should you buy" at the
 same time.
 
-**A menu can be pasted in, not just picked.** Real menus are photographs of a
-notice board typed out badly: `reoti`, `araher dal`, `idly`. `parse` matches
-them against the catalog through exact names, the presets' own alias maps, a
-transliteration fold, then fuzzy distance — and refuses to guess when two
-dishes are equally close. `"dal"` comes back as *could be Dal makhani or Mix
-dal, and guessing between them would be a coin toss*, with both suggested. It
-runs on the standard library, with no model call.
+**You can photograph your mess menu, and the model is not allowed to read it.**
+`scan` sends the PDF or the photo to Nova Lite and asks for exactly one thing:
+write down the words that are printed. Which catalog dish each written name
+means is then settled by `parse`, on the standard library, with no model call
+— exact names, the presets' own alias maps, a transliteration fold, then fuzzy
+distance — and it refuses to guess when two dishes are equally close. `"dal"`
+comes back as *could be Dal makhani or Mix dal, and guessing between them would
+be a coin toss*, with both suggested.
+
+That split is deliberate. A model asked for dish IDs returns a confident,
+plausible, unfalsifiable menu, and a shortfall computed from a hallucinated
+menu is wrong in a way the reader cannot see. So the model does the typing and
+the catalog does the deciding: on the real seven-day IIIT timetable that is 127
+dishes read and 20 names it would not place, each shown with the near misses it
+rejected and settled with one tap. The transcription is editable before
+anything is solved, because character recognition on a photographed noticeboard
+gets things wrong and only the person holding the phone knows which things.
 
 **The written explanation cannot contain a number the solver did not produce.**
 `explain` asks Bedrock (Nova Lite) to write the result up in prose. Every

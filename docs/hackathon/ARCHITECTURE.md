@@ -117,8 +117,8 @@ implementation that would have shipped as confident, wrong advice.
 
 | Job | Tool | Constrained how |
 | --- | --- | --- |
-| Menu photo → text | Textract `DetectDocumentText` | deterministic |
-| Menu text → canonical food IDs | Bedrock Nova Lite | output restricted to IDs that exist in our catalog; anything unmapped is surfaced to the user, never invented |
+| Menu photo or PDF → text | Bedrock Nova Lite | asked to transcribe and nothing else. It never sees the catalog and never emits a food ID |
+| Menu text → canonical food IDs | **`solver/menutext.py`** | string matching against a fixed catalog, offline. Anything it cannot place is surfaced with the near misses it rejected, never invented |
 | Solver output → English | Bedrock Nova Lite | receives only numbers; prompt forbids introducing any figure not supplied |
 | Choosing what to eat | **the simplex solver** | — |
 | Computing nutrition | **the food composition table** | — |
@@ -161,8 +161,9 @@ Three ways in, in order of effort:
    judge has to imagine an unfamiliar situation; one of the five went to McGill
    and has personally lived the meal-plan problem.
 2. **Paste your menu as text** — a week, a day, or a single meal.
-3. **Photograph the notice board** — the image goes straight to Nova Lite, which
-   is multimodal, and comes back as canonical food IDs.
+3. **Photograph the notice board**, or drop in the PDF the mess sent round —
+   Nova Lite transcribes it, the catalog matching happens here, and the text
+   is shown to you to correct before anything is solved.
 
 Prices work the same way: bundled regional defaults (₹ and $) that produce a
 sensible answer immediately, with every single price editable inline. Somebody
@@ -188,7 +189,8 @@ Architects than a crowded diagram does.
          ├── solve      two-phase simplex → plan + duals + binding + reduced costs
          ├── frontier   N solves across a budget sweep → a real Pareto curve
          ├── audit      week aggregate + inverse-optimization over menu additions
-         ├── parse      menu text or photo → canonical food IDs   (Nova Lite, multimodal)
+         ├── parse      menu text → canonical food IDs            (no model, no network)
+         ├── scan       menu photo or PDF → text, then parse      (Nova Lite, transcription only)
          └── explain    solver output → English                   (Nova Lite, grounded)
                         │
         Bedrock  amazon.nova-lite-v1:0                a few rupees at demo volume
@@ -205,7 +207,7 @@ What was considered and deliberately cut, each for a stated reason:
 | Cut | Why |
 | --- | --- |
 | API Gateway | A Lambda Function URL gives the same HTTPS endpoint with CORS at no cost, and API Gateway's free tier is 12-month rather than always-free |
-| Textract | Nova Lite accepts images directly, so a separate OCR service would be one more dependency for a job one call already does |
+| Textract | Nova Lite accepts an image or a PDF directly, so a separate OCR service would be one more dependency for a job one call already does. Measured: a page of PDF is about ten seconds and $0.0004 |
 | DynamoDB | Nothing here actually needs shared durable state. Catalog is static JSON, metrics are logs, shared plans ride in the URL fragment |
 | Step Functions | There is no long-running workflow. The solve is single-digit milliseconds |
 | EC2 | Nothing needs to be always-on, and an instance in the request path is the single most likely way to fail the ship gate between Oct 2 and Oct 19 |
@@ -272,23 +274,42 @@ screened to 11, whole week in about a second.
 The screen is only legitimate if it has no false negatives, so there is a test
 that takes every rejected candidate, adds it for real and re-solves.
 
-## Not built: the Bedrock parse and explain endpoints
+## Changed: the model transcribes, and the catalog matching is deterministic
 
-The section above on where the language model is used describes two endpoints
-that do not exist yet. A menu is entered by choosing from the catalog rather
-than by pasting text or photographing a notice board, and the explanations on
-screen are generated from the solver output by the front end, not written by a
-model.
+The design had one endpoint turning a photograph straight into canonical food
+IDs. That is not what shipped, and the split is the point.
 
-This is a real gap against the design, not a decision that the design was
-wrong. It is the top item in TODO.md. What is there now works without it, and
-shipping a working tool without the model beats shipping a half-wired model.
+`scan` sends the file — a PDF whole, as a Bedrock `document` block, with no
+rasterising step — and asks Nova Lite for one thing: write down the words that
+are printed, laid out as a table. `parse` then does the catalog matching in
+`solver/menutext.py`, offline, with no model anywhere near it.
+
+The reason is the failure mode. A model asked to emit dish IDs produces a
+confident, plausible, unfalsifiable menu, and a shortfall computed from a
+hallucinated menu is wrong in a way the reader cannot see. String matching
+against a hundred fixed names has a right answer, and can say *"this could be
+green chutney or imli chutney, and guessing would be a coin toss"* — which is
+what the screen then asks you about, one tap per name.
+
+Two things were measured on the way and both went against the design:
+
+- Asking for the days down the side rather than across the top means asking a
+  small model to transpose a grid. It dropped most of the cells and then
+  repeated one row until it hit the token cap. `menutext` learned to read the
+  layout a mess noticeboard is actually drawn in instead.
+- Every instruction past "copy what is printed" cost transcription quality.
+  A sentence asking it to keep the row of items served every day made it emit
+  the row label and none of the contents, twice out of two.
+
+Against the real seven-day IIIT timetable: 127 dishes read across all seven
+days, 20 names it would not place, each reported with its near misses.
 
 ## Changed: one action per request, not one path per endpoint
 
 The Function URL takes a JSON body with an `action` field rather than routing
 on a path. The actions are `presets`, `catalog`, `gap`, `solve`, `frontier`,
-`week` and `audit`. Same shapes as designed; different envelope.
+`week`, `audit`, `parse`, `scan` and `explain`. Same shapes as designed;
+different envelope.
 
 ## Measured, not estimated
 

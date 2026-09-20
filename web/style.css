@@ -698,6 +698,108 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
   .shortfall .bar { grid-column: 1 / -1; order: 3; }
 }
 
+/* ------------------------------------------------- reading a menu in */
+
+/* The drop target is the whole invitation, not a button beside one: people
+   drag a file at the thing that looks like it wants a file. It reuses the
+   empty state's centred layout because it is one -- the difference is that
+   this one accepts a drop. */
+.drop {
+  text-align: center;
+  padding: var(--s6) var(--s5);
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.drop > .icon { color: var(--muted); margin: 0 auto var(--s3); display: block; }
+.drop.over > .icon { color: var(--accent); }
+.drop h2 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-transform: none;
+  font-size: 17px;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.drop p { color: var(--muted); max-width: 46ch; margin: 0 auto var(--s4); }
+.drop .chip { display: inline-flex; }
+
+/* The real file input. Hidden from view but not from assistive technology or
+   from the keyboard -- `display: none` would take it out of the tab order and
+   leave the button beside it with nothing to open. */
+.hidden-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scan > * + * { margin-top: var(--s4); }
+
+.menu-text {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  tab-size: 2;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s3);
+  margin-bottom: var(--s3);
+  resize: vertical;
+}
+.menu-text:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* A warning is not an error. It says the answer is usable and incomplete,
+   which is a different colour from the answer being wrong. */
+.error.warn {
+  border-color: var(--warn);
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+/* What we could not place, and what we nearly said instead. */
+.misses > * + * { margin-top: var(--s2); }
+.miss {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2) var(--s4);
+  padding: var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+.miss-what b { font-weight: 600; }
+.miss-what .why { display: block; }
+.miss .chips { margin: 0; }
+
+/* The model doing the typing, while it types. */
+.scanning { display: grid; justify-items: center; gap: var(--s3); }
+.scanning .icon { color: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+.scanning p { margin: 0; }
+.scanning .shim { height: 12px; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanning .icon { animation: none; }
+}
+
 /* ------------------------------------------------------------ empty state */
 
 .empty { text-align: center; padding: var(--s6) var(--s5); }

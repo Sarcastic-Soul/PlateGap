@@ -10,6 +10,7 @@ The handler owns no AWS credentials. It runs under an execution role, reads
 its catalog from the deployment package, and writes nothing.
 """
 
+import base64
 import json
 import os
 import re
@@ -27,6 +28,7 @@ for _candidate in (HERE, REPO):
 
 from solver import audit as audit_module      # noqa: E402
 from solver import explain as explain_module  # noqa: E402
+from solver import menuscan                   # noqa: E402
 from solver import menutext                   # noqa: E402
 from solver import model                      # noqa: E402
 from solver import plan                       # noqa: E402
@@ -39,13 +41,19 @@ if not os.path.isdir(os.path.join(DATA, "menus")):
 # ---- Input bounds. A public endpoint gets exactly as much work as it asks
 # ---- for, so it does not get to ask for very much.
 MAX_BODY_BYTES = 256 * 1024
+
+# An uploaded menu is the one thing a caller may send that is bigger than a
+# request of numbers, so it is the one action allowed past the bound above.
+# Base64 costs a third on top, so this ceiling is what `menuscan.MAX_BYTES`
+# of file weighs by the time it arrives, plus room for the JSON around it.
+MAX_UPLOAD_BODY_BYTES = 4 * 1024 * 1024
+UPLOAD_ACTIONS = ("scan",)
 MAX_PRICE_ENTRIES = 200
 MAX_EXCLUDED = 200
 MAX_MENU_DISHES_PER_MEAL = 40
 MAX_FRONTIER_POINTS = 60
 MAX_STUDENTS = 1_000_000
 MAX_PASTED_CHARS = 8_000
-MAX_IMAGE_BYTES = 4 * 1024 * 1024
 MAX_MENU_NAME_CHARS = 120
 
 ID_PATTERN = re.compile(r"^[a-z0-9_\-]{1,64}$")
@@ -421,16 +429,33 @@ def action_parse(body):
     if not text.strip():
         raise BadRequest("there is no menu in that text")
 
-    name = body.get("name")
-    if name is not None:
-        if not isinstance(name, str):
-            raise BadRequest("name must be a string")
-        name = name[:MAX_MENU_NAME_CHARS].strip() or None
+    return _reading(text, _menu_name(body), _menu_region(body))
 
+
+def _menu_name(body):
+    name = body.get("name")
+    if name is None:
+        return None
+    if not isinstance(name, str):
+        raise BadRequest("name must be a string")
+    return name[:MAX_MENU_NAME_CHARS].strip() or None
+
+
+def _menu_region(body):
     region = body.get("region")
     if region is not None and region not in targets_module.REFERENCES:
         raise BadRequest("unknown region %r" % region)
+    return region
 
+
+def _reading(text, name, region):
+    """Match written menu text against the catalog, however the text arrived.
+
+    Shared by `parse` and `scan`, which differ only in where the text came
+    from -- a paste box or a model reading a photograph. Everything after
+    that point has to be identical, or the two paths would disagree about
+    the same menu.
+    """
     reading = menutext.parse(CATALOG, text, aliases=ALIASES, name=name,
                              region=region)
     if not reading["stats"]["itemsRead"]:
@@ -451,6 +476,59 @@ def action_parse(body):
         "warnings": reading["warnings"],
         "stats": reading["stats"],
     }
+
+
+def action_scan(body):
+    """Read a menu out of an uploaded PDF or photograph, then parse it.
+
+    Two steps, and the split between them is the point. A model transcribes
+    the file into text, and `menutext` -- offline, deterministic, and willing
+    to say it does not know -- decides which catalog dish each written name
+    means. The model never sees the catalog and never emits a dish id.
+
+    The transcription comes back alongside the parse so that the person can
+    read what we think their menu says, correct it, and send it again
+    through `parse`. Optical character recognition on a photograph of a
+    noticeboard gets things wrong, and the only person who can tell is the
+    one holding the phone.
+
+    A model that is missing, denied or slow is a 200 with `read: false`. The
+    paste box does the same job without it, and an upload button that takes
+    the whole page down with it when Bedrock is busy is worse than no upload
+    button.
+    """
+    kind = body.get("kind")
+    if not isinstance(kind, str) or kind.lower() not in menuscan.FORMATS:
+        raise BadRequest("kind must be one of %s"
+                         % ", ".join(sorted(menuscan.FORMATS)))
+
+    encoded = body.get("file")
+    if not isinstance(encoded, str) or not encoded.strip():
+        raise BadRequest("file must be your menu, base64 encoded")
+    try:
+        data = base64.b64decode(encoded, validate=True)
+    except (ValueError, TypeError):
+        raise BadRequest("file is not valid base64")
+    if not data:
+        raise BadRequest("that file is empty")
+    if len(data) > menuscan.MAX_BYTES:
+        raise BadRequest("that file is %.1f MB and the limit is %.1f MB"
+                         % (len(data) / 1048576.0,
+                            menuscan.MAX_BYTES / 1048576.0))
+
+    name = _menu_name(body)
+    region = _menu_region(body)
+
+    try:
+        scan = menuscan.read(data, kind.lower())
+    except menuscan.ScanUnavailable as problem:
+        return {"read": False, "reason": str(problem)}
+
+    reading = _reading(scan["text"], name, region)
+    reading["read"] = True
+    reading["text"] = scan["text"]
+    reading["warnings"] = scan["warnings"] + reading["warnings"]
+    return reading
 
 
 def action_explain(body):
@@ -506,6 +584,7 @@ ACTIONS = {
     "week": action_week,
     "audit": action_audit,
     "parse": action_parse,
+    "scan": action_scan,
     "explain": action_explain,
 }
 
@@ -525,9 +604,8 @@ def _respond(status, payload):
 def _read_body(event):
     raw = event.get("body") or "{}"
     if event.get("isBase64Encoded"):
-        import base64
         raw = base64.b64decode(raw).decode("utf-8", "replace")
-    if len(raw) > MAX_BODY_BYTES:
+    if len(raw) > MAX_UPLOAD_BODY_BYTES:
         raise BadRequest("request body is too large")
     try:
         body = json.loads(raw)
@@ -535,6 +613,13 @@ def _read_body(event):
         raise BadRequest("body is not valid JSON")
     if not isinstance(body, dict):
         raise BadRequest("body must be a JSON object")
+    # Every action except the upload keeps the tighter bound it always had.
+    # The action is read after parsing rather than before, because a body we
+    # have not parsed has no action in it -- and parsing two megabytes of
+    # JSON costs far less than the solve any of these requests asks for.
+    if (len(raw) > MAX_BODY_BYTES
+            and body.get("action") not in UPLOAD_ACTIONS):
+        raise BadRequest("request body is too large")
     return body
 
 

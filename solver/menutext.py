@@ -114,6 +114,17 @@ _ITEMS = re.compile(r"\s*(?:,|;|/|\+|•|\band\b)\s*", re.IGNORECASE)
 
 # Leading counts and bullets ("2x", "-", "1."), and trailing punctuation.
 _ITEM_EDGES = re.compile(r"^[\s\W\d_]*|[\s\W_]*$")
+
+# A trailing serving size. A menu written for people says how much of a thing
+# you get -- "boiled egg 2 pcs", "milk 200 ml", "papad 2 pcs" -- and the
+# catalog names the dish, not the portion, so the quantity is noise that
+# would otherwise sink the match. Portions are the solver's business and it
+# works them out itself.
+_QUANTITY_TAIL = re.compile(
+    r"[\s\-/(]*\b\d+\s*"
+    r"(?:pcs?|pieces?|nos?|ml|ltr?|litres?|liters?|g|gm|gms|gram|grams|kg"
+    r"|glass(?:es)?|cups?|bowls?|plates?|slices?|katori|katoris)\b\.?\s*$",
+    re.IGNORECASE)
 _PARENS = re.compile(r"\([^)]*\)")
 
 
@@ -258,7 +269,27 @@ def match_one(written, catalog, index):
 
     Returns a dict with either `id` set (we are using this) or `reason` set
     (we are not, and here is why, and here is what we nearly said).
+
+    A name that fails is tried once more without its serving size, because
+    the catalog names dishes and menus name portions: "boiled egg 2 pcs" is
+    the egg. The full name is tried first and kept when it wins, because the
+    catalog also contains a dish called "Milk 200 ml", and a rule that
+    stripped quantities up front would throw that exact match away.
     """
+    outcome = _match_written(written, catalog, index)
+    if "id" in outcome:
+        return outcome
+
+    shorter = _QUANTITY_TAIL.sub("", written).strip()
+    if shorter and shorter != written:
+        retry = _match_written(shorter, catalog, index)
+        if "id" in retry:
+            retry["text"] = written
+            return retry
+    return outcome
+
+
+def _match_written(written, catalog, index):
     norm = normalise(_PARENS.sub(" ", written))
     if not norm:
         return {"text": written, "reason": "nothing readable in this item"}
@@ -376,6 +407,59 @@ def _cells(text):
     return [cell for cell in _CELLS.split(text) if cell.strip()]
 
 
+_PIPE_ROW = re.compile(r"^\s*\|.*\|\s*$")
+
+
+def _grid_cells(line):
+    """Cells of a pipe-delimited row, empty ones kept.
+
+    `_cells` throws empty cells away, which is right for a pasted line and
+    wrong for a grid: a blank Tuesday is the only thing keeping Wednesday in
+    the Wednesday column.
+    """
+    cells = line.split("|")
+    if cells and not cells[0].strip():
+        cells = cells[1:]
+    if cells and not cells[-1].strip():
+        cells = cells[:-1]
+    return [cell.strip() for cell in cells]
+
+
+_DAY_NAMES = sorted(DAY_LABELS)
+
+
+def _day_label(cell):
+    """The weekday a header cell names, allowing for how it was spelled.
+
+    Real timetables carry real typos -- the mess menu this was built against
+    says "SAETURDAY" -- and one unrecognised header cell costs every dish in
+    the column under it. So day names are matched the same forgiving way the
+    dish names are.
+    """
+    norm = normalise(cell)
+    if not norm:
+        return None
+    if norm in DAY_LABELS:
+        return DAY_LABELS[norm]
+    close = difflib.get_close_matches(norm, _DAY_NAMES, n=1, cutoff=0.8)
+    return DAY_LABELS[close[0]] if close else None
+
+
+def _is_day_header(cells):
+    """A row of weekday names tells us which column is which day.
+
+    This is the other way a timetable can be laid out, and by far the commoner
+    one: days across the top, meals down the side. Every mess noticeboard
+    worth the name is drawn this way. The first cell is allowed not to be a
+    day, because it is the corner of the grid -- "Meal", "Day", or nothing.
+    """
+    for skip in (0, 1):
+        days = [_day_label(cell) for cell in cells[skip:]]
+        if len(days) >= 3 and all(days) and len(set(days)) == len(days):
+            return days
+    return None
+
+
 def _is_meal_header(cells):
     """A row of nothing but meal names tells us the column order.
 
@@ -421,10 +505,12 @@ def parse(catalog, text, aliases=None, name=None, region=None):
     index = build_index(catalog, aliases)
 
     days, matched, unmatched, warnings = {}, [], [], []
+    daily = {}
     seen = {}
     day = None
     meal = None
     columns = None
+    day_columns = None
     items_read = 0
     truncated = False
     assumed_day = False
@@ -452,15 +538,88 @@ def parse(catalog, text, aliases=None, name=None, region=None):
         else:
             unmatched.append(outcome)
 
+    def place_daily(meal_name, written):
+        """Something served every day of the week.
+
+        The menu model already serves a `daily` list on all seven days, so
+        these go there rather than being written out seven times -- which
+        would be seven times the fuzzy searches, and seven copies of the same
+        complaint when one of them does not match.
+        """
+        nonlocal assumed_meal
+        if meal_name is None:
+            meal_name, assumed_meal = "lunch", True
+        if written not in seen:
+            seen[written] = match_one(written, catalog, index)
+        outcome = dict(seen[written])
+        outcome["day"] = None
+        outcome["everyDay"] = True
+        outcome["meal"] = meal_name
+        if "id" in outcome:
+            served = daily.setdefault(meal_name, [])
+            if outcome["id"] not in served:
+                served.append(outcome["id"])
+            matched.append(outcome)
+        else:
+            unmatched.append(outcome)
+
     for raw_line in text.splitlines():
         line = raw_line.strip()
         if not line or not re.search(r"[A-Za-z]", line):
             continue
 
+        grid = _grid_cells(line) if _PIPE_ROW.match(line) else None
         cells = _cells(line)
+
         header = _is_meal_header(cells) if len(cells) >= 2 else None
         if header:
-            columns = header
+            columns, day_columns = header, None
+            continue
+
+        if grid is not None and len(grid) >= 4:
+            found_days = _is_day_header(grid)
+            if found_days:
+                day_columns, columns = found_days, None
+                continue
+
+        # A row of a day-column grid. The first cell names the meal, or is
+        # blank because the meal is the one named a row or two above and the
+        # kitchen only wrote it once.
+        if day_columns is not None and grid is not None and len(grid) >= 2:
+            head = normalise(grid[0])
+            label = MEAL_LABELS.get(head)
+            if label is not None:
+                meal = label
+            body = grid[1:]
+            filled = [cell for cell in body if cell]
+            # A "daily" row whose items are spread across the day columns is
+            # not a daily row at all -- it is a row of ordinary per-day
+            # dishes that happened to be written under that heading, and a
+            # sweet served on Wednesday should not become a sweet served
+            # every day. One cell of content is a merged cell; several are
+            # seven different answers.
+            everyday = ((head.startswith("daily")
+                         or head.startswith("every day"))
+                        and len(filled) <= 1)
+            if everyday:
+                # Which column the items sit in means nothing: a timetable
+                # merges the cells for them, so they land wherever the merge
+                # began. They belong to all seven days.
+                for cell in body:
+                    for written in _items(cell):
+                        if items_read >= MAX_ITEMS:
+                            truncated = True
+                            break
+                        items_read += 1
+                        place_daily(meal, written)
+            else:
+                for column_day, cell in zip(day_columns, body):
+                    for written in _items(cell):
+                        if items_read >= MAX_ITEMS:
+                            truncated = True
+                            break
+                        items_read += 1
+                        place(column_day, meal, written)
             continue
 
         found_day, rest = _day_at_start(line)
@@ -528,7 +687,8 @@ def parse(catalog, text, aliases=None, name=None, region=None):
         "name": name or "Pasted menu",
         "region": region or ("IN" if cuisine != "american" else "US"),
         "cuisine": cuisine,
-        "daily": {},
+        "daily": {meal_name: daily[meal_name]
+                  for meal_name in model.MEALS if meal_name in daily},
         "days": {day_name: days[day_name]
                  for day_name in model.DAYS if day_name in days},
     }

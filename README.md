@@ -53,11 +53,13 @@ Each one is a linear program.
 | 2 | **What's the cheapest fix?** | Add priced items from a shop, minimise money spent, hit every nutrient floor | The shadow price on a binding floor is literally *what the last milligram of zinc costs you* |
 | 3 | **What should the kitchen change?** | Given that students are spending their own money to patch the menu, which single addition would cut that spending the most — across everybody? | The one menu change with the highest return, and why |
 
-Three presets ship. You can also build a menu of your own — start from a
-preset or from nothing, pick dishes per meal per day — paste one in as text
-and have it matched to the catalog, or share the one you built as a link. The
-whole menu travels in the URL fragment, so there is nothing stored anywhere
-and nothing to sign into.
+Three presets ship, and you can use your own instead. **Photograph the menu on
+your mess wall, or drop in the PDF the warden sent round**, and it is read,
+matched to the catalog dish by dish, and shown to you to correct before
+anything is solved. You can also paste it in as text, or build one by hand a
+meal at a time — and share whatever you end up with as a link. The whole menu
+travels in the URL fragment, so there is nothing stored anywhere and nothing
+to sign into.
 
 ## Try it
 
@@ -127,11 +129,11 @@ flowchart LR
 
     subgraph api["Solver API"]
       FU["Lambda Function URL<br/>public, no API Gateway"]
-      H["handler.py<br/>9 actions, every input bounded"]
+      H["handler.py<br/>10 actions, every input bounded"]
       SOLVER["solver/*.py<br/>pure Python, no dependencies"]
     end
 
-    BR["Amazon Bedrock<br/>Nova Lite - explain only"]
+    BR["Amazon Bedrock<br/>Nova Lite - writes up a solve,<br/>transcribes an uploaded menu"]
     CW["CloudWatch Logs<br/>7-day retention"]
 
     B -->|"GET /"| CF --> S3
@@ -146,7 +148,8 @@ flowchart LR
 | `solver/model.py` | Turns a menu, a profile and a set of prices into linear programs |
 | `solver/plan.py` | The three questions as callable functions: `gap`, `cheapest`, `frontier`, `week` |
 | `solver/audit.py` | Inverse optimisation: reduced-cost menu search |
-| `solver/menutext.py` | Reads a pasted menu and matches it to the catalog — no model, no network |
+| `solver/menutext.py` | Reads a written menu — a paste or a grid — and matches it to the catalog. No model, no network |
+| `solver/menuscan.py` | Turns an uploaded PDF or photograph into text, and hands it to `menutext` |
 | `solver/explain.py` | Bedrock write-up, with a templated fallback and an arithmetic check |
 | `solver/targets.py` | Daily nutrient targets by region, sex and activity level |
 | `lambda/handler.py` | The one Lambda entry point, served through a Function URL |
@@ -221,6 +224,7 @@ Every solving action — `gap`, `solve`, `frontier`, `week`, `audit`, `explain`
 | `week` | All seven days solved | — |
 | `audit` | Which single menu addition would cut student spending the most | `students` (1–1,000,000) |
 | `parse` | A pasted menu, matched dish by dish against the catalog | `text`, `name`, `region` |
+| `scan` | An uploaded PDF or photograph of a menu, transcribed and then parsed | `file` (base64), `kind`, `name`, `region` |
 | `explain` | A day's solve written up in prose, with its arithmetic checked | `day`, `model` |
 
 Notes worth knowing:
@@ -231,13 +235,24 @@ Notes worth knowing:
   that were rejected, because quietly dropping half of somebody's menu and then
   reporting a shortfall they do not have would be the worst failure mode this
   product has.
+- **`scan` lets a model type, and not decide.** The model transcribes the
+  file into text and stops there. Which catalog dish each written name means
+  is settled by `menutext`, offline and deterministically, so a name it cannot
+  place is reported rather than invented. The transcription comes back
+  alongside the parse so it can be corrected and sent through `parse` again.
+  Like `explain`, it returns 200 with `read: false` when Bedrock is missing,
+  denied or slow — the paste box does the same job without it.
 - **`explain` always returns 200.** It re-solves rather than trusting numbers
   the caller sent, and every figure in the generated text is extracted and
   matched back against the solve. If Bedrock is missing, denied, slow, or
   writes a number that does not reconcile, the templated explanation is
   returned with `source` saying so.
-- Nothing the caller typed reaches the model. A menu you posted is referred to
-  as "your menu", never by the name you gave it.
+- Nothing the caller typed reaches the model on the `explain` path. A menu you
+  posted is referred to as "your menu", never by the name you gave it. On the
+  `scan` path the caller's file is the input by definition — so nothing the
+  model writes back is treated as an instruction either. Its output is split
+  on pipes and commas and compared against a fixed catalog, and that is all
+  that ever happens to it.
 - The endpoint is public and unauthenticated, so every input is bounded: body
   size, price entries, pasted length, frontier points, student count.
 
@@ -354,6 +369,7 @@ infrastructure. Terraform is run by a person, deliberately.
 | **arm64** | Kept for Graviton's published price — about 20% less per GB-second. That is a price list, not a benchmark | **This repository does not claim arm64 is faster, because nobody has measured it.** The solver is pure Python and its inner loop is list and float arithmetic in the interpreter; which way that goes on Graviton is not something to assert from an armchair. Running `scripts/benchmark_solver.py` on an arm64 box with the same `--repeat` and comparing medians would settle it in a couple of minutes |
 | **Concurrency capped at 10** | Opening the page costs four calls, so three or four people following a shared link in the same second is the whole ceiling. Ten browsers arriving simultaneously threw away 4 of 40 calls with a 429 and the entire burst was over in **5.6 seconds**; the same ten spread over a minute lost nothing. A burst that short does not want a larger quota, so the front end retries with **jitter** — every client refused was refused at the same instant, and retrying them on the same schedule would rebuild the burst. `scripts/smoke_ui.py` tests both paths | — |
 | **Bedrock on Nova Lite** | One `explain` call measured at 732 tokens in and ~130 out, about **$0.075 per thousand calls**. Nova Lite and Nova Micro both produced correct, readable paragraphs that passed the reconciliation check, so there was nothing to buy by spending more | Claude Haiku 4.5 is allowed by the IAM policy and the handler's allow-list, but this account answers it with `ResourceNotFoundException` until a use-case form is submitted. Nothing breaks: `explain` falls back to the templated text and still returns 200 |
+| **`scan` on the same model** | Reading the real seven-day mess menu in `data/menus/` measured at 1,862 tokens in and ~1,100 out, about **$0.38 per thousand uploads**, in roughly ten seconds. A PDF goes to Bedrock as a `document` block with no rasterising step, so the function needs no image tooling | Transcription is not perfect and is not presented as though it were. The measured run read 127 dishes across all seven days and reported 20 names it could not place, each with the near misses it rejected. The text is shown and editable before anything is solved |
 | **Public Function URL** | A tool anyone should be able to try without signing up | Accounts created from around 2024 onward block public Lambda function URLs by default, and the symptom is a bare 403 with a resource policy that plainly allows the call. Granting `lambda:InvokeFunction` to `*` alongside the `InvokeFunctionUrl` grant is what opens it. That grant **cannot be narrowed** — AWS rejects the `FunctionUrlAuthType` condition on it — so any AWS principal can invoke the function directly. `infra/lambda.tf` says so and explains why that is acceptable here |
 | **Local Terraform state** | For one person applying from one machine: one fewer bucket, one fewer table, and no chicken-and-egg problem about which Terraform builds the backend the state lives in. The file is gitignored | **It cannot survive a second person.** Two states that each believe they are the truth produce orphaned resources Terraform will cheerfully create again. `infra/backend.tf.example` has the S3 + DynamoDB configuration and the `terraform init -migrate-state` sequence written out, to adopt the day a second person shows up |
 | **The function's only permission** | Writing its own logs, plus `bedrock:InvokeModel` on two named models | Not `bedrock:*` on `*`: "two small models by name" is a bill somebody can read |

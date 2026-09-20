@@ -19,6 +19,12 @@ import sys
 from playwright.async_api import async_playwright, expect
 
 SITE = os.environ.get("SITE", "http://127.0.0.1:8123")
+
+# The real timetable the project was built on, used to prove the upload path
+# end to end rather than against a menu written to be easy.
+MENU_PDF = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data", "menus", "iiit-mess-menu.pdf")
 # Idle is "no `.loading` element anywhere". Checked with a locator rather than
 # `wait_for_function`, because the live site serves `script-src 'self'` and a
 # string predicate would be evaluated in the page's own world and blocked.
@@ -33,9 +39,9 @@ async def showing(page):
         ".filter(e => e.matches(':popover-open')).length")
 
 
-async def settle(page):
+async def settle(page, timeout=40_000):
     await page.wait_for_timeout(250)
-    await expect(page.locator(".loading")).to_have_count(0, timeout=40_000)
+    await expect(page.locator(".loading")).to_have_count(0, timeout=timeout)
     await page.wait_for_timeout(300)
 
 THROTTLED = ('{"Reason": "ConcurrentInvocationLimitExceeded", '
@@ -198,7 +204,7 @@ async def main():
         # the builder tab on a preset offers to start one instead
         await page.get_by_text("Build", exact=True).first.click()
         await settle(page)
-        assert "build your own menu" in (await page.inner_text("#view")).lower()
+        assert "build one dish by dish" in (await page.inner_text("#view")).lower()
         await page.get_by_role("button", name="Start an empty menu").click()
         await settle(page)
         assert "your menu" in (await page.inner_text("#view")).lower()
@@ -241,6 +247,39 @@ async def main():
         await page2.get_by_text("The gap", exact=True).click()
         await settle(page2)
         assert "nothing on" in (await page2.inner_text("#view")).lower()
+
+        # A menu read out of a real PDF, end to end: upload, the near misses
+        # settled one tap at a time, and the result solving like any other
+        # menu. This is the only test that spends a Bedrock call, and the only
+        # one that proves the upload works against the deployed function
+        # rather than against a stub.
+        page5 = await b.new_page(viewport={"width": 1440, "height": 1100})
+        page5.on("console", lambda m: errors.append(m.text)
+                 if m.type == "error" else None)
+        page5.on("pageerror", lambda e: errors.append(str(e)))
+        await page5.goto(SITE, wait_until="domcontentloaded")
+        await settle(page5)
+        await page5.get_by_text("Build", exact=True).first.click()
+        await settle(page5)
+        assert await page5.locator(".drop").count() == 1
+        await page5.set_input_files(".hidden-file", MENU_PDF)
+        await page5.wait_for_selector(".scanning", timeout=10_000)
+        # Reading a page of PDF is nine seconds or so, well past the default.
+        await settle(page5, timeout=90_000)
+        read = int((await page5.inner_text(".stat.hero .value")).strip())
+        assert read > 50, "only %d dishes came back off the menu" % read
+        misses = await page5.locator(".miss").count()
+        assert misses, "no near misses were offered"
+        await page5.locator(".miss").first.locator(".chip").first.click()
+        await page5.wait_for_timeout(300)
+        assert await page5.locator(".miss").count() == misses - 1, \
+            "settling a near miss did not take it off the list"
+        await page5.get_by_role("button", name="Use this menu").click()
+        await settle(page5)
+        assert await page5.locator(".meal .chip.dish").count() > 0
+        await page5.get_by_text("The gap", exact=True).click()
+        await settle(page5)
+        assert "targets" in (await page5.inner_text("#view")).lower()
 
         # A throttled start recovers by itself, because the burst is shorter
         # than the retry. Every call the page makes on arrival is refused.

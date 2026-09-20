@@ -12,6 +12,7 @@ import {
 import { encodeMenu, shareUrl, updateFragment } from '../lib/link.js';
 import { Icon } from '../lib/icons.js';
 import { More, Info } from './pieces.js';
+import { MenuImport } from './menufile.js';
 
 /* Editing the menu changes what the link has to say, so the two move
    together and every other tab re-solves off the back of it. */
@@ -141,13 +142,33 @@ function CopyLink({ link }) {
     }}><${Icon} name="copy" size=${14} /><span>${label}</span></button>`;
 }
 
+/* Take a menu that was read in, and open it in the builder.
+ *
+ * The day is moved to one the menu actually covers. A timetable that starts
+ * on Tuesday would otherwise land on an empty Monday, which looks like the
+ * read failed. */
+function useReadMenu(seeded) {
+  const days = DAY_ORDER.filter(function (day) {
+    return MEALS.some(function (meal) { return seeded.days[day][meal].length; });
+  });
+  changedMenu({
+    menuId: CUSTOM,
+    custom: seeded,
+    prices: {},
+    picker: null,
+    notice: null,
+    day: days.indexOf(state.day) === -1 && days.length ? days[0] : state.day
+  });
+}
+
 export function BuildTab() {
   if (!isCustom()) {
     return html`
+      <${MenuImport} onUse=${useReadMenu}>
       <section class="panel empty">
         <${Icon} name="square-pen" size=${28} />
         <h2>
-          <span>Build your own menu</span>
+          <span>Or build one dish by dish</span>
           <${Info} label="What you are building from">
             <p>${'The catalog has ' + state.catalog.dishes.length + ' dishes, '
               + 'each costed from its ingredient recipe in stated grams rather '
@@ -162,7 +183,8 @@ export function BuildTab() {
         <button class="chip action" type="button" onClick=${function () {
           changedMenu({ menuId: CUSTOM, prices: {} });
         }}>Start an empty menu</button>
-      </section>`;
+      </section>
+      <//>`;
   }
 
   const encoded = encodeMenu();
@@ -263,6 +285,10 @@ export function BuildTab() {
           changedMenu({ custom: emptyCustom(), picker: null, notice: null });
         }}>Empty the whole menu</button>
       </div>
+
+      <${More} label="Read a different menu in from a photo or a PDF">
+        <${MenuImport} onUse=${useReadMenu} />
+      <//>
 
       <${More} label="How the menu and your diet interact">
         <p class="note">A mess serves a dish once a meal and can serve it at two,

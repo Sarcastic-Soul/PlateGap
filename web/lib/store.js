@@ -138,6 +138,36 @@ export function seedFromPreset(preset, maxPerMeal) {
   return seeded;
 }
 
+/* A menu the parser read, in the shape the builder edits.
+ *
+ * The everyday items are folded into each day exactly as `seedFromPreset`
+ * folds a preset's, and for the same reason: in the builder they are chips
+ * you can see and remove.
+ *
+ * Only days the menu actually carries are filled. A timetable that covers
+ * Monday to Friday must not come back with breakfast on Saturday just
+ * because the mess serves bread every day -- that would be the parser
+ * inventing a meal, which is the one thing it is built not to do. */
+export function customFromMenu(menu, maxPerMeal) {
+  const seeded = emptyCustom();
+  seeded.name = menu.name || '';
+  DAY_ORDER.forEach(function (day) {
+    const offered = (menu.days || {})[day];
+    if (!offered) { return; }
+    MEALS.forEach(function (meal) {
+      const dishes = [];
+      ((menu.daily || {})[meal] || []).concat(offered[meal] || [])
+        .forEach(function (id) {
+          if (dishes.indexOf(id) === -1 && dishes.length < maxPerMeal) {
+            dishes.push(id);
+          }
+        });
+      seeded.days[day][meal] = dishes;
+    });
+  });
+  return seeded;
+}
+
 /* The inline menu the API takes in place of a preset id.
  *
  * Only days with something on them are sent, plus the day being asked about

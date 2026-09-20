@@ -11,6 +11,8 @@ delete when done.
 ## Product
 
 - [ ] Decide whether a shared link should be able to carry prices as well as the menu
+- [ ] A scanned menu's corrections are lost on "Start over" — worth keeping the edited text around
+- [ ] Only the first page of a multi-page PDF menu is reliably read; a second page would need a second call
 
 ## Data
 
@@ -32,3 +34,6 @@ delete when done.
 - [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone
 - [x] The tab bar fits on one line at 1440 px — the redesign gave each tab an icon and a short label, and the bar scrolls sideways rather than wrapping
 - [x] Demo screenshots match the live site — capturing against CloudFront after the redesign produced files byte-identical to the committed ones
+- [x] A PDF goes to Bedrock whole, as a `document` block — no rasterising, so the function needs no poppler or PIL; measured at 1,862 tokens in, ~1,100 out, about ten seconds
+- [x] The model transcribes and never matches — asked to emit the days down the side instead of across the top it dropped most of the grid and looped one row to the token cap, and every instruction past "copy what is printed" cost transcription quality
+- [x] Near misses are grouped by written name — a week of menu says "SAMBER" four times and "CHUTNEY" three, so 29 rows of unmatched became 11 worth a tap and 9 folded away

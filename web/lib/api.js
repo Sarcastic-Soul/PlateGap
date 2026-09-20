@@ -121,6 +121,20 @@ export function known(action, extra) {
   return cache.get(bodyFor(action, extra));
 }
 
+/* A request that is not a solve.
+ *
+ * `post` wraps every call in the whole solve envelope -- the menu, the day,
+ * the diet, every edited price, the profile -- and then caches the answer
+ * under that body. Neither is right for reading a menu in. None of those
+ * fields changes what a photograph says, and caching a request whose body
+ * carries a megabyte of base64 would hold the uploaded file in memory for
+ * the rest of the session.
+ *
+ * The throttle retry still applies, because that is in `send`. */
+export function postBare(action, extra) {
+  return send(JSON.stringify(Object.assign({ action: action }, extra || {})), 0);
+}
+
 export function post(action, extra) {
   const key = bodyFor(action, extra);
   if (cache.has(key)) { return Promise.resolve(cache.get(key)); }
