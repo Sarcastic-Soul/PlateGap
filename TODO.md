@@ -5,7 +5,7 @@ delete when done.
 
 ## Solver
 
-- [ ] Audit endpoint takes ~8s for 100 candidates x 7 days — trim to ~40 candidates or show a progress indicator
+- [ ] Audit takes 6.2s live — try raising Lambda memory (more memory is more CPU) before trimming candidates
 - [ ] `choose_leaving` has two tie-break branches that do the same thing — collapse them
 - [ ] If the problem ever grows past ~200 variables, switch to bounded-variable simplex so serving caps stop costing a row each
 - [ ] Confirm a row dropped by `_drive_out_artificials` reports a zero dual and not a stale one
@@ -24,6 +24,8 @@ delete when done.
 - [ ] Pick the number of points on the frontier chart — 30 was a guess
 
 ## Product
+
+- [ ] The dining-hall audit recommends french fries second — honest LP output, cheap energy and potassium, but it reads badly; consider showing what a recommendation costs in saturated fat alongside what it saves
 
 - [ ] Build the parse endpoint: paste a menu as text, or photograph the notice board, and match it to the catalog
 - [ ] Build the explain endpoint so the write-up on screen is written rather than templated

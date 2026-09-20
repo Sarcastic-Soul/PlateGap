@@ -50,12 +50,12 @@ Collect this **as we go**. Evidence assembled on Oct 1 looks assembled on Oct 1.
 ## Submission checklist
 
 - [x] Registered on Builder Center
-- [ ] Live public URL on AWS, no login wall, reachable by the AI scorer and judges
-- [ ] CloudTrail export documenting the coding agent's AWS calls
+- [x] Live public URL on AWS, no login wall, reachable by the AI scorer and judges
+- [x] CloudTrail export documenting the coding agent's AWS calls
 - [ ] Exactly one category tag: `#daily-life-enhancement`
 - [ ] Exactly one lane tag: `#startup` — note `#startups` plural is wrong and several entrants got it wrong
 - [ ] Write-up covers app, development process, coding-agent usage, AWS services, live link
 - [ ] Original, not previously published
-- [ ] Three presets — Indian hostel mess, North American dining hall, generic cafeteria — each usable in one click
-- [ ] Works for a stranger with no Indian context and no signup
+- [x] Three presets — Indian hostel mess, North American dining hall, generic cafeteria — each usable in one click
+- [x] Works for a stranger with no Indian context and no signup
 - [ ] Site stays up through the week of Oct 19
