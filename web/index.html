@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlateGap</title>
+<meta name="description" content="Your meal plan is already paid for. PlateGap works out what it still leaves you short of, and the cheapest thing you can buy to fix it.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127869;</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1>PlateGap <span>— what your meal plan leaves out</span></h1>
+    <p class="tagline">
+      Your mess fee or meal plan is already paid, so the food on the counter is
+      free at the margin — but rationed. This works out how well you could
+      possibly eat on it, what that still leaves you short of, and the cheapest
+      thing you could buy with your own money to close the difference.
+    </p>
+  </div>
+</header>
+
+<main>
+  <aside>
+    <section class="panel">
+      <h2>Menu</h2>
+      <label class="field">
+        <span>Preset</span>
+        <select id="menu"></select>
+      </label>
+      <p class="note" id="menu-note"></p>
+      <label class="field">
+        <span>Day</span>
+        <select id="day"></select>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>You</h2>
+      <label class="field">
+        <span>Diet</span>
+        <div class="chips" id="diet"></div>
+      </label>
+      <label class="field">
+        <span>Reference intakes</span>
+        <select id="region"></select>
+      </label>
+      <div class="pair">
+        <label class="field">
+          <span>Sex</span>
+          <select id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Activity</span>
+          <select id="activity">
+            <option value="sedentary">Sedentary</option>
+            <option value="moderate">Moderate</option>
+            <option value="active">Active</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">
+        <span>How much you can eat in a day: <b id="grams-value">1400</b> g</span>
+        <input type="range" id="grams" min="700" max="2400" step="50" value="1400">
+      </label>
+      <p class="note">
+        This one matters more than it looks. Without a limit on how much food a
+        person can physically get through, the answer is often “eat twelve
+        rotis” — technically correct and no use to anyone.
+      </p>
+    </section>
+  </aside>
+
+  <section>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="plan" aria-selected="true">The gap</button>
+      <button class="tab" role="tab" data-tab="frontier" aria-selected="false">What each rupee buys</button>
+      <button class="tab" role="tab" data-tab="audit" aria-selected="false">For whoever writes the menu</button>
+      <button class="tab" role="tab" data-tab="data" aria-selected="false">Where the numbers come from</button>
+    </div>
+
+    <div id="view"><p class="loading">Loading…</p></div>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Nutrients come from USDA FoodData Central, SR Legacy. Dishes are computed
+    from ingredient recipes in stated grams, not estimated whole — every
+    assumption is in the repository and can be argued with.
+    The optimiser is a two-phase simplex written for this project, with duals
+    checked against SciPy on a few hundred random instances.
+  </p>
+</footer>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
