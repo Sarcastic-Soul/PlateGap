@@ -35,7 +35,8 @@ delete when done.
 
 ## Infra
 
-- [ ] Point `allowed_origin` at the CloudFront domain once it exists, instead of `*`
+- [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone
 - [ ] Add a CloudFront response headers policy with CSP and HSTS
+- [ ] Ask AWS to raise the Lambda concurrency limit — this account is capped at 10, which is thin if several people click at once
 - [ ] Move Terraform state to S3 with DynamoDB locking if anyone else ever runs it
 - [ ] Check whether arm64 is actually faster than x86_64 for this solver before claiming it

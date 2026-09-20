@@ -9,6 +9,11 @@ rice and roti, one ladle of paneer, one boiled egg. Students top the rest up
 out of their own pockets without ever knowing what they are topping up, or
 whether they are buying the right thing.
 
+**Live:** <https://d2u44arueak38s.cloudfront.net> — no sign-up, nothing to
+install. The API behind it is a single Lambda Function URL:
+<https://j3h24i4cnnjhwwxyoenqibxene0yrrju.lambda-url.us-east-1.on.aws/>, which
+takes a JSON body such as `{"action": "solve", "menuId": "iiit", "day": "mon"}`.
+
 PlateGap answers three questions, each of which is a linear program:
 
 1. **Where's the gap?** Eat the menu as well as it can possibly be eaten,
