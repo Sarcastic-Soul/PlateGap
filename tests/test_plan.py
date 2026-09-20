@@ -275,3 +275,76 @@ def test_week_covers_every_day_the_menu_carries(catalog, menu):
 def test_unknown_day_is_refused(catalog, menu):
     with pytest.raises(model.MenuError):
         plan.gap(catalog, menu, "someday")
+
+
+# --------------------------------------------------------------------------
+# The audit
+# --------------------------------------------------------------------------
+
+def test_pricing_never_hides_a_worthwhile_candidate(catalog, menu):
+    """The screen must have no false negatives.
+
+    Reduced-cost screening is only legitimate if a candidate priced at or
+    above zero genuinely cannot improve the objective. If that ever stopped
+    holding, the audit would silently drop the best recommendation and still
+    look like it worked -- so this checks every rejected candidate the slow
+    way, by actually adding it and re-solving.
+    """
+    from solver import audit as audit_module
+
+    goals = targets.targets_for()
+    base = (model.mess_variables(catalog, menu, "mon")
+            + model.market_variables(catalog))
+    program = model.assemble(base, goals, objective="cost")
+    result = program.solve()
+    assert result.status == simplex.OPTIMAL
+    baseline = result.objective
+
+    candidates = audit_module._candidate_dishes(catalog, menu, "mon", "egg", set())
+    assert len(candidates) > 20, "not enough candidates to be a real test"
+
+    rejected = 0
+    for candidate in candidates:
+        priced = audit_module.reduced_cost(candidate, program, result.duals_ub)
+        if priced < audit_module.PRICING_TOL:
+            continue
+        rejected += 1
+        exact = model.assemble(base + [candidate], goals, objective="cost").solve()
+        assert exact.status == simplex.OPTIMAL
+        assert exact.objective >= baseline - 1e-6, (
+            "%s was screened out but saves %.8g"
+            % (candidate["id"], baseline - exact.objective))
+    assert rejected > 0, "the screen rejected nothing, so it proved nothing"
+
+
+def test_a_candidate_can_never_make_things_worse(catalog, menu):
+    """Adding an option to a minimisation cannot raise the minimum."""
+    from solver import audit as audit_module
+
+    answer = audit_module.audit_day(catalog, menu, "mon")
+    assert answer["feasible"]
+    for candidate in answer["candidates"]:
+        if candidate["saving"] is None:
+            continue
+        assert candidate["savingExact"] >= -1e-9
+        assert candidate["spendAfter"] <= answer["baselineSpend"] + 1e-6
+
+
+def test_ration_shadow_prices_only_appear_on_binding_caps(catalog, menu):
+    from solver import audit as audit_module
+
+    answer = audit_module.audit_day(catalog, menu, "mon")
+    plan_answer = plan.cheapest(catalog, menu, "mon")
+    capped = {item["id"] for item in plan_answer["plate"] if item["atCap"]}
+    for ration in answer["rations"]:
+        assert ration["id"] in capped, (
+            "%s has a shadow price but is not served at its cap" % ration["id"])
+
+
+def test_audit_scales_with_the_student_count(catalog, menu):
+    from solver import audit as audit_module
+
+    one = audit_module.audit_week(catalog, menu, students=1, shortlist=3)
+    many = audit_module.audit_week(catalog, menu, students=500, shortlist=3)
+    assert many["baselineMonthlySpendAllStudents"] == pytest.approx(
+        one["baselineMonthlySpendAllStudents"] * 500, rel=1e-3)
