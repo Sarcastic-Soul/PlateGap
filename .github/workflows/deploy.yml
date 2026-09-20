@@ -56,6 +56,13 @@ jobs:
         if: steps.check.outputs.ready == 'true'
         run: ./scripts/package_lambda.sh
 
+      - name: Show the OIDC claims
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          token="$(curl -sS -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | python3 -c 'import json,sys; print(json.load(sys.stdin)["value"])')"
+          printf '%s' "$token" | cut -d. -f2 | base64 -d 2>/dev/null | python3 -c 'import json,sys; c=json.load(sys.stdin); print({k:c[k] for k in ("sub","aud","iss","repository","ref","event_name") if k in c})'
+
       - name: Assume the deploy role
         if: steps.check.outputs.ready == 'true'
         uses: aws-actions/configure-aws-credentials@v4
