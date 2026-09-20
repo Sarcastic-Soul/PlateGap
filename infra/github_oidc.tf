@@ -25,6 +25,20 @@ locals {
   github_provider_arn = (var.create_github_oidc_provider
     ? aws_iam_openid_connect_provider.github[0].arn
   : var.github_oidc_provider_arn)
+
+  # Both spellings of the subject claim are trusted, because which one a
+  # repository sends is a GitHub-side setting rather than something this
+  # account controls. The ID-qualified form is the stricter of the two: the
+  # numeric ids cannot be reused, so a repository deleted and recreated under
+  # the same name does not inherit the trust.
+  github_subjects = compact([
+    "repo:${var.github_repository}:ref:refs/heads/main",
+    (var.github_owner_id != "" && var.github_repository_id != ""
+      ? format("repo:%s@%s/%s@%s:ref:refs/heads/main",
+        split("/", var.github_repository)[0], var.github_owner_id,
+        split("/", var.github_repository)[1], var.github_repository_id)
+    : ""),
+  ])
 }
 
 data "aws_iam_policy_document" "github_assume" {
@@ -45,7 +59,7 @@ data "aws_iam_policy_document" "github_assume" {
     condition {
       test     = "StringEquals"
       variable = "token.actions.githubusercontent.com:sub"
-      values   = ["repo:${var.github_repository}:ref:refs/heads/main"]
+      values   = local.github_subjects
     }
   }
 }

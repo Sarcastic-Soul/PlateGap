@@ -53,6 +53,29 @@ variable "github_repository" {
   default     = "Sarcastic-Soul/PlateGap"
 }
 
+variable "github_owner_id" {
+  description = <<-TEXT
+    Numeric id of the GitHub account, when the repository issues ID-qualified
+    subject claims. GitHub can be told to put the immutable numeric ids of the
+    owner and the repository into the token's `sub`, so that a deleted-and-
+    recreated repository of the same name cannot inherit this trust. When that
+    is on, `sub` reads `repo:owner@1234/name@5678:ref:refs/heads/main` and a
+    policy pinned to the plain name never matches. Leave both ids empty if the
+    repository issues plain subjects.
+
+    Find them with:
+      gh api repos/OWNER/NAME --jq '.owner.id, .id'
+  TEXT
+  type        = string
+  default     = "142567151"
+}
+
+variable "github_repository_id" {
+  description = "Numeric id of the repository. See `github_owner_id`."
+  type        = string
+  default     = "1378199091"
+}
+
 variable "create_github_oidc_provider" {
   description = <<-TEXT
     Whether to create the GitHub OIDC provider. An AWS account can only have
