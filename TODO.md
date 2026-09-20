@@ -5,7 +5,6 @@ delete when done.
 
 ## Waiting on the account owner
 
-- [ ] Run `./scripts/bootstrap_aws.sh -auto-approve` to apply the CSP/HSTS policy, the Lambda memory bump and the Bedrock policy
 - [ ] Submit the Anthropic use-case form in the console so Haiku 4.5 answers — Nova Lite already does
 - [ ] Ask AWS to raise the Lambda concurrency limit — this account is capped at 10, which is thin if several people click at once
 - [ ] Sanity-check the seed market prices against a real shop near campus
@@ -26,6 +25,7 @@ delete when done.
 
 - [x] Bounded-variable simplex — not needed: a real solve is 42 variables and 58 rows, nowhere near the ~200 where a row per serving cap would matter
 - [x] Frontier points stay 24 — 12 points 176 ms, 24 points 314 ms, 40 points 502 ms, and at chart width 24 is already a point every 30 px
+- [x] Applied: CSP and HSTS are on the live responses, the function has 1769 MB, and `explain` now answers from Nova Lite rather than the templated fallback
 - [x] Lambda memory 1769 MB — the exact point AWS hands over one whole vCPU; above it a single-threaded interpreter pays for a core it cannot use
 - [x] arm64 stays, justified on Graviton's published price, and the repo does not claim it is faster because nobody has measured it
 - [x] Local Terraform state stays; `infra/backend.tf.example` has the S3 + DynamoDB migration for the day a second person applies

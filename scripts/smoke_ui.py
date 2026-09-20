@@ -16,13 +16,15 @@ import asyncio
 import os
 import sys
 
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, expect
 
 SITE = os.environ.get("SITE", "http://127.0.0.1:8123")
-BUSY = "!/Running|Solving|Working|Loading|\\.\\.\\./.test(document.body.innerText)"
-
+# Idle is "no `.loading` element anywhere". Checked with a locator rather than
+# `wait_for_function`, because the live site serves `script-src 'self'` and a
+# string predicate would be evaluated in the page's own world and blocked.
 async def settle(page):
-    await page.wait_for_function(BUSY, timeout=40_000)
+    await page.wait_for_timeout(250)
+    await expect(page.locator(".loading")).to_have_count(0, timeout=40_000)
     await page.wait_for_timeout(300)
 
 async def main():

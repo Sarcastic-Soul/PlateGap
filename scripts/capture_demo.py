@@ -15,7 +15,7 @@ import asyncio
 import pathlib
 import sys
 
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, expect
 
 SITE = sys.argv[1] if len(sys.argv) > 1 else "https://d2u44arueak38s.cloudfront.net"
 OUT = pathlib.Path(__file__).resolve().parent.parent / "docs" / "hackathon" / "demo"
@@ -31,14 +31,19 @@ SHOTS = [
     ("custom", "Build a menu", "07-build-a-menu.png"),
 ]
 
-# The page says one of these while a solve is in flight.
-BUSY = "!/Running|Solving|Working|\\.\\.\\./.test(document.body.innerText)"
-
-
+# Every "solving…" message on the page is a `.loading` element, so the page is
+# idle exactly when there are none of them left.
+#
+# This deliberately does not use `wait_for_function`: Playwright evaluates a
+# string predicate in the page's own world with `new Function`, and the site
+# serves `script-src 'self'` with no `'unsafe-eval'`, so the CSP that makes
+# the site worth shipping would block the check. Locator assertions run in
+# Playwright's utility world, which page CSP does not govern.
 async def settle(page):
+    await page.wait_for_timeout(250)  # let the click re-render before looking
     try:
-        await page.wait_for_function(BUSY, timeout=40_000)
-    except Exception:
+        await expect(page.locator(".loading")).to_have_count(0, timeout=40_000)
+    except AssertionError:
         print("  still busy after 40s", file=sys.stderr)
     await page.wait_for_timeout(1500)
 
