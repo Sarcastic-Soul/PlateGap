@@ -13,6 +13,7 @@
  },
  "dishes": {
   "aloo_bhujiya": {
+   "cuisine": "indian",
    "id": "aloo_bhujiya",
    "maxServings": 2,
    "name": "Aloo bhujiya",
@@ -47,10 +48,12 @@
    "servingGrams": 120,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "aloo_choka": {
+   "cuisine": "indian",
    "id": "aloo_choka",
    "maxServings": 2,
    "name": "Aloo choka",
@@ -89,10 +92,12 @@
    "servingGrams": 135,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "aloo_jeera": {
+   "cuisine": "indian",
    "id": "aloo_jeera",
    "maxServings": 2,
    "name": "Aloo jeera",
@@ -127,10 +132,12 @@
    "servingGrams": 125,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "aloo_paratha": {
+   "cuisine": "indian",
    "id": "aloo_paratha",
    "maxServings": 3,
    "name": "Aloo paratha",
@@ -169,10 +176,12 @@
    "servingGrams": 95,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "aloo_tomato": {
+   "cuisine": "indian",
    "id": "aloo_tomato",
    "maxServings": 2,
    "name": "Aloo tomato",
@@ -211,10 +220,12 @@
    "servingGrams": 145,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "amul_butter": {
+   "cuisine": "indian",
    "id": "amul_butter",
    "maxServings": 2,
    "name": "Butter portion",
@@ -245,10 +256,12 @@
    "servingGrams": 10,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "apple_whole": {
+   "cuisine": "american",
    "id": "apple_whole",
    "maxServings": 2,
    "name": "Whole apple",
@@ -279,10 +292,12 @@
    "servingGrams": 180,
    "tags": [
     "veg",
-    "fruit"
+    "fruit",
+    "american"
    ]
   },
   "bacon_strips": {
+   "cuisine": "american",
    "id": "bacon_strips",
    "maxServings": 2,
    "name": "Bacon",
@@ -313,10 +328,12 @@
    "servingGrams": 25,
    "tags": [
     "meat",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "bagel_butter": {
+   "cuisine": "american",
    "id": "bagel_butter",
    "maxServings": 2,
    "name": "Bagel with butter",
@@ -351,10 +368,12 @@
    "servingGrams": 100,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "baked_salmon": {
+   "cuisine": "american",
    "id": "baked_salmon",
    "maxServings": 1,
    "name": "Baked salmon",
@@ -391,10 +410,12 @@
     "meat",
     "fish",
     "protein",
-    "main"
+    "main",
+    "american"
    ]
   },
   "black_bean_bowl": {
+   "cuisine": "american",
    "id": "black_bean_bowl",
    "maxServings": 1,
    "name": "Black bean and rice bowl",
@@ -438,10 +459,12 @@
    "tags": [
     "veg",
     "protein",
-    "main"
+    "main",
+    "american"
    ]
   },
   "black_chana_aloo": {
+   "cuisine": "indian",
    "id": "black_chana_aloo",
    "maxServings": 2,
    "name": "Black chana aloo",
@@ -484,10 +507,12 @@
    "servingGrams": 175,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "boiled_egg": {
+   "cuisine": "indian",
    "id": "boiled_egg",
    "maxServings": 2,
    "name": "Boiled egg",
@@ -518,10 +543,12 @@
    "servingGrams": 50,
    "tags": [
     "egg",
-    "protein"
+    "protein",
+    "indian"
    ]
   },
   "boiled_sprouts": {
+   "cuisine": "indian",
    "id": "boiled_sprouts",
    "maxServings": 2,
    "name": "Boiled sprouts",
@@ -552,10 +579,12 @@
    "servingGrams": 60,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "boondi_raita": {
+   "cuisine": "indian",
    "id": "boondi_raita",
    "maxServings": 2,
    "name": "Boondi raita",
@@ -594,10 +623,12 @@
    "servingGrams": 110,
    "tags": [
     "veg",
-    "dairy"
+    "dairy",
+    "indian"
    ]
   },
   "bread_slice": {
+   "cuisine": "indian",
    "id": "bread_slice",
    "maxServings": 4,
    "name": "Bread slice",
@@ -628,10 +659,12 @@
    "servingGrams": 25,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "brownie_square": {
+   "cuisine": "american",
    "id": "brownie_square",
    "maxServings": 1,
    "name": "Brownie",
@@ -662,10 +695,12 @@
    "servingGrams": 56,
    "tags": [
     "veg",
-    "sweet"
+    "sweet",
+    "american"
    ]
   },
   "cereal_bowl": {
+   "cuisine": "american",
    "id": "cereal_bowl",
    "maxServings": 2,
    "name": "Cereal with milk",
@@ -701,10 +736,12 @@
    "tags": [
     "veg",
     "dairy",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "cheese_pizza": {
+   "cuisine": "american",
    "id": "cheese_pizza",
    "maxServings": 3,
    "name": "Cheese pizza slice",
@@ -747,10 +784,12 @@
    "servingGrams": 120,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "american"
    ]
   },
   "cheeseburger": {
+   "cuisine": "american",
    "id": "cheeseburger",
    "maxServings": 1,
    "name": "Cheeseburger",
@@ -797,10 +836,12 @@
    "servingGrams": 180,
    "tags": [
     "meat",
-    "main"
+    "main",
+    "american"
    ]
   },
   "chicken_biryani": {
+   "cuisine": "indian",
    "id": "chicken_biryani",
    "maxServings": 1,
    "name": "Chicken biryani",
@@ -843,10 +884,12 @@
    "servingGrams": 220,
    "tags": [
     "meat",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "chicken_butter_masala": {
+   "cuisine": "indian",
    "id": "chicken_butter_masala",
    "maxServings": 1,
    "name": "Chicken butter masala",
@@ -889,10 +932,12 @@
    "servingGrams": 145,
    "tags": [
     "meat",
-    "protein"
+    "protein",
+    "indian"
    ]
   },
   "chickpea_salad": {
+   "cuisine": "american",
    "id": "chickpea_salad",
    "maxServings": 2,
    "name": "Chickpea salad",
@@ -936,10 +981,12 @@
    "tags": [
     "veg",
     "protein",
-    "side"
+    "side",
+    "american"
    ]
   },
   "chole": {
+   "cuisine": "indian",
    "id": "chole",
    "maxServings": 2,
    "name": "Chole",
@@ -982,10 +1029,12 @@
    "servingGrams": 185,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "chole_curry": {
+   "cuisine": "indian",
    "id": "chole_curry",
    "maxServings": 2,
    "name": "Chole curry",
@@ -1028,10 +1077,12 @@
    "servingGrams": 185,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "corn_chat": {
+   "cuisine": "indian",
    "id": "corn_chat",
    "maxServings": 2,
    "name": "Corn chat",
@@ -1070,10 +1121,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "cutlet": {
+   "cuisine": "indian",
    "id": "cutlet",
    "maxServings": 4,
    "name": "Cutlet",
@@ -1112,10 +1165,12 @@
    "servingGrams": 55,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "dahi": {
+   "cuisine": "indian",
    "id": "dahi",
    "maxServings": 2,
    "name": "Dahi",
@@ -1146,10 +1201,12 @@
    "servingGrams": 80,
    "tags": [
     "veg",
-    "dairy"
+    "dairy",
+    "indian"
    ]
   },
   "dal_makhani": {
+   "cuisine": "indian",
    "id": "dal_makhani",
    "maxServings": 3,
    "name": "Dal makhani",
@@ -1196,10 +1253,12 @@
    "servingGrams": 175,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "dal_mix": {
+   "cuisine": "indian",
    "id": "dal_mix",
    "maxServings": 4,
    "name": "Mix dal",
@@ -1242,10 +1301,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "dal_tadka": {
+   "cuisine": "indian",
    "id": "dal_tadka",
    "maxServings": 4,
    "name": "Dal tadka",
@@ -1288,10 +1349,12 @@
    "servingGrams": 165,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "dinner_roll": {
+   "cuisine": "american",
    "id": "dinner_roll",
    "maxServings": 4,
    "name": "Dinner roll",
@@ -1322,10 +1385,12 @@
    "servingGrams": 40,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "american"
    ]
   },
   "dosa": {
+   "cuisine": "indian",
    "id": "dosa",
    "maxServings": 2,
    "name": "Dosa",
@@ -1364,10 +1429,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "dum_aloo": {
+   "cuisine": "indian",
    "id": "dum_aloo",
    "maxServings": 2,
    "name": "Dum aloo",
@@ -1410,10 +1477,12 @@
    "servingGrams": 155,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "egg_bhurji": {
+   "cuisine": "indian",
    "id": "egg_bhurji",
    "maxServings": 1,
    "name": "Egg bhurji",
@@ -1452,10 +1521,12 @@
    "servingGrams": 130,
    "tags": [
     "egg",
-    "protein"
+    "protein",
+    "indian"
    ]
   },
   "egg_curry": {
+   "cuisine": "indian",
    "id": "egg_curry",
    "maxServings": 1,
    "name": "Egg curry",
@@ -1498,10 +1569,12 @@
    "servingGrams": 160,
    "tags": [
     "egg",
-    "protein"
+    "protein",
+    "indian"
    ]
   },
   "french_fries": {
+   "cuisine": "american",
    "id": "french_fries",
    "maxServings": 2,
    "name": "French fries",
@@ -1532,10 +1605,12 @@
    "servingGrams": 100,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "american"
    ]
   },
   "fruit_custard": {
+   "cuisine": "indian",
    "id": "fruit_custard",
    "maxServings": 1,
    "name": "Fruit custard",
@@ -1574,10 +1649,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "sweet"
+    "sweet",
+    "indian"
    ]
   },
   "fruit_portion": {
+   "cuisine": "indian",
    "id": "fruit_portion",
    "maxServings": 2,
    "name": "Fruit (2 pcs)",
@@ -1612,10 +1689,12 @@
    "servingGrams": 180,
    "tags": [
     "veg",
-    "fruit"
+    "fruit",
+    "indian"
    ]
   },
   "garden_salad": {
+   "cuisine": "american",
    "id": "garden_salad",
    "maxServings": 3,
    "name": "Garden salad",
@@ -1662,10 +1741,12 @@
    "servingGrams": 155,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "american"
    ]
   },
   "gobhi_dry": {
+   "cuisine": "indian",
    "id": "gobhi_dry",
    "maxServings": 2,
    "name": "Gobhi dry",
@@ -1700,10 +1781,12 @@
    "servingGrams": 115,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "green_chutney": {
+   "cuisine": "indian",
    "id": "green_chutney",
    "maxServings": 2,
    "name": "Green chutney",
@@ -1738,10 +1821,12 @@
    "servingGrams": 20,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "grilled_chicken": {
+   "cuisine": "american",
    "id": "grilled_chicken",
    "maxServings": 1,
    "name": "Grilled chicken breast",
@@ -1777,10 +1862,12 @@
    "tags": [
     "meat",
     "protein",
-    "main"
+    "main",
+    "american"
    ]
   },
   "gulab_jamun": {
+   "cuisine": "indian",
    "id": "gulab_jamun",
    "maxServings": 1,
    "name": "Gulab jamun (2 pcs)",
@@ -1823,10 +1910,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "sweet"
+    "sweet",
+    "indian"
    ]
   },
   "idli": {
+   "cuisine": "indian",
    "id": "idli",
    "maxServings": 4,
    "name": "Idli",
@@ -1861,10 +1950,12 @@
    "servingGrams": 60,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "imli_chutney": {
+   "cuisine": "indian",
    "id": "imli_chutney",
    "maxServings": 2,
    "name": "Imli chutney",
@@ -1901,10 +1992,12 @@
    "servingGrams": 20,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "jam": {
+   "cuisine": "indian",
    "id": "jam",
    "maxServings": 2,
    "name": "Jam",
@@ -1935,10 +2028,12 @@
    "servingGrams": 15,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "jeera_rice": {
+   "cuisine": "indian",
    "id": "jeera_rice",
    "maxServings": 4,
    "name": "Jeera rice",
@@ -1973,10 +2068,12 @@
    "servingGrams": 155,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "kadai_masala": {
+   "cuisine": "indian",
    "id": "kadai_masala",
    "maxServings": 2,
    "name": "Kadai masala",
@@ -2019,10 +2116,12 @@
    "servingGrams": 110,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "kadhai_chicken": {
+   "cuisine": "indian",
    "id": "kadhai_chicken",
    "maxServings": 1,
    "name": "Kadhai chicken",
@@ -2065,10 +2164,12 @@
    "servingGrams": 145,
    "tags": [
     "meat",
-    "protein"
+    "protein",
+    "indian"
    ]
   },
   "kadu_masala": {
+   "cuisine": "indian",
    "id": "kadu_masala",
    "maxServings": 2,
    "name": "Kadu masala",
@@ -2107,10 +2208,12 @@
    "servingGrams": 120,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "kheer": {
+   "cuisine": "indian",
    "id": "kheer",
    "maxServings": 1,
    "name": "Kheer",
@@ -2149,10 +2252,12 @@
    "servingGrams": 160,
    "tags": [
     "veg",
-    "sweet"
+    "sweet",
+    "indian"
    ]
   },
   "kurmuri_bhindi": {
+   "cuisine": "indian",
    "id": "kurmuri_bhindi",
    "maxServings": 2,
    "name": "Kurmuri bhindi",
@@ -2191,10 +2296,12 @@
    "servingGrams": 110,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "mac_and_cheese": {
+   "cuisine": "american",
    "id": "mac_and_cheese",
    "maxServings": 2,
    "name": "Macaroni and cheese",
@@ -2237,10 +2344,12 @@
    "servingGrams": 238,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "american"
    ]
   },
   "malai_kofta": {
+   "cuisine": "indian",
    "id": "malai_kofta",
    "maxServings": 1,
    "name": "Malai kofta",
@@ -2285,10 +2394,12 @@
    "servingGrams": 130,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "mangodi": {
+   "cuisine": "indian",
    "id": "mangodi",
    "maxServings": 2,
    "name": "Mangodi",
@@ -2327,10 +2438,12 @@
    "servingGrams": 95,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "masoor_dal_dish": {
+   "cuisine": "indian",
    "id": "masoor_dal_dish",
    "maxServings": 4,
    "name": "Khada masoor dal",
@@ -2369,10 +2482,12 @@
    "servingGrams": 160,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "matar_chola": {
+   "cuisine": "indian",
    "id": "matar_chola",
    "maxServings": 2,
    "name": "Matar chola",
@@ -2415,10 +2530,12 @@
    "servingGrams": 155,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "milk_carton": {
+   "cuisine": "american",
    "id": "milk_carton",
    "maxServings": 2,
    "name": "Milk carton",
@@ -2450,10 +2567,12 @@
    "tags": [
     "veg",
     "dairy",
-    "beverage"
+    "beverage",
+    "american"
    ]
   },
   "milk_glass": {
+   "cuisine": "indian",
    "id": "milk_glass",
    "maxServings": 2,
    "name": "Milk 200 ml",
@@ -2484,10 +2603,12 @@
    "servingGrams": 206,
    "tags": [
     "veg",
-    "dairy"
+    "dairy",
+    "indian"
    ]
   },
   "mix_veg": {
+   "cuisine": "indian",
    "id": "mix_veg",
    "maxServings": 2,
    "name": "Mix veg",
@@ -2534,10 +2655,12 @@
    "servingGrams": 130,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "moong_halwa": {
+   "cuisine": "indian",
    "id": "moong_halwa",
    "maxServings": 1,
    "name": "Moong halwa",
@@ -2576,10 +2699,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "sweet"
+    "sweet",
+    "indian"
    ]
   },
   "mutter_paneer": {
+   "cuisine": "indian",
    "id": "mutter_paneer",
    "maxServings": 1,
    "name": "Mutter paneer",
@@ -2624,10 +2749,12 @@
    "servingGrams": 125,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "nariyal_chutney": {
+   "cuisine": "indian",
    "id": "nariyal_chutney",
    "maxServings": 2,
    "name": "Coconut chutney",
@@ -2662,10 +2789,12 @@
    "servingGrams": 30,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "noodles": {
+   "cuisine": "indian",
    "id": "noodles",
    "maxServings": 2,
    "name": "Noodles",
@@ -2704,10 +2833,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "oatmeal": {
+   "cuisine": "american",
    "id": "oatmeal",
    "maxServings": 2,
    "name": "Oatmeal",
@@ -2738,10 +2869,12 @@
    "servingGrams": 230,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "onion_chop": {
+   "cuisine": "indian",
    "id": "onion_chop",
    "maxServings": 2,
    "name": "Onion chopped",
@@ -2772,10 +2905,12 @@
    "servingGrams": 30,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "onion_rice": {
+   "cuisine": "indian",
    "id": "onion_rice",
    "maxServings": 4,
    "name": "Onion rice",
@@ -2814,10 +2949,12 @@
    "servingGrams": 175,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "orange_juice_glass": {
+   "cuisine": "american",
    "id": "orange_juice_glass",
    "maxServings": 2,
    "name": "Orange juice",
@@ -2849,10 +2986,12 @@
    "tags": [
     "veg",
     "fruit",
-    "beverage"
+    "beverage",
+    "american"
    ]
   },
   "pakoda": {
+   "cuisine": "indian",
    "id": "pakoda",
    "maxServings": 2,
    "name": "Pakoda",
@@ -2891,10 +3030,12 @@
    "servingGrams": 60,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "pancakes_stack": {
+   "cuisine": "american",
    "id": "pancakes_stack",
    "maxServings": 2,
    "name": "Pancakes",
@@ -2933,10 +3074,12 @@
    "servingGrams": 140,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "paneer_bhurji": {
+   "cuisine": "indian",
    "id": "paneer_bhurji",
    "maxServings": 1,
    "name": "Paneer bhurji",
@@ -2981,10 +3124,12 @@
    "servingGrams": 115,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "paneer_butter_masala": {
+   "cuisine": "indian",
    "id": "paneer_butter_masala",
    "maxServings": 1,
    "name": "Paneer butter masala",
@@ -3033,10 +3178,12 @@
    "servingGrams": 130,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "papad": {
+   "cuisine": "indian",
    "id": "papad",
    "maxServings": 2,
    "name": "Papad",
@@ -3071,10 +3218,12 @@
    "servingGrams": 14,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "pasta_marinara": {
+   "cuisine": "american",
    "id": "pasta_marinara",
    "maxServings": 2,
    "name": "Pasta marinara",
@@ -3113,10 +3262,12 @@
    "servingGrams": 305,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "american"
    ]
   },
   "pav_bhaji": {
+   "cuisine": "indian",
    "id": "pav_bhaji",
    "maxServings": 1,
    "name": "Pav bhaji",
@@ -3163,10 +3314,12 @@
    "servingGrams": 175,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "peas_pulao": {
+   "cuisine": "indian",
    "id": "peas_pulao",
    "maxServings": 3,
    "name": "Peas pulao",
@@ -3205,10 +3358,12 @@
    "servingGrams": 180,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "pickle": {
+   "cuisine": "indian",
    "id": "pickle",
    "maxServings": 2,
    "name": "Pickle",
@@ -3239,10 +3394,12 @@
    "servingGrams": 12,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "plain_curd": {
+   "cuisine": "indian",
    "id": "plain_curd",
    "maxServings": 2,
    "name": "Plain curd",
@@ -3273,10 +3430,12 @@
    "servingGrams": 100,
    "tags": [
     "veg",
-    "dairy"
+    "dairy",
+    "indian"
    ]
   },
   "plain_rice": {
+   "cuisine": "indian",
    "id": "plain_rice",
    "maxServings": 4,
    "name": "Plain rice",
@@ -3307,10 +3466,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "poha": {
+   "cuisine": "indian",
    "id": "poha",
    "maxServings": 2,
    "name": "Poha",
@@ -3353,10 +3514,12 @@
    "servingGrams": 160,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "poori": {
+   "cuisine": "indian",
    "id": "poori",
    "maxServings": 4,
    "name": "Poori",
@@ -3391,10 +3554,12 @@
    "servingGrams": 32,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "pyaj_muter_malai": {
+   "cuisine": "indian",
    "id": "pyaj_muter_malai",
    "maxServings": 2,
    "name": "Pyaj mutter malai",
@@ -3437,10 +3602,12 @@
    "servingGrams": 125,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "rajma_dish": {
+   "cuisine": "indian",
    "id": "rajma_dish",
    "maxServings": 2,
    "name": "Rajma",
@@ -3483,10 +3650,12 @@
    "servingGrams": 185,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "rasam": {
+   "cuisine": "indian",
    "id": "rasam",
    "maxServings": 3,
    "name": "Rasam",
@@ -3525,10 +3694,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "ratlami_sev": {
+   "cuisine": "indian",
    "id": "ratlami_sev",
    "maxServings": 2,
    "name": "Ratlami sev",
@@ -3563,10 +3734,12 @@
    "servingGrams": 30,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "red_chutney": {
+   "cuisine": "indian",
    "id": "red_chutney",
    "maxServings": 2,
    "name": "Red chutney",
@@ -3601,10 +3774,12 @@
    "servingGrams": 20,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "roti": {
+   "cuisine": "indian",
    "id": "roti",
    "maxServings": 6,
    "name": "Roti",
@@ -3639,10 +3814,12 @@
    "servingGrams": 35,
    "tags": [
     "veg",
-    "staple"
+    "staple",
+    "indian"
    ]
   },
   "salad": {
+   "cuisine": "indian",
    "id": "salad",
    "maxServings": 3,
    "name": "Salad",
@@ -3681,10 +3858,12 @@
    "servingGrams": 75,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "sambhar": {
+   "cuisine": "indian",
    "id": "sambhar",
    "maxServings": 4,
    "name": "Sambhar",
@@ -3735,10 +3914,12 @@
    "servingGrams": 140,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "samosa": {
+   "cuisine": "indian",
    "id": "samosa",
    "maxServings": 2,
    "name": "Samosa",
@@ -3777,10 +3958,12 @@
    "servingGrams": 70,
    "tags": [
     "veg",
-    "snack"
+    "snack",
+    "indian"
    ]
   },
   "scrambled_eggs": {
+   "cuisine": "american",
    "id": "scrambled_eggs",
    "maxServings": 2,
    "name": "Scrambled eggs",
@@ -3812,10 +3995,12 @@
    "tags": [
     "egg",
     "protein",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   },
   "soya_badi": {
+   "cuisine": "indian",
    "id": "soya_badi",
    "maxServings": 2,
    "name": "Soya badi",
@@ -3858,10 +4043,12 @@
    "servingGrams": 125,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "soya_chilli": {
+   "cuisine": "indian",
    "id": "soya_chilli",
    "maxServings": 2,
    "name": "Soya chilli",
@@ -3900,10 +4087,12 @@
    "servingGrams": 120,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "steamed_broccoli": {
+   "cuisine": "american",
    "id": "steamed_broccoli",
    "maxServings": 3,
    "name": "Steamed broccoli",
@@ -3934,10 +4123,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "american"
    ]
   },
   "sweetcorn_side": {
+   "cuisine": "american",
    "id": "sweetcorn_side",
    "maxServings": 2,
    "name": "Sweetcorn",
@@ -3968,10 +4159,12 @@
    "servingGrams": 90,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "american"
    ]
   },
   "tea": {
+   "cuisine": "indian",
    "id": "tea",
    "maxServings": 3,
    "name": "Tea",
@@ -4006,10 +4199,12 @@
    "servingGrams": 150,
    "tags": [
     "veg",
-    "beverage"
+    "beverage",
+    "indian"
    ]
   },
   "tofu_stirfry": {
+   "cuisine": "american",
    "id": "tofu_stirfry",
    "maxServings": 1,
    "name": "Tofu stir fry",
@@ -4057,10 +4252,12 @@
    "tags": [
     "veg",
     "protein",
-    "main"
+    "main",
+    "american"
    ]
   },
   "tomato_chop": {
+   "cuisine": "indian",
    "id": "tomato_chop",
    "maxServings": 2,
    "name": "Tomato chopped",
@@ -4091,10 +4288,12 @@
    "servingGrams": 30,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "indian"
    ]
   },
   "tomato_soup_bowl": {
+   "cuisine": "american",
    "id": "tomato_soup_bowl",
    "maxServings": 2,
    "name": "Tomato soup",
@@ -4125,10 +4324,12 @@
    "servingGrams": 245,
    "tags": [
     "veg",
-    "side"
+    "side",
+    "american"
    ]
   },
   "toor_dal_tadka": {
+   "cuisine": "indian",
    "id": "toor_dal_tadka",
    "maxServings": 4,
    "name": "Arhar dal tadka",
@@ -4171,10 +4372,12 @@
    "servingGrams": 165,
    "tags": [
     "veg",
-    "dal"
+    "dal",
+    "indian"
    ]
   },
   "turkey_sandwich": {
+   "cuisine": "american",
    "id": "turkey_sandwich",
    "maxServings": 1,
    "name": "Turkey sandwich",
@@ -4221,10 +4424,12 @@
    "servingGrams": 165,
    "tags": [
     "meat",
-    "main"
+    "main",
+    "american"
    ]
   },
   "upma": {
+   "cuisine": "indian",
    "id": "upma",
    "maxServings": 2,
    "name": "Upma",
@@ -4267,10 +4472,12 @@
    "servingGrams": 160,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "vada": {
+   "cuisine": "indian",
    "id": "vada",
    "maxServings": 2,
    "name": "Vada",
@@ -4305,10 +4512,12 @@
    "servingGrams": 55,
    "tags": [
     "veg",
-    "breakfast"
+    "breakfast",
+    "indian"
    ]
   },
   "veg_biryani": {
+   "cuisine": "indian",
    "id": "veg_biryani",
    "maxServings": 2,
    "name": "Veg biryani",
@@ -4351,10 +4560,12 @@
    "servingGrams": 210,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "veg_kofta": {
+   "cuisine": "indian",
    "id": "veg_kofta",
    "maxServings": 1,
    "name": "Veg kofta",
@@ -4399,10 +4610,12 @@
    "servingGrams": 115,
    "tags": [
     "veg",
-    "main"
+    "main",
+    "indian"
    ]
   },
   "veg_kolhapuri": {
+   "cuisine": "indian",
    "id": "veg_kolhapuri",
    "maxServings": 2,
    "name": "Veg kolhapuri",
@@ -4449,10 +4662,12 @@
    "servingGrams": 130,
    "tags": [
     "veg",
-    "sabzi"
+    "sabzi",
+    "indian"
    ]
   },
   "veg_raita": {
+   "cuisine": "indian",
    "id": "veg_raita",
    "maxServings": 2,
    "name": "Veg raita",
@@ -4491,10 +4706,12 @@
    "servingGrams": 115,
    "tags": [
     "veg",
-    "dairy"
+    "dairy",
+    "indian"
    ]
   },
   "yogurt_parfait": {
+   "cuisine": "american",
    "id": "yogurt_parfait",
    "maxServings": 2,
    "name": "Yogurt parfait",
@@ -4534,7 +4751,8 @@
    "tags": [
     "veg",
     "dairy",
-    "breakfast"
+    "breakfast",
+    "american"
    ]
   }
  },
@@ -9296,6 +9514,7 @@
   }
  },
  "notes": {
+  "cuisine": "Every dish carries a cuisine so that the menu audit suggests additions that belong on the menu it is auditing.",
   "dishes": "Dishes are computed from their ingredient recipes, not estimated at dish level. Recipes are stated assumptions -- see data/build_catalog.py -- so any individual gram figure can be argued with directly.",
   "ingredients": "Each ingredient is one USDA FoodData Central SR Legacy food, cited by fdcId, per 100 g.",
   "market": "Market prices are seed defaults, not survey data. Every one is editable in the interface, because a price that is wrong for your campus makes the recommendation wrong for you.",

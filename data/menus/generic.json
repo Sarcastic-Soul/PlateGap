@@ -2,6 +2,7 @@
  "id": "generic",
  "name": "Generic cafeteria",
  "subtitle": "A deliberately plain menu to start from",
+ "cuisine": "indian",
  "region": "IN",
  "currency": "INR",
  "servingStyle": "mixed",

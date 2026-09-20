@@ -1,7 +1,8 @@
 {
- "id": "iiit-mess",
+ "id": "iiit",
  "name": "IIIT hostel mess",
  "subtitle": "A real seven-day Indian hostel mess timetable",
+ "cuisine": "indian",
  "region": "IN",
  "currency": "INR",
  "servingStyle": "mixed",

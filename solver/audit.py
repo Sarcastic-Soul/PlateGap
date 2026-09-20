@@ -65,13 +65,65 @@ def reduced_cost(variable, program, duals):
     return variable["cost"] - sum(y * a for y, a in zip(duals, column))
 
 
+def reduced_cost_drivers(variable, program, duals, limit=3):
+    """Which constraints make this candidate worth adding.
+
+    The reduced cost is a sum of one term per row, so it decomposes without
+    any extra work: the rows contributing most of it are the reason the
+    candidate prices in. That turns "add matar chola" into "add matar chola,
+    because it is a cheap way to reach the zinc floor", which is the
+    difference between a recommendation and an instruction.
+    """
+    column = _column_for(variable, program)
+    terms = []
+    for row, y, a in zip(program.rows, duals, column):
+        contribution = -y * a
+        if abs(contribution) < 1e-9:
+            continue
+        terms.append({
+            "kind": row["kind"],
+            "key": row["key"],
+            "contribution": round(contribution, 6),
+        })
+    # Most helpful first. Terms that are positive are genuine too: they say
+    # the candidate also consumes something scarce, usually stomach space or
+    # the calorie ceiling, and they are worth showing when there is room.
+    terms.sort(key=lambda t: t["contribution"])
+    return terms[:limit]
+
+
+def menu_cuisine(catalog, menu):
+    """Which kitchen this menu belongs to.
+
+    Declared if the menu says so, otherwise inferred from whatever it already
+    serves. A menu someone assembled by hand has no cuisine field, and
+    guessing from its contents beats recommending a yogurt parfait for a
+    hostel mess.
+    """
+    declared = menu.get("cuisine")
+    if declared:
+        return declared
+    seen = {}
+    for day in menu.get("days", {}):
+        for dish_id in model.day_offerings(menu, day):
+            dish = catalog["dishes"].get(dish_id)
+            if dish:
+                seen[dish["cuisine"]] = seen.get(dish["cuisine"], 0) + 1
+    if not seen:
+        return None
+    return max(seen, key=seen.get)
+
+
 def _candidate_dishes(catalog, menu, day, diet, excluded):
     """Dishes the catalog knows about that this day does not serve."""
     refused = model.DIETS[diet]
     already = set(model.day_offerings(menu, day))
+    cuisine = menu_cuisine(catalog, menu)
     candidates = []
     for dish_id, dish in sorted(catalog["dishes"].items()):
         if dish_id in already or dish_id in excluded:
+            continue
+        if cuisine and dish["cuisine"] != cuisine:
             continue
         if any(tag in refused for tag in dish["tags"]):
             continue
@@ -147,6 +199,7 @@ def audit_day(catalog, menu, day, profile=None, diet="egg", prices=None,
             "name": candidate["name"],
             "tags": candidate["tags"],
             "reducedCost": round(value, 6),
+            "drivers": reduced_cost_drivers(candidate, program, result.duals_ub),
             "servingGrams": candidate["servingGrams"],
             "proxy": candidate["proxy"],
             "saving": None,
@@ -228,6 +281,7 @@ def audit_week(catalog, menu, profile=None, diet="egg", prices=None,
                 "tags": candidate["tags"],
                 "proxy": candidate["proxy"],
                 "days": [],
+                "drivers": candidate["drivers"],
                 "weeklySavingExact": 0.0,
             })
             record["days"].append(day)

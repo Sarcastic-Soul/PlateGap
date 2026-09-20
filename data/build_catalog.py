@@ -300,7 +300,19 @@ DISHES = [
      {"milk": 100, "sugar": 12, "banana": 35}, 150, 1, ["veg", "sweet"]),
     ("gulab_jamun", "Gulab jamun (2 pcs)",
      {"milk": 40, "atta": 15, "sugar": 30, "ghee": 8}, 90, 1, ["veg", "sweet"]),
-    # ---- North American dining hall.
+]
+
+# --------------------------------------------------------------------------
+# The same thing again for a North American dining hall. Kept as a separate
+# list purely so that each dish can be tagged with the cuisine it belongs to
+# without writing "indian" or "american" a hundred and nine times.
+#
+# The tag is not decoration. The menu audit searches for dishes worth adding,
+# and without it the search cheerfully recommends putting a yogurt parfait on
+# an Indian hostel menu -- arithmetically correct, useless as advice.
+# --------------------------------------------------------------------------
+
+US_DISHES = [
     ("cheeseburger", "Cheeseburger",
      {"beef_patty": 85, "burger_bun": 50, "cheddar": 20, "tomato": 15, "onion": 10},
      180, 1, ["meat", "main"]),
@@ -585,13 +597,17 @@ def build(sr_dir):
         return totals, reasons
 
     dishes = {}
-    for dish_id, name, recipe, serving_g, cap, tags in DISHES:
+    catalogued = ([(entry, "indian") for entry in DISHES]
+                  + [(entry, "american") for entry in US_DISHES])
+    for (dish_id, name, recipe, serving_g, cap, tags), cuisine in catalogued:
+        tags = list(tags) + [cuisine]
         totals, proxy_reasons = compose("dish %r" % dish_id, recipe)
         is_proxy = bool(proxy_reasons)
 
         entry = {
             "id": dish_id,
             "name": name,
+            "cuisine": cuisine,
             "tags": tags,
             "servingGrams": serving_g,
             "maxServings": cap,
@@ -631,6 +647,10 @@ def build(sr_dir):
             "ingredients": (
                 "Each ingredient is one USDA FoodData Central SR Legacy food, "
                 "cited by fdcId, per 100 g."
+            ),
+            "cuisine": (
+                "Every dish carries a cuisine so that the menu audit suggests "
+                "additions that belong on the menu it is auditing."
             ),
             "dishes": (
                 "Dishes are computed from their ingredient recipes, not estimated "
