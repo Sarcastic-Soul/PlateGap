@@ -30,3 +30,8 @@ output "github_deploy_role_arn" {
   TEXT
   value       = aws_iam_role.github_deploy.arn
 }
+
+output "region" {
+  description = "Where the function and its logs live."
+  value       = var.region
+}

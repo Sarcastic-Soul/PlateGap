@@ -1,7 +1,7 @@
 variable "region" {
   description = "Region for the Lambda function, its logs and the site bucket."
   type        = string
-  default     = "ap-south-1"
+  default     = "us-east-1"
 }
 
 variable "name" {

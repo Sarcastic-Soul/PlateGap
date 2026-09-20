@@ -232,3 +232,71 @@ POST /audit
 → { coverage: {k: pct}, perStudentMonthlyCost,
     bindingFrequency: {k: days}, bestAdditions: [{foodId, costToMess, studentSavings}] }
 ```
+
+---
+
+# What actually shipped, and where this document was wrong
+
+This file was written before the code. Keeping it unedited and recording the
+differences is more useful than quietly rewriting it to match, because the
+places the design was wrong are the places something was learned.
+
+## Added: a limit on how much a person can eat
+
+Not in the original design at all, and it turned out to be the constraint that
+mattered most. Without it the solver meets every ICMR target from the mess
+alone by prescribing twelve rotis and five servings of curd — arithmetically
+perfect and useless as advice. With it, the binding constraint on a
+well-stocked menu is stomach volume rather than the menu, and the shadow price
+on that row (the money value of one more gram of appetite) is the most
+interesting number the program produces.
+
+The design assumed the gap would be structural — that the menu simply would
+not contain enough calcium. On this menu it is not. The food is there; a
+person cannot eat enough of it. That is a different and more honest finding.
+
+## Added: dishes carry a cuisine
+
+The menu audit was recommending a yogurt parfait for an Indian hostel mess.
+Correct arithmetic, worthless advice. Every dish now belongs to a kitchen, and
+the audit only suggests additions that belong on the menu it is auditing.
+
+## Changed: the audit is a pricing step, not a search
+
+The design described re-solving the week once per candidate. That is about ten
+seconds. The shipped version prices every candidate against the duals from the
+single solve we already did, which costs one dot product each, and re-solves
+only the handful that price out negative. On Monday's menu: 56 candidates
+screened to 11, whole week in about a second.
+
+The screen is only legitimate if it has no false negatives, so there is a test
+that takes every rejected candidate, adds it for real and re-solves.
+
+## Not built: the Bedrock parse and explain endpoints
+
+The section above on where the language model is used describes two endpoints
+that do not exist yet. A menu is entered by choosing from the catalog rather
+than by pasting text or photographing a notice board, and the explanations on
+screen are generated from the solver output by the front end, not written by a
+model.
+
+This is a real gap against the design, not a decision that the design was
+wrong. It is the top item in TODO.md. What is there now works without it, and
+shipping a working tool without the model beats shipping a half-wired model.
+
+## Changed: one action per request, not one path per endpoint
+
+The Function URL takes a JSON body with an `action` field rather than routing
+on a path. The actions are `presets`, `catalog`, `gap`, `solve`, `frontier`,
+`week` and `audit`. Same shapes as designed; different envelope.
+
+## Measured, not estimated
+
+| | |
+|---|---|
+| Deployment package | 51 KB, no dependencies |
+| One day solved | ~27 ms (two solves: cheapest, then lightest plate) |
+| The gap for one day | ~8 ms |
+| Frontier, 24 points | ~320 ms |
+| Whole-week audit | ~1.2 s |
+| Tests | 348 |

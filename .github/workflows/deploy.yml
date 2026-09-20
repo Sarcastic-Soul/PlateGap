@@ -61,7 +61,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE }}
-          aws-region: ${{ vars.AWS_REGION || 'ap-south-1' }}
+          aws-region: ${{ vars.AWS_REGION || 'us-east-1' }}
           role-session-name: plategap-deploy-${{ github.run_id }}
 
       - name: Update the function

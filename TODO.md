@@ -12,19 +12,23 @@ delete when done.
 
 ## Data
 
-- [ ] Cite a source for every row in the nutrient table, in the repo, not in my head
+- [ ] Replace the paneer and jaggery proxies with IFCT 2017 values and drop the estimated flag
+- [ ] Sanity-check the seed market prices against a real shop near campus
+- [ ] Cook-loss factors: the catalog treats a cooked ingredient as the ingredient, which overstates some vitamins
 - [ ] Write down the serving-size assumption for each mess item so the numbers are auditable
 - [ ] Decide whether nutrient targets follow ICMR (India) or US DRI, and switch by region
 
 ## Infra and repo
 
-- [ ] Add `.gitignore` for `.venv`, `__pycache__`, `.pytest_cache`
-- [ ] Add `requirements-dev.txt` pinning scipy and pytest
-- [ ] GitHub Actions workflow running the differential test on every push
+- [ ] Pin the dev dependencies to exact versions so CI and local agree
 - [ ] Pick the number of points on the frontier chart — 30 was a guess
 
 ## Product
 
+- [ ] Build the parse endpoint: paste a menu as text, or photograph the notice board, and match it to the catalog
+- [ ] Build the explain endpoint so the write-up on screen is written rather than templated
+- [ ] Let someone assemble a menu from the catalog in the interface, not just pick a preset
+- [ ] Share a menu by link so a whole hostel can use one someone already typed in
 - [ ] A/B Nova Lite against Claude Haiku 4.5 on explanation quality once explanations exist
 - [ ] Assert in tests that the explanation contains no number that wasn't in the solver output
 - [ ] Decide what the app does when the menu alone already meets every target — the answer is a good screen, not an empty one
