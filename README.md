@@ -191,6 +191,7 @@ rest is fractions of a cent.
 uv run --group dev pytest -q             # 442 tests
 uv run python scripts/dev_server.py      # http://127.0.0.1:8000
 uv run python scripts/benchmark_solver.py  # times the four solver actions
+SITE=http://127.0.0.1:8000 uv run --group dev python scripts/smoke_ui.py
 ```
 
 Rebuilding the food catalog needs the SR Legacy CSV download, and the data
