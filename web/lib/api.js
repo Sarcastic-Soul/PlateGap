@@ -62,8 +62,40 @@ function send(body, attempt) {
   });
 }
 
-export function post(action, extra) {
-  const body = Object.assign({
+/* Answers that cannot have changed.
+ *
+ * The request body names everything the answer depends on -- the action, the
+ * menu, the day, the diet, the profile, every edited price -- so two requests
+ * with the same body have the same answer by construction, and the body is
+ * its own cache key. Nothing needs invalidating: change a control and the
+ * body changes with it.
+ *
+ * What this buys is tab switching. Moving between the gap and the frontier
+ * and back used to be three solves; now the second visit is free and the
+ * page paints immediately. `presets` and `catalog` are covered by the same
+ * rule, which is why they survive a shared link replacing the whole menu.
+ *
+ * Only successes are kept -- a failure is a thing to retry, not a thing to
+ * remember -- and the map is bounded, because a long session editing prices
+ * would otherwise keep every intermediate answer alive. Insertion order is
+ * eviction order, which is the oldest rather than the least used; for a cache
+ * this size the difference does not pay for the bookkeeping.
+ */
+const CACHE_LIMIT = 48;
+const cache = new Map();
+
+export function clearCache() { cache.clear(); }
+
+function remember(key, answer) {
+  cache.set(key, answer);
+  while (cache.size > CACHE_LIMIT) {
+    cache.delete(cache.keys().next().value);
+  }
+  return answer;
+}
+
+function bodyFor(action, extra) {
+  return JSON.stringify(Object.assign({
     action: action,
     day: state.day,
     diet: state.diet,
@@ -75,7 +107,22 @@ export function post(action, extra) {
       maxPlateGrams: state.grams
     }
   }, isCustom() ? { menu: customPayload() } : { menuId: state.menuId },
-     extra || {});
+     extra || {}));
+}
 
-  return send(JSON.stringify(body), 0);
+/* The answer if it is already known, and nothing if it is not.
+ *
+ * Synchronous on purpose. A cached answer handed back through a promise still
+ * paints a skeleton for one frame before it resolves, and a skeleton that
+ * flashes on a tab you have already visited is worse than no skeleton at all.
+ * `useAsync` asks this first and only renders a loading state when the answer
+ * really does have to be fetched. */
+export function known(action, extra) {
+  return cache.get(bodyFor(action, extra));
+}
+
+export function post(action, extra) {
+  const key = bodyFor(action, extra);
+  if (cache.has(key)) { return Promise.resolve(cache.get(key)); }
+  return send(key, 0).then(function (answer) { return remember(key, answer); });
 }

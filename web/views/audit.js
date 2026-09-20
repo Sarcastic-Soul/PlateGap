@@ -5,9 +5,10 @@ import {
   money, plural, round, nutrientName, nutrientUnit
 } from '../lib/format.js';
 import { state, update, solveKey } from '../lib/store.js';
-import { post } from '../lib/api.js';
+import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
-import { Stat, Loading, Failed, AskForDishes, emptyBuild } from './pieces.js';
+import { Icon } from '../lib/icons.js';
+import { Stat, More, Skeleton, Failed, AskForDishes, emptyBuild } from './pieces.js';
 
 /* What a recommendation costs, set beside what it saves.
  *
@@ -52,7 +53,10 @@ function Students() {
   const [shown, setShown] = useState(state.students);
   return html`
     <section class="panel">
-      <h2>Who eats here</h2>
+      <h2 class="with-icon">
+        <${Icon} name="user" />
+        <span>Who eats here</span>
+      </h2>
       <label class="field">
         <span>Students on this meal plan: <b>${shown}</b></span>
         <input type="range" min="1" max="5000" step="1" value=${shown}
@@ -69,11 +73,10 @@ export function AuditTab() {
 
   const { loading, data, error } = useAsync(
     function () { return post('audit', { students: state.students }); },
-    solveKey() + '|' + state.students);
+    solveKey() + '|' + state.students,
+    function () { return known('audit', { students: state.students }); });
 
-  if (loading) {
-    return html`<${Loading} what="Running the audit across all seven days…" />`;
-  }
+  if (loading) { return html`<${Skeleton} kind="audit" />`; }
   if (error) { return html`<${Failed} problem=${error} />`; }
 
   const currency = data.currency;
@@ -94,7 +97,10 @@ export function AuditTab() {
       <p class="note">Nothing in the catalog would reduce what students have to
       spend on this menu.</p>` : html`
       <section class="panel">
-        <h2>Add one of these, and students stop paying for it themselves</h2>
+        <h2 class="with-icon">
+          <${Icon} name="chef-hat" />
+          <span>Add one of these, and students stop paying for it themselves</span>
+        </h2>
         <table>
           <thead><tr>
             <th>Put this on the menu</th>
@@ -123,17 +129,19 @@ export function AuditTab() {
             })}
           </tbody>
         </table>
-        <p class="note">Found by pricing every dish in the catalog against the
-        dual values of the solved menu. A dish only improves things if its
-        reduced cost is negative, so most of the catalog is ruled out without
-        solving anything, and only the survivors are re-solved exactly. The
-        reason each one helps falls out of the same arithmetic.</p>
-        <p class="note">Every percentage above is one serving as a share of the
-        day's ceiling for that nutrient, and of how much you can eat. They are
-        here because "saves the most money" and "is good for anyone" are
-        different claims, and this page can only make the first one. Nothing is
-        filtered out on the strength of the second: a menu tool that quietly
-        dropped the recommendations it found embarrassing would be telling you
-        what you wanted to hear.</p>
+        <${More} label="How these were found">
+          <p class="note">Found by pricing every dish in the catalog against the
+          dual values of the solved menu. A dish only improves things if its
+          reduced cost is negative, so most of the catalog is ruled out without
+          solving anything, and only the survivors are re-solved exactly. The
+          reason each one helps falls out of the same arithmetic.</p>
+          <p class="note">Every percentage above is one serving as a share of the
+          day's ceiling for that nutrient, and of how much you can eat. They are
+          here because "saves the most money" and "is good for anyone" are
+          different claims, and this page can only make the first one. Nothing is
+          filtered out on the strength of the second: a menu tool that quietly
+          dropped the recommendations it found embarrassing would be telling you
+          what you wanted to hear.</p>
+        <//>
       </section>`}`;
 }

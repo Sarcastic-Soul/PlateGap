@@ -11,7 +11,7 @@
 
 import { html, render, useState, useEffect } from './vendor/preact.js';
 import {
-  CUSTOM, DAY_NAMES, DAY_ORDER, DIET_NAMES, TABS
+  CUSTOM, DAY_NAMES, DIET_NAMES, TABS
 } from './lib/constants.js';
 import { NAMES } from './lib/format.js';
 import {
@@ -19,11 +19,17 @@ import {
 } from './lib/store.js';
 import { post } from './lib/api.js';
 import { readFragment, updateFragment } from './lib/link.js';
+import { Icon } from './lib/icons.js';
+import { Skeleton } from './views/pieces.js';
 import { PlanTab } from './views/plan.js';
 import { FrontierTab } from './views/frontier.js';
 import { AuditTab } from './views/audit.js';
 import { BuildTab } from './views/build.js';
 import { DataTab } from './views/data.js';
+
+const ACTIVITY_NAMES = {
+  sedentary: 'Sedentary', moderate: 'Moderate', active: 'Active'
+};
 
 /* Changing anything the solver reads means the link has to say so too. */
 function changed(fields) {
@@ -48,6 +54,23 @@ function chooseMenu(menuId) {
   update();
 }
 
+/* Everything in the "You" panel, in one line.
+ *
+ * The panel is folded by default and this is what the fold says. Six controls
+ * open at once was most of what made the page feel like a form to fill in,
+ * and the honest position is that the defaults are usually fine: the summary
+ * lets you check that in a glance without opening anything. */
+function whoSummary() {
+  const region = (state.presets.regions.find(function (r) {
+    return r.id === state.region;
+  }) || {}).name;
+  return [DIET_NAMES[state.diet] || state.diet,
+    state.sex === 'male' ? 'Male' : 'Female',
+    ACTIVITY_NAMES[state.activity] || state.activity,
+    state.grams + ' g',
+    region].filter(Boolean).join(' · ');
+}
+
 function Sidebar() {
   const menu = currentMenu();
   const [grams, setGrams] = useState(state.grams);
@@ -58,7 +81,10 @@ function Sidebar() {
   return html`
     <aside>
       <section class="panel">
-        <h2>Menu</h2>
+        <h2 class="with-icon">
+          <${Icon} name="calendar-days" />
+          <span>Menu</span>
+        </h2>
         <label class="field">
           <span>Preset</span>
           <select value=${state.menuId}
@@ -86,61 +112,70 @@ function Sidebar() {
         </label>
       </section>
 
-      <section class="panel">
-        <h2>You</h2>
-        <label class="field">
-          <span>Diet</span>
-          <div class="chips">
-            ${state.presets.diets.map(function (diet) {
-              return html`
-                <button key=${diet} class="chip" type="button"
-                  aria-pressed=${String(diet === state.diet)}
-                  onClick=${function () { changed({ diet: diet }); }}>
-                  ${DIET_NAMES[diet] || diet}
-                </button>`;
-            })}
-          </div>
-        </label>
-        <label class="field">
-          <span>Reference intakes</span>
-          <select value=${state.region}
-            onChange=${function (event) { changed({ region: event.target.value }); }}>
-            ${state.presets.regions.map(function (region) {
-              return html`<option key=${region.id} value=${region.id}>${region.name}</option>`;
-            })}
-          </select>
-        </label>
-        <div class="pair">
+      <details class="panel who">
+        <summary>
+          <${Icon} name="user" />
+          <span class="who-head">
+            <b>You</b>
+            <span class="why">${whoSummary()}</span>
+          </span>
+          <${Icon} name="chevron-right" klass="marker" />
+        </summary>
+
+        <div class="more-body">
           <label class="field">
-            <span>Sex</span>
-            <select value=${state.sex}
-              onChange=${function (event) { changed({ sex: event.target.value }); }}>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+            <span>Diet</span>
+            <div class="chips">
+              ${state.presets.diets.map(function (diet) {
+                return html`
+                  <button key=${diet} class="chip" type="button"
+                    aria-pressed=${String(diet === state.diet)}
+                    onClick=${function () { changed({ diet: diet }); }}>
+                    ${DIET_NAMES[diet] || diet}
+                  </button>`;
+              })}
+            </div>
           </label>
           <label class="field">
-            <span>Activity</span>
-            <select value=${state.activity}
-              onChange=${function (event) { changed({ activity: event.target.value }); }}>
-              <option value="sedentary">Sedentary</option>
-              <option value="moderate">Moderate</option>
-              <option value="active">Active</option>
+            <span>Reference intakes</span>
+            <select value=${state.region}
+              onChange=${function (event) { changed({ region: event.target.value }); }}>
+              ${state.presets.regions.map(function (region) {
+                return html`<option key=${region.id} value=${region.id}>${region.name}</option>`;
+              })}
             </select>
+          </label>
+          <div class="pair">
+            <label class="field">
+              <span>Sex</span>
+              <select value=${state.sex}
+                onChange=${function (event) { changed({ sex: event.target.value }); }}>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Activity</span>
+              <select value=${state.activity}
+                onChange=${function (event) { changed({ activity: event.target.value }); }}>
+                <option value="sedentary">Sedentary</option>
+                <option value="moderate">Moderate</option>
+                <option value="active">Active</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span>How much you can eat in a day: <b>${grams}</b> g</span>
+            <input type="range" min="700" max="2400" step="50" value=${grams}
+              onInput=${function (event) { setGrams(event.target.value); }}
+              onChange=${function (event) {
+                changed({ grams: parseInt(event.target.value, 10) });
+              }} />
+            <span class="why">Without a limit on how much a person can
+            physically get through, the answer is often “eat twelve rotis”.</span>
           </label>
         </div>
-        <label class="field">
-          <span>How much you can eat in a day: <b>${grams}</b> g</span>
-          <input type="range" min="700" max="2400" step="50" value=${grams}
-            onInput=${function (event) { setGrams(event.target.value); }}
-            onChange=${function (event) {
-              changed({ grams: parseInt(event.target.value, 10) });
-            }} />
-        </label>
-        <p class="note">This one matters more than it looks. Without a limit on
-        how much food a person can physically get through, the answer is often
-        “eat twelve rotis” — technically correct and no use to anyone.</p>
-      </section>
+      </details>
     </aside>`;
 }
 
@@ -152,6 +187,7 @@ function Notice() {
     <div id="notice">
       ${state.notice ? html`
         <div class="error">
+          <${Icon} name="circle-alert" />
           <span>${state.notice}</span>
           <button class="chip" type="button"
             onClick=${function () { update({ notice: null }); }}>Dismiss</button>
@@ -170,17 +206,19 @@ function App() {
   if (state.failure) {
     return html`
       <main><section><div id="view">
-        <div class="error">Could not work that out: ${state.failure.message}</div>
+        <div class="error">
+          <${Icon} name="circle-alert" />
+          <span>Could not work that out: ${state.failure.message}</span>
+        </div>
       </div></section></main>`;
   }
   if (!state.presets) {
     return html`
-      <main><section><div id="view">
-        <p class="loading">Loading…</p>
-      </div></section></main>`;
+      <main><section><div id="view"><${Skeleton} kind="plan" /></div></section></main>`;
   }
 
   const Tab = VIEWS[state.tab] || DataTab;
+  const here = TABS.find(function (tab) { return tab.id === state.tab; });
 
   return html`
     <main>
@@ -190,12 +228,15 @@ function App() {
           ${TABS.map(function (tab) {
             return html`
               <button key=${tab.id} class="tab" role="tab" data-tab=${tab.id}
+                title=${tab.hint}
                 aria-selected=${String(tab.id === state.tab)}
                 onClick=${function () { update({ tab: tab.id }); }}>
-                ${tab.label}
+                <${Icon} name=${tab.icon} />
+                <span>${tab.label}</span>
               </button>`;
           })}
         </div>
+        ${here ? html`<p class="tab-hint">${here.hint}</p>` : null}
         <${Notice} />
         ${/* Keyed on the tab so switching tabs mounts a fresh view rather
              than reusing the last one's hooks. */ ''}

@@ -398,3 +398,178 @@ code { font-family: var(--mono); font-size: 0.92em; }
   background: var(--warn-soft);
   color: var(--warn);
 }
+
+/* ======================================================================
+   Icons, folds and skeletons
+   ====================================================================== */
+
+/* Lucide, inline. `currentColor` means an icon is the colour of whatever it
+   sits in, so none of the rules below has to say what colour an icon is. */
+.icon {
+  flex: none;
+  vertical-align: -0.15em;
+  stroke: currentColor;
+}
+
+h2.with-icon,
+.tab,
+.chip,
+.error,
+.empty h2 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+h2.with-icon { align-items: baseline; }
+h2.with-icon .icon { align-self: center; color: var(--muted); }
+
+.tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { white-space: nowrap; }
+.tab .icon { color: var(--muted); }
+.tab[aria-selected="true"] .icon { color: var(--accent); }
+
+/* The sentence the tab used to carry. It wrapped the bar onto two lines up
+   there; down here it is the one line of explanation the screen needs. */
+.tab-hint {
+  margin: -8px 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------------------------------------------------------------- folds */
+
+.more {
+  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  padding-top: 4px;
+}
+
+.panel > .more:first-child { border-top: 0; margin-top: 0; }
+
+.more > summary,
+.who > summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 13px;
+  list-style: none;
+}
+
+.more > summary::-webkit-details-marker,
+.who > summary::-webkit-details-marker { display: none; }
+
+.more > summary:hover,
+.who > summary:hover { color: var(--ink); }
+
+.icon.marker { transition: transform 0.15s ease; }
+details[open] > summary .icon.marker { transform: rotate(90deg); }
+
+.more-body { padding-bottom: 6px; }
+.more-body > :first-child { margin-top: 0; }
+.more-body > :last-child { margin-bottom: 0; }
+.more-body h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 14px 0 8px;
+}
+
+/* The "You" panel, folded. Its summary carries the whole of what is inside
+   it, so the fold costs no information -- only space. */
+.who > summary { padding: 0; color: inherit; }
+.who .who-head { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.who .who-head b {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.who .who-head .why { font-size: 12px; }
+.who[open] .who-head .why { display: none; }
+.who .more-body { padding-top: 14px; padding-bottom: 0; }
+.who .more-body > label.field:last-child { margin-bottom: 0; }
+
+/* -------------------------------------------------------- the shortfalls */
+
+/* The answer, given the most room on the page. Each row is the nutrient, how
+   close the menu gets, and what is missing -- in that order, because "how
+   close" is the thing a bar can say faster than a number can. */
+.shortfall {
+  display: grid;
+  grid-template-columns: minmax(90px, 140px) minmax(80px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.shortfall:last-of-type { border-bottom: 0; }
+.shortfall-name { font-weight: 600; }
+.shortfall-gap { font-size: 13px; color: var(--muted); text-align: right; }
+
+@media (max-width: 620px) {
+  .shortfall { grid-template-columns: 1fr auto; }
+  .shortfall .bar { grid-column: 1 / -1; order: 3; }
+}
+
+/* ------------------------------------------------------------ empty state */
+
+.empty { text-align: center; padding: 32px 20px; }
+.empty .icon { color: var(--muted); margin: 0 auto 10px; display: block; }
+.empty h2 { justify-content: center; text-transform: none; font-size: 17px;
+  letter-spacing: 0; color: var(--ink); }
+.empty p { color: var(--muted); max-width: 46ch; margin: 0 auto 16px; }
+.empty .chip { display: inline-flex; }
+
+/* ------------------------------------------------------------- the search */
+
+.search { position: relative; }
+.search .icon {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  margin-top: -8px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.search input { padding-left: 30px; }
+
+/* ------------------------------------------------------------- skeletons */
+
+/* A solve is most of a second and the audit is three. A centred "Solving…"
+   for that long reads as a stall; a shape that matches what is coming reads
+   as work in progress, and the page does not jump when the answer lands.
+   These keep the class `loading`, which is how the screenshot script and the
+   smoke test know the page is still busy. */
+.skeleton { pointer-events: none; }
+
+.shim {
+  background: linear-gradient(90deg,
+    var(--line) 0%, var(--bg) 40%, var(--line) 80%);
+  background-size: 300% 100%;
+  border-radius: 6px;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 150% 0; }
+  to { background-position: -150% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shim { animation: none; opacity: 0.6; }
+}
+
+.shim.value { height: 22px; width: 68%; margin-bottom: 8px; }
+.shim.label { height: 11px; width: 94%; }
+.shim.head { height: 12px; width: 180px; margin-bottom: 16px; }
+.shim.line { height: 11px; margin-bottom: 11px; }
+.shim.chart { height: 200px; border-radius: var(--radius); }
+.skeleton .panel.half { height: 100%; }

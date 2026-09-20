@@ -6,6 +6,7 @@ import {
   preciseMoney, round, dishName, nutrientName, nutrientUnit
 } from '../lib/format.js';
 import { state, update, isCustom, dishesOn, customTotal } from '../lib/store.js';
+import { Icon } from '../lib/icons.js';
 
 export function Stat({ value, label }) {
   return html`
@@ -13,6 +14,25 @@ export function Stat({ value, label }) {
       <div class="value">${value}</div>
       <div class="label">${label}</div>
     </div>`;
+}
+
+/* Everything that is true but not the answer.
+ *
+ * The page had grown into a wall: four headline numbers, a shortfall list,
+ * two tables, fourteen nutrient rows of which thirteen said "met", a list of
+ * shadow prices and four paragraphs explaining the method -- all of it open
+ * at once, so the one sentence a person came for had to be found. None of it
+ * was wrong, which is why none of it is deleted. It is folded instead, and a
+ * `<details>` does that with no JavaScript and no state to keep. */
+export function More({ label, children, open }) {
+  return html`
+    <details class="more" open=${open || null}>
+      <summary>
+        <${Icon} name="chevron-right" klass="marker" />
+        <span>${label}</span>
+      </summary>
+      <div class="more-body">${children}</div>
+    </details>`;
 }
 
 export function NutrientTable({ nutrients }) {
@@ -47,7 +67,7 @@ export function NutrientTable({ nutrients }) {
               </td>
               <td class="num">
                 ${n.status === 'ok'
-                  ? html`<span class="pill">met</span>`
+                  ? html`<span class="pill"><${Icon} name="check" size=${12} /> met</span>`
                   : html`<span class=${'pill ' + (n.status === 'short' ? 'short' : 'warn')}>
                       ${n.status === 'short' ? 'short' : 'over'}
                     </span>`}
@@ -83,12 +103,82 @@ export function describeRow(row, currency) {
   return row.kind + ' ' + row.key;
 }
 
-export function Loading({ what }) {
-  return html`<p class="loading">${what || 'Solving…'}</p>`;
+/* ----------------------------------------------------------- skeletons
+ *
+ * A solve is most of a second and the audit is three, which is long enough
+ * for a single centred "Solving…" to read as a stall. These stand in for the
+ * shape of the answer instead, so the page does not jump when it lands.
+ *
+ * They keep the class `loading`, because that is how `scripts/capture_demo.py`
+ * and `scripts/smoke_ui.py` know the page is still busy: the screenshot and
+ * the smoke test both wait until no `.loading` element is left. A skeleton
+ * that did not answer to that name would be photographed. */
+function Lines({ count }) {
+  const widths = ['92%', '78%', '85%', '64%', '88%', '71%'];
+  const rows = [];
+  for (let i = 0; i < count; i++) {
+    rows.push(html`<div key=${i} class="shim line" style=${'width:' + widths[i % 6]}></div>`);
+  }
+  return rows;
+}
+
+function SkeletonStats({ count }) {
+  const boxes = [];
+  for (let i = 0; i < count; i++) {
+    boxes.push(html`
+      <div key=${i} class="stat">
+        <div class="shim value"></div>
+        <div class="shim label"></div>
+      </div>`);
+  }
+  return html`<div class="headline">${boxes}</div>`;
+}
+
+function SkeletonPanel({ lines, wide }) {
+  return html`
+    <section class=${'panel' + (wide ? '' : ' half')}>
+      <div class="shim head"></div>
+      <${Lines} count=${lines} />
+    </section>`;
+}
+
+export function Skeleton({ kind }) {
+  if (kind === 'audit') {
+    return html`
+      <div class="loading skeleton">
+        <${SkeletonPanel} lines=${1} wide />
+        <${SkeletonStats} count=${3} />
+        <${SkeletonPanel} lines=${6} wide />
+      </div>`;
+  }
+  if (kind === 'frontier') {
+    return html`
+      <div class="loading skeleton">
+        <${SkeletonStats} count=${3} />
+        <section class="panel">
+          <div class="shim head"></div>
+          <div class="shim chart"></div>
+        </section>
+        <${SkeletonPanel} lines=${4} wide />
+      </div>`;
+  }
+  return html`
+    <div class="loading skeleton">
+      <${SkeletonStats} count=${4} />
+      <${SkeletonPanel} lines=${4} wide />
+      <div class="grid2">
+        <${SkeletonPanel} lines=${5} />
+        <${SkeletonPanel} lines=${5} />
+      </div>
+    </div>`;
 }
 
 export function Failed({ problem }) {
-  return html`<div class="error">Could not work that out: ${problem.message}</div>`;
+  return html`
+    <div class="error">
+      <${Icon} name="circle-alert" />
+      <span>Could not work that out: ${problem.message}</span>
+    </div>`;
 }
 
 /* A built menu with nothing on the day being asked about cannot be solved,
@@ -101,7 +191,8 @@ export function emptyBuild(scope) {
 
 export function AskForDishes({ scope }) {
   return html`
-    <section class="panel">
+    <section class="panel empty">
+      <${Icon} name="square-pen" size=${28} />
       <h2>${scope === 'menu'
         ? 'Your menu is empty'
         : 'Nothing on ' + DAY_NAMES[state.day] + ' yet'}</h2>

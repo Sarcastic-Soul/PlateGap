@@ -2,6 +2,8 @@
 
 import { html } from '../vendor/preact.js';
 import { state, currentMenu } from '../lib/store.js';
+import { Icon } from '../lib/icons.js';
+import { More } from './pieces.js';
 
 export function DataTab() {
   const notes = state.presets.notes;
@@ -9,7 +11,10 @@ export function DataTab() {
 
   return html`
     <section class="panel">
-      <h2>This menu</h2>
+      <h2 class="with-icon">
+        <${Icon} name="calendar-days" />
+        <span>This menu</span>
+      </h2>
       <p><b>${menu.name}</b>${' — ' + (menu.subtitle || '')}</p>
       ${menu.source && menu.source.note
         ? html`<p class="note">${menu.source.note}</p>` : null}
@@ -18,7 +23,10 @@ export function DataTab() {
     </section>
 
     <section class="panel">
-      <h2>Where the nutrition numbers come from</h2>
+      <h2 class="with-icon">
+        <${Icon} name="book-open" />
+        <span>Where the nutrition numbers come from</span>
+      </h2>
       <ul>
         ${Object.keys(notes).map(function (key) {
           return html`<li key=${key}>${notes[key]}</li>`;
@@ -27,7 +35,10 @@ export function DataTab() {
     </section>
 
     <section class="panel">
-      <h2>Reference intakes</h2>
+      <h2 class="with-icon">
+        <${Icon} name="scale" />
+        <span>Reference intakes</span>
+      </h2>
       <ul>
         ${state.presets.regions.map(function (region) {
           return html`<li key=${region.id}><b>${region.name}</b>${' — ' + region.citation}</li>`;
@@ -41,7 +52,10 @@ export function DataTab() {
     </section>
 
     <section class="panel">
-      <h2>Things this does not know</h2>
+      <h2 class="with-icon">
+        <${Icon} name="info" />
+        <span>Things this does not know</span>
+      </h2>
       <ul>
         <li>Whether the kitchen actually cooked the recipe we assumed.</li>
         <li>What you like eating. The plan is nutritionally cheapest, not nicest.</li>

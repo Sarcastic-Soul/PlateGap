@@ -10,15 +10,28 @@
 
 import { useState, useEffect } from '../vendor/preact.js';
 
-export function useAsync(run, key) {
-  const [result, setResult] = useState({ loading: true, data: null, error: null });
+const PENDING = { loading: true, data: null, error: null };
+
+/* `primed` is the synchronous "do we already have this?" question. Answering
+   it before the first render is what keeps a cached tab from flashing a
+   skeleton on the way to an answer it already had. */
+function ready(primed) {
+  const answer = primed ? primed() : undefined;
+  return answer === undefined || answer === null ? null
+    : { loading: false, data: answer, error: null };
+}
+
+export function useAsync(run, key, primed) {
+  const [result, setResult] = useState(function () {
+    return ready(primed) || PENDING;
+  });
 
   useEffect(function () {
     let live = true;
-    setResult(function (previous) {
-      return previous.loading && !previous.data ? previous
-        : { loading: true, data: null, error: null };
-    });
+    const already = ready(primed);
+    if (already) { setResult(already); return function () { live = false; }; }
+
+    setResult(PENDING);
     run().then(function (data) {
       if (live) { setResult({ loading: false, data: data, error: null }); }
     }, function (error) {

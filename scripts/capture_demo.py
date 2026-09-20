@@ -23,12 +23,12 @@ OUT = pathlib.Path(__file__).resolve().parent.parent / "docs" / "hackathon" / "d
 # (preset value, tab label, file name)
 SHOTS = [
     ("iiit", "The gap", "01-the-gap.png"),
-    ("iiit", "What each rupee buys", "02-what-each-rupee-buys.png"),
-    ("iiit", "For whoever writes the menu", "03-the-menu-audit.png"),
-    ("iiit", "Where the numbers come from", "04-where-the-numbers-come-from.png"),
+    ("iiit", "Spending", "02-what-each-rupee-buys.png"),
+    ("iiit", "Kitchen", "03-the-menu-audit.png"),
+    ("iiit", "Sources", "04-where-the-numbers-come-from.png"),
     ("dining-hall", "The gap", "05-us-dining-hall.png"),
-    ("dining-hall", "For whoever writes the menu", "06-us-dining-hall-audit.png"),
-    ("custom", "Build a menu", "07-build-a-menu.png"),
+    ("dining-hall", "Kitchen", "06-us-dining-hall-audit.png"),
+    ("custom", "Build", "07-build-a-menu.png"),
 ]
 
 # Every "solving…" message on the page is a `.loading` element, so the page is

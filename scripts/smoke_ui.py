@@ -72,6 +72,11 @@ async def main():
         await page.goto(SITE, wait_until="networkidle")
         await settle(page)
 
+        # The "You" controls are folded away by default, and the fold says
+        # what is inside it. Everything below is behind that one click.
+        assert "Egg, no meat" in await page.inner_text("aside .who summary")
+        await page.click("aside .who summary")
+
         # diet chip
         await page.get_by_role("button", name="Vegan", exact=True).click()
         await settle(page)
@@ -100,7 +105,7 @@ async def main():
         assert before != after, "price change did not re-solve"
 
         # audit students slider
-        await page.get_by_text("For whoever writes the menu", exact=True).click()
+        await page.get_by_text("Kitchen", exact=True).click()
         await settle(page)
         s = page.locator("#view input[type=range]").first
         await s.fill("2000")
@@ -109,7 +114,7 @@ async def main():
         assert "2000" in await page.inner_text("#view")
 
         # the builder tab on a preset offers to start one instead
-        await page.get_by_text("Build a menu", exact=True).click()
+        await page.get_by_text("Build", exact=True).first.click()
         await settle(page)
         assert "build your own menu" in (await page.inner_text("#view")).lower()
         await page.get_by_role("button", name="Start an empty menu").click()
@@ -126,7 +131,7 @@ async def main():
         await chips.first.click()
         await settle(page)
         assert await page.locator(".meal .chip.dish").count() == n - 1
-        await page.get_by_role("button", name="+ Add a dish").first.click()
+        await page.get_by_role("button", name="Add a dish").first.click()
         await page.fill(".picker input", "paneer")
         await page.wait_for_timeout(200)
         await page.locator(".dish-option").first.click()
@@ -144,7 +149,7 @@ async def main():
         page2.on("pageerror", lambda e: errors.append(str(e)))
         await page2.goto(link, wait_until="networkidle")
         await settle(page2)
-        await page2.get_by_text("Build a menu", exact=True).click()
+        await page2.get_by_text("Build", exact=True).first.click()
         await settle(page2)
         assert await page2.input_value("input.share-url") == link, "link did not round-trip"
 

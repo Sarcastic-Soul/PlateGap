@@ -10,6 +10,8 @@ import {
   servedOn, dishesOn, customTotal
 } from '../lib/store.js';
 import { encodeMenu, shareUrl, updateFragment } from '../lib/link.js';
+import { Icon } from '../lib/icons.js';
+import { More } from './pieces.js';
 
 /* Editing the menu changes what the link has to say, so the two move
    together and every other tab re-solves off the back of it. */
@@ -43,9 +45,12 @@ function DishPicker({ meal }) {
 
   return html`
     <div class="picker">
-      <input type="text" ref=${search} value=${query}
-        placeholder="Search by name or tag — paneer, dal, side"
-        onInput=${function (event) { setQuery(event.target.value); }} />
+      <div class="search">
+        <${Icon} name="search" />
+        <input type="text" ref=${search} value=${query}
+          placeholder="Search by name or tag — paneer, dal, side"
+          onInput=${function (event) { setQuery(event.target.value); }} />
+      </div>
       <p class="why">${shown.length + ' of ' + state.catalog.dishes.length + ' dishes'}</p>
       <div class="picker-list">
         ${shown.map(function (dish) {
@@ -99,14 +104,17 @@ function MealBlock({ meal }) {
               <button key=${id} class="chip dish" type="button"
                 title=${'Take ' + dishName(id) + ' off ' + MEAL_NAMES[meal].toLowerCase()}
                 onClick=${function () { served.splice(index, 1); changedMenu(); }}>
-                ${dishName(id)}<span class="x">×</span>
+                ${dishName(id)}<${Icon} name="x" size=${13} klass="x" />
               </button>`;
           })}
         </div>` : null}
       <button class="chip add" type="button"
         onClick=${function () {
           update({ picker: open ? null : { meal: meal } });
-        }}>${open ? 'Done adding' : '+ Add a dish'}</button>
+        }}>
+        <${Icon} name=${open ? 'check' : 'plus'} size=${14} />
+        <span>${open ? 'Done adding' : 'Add a dish'}</span>
+      </button>
       ${open ? html`<${DishPicker} meal=${meal} />` : null}
     </div>`;
 }
@@ -130,13 +138,14 @@ function CopyLink({ link }) {
         setLabel('Copy it from the box');
         window.setTimeout(restore, 2500);
       }
-    }}>${label}</button>`;
+    }}><${Icon} name="copy" size=${14} /><span>${label}</span></button>`;
 }
 
 export function BuildTab() {
   if (!isCustom()) {
     return html`
-      <section class="panel">
+      <section class="panel empty">
+        <${Icon} name="square-pen" size=${28} />
         <h2>Build your own menu</h2>
         <p>The presets are three real timetables, and yours is not one of them.
         Pick dishes from the catalog, meal by meal and day by day, and every
@@ -156,7 +165,10 @@ export function BuildTab() {
 
   return html`
     <section class="panel">
-      <h2>Your menu</h2>
+      <h2 class="with-icon">
+        <${Icon} name="square-pen" />
+        <span>Your menu</span>
+      </h2>
       <label class="field">
         <span>What to call it</span>
         <input type="text" value=${state.custom.name}
@@ -186,7 +198,10 @@ export function BuildTab() {
     </section>
 
     <section class="panel">
-      <h2>${'What is served on ' + DAY_NAMES[state.day]}</h2>
+      <h2 class="with-icon">
+        <${Icon} name="calendar-days" />
+        <span>${'What is served on ' + DAY_NAMES[state.day]}</span>
+      </h2>
       <div class="daystrip">
         ${DAY_ORDER.map(function (day) {
           return html`
@@ -237,10 +252,12 @@ export function BuildTab() {
         }}>Empty the whole menu</button>
       </div>
 
-      <p class="note">A mess serves a dish once a meal and can serve it at two,
-      which is how the ration caps work: roti capped at six a meal is twelve
-      across a day it appears twice. The menu belongs to the kitchen, not to
-      you — put the omelette on it even if you do not eat eggs, and the diet
-      you picked will leave it off your plate.</p>
+      <${More} label="How the menu and your diet interact">
+        <p class="note">A mess serves a dish once a meal and can serve it at two,
+        which is how the ration caps work: roti capped at six a meal is twelve
+        across a day it appears twice. The menu belongs to the kitchen, not to
+        you — put the omelette on it even if you do not eat eggs, and the diet
+        you picked will leave it off your plate.</p>
+      <//>
     </section>`;
 }

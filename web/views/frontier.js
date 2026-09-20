@@ -3,9 +3,10 @@
 import { html } from '../vendor/preact.js';
 import { money, preciseMoney } from '../lib/format.js';
 import { solveKey } from '../lib/store.js';
-import { post } from '../lib/api.js';
+import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
-import { Stat, Loading, Failed, AskForDishes, emptyBuild } from './pieces.js';
+import { Icon } from '../lib/icons.js';
+import { Stat, More, Skeleton, Failed, AskForDishes, emptyBuild } from './pieces.js';
 
 const W = 720, H = 230, padL = 46, padR = 14, padT = 14, padB = 34;
 
@@ -29,9 +30,11 @@ function Chart({ curve, currency }) {
       <text class="chart-label" x=${padL} y=${H - 10}>${money(0, currency)}</text>
       <text class="chart-label" x=${W - padR} y=${H - 10} text-anchor="end">
         ${preciseMoney(maxBudget, currency) + ' a day'}</text>
+      ${/* The axis is the share of the gap still open. "gap" used to be a
+           third label here and it collided with "all of it"; the panel
+           heading says the same thing with more room. */ ''}
       <text class="chart-label" x="2" y=${padT + 4}>all of it</text>
       <text class="chart-label" x="2" y=${y(0) - 4}>none left</text>
-      <text class="chart-label" x="2" y=${padT + 18}>gap</text>
     </svg>`;
 }
 
@@ -39,9 +42,10 @@ export function FrontierTab() {
   if (emptyBuild('day')) { return html`<${AskForDishes} scope="day" />`; }
 
   const { loading, data, error } = useAsync(
-    function () { return post('frontier', { points: 24 }); }, solveKey());
+    function () { return post('frontier', { points: 24 }); }, solveKey(),
+    function () { return known('frontier', { points: 24 }); });
 
-  if (loading) { return html`<${Loading} />`; }
+  if (loading) { return html`<${Skeleton} kind="frontier" />`; }
   if (error) { return html`<${Failed} problem=${error} />`; }
 
   const currency = data.currency;
@@ -58,15 +62,17 @@ export function FrontierTab() {
     </div>
 
     <section class="panel">
-      <h2>${'How much of the gap each ' + (currency.symbol || 'unit') + ' closes'}</h2>
+      <h2 class="with-icon">
+        <${Icon} name="trending-down" />
+        <span>${'How much of the gap each ' + (currency.symbol || 'unit') + ' closes'}</span>
+      </h2>
       <${Chart} curve=${curve} currency=${currency} />
       <p class="note">The curve is convex and it flattens, which is the part
       worth reading. The first coins buy a great deal of nutrition and the last
       ones buy very little — the knee is where spending stops being worth it.</p>
     </section>
 
-    <section class="panel">
-      <h2>The same thing as numbers</h2>
+    <${More} label="The same thing as numbers">
       <table>
         <thead><tr>
           <th class="num">Spend a day</th>
@@ -85,5 +91,5 @@ export function FrontierTab() {
             })}
         </tbody>
       </table>
-    </section>`;
+    <//>`;
 }

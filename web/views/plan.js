@@ -6,11 +6,59 @@ import { money, preciseMoney, round } from '../lib/format.js';
 import {
   state, update, solveKey, providerNoun, noMealPlanPayload
 } from '../lib/store.js';
-import { post } from '../lib/api.js';
+import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
+import { Icon } from '../lib/icons.js';
 import {
-  Stat, NutrientTable, describeRow, Loading, Failed, AskForDishes, emptyBuild
+  Stat, More, NutrientTable, describeRow, Skeleton, Failed,
+  AskForDishes, emptyBuild
 } from './pieces.js';
+
+/* A list read as a sentence. Four shortfalls are "calcium, potassium, zinc
+   and iron", not "Calcium, Potassium, Zinc, Iron". */
+function sentence(words) {
+  if (words.length === 1) { return words[0]; }
+  return words.slice(0, -1).join(', ') + ' and ' + words[words.length - 1];
+}
+
+function ShortfallRow({ item }) {
+  const met = Math.max(0, Math.min(100, 100 - item.percentShort));
+  return html`
+    <div class="shortfall">
+      <div class="shortfall-name">${item.name}</div>
+      <div class="bar short"><i style=${'width:' + met.toFixed(1) + '%'}></i></div>
+      <div class="shortfall-gap">
+        ${'short by ' + round(item.short, 1) + ' ' + item.unit}
+        <span class="why">${' · ' + item.percentShort + '% of the requirement'}</span>
+      </div>
+    </div>`;
+}
+
+function Shortfalls({ shortfalls }) {
+  const shown = shortfalls.slice(0, 3);
+  const rest = shortfalls.slice(3);
+  return html`
+    <section class="panel">
+      <h2 class="with-icon">
+        <${Icon} name="triangle-alert" />
+        <span>${'Short on ' + sentence(shortfalls.map(function (s) {
+          return s.name.toLowerCase();
+        }))}</span>
+      </h2>
+      ${shown.map(function (s) {
+        return html`<${ShortfallRow} key=${s.name} item=${s} />`;
+      })}
+      ${rest.length ? html`
+        <${More} label=${rest.length + ' more'}>
+          ${rest.map(function (s) {
+            return html`<${ShortfallRow} key=${s.name} item=${s} />`;
+          })}
+        <//>` : null}
+      <p class="note">${'Eaten as well as it can possibly be eaten — the food '
+        + 'from ' + providerNoun() + ' chosen optimally, within what is '
+        + 'actually served and what you could actually get through in a day.'}</p>
+    </section>`;
+}
 
 /* What the meal plan is worth: the same solve with nothing served at all, so
    the only way to reach a target is to pay for it. It costs one extra LP and
@@ -22,8 +70,7 @@ import {
 function WithoutThePlan({ result, currency }) {
   const { loading, data, error } = result;
   return html`
-    <section class="panel">
-      <h2>What the meal plan is worth</h2>
+    <${More} label="What the meal plan is worth">
       ${loading ? html`
         <p class="loading">Working out what the same targets cost without it…</p>` : null}
       ${error ? html`
@@ -59,7 +106,7 @@ function WithoutThePlan({ result, currency }) {
         the same prices, not a grocery bill — nobody eats like a linear program.
         It is a lower bound on what the plan saves you, which is the honest
         direction for a number like this to be wrong in.</p>` : null}
-    </section>`;
+    <//>`;
 }
 
 /* The number the panel above produces, said in four words for the headline.
@@ -90,7 +137,8 @@ function Covered({ shortfall, answer }) {
 
   const withoutThePlan = useAsync(
     function () { return post('solve', { menu: noMealPlanPayload() }); },
-    solveKey());
+    solveKey(),
+    function () { return known('solve', { menu: noMealPlanPayload() }); });
 
   const floors = answer.nutrients.filter(function (n) { return n.floor; })
     .slice().sort(function (a, b) { return a.got / a.floor - b.got / b.floor; });
@@ -113,54 +161,64 @@ function Covered({ shortfall, answer }) {
     </div>
 
     <section class="panel">
-      <h2>How much room that leaves</h2>
+      <h2 class="with-icon">
+        <${Icon} name="check" />
+        <span>Every target met</span>
+      </h2>
       <p>${'The plate below is the lightest one that meets every target, and it '
         + 'weighs ' + Math.round(answer.plateGrams) + ' g against the '
         + Math.round(eatLimit) + ' g you said you could manage. Every target is '
         + 'met, and it takes most of a day of eating to meet them.'}</p>
-      <h2>Tightest floors</h2>
-      <ul>
-        ${onTheLine.length ? html`
-          <li><b>Exactly on the line</b>${' — ' + onTheLine.map(function (n) {
-            return n.name.toLowerCase();
-          }).join(', ')}</li>` : null}
-        ${clear.slice(0, 4).map(function (n) {
-          return html`
-            <li key=${n.name}><b>${n.name}</b>${' — ' + round(n.got, 1) + ' '
-              + n.unit + ', ' + Math.round(100 * (n.got - n.floor) / n.floor)
-              + '% clear of the ' + round(n.floor, 1) + ' ' + n.unit + ' floor'}</li>`;
-        })}
-      </ul>
-      ${ceilings.length ? html`<h2>Ceilings</h2>` : null}
-      ${ceilings.length ? html`
-        <ul>
-          ${ceilings.map(function (n) {
-            const room = n.ceiling - n.got;
-            return html`
-              <li key=${n.name}><b>${n.name}</b>${room < 0.02 * n.ceiling
-                ? ' — ' + round(n.got, 1) + ' of ' + round(n.ceiling, 1) + ' '
-                  + n.unit + ', with no headroom left at all'
-                : ' — ' + round(n.got, 1) + ' of ' + round(n.ceiling, 1) + ' '
-                  + n.unit + ', ' + round(room, 1) + ' ' + n.unit + ' spare'}</li>`;
-          })}
-        </ul>` : null}
-      <p class="note">A floor sitting exactly on its line is the solver being
-      frugal rather than the menu being thin: this plate is minimised for
-      weight, so it never takes a gram more of anything than it has to. A
-      ceiling on its line is the opposite — that one really is full.</p>
-    </section>
+      ${onTheLine.length ? html`
+        <p class="note">${'Exactly on the line: ' + sentence(onTheLine.map(
+          function (n) { return n.name.toLowerCase(); })) + '.'}</p>` : null}
 
-    <${WithoutThePlan} result=${withoutThePlan} currency=${currency} />`;
+      <${More} label="How much room that leaves">
+        <h3>Tightest floors</h3>
+        <ul>
+          ${clear.slice(0, 4).map(function (n) {
+            return html`
+              <li key=${n.name}><b>${n.name}</b>${' — ' + round(n.got, 1) + ' '
+                + n.unit + ', ' + Math.round(100 * (n.got - n.floor) / n.floor)
+                + '% clear of the ' + round(n.floor, 1) + ' ' + n.unit + ' floor'}</li>`;
+          })}
+        </ul>
+        ${ceilings.length ? html`<h3>Ceilings</h3>` : null}
+        ${ceilings.length ? html`
+          <ul>
+            ${ceilings.map(function (n) {
+              const room = n.ceiling - n.got;
+              return html`
+                <li key=${n.name}><b>${n.name}</b>${room < 0.02 * n.ceiling
+                  ? ' — ' + round(n.got, 1) + ' of ' + round(n.ceiling, 1) + ' '
+                    + n.unit + ', with no headroom left at all'
+                  : ' — ' + round(n.got, 1) + ' of ' + round(n.ceiling, 1) + ' '
+                    + n.unit + ', ' + round(room, 1) + ' ' + n.unit + ' spare'}</li>`;
+            })}
+          </ul>` : null}
+        <p class="note">A floor sitting exactly on its line is the solver being
+        frugal rather than the menu being thin: this plate is minimised for
+        weight, so it never takes a gram more of anything than it has to. A
+        ceiling on its line is the opposite — that one really is full.</p>
+      <//>
+
+      <${WithoutThePlan} result=${withoutThePlan} currency=${currency} />
+    </section>`;
 }
 
 export function PlanTab() {
   if (emptyBuild('day')) { return html`<${AskForDishes} scope="day" />`; }
 
-  const { loading, data, error } = useAsync(function () {
-    return Promise.all([post('gap'), post('solve')]);
-  }, solveKey());
+  const { loading, data, error } = useAsync(
+    function () { return Promise.all([post('gap'), post('solve')]); },
+    solveKey(),
+    function () {
+      const gap = known('gap');
+      const solve = known('solve');
+      return gap && solve ? [gap, solve] : null;
+    });
 
-  if (loading) { return html`<${Loading} />`; }
+  if (loading) { return html`<${Skeleton} kind="plan" />`; }
   if (error) { return html`<${Failed} problem=${error} />`; }
 
   const shortfall = data[0];
@@ -168,8 +226,11 @@ export function PlanTab() {
 
   if (!answer.feasible) {
     return html`
-      <div class="error">Even with purchases there is no way to reach every
-      target inside the portion limits on this day. ${answer.reason || ''}</div>`;
+      <div class="error">
+        <${Icon} name="circle-alert" />
+        <span>Even with purchases there is no way to reach every target inside
+        the portion limits on this day. ${answer.reason || ''}</span>
+      </div>`;
   }
 
   const currency = answer.currency;
@@ -190,23 +251,14 @@ export function PlanTab() {
           <${Stat} value=${Math.round(answer.plateGrams) + ' g'}
             label="of food on the plan" />
         </div>
-        <div class="panel">
-          <h2>Eat this menu as well as it can be eaten, and you are still missing</h2>
-          <ul>
-            ${shortfall.shortfalls.map(function (s) {
-              return html`
-                <li key=${s.name}><b>${s.name}</b>${' — short by ' + round(s.short, 1)
-                  + ' ' + s.unit + ' (' + s.percentShort + '% of the requirement)'}</li>`;
-            })}
-          </ul>
-          <p class="note">${'That is the best case: the food from ' + providerNoun()
-            + ' chosen optimally, within what is actually served and what you '
-            + 'could actually eat.'}</p>
-        </div>`}
+        <${Shortfalls} shortfalls=${shortfall.shortfalls} />`}
 
     <div class="grid2">
       <section class="panel">
-        <h2>${'From ' + providerNoun() + ', free'}</h2>
+        <h2 class="with-icon">
+          <${Icon} name="utensils" />
+          <span>${'From ' + providerNoun() + ', free'}</span>
+        </h2>
         <table>
           <thead><tr>
             <th>Dish</th>
@@ -231,7 +283,10 @@ export function PlanTab() {
       </section>
 
       <section class="panel">
-        <h2>${'Buy yourself — ' + preciseMoney(answer.spendExact, currency)}</h2>
+        <h2 class="with-icon">
+          <${Icon} name="shopping-basket" />
+          <span>${'Buy yourself — ' + preciseMoney(answer.spendExact, currency)}</span>
+        </h2>
         ${answer.buy.length ? html`
           <table>
             <thead><tr>
@@ -265,22 +320,19 @@ export function PlanTab() {
             </tbody>
           </table>`
         : html`<p class="note">Nothing. The menu covers it.</p>`}
-        <p class="note">Prices are seed defaults for your region. They are
-        almost certainly wrong for your campus — change one and everything
-        re-solves.</p>
+        <p class="note">Prices are seed defaults for your region — almost
+        certainly wrong for your campus. Change one and everything re-solves.</p>
       </section>
     </div>
 
-    <section class="panel">
-      <h2>What the plan actually delivers</h2>
+    <${More} label=${'All ' + answer.nutrients.length + ' nutrients'}>
       <${NutrientTable} nutrients=${answer.nutrients} />
       <p class="note">${'Measured against ' + answer.targets.reference + '. '
         + answer.targets.citation}</p>
-    </section>
+    <//>
 
     ${answer.binding.length ? html`
-      <section class="panel">
-        <h2>What is actually limiting you</h2>
+      <${More} label="What is actually limiting you">
         <ul>
           ${answer.binding.slice(0, 6).map(function (row) {
             return html`<li key=${row.kind + row.key}>${describeRow(row, currency)}</li>`;
@@ -289,5 +341,5 @@ export function PlanTab() {
         <p class="note">These are shadow prices from the solver, not estimates.
         Only limits you are actually up against appear here — a limit you are
         nowhere near is worth nothing to loosen.</p>
-      </section>` : null}`;
+      <//>` : null}`;
 }

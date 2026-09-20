@@ -33,10 +33,20 @@ export const CUSTOM = 'custom';
    gives a sentence instead of a 400. */
 export const MAX_DISHES_PER_MEAL = 40;
 
+/* The tab bar used to carry the full sentence for each screen -- "What each
+   rupee buys", "For whoever writes the menu" -- which wrapped onto two lines
+   at desktop width and was the first thing anyone saw. The sentence is worth
+   keeping, so it became the tooltip and the screen's own heading, and the tab
+   carries one word and an icon. */
 export const TABS = [
-  { id: 'plan', label: 'The gap' },
-  { id: 'frontier', label: 'What each rupee buys' },
-  { id: 'audit', label: 'For whoever writes the menu' },
-  { id: 'build', label: 'Build a menu' },
-  { id: 'data', label: 'Where the numbers come from' }
+  { id: 'plan', label: 'The gap', icon: 'target',
+    hint: 'What your meal plan leaves out, and the cheapest way to close it' },
+  { id: 'frontier', label: 'Spending', icon: 'trending-down',
+    hint: 'What each rupee buys: how much of the gap your money closes' },
+  { id: 'audit', label: 'Kitchen', icon: 'chef-hat',
+    hint: 'For whoever writes the menu: the one addition that saves the most' },
+  { id: 'build', label: 'Build', icon: 'square-pen',
+    hint: 'Build a menu of your own, and share it as a link' },
+  { id: 'data', label: 'Sources', icon: 'book-open',
+    hint: 'Where the numbers come from, and what this does not know' }
 ];

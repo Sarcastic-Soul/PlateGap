@@ -7,7 +7,7 @@ looked fine.
 
 | File | What it shows |
 | --- | --- |
-| `01-the-gap.png` | Indian hostel mess, Monday. 4 of 12 targets the menu cannot reach, ₹7.82 a day to close them, and the shadow prices underneath: zinc at ₹7.53/mg, one more roti worth ₹0.597, 100 g more appetite worth ₹3.47. |
+| `01-the-gap.png` | Indian hostel mess, Monday. 4 of 12 targets the menu cannot reach and ₹7.82 a day to close them, with the shortfalls given the top of the page and the method folded underneath — the shadow prices are one click away: zinc at ₹7.53/mg, one more roti worth ₹0.597, 100 g more appetite worth ₹3.47. |
 | `02-what-each-rupee-buys.png` | The cost-of-nutrition frontier. Convex and flattening — the first coins buy a lot, the last ones buy very little. |
 | `03-the-menu-audit.png` | The institutional view. 600 students leak ₹271,698 a month; the top menu change recovers ₹85,193 of it. Each row says which duals it answers, and what one serving spends against the ceilings. |
 | `04-where-the-numbers-come-from.png` | Provenance: USDA FoodData Central ids, the retention factors, which two ingredients come from IFCT 2017, which reference intakes were used. |
