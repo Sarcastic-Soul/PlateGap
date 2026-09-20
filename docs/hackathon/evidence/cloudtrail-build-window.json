@@ -1,0 +1,3094 @@
+[
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "79f64a73-0f01-4f71-9149-7261a0c7f0be",
+  "eventName": "SetIAMAccessPreference",
+  "eventSource": "billingconsole.amazonaws.com",
+  "eventTime": "2026-09-19T16:37:41Z",
+  "eventType": "AwsConsoleAction",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "13027151-9789-4d79-8b02-218a254b0b15",
+  "requestParameters": {
+   "map": {
+    "billingConsoleAccessEnabled": true
+   }
+  },
+  "responseElements": null,
+  "sessionCredentialFromConsole": "true",
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "ACCOUNT-mcy2j6vb.us-east-1.console.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "Root"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "authorization_code",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "6371ca88-ec11-457a-9b5b-7a42e5eac02c",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-19T16:47:58Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "fcb2b775-9607-410a-8ddc-055dc593815a",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,b,AA cfg/retry-mode#standard md/installer#exe sid/8ac8c03224ac md/distrib#ubuntu.24 md/prompt#off md/command#login",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "b34d87e2-74cb-4a7c-9618-6f7ba03714b4",
+  "eventName": "CreateBudget",
+  "eventSource": "budgets.amazonaws.com",
+  "eventTime": "2026-09-19T16:51:26Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "9ff08fc7-773f-497b-a1e4-ee79dda84ade",
+  "requestParameters": {
+   "AccountId": "ACCOUNT",
+   "Budget": {
+    "BudgetLimit": {
+     "Amount": "46",
+     "Unit": "USD"
+    },
+    "BudgetName": "hackathon-50-credit-guard",
+    "BudgetType": "COST",
+    "CostTypes": {
+     "IncludeCredit": false,
+     "IncludeDiscount": true,
+     "IncludeOtherSubscription": true,
+     "IncludeRecurring": true,
+     "IncludeRefund": false,
+     "IncludeSubscription": true,
+     "IncludeSupport": true,
+     "IncludeTax": true,
+     "IncludeUpfront": true,
+     "UseAmortized": false,
+     "UseBlended": false
+    },
+    "TimePeriod": {
+     "End": 1793491200,
+     "Start": 1788220800
+    },
+    "TimeUnit": "ANNUALLY"
+   },
+   "NotificationsWithSubscribers": [
+    {
+     "Notification": {
+      "ComparisonOperator": "GREATER_THAN",
+      "NotificationType": "ACTUAL",
+      "Threshold": 35,
+      "ThresholdType": "ABSOLUTE_VALUE"
+     },
+     "Subscribers": [
+      {
+       "Address": "HIDDEN_DUE_TO_SECURITY_REASONS",
+       "SubscriptionType": "EMAIL"
+      }
+     ]
+    },
+    {
+     "Notification": {
+      "ComparisonOperator": "GREATER_THAN",
+      "NotificationType": "ACTUAL",
+      "Threshold": 42,
+      "ThresholdType": "ABSOLUTE_VALUE"
+     },
+     "Subscribers": [
+      {
+       "Address": "HIDDEN_DUE_TO_SECURITY_REASONS",
+       "SubscriptionType": "EMAIL"
+      }
+     ]
+    },
+    {
+     "Notification": {
+      "ComparisonOperator": "GREATER_THAN",
+      "NotificationType": "ACTUAL",
+      "Threshold": 46,
+      "ThresholdType": "ABSOLUTE_VALUE"
+     },
+     "Subscribers": [
+      {
+       "Address": "HIDDEN_DUE_TO_SECURITY_REASONS",
+       "SubscriptionType": "EMAIL"
+      }
+     ]
+    },
+    {
+     "Notification": {
+      "ComparisonOperator": "GREATER_THAN",
+      "NotificationType": "FORECASTED",
+      "Threshold": 100,
+      "ThresholdType": "PERCENTAGE"
+     },
+     "Subscribers": [
+      {
+       "Address": "HIDDEN_DUE_TO_SECURITY_REASONS",
+       "SubscriptionType": "EMAIL"
+      }
+     ]
+    }
+   ]
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "clientProvidedHostHeader": "budgets.amazonaws.com"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#budgets.create-budget",
+  "userIdentity": {
+   "inScopeOf": {},
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5fabad65-bc84-4a3c-bac5-619e900e294d",
+  "eventName": "CreateNotification",
+  "eventSource": "budgets.amazonaws.com",
+  "eventTime": "2026-09-19T16:51:41Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "265e4ea3-80ba-4f4f-bb33-2bcd81bfb43c",
+  "requestParameters": {
+   "AccountId": "ACCOUNT",
+   "BudgetName": "hackathon-50-credit-guard",
+   "Notification": {
+    "ComparisonOperator": "GREATER_THAN",
+    "NotificationType": "ACTUAL",
+    "Threshold": 50,
+    "ThresholdType": "ABSOLUTE_VALUE"
+   },
+   "Subscribers": [
+    {
+     "Address": "HIDDEN_DUE_TO_SECURITY_REASONS",
+     "SubscriptionType": "EMAIL"
+    }
+   ]
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "clientProvidedHostHeader": "budgets.amazonaws.com"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#budgets.create-notification",
+  "userIdentity": {
+   "inScopeOf": {},
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "775c7b2a-538b-49c8-9295-e45e4adae458",
+  "eventName": "CreateTopic",
+  "eventSource": "sns.amazonaws.com",
+  "eventTime": "2026-09-19T16:51:49Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "65749c61-98d8-50d8-aaf3-ff49273d49ef",
+  "requestParameters": {
+   "name": "hackathon-credit-reminders"
+  },
+  "responseElements": {
+   "topicArn": "arn:aws:sns:us-east-1:ACCOUNT:hackathon-credit-reminders"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "sns.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#sns.create-topic",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "48365956-332f-461e-af6c-c76ce9068df4",
+  "eventName": "CreateRole",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T16:51:58Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "88d594e2-f865-4a4f-94c7-160618bdb1e8",
+  "requestParameters": {
+   "assumeRolePolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"scheduler.amazonaws.com\"},\"Action\":\"sts:AssumeRole\",\"Condition\":{\"StringEquals\":{\"aws:SourceAccount\":\"ACCOUNT\"}}}]}\n",
+   "roleName": "hackathon-reminder-scheduler"
+  },
+  "responseElements": {
+   "role": {
+    "assumeRolePolicyDocument": "%7B%22Version%22%3A%222012-10-17%22%2C%22Statement%22%3A%5B%7B%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Service%22%3A%22scheduler.amazonaws.com%22%7D%2C%22Action%22%3A%22sts%3AAssumeRole%22%2C%22Condition%22%3A%7B%22StringEquals%22%3A%7B%22aws%3ASourceAccount%22%3A%22ACCOUNT%22%7D%7D%7D%5D%7D%0A",
+    "createDate": "2026-09-19T16:51:58Z",
+    "path": "/",
+    "roleId": "AROA5FVU6OH3IGWUFDCDF",
+    "roleName": "hackathon-reminder-scheduler"
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-role",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "65727366-9ed7-480f-afb8-5da0b4b45081",
+  "eventName": "PutRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T16:51:59Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "7a1185d0-b1db-4028-bcb3-54d35a05578d",
+  "requestParameters": {
+   "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"sns:Publish\",\"Resource\":\"arn:aws:sns:us-east-1:ACCOUNT:hackathon-credit-reminders\"}]}\n",
+   "policyName": "publish-reminders-only",
+   "roleName": "hackathon-reminder-scheduler"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.put-role-policy",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "20676548-ef42-4f28-8836-54530337aa73",
+  "eventName": "CreateSchedule",
+  "eventSource": "scheduler.amazonaws.com",
+  "eventTime": "2026-09-19T16:52:19Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "71941bed-8ac0-419b-9a0f-bb1dd7e82e7f",
+  "requestParameters": {
+   "actionAfterCompletion": "DELETE",
+   "clientToken": "4c591026-5075-4928-bc4e-45e908e327db",
+   "flexibleTimeWindow": {
+    "mode": "OFF"
+   },
+   "name": "credit-expiry-3day-warning",
+   "scheduleExpression": "at(2026-10-28T10:00:00)",
+   "scheduleExpressionTimezone": "Asia/Kolkata",
+   "target": {
+    "roleArn": "arn:aws:iam::ACCOUNT:role/hackathon-reminder-scheduler"
+   }
+  },
+  "responseElements": {
+   "scheduleArn": "arn:aws:scheduler:us-east-1:ACCOUNT:schedule/default/credit-expiry-3day-warning"
+  },
+  "tlsDetails": {
+   "clientProvidedHostHeader": "scheduler.us-east-1.amazonaws.com"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#scheduler.create-schedule",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "b3555555-1efb-444b-8e78-4512719d9169",
+  "eventName": "CreateSchedule",
+  "eventSource": "scheduler.amazonaws.com",
+  "eventTime": "2026-09-19T16:52:20Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "455f0508-35fa-485c-a424-9b972f1843cc",
+  "requestParameters": {
+   "actionAfterCompletion": "DELETE",
+   "clientToken": "260db359-270b-4f0a-9f4e-05dfd49de2ff",
+   "flexibleTimeWindow": {
+    "mode": "OFF"
+   },
+   "name": "credit-expired-notice",
+   "scheduleExpression": "at(2026-10-31T23:59:00)",
+   "scheduleExpressionTimezone": "Asia/Kolkata",
+   "target": {
+    "roleArn": "arn:aws:iam::ACCOUNT:role/hackathon-reminder-scheduler"
+   }
+  },
+  "responseElements": {
+   "scheduleArn": "arn:aws:scheduler:us-east-1:ACCOUNT:schedule/default/credit-expired-notice"
+  },
+  "tlsDetails": {
+   "clientProvidedHostHeader": "scheduler.us-east-1.amazonaws.com"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#scheduler.create-schedule",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "36a1ab58-6c22-401d-aa15-02e8944785c8",
+  "eventName": "CreateSecurityGroup",
+  "eventSource": "ec2.amazonaws.com",
+  "eventTime": "2026-09-19T16:52:59Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "5aa364c9-96ee-4ae0-b311-a0ec24fa99cc",
+  "requestParameters": {
+   "groupDescription": "Hackathon backends: SSH from owner IP, HTTP/HTTPS public",
+   "groupName": "hackathon-box-sg",
+   "vpcId": "vpc-0a6df3ddace136f56"
+  },
+  "responseElements": {
+   "_return": true,
+   "groupId": "sg-0eb8436dab5ea8320",
+   "requestId": "5aa364c9-96ee-4ae0-b311-a0ec24fa99cc",
+   "securityGroupArn": "arn:aws:ec2:us-east-1:ACCOUNT:security-group/sg-0eb8436dab5ea8320"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-security-group",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5a3e9a07-8ec9-44ba-b05a-071868a07766",
+  "eventName": "CreateKeyPair",
+  "eventSource": "ec2.amazonaws.com",
+  "eventTime": "2026-09-19T16:53:02Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "8a577331-3c6f-4d17-bdb3-00dfafc10b3b",
+  "requestParameters": {
+   "keyFormat": "pem",
+   "keyName": "aws-hackathon",
+   "keyType": "ed25519"
+  },
+  "responseElements": {
+   "keyFingerprint": "vkVTOPk4f/9NN85e3QpWP3W8bJIITEStuTZX8fr/Swk=",
+   "keyMaterial": "<sensitiveDataRemoved>",
+   "keyName": "aws-hackathon",
+   "keyPairId": "key-0fb92fcb7f82bfc51",
+   "requestId": "8a577331-3c6f-4d17-bdb3-00dfafc10b3b"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#ec2.create-key-pair",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "50948031-1b8f-4ee6-abe3-d1369223eebf",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-19T17:02:45Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "d79c326b-46f5-49ce-870e-4e8e97ca3eb6",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-role",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "7c3207dc-45b4-48ab-b572-40ab56b3a012",
+  "eventName": "CreateRole",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:02:46Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "72fd1cf2-91a8-4964-b58e-d6bf4df85305",
+  "requestParameters": {
+   "assumeRolePolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}\n",
+   "roleName": "hackathon-box-ssm"
+  },
+  "responseElements": {
+   "role": {
+    "assumeRolePolicyDocument": "%7B%22Version%22%3A%222012-10-17%22%2C%22Statement%22%3A%5B%7B%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Service%22%3A%22ec2.amazonaws.com%22%7D%2C%22Action%22%3A%22sts%3AAssumeRole%22%7D%5D%7D%0A",
+    "createDate": "2026-09-19T17:02:46Z",
+    "path": "/",
+    "roleId": "AROA5FVU6OH3CZ6MAY6R4",
+    "roleName": "hackathon-box-ssm"
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-role",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "bda741cf-7a6e-4553-ae75-a6dcdd29f15b",
+  "eventName": "AttachRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:02:48Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "4ed93893-3201-4eb6-98ab-81e69b6335bc",
+  "requestParameters": {
+   "policyArn": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+   "roleName": "hackathon-box-ssm"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.attach-role-policy",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "53192213-1c25-4910-aea0-e487c648924f",
+  "eventName": "CreateInstanceProfile",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:02:49Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "37eefd92-7467-4460-b642-68d2c9703fef",
+  "requestParameters": {
+   "instanceProfileName": "hackathon-box-ssm"
+  },
+  "responseElements": {
+   "instanceProfile": {
+    "createDate": "2026-09-19T17:02:49Z",
+    "instanceProfileId": "AIPA5FVU6OH3MQZHI4QEC",
+    "instanceProfileName": "hackathon-box-ssm",
+    "path": "/",
+    "roles": []
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-instance-profile",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "ac255a29-60aa-4970-a3bb-955348ec5f2d",
+  "eventName": "AddRoleToInstanceProfile",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:02:51Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "73607550-8e96-4318-9248-138180275bb9",
+  "requestParameters": {
+   "instanceProfileName": "hackathon-box-ssm",
+   "roleName": "hackathon-box-ssm"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.add-role-to-instance-profile",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "c10bb703-7832-42b8-9151-8eff45fad688",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-19T17:20:38Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "9dfe2c78-45ac-46e8-bdb4-b90c8a1f7aa8",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.get-open-id-connect-provider",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "833ae2e8-7a2f-4b81-ad38-92dccbdadd2c",
+  "eventName": "CreateOpenIDConnectProvider",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:20:41Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "598c6a53-0967-4ab4-ac95-0e9ff0205ad2",
+  "requestParameters": {
+   "clientIDList": [
+    "sts.amazonaws.com"
+   ],
+   "url": "https://token.actions.githubusercontent.com"
+  },
+  "responseElements": {
+   "hasContextProvider": false,
+   "openIDConnectProviderArn": "arn:aws:iam::ACCOUNT:oidc-provider/token.actions.githubusercontent.com"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-open-id-connect-provider",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "530482e3-a010-4069-b480-c5a9f74ffcc8",
+  "eventName": "CreateRole",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:20:43Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "d89b2f2b-a05c-4758-bd29-dc0df5ca71e5",
+  "requestParameters": {
+   "assumeRolePolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"arn:aws:iam::ACCOUNT:oidc-provider/token.actions.githubusercontent.com\"},\"Action\":\"sts:AssumeRoleWithWebIdentity\",\n \"Condition\":{\"StringEquals\":{\"token.actions.githubusercontent.com:aud\":\"sts.amazonaws.com\",\n  \"token.actions.githubusercontent.com:sub\":\"repo:Sarcastic-Soul/stream-to-clinic:environment:production\"}}}]}\n",
+   "maxSessionDuration": 3600,
+   "roleName": "gh-deploy-stream-to-clinic"
+  },
+  "responseElements": {
+   "role": {
+    "assumeRolePolicyDocument": "%7B%22Version%22%3A%222012-10-17%22%2C%22Statement%22%3A%5B%7B%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Federated%22%3A%22arn%3Aaws%3Aiam%3A%3AACCOUNT%3Aoidc-provider%2Ftoken.actions.githubusercontent.com%22%7D%2C%22Action%22%3A%22sts%3AAssumeRoleWithWebIdentity%22%2C%0A%20%22Condition%22%3A%7B%22StringEquals%22%3A%7B%22token.actions.githubusercontent.com%3Aaud%22%3A%22sts.amazonaws.com%22%2C%0A%20%20%22token.actions.githubusercontent.com%3Asub%22%3A%22repo%3ASarcastic-Soul%2Fstream-to-clinic%3Aenvironment%3Aproduction%22%7D%7D%7D%5D%7D%0A",
+    "createDate": "2026-09-19T17:20:43Z",
+    "path": "/",
+    "roleId": "AROA5FVU6OH3GCONJOGYH",
+    "roleName": "gh-deploy-stream-to-clinic"
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.create-role",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "9269962b-e625-470f-9266-207be4ea2970",
+  "eventName": "PutRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:20:45Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "3f79891f-b570-4496-b243-15d2bb1c7e6a",
+  "requestParameters": {
+   "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[\n {\"Sid\":\"RunDeployOnHackathonBox\",\"Effect\":\"Allow\",\"Action\":\"ssm:SendCommand\",\"Resource\":[\n   \"arn:aws:ec2:us-east-1:ACCOUNT:instance/i-0ee8eb55a5eadba6c\",\n   \"arn:aws:ssm:us-east-1::document/AWS-RunShellScript\"]},\n {\"Sid\":\"ReadCommandResults\",\"Effect\":\"Allow\",\"Action\":[\"ssm:GetCommandInvocation\",\"ssm:ListCommandInvocations\"],\"Resource\":\"*\"}]}\n",
+   "policyName": "ssm-deploy-hackathon-box",
+   "roleName": "gh-deploy-stream-to-clinic"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.put-role-policy",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "67ebe283-020a-4b0b-9c27-a6c750c9c99f",
+  "eventName": "UpdateAssumeRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-19T17:23:58Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "4f503ff5-19c5-43fb-ae8f-cb4ad525d3d6",
+  "requestParameters": {
+   "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"arn:aws:iam::ACCOUNT:oidc-provider/token.actions.githubusercontent.com\"},\"Action\":\"sts:AssumeRoleWithWebIdentity\",\n \"Condition\":{\"StringEquals\":{\"token.actions.githubusercontent.com:aud\":\"sts.amazonaws.com\",\n  \"token.actions.githubusercontent.com:sub\":[\"repo:Sarcastic-Soul@142567151/stream-to-clinic@1377424718:environment:production\",\"repo:Sarcastic-Soul/stream-to-clinic:environment:production\"]}}}]}\n",
+   "roleName": "gh-deploy-stream-to-clinic"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#iam.update-assume-role-policy",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "79232757-cbd6-4234-8c35-bf7f30ea85e3",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-19T17:36:04Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "0cae4258-31a7-43dd-a03c-8f7db9fb188a",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z,C cfg/retry-mode#standard md/installer#exe sid/4df96a1fe391 md/distrib#ubuntu.24 md/prompt#off md/command#freetier.list-account-activities",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/fe16b07c-610b-4eb3-b447-85cb09acea7d"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "authorization_code",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "6afe954c-0277-4f76-bd3e-831e7e8cf1af",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T09:19:26Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "6139a494-9c97-4b7e-9551-e8947dc828eb",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,b,AA cfg/retry-mode#standard md/installer#exe sid/a8c3e68cae48 md/distrib#ubuntu.24 md/prompt#off md/command#login",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "34e844e1-e8fa-44a3-8c13-ba073c7a85c1",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T09:29:32Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "e47c9405-abf6-4192-b381-9851e2e8f208",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4d5238de1245 md/distrib#ubuntu.24 md/prompt#off md/command#ssm.start-session",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "d5a46079-85d9-40bd-9fa8-2ffc1a471309",
+  "eventName": "CreateStack",
+  "eventSource": "cloudformation.amazonaws.com",
+  "eventTime": "2026-09-20T09:36:56Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "ae19559f-3d9b-4e2d-89f7-a0496f6fa84d",
+  "requestParameters": {
+   "capabilities": [
+    "CAPABILITY_NAMED_IAM"
+   ],
+   "parameters": [
+    {
+     "parameterKey": "QSConfigurationType"
+    },
+    {
+     "parameterKey": "LocalAdministrationRoleName"
+    },
+    {
+     "parameterKey": "LocalExecutionRoleName"
+    },
+    {
+     "parameterKey": "UseAWSManagedPolicy"
+    }
+   ],
+   "stackName": "AWS-QuickSetup-SSM-LocalDeploymentRolesStack"
+  },
+  "responseElements": {
+   "stackId": "arn:aws:cloudformation:us-east-1:ACCOUNT:stack/AWS-QuickSetup-SSM-LocalDeploymentRolesStack/d1de16b0-b4d6-11f1-965f-12f0f1c19cb3"
+  },
+  "sessionCredentialFromConsole": "true",
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudformation.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "df7ad9e3-371a-450a-9428-2e43c2f7fe21",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T09:52:02Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "172d3a5a-be8d-419e-b7e4-63877b810c60",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/4d5238de1245 md/distrib#ubuntu.24 md/prompt#off md/command#iam.get-user",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "7d980c66-175d-418d-8bec-6ee024fc3f45",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T10:46:23Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "cb18d76c-88ef-475b-a785-8502e20d2a8e",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/acc22ac16777 md/distrib#ubuntu.24 md/prompt#off md/command#sts.get-caller-identity",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5bca1acb-0d29-4fe8-8cfe-80d9621982ab",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T11:14:53Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "f6012ccf-33f2-4cda-910f-62ee534c92ed",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AD,Z,E,b cfg/retry-mode#standard md/installer#exe sid/b5e5c4134da7 md/distrib#ubuntu.24 md/prompt#off md/command#sts.get-caller-identity",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "25741b86-1452-460a-8fac-312aacff62c5",
+  "eventName": "CreateRole",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "8110cc3d-6c8b-46b3-8f3b-870611477efe",
+  "requestParameters": {
+   "assumeRolePolicyDocument": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+   "maxSessionDuration": 3600,
+   "path": "/",
+   "roleName": "plategap-lambda",
+   "tags": [
+    {
+     "key": "ManagedBy",
+     "value": "terraform"
+    },
+    {
+     "key": "Project",
+     "value": "plategap"
+    }
+   ]
+  },
+  "responseElements": {
+   "role": {
+    "assumeRolePolicyDocument": "%7B%22Statement%22%3A%5B%7B%22Action%22%3A%22sts%3AAssumeRole%22%2C%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Service%22%3A%22lambda.amazonaws.com%22%7D%7D%5D%2C%22Version%22%3A%222012-10-17%22%7D",
+    "createDate": "2026-09-20T11:18:39Z",
+    "path": "/",
+    "roleId": "AROA5FVU6OH3EPT4WRQ2T",
+    "roleName": "plategap-lambda",
+    "tags": [
+     {
+      "key": "ManagedBy",
+      "value": "terraform"
+     },
+     {
+      "key": "Project",
+      "value": "plategap"
+     }
+    ]
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "27dfb3a6-29c3-4726-b57b-e16f373f9a3d",
+  "eventName": "CreateOriginAccessControl",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "c6174a9e-c664-4051-b8a6-f8905aa099c1",
+  "requestParameters": {
+   "originAccessControlConfig": {
+    "description": "Managed by Terraform",
+    "name": "plategap-site",
+    "originAccessControlOriginType": "s3",
+    "signingBehavior": "always",
+    "signingProtocol": "sigv4"
+   }
+  },
+  "responseElements": {
+   "eTag": "ETVPDKIKX0DER",
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/origin-access-control/E2BMGVKU5HR9YQ",
+   "originAccessControl": {
+    "id": "E2BMGVKU5HR9YQ",
+    "originAccessControlConfig": {
+     "description": "Managed by Terraform",
+     "name": "plategap-site",
+     "originAccessControlOriginType": "s3",
+     "signingBehavior": "always",
+     "signingProtocol": "sigv4"
+    }
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/cloudfront#1.46.1 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "20140328",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5bb5af52-4dcf-4c25-b156-50b9ca5fe0fb",
+  "eventName": "CreateLogGroup",
+  "eventSource": "logs.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "e1a35b5e-d8c5-49ab-ab85-69729f4aff7e",
+  "requestParameters": {
+   "logGroupName": "/aws/lambda/plategap",
+   "tags": {
+    "ManagedBy": "terraform",
+    "Project": "plategap"
+   }
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "logs.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/cloudwatchlogs#1.50.1 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 0,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903119691,
+   "httpStatusCode": 200,
+   "startTime": 1789903119514,
+   "x-amz-id-2": "lpiTndag+WztQr3ii8wUJz0ex1cWHJIk5G1biUM+9OqtTBzOVvXqTND+WqvWiSq+per3ScE5rBk="
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "7f1446b8-563e-466f-9188-a4c43d551bff",
+  "eventName": "CreateBucket",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "3G5369J7F729GJZM",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "x-amz-acl": "private"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "20140328",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "86076117-77bf-45d6-9413-a61c16e443df",
+  "eventName": "PutRetentionPolicy",
+  "eventSource": "logs.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "7b35db41-08de-4746-97b8-e1d36ef9f06d",
+  "requestParameters": {
+   "logGroupName": "/aws/lambda/plategap",
+   "retentionInDays": 7
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "logs.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/cloudwatchlogs#1.50.1 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "EntityAlreadyExistsException",
+  "errorMessage": "Provider with url https://token.actions.githubusercontent.com already exists.",
+  "eventCategory": "Management",
+  "eventID": "d4b25605-fcc4-46ab-8c9e-2fe503e8b974",
+  "eventName": "CreateOpenIDConnectProvider",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:39Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "11088eb6-cc0d-4056-beaf-57f5457b6b04",
+  "requestParameters": {
+   "clientIDList": [
+    "sts.amazonaws.com"
+   ],
+   "tags": [
+    {
+     "key": "Project",
+     "value": "plategap"
+    },
+    {
+     "key": "ManagedBy",
+     "value": "terraform"
+    }
+   ],
+   "thumbprintList": [
+    "6938fd4d98bab03faadb97b34396831e3780aea1"
+   ],
+   "url": "https://token.actions.githubusercontent.com"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "58c7667e-fef6-4c72-b736-910be099829f",
+  "eventName": "PutRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:40Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "2933df9e-7419-482a-a270-d424791ff2f9",
+  "requestParameters": {
+   "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"logs:PutLogEvents\",\"logs:CreateLogStream\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:logs:us-east-1:ACCOUNT:log-group:/aws/lambda/plategap:*\"}]}",
+   "policyName": "logs",
+   "roleName": "plategap-lambda"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 191,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903120596,
+   "httpStatusCode": 204,
+   "startTime": 1789903120396,
+   "turnAroundTime": 200,
+   "x-amz-id-2": "7C5QEuxObSlljq9IcLdVV23camj+gE59MKSRjLmqojeIV8r+uOXUj5zqczetIf+7bIwE1kqgeOQ="
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "fc12a16d-1afa-4d0a-88fc-109cab8c9166",
+  "eventName": "PutBucketTagging",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:40Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "GFGKNEHN9V14782Z",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "Tagging": {
+    "TagSet": {
+     "Tag": [
+      {
+       "Key": "ManagedBy",
+       "Value": "terraform"
+      },
+      {
+       "Key": "Project",
+       "Value": "plategap"
+      }
+     ]
+    },
+    "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/"
+   },
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "tagging": ""
+  },
+  "resources": [
+   {
+    "ARN": "arn:aws:s3:::plategap-site-20260920111838512400000001",
+    "type": "AWS::S3::Bucket"
+   }
+  ],
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/Z,g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "InvalidParameterValueException",
+  "errorMessage": "The role defined for the function cannot be assumed by Lambda.",
+  "eventCategory": "Management",
+  "eventID": "9bb229ce-11f6-4451-9f79-7b55cd2755fc",
+  "eventName": "CreateFunction20150331",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:42Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "49e09b84-9f98-43f3-9a7b-a65ac7f239ee",
+  "requestParameters": {
+   "architectures": [
+    "arm64"
+   ],
+   "code": {},
+   "description": "",
+   "environment": {},
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "memorySize": 512,
+   "packageType": "Zip",
+   "publish": false,
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "tags": {
+    "ManagedBy": "terraform",
+    "Project": "plategap"
+   },
+   "timeout": 20
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "InvalidParameterValueException",
+  "errorMessage": "The role defined for the function cannot be assumed by Lambda.",
+  "eventCategory": "Management",
+  "eventID": "cb2ee663-8028-4f6c-882d-facd9b5396b2",
+  "eventName": "CreateFunction20150331",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:43Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "afa65242-b802-435e-8bef-db5453fe6359",
+  "requestParameters": {
+   "architectures": [
+    "arm64"
+   ],
+   "code": {},
+   "description": "",
+   "environment": {},
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "memorySize": 512,
+   "packageType": "Zip",
+   "publish": false,
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "tags": {
+    "ManagedBy": "terraform",
+    "Project": "plategap"
+   },
+   "timeout": 20
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 287,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903124441,
+   "httpStatusCode": 200,
+   "startTime": 1789903124371,
+   "x-amz-id-2": "GTJg0chYnSLwUJY6vg5JDxCt4kcjRd+ZHo2bgF3lylMxn6A0vYpqLn5KG757NLUFWqbUvgDcjFQ="
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "49f0f12a-597a-47d1-9ece-096cfee9ba6a",
+  "eventName": "PutBucketPublicAccessBlock",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:44Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "AWYKBA75K31W9R0D",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "PublicAccessBlockConfiguration": {
+    "BlockPublicAcls": true,
+    "BlockPublicPolicy": true,
+    "IgnorePublicAcls": true,
+    "RestrictPublicBuckets": true,
+    "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/"
+   },
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "publicAccessBlock": ""
+  },
+  "resources": [
+   {
+    "ARN": "arn:aws:s3:::plategap-site-20260920111838512400000001",
+    "type": "AWS::S3::Bucket"
+   }
+  ],
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/Z,g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 282,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903124767,
+   "httpStatusCode": 200,
+   "startTime": 1789903124697,
+   "x-amz-id-2": "qXBmXncpoIHwg0/fyskLyiIju5LxPrDsgOQDcENyhvTYi1zLJTufyJ5EJ5J1cUoLkXTOWGqyKWM="
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "83b73fb6-4956-47c5-8d5f-0ed45cd758ee",
+  "eventName": "PutBucketEncryption",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:44Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "AWYPE9JJ0V2GJR1B",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "ServerSideEncryptionConfiguration": {
+    "Rule": {
+     "ApplyServerSideEncryptionByDefault": {
+      "SSEAlgorithm": "AES256"
+     },
+     "BucketKeyEnabled": false
+    },
+    "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/"
+   },
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "encryption": ""
+  },
+  "resources": [
+   {
+    "ARN": "arn:aws:s3:::plategap-site-20260920111838512400000001",
+    "type": "AWS::S3::Bucket"
+   }
+  ],
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/Z,g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "85c2a47d-082f-4ae2-ae55-cca1e73a4515",
+  "eventName": "CreateDistributionWithTags",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:44Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "d5fb90ed-8f12-41b3-a4d5-41b05588915e",
+  "requestParameters": {
+   "distributionConfigWithTags": {
+    "distributionConfig": {
+     "aliases": {
+      "quantity": 0
+     },
+     "cacheBehaviors": {
+      "quantity": 0
+     },
+     "callerReference": "terraform-20260920111844234200000002",
+     "comment": "HIDDEN_DUE_TO_SECURITY_REASONS",
+     "continuousDeploymentPolicyId": "",
+     "customErrorResponses": {
+      "items": [
+       {
+        "errorCachingMinTTL": 10,
+        "errorCode": 404,
+        "responseCode": "200",
+        "responsePagePath": "/index.html"
+       },
+       {
+        "errorCachingMinTTL": 10,
+        "errorCode": 403,
+        "responseCode": "200",
+        "responsePagePath": "/index.html"
+       }
+      ],
+      "quantity": 2
+     },
+     "defaultCacheBehavior": {
+      "allowedMethods": {
+       "cachedMethods": {
+        "items": [
+         "GET",
+         "HEAD"
+        ],
+        "quantity": 2
+       },
+       "items": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "quantity": 3
+      },
+      "cachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+      "compress": true,
+      "fieldLevelEncryptionId": "",
+      "functionAssociations": {
+       "quantity": 0
+      },
+      "lambdaFunctionAssociations": {
+       "quantity": 0
+      },
+      "originRequestPolicyId": "",
+      "responseHeadersPolicyId": "",
+      "smoothStreaming": false,
+      "targetOriginId": "site",
+      "trustedKeyGroups": {
+       "enabled": false,
+       "quantity": 0
+      },
+      "trustedSigners": {
+       "enabled": false,
+       "quantity": 0
+      },
+      "viewerProtocolPolicy": "redirect-to-https"
+     },
+     "defaultRootObject": "index.html",
+     "enabled": true,
+     "httpVersion": "http2",
+     "isIPV6Enabled": false,
+     "logging": {
+      "bucket": "",
+      "enabled": false,
+      "includeCookies": false,
+      "prefix": ""
+     },
+     "origins": {
+      "items": [
+       {
+        "connectionAttempts": 3,
+        "connectionTimeout": 10,
+        "customHeaders": {
+         "quantity": 0
+        },
+        "domainName": "plategap-site-20260920111838512400000001.s3.us-east-1.amazonaws.com",
+        "id": "site",
+        "originAccessControlId": "E2BMGVKU5HR9YQ",
+        "originPath": "",
+        "s3OriginConfig": {
+         "originAccessIdentity": ""
+        }
+       }
+      ],
+      "quantity": 1
+     },
+     "priceClass": "PriceClass_All",
+     "restrictions": {
+      "geoRestriction": {
+       "items": [],
+       "quantity": 0,
+       "restrictionType": "none"
+      }
+     },
+     "staging": false,
+     "viewerCertificate": {
+      "cloudFrontDefaultCertificate": true,
+      "minimumProtocolVersion": "TLSv1"
+     },
+     "webACLId": ""
+    },
+    "tags": {
+     "items": [
+      {
+       "key": "Project",
+       "value": "plategap"
+      },
+      {
+       "key": "ManagedBy",
+       "value": "terraform"
+      }
+     ]
+    }
+   }
+  },
+  "responseElements": {
+   "distribution": {
+    "aRN": "arn:aws:cloudfront::ACCOUNT:distribution/EE87SI0UJ2WTE",
+    "activeTrustedKeyGroups": {
+     "enabled": false,
+     "quantity": 0
+    },
+    "activeTrustedSigners": {
+     "enabled": false,
+     "quantity": 0
+    },
+    "distributionConfig": {
+     "aliases": {
+      "quantity": 0
+     },
+     "cacheBehaviors": {
+      "quantity": 0
+     },
+     "callerReference": "terraform-20260920111844234200000002",
+     "comment": "HIDDEN_DUE_TO_SECURITY_REASONS",
+     "continuousDeploymentPolicyId": "",
+     "customErrorResponses": {
+      "items": [
+       {
+        "errorCachingMinTTL": 10,
+        "errorCode": 403,
+        "responseCode": "200",
+        "responsePagePath": "/index.html"
+       },
+       {
+        "errorCachingMinTTL": 10,
+        "errorCode": 404,
+        "responseCode": "200",
+        "responsePagePath": "/index.html"
+       }
+      ],
+      "quantity": 2
+     },
+     "defaultCacheBehavior": {
+      "allowedMethods": {
+       "cachedMethods": {
+        "items": [
+         "HEAD",
+         "GET"
+        ],
+        "quantity": 2
+       },
+       "items": [
+        "HEAD",
+        "GET",
+        "OPTIONS"
+       ],
+       "quantity": 3
+      },
+      "cachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+      "compress": true,
+      "fieldLevelEncryptionId": "",
+      "functionAssociations": {
+       "quantity": 0
+      },
+      "grpcConfig": {
+       "enabled": false
+      },
+      "lambdaFunctionAssociations": {
+       "quantity": 0
+      },
+      "smoothStreaming": false,
+      "targetOriginId": "site",
+      "trustedKeyGroups": {
+       "enabled": false,
+       "quantity": 0
+      },
+      "trustedSigners": {
+       "enabled": false,
+       "quantity": 0
+      },
+      "viewerProtocolPolicy": "redirect-to-https"
+     },
+     "defaultRootObject": "index.html",
+     "enabled": true,
+     "httpVersion": "http2",
+     "isIPV6Enabled": false,
+     "logging": {
+      "bucket": "",
+      "enabled": false,
+      "includeCookies": false,
+      "prefix": ""
+     },
+     "originGroups": {
+      "quantity": 0
+     },
+     "origins": {
+      "items": [
+       {
+        "connectionAttempts": 3,
+        "connectionTimeout": 10,
+        "customHeaders": {
+         "quantity": 0
+        },
+        "domainName": "plategap-site-20260920111838512400000001.s3.us-east-1.amazonaws.com",
+        "id": "site",
+        "originAccessControlId": "E2BMGVKU5HR9YQ",
+        "originPath": "",
+        "originShield": {
+         "enabled": false
+        },
+        "s3OriginConfig": {
+         "originAccessIdentity": "",
+         "originReadTimeout": 30
+        }
+       }
+      ],
+      "quantity": 1
+     },
+     "priceClass": "PriceClass_All",
+     "restrictions": {
+      "geoRestriction": {
+       "quantity": 0,
+       "restrictionType": "none"
+      }
+     },
+     "staging": false,
+     "viewerCertificate": {
+      "certificateSource": "cloudfront",
+      "cloudFrontDefaultCertificate": true,
+      "minimumProtocolVersion": "TLSv1",
+      "sSLSupportMethod": "vip"
+     },
+     "webACLId": ""
+    },
+    "domainName": "d2u44arueak38s.cloudfront.net",
+    "id": "EE87SI0UJ2WTE",
+    "inProgressInvalidationBatches": 0,
+    "lastModifiedTime": "2026-09-20T11:18:44Z",
+    "status": "InProgress"
+   },
+   "eTag": "E23ZP02F085DFQ",
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/cloudfront#1.46.1 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "InvalidParameterValueException",
+  "errorMessage": "The role defined for the function cannot be assumed by Lambda.",
+  "eventCategory": "Management",
+  "eventID": "4213e2c0-b04c-4008-9010-96f4936fd6e8",
+  "eventName": "CreateFunction20150331",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:45Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "9ab3aefb-0bdc-4ef9-90aa-d8251489c73e",
+  "requestParameters": {
+   "architectures": [
+    "arm64"
+   ],
+   "code": {},
+   "description": "",
+   "environment": {},
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "memorySize": 512,
+   "packageType": "Zip",
+   "publish": false,
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "tags": {
+    "ManagedBy": "terraform",
+    "Project": "plategap"
+   },
+   "timeout": 20
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 154,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903125002,
+   "httpStatusCode": 200,
+   "startTime": 1789903124887,
+   "turnAroundTime": 115,
+   "x-amz-id-2": "nwVWA5fWdXo2CiEVend58w9EPKbBbRNjQwgi0urnLRzOuNWX3GqmXyMQNV/yqbSwuBOBhjKlsY+oKxVRhxk7HkPPZPmZWXW0"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "6a448cd9-e78a-4f02-83eb-c10979bf3efa",
+  "eventName": "PutBucketOwnershipControls",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:45Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "AWYME8KGV93XH9SW",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "OwnershipControls": {
+    "Rule": {
+     "ObjectOwnership": "BucketOwnerEnforced"
+    },
+    "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/"
+   },
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "ownershipControls": ""
+  },
+  "resources": [
+   {
+    "ARN": "arn:aws:s3:::plategap-site-20260920111838512400000001",
+    "type": "AWS::S3::Bucket"
+   }
+  ],
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/Z,g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "ce49ee92-d55e-4fa5-ada1-72654f3a6a3d",
+  "eventName": "CreateFunction20150331",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:48Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "072732b2-1abe-46f7-bee3-c2658758ef38",
+  "requestParameters": {
+   "architectures": [
+    "arm64"
+   ],
+   "code": {},
+   "description": "",
+   "environment": {},
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "memorySize": 512,
+   "packageType": "Zip",
+   "publish": false,
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "tags": {
+    "ManagedBy": "terraform",
+    "Project": "plategap"
+   },
+   "timeout": 20
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "6hgLcvCBWAflTqQiVnTZX37OWSG+G7e/tyv8zF+PZV8=",
+   "codeSize": 51238,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-20T11:18:48.192+0000",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 512,
+   "packageType": "Zip",
+   "revisionId": "ebdbacc9-c5a5-4638-9bf9-d008d93acf80",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Pending",
+   "stateReason": "The function is being created.",
+   "stateReasonCode": "Creating",
+   "timeout": 20,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "ce1b6bd8-51b4-4797-9a89-e7e8738353a3",
+  "eventName": "CreateFunctionUrlConfig",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:55Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "e5f79dd0-c078-4719-b839-c42be2473a24",
+  "requestParameters": {
+   "authType": "NONE",
+   "cors": {
+    "allowCredentials": false,
+    "allowHeaders": [
+     "content-type"
+    ],
+    "allowMethods": [
+     "POST"
+    ],
+    "allowOrigins": [
+     "*"
+    ],
+    "maxAge": 86400
+   },
+   "functionName": "plategap",
+   "invokeMode": "BUFFERED"
+  },
+  "responseElements": {
+   "authType": "NONE",
+   "cors": {
+    "allowCredentials": false,
+    "allowHeaders": [
+     "content-type"
+    ],
+    "allowMethods": [
+     "POST"
+    ],
+    "allowOrigins": [
+     "*"
+    ],
+    "maxAge": 86400
+   },
+   "creationTime": "2026-09-20T11:18:55.770533152Z",
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionUrl": "https://j3h24i4cnnjhwwxyoenqibxene0yrrju.lambda-url.us-east-1.on.aws/",
+   "invokeMode": "BUFFERED"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "b1671b91-f868-4d90-9651-a18dd1db5931",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:18:56Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "4b71758e-f901-41a2-9789-b0a8d75b91f4",
+  "requestParameters": {
+   "action": "lambda:InvokeFunctionUrl",
+   "functionName": "plategap",
+   "functionUrlAuthType": "NONE",
+   "principal": "*",
+   "statementId": "FunctionURLAllowPublicAccess"
+  },
+  "responseElements": {
+   "statement": "{\"Sid\":\"FunctionURLAllowPublicAccess\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:InvokeFunctionUrl\",\"Resource\":\"arn:aws:lambda:us-east-1:ACCOUNT:function:plategap\",\"Condition\":{\"StringEquals\":{\"lambda:FunctionUrlAuthType\":\"NONE\"}}}"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "AuthenticationMethod": "AuthHeader",
+   "CipherSuite": "TLS_AES_128_GCM_SHA256",
+   "SignatureVersion": "SigV4",
+   "bytesTransferredIn": 310,
+   "bytesTransferredOut": 0,
+   "endTime": 1789903306773,
+   "httpStatusCode": 204,
+   "startTime": 1789903306678,
+   "x-amz-id-2": "GXEra5Yut6EpXgmK0e7W53odzhOMLSu842urOucjm7UR5y7scT2GK2FED9cxe5t5D/Fv6qbFkzs="
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "a8eb10a7-f36e-45f2-a230-d76828db5f48",
+  "eventName": "PutBucketPolicy",
+  "eventSource": "s3.amazonaws.com",
+  "eventTime": "2026-09-20T11:21:46Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "2EBP74J2DHK621VP",
+  "requestParameters": {
+   "Host": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "bucketName": "plategap-site-20260920111838512400000001",
+   "bucketPolicy": {
+    "Statement": [
+     {
+      "Action": "s3:GetObject",
+      "Condition": {
+       "StringEquals": {
+        "AWS:SourceArn": "arn:aws:cloudfront::ACCOUNT:distribution/EE87SI0UJ2WTE"
+       }
+      },
+      "Effect": "Allow",
+      "Principal": {
+       "Service": "cloudfront.amazonaws.com"
+      },
+      "Resource": "arn:aws:s3:::plategap-site-20260920111838512400000001/*"
+     }
+    ],
+    "Version": "2012-10-17"
+   },
+   "policy": ""
+  },
+  "resources": [
+   {
+    "ARN": "arn:aws:s3:::plategap-site-20260920111838512400000001",
+    "type": "AWS::S3::Bucket"
+   }
+  ],
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "plategap-site-20260920111838512400000001.s3.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/s3#1.80.1 m/Z,g]",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "3e77662c-f253-48c6-a1f5-b7e81baac072",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T11:25:07Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "2c5d8e55-e58b-4637-87b2-69ac80bdc7fb",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.add-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "99d8a043-5235-4464-ada1-5f508a533435",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:25:07Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "59f05b3c-87f9-4074-ad76-884efebce6b8",
+  "requestParameters": {
+   "action": "lambda:InvokeFunctionUrl",
+   "functionName": "plategap",
+   "functionUrlAuthType": "NONE",
+   "principal": "*",
+   "statementId": "AllowPublicUrlInvoke"
+  },
+  "responseElements": {
+   "statement": "{\"Sid\":\"AllowPublicUrlInvoke\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:InvokeFunctionUrl\",\"Resource\":\"arn:aws:lambda:us-east-1:ACCOUNT:function:plategap\",\"Condition\":{\"StringEquals\":{\"lambda:FunctionUrlAuthType\":\"NONE\"}}}"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.add-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "c0e67b97-8e1d-4410-ac44-a672f32b7fcb",
+  "eventName": "RemovePermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:25:28Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "f7a25f79-9fe1-46bc-9956-34ba8fe9339d",
+  "requestParameters": {
+   "functionName": "plategap",
+   "statementId": "AllowPublicUrlInvoke"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.remove-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "f5cd11bb-ed85-45d0-84d8-f70c8dadc16c",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:26:13Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "6249a578-355c-49c8-85a4-0f49a67140d6",
+  "requestParameters": {
+   "action": "lambda:InvokeFunction",
+   "functionName": "plategap",
+   "principal": "*",
+   "statementId": "AllowPublicInvoke"
+  },
+  "responseElements": {
+   "statement": "{\"Sid\":\"AllowPublicInvoke\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:InvokeFunction\",\"Resource\":\"arn:aws:lambda:us-east-1:ACCOUNT:function:plategap\"}"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.add-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "8c9dd520-9972-42cb-bc68-241d3a1780e8",
+  "eventName": "RemovePermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:26:53Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "4403672f-ff70-4267-b3df-6a88e96007fc",
+  "requestParameters": {
+   "functionName": "plategap",
+   "statementId": "AllowPublicInvoke"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.remove-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "InvalidParameterValueException",
+  "errorMessage": "FunctionUrlAuthType is only supported for lambda:InvokeFunctionUrl action",
+  "eventCategory": "Management",
+  "eventID": "88b93ad4-09df-47f7-8e17-4317b8fd0b53",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:26:55Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "a42328b6-78d5-49b8-a60d-bdf25e3fb6b6",
+  "requestParameters": {
+   "action": "lambda:InvokeFunction",
+   "functionName": "plategap",
+   "functionUrlAuthType": "NONE",
+   "principal": "*",
+   "statementId": "AllowPublicInvoke"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.add-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "errorCode": "InvalidParameterValueException",
+  "errorMessage": "FunctionUrlAuthType is only supported for lambda:InvokeFunctionUrl action",
+  "eventCategory": "Management",
+  "eventID": "ff356c58-e1c1-4ab0-b01d-0b3e1f62f420",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:27:01Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "42c16edf-93ea-4a11-bec0-7fb236ed6161",
+  "requestParameters": {
+   "action": "lambda:InvokeFunction",
+   "functionName": "plategap",
+   "functionUrlAuthType": "NONE",
+   "principal": "*",
+   "statementId": "AllowPublicInvoke"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.add-permission",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/c6a124fe-da8a-4071-b5a1-8e2cca2e980b"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "authorization_code",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "a72c8452-130a-4b3a-acaf-50bd150259d4",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T11:32:49Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "5c7afc77-9c61-4c8e-98b1-45c00b4e93aa",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/Z,E,b,AA cfg/retry-mode#standard md/installer#exe sid/b5e5c4134da7 md/distrib#ubuntu.24 md/prompt#off md/command#login",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "a17086a5-2e10-435f-9a8a-de405ca4d4c0",
+  "eventName": "CreateRole",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:37:15Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "6d2ee80c-ae0b-490e-926d-375a41603e50",
+  "requestParameters": {
+   "assumeRolePolicyDocument": "{\"Statement\":[{\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Condition\":{\"StringEquals\":{\"token.actions.githubusercontent.com:aud\":\"sts.amazonaws.com\",\"token.actions.githubusercontent.com:sub\":\"repo:Sarcastic-Soul/PlateGap:ref:refs/heads/main\"}},\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"arn:aws:iam::ACCOUNT:oidc-provider/token.actions.githubusercontent.com\"}}],\"Version\":\"2012-10-17\"}",
+   "maxSessionDuration": 3600,
+   "path": "/",
+   "roleName": "plategap-github-deploy",
+   "tags": [
+    {
+     "key": "ManagedBy",
+     "value": "terraform"
+    },
+    {
+     "key": "Project",
+     "value": "plategap"
+    }
+   ]
+  },
+  "responseElements": {
+   "role": {
+    "assumeRolePolicyDocument": "%7B%22Statement%22%3A%5B%7B%22Action%22%3A%22sts%3AAssumeRoleWithWebIdentity%22%2C%22Condition%22%3A%7B%22StringEquals%22%3A%7B%22token.actions.githubusercontent.com%3Aaud%22%3A%22sts.amazonaws.com%22%2C%22token.actions.githubusercontent.com%3Asub%22%3A%22repo%3ASarcastic-Soul%2FPlateGap%3Aref%3Arefs%2Fheads%2Fmain%22%7D%7D%2C%22Effect%22%3A%22Allow%22%2C%22Principal%22%3A%7B%22Federated%22%3A%22arn%3Aaws%3Aiam%3A%3AACCOUNT%3Aoidc-provider%2Ftoken.actions.githubusercontent.com%22%7D%7D%5D%2C%22Version%22%3A%222012-10-17%22%7D",
+    "createDate": "2026-09-20T11:37:15Z",
+    "path": "/",
+    "roleId": "AROA5FVU6OH3HSKZCUSRH",
+    "roleName": "plategap-github-deploy",
+    "tags": [
+     {
+      "key": "ManagedBy",
+      "value": "terraform"
+     },
+     {
+      "key": "Project",
+      "value": "plategap"
+     }
+    ]
+   }
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "efbf2362-ef23-470e-abc5-db2fdbc0ac2c",
+  "eventName": "AddPermission20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:37:15Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "746c0d9a-483e-4f14-8cde-589073bab115",
+  "requestParameters": {
+   "action": "lambda:InvokeFunction",
+   "functionName": "plategap",
+   "principal": "*",
+   "statementId": "AllowPublicInvoke"
+  },
+  "responseElements": {
+   "statement": "{\"Sid\":\"AllowPublicInvoke\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"lambda:InvokeFunction\",\"Resource\":\"arn:aws:lambda:us-east-1:ACCOUNT:function:plategap\"}"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/lambda#1.71.3 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5ab31a02-6daf-4565-9e7e-25381431b4a9",
+  "eventName": "PutRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:37:16Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "26d8e45c-2c79-4736-8a1d-dc636121ffba",
+  "requestParameters": {
+   "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"lambda:UpdateFunctionCode\",\"lambda:GetFunctionUrlConfig\",\"lambda:GetFunctionConfiguration\",\"lambda:GetFunction\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:lambda:us-east-1:ACCOUNT:function:plategap\",\"Sid\":\"UpdateTheFunction\"},{\"Action\":[\"s3:PutObject\",\"s3:DeleteObject\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::plategap-site-20260920111838512400000001/*\",\"Sid\":\"WriteTheSite\"},{\"Action\":\"s3:ListBucket\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::plategap-site-20260920111838512400000001\",\"Sid\":\"ListTheSiteForSync\"},{\"Action\":[\"cloudfront:GetInvalidation\",\"cloudfront:CreateInvalidation\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:cloudfront::ACCOUNT:distribution/EE87SI0UJ2WTE\",\"Sid\":\"InvalidateTheCache\"}]}",
+   "policyName": "deploy",
+   "roleName": "plategap-github-deploy"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "5a8f7562-2845-421e-a659-70886e194200",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:37:32Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "0bef0039-95b9-41aa-8afa-1ecafe1290f4",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1789904251-367960",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-20T11:37:32Z",
+    "id": "ID3DPH34U3S68X6JM5KO8ZCI8B",
+    "invalidationBatch": {
+     "callerReference": "cli-1789904251-367960",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/ID3DPH34U3S68X6JM5KO8ZCI8B"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/b5e5c4134da7 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "d573c304-be70-4eb9-84dc-b166459b3a32",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T11:44:19Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "47cf9caa-424f-4836-924e-81fda7cf3fe8",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AN,E,b,AD,Z cfg/retry-mode#standard md/installer#exe sid/29c2a8e7eb91 md/distrib#ubuntu.24 md/prompt#off md/command#iam.get-role",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "additionalEventData": {
+   "grant_type": "refresh_token",
+   "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749",
+   "success": "true"
+  },
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "436e888c-96e3-4657-bb47-f24ffb0ca26a",
+  "eventName": "CreateOAuth2Token",
+  "eventSource": "signin.amazonaws.com",
+  "eventTime": "2026-09-20T11:55:33Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": true,
+  "requestID": "89b31218-a2e6-4e13-9b71-f7886383981d",
+  "requestParameters": {
+   "client_id": "arn:aws:signin:::devtools/same-device"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "us-east-1.signin.aws.amazon.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/AC,AD,Z,E,b cfg/retry-mode#standard md/installer#exe sid/b5e5c4134da7 md/distrib#ubuntu.24 md/prompt#off md/command#configure.export-credentials",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "7489c27a-8e1e-4d5f-8f24-1ca98f81422a",
+  "eventName": "UpdateAssumeRolePolicy",
+  "eventSource": "iam.amazonaws.com",
+  "eventTime": "2026-09-20T11:56:07Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "2b839c51-0831-42fc-91ca-683e2cdb40a5",
+  "requestParameters": {
+   "policyDocument": "{\"Statement\":[{\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Condition\":{\"StringEquals\":{\"token.actions.githubusercontent.com:aud\":\"sts.amazonaws.com\",\"token.actions.githubusercontent.com:sub\":[\"repo:Sarcastic-Soul/PlateGap:ref:refs/heads/main\",\"repo:Sarcastic-Soul@142567151/PlateGap@1378199091:ref:refs/heads/main\"]}},\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"arn:aws:iam::ACCOUNT:oidc-provider/token.actions.githubusercontent.com\"}}],\"Version\":\"2012-10-17\"}",
+   "roleName": "plategap-github-deploy"
+  },
+  "responseElements": null,
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "iam.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.0 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/linux lang/go#1.23.10 md/GOOS#linux md/GOARCH#amd64 api/iam#1.42.0 m/g",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "28e7d1c5-1c25-4f72-9653-f5c7fb46d78e",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:56:25Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "dcbdfee9-6dfa-4d8d-aa02-e6f464697d26",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1789905384-988098",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-20T11:56:25Z",
+    "id": "IDGJ3RTEPYSMXPR7DD9BO8EZ2Y",
+    "invalidationBatch": {
+     "callerReference": "cli-1789905384-988098",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/IDGJ3RTEPYSMXPR7DD9BO8EZ2Y"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.49 md/awscrt#0.36.4 ua/2.1 os/linux#7.0.0-31-generic md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/b5e5c4134da7 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {
+    "signInSessionArn": "arn:aws:signin:us-east-1:ACCOUNT:session/1e7e899b-1065-4ce9-87da-a4be45ae0749"
+   },
+   "type": "IAMUser"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "994af0cf-0dbf-4734-ac1f-20812ea4b25c",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:58:15Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "7fee73d8-74b0-4f1e-b757-2a03521fccab",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "WAFUgzjup3j/BfvpDhMNPuBlz9fEHcc0VBh9QrBdOXg=",
+   "codeSize": 51238,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-20T11:58:15.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 512,
+   "packageType": "Zip",
+   "revisionId": "56795f6d-f452-4855-83bd-a1bbaaf7e83d",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 20,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/f6d0d55f40ea md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "047f177d-49a3-4107-8852-2f68395aa8c9",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:58:25Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "ffda296b-680d-417d-9ed6-2a0bb3db731f",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1789905505-476511",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-20T11:58:25Z",
+    "id": "I46UGHIQC43C7PSDLSGOQ86L2S",
+    "invalidationBatch": {
+     "callerReference": "cli-1789905505-476511",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/I46UGHIQC43C7PSDLSGOQ86L2S"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/f6d0d55f40ea md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "79f9105f-c008-4f7c-8e8c-e31f30095fa7",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-20T11:58:57Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "c3aec18e-e8d3-4a4c-ba42-a79ee652de50",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "WAFUgzjup3j/BfvpDhMNPuBlz9fEHcc0VBh9QrBdOXg=",
+   "codeSize": 51238,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-20T11:58:57.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 512,
+   "packageType": "Zip",
+   "revisionId": "0059517f-9291-4bd6-86c2-905e26ef3491",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 20,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/13447e7655c2 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "cf8e69d3-04e2-44bc-a8b0-bd5f5b031597",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-20T11:59:07Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "31495cd4-ee1c-4d4e-82fc-a0d3dcd75224",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1789905546-760492",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-20T11:59:07Z",
+    "id": "I5FIT2GGIWT54A7RI43L45N96G",
+    "invalidationBatch": {
+     "callerReference": "cli-1789905546-760492",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/I5FIT2GGIWT54A7RI43L45N96G"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/13447e7655c2 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ }
+]
