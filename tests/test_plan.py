@@ -28,10 +28,47 @@ def catalog():
         return json.load(handle)
 
 
+PRESETS = ("iiit", "dining-hall", "generic")
+
+
+def _load_menu(name):
+    with open(os.path.join(ROOT, "data", "menus", "%s.json" % name)) as handle:
+        return json.load(handle)
+
+
 @pytest.fixture(scope="module")
 def menu():
-    with open(os.path.join(ROOT, "data", "menus", "iiit.json")) as handle:
-        return json.load(handle)
+    return _load_menu("iiit")
+
+
+@pytest.fixture(scope="module", params=PRESETS)
+def any_menu(request):
+    return _load_menu(request.param)
+
+
+def test_every_preset_names_dishes_the_catalog_has(catalog, any_menu):
+    named = set()
+    for served in any_menu["daily"].values():
+        named.update(served)
+    for day in any_menu["days"].values():
+        for served in day.values():
+            named.update(served)
+    missing = sorted(named - set(catalog["dishes"]))
+    assert not missing, "%s names %s" % (any_menu["id"], missing)
+
+
+def test_every_preset_solves_on_every_day(catalog, any_menu):
+    profile = {"region": any_menu["region"]}
+    for day in any_menu["days"]:
+        answer = plan.cheapest(catalog, any_menu, day, profile=profile, diet="all")
+        assert answer["feasible"], "%s %s" % (any_menu["id"], day)
+        assert answer["spendExact"] >= -1e-9
+
+
+def test_every_preset_prices_its_market_in_its_own_region(catalog, any_menu):
+    variables = model.market_variables(catalog, region=any_menu["region"])
+    assert variables, "no market items priced for %s" % any_menu["region"]
+    assert all(v["cost"] > 0 for v in variables)
 
 
 # --------------------------------------------------------------------------

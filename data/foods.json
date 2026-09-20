@@ -248,6 +248,199 @@
     "side"
    ]
   },
+  "apple_whole": {
+   "id": "apple_whole",
+   "maxServings": 2,
+   "name": "Whole apple",
+   "perServing": {
+    "calcium": 10.8,
+    "carbs": 24.858,
+    "fat": 0.306,
+    "fibre": 4.32,
+    "folate": 5.4,
+    "iron": 0.216,
+    "kcal": 93.6,
+    "magnesium": 9.0,
+    "potassium": 192.6,
+    "protein": 0.468,
+    "satfat": 0.0504,
+    "sodium": 1.8,
+    "vita": 5.4,
+    "vitb12": 0.0,
+    "vitc": 8.28,
+    "zinc": 0.072
+   },
+   "recipe": [
+    {
+     "grams": 180,
+     "ingredient": "apple"
+    }
+   ],
+   "servingGrams": 180,
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "bacon_strips": {
+   "id": "bacon_strips",
+   "maxServings": 2,
+   "name": "Bacon",
+   "perServing": {
+    "calcium": 2.5,
+    "carbs": 0.3375,
+    "fat": 10.8175,
+    "fibre": 0.0,
+    "folate": 0.5,
+    "iron": 0.3725,
+    "kcal": 137.0,
+    "magnesium": 7.5,
+    "potassium": 134.75,
+    "protein": 8.9325,
+    "satfat": 3.5467,
+    "sodium": 548.25,
+    "vita": 2.75,
+    "vitb12": 0.29,
+    "vitc": 0.0,
+    "zinc": 0.84
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "bacon"
+    }
+   ],
+   "servingGrams": 25,
+   "tags": [
+    "meat",
+    "breakfast"
+   ]
+  },
+  "bagel_butter": {
+   "id": "bagel_butter",
+   "maxServings": 2,
+   "name": "Bagel with butter",
+   "perServing": {
+    "calcium": 199.5,
+    "carbs": 47.148,
+    "fat": 9.299,
+    "fibre": 1.44,
+    "folate": 147.0,
+    "iron": 3.215,
+    "kcal": 309.3,
+    "magnesium": 26.3,
+    "potassium": 98.7,
+    "protein": 9.589,
+    "satfat": 5.4608,
+    "sodium": 444.1,
+    "vita": 68.4,
+    "vitb12": 0.017,
+    "vitc": 0.0,
+    "zinc": 0.756
+   },
+   "recipe": [
+    {
+     "grams": 90,
+     "ingredient": "bagel"
+    },
+    {
+     "grams": 10,
+     "ingredient": "butter"
+    }
+   ],
+   "servingGrams": 100,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "baked_salmon": {
+   "id": "baked_salmon",
+   "maxServings": 1,
+   "name": "Baked salmon",
+   "perServing": {
+    "calcium": 18.04,
+    "carbs": 0.0,
+    "fat": 18.82,
+    "fibre": 0.0,
+    "folate": 40.8,
+    "iron": 0.4304,
+    "kcal": 282.56,
+    "magnesium": 36.0,
+    "potassium": 460.84,
+    "protein": 26.52,
+    "satfat": 3.4287,
+    "sodium": 73.28,
+    "vita": 82.8,
+    "vitb12": 3.36,
+    "vitc": 4.44,
+    "zinc": 0.516
+   },
+   "recipe": [
+    {
+     "grams": 4,
+     "ingredient": "olive_oil"
+    },
+    {
+     "grams": 120,
+     "ingredient": "salmon"
+    }
+   ],
+   "servingGrams": 124,
+   "tags": [
+    "meat",
+    "fish",
+    "protein",
+    "main"
+   ]
+  },
+  "black_bean_bowl": {
+   "id": "black_bean_bowl",
+   "maxServings": 1,
+   "name": "Black bean and rice bowl",
+   "perServing": {
+    "calcium": 59.7,
+    "carbs": 87.379,
+    "fat": 1.89,
+    "fibre": 14.97,
+    "folate": 241.7,
+    "iron": 3.711,
+    "kcal": 436.8,
+    "magnesium": 136.7,
+    "potassium": 743.3,
+    "protein": 18.953,
+    "satfat": 0.4112,
+    "sodium": 105.7,
+    "vita": 17.8,
+    "vitb12": 0.0,
+    "vitc": 6.31,
+    "zinc": 2.714
+   },
+   "recipe": [
+    {
+     "grams": 150,
+     "ingredient": "black_beans"
+    },
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    },
+    {
+     "grams": 40,
+     "ingredient": "sweetcorn"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 370,
+   "tags": [
+    "veg",
+    "protein",
+    "main"
+   ]
+  },
   "black_chana_aloo": {
    "id": "black_chana_aloo",
    "maxServings": 2,
@@ -438,6 +631,175 @@
     "staple"
    ]
   },
+  "brownie_square": {
+   "id": "brownie_square",
+   "maxServings": 1,
+   "name": "Brownie",
+   "perServing": {
+    "calcium": 16.24,
+    "carbs": 35.784,
+    "fat": 9.128,
+    "fibre": 1.176,
+    "folate": 40.32,
+    "iron": 1.26,
+    "kcal": 226.8,
+    "magnesium": 17.36,
+    "potassium": 83.44,
+    "protein": 2.688,
+    "satfat": 2.3716,
+    "sodium": 160.16,
+    "vita": 11.2,
+    "vitb12": 0.0392,
+    "vitc": 0.0,
+    "zinc": 0.4032
+   },
+   "recipe": [
+    {
+     "grams": 56,
+     "ingredient": "brownie_mix"
+    }
+   ],
+   "servingGrams": 56,
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "cereal_bowl": {
+   "id": "cereal_bowl",
+   "maxServings": 2,
+   "name": "Cereal with milk",
+   "perServing": {
+    "calcium": 240.8,
+    "carbs": 44.804,
+    "fat": 4.324,
+    "fibre": 1.08,
+    "folate": 10.0,
+    "iron": 7.8,
+    "kcal": 253.6,
+    "magnesium": 24.8,
+    "potassium": 322.8,
+    "protein": 8.96,
+    "satfat": 2.6048,
+    "sodium": 322.4,
+    "vita": 502.4,
+    "vitb12": 3.204,
+    "vitc": 26.4,
+    "zinc": 1.04
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "corn_flakes"
+    },
+    {
+     "grams": 200,
+     "ingredient": "milk_2pct"
+    }
+   ],
+   "servingGrams": 240,
+   "tags": [
+    "veg",
+    "dairy",
+    "breakfast"
+   ]
+  },
+  "cheese_pizza": {
+   "id": "cheese_pizza",
+   "maxServings": 3,
+   "name": "Cheese pizza slice",
+   "perServing": {
+    "calcium": 289.78,
+    "carbs": 45.169,
+    "fat": 9.594,
+    "fibre": 2.025,
+    "folate": 167.1,
+    "iron": 2.8648,
+    "kcal": 330.62,
+    "magnesium": 25.55,
+    "potassium": 184.28,
+    "protein": 14.5895,
+    "satfat": 4.1048,
+    "sodium": 348.91,
+    "vita": 53.75,
+    "vitb12": 0.287,
+    "vitc": 0.6,
+    "zinc": 1.411
+   },
+   "recipe": [
+    {
+     "grams": 55,
+     "ingredient": "flour_white"
+    },
+    {
+     "grams": 30,
+     "ingredient": "marinara"
+    },
+    {
+     "grams": 35,
+     "ingredient": "mozzarella"
+    },
+    {
+     "grams": 3,
+     "ingredient": "olive_oil"
+    }
+   ],
+   "servingGrams": 120,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "cheeseburger": {
+   "id": "cheeseburger",
+   "maxServings": 1,
+   "name": "Cheeseburger",
+   "perServing": {
+    "calcium": 228.85,
+    "carbs": 27.2515,
+    "fat": 18.6445,
+    "fibre": 1.25,
+    "folate": 81.85,
+    "iron": 4.108,
+    "kcal": 411.25,
+    "magnesium": 38.25,
+    "potassium": 409.4,
+    "protein": 31.8945,
+    "satfat": 8.1366,
+    "sodium": 436.55,
+    "vita": 90.75,
+    "vitb12": 2.496,
+    "vitc": 3.445,
+    "zinc": 6.55
+   },
+   "recipe": [
+    {
+     "grams": 85,
+     "ingredient": "beef_patty"
+    },
+    {
+     "grams": 50,
+     "ingredient": "burger_bun"
+    },
+    {
+     "grams": 20,
+     "ingredient": "cheddar"
+    },
+    {
+     "grams": 10,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 180,
+   "tags": [
+    "meat",
+    "main"
+   ]
+  },
   "chicken_biryani": {
    "id": "chicken_biryani",
    "maxServings": 1,
@@ -528,6 +890,53 @@
    "tags": [
     "meat",
     "protein"
+   ]
+  },
+  "chickpea_salad": {
+   "id": "chickpea_salad",
+   "maxServings": 2,
+   "name": "Chickpea salad",
+   "perServing": {
+    "calcium": 61.05,
+    "carbs": 30.063,
+    "fat": 8.068,
+    "fibre": 8.12,
+    "folate": 56.5,
+    "iron": 1.397,
+    "kcal": 221.2,
+    "magnesium": 37.3,
+    "potassium": 260.75,
+    "protein": 8.972,
+    "satfat": 0.9692,
+    "sodium": 256.8,
+    "vita": 15.8,
+    "vitb12": 0.0,
+    "vitc": 5.35,
+    "zinc": 0.839
+   },
+   "recipe": [
+    {
+     "grams": 120,
+     "ingredient": "chickpeas_canned"
+    },
+    {
+     "grams": 40,
+     "ingredient": "cucumber"
+    },
+    {
+     "grams": 5,
+     "ingredient": "olive_oil"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 195,
+   "tags": [
+    "veg",
+    "protein",
+    "side"
    ]
   },
   "chole": {
@@ -882,6 +1291,40 @@
     "dal"
    ]
   },
+  "dinner_roll": {
+   "id": "dinner_roll",
+   "maxServings": 4,
+   "name": "Dinner roll",
+   "perServing": {
+    "calcium": 57.6,
+    "carbs": 20.048,
+    "fat": 1.564,
+    "fibre": 0.72,
+    "folate": 52.4,
+    "iron": 1.372,
+    "kcal": 111.6,
+    "magnesium": 9.2,
+    "potassium": 48.8,
+    "protein": 3.908,
+    "satfat": 0.3368,
+    "sodium": 197.6,
+    "vita": 11.6,
+    "vitb12": 0.08,
+    "vitc": 0.52,
+    "zinc": 0.292
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "burger_bun"
+    }
+   ],
+   "servingGrams": 40,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
   "dosa": {
    "id": "dosa",
    "maxServings": 2,
@@ -1058,6 +1501,40 @@
     "protein"
    ]
   },
+  "french_fries": {
+   "id": "french_fries",
+   "maxServings": 2,
+   "name": "French fries",
+   "perServing": {
+    "calcium": 12.0,
+    "carbs": 28.71,
+    "fat": 5.22,
+    "fibre": 2.6,
+    "folate": 0.0,
+    "iron": 0.74,
+    "kcal": 168.0,
+    "magnesium": 26.0,
+    "potassium": 451.0,
+    "protein": 2.66,
+    "satfat": 1.029,
+    "sodium": 32.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 13.3,
+    "zinc": 0.38
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "fries"
+    }
+   ],
+   "servingGrams": 100,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
   "fruit_custard": {
    "id": "fruit_custard",
    "maxServings": 1,
@@ -1138,6 +1615,56 @@
     "fruit"
    ]
   },
+  "garden_salad": {
+   "id": "garden_salad",
+   "maxServings": 3,
+   "name": "Garden salad",
+   "perServing": {
+    "calcium": 33.2,
+    "carbs": 6.321,
+    "fat": 7.014,
+    "fibre": 2.19,
+    "folate": 98.0,
+    "iron": 0.878,
+    "kcal": 89.8,
+    "magnesium": 18.75,
+    "potassium": 315.2,
+    "protein": 1.593,
+    "satfat": 1.0993,
+    "sodium": 142.85,
+    "vita": 309.35,
+    "vitb12": 0.0255,
+    "vitc": 32.89,
+    "zinc": 0.3245
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "bell_pepper"
+    },
+    {
+     "grams": 30,
+     "ingredient": "cucumber"
+    },
+    {
+     "grams": 15,
+     "ingredient": "ranch_dressing"
+    },
+    {
+     "grams": 60,
+     "ingredient": "romaine"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 155,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
   "gobhi_dry": {
    "id": "gobhi_dry",
    "maxServings": 2,
@@ -1212,6 +1739,45 @@
    "tags": [
     "veg",
     "side"
+   ]
+  },
+  "grilled_chicken": {
+   "id": "grilled_chicken",
+   "maxServings": 1,
+   "name": "Grilled chicken breast",
+   "perServing": {
+    "calcium": 16.85,
+    "carbs": 0.0,
+    "fat": 14.336,
+    "fibre": 0.0,
+    "folate": 4.8,
+    "iron": 1.312,
+    "kcal": 280.6,
+    "magnesium": 32.4,
+    "potassium": 294.05,
+    "protein": 35.76,
+    "satfat": 3.3184,
+    "sodium": 85.3,
+    "vita": 33.6,
+    "vitb12": 0.384,
+    "vitc": 0.0,
+    "zinc": 1.224
+   },
+   "recipe": [
+    {
+     "grams": 120,
+     "ingredient": "chicken_breast"
+    },
+    {
+     "grams": 5,
+     "ingredient": "olive_oil"
+    }
+   ],
+   "servingGrams": 125,
+   "tags": [
+    "meat",
+    "protein",
+    "main"
    ]
   },
   "gulab_jamun": {
@@ -1628,6 +2194,52 @@
     "sabzi"
    ]
   },
+  "mac_and_cheese": {
+   "id": "mac_and_cheese",
+   "maxServings": 2,
+   "name": "Macaroni and cheese",
+   "perServing": {
+    "calcium": 342.92,
+    "carbs": 40.6678,
+    "fat": 22.1798,
+    "fibre": 0.0,
+    "folate": 169.04,
+    "iron": 1.7756,
+    "kcal": 435.06,
+    "magnesium": 42.36,
+    "potassium": 124.32,
+    "protein": 18.261,
+    "satfat": 12.384,
+    "sodium": 340.44,
+    "vita": 220.52,
+    "vitb12": 0.8756,
+    "vitc": 0.08,
+    "zinc": 2.4952
+   },
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 40,
+     "ingredient": "cheddar"
+    },
+    {
+     "grams": 40,
+     "ingredient": "milk_2pct"
+    },
+    {
+     "grams": 150,
+     "ingredient": "pasta_cooked"
+    }
+   ],
+   "servingGrams": 238,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
   "malai_kofta": {
    "id": "malai_kofta",
    "maxServings": 1,
@@ -1804,6 +2416,41 @@
    "tags": [
     "veg",
     "main"
+   ]
+  },
+  "milk_carton": {
+   "id": "milk_carton",
+   "maxServings": 2,
+   "name": "Milk carton",
+   "perServing": {
+    "calcium": 288.0,
+    "carbs": 11.52,
+    "fat": 4.752,
+    "fibre": 0.0,
+    "folate": 12.0,
+    "iron": 0.048,
+    "kcal": 120.0,
+    "magnesium": 26.4,
+    "potassium": 336.0,
+    "protein": 7.92,
+    "satfat": 3.0168,
+    "sodium": 112.8,
+    "vita": 132.0,
+    "vitb12": 1.272,
+    "vitc": 0.48,
+    "zinc": 1.152
+   },
+   "recipe": [
+    {
+     "grams": 240,
+     "ingredient": "milk_2pct"
+    }
+   ],
+   "servingGrams": 240,
+   "tags": [
+    "veg",
+    "dairy",
+    "beverage"
    ]
   },
   "milk_glass": {
@@ -2060,6 +2707,40 @@
     "snack"
    ]
   },
+  "oatmeal": {
+   "id": "oatmeal",
+   "maxServings": 2,
+   "name": "Oatmeal",
+   "perServing": {
+    "calcium": 20.7,
+    "carbs": 27.6,
+    "fat": 3.496,
+    "fibre": 3.91,
+    "folate": 13.8,
+    "iron": 2.07,
+    "kcal": 163.3,
+    "magnesium": 62.1,
+    "potassium": 161.0,
+    "protein": 5.842,
+    "satfat": 0.713,
+    "sodium": 9.2,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 2.3
+   },
+   "recipe": [
+    {
+     "grams": 230,
+     "ingredient": "oats_cooked"
+    }
+   ],
+   "servingGrams": 230,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
   "onion_chop": {
    "id": "onion_chop",
    "maxServings": 2,
@@ -2136,6 +2817,41 @@
     "staple"
    ]
   },
+  "orange_juice_glass": {
+   "id": "orange_juice_glass",
+   "maxServings": 2,
+   "name": "Orange juice",
+   "perServing": {
+    "calcium": 26.4,
+    "carbs": 24.96,
+    "fat": 0.48,
+    "fibre": 0.48,
+    "folate": 72.0,
+    "iron": 0.48,
+    "kcal": 108.0,
+    "magnesium": 26.4,
+    "potassium": 480.0,
+    "protein": 1.68,
+    "satfat": 0.0576,
+    "sodium": 2.4,
+    "vita": 24.0,
+    "vitb12": 0.0,
+    "vitc": 120.0,
+    "zinc": 0.12
+   },
+   "recipe": [
+    {
+     "grams": 240,
+     "ingredient": "orange_juice"
+    }
+   ],
+   "servingGrams": 240,
+   "tags": [
+    "veg",
+    "fruit",
+    "beverage"
+   ]
+  },
   "pakoda": {
    "id": "pakoda",
    "maxServings": 2,
@@ -2176,6 +2892,48 @@
    "tags": [
     "veg",
     "snack"
+   ]
+  },
+  "pancakes_stack": {
+   "id": "pancakes_stack",
+   "maxServings": 2,
+   "name": "Pancakes",
+   "perServing": {
+    "calcium": 95.64,
+    "carbs": 57.3024,
+    "fat": 14.6848,
+    "fibre": 1.2,
+    "folate": 132.24,
+    "iron": 6.8116,
+    "kcal": 383.4,
+    "magnesium": 16.96,
+    "potassium": 110.16,
+    "protein": 6.344,
+    "satfat": 5.5038,
+    "sodium": 604.76,
+    "vita": 598.32,
+    "vitb12": 3.3736,
+    "vitc": 0.36,
+    "zinc": 0.4884
+   },
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 120,
+     "ingredient": "pancake"
+    },
+    {
+     "grams": 12,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 140,
+   "tags": [
+    "veg",
+    "breakfast"
    ]
   },
   "paneer_bhurji": {
@@ -2314,6 +3072,48 @@
    "tags": [
     "veg",
     "side"
+   ]
+  },
+  "pasta_marinara": {
+   "id": "pasta_marinara",
+   "maxServings": 2,
+   "name": "Pasta marinara",
+   "perServing": {
+    "calcium": 38.05,
+    "carbs": 57.29,
+    "fat": 8.71,
+    "fibre": 1.8,
+    "folate": 221.0,
+    "iron": 3.038,
+    "kcal": 356.2,
+    "magnesium": 54.0,
+    "potassium": 368.05,
+    "protein": 11.69,
+    "satfat": 1.2084,
+    "sodium": 449.1,
+    "vita": 43.0,
+    "vitb12": 0.28,
+    "vitc": 2.0,
+    "zinc": 1.32
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "marinara"
+    },
+    {
+     "grams": 5,
+     "ingredient": "olive_oil"
+    },
+    {
+     "grams": 200,
+     "ingredient": "pasta_cooked"
+    }
+   ],
+   "servingGrams": 305,
+   "tags": [
+    "veg",
+    "main"
    ]
   },
   "pav_bhaji": {
@@ -2980,6 +3780,41 @@
     "snack"
    ]
   },
+  "scrambled_eggs": {
+   "id": "scrambled_eggs",
+   "maxServings": 2,
+   "name": "Scrambled eggs",
+   "perServing": {
+    "calcium": 66.0,
+    "carbs": 1.61,
+    "fat": 10.98,
+    "fibre": 0.0,
+    "folate": 36.0,
+    "iron": 1.31,
+    "kcal": 149.0,
+    "magnesium": 11.0,
+    "potassium": 132.0,
+    "protein": 9.99,
+    "satfat": 3.331,
+    "sodium": 145.0,
+    "vita": 161.0,
+    "vitb12": 0.76,
+    "vitc": 0.0,
+    "zinc": 1.04
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "egg_scrambled"
+    }
+   ],
+   "servingGrams": 100,
+   "tags": [
+    "egg",
+    "protein",
+    "breakfast"
+   ]
+  },
   "soya_badi": {
    "id": "soya_badi",
    "maxServings": 2,
@@ -3068,6 +3903,74 @@
     "main"
    ]
   },
+  "steamed_broccoli": {
+   "id": "steamed_broccoli",
+   "maxServings": 3,
+   "name": "Steamed broccoli",
+   "perServing": {
+    "calcium": 36.0,
+    "carbs": 6.462,
+    "fat": 0.369,
+    "fibre": 2.97,
+    "folate": 97.2,
+    "iron": 0.603,
+    "kcal": 31.5,
+    "magnesium": 18.9,
+    "potassium": 263.7,
+    "protein": 2.142,
+    "satfat": 0.0711,
+    "sodium": 235.8,
+    "vita": 69.3,
+    "vitb12": 0.0,
+    "vitc": 58.41,
+    "zinc": 0.405
+   },
+   "recipe": [
+    {
+     "grams": 90,
+     "ingredient": "broccoli"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "sweetcorn_side": {
+   "id": "sweetcorn_side",
+   "maxServings": 2,
+   "name": "Sweetcorn",
+   "perServing": {
+    "calcium": 2.7,
+    "carbs": 18.882,
+    "fat": 1.35,
+    "fibre": 2.16,
+    "folate": 20.7,
+    "iron": 0.405,
+    "kcal": 86.4,
+    "magnesium": 23.4,
+    "potassium": 196.2,
+    "protein": 3.069,
+    "satfat": 0.1773,
+    "sodium": 227.7,
+    "vita": 11.7,
+    "vitb12": 0.0,
+    "vitc": 4.95,
+    "zinc": 0.558
+   },
+   "recipe": [
+    {
+     "grams": 90,
+     "ingredient": "sweetcorn"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
   "tea": {
    "id": "tea",
    "maxServings": 3,
@@ -3106,6 +4009,57 @@
     "beverage"
    ]
   },
+  "tofu_stirfry": {
+   "id": "tofu_stirfry",
+   "maxServings": 1,
+   "name": "Tofu stir fry",
+   "perServing": {
+    "calcium": 264.96,
+    "carbs": 10.4,
+    "fat": 11.431,
+    "fibre": 3.87,
+    "folate": 100.3,
+    "iron": 2.6226,
+    "kcal": 181.14,
+    "magnesium": 62.4,
+    "potassium": 503.96,
+    "protein": 13.361,
+    "satfat": 1.8582,
+    "sodium": 148.62,
+    "vita": 101.3,
+    "vitb12": 0.012,
+    "vitc": 84.4,
+    "zinc": 1.477
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "bell_pepper"
+    },
+    {
+     "grams": 50,
+     "ingredient": "broccoli"
+    },
+    {
+     "grams": 30,
+     "ingredient": "mushroom"
+    },
+    {
+     "grams": 6,
+     "ingredient": "olive_oil"
+    },
+    {
+     "grams": 120,
+     "ingredient": "tofu"
+    }
+   ],
+   "servingGrams": 246,
+   "tags": [
+    "veg",
+    "protein",
+    "main"
+   ]
+  },
   "tomato_chop": {
    "id": "tomato_chop",
    "maxServings": 2,
@@ -3135,6 +4089,40 @@
     }
    ],
    "servingGrams": 30,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "tomato_soup_bowl": {
+   "id": "tomato_soup_bowl",
+   "maxServings": 2,
+   "name": "Tomato soup",
+   "perServing": {
+    "calcium": 19.6,
+    "carbs": 18.2525,
+    "fat": 0.5145,
+    "fibre": 1.225,
+    "folate": 0.0,
+    "iron": 0.7105,
+    "kcal": 78.4,
+    "magnesium": 17.15,
+    "potassium": 673.75,
+    "protein": 1.7395,
+    "satfat": 0.1372,
+    "sodium": 455.7,
+    "vita": 24.5,
+    "vitb12": 0.0,
+    "vitc": 15.435,
+    "zinc": 0.2205
+   },
+   "recipe": [
+    {
+     "grams": 245,
+     "ingredient": "tomato_soup"
+    }
+   ],
+   "servingGrams": 245,
    "tags": [
     "veg",
     "side"
@@ -3184,6 +4172,56 @@
    "tags": [
     "veg",
     "dal"
+   ]
+  },
+  "turkey_sandwich": {
+   "id": "turkey_sandwich",
+   "maxServings": 1,
+   "name": "Turkey sandwich",
+   "perServing": {
+    "calcium": 315.2,
+    "carbs": 29.3845,
+    "fat": 9.016,
+    "fibre": 4.29,
+    "folate": 45.05,
+    "iron": 2.1235,
+    "kcal": 295.2,
+    "magnesium": 65.85,
+    "potassium": 365.65,
+    "protein": 24.437,
+    "satfat": 4.1709,
+    "sodium": 1071.95,
+    "vita": 105.9,
+    "vitb12": 0.354,
+    "vitc": 5.875,
+    "zinc": 2.4065
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "american_cheese"
+    },
+    {
+     "grams": 60,
+     "ingredient": "bread_wheat"
+    },
+    {
+     "grams": 10,
+     "ingredient": "romaine"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    },
+    {
+     "grams": 60,
+     "ingredient": "turkey_deli"
+    }
+   ],
+   "servingGrams": 165,
+   "tags": [
+    "meat",
+    "main"
    ]
   },
   "upma": {
@@ -3455,9 +4493,149 @@
     "veg",
     "dairy"
    ]
+  },
+  "yogurt_parfait": {
+   "id": "yogurt_parfait",
+   "maxServings": 2,
+   "name": "Yogurt parfait",
+   "perServing": {
+    "calcium": 337.2,
+    "carbs": 25.255,
+    "fat": 8.052,
+    "fibre": 2.29,
+    "folate": 33.6,
+    "iron": 0.594,
+    "kcal": 210.6,
+    "magnesium": 69.2,
+    "potassium": 642.7,
+    "protein": 11.61,
+    "satfat": 2.1513,
+    "sodium": 121.4,
+    "vita": 25.3,
+    "vitb12": 0.952,
+    "vitc": 5.71,
+    "zinc": 1.885
+   },
+   "recipe": [
+    {
+     "grams": 10,
+     "ingredient": "almonds"
+    },
+    {
+     "grams": 50,
+     "ingredient": "banana"
+    },
+    {
+     "grams": 170,
+     "ingredient": "yogurt_lowfat"
+    }
+   ],
+   "servingGrams": 230,
+   "tags": [
+    "veg",
+    "dairy",
+    "breakfast"
+   ]
   }
  },
  "ingredients": {
+  "almonds": {
+   "id": "almonds",
+   "name": "Almonds, blanched",
+   "per100g": {
+    "calcium": 236.0,
+    "carbs": 18.67,
+    "fat": 52.52,
+    "fibre": 9.9,
+    "folate": 49.0,
+    "iron": 3.28,
+    "kcal": 590.0,
+    "magnesium": 268.0,
+    "potassium": 659.0,
+    "protein": 21.4,
+    "satfat": 3.953,
+    "sodium": 19.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 2.97
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Nuts, almonds, blanched",
+    "fdcId": 170568
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "american_cheese": {
+   "id": "american_cheese",
+   "name": "American cheese",
+   "per100g": {
+    "calcium": 1045.0,
+    "carbs": 3.7,
+    "fat": 31.79,
+    "fibre": 0.0,
+    "folate": 8.0,
+    "iron": 0.63,
+    "kcal": 371.0,
+    "magnesium": 26.0,
+    "potassium": 132.0,
+    "protein": 18.13,
+    "satfat": 18.057,
+    "sodium": 1671.0,
+    "vita": 250.0,
+    "vitb12": 1.5,
+    "vitc": 0.0,
+    "zinc": 2.49
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cheese, pasteurized process, American, without added vitamin D",
+    "fdcId": 171290
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
   "apple": {
    "id": "apple",
    "name": "Apple",
@@ -3556,6 +4734,103 @@
     "grain"
    ]
   },
+  "bacon": {
+   "id": "bacon",
+   "name": "Bacon, baked",
+   "per100g": {
+    "calcium": 10.0,
+    "carbs": 1.35,
+    "fat": 43.27,
+    "fibre": 0.0,
+    "folate": 2.0,
+    "iron": 1.49,
+    "kcal": 548.0,
+    "magnesium": 30.0,
+    "potassium": 539.0,
+    "protein": 35.73,
+    "satfat": 14.187,
+    "sodium": 2193.0,
+    "vita": 11.0,
+    "vitb12": 1.16,
+    "vitc": 0.0,
+    "zinc": 3.36
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Pork, cured, bacon, cooked, baked",
+    "fdcId": 167914
+   },
+   "tags": [
+    "meat"
+   ]
+  },
+  "bagel": {
+   "id": "bagel",
+   "name": "Bagel",
+   "per100g": {
+    "calcium": 219.0,
+    "carbs": 52.38,
+    "fat": 1.32,
+    "fibre": 1.6,
+    "folate": 163.0,
+    "iron": 3.57,
+    "kcal": 264.0,
+    "magnesium": 29.0,
+    "potassium": 107.0,
+    "protein": 10.56,
+    "satfat": 0.36,
+    "sodium": 422.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.83
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Bagels, plain, enriched, with calcium propionate (includes onion, poppy, sesame)",
+    "fdcId": 174899
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
   "banana": {
    "id": "banana",
    "name": "Banana",
@@ -3603,6 +4878,102 @@
    "tags": [
     "veg",
     "fruit"
+   ]
+  },
+  "beef_patty": {
+   "id": "beef_patty",
+   "name": "Ground beef patty, 90/10",
+   "per100g": {
+    "calcium": 13.0,
+    "carbs": 0.0,
+    "fat": 11.75,
+    "fibre": 0.0,
+    "folate": 8.0,
+    "iron": 2.71,
+    "kcal": 217.0,
+    "magnesium": 22.0,
+    "potassium": 333.0,
+    "protein": 26.11,
+    "satfat": 4.628,
+    "sodium": 68.0,
+    "vita": 3.0,
+    "vitb12": 2.56,
+    "vitc": 0.0,
+    "zinc": 6.37
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Beef, ground, 90% lean meat / 10% fat, patty, cooked, broiled",
+    "fdcId": 174031
+   },
+   "tags": [
+    "meat"
+   ]
+  },
+  "bell_pepper": {
+   "id": "bell_pepper",
+   "name": "Red bell pepper",
+   "per100g": {
+    "calcium": 7.0,
+    "carbs": 6.03,
+    "fat": 0.3,
+    "fibre": 2.1,
+    "folate": 46.0,
+    "iron": 0.43,
+    "kcal": 26.0,
+    "magnesium": 12.0,
+    "potassium": 211.0,
+    "protein": 0.99,
+    "satfat": 0.059,
+    "sodium": 4.0,
+    "vita": 157.0,
+    "vitb12": 0.0,
+    "vitc": 127.7,
+    "zinc": 0.25
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Peppers, sweet, red, raw",
+    "fdcId": 170108
+   },
+   "tags": [
+    "veg"
    ]
   },
   "besan": {
@@ -3654,6 +5025,103 @@
     "pulse"
    ]
   },
+  "black_beans": {
+   "id": "black_beans",
+   "name": "Black beans, boiled",
+   "per100g": {
+    "calcium": 27.0,
+    "carbs": 23.71,
+    "fat": 0.54,
+    "fibre": 8.7,
+    "folate": 149.0,
+    "iron": 2.1,
+    "kcal": 132.0,
+    "magnesium": 70.0,
+    "potassium": 355.0,
+    "protein": 8.86,
+    "satfat": 0.139,
+    "sodium": 1.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.12
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Beans, black, mature seeds, cooked, boiled, without salt",
+    "fdcId": 173735
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "bread_wheat": {
+   "id": "bread_wheat",
+   "name": "Whole-wheat bread",
+   "per100g": {
+    "calcium": 161.0,
+    "carbs": 42.71,
+    "fat": 3.5,
+    "fibre": 6.0,
+    "folate": 42.0,
+    "iron": 2.47,
+    "kcal": 252.0,
+    "magnesium": 75.0,
+    "potassium": 254.0,
+    "protein": 12.45,
+    "satfat": 0.722,
+    "sodium": 455.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.77
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Bread, whole-wheat, commercially prepared",
+    "fdcId": 172688
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
   "bread_white": {
    "id": "bread_white",
    "name": "White bread",
@@ -3697,6 +5165,152 @@
     "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
     "description": "Bread, white, commercially prepared, low sodium, no salt",
     "fdcId": 172818
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "broccoli": {
+   "id": "broccoli",
+   "name": "Broccoli, boiled",
+   "per100g": {
+    "calcium": 40.0,
+    "carbs": 7.18,
+    "fat": 0.41,
+    "fibre": 3.3,
+    "folate": 108.0,
+    "iron": 0.67,
+    "kcal": 35.0,
+    "magnesium": 21.0,
+    "potassium": 293.0,
+    "protein": 2.38,
+    "satfat": 0.079,
+    "sodium": 262.0,
+    "vita": 77.0,
+    "vitb12": 0.0,
+    "vitc": 64.9,
+    "zinc": 0.45
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Broccoli, cooked, boiled, drained, with salt",
+    "fdcId": 168510
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "brownie_mix": {
+   "id": "brownie_mix",
+   "name": "Brownie",
+   "per100g": {
+    "calcium": 29.0,
+    "carbs": 63.9,
+    "fat": 16.3,
+    "fibre": 2.1,
+    "folate": 72.0,
+    "iron": 2.25,
+    "kcal": 405.0,
+    "magnesium": 31.0,
+    "potassium": 149.0,
+    "protein": 4.8,
+    "satfat": 4.235,
+    "sodium": 286.0,
+    "vita": 20.0,
+    "vitb12": 0.07,
+    "vitc": 0.0,
+    "zinc": 0.72
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cookies, brownies, commercially prepared",
+    "fdcId": 172713
+   },
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "burger_bun": {
+   "id": "burger_bun",
+   "name": "Hamburger bun",
+   "per100g": {
+    "calcium": 144.0,
+    "carbs": 50.12,
+    "fat": 3.91,
+    "fibre": 1.8,
+    "folate": 131.0,
+    "iron": 3.43,
+    "kcal": 279.0,
+    "magnesium": 23.0,
+    "potassium": 122.0,
+    "protein": 9.77,
+    "satfat": 0.842,
+    "sodium": 494.0,
+    "vita": 29.0,
+    "vitb12": 0.2,
+    "vitc": 1.3,
+    "zinc": 0.73
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Rolls, hamburger or hotdog, plain",
+    "fdcId": 172796
    },
    "tags": [
     "veg",
@@ -3948,6 +5562,55 @@
     "pulse"
    ]
   },
+  "cheddar": {
+   "id": "cheddar",
+   "name": "Cheddar cheese",
+   "per100g": {
+    "calcium": 710.0,
+    "carbs": 3.37,
+    "fat": 33.31,
+    "fibre": 0.0,
+    "folate": 27.0,
+    "iron": 0.14,
+    "kcal": 403.0,
+    "magnesium": 27.0,
+    "potassium": 76.0,
+    "protein": 22.87,
+    "satfat": 18.867,
+    "sodium": 653.0,
+    "vita": 337.0,
+    "vitb12": 1.1,
+    "vitc": 0.0,
+    "zinc": 3.64
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+    "fdcId": 173414
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
   "chicken": {
    "id": "chicken",
    "name": "Cooked chicken breast",
@@ -3997,6 +5660,102 @@
     "protein"
    ]
   },
+  "chicken_breast": {
+   "id": "chicken_breast",
+   "name": "Chicken breast, roasted",
+   "per100g": {
+    "calcium": 14.0,
+    "carbs": 0.0,
+    "fat": 7.78,
+    "fibre": 0.0,
+    "folate": 4.0,
+    "iron": 1.07,
+    "kcal": 197.0,
+    "magnesium": 27.0,
+    "potassium": 245.0,
+    "protein": 29.8,
+    "satfat": 2.19,
+    "sodium": 71.0,
+    "vita": 28.0,
+    "vitb12": 0.32,
+    "vitc": 0.0,
+    "zinc": 1.02
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, roasted",
+    "fdcId": 171075
+   },
+   "tags": [
+    "meat"
+   ]
+  },
+  "chickpeas_canned": {
+   "id": "chickpeas_canned",
+   "name": "Chickpeas, canned",
+   "per100g": {
+    "calcium": 43.0,
+    "carbs": 22.87,
+    "fat": 2.47,
+    "fibre": 6.3,
+    "folate": 41.0,
+    "iron": 0.98,
+    "kcal": 138.0,
+    "magnesium": 24.0,
+    "potassium": 109.0,
+    "protein": 7.04,
+    "satfat": 0.213,
+    "sodium": 212.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 0.1,
+    "zinc": 0.59
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained, rinsed in tap water",
+    "fdcId": 173801
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "coconut": {
    "id": "coconut",
    "name": "Fresh coconut",
@@ -4044,6 +5803,102 @@
    "tags": [
     "veg",
     "nut"
+   ]
+  },
+  "corn_flakes": {
+   "id": "corn_flakes",
+   "name": "Corn flakes",
+   "per100g": {
+    "calcium": 2.0,
+    "carbs": 88.01,
+    "fat": 0.91,
+    "fibre": 2.7,
+    "folate": 0.0,
+    "iron": 19.4,
+    "kcal": 384.0,
+    "magnesium": 7.0,
+    "potassium": 107.0,
+    "protein": 5.9,
+    "satfat": 0.227,
+    "sodium": 571.0,
+    "vita": 981.0,
+    "vitb12": 5.36,
+    "vitc": 65.0,
+    "zinc": 0.2
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cereals ready-to-eat, RALSTON Corn Flakes",
+    "fdcId": 174648
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "cucumber": {
+   "id": "cucumber",
+   "name": "Cucumber",
+   "per100g": {
+    "calcium": 16.0,
+    "carbs": 3.63,
+    "fat": 0.11,
+    "fibre": 0.5,
+    "folate": 7.0,
+    "iron": 0.28,
+    "kcal": 15.0,
+    "magnesium": 13.0,
+    "potassium": 147.0,
+    "protein": 0.65,
+    "satfat": 0.037,
+    "sodium": 2.0,
+    "vita": 5.0,
+    "vitb12": 0.0,
+    "vitc": 2.8,
+    "zinc": 0.2
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cucumber, with peel, raw",
+    "fdcId": 168409
+   },
+   "tags": [
+    "veg"
    ]
   },
   "curd": {
@@ -4189,6 +6044,148 @@
    "tags": [
     "egg",
     "protein"
+   ]
+  },
+  "egg_scrambled": {
+   "id": "egg_scrambled",
+   "name": "Scrambled egg",
+   "per100g": {
+    "calcium": 66.0,
+    "carbs": 1.61,
+    "fat": 10.98,
+    "fibre": 0.0,
+    "folate": 36.0,
+    "iron": 1.31,
+    "kcal": 149.0,
+    "magnesium": 11.0,
+    "potassium": 132.0,
+    "protein": 9.99,
+    "satfat": 3.331,
+    "sodium": 145.0,
+    "vita": 161.0,
+    "vitb12": 0.76,
+    "vitc": 0.0,
+    "zinc": 1.04
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Egg, whole, cooked, scrambled",
+    "fdcId": 172187
+   },
+   "tags": [
+    "egg"
+   ]
+  },
+  "flour_white": {
+   "id": "flour_white",
+   "name": "White flour",
+   "per100g": {
+    "calcium": 15.0,
+    "carbs": 76.31,
+    "fat": 0.98,
+    "fibre": 2.7,
+    "folate": 291.0,
+    "iron": 4.64,
+    "kcal": 364.0,
+    "magnesium": 22.0,
+    "potassium": 107.0,
+    "protein": 10.33,
+    "satfat": 0.155,
+    "sodium": 2.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.7
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Wheat flour, white, all-purpose, enriched, bleached",
+    "fdcId": 168894
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "fries": {
+   "id": "fries",
+   "name": "French fries, oven-heated",
+   "per100g": {
+    "calcium": 12.0,
+    "carbs": 28.71,
+    "fat": 5.22,
+    "fibre": 2.6,
+    "folate": 0.0,
+    "iron": 0.74,
+    "kcal": 168.0,
+    "magnesium": 26.0,
+    "potassium": 451.0,
+    "protein": 2.66,
+    "satfat": 1.029,
+    "sodium": 32.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 13.3,
+    "zinc": 0.38
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Potatoes, french fried, all types, salt not added in processing, frozen, oven-heated",
+    "fdcId": 170118
+   },
+   "tags": [
+    "veg"
    ]
   },
   "ghee": {
@@ -4340,6 +6337,54 @@
     "sugar"
    ]
   },
+  "marinara": {
+   "id": "marinara",
+   "name": "Marinara sauce",
+   "per100g": {
+    "calcium": 26.0,
+    "carbs": 7.43,
+    "fat": 1.61,
+    "fibre": 1.8,
+    "folate": 13.0,
+    "iron": 0.73,
+    "kcal": 50.0,
+    "magnesium": 18.0,
+    "potassium": 320.0,
+    "protein": 1.39,
+    "satfat": 0.218,
+    "sodium": 437.0,
+    "vita": 31.0,
+    "vitb12": 0.0,
+    "vitc": 2.0,
+    "zinc": 0.2
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Sauce, pasta, spaghetti/marinara, ready-to-serve",
+    "fdcId": 171192
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "masoor_dal": {
    "id": "masoor_dal",
    "name": "Red lentil (masoor)",
@@ -4438,6 +6483,55 @@
     "dairy"
    ]
   },
+  "milk_2pct": {
+   "id": "milk_2pct",
+   "name": "Milk, 2%",
+   "per100g": {
+    "calcium": 120.0,
+    "carbs": 4.8,
+    "fat": 1.98,
+    "fibre": 0.0,
+    "folate": 5.0,
+    "iron": 0.02,
+    "kcal": 50.0,
+    "magnesium": 11.0,
+    "potassium": 140.0,
+    "protein": 3.3,
+    "satfat": 1.257,
+    "sodium": 47.0,
+    "vita": 55.0,
+    "vitb12": 0.53,
+    "vitc": 0.2,
+    "zinc": 0.48
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "fdcId": 171267
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
   "moong_dal": {
    "id": "moong_dal",
    "name": "Mung bean (moong)",
@@ -4485,6 +6579,152 @@
    "tags": [
     "veg",
     "pulse"
+   ]
+  },
+  "mozzarella": {
+   "id": "mozzarella",
+   "name": "Mozzarella, part skim",
+   "per100g": {
+    "calcium": 782.0,
+    "carbs": 2.77,
+    "fat": 15.92,
+    "fibre": 0.0,
+    "folate": 9.0,
+    "iron": 0.22,
+    "kcal": 254.0,
+    "magnesium": 23.0,
+    "potassium": 84.0,
+    "protein": 24.26,
+    "satfat": 10.114,
+    "sodium": 619.0,
+    "vita": 127.0,
+    "vitb12": 0.82,
+    "vitc": 0.0,
+    "zinc": 2.76
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cheese, mozzarella, part skim milk",
+    "fdcId": 170847
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "mushroom": {
+   "id": "mushroom",
+   "name": "White mushrooms",
+   "per100g": {
+    "calcium": 3.0,
+    "carbs": 3.26,
+    "fat": 0.34,
+    "fibre": 1.0,
+    "folate": 17.0,
+    "iron": 0.5,
+    "kcal": 22.0,
+    "magnesium": 9.0,
+    "potassium": 318.0,
+    "protein": 3.09,
+    "satfat": 0.05,
+    "sodium": 5.0,
+    "vita": 0.0,
+    "vitb12": 0.04,
+    "vitc": 2.1,
+    "zinc": 0.52
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Mushrooms, white, raw",
+    "fdcId": 169251
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "oats_cooked": {
+   "id": "oats_cooked",
+   "name": "Oatmeal, cooked",
+   "per100g": {
+    "calcium": 9.0,
+    "carbs": 12.0,
+    "fat": 1.52,
+    "fibre": 1.7,
+    "folate": 6.0,
+    "iron": 0.9,
+    "kcal": 71.0,
+    "magnesium": 27.0,
+    "potassium": 70.0,
+    "protein": 2.54,
+    "satfat": 0.31,
+    "sodium": 4.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.0
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
+    "fdcId": 173905
+   },
+   "tags": [
+    "veg",
+    "grain"
    ]
   },
   "oil": {
@@ -4585,6 +6825,54 @@
     "vegetable"
    ]
   },
+  "olive_oil": {
+   "id": "olive_oil",
+   "name": "Olive oil",
+   "per100g": {
+    "calcium": 1.0,
+    "carbs": 0.0,
+    "fat": 100.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.56,
+    "kcal": 884.0,
+    "magnesium": 0.0,
+    "potassium": 1.0,
+    "protein": 0.0,
+    "satfat": 13.808,
+    "sodium": 2.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.0
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Oil, olive, salad or cooking",
+    "fdcId": 171413
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "onion": {
    "id": "onion",
    "name": "Onion",
@@ -4681,6 +6969,104 @@
    "tags": [
     "veg",
     "fruit"
+   ]
+  },
+  "orange_juice": {
+   "id": "orange_juice",
+   "name": "Orange juice",
+   "per100g": {
+    "calcium": 11.0,
+    "carbs": 10.4,
+    "fat": 0.2,
+    "fibre": 0.2,
+    "folate": 30.0,
+    "iron": 0.2,
+    "kcal": 45.0,
+    "magnesium": 11.0,
+    "potassium": 200.0,
+    "protein": 0.7,
+    "satfat": 0.024,
+    "sodium": 1.0,
+    "vita": 10.0,
+    "vitb12": 0.0,
+    "vitc": 50.0,
+    "zinc": 0.05
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "fdcId": 169098
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "pancake": {
+   "id": "pancake",
+   "name": "Pancakes",
+   "per100g": {
+    "calcium": 78.0,
+    "carbs": 37.75,
+    "fat": 6.83,
+    "fibre": 1.0,
+    "folate": 110.0,
+    "iron": 5.67,
+    "kcal": 233.0,
+    "magnesium": 14.0,
+    "potassium": 90.0,
+    "protein": 5.23,
+    "satfat": 1.162,
+    "sodium": 461.0,
+    "vita": 453.0,
+    "vitb12": 2.8,
+    "vitc": 0.3,
+    "zinc": 0.4
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Pancakes plain, frozen, ready-to-heat (includes buttermilk)",
+    "fdcId": 172771
+   },
+   "tags": [
+    "veg",
+    "grain"
    ]
   },
   "paneer": {
@@ -4781,6 +7167,54 @@
    "tags": [
     "veg",
     "fruit"
+   ]
+  },
+  "pasta_cooked": {
+   "id": "pasta_cooked",
+   "name": "Pasta, cooked",
+   "per100g": {
+    "calcium": 6.0,
+    "carbs": 24.93,
+    "fat": 1.05,
+    "fibre": 0.0,
+    "folate": 104.0,
+    "iron": 1.14,
+    "kcal": 131.0,
+    "magnesium": 18.0,
+    "potassium": 24.0,
+    "protein": 5.15,
+    "satfat": 0.15,
+    "sodium": 6.0,
+    "vita": 6.0,
+    "vitb12": 0.14,
+    "vitc": 0.0,
+    "zinc": 0.56
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Pasta, fresh-refrigerated, plain, cooked",
+    "fdcId": 169728
+   },
+   "tags": [
+    "veg",
+    "grain"
    ]
   },
   "peanut": {
@@ -4979,6 +7413,54 @@
     "pulse"
    ]
   },
+  "ranch_dressing": {
+   "id": "ranch_dressing",
+   "name": "Ranch dressing",
+   "per100g": {
+    "calcium": 28.0,
+    "carbs": 5.9,
+    "fat": 44.54,
+    "fibre": 0.0,
+    "folate": 4.0,
+    "iron": 0.3,
+    "kcal": 430.0,
+    "magnesium": 5.0,
+    "potassium": 64.0,
+    "protein": 1.32,
+    "satfat": 6.964,
+    "sodium": 901.0,
+    "vita": 15.0,
+    "vitb12": 0.17,
+    "vitc": 0.0,
+    "zinc": 0.17
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Salad dressing, ranch dressing, regular",
+    "fdcId": 173592
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "rice_cooked": {
    "id": "rice_cooked",
    "name": "Cooked white rice",
@@ -5026,6 +7508,103 @@
    "tags": [
     "veg",
     "grain"
+   ]
+  },
+  "romaine": {
+   "id": "romaine",
+   "name": "Romaine lettuce",
+   "per100g": {
+    "calcium": 33.0,
+    "carbs": 3.29,
+    "fat": 0.3,
+    "fibre": 2.1,
+    "folate": 136.0,
+    "iron": 0.97,
+    "kcal": 17.0,
+    "magnesium": 14.0,
+    "potassium": 247.0,
+    "protein": 1.23,
+    "satfat": 0.039,
+    "sodium": 8.0,
+    "vita": 436.0,
+    "vitb12": 0.0,
+    "vitc": 4.0,
+    "zinc": 0.23
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Lettuce, cos or romaine, raw",
+    "fdcId": 169247
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "salmon": {
+   "id": "salmon",
+   "name": "Salmon, farmed, cooked",
+   "per100g": {
+    "calcium": 15.0,
+    "carbs": 0.0,
+    "fat": 12.35,
+    "fibre": 0.0,
+    "folate": 34.0,
+    "iron": 0.34,
+    "kcal": 206.0,
+    "magnesium": 30.0,
+    "potassium": 384.0,
+    "protein": 22.1,
+    "satfat": 2.397,
+    "sodium": 61.0,
+    "vita": 69.0,
+    "vitb12": 2.8,
+    "vitc": 3.7,
+    "zinc": 0.43
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+    "fdcId": 175168
+   },
+   "tags": [
+    "meat",
+    "fish"
    ]
   },
   "semolina": {
@@ -5273,6 +7852,102 @@
     "sugar"
    ]
   },
+  "sweetcorn": {
+   "id": "sweetcorn",
+   "name": "Sweetcorn, boiled",
+   "per100g": {
+    "calcium": 3.0,
+    "carbs": 20.98,
+    "fat": 1.5,
+    "fibre": 2.4,
+    "folate": 23.0,
+    "iron": 0.45,
+    "kcal": 96.0,
+    "magnesium": 26.0,
+    "potassium": 218.0,
+    "protein": 3.41,
+    "satfat": 0.197,
+    "sodium": 253.0,
+    "vita": 13.0,
+    "vitb12": 0.0,
+    "vitc": 5.5,
+    "zinc": 0.62
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, with salt",
+    "fdcId": 168525
+   },
+   "tags": [
+    "veg"
+   ]
+  },
+  "tofu": {
+   "id": "tofu",
+   "name": "Tofu, firm",
+   "per100g": {
+    "calcium": 201.0,
+    "carbs": 2.85,
+    "fat": 4.17,
+    "fibre": 0.9,
+    "folate": 19.0,
+    "iron": 1.61,
+    "kcal": 78.0,
+    "magnesium": 37.0,
+    "potassium": 148.0,
+    "protein": 9.04,
+    "satfat": 0.793,
+    "sodium": 12.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.2,
+    "zinc": 0.83
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+    "fdcId": 172448
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "tomato": {
    "id": "tomato",
    "name": "Tomato",
@@ -5322,6 +7997,54 @@
     "vegetable"
    ]
   },
+  "tomato_soup": {
+   "id": "tomato_soup",
+   "name": "Tomato soup",
+   "per100g": {
+    "calcium": 8.0,
+    "carbs": 7.45,
+    "fat": 0.21,
+    "fibre": 0.5,
+    "folate": 0.0,
+    "iron": 0.29,
+    "kcal": 32.0,
+    "magnesium": 7.0,
+    "potassium": 275.0,
+    "protein": 0.71,
+    "satfat": 0.056,
+    "sodium": 186.0,
+    "vita": 10.0,
+    "vitb12": 0.0,
+    "vitc": 6.3,
+    "zinc": 0.09
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Soup, tomato, canned, prepared with equal volume water, commercial",
+    "fdcId": 171176
+   },
+   "tags": [
+    "veg"
+   ]
+  },
   "toor_dal": {
    "id": "toor_dal",
    "name": "Pigeon pea (toor/arhar)",
@@ -5369,6 +8092,54 @@
    "tags": [
     "veg",
     "pulse"
+   ]
+  },
+  "turkey_deli": {
+   "id": "turkey_deli",
+   "name": "Turkey breast, deli",
+   "per100g": {
+    "calcium": 8.0,
+    "carbs": 3.51,
+    "fat": 0.83,
+    "fibre": 0.5,
+    "folate": 4.0,
+    "iron": 0.63,
+    "kcal": 109.0,
+    "magnesium": 21.0,
+    "potassium": 211.0,
+    "protein": 21.81,
+    "satfat": 0.197,
+    "sodium": 772.0,
+    "vita": 10.0,
+    "vitb12": 0.09,
+    "vitc": 5.7,
+    "zinc": 1.33
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Turkey breast, low salt, prepackaged or deli, luncheon meat",
+    "fdcId": 174572
+   },
+   "tags": [
+    "meat"
    ]
   },
   "whey_protein": {
@@ -5421,9 +8192,95 @@
     "veg",
     "supplement"
    ]
+  },
+  "yogurt_lowfat": {
+   "id": "yogurt_lowfat",
+   "name": "Yogurt, plain low fat",
+   "per100g": {
+    "calcium": 183.0,
+    "carbs": 7.04,
+    "fat": 1.55,
+    "fibre": 0.0,
+    "folate": 11.0,
+    "iron": 0.08,
+    "kcal": 63.0,
+    "magnesium": 17.0,
+    "potassium": 234.0,
+    "protein": 5.25,
+    "satfat": 1.0,
+    "sodium": 70.0,
+    "vita": 14.0,
+    "vitb12": 0.56,
+    "vitc": 0.8,
+    "zinc": 0.89
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Yogurt, plain, low fat",
+    "fdcId": 170886
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
   }
  },
  "market": {
+  "almonds_pack": {
+   "defaultPrice": {
+    "US": 0.55
+   },
+   "id": "almonds_pack",
+   "maxUnits": 3,
+   "name": "Almonds",
+   "perUnit": {
+    "calcium": 70.8,
+    "carbs": 5.601,
+    "fat": 15.756,
+    "fibre": 2.97,
+    "folate": 14.7,
+    "iron": 0.984,
+    "kcal": 177.0,
+    "magnesium": 80.4,
+    "potassium": 197.7,
+    "protein": 6.42,
+    "satfat": 1.1859,
+    "sodium": 5.7,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.891
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "almonds"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "30 g"
+  },
   "apple": {
    "defaultPrice": {
     "IN": 28.0,
@@ -5461,6 +8318,42 @@
     "fruit"
    ],
    "unit": "1 apple"
+  },
+  "baby_carrots": {
+   "defaultPrice": {
+    "US": 0.6
+   },
+   "id": "baby_carrots",
+   "maxUnits": 2,
+   "name": "Baby carrots",
+   "perUnit": {
+    "calcium": 28.05,
+    "carbs": 8.143,
+    "fat": 0.204,
+    "fibre": 2.38,
+    "folate": 16.15,
+    "iron": 0.255,
+    "kcal": 34.85,
+    "magnesium": 10.2,
+    "potassium": 272.0,
+    "protein": 0.7905,
+    "satfat": 0.0272,
+    "sodium": 58.65,
+    "vita": 709.75,
+    "vitb12": 0.0,
+    "vitc": 5.015,
+    "zinc": 0.204
+   },
+   "recipe": [
+    {
+     "grams": 85,
+     "ingredient": "carrot"
+    }
+   ],
+   "tags": [
+    "veg"
+   ],
+   "unit": "85 g"
   },
   "banana": {
    "defaultPrice": {
@@ -5500,10 +8393,46 @@
    ],
    "unit": "1 banana"
   },
+  "black_bean_can": {
+   "defaultPrice": {
+    "US": 0.65
+   },
+   "id": "black_bean_can",
+   "maxUnits": 2,
+   "name": "Black beans",
+   "perUnit": {
+    "calcium": 35.1,
+    "carbs": 30.823,
+    "fat": 0.702,
+    "fibre": 11.31,
+    "folate": 193.7,
+    "iron": 2.73,
+    "kcal": 171.6,
+    "magnesium": 91.0,
+    "potassium": 461.5,
+    "protein": 11.518,
+    "satfat": 0.1807,
+    "sodium": 1.3,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.456
+   },
+   "recipe": [
+    {
+     "grams": 130,
+     "ingredient": "black_beans"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "130 g"
+  },
   "boiled_chana": {
    "defaultPrice": {
-    "IN": 20.0,
-    "US": 0.7
+    "IN": 20.0
    },
    "id": "boiled_chana",
    "maxUnits": 3,
@@ -5577,8 +8506,7 @@
   },
   "curd_cup": {
    "defaultPrice": {
-    "IN": 25.0,
-    "US": 1.2
+    "IN": 25.0
    },
    "id": "curd_cup",
    "maxUnits": 2,
@@ -5689,10 +8617,83 @@
    ],
    "unit": "1 egg"
   },
+  "frozen_broccoli": {
+   "defaultPrice": {
+    "US": 0.7
+   },
+   "id": "frozen_broccoli",
+   "maxUnits": 2,
+   "name": "Broccoli",
+   "perUnit": {
+    "calcium": 40.0,
+    "carbs": 7.18,
+    "fat": 0.41,
+    "fibre": 3.3,
+    "folate": 108.0,
+    "iron": 0.67,
+    "kcal": 35.0,
+    "magnesium": 21.0,
+    "potassium": 293.0,
+    "protein": 2.38,
+    "satfat": 0.079,
+    "sodium": 262.0,
+    "vita": 77.0,
+    "vitb12": 0.0,
+    "vitc": 64.9,
+    "zinc": 0.45
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "broccoli"
+    }
+   ],
+   "tags": [
+    "veg"
+   ],
+   "unit": "100 g cooked"
+  },
+  "greek_yogurt": {
+   "defaultPrice": {
+    "US": 1.3
+   },
+   "id": "greek_yogurt",
+   "maxUnits": 2,
+   "name": "Greek yogurt",
+   "perUnit": {
+    "calcium": 311.1,
+    "carbs": 11.968,
+    "fat": 2.635,
+    "fibre": 0.0,
+    "folate": 18.7,
+    "iron": 0.136,
+    "kcal": 107.1,
+    "magnesium": 28.9,
+    "potassium": 397.8,
+    "protein": 8.925,
+    "satfat": 1.7,
+    "sodium": 119.0,
+    "vita": 23.8,
+    "vitb12": 0.952,
+    "vitc": 1.36,
+    "zinc": 1.513
+   },
+   "recipe": [
+    {
+     "grams": 170,
+     "ingredient": "yogurt_lowfat"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy",
+    "protein"
+   ],
+   "unit": "170 g cup"
+  },
   "guava": {
    "defaultPrice": {
-    "IN": 16.0,
-    "US": 1.2
+    "IN": 16.0
    },
    "id": "guava",
    "maxUnits": 3,
@@ -5765,6 +8766,43 @@
    ],
    "unit": "500 ml packet"
   },
+  "oj_bottle": {
+   "defaultPrice": {
+    "US": 1.1
+   },
+   "id": "oj_bottle",
+   "maxUnits": 2,
+   "name": "Orange juice",
+   "perUnit": {
+    "calcium": 26.4,
+    "carbs": 24.96,
+    "fat": 0.48,
+    "fibre": 0.48,
+    "folate": 72.0,
+    "iron": 0.48,
+    "kcal": 108.0,
+    "magnesium": 26.4,
+    "potassium": 480.0,
+    "protein": 1.68,
+    "satfat": 0.0576,
+    "sodium": 2.4,
+    "vita": 24.0,
+    "vitb12": 0.0,
+    "vitc": 120.0,
+    "zinc": 0.12
+   },
+   "recipe": [
+    {
+     "grams": 240,
+     "ingredient": "orange_juice"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "240 ml"
+  },
   "orange": {
    "defaultPrice": {
     "IN": 18.0,
@@ -5805,8 +8843,7 @@
   },
   "paneer_block": {
    "defaultPrice": {
-    "IN": 45.0,
-    "US": 2.5
+    "IN": 45.0
    },
    "id": "paneer_block",
    "maxUnits": 2,
@@ -5846,8 +8883,7 @@
   },
   "papaya_bowl": {
    "defaultPrice": {
-    "IN": 25.0,
-    "US": 1.5
+    "IN": 25.0
    },
    "id": "papaya_bowl",
    "maxUnits": 2,
@@ -5960,8 +8996,7 @@
   },
   "rajma_bowl": {
    "defaultPrice": {
-    "IN": 22.0,
-    "US": 0.8
+    "IN": 22.0
    },
    "id": "rajma_bowl",
    "maxUnits": 2,
@@ -5998,8 +9033,7 @@
   },
   "soya_chunks": {
    "defaultPrice": {
-    "IN": 14.0,
-    "US": 0.5
+    "IN": 14.0
    },
    "id": "soya_chunks",
    "maxUnits": 2,
@@ -6073,8 +9107,7 @@
   },
   "sprouts_bowl": {
    "defaultPrice": {
-    "IN": 15.0,
-    "US": 0.9
+    "IN": 15.0
    },
    "id": "sprouts_bowl",
    "maxUnits": 2,
@@ -6107,6 +9140,81 @@
     "veg"
    ],
    "unit": "100 g"
+  },
+  "string_cheese": {
+   "defaultPrice": {
+    "US": 0.5
+   },
+   "id": "string_cheese",
+   "maxUnits": 3,
+   "name": "String cheese",
+   "perUnit": {
+    "calcium": 218.96,
+    "carbs": 0.7756,
+    "fat": 4.4576,
+    "fibre": 0.0,
+    "folate": 2.52,
+    "iron": 0.0616,
+    "kcal": 71.12,
+    "magnesium": 6.44,
+    "potassium": 23.52,
+    "protein": 6.7928,
+    "satfat": 2.8319,
+    "sodium": 173.32,
+    "vita": 35.56,
+    "vitb12": 0.2296,
+    "vitc": 0.0,
+    "zinc": 0.7728
+   },
+   "recipe": [
+    {
+     "grams": 28,
+     "ingredient": "mozzarella"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy",
+    "protein"
+   ],
+   "unit": "1 stick"
+  },
+  "tofu_block": {
+   "defaultPrice": {
+    "US": 1.2
+   },
+   "id": "tofu_block",
+   "maxUnits": 2,
+   "name": "Tofu",
+   "perUnit": {
+    "calcium": 241.2,
+    "carbs": 3.42,
+    "fat": 5.004,
+    "fibre": 1.08,
+    "folate": 22.8,
+    "iron": 1.932,
+    "kcal": 93.6,
+    "magnesium": 44.4,
+    "potassium": 177.6,
+    "protein": 10.848,
+    "satfat": 0.9516,
+    "sodium": 14.4,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.24,
+    "zinc": 0.996
+   },
+   "recipe": [
+    {
+     "grams": 120,
+     "ingredient": "tofu"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "120 g"
   },
   "whey_scoop": {
    "defaultPrice": {
@@ -6148,6 +9256,43 @@
     "protein"
    ],
    "unit": "30 g scoop"
+  },
+  "yogurt_cup_us": {
+   "defaultPrice": {
+    "US": 1.0
+   },
+   "id": "yogurt_cup_us",
+   "maxUnits": 2,
+   "name": "Yogurt",
+   "perUnit": {
+    "calcium": 415.41,
+    "carbs": 15.9808,
+    "fat": 3.5185,
+    "fibre": 0.0,
+    "folate": 24.97,
+    "iron": 0.1816,
+    "kcal": 143.01,
+    "magnesium": 38.59,
+    "potassium": 531.18,
+    "protein": 11.9175,
+    "satfat": 2.27,
+    "sodium": 158.9,
+    "vita": 31.78,
+    "vitb12": 1.2712,
+    "vitc": 1.816,
+    "zinc": 2.0203
+   },
+   "recipe": [
+    {
+     "grams": 227,
+     "ingredient": "yogurt_lowfat"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy"
+   ],
+   "unit": "227 g cup"
   }
  },
  "notes": {

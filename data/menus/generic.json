@@ -1,0 +1,27 @@
+{
+ "id": "generic",
+ "name": "Generic cafeteria",
+ "subtitle": "A deliberately plain menu to start from",
+ "region": "IN",
+ "currency": "INR",
+ "servingStyle": "mixed",
+ "servingStyleNote": "A small, boring rotation. It exists to be edited: start here, replace the dishes with whatever your own canteen serves, and re-solve.",
+ "source": {
+  "kind": "none",
+  "note": "Invented. Nothing here is a claim about any real canteen."
+ },
+ "daily": {
+  "breakfast": ["bread_slice", "tea", "milk_glass"],
+  "lunch": ["salad"],
+  "dinner": ["salad"]
+ },
+ "days": {
+  "mon": {"breakfast": ["poha"], "lunch": ["plain_rice", "toor_dal_tadka", "mix_veg", "roti"], "dinner": ["roti", "dal_mix", "aloo_jeera"]},
+  "tue": {"breakfast": ["idli", "sambhar"], "lunch": ["plain_rice", "dal_tadka", "aloo_bhujiya", "roti"], "dinner": ["roti", "chole", "plain_rice"]},
+  "wed": {"breakfast": ["poha"], "lunch": ["jeera_rice", "dal_mix", "gobhi_dry", "roti"], "dinner": ["roti", "mix_veg", "plain_curd"]},
+  "thu": {"breakfast": ["idli", "sambhar"], "lunch": ["plain_rice", "toor_dal_tadka", "kurmuri_bhindi", "roti"], "dinner": ["roti", "rajma_dish", "plain_rice"]},
+  "fri": {"breakfast": ["poha"], "lunch": ["plain_rice", "dal_tadka", "aloo_tomato", "roti"], "dinner": ["roti", "soya_badi", "plain_curd"]},
+  "sat": {"breakfast": ["dosa", "sambhar"], "lunch": ["jeera_rice", "dal_mix", "mix_veg", "roti"], "dinner": ["roti", "paneer_bhurji", "plain_rice"]},
+  "sun": {"breakfast": ["dosa", "sambhar"], "lunch": ["veg_biryani", "veg_raita"], "dinner": ["roti", "dal_makhani", "jeera_rice"]}
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "id": "dining-hall",
+ "name": "University dining hall",
+ "subtitle": "A typical North American all-you-care-to-eat meal plan",
+ "region": "US",
+ "currency": "USD",
+ "servingStyle": "mixed",
+ "servingStyleNote": "Sides, salad bar and staples are all-you-care-to-eat. The hot entree is one plated portion per swipe.",
+ "source": {
+  "kind": "composite",
+  "note": "Not a transcription of one real hall. It is a representative rotation assembled from the dish patterns common to North American residential meal plans, so that someone who has never seen an Indian mess menu can still try the tool on something they recognise."
+ },
+ "daily": {
+  "breakfast": ["cereal_bowl", "milk_carton", "orange_juice_glass", "apple_whole"],
+  "lunch": ["garden_salad", "dinner_roll", "milk_carton"],
+  "dinner": ["garden_salad", "dinner_roll"]
+ },
+ "days": {
+  "mon": {
+   "breakfast": ["scrambled_eggs", "bacon_strips", "bagel_butter"],
+   "lunch": ["cheeseburger", "french_fries", "tomato_soup_bowl"],
+   "dinner": ["grilled_chicken", "pasta_marinara", "steamed_broccoli", "brownie_square"]
+  },
+  "tue": {
+   "breakfast": ["oatmeal", "yogurt_parfait"],
+   "lunch": ["turkey_sandwich", "chickpea_salad"],
+   "dinner": ["cheese_pizza", "garden_salad", "sweetcorn_side"]
+  },
+  "wed": {
+   "breakfast": ["pancakes_stack", "scrambled_eggs"],
+   "lunch": ["mac_and_cheese", "steamed_broccoli"],
+   "dinner": ["baked_salmon", "black_bean_bowl", "steamed_broccoli"]
+  },
+  "thu": {
+   "breakfast": ["scrambled_eggs", "bagel_butter", "yogurt_parfait"],
+   "lunch": ["cheese_pizza", "french_fries"],
+   "dinner": ["grilled_chicken", "sweetcorn_side", "dinner_roll", "brownie_square"]
+  },
+  "fri": {
+   "breakfast": ["oatmeal", "bacon_strips"],
+   "lunch": ["cheeseburger", "garden_salad"],
+   "dinner": ["tofu_stirfry", "pasta_marinara", "steamed_broccoli"]
+  },
+  "sat": {
+   "breakfast": ["pancakes_stack", "scrambled_eggs", "bacon_strips"],
+   "lunch": ["turkey_sandwich", "tomato_soup_bowl", "french_fries"],
+   "dinner": ["cheese_pizza", "chickpea_salad", "brownie_square"]
+  },
+  "sun": {
+   "breakfast": ["bagel_butter", "yogurt_parfait", "oatmeal"],
+   "lunch": ["mac_and_cheese", "garden_salad"],
+   "dinner": ["baked_salmon", "grilled_chicken", "sweetcorn_side", "steamed_broccoli"]
+  }
+ }
+}
