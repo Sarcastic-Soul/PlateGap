@@ -69,7 +69,16 @@ async def main():
         page = await b.new_page(viewport={"width": 1440, "height": 1000})
         page.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
         page.on("pageerror", lambda e: errors.append(str(e)))
-        await page.goto(SITE, wait_until="networkidle")
+        await page.goto(SITE, wait_until="commit")
+
+        # The shell is drawn before any answer is: the sidebar and the tab bar
+        # are both on screen while the first solve is still in flight, so the
+        # page does not go from one column to two once it lands.
+        await page.wait_for_selector(".skeleton", timeout=20_000)
+        assert await page.locator(".tabs .tab").count() == 5
+        assert await page.locator("aside").count() == 1
+        assert await page.locator(".skeleton").count() == 1
+
         await settle(page)
 
         # The "You" controls are folded away by default, and the fold says
@@ -103,6 +112,29 @@ async def main():
         await settle(page)
         after = await page.inner_text(".headline")
         assert before != after, "price change did not re-solve"
+
+        # the frontier chart reads out whatever is under the pointer
+        await page.get_by_text("Spending", exact=True).click()
+        await settle(page)
+        assert "point at the curve" in (await page.inner_text(".readout")).lower()
+        chart = page.locator("svg.chart")
+        box = await chart.bounding_box()
+        await page.mouse.move(box["x"] + box["width"] * 0.35,
+                              box["y"] + box["height"] * 0.5)
+        await page.wait_for_timeout(150)
+        read = await page.inner_text(".readout")
+        assert "a day" in read and "targets met" in read, read
+        assert await page.locator(".chart-guide").count() == 1
+        assert await page.locator(".chart-dot").count() == 1
+        # and by keyboard, for anyone not using a pointer
+        await chart.focus()
+        await page.keyboard.press("ArrowRight")
+        await page.wait_for_timeout(150)
+        assert await page.inner_text(".readout") != read
+        await page.mouse.move(box["x"] + box["width"] * 0.5, box["y"] - 60)
+        await chart.evaluate("e => e.blur()")
+        await page.wait_for_timeout(150)
+        assert "point at the curve" in (await page.inner_text(".readout")).lower()
 
         # audit students slider
         await page.get_by_text("Kitchen", exact=True).click()

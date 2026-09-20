@@ -16,8 +16,15 @@
   </div>
 </header>
 
+<!-- What the page says before app.js runs. It is an <aside> and a <section>
+     because <main> is a two-column grid: a <section> on its own would drop
+     into the 290px sidebar column, and the page would jump sideways the
+     moment Preact took over. -->
 <div id="app">
-  <main><section><div id="view"><p class="loading">Loading…</p></div></section></main>
+  <main>
+    <aside></aside>
+    <section><div id="view"><p class="loading">Loading…</p></div></section>
+  </main>
 </div>
 
 <footer>

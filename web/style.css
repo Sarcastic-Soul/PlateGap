@@ -11,6 +11,19 @@
   --short: #a23b26;
   --short-soft: #f8e7e2;
   --radius: 10px;
+
+  /* One spacing scale, used everywhere. Before this the page had 5, 6, 7, 9,
+     10, 11, 12, 13, 14, 16, 18, 20, 22, 25, 30 and 32 px of margin and
+     padding in it, chosen a rule at a time, and the result read as untidy
+     even where nothing was actually misaligned. Every gap below is one of
+     these six. */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
@@ -44,7 +57,7 @@ a { color: var(--accent); }
 
 header.masthead {
   border-bottom: 1px solid var(--line);
-  padding: 22px 20px 18px;
+  padding: var(--s5) var(--s5) var(--s4);
 }
 
 .masthead-inner { max-width: 1180px; margin: 0 auto; }
@@ -62,9 +75,9 @@ h1 span { color: var(--muted); font-weight: 400; }
 main {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 20px;
+  padding: var(--s5);
   display: grid;
-  gap: 20px;
+  gap: var(--s5);
   grid-template-columns: 290px minmax(0, 1fr);
   align-items: start;
 }
@@ -77,20 +90,28 @@ main {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px;
+  padding: var(--s4);
 }
 
-.panel + .panel { margin-top: 16px; }
+/* The vertical rhythm of the page, in two rules rather than a margin per
+   component. Anything a tab returns is a direct child of #view, and anything
+   in the sidebar is a direct child of <aside>, so the space between two
+   blocks is decided in one place and is the same on every tab -- including
+   the skeleton standing in for one, which is why it shares the rule. */
+#view > * + *,
+.skeleton > * + * { margin-top: var(--s5); }
+
+aside > * + * { margin-top: var(--s4); }
 
 .panel h2 {
-  margin: 0 0 12px;
+  margin: 0 0 var(--s3);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
 }
 
-label.field { display: block; margin-bottom: 12px; }
+label.field { display: block; margin-bottom: var(--s3); }
 
 label.field > span {
   display: block;
@@ -101,7 +122,7 @@ label.field > span {
 
 select, input[type="number"], input[type="text"] {
   width: 100%;
-  padding: 7px 9px;
+  padding: var(--s2) 10px;
   border: 1px solid var(--line);
   border-radius: 7px;
   background: var(--bg);
@@ -111,14 +132,14 @@ select, input[type="number"], input[type="text"] {
 
 input[type="range"] { width: 100%; }
 
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
 
 .chip {
   border: 1px solid var(--line);
   background: var(--bg);
   color: var(--ink);
   border-radius: 999px;
-  padding: 4px 11px;
+  padding: var(--s1) var(--s3);
   font-size: 13px;
   cursor: pointer;
 }
@@ -132,9 +153,9 @@ input[type="range"] { width: 100%; }
 
 .tabs {
   display: flex;
-  gap: 4px;
+  gap: var(--s1);
   border-bottom: 1px solid var(--line);
-  margin-bottom: 18px;
+  margin-bottom: var(--s3);
   flex-wrap: wrap;
 }
 
@@ -142,7 +163,7 @@ input[type="range"] { width: 100%; }
   border: 0;
   background: none;
   color: var(--muted);
-  padding: 9px 13px;
+  padding: var(--s2) var(--s3);
   font: inherit;
   cursor: pointer;
   border-bottom: 2px solid transparent;
@@ -158,15 +179,14 @@ input[type="range"] { width: 100%; }
 .headline {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: var(--s3);
 }
 
 .stat {
   flex: 1 1 150px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 13px 14px;
+  padding: var(--s3) var(--s4);
   background: var(--panel);
 }
 
@@ -233,11 +253,17 @@ tr:last-child td { border-bottom: 0; }
 .pill.short { background: var(--short-soft); color: var(--short); }
 .pill.warn { background: var(--warn-soft); color: var(--warn); }
 
-.note { color: var(--muted); font-size: 13px; margin: 10px 0 14px; }
+/* A note explains the block above it, so it carries space on top always and
+   space underneath only when something follows -- which keeps it from
+   leaving a gap under the last line of a panel, and from sitting flush
+   against the next control when it is not the last line. */
+.note { color: var(--muted); font-size: 13px; margin: var(--s3) 0 0; }
+.note:not(:last-child) { margin-bottom: var(--s3); }
 
-aside .panel > .note:last-child { margin-bottom: 0; }
-
-.price-input { width: 84px; }
+/* `input[type="number"]` is an attribute selector and outranks a plain class,
+   so this has to be at least as specific or the 100%-wide rule above wins and
+   the price box fills the column. */
+input.price-input { width: 84px; }
 
 /* Two columns that are allowed to be narrow. `minmax(0, 1fr)` matters: the
    default `auto` minimum is the widest child, which makes a select overflow a
@@ -245,34 +271,56 @@ aside .panel > .note:last-child { margin-bottom: 0; }
 .pair {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 10px;
+  gap: var(--s3);
 }
 
 .grid2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
+  gap: var(--s4);
 }
 
-svg.chart { width: 100%; height: 230px; display: block; }
+/* `height: auto` with a viewBox, rather than a fixed height and
+   `preserveAspectRatio="none"`. Stretching the viewBox to fit stretches the
+   labels with it -- at 1440 px that is 1.26x horizontally, which is what
+   pushed "all of it" into the plot area. Locking the aspect ratio keeps the
+   type the shape the font intends. */
+svg.chart { width: 100%; height: auto; display: block; touch-action: pan-y; }
 
 .chart-line { fill: none; stroke: var(--accent); stroke-width: 2; }
 .chart-area { fill: var(--accent-soft); }
 .chart-axis { stroke: var(--line); stroke-width: 1; }
 .chart-label { fill: var(--muted); font-size: 11px; }
-.chart-dot { fill: var(--accent); }
+.chart-dot { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
+.chart-guide { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.5; }
+.chart-hit { fill: transparent; cursor: crosshair; }
 
-.loading { color: var(--muted); padding: 30px 0; text-align: center; }
+/* The readout is always in the flow, whether or not anything is under the
+   cursor, so reading the curve never moves the curve. */
+.readout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s4);
+  align-items: baseline;
+  min-height: 22px;
+  margin-bottom: var(--s2);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.readout b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.loading { color: var(--muted); padding: var(--s6) 0; text-align: center; }
 
 .error {
   border: 1px solid var(--short);
   background: var(--short-soft);
   color: var(--short);
   border-radius: var(--radius);
-  padding: 12px 14px;
+  padding: var(--s3) var(--s4);
 }
 
-#notice:not(:empty) { margin-bottom: 16px; }
+#notice:not(:empty) { margin-bottom: var(--s4); }
 
 #notice .error {
   display: flex;
@@ -286,7 +334,7 @@ svg.chart { width: 100%; height: 230px; display: block; }
 footer {
   max-width: 1180px;
   margin: 10px auto 40px;
-  padding: 0 20px;
+  padding: 0 var(--s5);
   color: var(--muted);
   font-size: 13px;
 }
@@ -316,9 +364,9 @@ code { font-family: var(--mono); font-size: 0.92em; }
 
 .chip.add { color: var(--accent); border-style: dashed; }
 
-.chips.actions { margin-top: 14px; }
+.chips.actions { margin-top: var(--s4); }
 
-.daystrip { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.daystrip { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s4); }
 .daystrip .why { margin-left: 4px; }
 
 /* One column on a phone, two when there is room. Four meals in a row would
@@ -326,13 +374,13 @@ code { font-family: var(--mono); font-size: 0.92em; }
 .mealgrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
+  gap: var(--s3);
 }
 
 .meal {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 11px 12px;
+  padding: var(--s3);
 }
 
 .meal-head {
@@ -343,11 +391,11 @@ code { font-family: var(--mono); font-size: 0.92em; }
   margin-bottom: 8px;
 }
 
-.meal .chips { margin-bottom: 9px; }
+.meal .chips { margin-bottom: var(--s2); }
 
-.picker { margin-top: 10px; }
-.picker input { margin-bottom: 6px; }
-.picker .why { margin: 0 0 6px; }
+.picker { margin-top: var(--s3); }
+.picker input { margin-bottom: var(--s2); }
+.picker .why { margin: 0 0 var(--s2); }
 
 .picker-list {
   max-height: 260px;
@@ -375,7 +423,7 @@ code { font-family: var(--mono); font-size: 0.92em; }
 .dish-option.on { color: var(--muted); }
 .dish-option .why { display: block; }
 
-.share { display: flex; gap: 6px; align-items: center; }
+.share { display: flex; gap: var(--s2); align-items: center; }
 .share-url { font-family: var(--mono); font-size: 12px; }
 .share .chip { white-space: nowrap; }
 
@@ -433,7 +481,7 @@ h2.with-icon .icon { align-self: center; color: var(--muted); }
 /* The sentence the tab used to carry. It wrapped the bar onto two lines up
    there; down here it is the one line of explanation the screen needs. */
 .tab-hint {
-  margin: -8px 0 16px;
+  margin: 0 0 var(--s5);
   color: var(--muted);
   font-size: 13px;
 }
@@ -442,8 +490,8 @@ h2.with-icon .icon { align-self: center; color: var(--muted); }
 
 .more {
   border-top: 1px solid var(--line);
-  margin-top: 14px;
-  padding-top: 4px;
+  margin-top: var(--s4);
+  padding-top: var(--s1);
 }
 
 .panel > .more:first-child { border-top: 0; margin-top: 0; }
@@ -454,7 +502,7 @@ h2.with-icon .icon { align-self: center; color: var(--muted); }
   align-items: center;
   gap: 7px;
   cursor: pointer;
-  padding: 8px 0;
+  padding: var(--s2) 0;
   color: var(--muted);
   font-size: 13px;
   list-style: none;
@@ -469,7 +517,7 @@ h2.with-icon .icon { align-self: center; color: var(--muted); }
 .icon.marker { transition: transform 0.15s ease; }
 details[open] > summary .icon.marker { transform: rotate(90deg); }
 
-.more-body { padding-bottom: 6px; }
+.more-body { padding-bottom: var(--s2); }
 .more-body > :first-child { margin-top: 0; }
 .more-body > :last-child { margin-bottom: 0; }
 .more-body h3 {
@@ -477,7 +525,7 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
-  margin: 14px 0 8px;
+  margin: var(--s4) 0 var(--s2);
 }
 
 /* The "You" panel, folded. Its summary carries the whole of what is inside
@@ -493,7 +541,7 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
 }
 .who .who-head .why { font-size: 12px; }
 .who[open] .who-head .why { display: none; }
-.who .more-body { padding-top: 14px; padding-bottom: 0; }
+.who .more-body { padding-top: var(--s4); padding-bottom: 0; }
 .who .more-body > label.field:last-child { margin-bottom: 0; }
 
 /* -------------------------------------------------------- the shortfalls */
@@ -505,8 +553,8 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
   display: grid;
   grid-template-columns: minmax(90px, 140px) minmax(80px, 1fr) auto;
   align-items: center;
-  gap: 12px;
-  padding: 7px 0;
+  gap: var(--s3);
+  padding: var(--s2) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -521,11 +569,11 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
 
 /* ------------------------------------------------------------ empty state */
 
-.empty { text-align: center; padding: 32px 20px; }
-.empty .icon { color: var(--muted); margin: 0 auto 10px; display: block; }
+.empty { text-align: center; padding: var(--s6) var(--s5); }
+.empty .icon { color: var(--muted); margin: 0 auto var(--s3); display: block; }
 .empty h2 { justify-content: center; text-transform: none; font-size: 17px;
   letter-spacing: 0; color: var(--ink); }
-.empty p { color: var(--muted); max-width: 46ch; margin: 0 auto 16px; }
+.empty p { color: var(--muted); max-width: 46ch; margin: 0 auto var(--s4); }
 .empty .chip { display: inline-flex; }
 
 /* ------------------------------------------------------------- the search */
@@ -548,7 +596,11 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
    as work in progress, and the page does not jump when the answer lands.
    These keep the class `loading`, which is how the screenshot script and the
    smoke test know the page is still busy. */
-.skeleton { pointer-events: none; }
+/* `.loading` is also the name the screenshot script and the smoke test wait
+   on, so a skeleton has to answer to it -- and then has to undo the centred
+   padding that name carries, or every tab starts 32 px lower while it is
+   thinking than it does once it has thought. */
+.skeleton { pointer-events: none; padding: 0; text-align: left; }
 
 .shim {
   background: linear-gradient(90deg,
@@ -567,9 +619,24 @@ details[open] > summary .icon.marker { transform: rotate(90deg); }
   .shim { animation: none; opacity: 0.6; }
 }
 
-.shim.value { height: 22px; width: 68%; margin-bottom: 8px; }
+.shim.value { height: 22px; width: 68%; margin-bottom: var(--s2); }
 .shim.label { height: 11px; width: 94%; }
-.shim.head { height: 12px; width: 180px; margin-bottom: 16px; }
-.shim.line { height: 11px; margin-bottom: 11px; }
-.shim.chart { height: 200px; border-radius: var(--radius); }
+.shim.head { height: 12px; width: 180px; margin-bottom: var(--s4); }
+.shim.line { height: 11px; margin-bottom: var(--s3); }
+.shim.line:last-child { margin-bottom: 0; }
+.shim.field { height: 38px; border-radius: 7px; }
+
+/* The sidebar while the presets are still in flight. The real sidebar is two
+   panels of a known size, so standing in for it costs nothing and saves the
+   whole page jumping from one column to two when the first answer lands. */
+.skeleton-aside .shim.label { width: 40%; }
+.skeleton .shim.label { margin-bottom: var(--s1); }
+.skeleton .shim.field { margin-bottom: var(--s3); }
+.skeleton .shim.readout { height: 13px; width: 55%; margin-bottom: var(--s2); }
+.shim.fold { height: 13px; width: 220px; }
+
+/* A disabled tab still says which tab is selected, and looks exactly like an
+   enabled one, so nothing changes appearance when the presets land. */
+.tab:disabled { cursor: default; }
+.shim.chart { aspect-ratio: 720 / 230; border-radius: var(--radius); }
 .skeleton .panel.half { height: 100%; }

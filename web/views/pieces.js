@@ -142,11 +142,22 @@ function SkeletonPanel({ lines, wide }) {
     </section>`;
 }
 
+/* A folded section is one line high whether or not it is open, so this is
+   what one looks like before its contents exist. */
+function SkeletonFold() {
+  return html`<div class="shim fold"></div>`;
+}
+
 export function Skeleton({ kind }) {
   if (kind === 'audit') {
     return html`
       <div class="loading skeleton">
-        <${SkeletonPanel} lines=${1} wide />
+        ${/* The "Who eats here" panel: a heading and a slider. */ ''}
+        <section class="panel">
+          <div class="shim head"></div>
+          <div class="shim label"></div>
+          <div class="shim field"></div>
+        </section>
         <${SkeletonStats} count=${3} />
         <${SkeletonPanel} lines=${6} wide />
       </div>`;
@@ -157,9 +168,11 @@ export function Skeleton({ kind }) {
         <${SkeletonStats} count=${3} />
         <section class="panel">
           <div class="shim head"></div>
+          <div class="shim readout"></div>
           <div class="shim chart"></div>
+          <${Lines} count=${2} />
         </section>
-        <${SkeletonPanel} lines=${4} wide />
+        <${SkeletonFold} />
       </div>`;
   }
   return html`
@@ -170,6 +183,8 @@ export function Skeleton({ kind }) {
         <${SkeletonPanel} lines=${5} />
         <${SkeletonPanel} lines=${5} />
       </div>
+      <${SkeletonFold} />
+      <${SkeletonFold} />
     </div>`;
 }
 

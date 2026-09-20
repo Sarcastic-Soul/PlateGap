@@ -179,6 +179,54 @@ function Sidebar() {
     </aside>`;
 }
 
+/* The sidebar before the presets have landed.
+ *
+ * Without it the first paint was a single narrow column -- <main> is a
+ * 290px-and-the-rest grid, so a <section> on its own falls into the 290px
+ * side -- and the whole page jumped sideways when the first answer arrived.
+ * Two panels of roughly the right height cost nothing and the layout never
+ * moves. */
+function BootSidebar() {
+  return html`
+    <aside class="skeleton-aside">
+      <section class="panel">
+        <div class="shim head"></div>
+        <div class="shim label"></div>
+        <div class="shim field"></div>
+        <div class="shim line" style="width:88%"></div>
+        <div class="shim line" style="width:46%"></div>
+        <div class="shim label"></div>
+        <div class="shim field"></div>
+      </section>
+      <section class="panel">
+        <div class="shim head"></div>
+        <div class="shim line" style="width:84%"></div>
+        <div class="shim line" style="width:64%"></div>
+      </section>
+    </aside>`;
+}
+
+/* The tab bar. It is drawn from a constant, so it can be on screen before
+   anything has been fetched -- which is most of why the first paint now
+   looks like the page rather than like a stack of grey boxes. */
+function Tabs({ live }) {
+  const here = TABS.find(function (tab) { return tab.id === state.tab; });
+  return html`
+    <div class="tabs" role="tablist">
+      ${TABS.map(function (tab) {
+        return html`
+          <button key=${tab.id} class="tab" role="tab" data-tab=${tab.id}
+            title=${tab.hint} disabled=${live ? null : true}
+            aria-selected=${String(tab.id === state.tab)}
+            onClick=${function () { update({ tab: tab.id }); }}>
+            <${Icon} name=${tab.icon} />
+            <span>${tab.label}</span>
+          </button>`;
+      })}
+    </div>
+    ${here ? html`<p class="tab-hint">${here.hint}</p>` : null}`;
+}
+
 /* Anything the app has to say that is not an answer: a link it could not
    read, a limit it stopped someone at. It lives outside the view so that a
    tab re-rendering underneath it does not swallow it. */
@@ -205,38 +253,39 @@ function App() {
 
   if (state.failure) {
     return html`
-      <main><section><div id="view">
-        <div class="error">
-          <${Icon} name="circle-alert" />
-          <span>Could not work that out: ${state.failure.message}</span>
-        </div>
-      </div></section></main>`;
+      <main>
+        <${BootSidebar} />
+        <section>
+          <${Tabs} live=${false} />
+          <div id="view">
+            <div class="error">
+              <${Icon} name="circle-alert" />
+              <span>Could not work that out: ${state.failure.message}</span>
+            </div>
+          </div>
+        </section>
+      </main>`;
   }
+
+  /* Same shell, same columns, same tab bar -- only the answer is missing. */
   if (!state.presets) {
     return html`
-      <main><section><div id="view"><${Skeleton} kind="plan" /></div></section></main>`;
+      <main>
+        <${BootSidebar} />
+        <section>
+          <${Tabs} live=${false} />
+          <div id="view"><${Skeleton} kind="plan" /></div>
+        </section>
+      </main>`;
   }
 
   const Tab = VIEWS[state.tab] || DataTab;
-  const here = TABS.find(function (tab) { return tab.id === state.tab; });
 
   return html`
     <main>
       <${Sidebar} />
       <section>
-        <div class="tabs" role="tablist">
-          ${TABS.map(function (tab) {
-            return html`
-              <button key=${tab.id} class="tab" role="tab" data-tab=${tab.id}
-                title=${tab.hint}
-                aria-selected=${String(tab.id === state.tab)}
-                onClick=${function () { update({ tab: tab.id }); }}>
-                <${Icon} name=${tab.icon} />
-                <span>${tab.label}</span>
-              </button>`;
-          })}
-        </div>
-        ${here ? html`<p class="tab-hint">${here.hint}</p>` : null}
+        <${Tabs} live />
         <${Notice} />
         ${/* Keyed on the tab so switching tabs mounts a fresh view rather
              than reusing the last one's hooks. */ ''}
