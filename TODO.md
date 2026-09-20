@@ -28,3 +28,10 @@ delete when done.
 - [ ] A/B Nova Lite against Claude Haiku 4.5 on explanation quality once explanations exist
 - [ ] Assert in tests that the explanation contains no number that wasn't in the solver output
 - [ ] Decide what the app does when the menu alone already meets every target — the answer is a good screen, not an empty one
+
+## Infra
+
+- [ ] Point `allowed_origin` at the CloudFront domain once it exists, instead of `*`
+- [ ] Add a CloudFront response headers policy with CSP and HSTS
+- [ ] Move Terraform state to S3 with DynamoDB locking if anyone else ever runs it
+- [ ] Check whether arm64 is actually faster than x86_64 for this solver before claiming it
