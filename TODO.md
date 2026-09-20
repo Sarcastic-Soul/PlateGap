@@ -6,6 +6,8 @@ delete when done.
 ## Waiting on the account owner
 
 - [ ] Sanity-check the seed market prices against a real shop near campus
+- [ ] Apply the Terraform for the scan budget table, the cap and the 30 s timeout — the code ships without it, but the ceiling does not exist until it is applied
+- [ ] Set an AWS Budgets alert (free, two per account) so a surprise bill is an email rather than a discovery
 - [ ] Decide on a licence — there is no LICENSE file, so by default nobody may reuse the code
 
 ## Product
@@ -36,4 +38,6 @@ delete when done.
 - [x] Demo screenshots match the live site — capturing against CloudFront after the redesign produced files byte-identical to the committed ones
 - [x] A PDF goes to Bedrock whole, as a `document` block — no rasterising, so the function needs no poppler or PIL; measured at 1,862 tokens in, ~1,100 out, about ten seconds
 - [x] The model transcribes and never matches — asked to emit the days down the side instead of across the top it dropped most of the grid and looped one row to the token cap, and every instruction past "copy what is printed" cost transcription quality
+- [x] `scan` is capped at 500 reads a day, counted in DynamoDB — reserved concurrency alone allows ~1 scan/sec, which is ~$34/day of Bedrock on a public endpoint, and WAF costs more per month than the loss it would prevent
+- [x] The counter fails closed and uses `ADD` rather than read-then-write — a module global is per warm container, so its real ceiling is that number times however many are alive
 - [x] Near misses are grouped by written name — a week of menu says "SAMBER" four times and "CHUTNEY" three, so 29 rows of unmatched became 11 worth a tap and 9 folded away

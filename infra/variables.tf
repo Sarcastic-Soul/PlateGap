@@ -75,6 +75,24 @@ variable "scan_model" {
   default     = "amazon.nova-lite-v1:0"
 }
 
+variable "scan_daily_cap" {
+  description = <<-TEXT
+    How many menus `scan` will read in a day before it starts refusing.
+
+    Per day rather than per lifetime: a lifetime cap eventually trips and
+    then the feature is gone until a person notices, which could be at three
+    in the morning during judging. A daily one bounds the loss to a day of it
+    and then heals itself at midnight UTC.
+
+    500 is about $0.20 a day of Nova Lite at the measured cost of a scan, and
+    far more than any real visitor will use -- only a script gets near it.
+    Refusing is graceful: the upload comes back with `read: false` and the
+    paste box, which costs nothing to run, does the same job.
+  TEXT
+  type        = number
+  default     = 500
+}
+
 variable "lambda_timeout_seconds" {
   description = <<-TEXT
     Hard stop for one request. The slowest action is `scan`, which waits on

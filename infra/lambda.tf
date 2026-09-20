@@ -97,6 +97,58 @@ resource "aws_iam_role_policy" "lambda_bedrock" {
   policy = data.aws_iam_policy_document.lambda_bedrock.json
 }
 
+# --------------------------------------------------------------------------
+# The daily ceiling on what `scan` may spend.
+#
+# This is the only durable shared state in the project, and it exists for the
+# only action that costs money per call on a public, unauthenticated
+# endpoint. `solver/scanbudget.py` argues the case; the short version is that
+# reserved concurrency bounds the rate to about a scan a second, which is
+# roughly $34 a day of Bedrock, and a counter is both cheaper and a better
+# fit than the WAF it would otherwise take to stop that.
+#
+# On-demand rather than provisioned. The always-free tier covers 25 write
+# units, and one unit is one write a second -- exactly the peak rate this is
+# meant to survive -- so the free option is the one that throttles under the
+# load it exists for. On-demand at the daily cap is about two cents a month.
+#
+# One tiny row per day, swept up by TTL a week later, which leaves "how much
+# did this actually get used" answerable without keeping anything for ever.
+# --------------------------------------------------------------------------
+
+resource "aws_dynamodb_table" "scan_budget" {
+  name         = "${var.name}-scan-budget"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "day"
+
+  attribute {
+    name = "day"
+    type = "S"
+  }
+
+  ttl {
+    attribute_name = "expires"
+    enabled        = true
+  }
+}
+
+data "aws_iam_policy_document" "lambda_budget" {
+  statement {
+    sid = "CountWhatWasSpent"
+    # UpdateItem only. The function adds to the tally and reads back what it
+    # wrote in the same call; it has no reason to scan the table, and no
+    # reason to be able to delete a day it has already spent.
+    actions   = ["dynamodb:UpdateItem"]
+    resources = [aws_dynamodb_table.scan_budget.arn]
+  }
+}
+
+resource "aws_iam_role_policy" "lambda_budget" {
+  name   = "scan-budget"
+  role   = aws_iam_role.lambda.id
+  policy = data.aws_iam_policy_document.lambda_budget.json
+}
+
 resource "aws_cloudwatch_log_group" "lambda" {
   name              = "/aws/lambda/${var.name}"
   retention_in_days = var.log_retention_days
@@ -117,13 +169,16 @@ resource "aws_lambda_function" "solver" {
 
   environment {
     variables = {
-      ALLOWED_ORIGIN      = var.allowed_origin
-      PLATEGAP_SCAN_MODEL = var.scan_model
+      ALLOWED_ORIGIN          = var.allowed_origin
+      PLATEGAP_SCAN_MODEL     = var.scan_model
+      PLATEGAP_SCAN_TABLE     = aws_dynamodb_table.scan_budget.name
+      PLATEGAP_SCAN_DAILY_CAP = tostring(var.scan_daily_cap)
     }
   }
 
   depends_on = [
     aws_iam_role_policy.lambda_logs,
+    aws_iam_role_policy.lambda_budget,
     aws_cloudwatch_log_group.lambda,
   ]
 }

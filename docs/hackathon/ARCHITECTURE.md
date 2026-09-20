@@ -208,7 +208,7 @@ What was considered and deliberately cut, each for a stated reason:
 | --- | --- |
 | API Gateway | A Lambda Function URL gives the same HTTPS endpoint with CORS at no cost, and API Gateway's free tier is 12-month rather than always-free |
 | Textract | Nova Lite accepts an image or a PDF directly, so a separate OCR service would be one more dependency for a job one call already does. Measured: a page of PDF is about ten seconds and $0.0004 |
-| DynamoDB | Nothing here actually needs shared durable state. Catalog is static JSON, metrics are logs, shared plans ride in the URL fragment |
+| DynamoDB, for data | Nothing that is *data* needs shared durable state. Catalog is static JSON, metrics are logs, shared plans ride in the URL fragment. **One table went in later and for a different reason:** a daily counter capping what `scan` may spend on Bedrock, which is the one number in the project that cannot be recomputed from anything else. See "Added: a spend cap" below |
 | Step Functions | There is no long-running workflow. The solve is single-digit milliseconds |
 | EC2 | Nothing needs to be always-on, and an instance in the request path is the single most likely way to fail the ship gate between Oct 2 and Oct 19 |
 
@@ -303,6 +303,43 @@ Two things were measured on the way and both went against the design:
 
 Against the real seven-day IIIT timetable: 127 dishes read across all seven
 days, 20 names it would not place, each reported with its near misses.
+
+## Added: a spend cap, and the one table in the project
+
+`scan` calls Bedrock, and the Function URL is public and unauthenticated by
+design. That makes "anyone may try this" and "anyone may spend my money" the
+same sentence unless something counts.
+
+Reserved concurrency is not the answer. Ten executions, each holding its slot
+for the ten seconds a page of PDF takes, is about one scan a second — roughly
+$34 a day, which is more than this project's whole budget. A per-caller rate
+limit is not the answer either: a Function URL has no API keys to count, and
+per-IP limiting means WAF, whose monthly minimum is several times the loss it
+would prevent.
+
+So the spend itself is counted. One DynamoDB row per day, `ADD` to increment,
+TTL to sweep it up a week later; the 501st scan of a day comes back with
+`read: false` and a sentence pointing at the paste box. The cap is per day
+rather than per lifetime because a lifetime cap eventually trips and then the
+feature is gone until a person notices — possibly at three in the morning,
+mid-judging.
+
+Two details worth defending:
+
+- **`UpdateItem` with `ADD`, not read-then-write.** One atomic round trip that
+  returns the value it wrote, so ten containers incrementing at the same
+  instant get ten different numbers and exactly one of them is the five
+  hundredth. A module global would have been free and wrong — it is per warm
+  container, so the true ceiling becomes that number times however many
+  containers are alive.
+- **It fails closed.** If the tally cannot be read, the scan is refused.
+  Failing open reads better until you notice that anything breaking DynamoDB
+  also removes the ceiling, which is the only thing this exists to hold up.
+
+On-demand billing rather than provisioned, because the always-free tier's 25
+write units are 25 writes a second — and 1 unit, the free-tier-shaped choice,
+is exactly the peak rate this is built to survive. On-demand at the cap is
+about two cents a month.
 
 ## Changed: one action per request, not one path per endpoint
 

@@ -30,6 +30,7 @@ A hackathon demo does not come within three orders of magnitude of any of these.
 | S3 | ~$0.023/GB-month + request charges | a ~20 MB static site | **under $0.01/month** |
 | Bedrock Nova Lite | $0.06 / $0.24 per M tokens in/out | one `explain` call measured at 732 in, ~130 out; 2,000 of them | **~$0.15 total** |
 | Bedrock Nova Lite, `scan` | same rate | one uploaded menu measured at 1,862 in, ~1,100 out; 200 of them | **~$0.08 total** |
+| DynamoDB, on-demand | ~$0.625–1.25 per M writes | one write per scan, capped at 500/day | **under $0.02/month** |
 | Bedrock Nova Micro | $0.035 / $0.14 per M tokens | same volume | ~$0.09 total |
 | Bedrock Claude Haiku 4.5 | $1 / $5 per M tokens | same volume | ~$2.76 total |
 | EC2 t4g.medium | ~$0.0336/hr | already running, by choice | ~$24/month, paid from credits |
@@ -89,6 +90,7 @@ Lambda + Function URL    solve · frontier · audit · parse · scan · explain 
 DynamoDB (on-demand)     shared menu library + usage counters          free
 Bedrock                  Nova Lite: the explanation, and reading an    ~$0.15 total
                          uploaded menu
+DynamoDB                 one row a day, capping what scan may spend   <$0.02/month
 CloudWatch Logs          structured logs, Logs Insights for metrics    free
 ```
 

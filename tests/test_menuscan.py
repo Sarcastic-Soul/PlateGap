@@ -325,3 +325,102 @@ def test_the_model_can_be_switched_off_entirely(monkeypatch):
     monkeypatch.setattr(menuscan, "MODEL_ID", "off")
     with pytest.raises(menuscan.ScanUnavailable):
         menuscan.call_model({"image": {}})
+
+
+# --------------------------------------------------------------------------
+# The daily ceiling on what a public endpoint may spend
+# --------------------------------------------------------------------------
+
+def spent(monkeypatch, total):
+    """Pretend today's tally has reached `total` after this claim."""
+    monkeypatch.setattr(handler.scanbudget, "TABLE", "plategap-scan-budget")
+    monkeypatch.setattr(handler.scanbudget, "_count", lambda day: total)
+
+
+def test_a_scan_under_the_cap_goes_ahead(monkeypatch):
+    spent(monkeypatch, 1)
+    status, body = scan(monkeypatch, GRID)
+    assert status == 200, body
+    assert body["read"] is True
+
+
+def test_the_cap_is_a_ceiling_not_a_suggestion(monkeypatch):
+    spent(monkeypatch, handler.scanbudget.daily_cap() + 1)
+    status, body = scan(monkeypatch, GRID)
+    assert status == 200, body
+    assert body["read"] is False
+    assert "daily limit" in body["reason"]
+    # And it says what to do instead, because the paste box has no limit.
+    assert "paste" in body["reason"].lower()
+
+
+def test_nothing_is_spent_once_the_cap_is_reached(monkeypatch):
+    """The claim happens before Bedrock, or it is not a spending cap."""
+    def never(block):
+        raise AssertionError("the model was called past the daily cap")
+
+    spent(monkeypatch, handler.scanbudget.daily_cap() + 500)
+    monkeypatch.setattr(handler.menuscan, "call_model", never)
+    status, body = call(action="scan", kind="pdf",
+                        file=base64.b64encode(b"%PDF-1.4").decode())
+    assert status == 200
+    assert body["read"] is False
+
+
+def test_the_count_that_cannot_be_read_refuses_the_scan(monkeypatch):
+    """Fail closed.
+
+    Anything that breaks the counter would otherwise remove the ceiling,
+    which is the one thing it exists to hold up. Refusing costs somebody an
+    upload; the other way costs money that cannot be got back.
+    """
+    def broken(day):
+        raise RuntimeError("no such table")
+
+    def never(block):
+        raise AssertionError("the model was called with no working counter")
+
+    monkeypatch.setattr(handler.scanbudget, "TABLE", "plategap-scan-budget")
+    monkeypatch.setattr(handler.scanbudget, "_count", broken)
+    monkeypatch.setattr(handler.menuscan, "call_model", never)
+    status, body = call(action="scan", kind="pdf",
+                        file=base64.b64encode(b"%PDF-1.4").decode())
+    assert status == 200
+    assert body["read"] is False
+    assert "could not be checked" in body["reason"]
+
+
+def test_the_claim_is_one_atomic_round_trip(monkeypatch):
+    """Two containers incrementing at once must get two different numbers.
+
+    A read-then-write would let both of them see 499 and both decide they
+    were under the cap. `ADD` returns what it wrote.
+    """
+    calls = []
+
+    class FakeTable:
+        def update_item(self, **kwargs):
+            calls.append(kwargs)
+            return {"Attributes": {"scans": len(calls)}}
+
+    monkeypatch.setattr(handler.scanbudget, "_TABLE", FakeTable())
+    monkeypatch.setattr(handler.scanbudget, "TABLE", "plategap-scan-budget")
+    assert handler.scanbudget._count("2026-09-21") == 1
+    assert handler.scanbudget._count("2026-09-21") == 2
+
+    sent = calls[0]
+    assert "ADD scans :one" in sent["UpdateExpression"]
+    assert sent["ReturnValues"] == "UPDATED_NEW"
+    assert sent["Key"] == {"day": "2026-09-21"}
+    # And every row sweeps itself up rather than accumulating for ever.
+    assert sent["ExpressionAttributeValues"][":ttl"] > 0
+
+
+def test_a_checkout_with_no_table_has_no_ceiling():
+    """The test suite and the dev server cannot reach Bedrock anyway.
+
+    Terraform always sets the table name on the deployed function, so
+    "unset" never happens where it would matter.
+    """
+    assert handler.scanbudget.TABLE == ""
+    assert handler.scanbudget.take() is None

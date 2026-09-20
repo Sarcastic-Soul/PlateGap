@@ -29,6 +29,7 @@ for _candidate in (HERE, REPO):
 from solver import audit as audit_module      # noqa: E402
 from solver import explain as explain_module  # noqa: E402
 from solver import menuscan                   # noqa: E402
+from solver import scanbudget                 # noqa: E402
 from solver import menutext                   # noqa: E402
 from solver import model                      # noqa: E402
 from solver import plan                       # noqa: E402
@@ -518,6 +519,13 @@ def action_scan(body):
 
     name = _menu_name(body)
     region = _menu_region(body)
+
+    # Claimed before the model is called, never after. This is the only
+    # action that spends money on an unauthenticated endpoint, and the
+    # ceiling is worth more than the one scan it occasionally refuses.
+    refused = scanbudget.take()
+    if refused:
+        return {"read": False, "reason": refused}
 
     try:
         scan = menuscan.read(data, kind.lower())
