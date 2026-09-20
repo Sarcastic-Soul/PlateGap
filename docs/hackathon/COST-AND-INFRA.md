@@ -38,6 +38,27 @@ A hackathon demo does not come within three orders of magnitude of any of these.
 **The whole project, excluding the EC2 you're deliberately burning credits on,
 costs under one dollar for the entire hackathon.**
 
+## The backstop
+
+Every other control in this project bounds spending where the spending
+happens: reserved concurrency bounds the request rate, `scan_daily_cap` bounds
+the only action that pays a model, the Always Free allowances cover the rest.
+`infra/budget.tf` is for the case none of those anticipated, and it is a $5 a
+month AWS Budget that emails on a forecast breach and again at 80% and 100% of
+actual.
+
+The one setting that makes it work is `include_credit = false`. By default a
+budget subtracts credits before comparing against the threshold, so an account
+carrying $50 of them reads $0.00 no matter what it is doing, and the first
+email arrives once the credits are already gone. Excluding them makes the alert
+measure usage, which is the thing worth hearing about while it can still be
+stopped.
+
+The address is not in this repository. It is a real inbox and the repository is
+public, so `budget_alert_email` has no default and is passed at apply time;
+unset, the budget is simply not created, and nothing in CI runs Terraform so
+nothing breaks. Budgets are free for the first two per account.
+
 ## The actual insight
 
 Money is not the constraint. The constraint is that **$50 expires next month**,
@@ -92,6 +113,7 @@ Bedrock                  Nova Lite: the explanation, and reading an    ~$0.15 to
                          uploaded menu
 DynamoDB                 one row a day, capping what scan may spend   <$0.02/month
 CloudWatch Logs          structured logs, Logs Insights for metrics    free
+AWS Budgets              $5/month alert on gross usage, as a backstop   free
 ```
 
 DynamoDB earns its place only because of the shared menu library — strangers

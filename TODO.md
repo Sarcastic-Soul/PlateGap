@@ -6,8 +6,6 @@ delete when done.
 ## Waiting on the account owner
 
 - [ ] Sanity-check the seed market prices against a real shop near campus
-- [ ] Apply the Terraform for the scan budget table, the cap and the 30 s timeout — the code ships without it, but the ceiling does not exist until it is applied
-- [ ] Set an AWS Budgets alert (free, two per account) so a surprise bill is an email rather than a discovery
 - [ ] Decide on a licence — there is no LICENSE file, so by default nobody may reuse the code
 
 ## Product

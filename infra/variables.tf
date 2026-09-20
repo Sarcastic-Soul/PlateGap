@@ -160,3 +160,33 @@ variable "github_oidc_provider_arn" {
   type        = string
   default     = ""
 }
+
+variable "budget_alert_email" {
+  description = <<-TEXT
+    Where the monthly budget alert goes. Empty means no budget is created.
+
+    Deliberately without a default. This repository is public and the value is
+    a real inbox, so it is passed at apply time rather than committed:
+
+      terraform apply -var 'budget_alert_email=you@example.com'
+
+    No confirmation step: a budget emails the address directly, unlike an SNS
+    subscription. AWS allows two budgets per account free of charge.
+  TEXT
+  type        = string
+  default     = ""
+}
+
+variable "budget_alert_limit" {
+  description = <<-TEXT
+    Dollars a month before the alert fires, measured on gross usage rather
+    than on what is left after credits.
+
+    $5 is chosen to be noticed rather than to be affordable. The measured cost
+    of running this project is under a dollar for the whole hackathon, so $5 a
+    month is not a budget being managed -- it is the level at which something
+    has gone wrong and a person should look.
+  TEXT
+  type        = number
+  default     = 5
+}
