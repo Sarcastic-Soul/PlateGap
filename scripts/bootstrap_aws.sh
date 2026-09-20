@@ -14,6 +14,25 @@ set -euo pipefail
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# Terraform does not go through the AWS CLI. It reads credentials itself, with
+# the Go SDK, and the Go SDK cannot read the session cache that `aws login`
+# writes -- so a shell where every `aws` command works can still fail Terraform
+# with "No valid credential sources found". Handing it the credentials as
+# environment variables is the fix.
+#
+# Stale values from an earlier session are unset first: an expired
+# AWS_SESSION_TOKEN left over in the shell shadows the refreshed cache and
+# produces "the refreshed credentials are still expired", which looks like a
+# login problem and is not one. Nothing here is printed or written to disk.
+unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN \
+      AWS_CREDENTIAL_EXPIRATION AWS_SECURITY_TOKEN
+if ! credentials="$(aws configure export-credentials --format env 2>/dev/null)"; then
+  echo "Not signed in to AWS. Run \`aws login\` (or \`aws sso login\`) and try again." >&2
+  exit 1
+fi
+eval "$credentials"
+unset credentials
+
 echo "==> Checking you are signed in"
 aws sts get-caller-identity --query Arn --output text
 gh auth status >/dev/null
