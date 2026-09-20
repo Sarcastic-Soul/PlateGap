@@ -1,5 +1,6 @@
 {
  "id": "dining-hall",
+ "providerNoun": "the dining hall",
  "name": "University dining hall",
  "subtitle": "A typical North American all-you-care-to-eat meal plan",
  "cuisine": "american",

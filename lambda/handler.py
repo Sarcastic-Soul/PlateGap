@@ -258,6 +258,7 @@ def action_presets(body):
                 "id": menu["id"],
                 "name": menu["name"],
                 "subtitle": menu.get("subtitle", ""),
+                "providerNoun": menu.get("providerNoun", "your meal plan"),
                 "region": menu.get("region", "IN"),
                 "cuisine": menu.get("cuisine", ""),
                 "currency": menu.get("currency", ""),

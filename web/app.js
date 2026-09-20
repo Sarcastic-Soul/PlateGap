@@ -134,6 +134,14 @@ function currentMenu() {
   return null;
 }
 
+/* What to call the place the food comes from. A hostel mess, a dining hall and
+   a canteen are the same thing to the solver and three different words to the
+   person reading the screen, so the menu carries its own noun. */
+function providerNoun() {
+  var menu = currentMenu();
+  return (menu && menu.providerNoun) || 'your meal plan';
+}
+
 /* ------------------------------------------------------------------ pieces */
 
 function stat(value, label) {
@@ -255,8 +263,9 @@ function renderPlan(view) {
         el('ul', {}, items),
         el('p', {
           class: 'note',
-          text: 'That is the best case: the mess food chosen optimally, within '
-            + 'what is actually served and what you could actually eat.'
+          text: 'That is the best case: the food from ' + providerNoun()
+            + ' chosen optimally, within what is actually served and what you '
+            + 'could actually eat.'
         })
       ]));
     }
@@ -297,7 +306,7 @@ function renderPlan(view) {
 
     view.appendChild(el('div', { class: 'grid2' }, [
       el('section', { class: 'panel' }, [
-        el('h2', { text: 'From the mess, free' }),
+        el('h2', { text: 'From ' + providerNoun() + ', free' }),
         el('table', {}, [
           el('thead', {}, [el('tr', {}, [
             el('th', {}, ['Dish']),

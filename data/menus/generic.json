@@ -1,5 +1,6 @@
 {
  "id": "generic",
+ "providerNoun": "the canteen",
  "name": "Generic cafeteria",
  "subtitle": "A deliberately plain menu to start from",
  "cuisine": "indian",
