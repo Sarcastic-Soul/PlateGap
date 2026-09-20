@@ -1,0 +1,45 @@
+name: test
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Run the suite
+        run: uv run --group dev pytest -q
+
+      # The solver ships to Lambda with no dependencies at all. If an import
+      # ever creeps in, the tests would still pass locally and the function
+      # would fail on its first invocation, so check the package directly.
+      - name: Check the deployment package imports with nothing installed
+        run: |
+          ./scripts/package_lambda.sh
+          rm -rf /tmp/coldstart && mkdir -p /tmp/coldstart
+          unzip -q build/lambda.zip -d /tmp/coldstart
+          cd /tmp/coldstart
+          python3 -c "
+          import json, sys
+          sys.path.insert(0, '.')
+          import handler
+          event = {'requestContext': {'http': {'method': 'POST'}},
+                   'body': json.dumps({'action': 'solve', 'menuId': 'iiit', 'day': 'mon'})}
+          result = handler.handler(event, None)
+          assert result['statusCode'] == 200, result
+          answer = json.loads(result['body'])
+          assert answer['feasible'], answer
+          print('cold start solved in a clean interpreter:', answer['spend'])
+          "

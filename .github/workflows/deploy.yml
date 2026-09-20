@@ -1,0 +1,131 @@
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# The job needs to mint an OIDC token to assume the AWS role. There are no
+# access keys anywhere in this repository or its settings -- the role trusts
+# GitHub's identity provider and is pinned to this repository and this branch.
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Everything below needs infrastructure that Terraform creates. Until
+      # someone has run it and set these variables, the workflow says so and
+      # stops rather than failing in a way that looks like a broken build.
+      - name: Check the deployment targets are configured
+        id: check
+        env:
+          ROLE: ${{ vars.AWS_DEPLOY_ROLE }}
+          BUCKET: ${{ vars.SITE_BUCKET }}
+          FUNCTION: ${{ vars.LAMBDA_FUNCTION }}
+          DISTRIBUTION: ${{ vars.DISTRIBUTION_ID }}
+        run: |
+          if [ -z "$ROLE" ] || [ -z "$BUCKET" ] || [ -z "$FUNCTION" ] || [ -z "$DISTRIBUTION" ]; then
+            echo "::notice::Deployment variables are not set yet. Run terraform in infra/ and set AWS_DEPLOY_ROLE, SITE_BUCKET, LAMBDA_FUNCTION and DISTRIBUTION_ID as repository variables."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install uv
+        if: steps.check.outputs.ready == 'true'
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      # Nothing ships that has not passed. A deploy workflow that skips the
+      # tests is a deploy workflow that eventually ships something broken.
+      - name: Run the suite
+        if: steps.check.outputs.ready == 'true'
+        run: uv run --group dev pytest -q
+
+      - name: Build the function package
+        if: steps.check.outputs.ready == 'true'
+        run: ./scripts/package_lambda.sh
+
+      - name: Assume the deploy role
+        if: steps.check.outputs.ready == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE }}
+          aws-region: ${{ vars.AWS_REGION || 'ap-south-1' }}
+          role-session-name: plategap-deploy-${{ github.run_id }}
+
+      - name: Update the function
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws lambda update-function-code \
+            --function-name "${{ vars.LAMBDA_FUNCTION }}" \
+            --zip-file "fileb://build/lambda.zip" \
+            --no-cli-pager >/dev/null
+          aws lambda wait function-updated \
+            --function-name "${{ vars.LAMBDA_FUNCTION }}"
+
+      - name: Point the site at the function
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          url="$(aws lambda get-function-url-config \
+            --function-name "${{ vars.LAMBDA_FUNCTION }}" \
+            --query FunctionUrl --output text)"
+          printf 'window.PLATEGAP_API = %s;\n' "$(printf '%s' "$url" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')" \
+            > web/config.js
+          cat web/config.js
+
+      - name: Publish the site
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          # Assets are content-hashed by nothing, so they are cached briefly
+          # and the HTML not at all. The site is three files; there is no
+          # reason to be clever about it.
+          aws s3 sync web/ "s3://${{ vars.SITE_BUCKET }}/" \
+            --delete \
+            --exclude "index.html" \
+            --cache-control "public, max-age=300"
+          aws s3 cp web/index.html "s3://${{ vars.SITE_BUCKET }}/index.html" \
+            --cache-control "no-cache"
+
+      - name: Invalidate the cache
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.DISTRIBUTION_ID }}" \
+            --paths "/*" --no-cli-pager >/dev/null
+
+      # A green deploy that produced a broken endpoint is worse than a red
+      # one, so the workflow calls the live function before it finishes.
+      - name: Smoke test the live endpoint
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          url="$(aws lambda get-function-url-config \
+            --function-name "${{ vars.LAMBDA_FUNCTION }}" \
+            --query FunctionUrl --output text)"
+          for action in presets solve audit; do
+            code="$(curl -sS -o /tmp/out.json -w '%{http_code}' -X POST "$url" \
+              -H 'content-type: application/json' \
+              -d "{\"action\":\"$action\",\"menuId\":\"iiit\",\"day\":\"mon\"}")"
+            if [ "$code" != "200" ]; then
+              echo "::error::$action returned $code"
+              head -c 400 /tmp/out.json
+              exit 1
+            fi
+            echo "$action ok"
+          done
+          python3 -c "
+          import json
+          answer = json.load(open('/tmp/out.json'))
+          assert answer['recommendations'], 'the audit came back empty'
+          print('live audit returned', len(answer['recommendations']), 'recommendations')
+          "
