@@ -28,8 +28,9 @@ A hackathon demo does not come within three orders of magnitude of any of these.
 | Service | Rate | Our usage | Cost |
 | --- | --- | --- | --- |
 | S3 | ~$0.023/GB-month + request charges | a ~20 MB static site | **under $0.01/month** |
-| Bedrock Nova Lite | $0.06 / $0.24 per M tokens in/out | ~2,000 explanation calls ≈ 1.6 M in, 0.4 M out | **~$0.19 total** |
-| Bedrock Claude Haiku 4.5 | ~$1 / $5 per M tokens | same volume, if we upgrade for quality | **~$3.60 total** |
+| Bedrock Nova Lite | $0.06 / $0.24 per M tokens in/out | one `explain` call measured at 732 in, ~130 out; 2,000 of them | **~$0.15 total** |
+| Bedrock Nova Micro | $0.035 / $0.14 per M tokens | same volume | ~$0.09 total |
+| Bedrock Claude Haiku 4.5 | $1 / $5 per M tokens | same volume | ~$2.76 total |
 | EC2 t4g.medium | ~$0.0336/hr | already running, by choice | ~$24/month, paid from credits |
 
 **The whole project, excluding the EC2 you're deliberately burning credits on,
@@ -40,15 +41,32 @@ costs under one dollar for the entire hackathon.**
 Money is not the constraint. The constraint is that **$50 expires next month**,
 and expiring credits are worth nothing.
 
-That inverts one decision. Bedrock is the only line item in this project that
-costs real money, and it is the one that directly affects output quality. So
-don't economize on the model — economize on servers. Use Claude Haiku 4.5 for
-the explanation layer instead of Nova Lite if it reads better, and let the
-credits absorb it. Total difference is about three dollars against a balance
-that evaporates regardless.
+That inverts one decision in principle: Bedrock is the only line item here
+that costs real money and the only one that affects output quality, so the
+instinct should be to economize on servers rather than on the model. Three
+dollars against a balance that evaporates regardless is not a saving.
 
-Keep Nova Lite for the menu-parsing calls, where the job is classification into
-a fixed catalog and a cheaper model is genuinely sufficient.
+In practice it did not come to that, for two reasons.
+
+The first is that Anthropic models on Bedrock need a one-time use-case form
+submitted from the console before they answer at all. Without it the call
+fails with `ResourceNotFoundException: Model use case details have not been
+submitted for this account`, which is an entitlement, not a quota — the quotas
+page cheerfully shows Haiku 4.5 at 5 M TPM while every invocation is refused.
+Amazon's own models need no form.
+
+The second is that the quality gap did not show up. The same `explain` prompt
+was put to Nova Lite and Nova Micro: both produced a correct, readable
+paragraph and both passed the reconciliation check that throws an explanation
+away when a number in it does not match the solve. There was nothing to buy.
+
+So `explain` runs on Nova Lite, at about $0.075 per thousand calls, and the
+form is not worth filling for this project. `PLATEGAP_EXPLAIN_MODEL` makes it
+one environment variable to revisit.
+
+There are no menu-parsing calls to economize on: `solver/menutext.py` matches
+pasted text against the catalog with string normalisation and containment
+scoring, and never invokes a model.
 
 ## Correction on the EC2 box
 
@@ -68,7 +86,7 @@ judged URL is CloudFront and Lambda. The box is yours for whatever else you want
 S3 + CloudFront          static frontend, HTTPS          ~$0.01/mo
 Lambda + Function URL    solve · frontier · audit · parse · explain    free
 DynamoDB (on-demand)     shared menu library + usage counters          free
-Bedrock                  Nova Lite for parsing, Haiku 4.5 for prose    ~$4 total
+Bedrock                  Nova Lite, for the explanation only           ~$0.15 total
 CloudWatch Logs          structured logs, Logs Insights for metrics    free
 ```
 
