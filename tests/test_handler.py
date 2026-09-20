@@ -33,7 +33,21 @@ def test_preflight_is_answered():
     response = handler.handler(
         {"requestContext": {"http": {"method": "OPTIONS"}}}, None)
     assert response["statusCode"] == 204
-    assert "Access-Control-Allow-Methods" in response["headers"]
+
+
+def test_the_function_never_sends_cors_headers_itself():
+    """CORS belongs to the Function URL, which adds the headers to every
+
+    response. Sending them from here as well produced
+    `Access-Control-Allow-Origin: *, *` -- two values where the spec allows
+    one -- and the browser refused every call while curl, which does not
+    enforce CORS, reported a healthy endpoint."""
+    status, _ = call(action="presets")
+    assert status == 200
+    for event in ({"requestContext": {"http": {"method": "OPTIONS"}}},
+                  {"body": json.dumps({"action": "presets"})}):
+        headers = handler.handler(event, None).get("headers", {})
+        assert not [h for h in headers if h.lower().startswith("access-control")]
 
 
 def test_presets_lists_every_menu_that_shipped():

@@ -49,12 +49,17 @@ ID_PATTERN = re.compile(r"^[a-z0-9_\-]{1,64}$")
 
 
 
-CORS = {
-    "Access-Control-Allow-Origin": os.environ.get("ALLOWED_ORIGIN", "*"),
-    "Access-Control-Allow-Methods": "POST,OPTIONS",
-    "Access-Control-Allow-Headers": "content-type",
-    "Access-Control-Max-Age": "86400",
-}
+# CORS is configured on the Function URL, not here. The Lambda service adds
+# the headers to every response and answers preflight without invoking this
+# function at all -- so setting them here too made the browser see
+# `Access-Control-Allow-Origin: *, *`, which is two values where the spec
+# allows one, and every request from the site failed. curl does not enforce
+# CORS, which is why the endpoint looked healthy from a terminal and was dead
+# in a browser.
+#
+# Anyone hosting this behind something other than a Function URL owns CORS
+# themselves; `scripts/dev_server.py` serves the site and the API on one
+# origin, so it needs none.
 
 
 class BadRequest(ValueError):
@@ -377,7 +382,7 @@ ACTIONS = {
 def _respond(status, payload):
     return {
         "statusCode": status,
-        "headers": dict(CORS, **{"content-type": "application/json"}),
+        "headers": {"content-type": "application/json"},
         "body": json.dumps(payload),
     }
 
@@ -403,7 +408,7 @@ def handler(event, context):
               .get("http", {})
               .get("method", "POST")).upper()
     if method == "OPTIONS":
-        return {"statusCode": 204, "headers": CORS, "body": ""}
+        return {"statusCode": 204, "body": ""}
 
     try:
         body = _read_body(event)
