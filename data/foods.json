@@ -1,0 +1,6258 @@
+{
+ "currencies": {
+  "IN": {
+   "code": "INR",
+   "decimals": 0,
+   "symbol": "\u20b9"
+  },
+  "US": {
+   "code": "USD",
+   "decimals": 2,
+   "symbol": "$"
+  }
+ },
+ "dishes": {
+  "aloo_bhujiya": {
+   "id": "aloo_bhujiya",
+   "maxServings": 2,
+   "name": "Aloo bhujiya",
+   "perServing": {
+    "calcium": 8.8,
+    "carbs": 22.011,
+    "fat": 7.11,
+    "fibre": 1.98,
+    "folate": 9.9,
+    "iron": 0.3445,
+    "kcal": 156.48,
+    "magnesium": 22.0,
+    "potassium": 360.8,
+    "protein": 1.881,
+    "satfat": 1.1241,
+    "sodium": 5.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 8.14,
+    "zinc": 0.2977
+   },
+   "recipe": [
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 110,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 120,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "aloo_choka": {
+   "id": "aloo_choka",
+   "maxServings": 2,
+   "name": "Aloo choka",
+   "perServing": {
+    "calcium": 13.4,
+    "carbs": 23.879,
+    "fat": 4.13,
+    "fibre": 2.32,
+    "folate": 13.7,
+    "iron": 0.385,
+    "kcal": 137.96,
+    "magnesium": 24.0,
+    "potassium": 390.0,
+    "protein": 2.101,
+    "satfat": 0.663,
+    "sodium": 6.3,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 9.62,
+    "zinc": 0.3314
+   },
+   "recipe": [
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 110,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 135,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "aloo_jeera": {
+   "id": "aloo_jeera",
+   "maxServings": 2,
+   "name": "Aloo jeera",
+   "perServing": {
+    "calcium": 9.6,
+    "carbs": 24.012,
+    "fat": 6.12,
+    "fibre": 2.16,
+    "folate": 10.8,
+    "iron": 0.375,
+    "kcal": 156.24,
+    "magnesium": 24.0,
+    "potassium": 393.6,
+    "protein": 2.052,
+    "satfat": 0.9702,
+    "sodium": 6.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 8.88,
+    "zinc": 0.3246
+   },
+   "recipe": [
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 120,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 125,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "aloo_paratha": {
+   "id": "aloo_paratha",
+   "maxServings": 3,
+   "name": "Aloo paratha",
+   "perServing": {
+    "calcium": 17.2,
+    "carbs": 37.7925,
+    "fat": 8.045,
+    "fibre": 5.09,
+    "folate": 21.65,
+    "iron": 1.583,
+    "kcal": 236.58,
+    "magnesium": 63.8,
+    "potassium": 292.8,
+    "protein": 6.0535,
+    "satfat": 1.2792,
+    "sodium": 3.05,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 3.33,
+    "zinc": 1.1622
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "atta"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 45,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 95,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "aloo_tomato": {
+   "id": "aloo_tomato",
+   "maxServings": 2,
+   "name": "Aloo tomato",
+   "perServing": {
+    "calcium": 12.0,
+    "carbs": 21.566,
+    "fat": 6.18,
+    "fibre": 2.28,
+    "folate": 15.0,
+    "iron": 0.421,
+    "kcal": 146.24,
+    "magnesium": 24.4,
+    "potassium": 422.8,
+    "protein": 2.062,
+    "satfat": 0.9762,
+    "sodium": 7.0,
+    "vita": 16.8,
+    "vitb12": 0.0,
+    "vitc": 12.88,
+    "zinc": 0.3386
+   },
+   "recipe": [
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 100,
+     "ingredient": "potato"
+    },
+    {
+     "grams": 40,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 145,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "amul_butter": {
+   "id": "amul_butter",
+   "maxServings": 2,
+   "name": "Butter portion",
+   "perServing": {
+    "calcium": 2.4,
+    "carbs": 0.006,
+    "fat": 8.111,
+    "fibre": 0.0,
+    "folate": 0.3,
+    "iron": 0.002,
+    "kcal": 71.7,
+    "magnesium": 0.2,
+    "potassium": 2.4,
+    "protein": 0.085,
+    "satfat": 5.1368,
+    "sodium": 64.3,
+    "vita": 68.4,
+    "vitb12": 0.017,
+    "vitc": 0.0,
+    "zinc": 0.009
+   },
+   "recipe": [
+    {
+     "grams": 10,
+     "ingredient": "butter"
+    }
+   ],
+   "servingGrams": 10,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "black_chana_aloo": {
+   "id": "black_chana_aloo",
+   "maxServings": 2,
+   "name": "Black chana aloo",
+   "perServing": {
+    "calcium": 53.5,
+    "carbs": 38.552,
+    "fat": 8.411,
+    "fibre": 8.26,
+    "folate": 164.0,
+    "iron": 2.832,
+    "kcal": 260.24,
+    "magnesium": 57.2,
+    "potassium": 487.9,
+    "protein": 9.22,
+    "satfat": 1.2051,
+    "sodium": 10.1,
+    "vita": 0.9,
+    "vitb12": 0.0,
+    "vitc": 7.09,
+    "zinc": 1.5736
+   },
+   "recipe": [
+    {
+     "grams": 90,
+     "ingredient": "chana"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 60,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 175,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "boiled_egg": {
+   "id": "boiled_egg",
+   "maxServings": 2,
+   "name": "Boiled egg",
+   "perServing": {
+    "calcium": 25.0,
+    "carbs": 0.56,
+    "fat": 5.305,
+    "fibre": 0.0,
+    "folate": 22.0,
+    "iron": 0.595,
+    "kcal": 77.5,
+    "magnesium": 5.0,
+    "potassium": 63.0,
+    "protein": 6.29,
+    "satfat": 1.6335,
+    "sodium": 62.0,
+    "vita": 74.5,
+    "vitb12": 0.555,
+    "vitc": 0.0,
+    "zinc": 0.525
+   },
+   "recipe": [
+    {
+     "grams": 50,
+     "ingredient": "egg_boiled"
+    }
+   ],
+   "servingGrams": 50,
+   "tags": [
+    "egg",
+    "protein"
+   ]
+  },
+  "boiled_sprouts": {
+   "id": "boiled_sprouts",
+   "maxServings": 2,
+   "name": "Boiled sprouts",
+   "perServing": {
+    "calcium": 7.8,
+    "carbs": 3.564,
+    "fat": 0.108,
+    "fibre": 1.08,
+    "folate": 36.6,
+    "iron": 0.546,
+    "kcal": 18.0,
+    "magnesium": 12.6,
+    "potassium": 89.4,
+    "protein": 1.824,
+    "satfat": 0.0276,
+    "sodium": 3.6,
+    "vita": 0.6,
+    "vitb12": 0.0,
+    "vitc": 7.92,
+    "zinc": 0.246
+   },
+   "recipe": [
+    {
+     "grams": 60,
+     "ingredient": "sprouts"
+    }
+   ],
+   "servingGrams": 60,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "boondi_raita": {
+   "id": "boondi_raita",
+   "maxServings": 2,
+   "name": "Boondi raita",
+   "perServing": {
+    "calcium": 113.4,
+    "carbs": 9.976,
+    "fat": 7.594,
+    "fibre": 1.08,
+    "folate": 50.0,
+    "iron": 0.533,
+    "kcal": 128.96,
+    "magnesium": 27.4,
+    "potassium": 224.1,
+    "protein": 5.362,
+    "satfat": 2.5817,
+    "sodium": 47.8,
+    "vita": 24.5,
+    "vitb12": 0.333,
+    "vitc": 0.45,
+    "zinc": 0.8124
+   },
+   "recipe": [
+    {
+     "grams": 10,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 90,
+     "ingredient": "curd"
+    },
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 110,
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "bread_slice": {
+   "id": "bread_slice",
+   "maxServings": 4,
+   "name": "Bread slice",
+   "perServing": {
+    "calcium": 27.0,
+    "carbs": 12.4,
+    "fat": 0.9,
+    "fibre": 0.575,
+    "folate": 42.75,
+    "iron": 0.7575,
+    "kcal": 66.75,
+    "magnesium": 6.0,
+    "potassium": 29.75,
+    "protein": 2.05,
+    "satfat": 0.2028,
+    "sodium": 74.5,
+    "vita": 0.0,
+    "vitb12": 0.0075,
+    "vitc": 0.0,
+    "zinc": 0.155
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "bread_white"
+    }
+   ],
+   "servingGrams": 25,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "chicken_biryani": {
+   "id": "chicken_biryani",
+   "maxServings": 1,
+   "name": "Chicken biryani",
+   "perServing": {
+    "calcium": 26.85,
+    "carbs": 41.306,
+    "fat": 10.3755,
+    "fibre": 0.9,
+    "folate": 10.2,
+    "iron": 0.898,
+    "kcal": 351.47,
+    "magnesium": 34.75,
+    "potassium": 219.0,
+    "protein": 21.047,
+    "satfat": 1.9237,
+    "sodium": 42.9,
+    "vita": 3.3,
+    "vitb12": 0.187,
+    "vitc": 1.48,
+    "zinc": 1.2708
+   },
+   "recipe": [
+    {
+     "grams": 55,
+     "ingredient": "chicken"
+    },
+    {
+     "grams": 8,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 140,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 220,
+   "tags": [
+    "meat",
+    "main"
+   ]
+  },
+  "chicken_butter_masala": {
+   "id": "chicken_butter_masala",
+   "maxServings": 1,
+   "name": "Chicken butter masala",
+   "perServing": {
+    "calcium": 40.27,
+    "carbs": 2.1318,
+    "fat": 10.2333,
+    "fibre": 0.36,
+    "folate": 9.14,
+    "iron": 0.9726,
+    "kcal": 215.21,
+    "magnesium": 30.11,
+    "potassium": 317.02,
+    "protein": 27.329,
+    "satfat": 5.3493,
+    "sodium": 124.44,
+    "vita": 81.62,
+    "vitb12": 0.3926,
+    "vitc": 4.11,
+    "zinc": 0.9822
+   },
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 85,
+     "ingredient": "chicken"
+    },
+    {
+     "grams": 20,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 145,
+   "tags": [
+    "meat",
+    "protein"
+   ]
+  },
+  "chole": {
+   "id": "chole",
+   "maxServings": 2,
+   "name": "Chole",
+   "perServing": {
+    "calcium": 71.95,
+    "carbs": 38.9535,
+    "fat": 10.442,
+    "fibre": 10.605,
+    "folate": 232.1,
+    "iron": 3.8805,
+    "kcal": 289.58,
+    "magnesium": 67.65,
+    "potassium": 474.05,
+    "protein": 12.013,
+    "satfat": 1.4627,
+    "sodium": 11.35,
+    "vita": 11.8,
+    "vitb12": 0.0,
+    "vitc": 6.965,
+    "zinc": 2.0747
+   },
+   "recipe": [
+    {
+     "grams": 130,
+     "ingredient": "chana"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 185,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "chole_curry": {
+   "id": "chole_curry",
+   "maxServings": 2,
+   "name": "Chole curry",
+   "perServing": {
+    "calcium": 67.55,
+    "carbs": 36.406,
+    "fat": 10.193,
+    "fibre": 9.905,
+    "folate": 215.65,
+    "iron": 3.605,
+    "kcal": 274.08,
+    "magnesium": 63.4,
+    "potassium": 456.8,
+    "protein": 11.171,
+    "satfat": 1.4372,
+    "sodium": 10.9,
+    "vita": 13.8,
+    "vitb12": 0.0,
+    "vitc": 7.52,
+    "zinc": 1.9302
+   },
+   "recipe": [
+    {
+     "grams": 120,
+     "ingredient": "chana"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 185,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "corn_chat": {
+   "id": "corn_chat",
+   "maxServings": 2,
+   "name": "Corn chat",
+   "perServing": {
+    "calcium": 19.95,
+    "carbs": 10.6545,
+    "fat": 0.285,
+    "fibre": 3.855,
+    "folate": 44.1,
+    "iron": 0.954,
+    "kcal": 57.3,
+    "magnesium": 22.95,
+    "potassium": 203.85,
+    "protein": 3.549,
+    "satfat": 0.0531,
+    "sodium": 4.35,
+    "vita": 29.1,
+    "vitb12": 0.0,
+    "vitc": 27.165,
+    "zinc": 0.795
+   },
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 60,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "cutlet": {
+   "id": "cutlet",
+   "maxServings": 4,
+   "name": "Cutlet",
+   "perServing": {
+    "calcium": 9.0,
+    "carbs": 15.9429,
+    "fat": 9.8478,
+    "fibre": 2.106,
+    "folate": 56.49,
+    "iron": 0.7272,
+    "kcal": 164.7,
+    "magnesium": 28.92,
+    "potassium": 249.12,
+    "protein": 3.4563,
+    "satfat": 1.5034,
+    "sodium": 9.93,
+    "vita": 0.24,
+    "vitb12": 0.0,
+    "vitc": 3.33,
+    "zinc": 0.4596
+   },
+   "recipe": [
+    {
+     "grams": 12,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 9,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 45,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 55,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "dahi": {
+   "id": "dahi",
+   "maxServings": 2,
+   "name": "Dahi",
+   "perServing": {
+    "calcium": 96.8,
+    "carbs": 3.728,
+    "fat": 2.6,
+    "fibre": 0.0,
+    "folate": 5.6,
+    "iron": 0.04,
+    "kcal": 48.8,
+    "magnesium": 9.6,
+    "potassium": 124.0,
+    "protein": 2.776,
+    "satfat": 1.6768,
+    "sodium": 36.8,
+    "vita": 21.6,
+    "vitb12": 0.296,
+    "vitc": 0.4,
+    "zinc": 0.472
+   },
+   "recipe": [
+    {
+     "grams": 80,
+     "ingredient": "curd"
+    }
+   ],
+   "servingGrams": 80,
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "dal_makhani": {
+   "id": "dal_makhani",
+   "maxServings": 3,
+   "name": "Dal makhani",
+   "perServing": {
+    "calcium": 56.62,
+    "carbs": 29.5138,
+    "fat": 7.7448,
+    "fibre": 10.21,
+    "folate": 208.94,
+    "iron": 4.1566,
+    "kcal": 230.56,
+    "magnesium": 56.56,
+    "potassium": 575.82,
+    "protein": 12.39,
+    "satfat": 4.5683,
+    "sodium": 63.64,
+    "vita": 72.32,
+    "vitb12": 0.1036,
+    "vitc": 4.51,
+    "zinc": 1.6462
+   },
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 70,
+     "ingredient": "masoor_dal"
+    },
+    {
+     "grams": 20,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 60,
+     "ingredient": "rajma"
+    },
+    {
+     "grams": 20,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 175,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "dal_mix": {
+   "id": "dal_mix",
+   "maxServings": 4,
+   "name": "Mix dal",
+   "perServing": {
+    "calcium": 47.8,
+    "carbs": 28.3485,
+    "fat": 5.524,
+    "fibre": 9.43,
+    "folate": 175.35,
+    "iron": 1.66,
+    "kcal": 194.6,
+    "magnesium": 62.65,
+    "potassium": 463.95,
+    "protein": 9.076,
+    "satfat": 0.9144,
+    "sodium": 5.45,
+    "vita": 6.9,
+    "vitb12": 0.0,
+    "vitc": 2.655,
+    "zinc": 1.16
+   },
+   "recipe": [
+    {
+     "grams": 60,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    },
+    {
+     "grams": 70,
+     "ingredient": "toor_dal"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "dal_tadka": {
+   "id": "dal_tadka",
+   "maxServings": 4,
+   "name": "Dal tadka",
+   "perServing": {
+    "calcium": 29.65,
+    "carbs": 28.1535,
+    "fat": 5.539,
+    "fibre": 10.705,
+    "folate": 240.4,
+    "iron": 4.4035,
+    "kcal": 203.7,
+    "magnesium": 49.95,
+    "potassium": 537.15,
+    "protein": 12.023,
+    "satfat": 0.8619,
+    "sodium": 3.95,
+    "vita": 6.3,
+    "vitb12": 0.0,
+    "vitc": 5.115,
+    "zinc": 1.7025
+   },
+   "recipe": [
+    {
+     "grams": 130,
+     "ingredient": "masoor_dal"
+    },
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 165,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "dosa": {
+   "id": "dosa",
+   "maxServings": 2,
+   "name": "Dosa",
+   "perServing": {
+    "calcium": 11.4,
+    "carbs": 20.732,
+    "fat": 5.244,
+    "fibre": 1.76,
+    "folate": 33.6,
+    "iron": 0.4025,
+    "kcal": 143.2,
+    "magnesium": 16.8,
+    "potassium": 74.2,
+    "protein": 3.018,
+    "satfat": 0.8519,
+    "sodium": 1.0,
+    "vita": 0.2,
+    "vitb12": 0.0,
+    "vitc": 0.2,
+    "zinc": 0.4625
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 60,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "dum_aloo": {
+   "id": "dum_aloo",
+   "maxServings": 2,
+   "name": "Dum aloo",
+   "perServing": {
+    "calcium": 41.05,
+    "carbs": 23.954,
+    "fat": 8.9625,
+    "fibre": 2.22,
+    "folate": 14.65,
+    "iron": 0.4115,
+    "kcal": 184.17,
+    "magnesium": 27.2,
+    "potassium": 446.95,
+    "protein": 2.9245,
+    "satfat": 1.8102,
+    "sodium": 18.0,
+    "vita": 15.15,
+    "vitb12": 0.0925,
+    "vitc": 11.005,
+    "zinc": 0.4793
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "curd"
+    },
+    {
+     "grams": 8,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 110,
+     "ingredient": "potato"
+    },
+    {
+     "grams": 20,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 155,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "egg_bhurji": {
+   "id": "egg_bhurji",
+   "maxServings": 1,
+   "name": "Egg bhurji",
+   "perServing": {
+    "calcium": 55.75,
+    "carbs": 3.455,
+    "fat": 16.635,
+    "fibre": 0.425,
+    "folate": 48.75,
+    "iron": 1.2455,
+    "kcal": 218.04,
+    "magnesium": 12.5,
+    "potassium": 162.5,
+    "protein": 12.855,
+    "satfat": 4.2165,
+    "sodium": 125.0,
+    "vita": 149.0,
+    "vitb12": 1.11,
+    "vitc": 1.85,
+    "zinc": 1.0931
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "egg_boiled"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 130,
+   "tags": [
+    "egg",
+    "protein"
+   ]
+  },
+  "egg_curry": {
+   "id": "egg_curry",
+   "maxServings": 1,
+   "name": "Egg curry",
+   "perServing": {
+    "calcium": 58.25,
+    "carbs": 4.4275,
+    "fat": 17.685,
+    "fibre": 0.725,
+    "folate": 52.5,
+    "iron": 1.3135,
+    "kcal": 231.38,
+    "magnesium": 15.25,
+    "potassium": 221.75,
+    "protein": 13.075,
+    "satfat": 4.38,
+    "sodium": 126.25,
+    "vita": 159.5,
+    "vitb12": 1.11,
+    "vitc": 5.275,
+    "zinc": 1.1357
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "egg_boiled"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 160,
+   "tags": [
+    "egg",
+    "protein"
+   ]
+  },
+  "fruit_custard": {
+   "id": "fruit_custard",
+   "maxServings": 1,
+   "name": "Fruit custard",
+   "perServing": {
+    "calcium": 114.87,
+    "carbs": 24.7916,
+    "fat": 3.3655,
+    "fibre": 0.91,
+    "folate": 12.0,
+    "iron": 0.127,
+    "kcal": 138.59,
+    "magnesium": 19.45,
+    "potassium": 257.54,
+    "protein": 3.5315,
+    "satfat": 1.9042,
+    "sodium": 43.47,
+    "vita": 47.05,
+    "vitb12": 0.45,
+    "vitc": 3.045,
+    "zinc": 0.4237
+   },
+   "recipe": [
+    {
+     "grams": 35,
+     "ingredient": "banana"
+    },
+    {
+     "grams": 100,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 12,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "fruit_portion": {
+   "id": "fruit_portion",
+   "maxServings": 2,
+   "name": "Fruit (2 pcs)",
+   "perServing": {
+    "calcium": 9.8,
+    "carbs": 33.888,
+    "fat": 0.466,
+    "fibre": 4.52,
+    "folate": 22.4,
+    "iron": 0.356,
+    "kcal": 130.6,
+    "magnesium": 31.0,
+    "potassium": 443.6,
+    "protein": 1.298,
+    "satfat": 0.1344,
+    "sodium": 1.8,
+    "vita": 5.4,
+    "vitb12": 0.0,
+    "vitc": 12.38,
+    "zinc": 0.182
+   },
+   "recipe": [
+    {
+     "grams": 80,
+     "ingredient": "apple"
+    },
+    {
+     "grams": 100,
+     "ingredient": "banana"
+    }
+   ],
+   "servingGrams": 180,
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "gobhi_dry": {
+   "id": "gobhi_dry",
+   "maxServings": 2,
+   "name": "Gobhi dry",
+   "perServing": {
+    "calcium": 24.2,
+    "carbs": 5.467,
+    "fat": 6.308,
+    "fibre": 2.2,
+    "folate": 62.7,
+    "iron": 0.465,
+    "kcal": 80.54,
+    "magnesium": 16.5,
+    "potassium": 328.9,
+    "protein": 2.112,
+    "satfat": 1.082,
+    "sodium": 33.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 53.02,
+    "zinc": 0.2976
+   },
+   "recipe": [
+    {
+     "grams": 110,
+     "ingredient": "cauliflower"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 115,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "green_chutney": {
+   "id": "green_chutney",
+   "maxServings": 2,
+   "name": "Green chutney",
+   "perServing": {
+    "calcium": 2.96,
+    "carbs": 1.9656,
+    "fat": 2.6872,
+    "fibre": 0.856,
+    "folate": 3.6,
+    "iron": 0.2112,
+    "kcal": 31.52,
+    "magnesium": 3.36,
+    "potassium": 40.16,
+    "protein": 0.3544,
+    "satfat": 2.3792,
+    "sodium": 1.92,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.856,
+    "zinc": 0.1016
+   },
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "coconut"
+    },
+    {
+     "grams": 8,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 20,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "gulab_jamun": {
+   "id": "gulab_jamun",
+   "maxServings": 1,
+   "name": "Gulab jamun (2 pcs)",
+   "perServing": {
+    "calcium": 50.92,
+    "carbs": 42.7095,
+    "fat": 9.6334,
+    "fibre": 1.605,
+    "folate": 8.6,
+    "iron": 0.567,
+    "kcal": 261.58,
+    "magnesium": 24.55,
+    "potassium": 108.25,
+    "protein": 3.2639,
+    "satfat": 5.7644,
+    "sodium": 17.96,
+    "vita": 85.6,
+    "vitb12": 0.1808,
+    "vitc": 0.0,
+    "zinc": 0.5418
+   },
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "atta"
+    },
+    {
+     "grams": 8,
+     "ingredient": "ghee"
+    },
+    {
+     "grams": 40,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 30,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "idli": {
+   "id": "idli",
+   "maxServings": 4,
+   "name": "Idli",
+   "perServing": {
+    "calcium": 8.55,
+    "carbs": 15.549,
+    "fat": 0.183,
+    "fibre": 1.32,
+    "folate": 25.2,
+    "iron": 0.3,
+    "kcal": 74.25,
+    "magnesium": 12.6,
+    "potassium": 55.65,
+    "protein": 2.2635,
+    "satfat": 0.052,
+    "sodium": 0.75,
+    "vita": 0.15,
+    "vitb12": 0.0,
+    "vitc": 0.15,
+    "zinc": 0.3465
+   },
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 45,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 60,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "imli_chutney": {
+   "id": "imli_chutney",
+   "maxServings": 2,
+   "name": "Imli chutney",
+   "perServing": {
+    "calcium": 10.0,
+    "carbs": 11.5885,
+    "fat": 0.0155,
+    "fibre": 0.335,
+    "folate": 0.75,
+    "iron": 0.365,
+    "kcal": 44.49,
+    "magnesium": 8.3,
+    "potassium": 118.8,
+    "protein": 0.1225,
+    "satfat": 0.0,
+    "sodium": 2.45,
+    "vita": 0.35,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.038
+   },
+   "proxy": true,
+   "proxyNote": "Jaggery: Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+   "recipe": [
+    {
+     "grams": 5,
+     "ingredient": "dates"
+    },
+    {
+     "grams": 8,
+     "ingredient": "jaggery"
+    }
+   ],
+   "servingGrams": 20,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "jam": {
+   "id": "jam",
+   "maxServings": 2,
+   "name": "Jam",
+   "perServing": {
+    "calcium": 0.12,
+    "carbs": 11.9976,
+    "fat": 0.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.006,
+    "kcal": 46.44,
+    "magnesium": 0.0,
+    "potassium": 0.24,
+    "protein": 0.0,
+    "satfat": 0.0,
+    "sodium": 0.12,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.0012
+   },
+   "recipe": [
+    {
+     "grams": 12,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 15,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "jeera_rice": {
+   "id": "jeera_rice",
+   "maxServings": 4,
+   "name": "Jeera rice",
+   "perServing": {
+    "calcium": 15.0,
+    "carbs": 42.255,
+    "fat": 4.42,
+    "fibre": 0.6,
+    "folate": 4.5,
+    "iron": 0.302,
+    "kcal": 230.36,
+    "magnesium": 18.0,
+    "potassium": 52.5,
+    "protein": 4.035,
+    "satfat": 0.7415,
+    "sodium": 1.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.7354
+   },
+   "recipe": [
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 155,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "kadai_masala": {
+   "id": "kadai_masala",
+   "maxServings": 2,
+   "name": "Kadai masala",
+   "perServing": {
+    "calcium": 18.7,
+    "carbs": 5.957,
+    "fat": 7.202,
+    "fibre": 1.67,
+    "folate": 33.0,
+    "iron": 0.3155,
+    "kcal": 89.28,
+    "magnesium": 12.3,
+    "potassium": 234.5,
+    "protein": 1.362,
+    "satfat": 1.1685,
+    "sodium": 14.7,
+    "vita": 12.6,
+    "vitb12": 0.0,
+    "vitc": 25.61,
+    "zinc": 0.2107
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "cauliflower"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 30,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 110,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "kadhai_chicken": {
+   "id": "kadhai_chicken",
+   "maxServings": 1,
+   "name": "Kadhai chicken",
+   "perServing": {
+    "calcium": 22.15,
+    "carbs": 3.7745,
+    "fat": 10.1145,
+    "fibre": 0.81,
+    "folate": 12.85,
+    "iron": 1.018,
+    "kcal": 218.63,
+    "magnesium": 30.4,
+    "potassium": 320.65,
+    "protein": 26.917,
+    "satfat": 1.9736,
+    "sodium": 65.35,
+    "vita": 15.6,
+    "vitb12": 0.289,
+    "vitc": 5.645,
+    "zinc": 0.9442
+   },
+   "recipe": [
+    {
+     "grams": 85,
+     "ingredient": "chicken"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 30,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 145,
+   "tags": [
+    "meat",
+    "protein"
+   ]
+  },
+  "kadu_masala": {
+   "id": "kadu_masala",
+   "maxServings": 2,
+   "name": "Kadu masala",
+   "perServing": {
+    "calcium": 44.6,
+    "carbs": 7.668,
+    "fat": 6.12,
+    "fibre": 2.84,
+    "folate": 46.8,
+    "iron": 0.515,
+    "kcal": 86.04,
+    "magnesium": 14.0,
+    "potassium": 199.2,
+    "protein": 1.5,
+    "satfat": 0.9814,
+    "sodium": 18.8,
+    "vita": 5.0,
+    "vitb12": 0.0,
+    "vitc": 38.08,
+    "zinc": 0.2146
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "cabbage"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 120,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "kheer": {
+   "id": "kheer",
+   "maxServings": 1,
+   "name": "Kheer",
+   "perServing": {
+    "calcium": 149.55,
+    "carbs": 28.2795,
+    "fat": 4.295,
+    "fibre": 0.1,
+    "folate": 7.25,
+    "iron": 0.0965,
+    "kcal": 169.85,
+    "magnesium": 16.0,
+    "potassium": 180.65,
+    "protein": 4.7675,
+    "satfat": 2.4438,
+    "sodium": 56.3,
+    "vita": 59.8,
+    "vitb12": 0.585,
+    "vitc": 0.0,
+    "zinc": 0.605
+   },
+   "recipe": [
+    {
+     "grams": 130,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 25,
+     "ingredient": "rice_cooked"
+    },
+    {
+     "grams": 15,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 160,
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "kurmuri_bhindi": {
+   "id": "kurmuri_bhindi",
+   "maxServings": 2,
+   "name": "Kurmuri bhindi",
+   "perServing": {
+    "calcium": 86.5,
+    "carbs": 13.232,
+    "fat": 9.859,
+    "fibre": 4.28,
+    "folate": 103.7,
+    "iron": 1.1105,
+    "kcal": 151.26,
+    "magnesium": 73.6,
+    "potassium": 383.6,
+    "protein": 4.169,
+    "satfat": 1.5038,
+    "sodium": 13.4,
+    "vita": 36.2,
+    "vitb12": 0.0,
+    "vitc": 23.0,
+    "zinc": 0.8619
+   },
+   "recipe": [
+    {
+     "grams": 10,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 9,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 100,
+     "ingredient": "okra"
+    }
+   ],
+   "servingGrams": 110,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "malai_kofta": {
+   "id": "malai_kofta",
+   "maxServings": 1,
+   "name": "Malai kofta",
+   "perServing": {
+    "calcium": 125.05,
+    "carbs": 9.744,
+    "fat": 19.2125,
+    "fibre": 0.72,
+    "folate": 8.45,
+    "iron": 0.226,
+    "kcal": 248.46,
+    "magnesium": 20.4,
+    "potassium": 226.3,
+    "protein": 9.7065,
+    "satfat": 7.7351,
+    "sodium": 20.85,
+    "vita": 88.0,
+    "vitb12": 0.5175,
+    "vitc": 2.96,
+    "zinc": 1.0564
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 9,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 45,
+     "ingredient": "paneer"
+    },
+    {
+     "grams": 40,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 130,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "mangodi": {
+   "id": "mangodi",
+   "maxServings": 2,
+   "name": "Mangodi",
+   "perServing": {
+    "calcium": 22.35,
+    "carbs": 14.806,
+    "fat": 6.281,
+    "fibre": 5.575,
+    "folate": 114.15,
+    "iron": 1.0145,
+    "kcal": 132.54,
+    "magnesium": 35.1,
+    "potassium": 208.1,
+    "protein": 5.079,
+    "satfat": 1.0265,
+    "sodium": 2.0,
+    "vita": 0.7,
+    "vitb12": 0.0,
+    "vitc": 1.81,
+    "zinc": 0.6141
+   },
+   "recipe": [
+    {
+     "grams": 70,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 95,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "masoor_dal_dish": {
+   "id": "masoor_dal_dish",
+   "maxServings": 4,
+   "name": "Khada masoor dal",
+   "perServing": {
+    "calcium": 30.05,
+    "carbs": 29.583,
+    "fat": 5.547,
+    "fibre": 11.315,
+    "folate": 256.25,
+    "iron": 4.696,
+    "kcal": 212.6,
+    "magnesium": 51.9,
+    "potassium": 538.5,
+    "protein": 12.793,
+    "satfat": 0.863,
+    "sodium": 3.4,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 3.21,
+    "zinc": 1.804
+   },
+   "recipe": [
+    {
+     "grams": 140,
+     "ingredient": "masoor_dal"
+    },
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 160,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "matar_chola": {
+   "id": "matar_chola",
+   "maxServings": 2,
+   "name": "Matar chola",
+   "perServing": {
+    "calcium": 61.1,
+    "carbs": 33.623,
+    "fat": 8.73,
+    "fibre": 9.65,
+    "folate": 195.3,
+    "iron": 3.376,
+    "kcal": 249.34,
+    "magnesium": 59.9,
+    "potassium": 393.4,
+    "protein": 10.706,
+    "satfat": 1.2377,
+    "sodium": 9.3,
+    "vita": 12.4,
+    "vitb12": 0.0,
+    "vitc": 14.78,
+    "zinc": 1.9366
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "chana"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 30,
+     "ingredient": "peas"
+    }
+   ],
+   "servingGrams": 155,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "milk_glass": {
+   "id": "milk_glass",
+   "maxServings": 2,
+   "name": "Milk 200 ml",
+   "perServing": {
+    "calcium": 232.78,
+    "carbs": 9.888,
+    "fat": 6.695,
+    "fibre": 0.0,
+    "folate": 10.3,
+    "iron": 0.0618,
+    "kcal": 125.66,
+    "magnesium": 20.6,
+    "potassium": 271.92,
+    "protein": 6.489,
+    "satfat": 3.8419,
+    "sodium": 88.58,
+    "vita": 94.76,
+    "vitb12": 0.927,
+    "vitc": 0.0,
+    "zinc": 0.7622
+   },
+   "recipe": [
+    {
+     "grams": 206,
+     "ingredient": "milk"
+    }
+   ],
+   "servingGrams": 206,
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "mix_veg": {
+   "id": "mix_veg",
+   "maxServings": 2,
+   "name": "Mix veg",
+   "perServing": {
+    "calcium": 25.95,
+    "carbs": 15.9815,
+    "fat": 6.296,
+    "fibre": 3.585,
+    "folate": 42.65,
+    "iron": 0.7105,
+    "kcal": 127.49,
+    "magnesium": 24.35,
+    "potassium": 377.9,
+    "protein": 2.894,
+    "satfat": 1.0157,
+    "sodium": 32.95,
+    "vita": 260.0,
+    "vitb12": 0.0,
+    "vitc": 29.19,
+    "zinc": 0.5716
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 30,
+     "ingredient": "cauliflower"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 40,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 130,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "moong_halwa": {
+   "id": "moong_halwa",
+   "maxServings": 1,
+   "name": "Moong halwa",
+   "perServing": {
+    "calcium": 12.83,
+    "carbs": 28.6135,
+    "fat": 12.1086,
+    "fibre": 3.42,
+    "folate": 71.55,
+    "iron": 0.64,
+    "kcal": 229.77,
+    "magnesium": 21.6,
+    "potassium": 120.7,
+    "protein": 3.1926,
+    "satfat": 7.4831,
+    "sodium": 1.34,
+    "vita": 101.25,
+    "vitb12": 0.0012,
+    "vitc": 0.45,
+    "zinc": 0.3812
+   },
+   "recipe": [
+    {
+     "grams": 12,
+     "ingredient": "ghee"
+    },
+    {
+     "grams": 45,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 20,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 90,
+   "tags": [
+    "veg",
+    "sweet"
+   ]
+  },
+  "mutter_paneer": {
+   "id": "mutter_paneer",
+   "maxServings": 1,
+   "name": "Mutter paneer",
+   "perServing": {
+    "calcium": 115.25,
+    "carbs": 6.63,
+    "fat": 16.59,
+    "fibre": 2.295,
+    "folate": 30.5,
+    "iron": 0.685,
+    "kcal": 218.39,
+    "magnesium": 25.3,
+    "potassium": 213.65,
+    "protein": 11.267,
+    "satfat": 7.4708,
+    "sodium": 12.0,
+    "vita": 108.8,
+    "vitb12": 0.45,
+    "vitc": 17.425,
+    "zinc": 1.4271
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 50,
+     "ingredient": "paneer"
+    },
+    {
+     "grams": 35,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 125,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "nariyal_chutney": {
+   "id": "nariyal_chutney",
+   "maxServings": 2,
+   "name": "Coconut chutney",
+   "perServing": {
+    "calcium": 2.8,
+    "carbs": 3.046,
+    "fat": 8.698,
+    "fibre": 1.8,
+    "folate": 5.2,
+    "iron": 0.487,
+    "kcal": 88.48,
+    "magnesium": 6.4,
+    "potassium": 71.2,
+    "protein": 0.666,
+    "satfat": 6.2526,
+    "sodium": 4.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.66,
+    "zinc": 0.2202
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "coconut"
+    },
+    {
+     "grams": 2,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 30,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "noodles": {
+   "id": "noodles",
+   "maxServings": 2,
+   "name": "Noodles",
+   "perServing": {
+    "calcium": 18.2,
+    "carbs": 44.858,
+    "fat": 7.65,
+    "fibre": 2.84,
+    "folate": 165.2,
+    "iron": 2.7135,
+    "kcal": 282.88,
+    "magnesium": 30.6,
+    "potassium": 145.6,
+    "protein": 7.864,
+    "satfat": 1.1923,
+    "sodium": 4.2,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 7.32,
+    "zinc": 0.6667
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "cabbage"
+    },
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 60,
+     "ingredient": "semolina"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "onion_chop": {
+   "id": "onion_chop",
+   "maxServings": 2,
+   "name": "Onion chopped",
+   "perServing": {
+    "calcium": 6.9,
+    "carbs": 2.802,
+    "fat": 0.03,
+    "fibre": 0.51,
+    "folate": 5.7,
+    "iron": 0.063,
+    "kcal": 12.0,
+    "magnesium": 3.0,
+    "potassium": 43.8,
+    "protein": 0.33,
+    "satfat": 0.0126,
+    "sodium": 1.2,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 2.22,
+    "zinc": 0.051
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 30,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "onion_rice": {
+   "id": "onion_rice",
+   "maxServings": 4,
+   "name": "Onion rice",
+   "perServing": {
+    "calcium": 20.75,
+    "carbs": 44.59,
+    "fat": 4.445,
+    "fibre": 1.025,
+    "folate": 9.25,
+    "iron": 0.3545,
+    "kcal": 240.36,
+    "magnesium": 20.5,
+    "potassium": 89.0,
+    "protein": 4.31,
+    "satfat": 0.752,
+    "sodium": 2.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.85,
+    "zinc": 0.7779
+   },
+   "recipe": [
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 175,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "pakoda": {
+   "id": "pakoda",
+   "maxServings": 2,
+   "name": "Pakoda",
+   "perServing": {
+    "calcium": 19.25,
+    "carbs": 19.681,
+    "fat": 14.032,
+    "fibre": 3.665,
+    "folate": 135.85,
+    "iron": 1.5165,
+    "kcal": 232.18,
+    "magnesium": 52.3,
+    "potassium": 290.3,
+    "protein": 6.992,
+    "satfat": 2.0964,
+    "sodium": 20.2,
+    "vita": 0.6,
+    "vitb12": 0.0,
+    "vitc": 1.85,
+    "zinc": 0.8867
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 12,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 60,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "paneer_bhurji": {
+   "id": "paneer_bhurji",
+   "maxServings": 1,
+   "name": "Paneer bhurji",
+   "perServing": {
+    "calcium": 142.95,
+    "carbs": 3.893,
+    "fat": 19.585,
+    "fibre": 0.665,
+    "folate": 12.95,
+    "iron": 0.2395,
+    "kcal": 238.89,
+    "magnesium": 19.0,
+    "potassium": 173.6,
+    "protein": 12.346,
+    "satfat": 9.4051,
+    "sodium": 13.7,
+    "vita": 118.9,
+    "vitb12": 0.585,
+    "vitc": 4.59,
+    "zinc": 1.3121
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 65,
+     "ingredient": "paneer"
+    },
+    {
+     "grams": 20,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 115,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "paneer_butter_masala": {
+   "id": "paneer_butter_masala",
+   "maxServings": 1,
+   "name": "Paneer butter masala",
+   "perServing": {
+    "calcium": 152.82,
+    "carbs": 3.0463,
+    "fat": 23.6888,
+    "fibre": 0.42,
+    "folate": 11.29,
+    "iron": 0.2241,
+    "kcal": 270.22,
+    "magnesium": 19.21,
+    "potassium": 194.07,
+    "protein": 11.986,
+    "satfat": 12.9182,
+    "sodium": 72.59,
+    "vita": 180.62,
+    "vitb12": 0.6436,
+    "vitc": 4.795,
+    "zinc": 1.2811
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 8,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 20,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 60,
+     "ingredient": "paneer"
+    },
+    {
+     "grams": 35,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 130,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "papad": {
+   "id": "papad",
+   "maxServings": 2,
+   "name": "Papad",
+   "perServing": {
+    "calcium": 4.5,
+    "carbs": 5.782,
+    "fat": 4.669,
+    "fibre": 1.08,
+    "folate": 43.7,
+    "iron": 0.488,
+    "kcal": 74.06,
+    "magnesium": 16.6,
+    "potassium": 84.6,
+    "protein": 2.239,
+    "satfat": 0.6953,
+    "sodium": 6.4,
+    "vita": 0.2,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.2814
+   },
+   "recipe": [
+    {
+     "grams": 10,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 14,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "pav_bhaji": {
+   "id": "pav_bhaji",
+   "maxServings": 1,
+   "name": "Pav bhaji",
+   "perServing": {
+    "calcium": 68.7,
+    "carbs": 40.6745,
+    "fat": 10.101,
+    "fibre": 3.67,
+    "folate": 107.95,
+    "iron": 2.0645,
+    "kcal": 277.5,
+    "magnesium": 33.55,
+    "potassium": 366.75,
+    "protein": 6.515,
+    "satfat": 5.5791,
+    "sodium": 218.55,
+    "vita": 86.5,
+    "vitb12": 0.032,
+    "vitc": 15.865,
+    "zinc": 0.7715
+   },
+   "recipe": [
+    {
+     "grams": 50,
+     "ingredient": "bread_white"
+    },
+    {
+     "grams": 10,
+     "ingredient": "butter"
+    },
+    {
+     "grams": 20,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 60,
+     "ingredient": "potato"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 175,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "peas_pulao": {
+   "id": "peas_pulao",
+   "maxServings": 3,
+   "name": "Peas pulao",
+   "perServing": {
+    "calcium": 22.5,
+    "carbs": 46.59,
+    "fat": 5.54,
+    "fibre": 2.31,
+    "folate": 24.0,
+    "iron": 0.7435,
+    "kcal": 263.5,
+    "magnesium": 27.9,
+    "potassium": 125.7,
+    "protein": 5.661,
+    "satfat": 0.9193,
+    "sodium": 3.0,
+    "vita": 11.4,
+    "vitb12": 0.0,
+    "vitc": 12.0,
+    "zinc": 1.1075
+   },
+   "recipe": [
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 30,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 180,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "pickle": {
+   "id": "pickle",
+   "maxServings": 2,
+   "name": "Pickle",
+   "perServing": {
+    "calcium": 0.0,
+    "carbs": 0.0,
+    "fat": 4.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.002,
+    "kcal": 35.36,
+    "magnesium": 0.0,
+    "potassium": 0.0,
+    "protein": 0.0,
+    "satfat": 0.626,
+    "sodium": 0.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.0004
+   },
+   "recipe": [
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 12,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "plain_curd": {
+   "id": "plain_curd",
+   "maxServings": 2,
+   "name": "Plain curd",
+   "perServing": {
+    "calcium": 121.0,
+    "carbs": 4.66,
+    "fat": 3.25,
+    "fibre": 0.0,
+    "folate": 7.0,
+    "iron": 0.05,
+    "kcal": 61.0,
+    "magnesium": 12.0,
+    "potassium": 155.0,
+    "protein": 3.47,
+    "satfat": 2.096,
+    "sodium": 46.0,
+    "vita": 27.0,
+    "vitb12": 0.37,
+    "vitc": 0.5,
+    "zinc": 0.59
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "curd"
+    }
+   ],
+   "servingGrams": 100,
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "plain_rice": {
+   "id": "plain_rice",
+   "maxServings": 4,
+   "name": "Plain rice",
+   "perServing": {
+    "calcium": 15.0,
+    "carbs": 42.255,
+    "fat": 0.42,
+    "fibre": 0.6,
+    "folate": 4.5,
+    "iron": 0.3,
+    "kcal": 195.0,
+    "magnesium": 18.0,
+    "potassium": 52.5,
+    "protein": 4.035,
+    "satfat": 0.1155,
+    "sodium": 1.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.735
+   },
+   "recipe": [
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "poha": {
+   "id": "poha",
+   "maxServings": 2,
+   "name": "Poha",
+   "perServing": {
+    "calcium": 22.24,
+    "carbs": 40.1898,
+    "fat": 9.3568,
+    "fibre": 1.532,
+    "folate": 15.46,
+    "iron": 0.4309,
+    "kcal": 268.16,
+    "magnesium": 31.84,
+    "potassium": 125.42,
+    "protein": 5.665,
+    "satfat": 1.5088,
+    "sodium": 2.58,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.48,
+    "zinc": 0.8931
+   },
+   "recipe": [
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 8,
+     "ingredient": "peanut"
+    },
+    {
+     "grams": 130,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 160,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "poori": {
+   "id": "poori",
+   "maxServings": 4,
+   "name": "Poori",
+   "perServing": {
+    "calcium": 8.5,
+    "carbs": 17.9925,
+    "fat": 6.625,
+    "fibre": 2.675,
+    "folate": 11.0,
+    "iron": 0.903,
+    "kcal": 138.04,
+    "magnesium": 34.25,
+    "potassium": 90.75,
+    "protein": 3.3025,
+    "satfat": 1.0465,
+    "sodium": 0.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.6506
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "atta"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 32,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "pyaj_muter_malai": {
+   "id": "pyaj_muter_malai",
+   "maxServings": 2,
+   "name": "Pyaj mutter malai",
+   "perServing": {
+    "calcium": 49.95,
+    "carbs": 12.161,
+    "fat": 7.0525,
+    "fibre": 3.53,
+    "folate": 41.35,
+    "iron": 0.8295,
+    "kcal": 124.79,
+    "magnesium": 23.0,
+    "potassium": 213.4,
+    "protein": 3.9375,
+    "satfat": 1.4575,
+    "sodium": 14.85,
+    "vita": 30.5,
+    "vitb12": 0.1125,
+    "vitc": 22.96,
+    "zinc": 0.7811
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 40,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 50,
+     "ingredient": "peas"
+    }
+   ],
+   "servingGrams": 125,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "rajma_dish": {
+   "id": "rajma_dish",
+   "maxServings": 2,
+   "name": "Rajma",
+   "perServing": {
+    "calcium": 44.65,
+    "carbs": 32.9475,
+    "fat": 7.725,
+    "fibre": 10.345,
+    "folate": 177.5,
+    "iron": 3.9455,
+    "kcal": 241.48,
+    "magnesium": 63.75,
+    "potassium": 619.65,
+    "protein": 11.766,
+    "satfat": 1.2066,
+    "sodium": 4.85,
+    "vita": 10.5,
+    "vitb12": 0.0,
+    "vitc": 6.835,
+    "zinc": 1.4767
+   },
+   "recipe": [
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 130,
+     "ingredient": "rajma"
+    },
+    {
+     "grams": 25,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 185,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "rasam": {
+   "id": "rasam",
+   "maxServings": 3,
+   "name": "Rasam",
+   "perServing": {
+    "calcium": 14.75,
+    "carbs": 7.3685,
+    "fat": 3.175,
+    "fibre": 2.155,
+    "folate": 33.75,
+    "iron": 0.387,
+    "kcal": 63.97,
+    "magnesium": 15.9,
+    "potassium": 190.8,
+    "protein": 2.042,
+    "satfat": 0.5014,
+    "sodium": 3.25,
+    "vita": 16.8,
+    "vitb12": 0.0,
+    "vitc": 5.48,
+    "zinc": 0.2933
+   },
+   "recipe": [
+    {
+     "grams": 3,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 40,
+     "ingredient": "tomato"
+    },
+    {
+     "grams": 25,
+     "ingredient": "toor_dal"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "ratlami_sev": {
+   "id": "ratlami_sev",
+   "maxServings": 2,
+   "name": "Ratlami sev",
+   "perServing": {
+    "calcium": 9.9,
+    "carbs": 12.7204,
+    "fat": 11.4718,
+    "fibre": 2.376,
+    "folate": 96.14,
+    "iron": 1.0742,
+    "kcal": 173.54,
+    "magnesium": 36.52,
+    "potassium": 186.12,
+    "protein": 4.9258,
+    "satfat": 1.7175,
+    "sodium": 14.08,
+    "vita": 0.44,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.6192
+   },
+   "recipe": [
+    {
+     "grams": 22,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 10,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 30,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "red_chutney": {
+   "id": "red_chutney",
+   "maxServings": 2,
+   "name": "Red chutney",
+   "perServing": {
+    "calcium": 1.5,
+    "carbs": 0.5835,
+    "fat": 2.03,
+    "fibre": 0.18,
+    "folate": 2.25,
+    "iron": 0.0415,
+    "kcal": 20.38,
+    "magnesium": 1.65,
+    "potassium": 35.55,
+    "protein": 0.132,
+    "satfat": 0.3172,
+    "sodium": 0.75,
+    "vita": 6.3,
+    "vitb12": 0.0,
+    "vitc": 2.055,
+    "zinc": 0.0257
+   },
+   "recipe": [
+    {
+     "grams": 2,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 20,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "roti": {
+   "id": "roti",
+   "maxServings": 6,
+   "name": "Roti",
+   "perServing": {
+    "calcium": 10.2,
+    "carbs": 21.591,
+    "fat": 1.75,
+    "fibre": 3.21,
+    "folate": 13.2,
+    "iron": 1.0805,
+    "kcal": 110.84,
+    "magnesium": 41.1,
+    "potassium": 108.9,
+    "protein": 3.963,
+    "satfat": 0.2855,
+    "sodium": 0.6,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.7801
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "atta"
+    },
+    {
+     "grams": 1,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 35,
+   "tags": [
+    "veg",
+    "staple"
+   ]
+  },
+  "salad": {
+   "id": "salad",
+   "maxServings": 3,
+   "name": "Salad",
+   "perServing": {
+    "calcium": 15.35,
+    "carbs": 5.418,
+    "fat": 0.133,
+    "fibre": 1.345,
+    "folate": 13.05,
+    "iron": 0.1935,
+    "kcal": 23.6,
+    "magnesium": 8.2,
+    "potassium": 171.6,
+    "protein": 0.725,
+    "satfat": 0.0253,
+    "sodium": 16.3,
+    "vita": 179.6,
+    "vitb12": 0.0,
+    "vitc": 7.14,
+    "zinc": 0.1415
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 25,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 75,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "sambhar": {
+   "id": "sambhar",
+   "maxServings": 4,
+   "name": "Sambhar",
+   "perServing": {
+    "calcium": 53.95,
+    "carbs": 21.293,
+    "fat": 4.3875,
+    "fibre": 6.165,
+    "folate": 95.6,
+    "iron": 1.004,
+    "kcal": 141.91,
+    "magnesium": 46.3,
+    "potassium": 435.1,
+    "protein": 5.5045,
+    "satfat": 0.7049,
+    "sodium": 19.7,
+    "vita": 178.7,
+    "vitb12": 0.0,
+    "vitc": 7.795,
+    "zinc": 0.8164
+   },
+   "recipe": [
+    {
+     "grams": 20,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 4,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "okra"
+    },
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    },
+    {
+     "grams": 70,
+     "ingredient": "toor_dal"
+    }
+   ],
+   "servingGrams": 140,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "samosa": {
+   "id": "samosa",
+   "maxServings": 2,
+   "name": "Samosa",
+   "perServing": {
+    "calcium": 11.7,
+    "carbs": 25.9965,
+    "fat": 12.665,
+    "fibre": 3.395,
+    "folate": 14.6,
+    "iron": 1.03,
+    "kcal": 225.48,
+    "magnesium": 42.25,
+    "potassium": 221.95,
+    "protein": 3.9865,
+    "satfat": 1.9959,
+    "sodium": 2.5,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 2.96,
+    "zinc": 0.7592
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "atta"
+    },
+    {
+     "grams": 12,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 40,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 70,
+   "tags": [
+    "veg",
+    "snack"
+   ]
+  },
+  "soya_badi": {
+   "id": "soya_badi",
+   "maxServings": 2,
+   "name": "Soya badi",
+   "perServing": {
+    "calcium": 88.2,
+    "carbs": 9.334,
+    "fat": 13.236,
+    "fibre": 5.38,
+    "folate": 50.0,
+    "iron": 4.211,
+    "kcal": 202.24,
+    "magnesium": 73.0,
+    "potassium": 488.6,
+    "protein": 14.964,
+    "satfat": 1.9906,
+    "sodium": 191.4,
+    "vita": 8.4,
+    "vitb12": 0.0,
+    "vitc": 5.58,
+    "zinc": 0.9886
+   },
+   "recipe": [
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 80,
+     "ingredient": "soybean"
+    },
+    {
+     "grams": 20,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 125,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "soya_chilli": {
+   "id": "soya_chilli",
+   "maxServings": 2,
+   "name": "Soya chilli",
+   "perServing": {
+    "calcium": 88.5,
+    "carbs": 9.49,
+    "fat": 14.206,
+    "fibre": 5.31,
+    "folate": 48.9,
+    "iron": 4.1785,
+    "kcal": 211.48,
+    "magnesium": 71.8,
+    "potassium": 455.8,
+    "protein": 14.898,
+    "satfat": 2.1457,
+    "sodium": 190.8,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 3.58,
+    "zinc": 0.9717
+   },
+   "recipe": [
+    {
+     "grams": 7,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 30,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 80,
+     "ingredient": "soybean"
+    }
+   ],
+   "servingGrams": 120,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "tea": {
+   "id": "tea",
+   "maxServings": 3,
+   "name": "Tea",
+   "perServing": {
+    "calcium": 56.58,
+    "carbs": 10.3984,
+    "fat": 1.625,
+    "fibre": 0.0,
+    "folate": 2.5,
+    "iron": 0.019,
+    "kcal": 61.46,
+    "magnesium": 5.0,
+    "potassium": 66.16,
+    "protein": 1.575,
+    "satfat": 0.9325,
+    "sodium": 21.58,
+    "vita": 23.0,
+    "vitb12": 0.225,
+    "vitc": 0.0,
+    "zinc": 0.1858
+   },
+   "recipe": [
+    {
+     "grams": 50,
+     "ingredient": "milk"
+    },
+    {
+     "grams": 8,
+     "ingredient": "sugar"
+    }
+   ],
+   "servingGrams": 150,
+   "tags": [
+    "veg",
+    "beverage"
+   ]
+  },
+  "tomato_chop": {
+   "id": "tomato_chop",
+   "maxServings": 2,
+   "name": "Tomato chopped",
+   "perServing": {
+    "calcium": 3.0,
+    "carbs": 1.167,
+    "fat": 0.06,
+    "fibre": 0.36,
+    "folate": 4.5,
+    "iron": 0.081,
+    "kcal": 5.4,
+    "magnesium": 3.3,
+    "potassium": 71.1,
+    "protein": 0.264,
+    "satfat": 0.0084,
+    "sodium": 1.5,
+    "vita": 12.6,
+    "vitb12": 0.0,
+    "vitc": 4.11,
+    "zinc": 0.051
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "tomato"
+    }
+   ],
+   "servingGrams": 30,
+   "tags": [
+    "veg",
+    "side"
+   ]
+  },
+  "toor_dal_tadka": {
+   "id": "toor_dal_tadka",
+   "maxServings": 4,
+   "name": "Arhar dal tadka",
+   "perServing": {
+    "calcium": 60.85,
+    "carbs": 32.2095,
+    "fat": 5.539,
+    "fibre": 9.145,
+    "folate": 149.4,
+    "iron": 1.5175,
+    "kcal": 210.2,
+    "magnesium": 62.95,
+    "potassium": 556.65,
+    "protein": 9.085,
+    "satfat": 0.9009,
+    "sodium": 7.85,
+    "vita": 6.3,
+    "vitb12": 0.0,
+    "vitc": 3.165,
+    "zinc": 1.2215
+   },
+   "recipe": [
+    {
+     "grams": 5,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 15,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 15,
+     "ingredient": "tomato"
+    },
+    {
+     "grams": 130,
+     "ingredient": "toor_dal"
+    }
+   ],
+   "servingGrams": 165,
+   "tags": [
+    "veg",
+    "dal"
+   ]
+  },
+  "upma": {
+   "id": "upma",
+   "maxServings": 2,
+   "name": "Upma",
+   "perServing": {
+    "calcium": 17.2,
+    "carbs": 36.0785,
+    "fat": 6.5285,
+    "fibre": 2.515,
+    "folate": 124.1,
+    "iron": 2.052,
+    "kcal": 229.19,
+    "magnesium": 24.95,
+    "potassium": 160.9,
+    "protein": 6.0655,
+    "satfat": 1.0197,
+    "sodium": 11.6,
+    "vita": 125.25,
+    "vitb12": 0.0,
+    "vitc": 2.365,
+    "zinc": 0.5431
+   },
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 6,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "onion"
+    },
+    {
+     "grams": 45,
+     "ingredient": "semolina"
+    }
+   ],
+   "servingGrams": 160,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "vada": {
+   "id": "vada",
+   "maxServings": 2,
+   "name": "Vada",
+   "perServing": {
+    "calcium": 12.15,
+    "carbs": 8.6175,
+    "fat": 9.171,
+    "fibre": 3.42,
+    "folate": 71.55,
+    "iron": 0.6345,
+    "kcal": 126.81,
+    "magnesium": 21.6,
+    "potassium": 119.7,
+    "protein": 3.159,
+    "satfat": 1.4607,
+    "sodium": 0.9,
+    "vita": 0.45,
+    "vitb12": 0.0,
+    "vitc": 0.45,
+    "zinc": 0.3789
+   },
+   "recipe": [
+    {
+     "grams": 45,
+     "ingredient": "moong_dal"
+    },
+    {
+     "grams": 9,
+     "ingredient": "oil"
+    }
+   ],
+   "servingGrams": 55,
+   "tags": [
+    "veg",
+    "breakfast"
+   ]
+  },
+  "veg_biryani": {
+   "id": "veg_biryani",
+   "maxServings": 2,
+   "name": "Veg biryani",
+   "perServing": {
+    "calcium": 29.5,
+    "carbs": 48.2625,
+    "fat": 8.58,
+    "fibre": 2.725,
+    "folate": 25.5,
+    "iron": 0.7465,
+    "kcal": 296.22,
+    "magnesium": 29.25,
+    "potassium": 193.5,
+    "protein": 5.6225,
+    "satfat": 1.3933,
+    "sodium": 20.0,
+    "vita": 218.25,
+    "vitb12": 0.0,
+    "vitc": 11.475,
+    "zinc": 1.1058
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 8,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 150,
+     "ingredient": "rice_cooked"
+    }
+   ],
+   "servingGrams": 210,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "veg_kofta": {
+   "id": "veg_kofta",
+   "maxServings": 1,
+   "name": "Veg kofta",
+   "perServing": {
+    "calcium": 52.35,
+    "carbs": 18.918,
+    "fat": 15.2135,
+    "fibre": 2.52,
+    "folate": 71.65,
+    "iron": 0.929,
+    "kcal": 242.45,
+    "magnesium": 39.3,
+    "potassium": 318.5,
+    "protein": 7.8735,
+    "satfat": 4.282,
+    "sodium": 15.7,
+    "vita": 34.3,
+    "vitb12": 0.18,
+    "vitc": 3.7,
+    "zinc": 0.9375
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "besan"
+    },
+    {
+     "grams": 10,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 20,
+     "ingredient": "paneer"
+    },
+    {
+     "grams": 50,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 115,
+   "tags": [
+    "veg",
+    "main"
+   ]
+  },
+  "veg_kolhapuri": {
+   "id": "veg_kolhapuri",
+   "maxServings": 2,
+   "name": "Veg kolhapuri",
+   "perServing": {
+    "calcium": 24.6,
+    "carbs": 13.75,
+    "fat": 8.288,
+    "fibre": 3.365,
+    "folate": 43.65,
+    "iron": 0.6865,
+    "kcal": 135.77,
+    "magnesium": 22.5,
+    "potassium": 344.05,
+    "protein": 2.7725,
+    "satfat": 1.3311,
+    "sodium": 30.5,
+    "vita": 218.25,
+    "vitb12": 0.0,
+    "vitc": 30.565,
+    "zinc": 0.5463
+   },
+   "recipe": [
+    {
+     "grams": 25,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 35,
+     "ingredient": "cauliflower"
+    },
+    {
+     "grams": 8,
+     "ingredient": "oil"
+    },
+    {
+     "grams": 25,
+     "ingredient": "peas"
+    },
+    {
+     "grams": 30,
+     "ingredient": "potato"
+    }
+   ],
+   "servingGrams": 130,
+   "tags": [
+    "veg",
+    "sabzi"
+   ]
+  },
+  "veg_raita": {
+   "id": "veg_raita",
+   "maxServings": 2,
+   "name": "Veg raita",
+   "perServing": {
+    "calcium": 116.15,
+    "carbs": 6.565,
+    "fat": 2.971,
+    "fibre": 0.59,
+    "folate": 11.05,
+    "iron": 0.111,
+    "kcal": 65.05,
+    "magnesium": 13.6,
+    "potassium": 202.1,
+    "protein": 3.3725,
+    "satfat": 1.8954,
+    "sodium": 52.15,
+    "vita": 149.55,
+    "vitb12": 0.333,
+    "vitc": 2.075,
+    "zinc": 0.584
+   },
+   "recipe": [
+    {
+     "grams": 15,
+     "ingredient": "carrot"
+    },
+    {
+     "grams": 90,
+     "ingredient": "curd"
+    },
+    {
+     "grams": 10,
+     "ingredient": "onion"
+    }
+   ],
+   "servingGrams": 115,
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  }
+ },
+ "ingredients": {
+  "apple": {
+   "id": "apple",
+   "name": "Apple",
+   "per100g": {
+    "calcium": 6.0,
+    "carbs": 13.81,
+    "fat": 0.17,
+    "fibre": 2.4,
+    "folate": 3.0,
+    "iron": 0.12,
+    "kcal": 52.0,
+    "magnesium": 5.0,
+    "potassium": 107.0,
+    "protein": 0.26,
+    "satfat": 0.028,
+    "sodium": 1.0,
+    "vita": 3.0,
+    "vitb12": 0.0,
+    "vitc": 4.6,
+    "zinc": 0.04
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+    "fdcId": 171688
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "atta": {
+   "id": "atta",
+   "name": "Whole wheat flour",
+   "per100g": {
+    "calcium": 34.0,
+    "carbs": 71.97,
+    "fat": 2.5,
+    "fibre": 10.7,
+    "folate": 44.0,
+    "iron": 3.6,
+    "kcal": 340.0,
+    "magnesium": 137.0,
+    "potassium": 363.0,
+    "protein": 13.21,
+    "satfat": 0.43,
+    "sodium": 2.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 2.6
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Wheat flour, whole-grain (Includes foods for USDA's Food Distribution Program)",
+    "fdcId": 168893
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "banana": {
+   "id": "banana",
+   "name": "Banana",
+   "per100g": {
+    "calcium": 5.0,
+    "carbs": 22.84,
+    "fat": 0.33,
+    "fibre": 2.6,
+    "folate": 20.0,
+    "iron": 0.26,
+    "kcal": 89.0,
+    "magnesium": 27.0,
+    "potassium": 358.0,
+    "protein": 1.09,
+    "satfat": 0.112,
+    "sodium": 1.0,
+    "vita": 3.0,
+    "vitb12": 0.0,
+    "vitc": 8.7,
+    "zinc": 0.15
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Bananas, raw",
+    "fdcId": 173944
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "besan": {
+   "id": "besan",
+   "name": "Gram flour (besan)",
+   "per100g": {
+    "calcium": 45.0,
+    "carbs": 57.82,
+    "fat": 6.69,
+    "fibre": 10.8,
+    "folate": 437.0,
+    "iron": 4.86,
+    "kcal": 387.0,
+    "magnesium": 166.0,
+    "potassium": 846.0,
+    "protein": 22.39,
+    "satfat": 0.693,
+    "sodium": 64.0,
+    "vita": 2.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 2.81
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Chickpea flour (besan)",
+    "fdcId": 174288
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "bread_white": {
+   "id": "bread_white",
+   "name": "White bread",
+   "per100g": {
+    "calcium": 108.0,
+    "carbs": 49.6,
+    "fat": 3.6,
+    "fibre": 2.3,
+    "folate": 171.0,
+    "iron": 3.03,
+    "kcal": 267.0,
+    "magnesium": 24.0,
+    "potassium": 119.0,
+    "protein": 8.2,
+    "satfat": 0.811,
+    "sodium": 298.0,
+    "vita": 0.0,
+    "vitb12": 0.03,
+    "vitc": 0.0,
+    "zinc": 0.62
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Bread, white, commercially prepared, low sodium, no salt",
+    "fdcId": 172818
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "butter": {
+   "id": "butter",
+   "name": "Butter",
+   "per100g": {
+    "calcium": 24.0,
+    "carbs": 0.06,
+    "fat": 81.11,
+    "fibre": 0.0,
+    "folate": 3.0,
+    "iron": 0.02,
+    "kcal": 717.0,
+    "magnesium": 2.0,
+    "potassium": 24.0,
+    "protein": 0.85,
+    "satfat": 51.368,
+    "sodium": 643.0,
+    "vita": 684.0,
+    "vitb12": 0.17,
+    "vitc": 0.0,
+    "zinc": 0.09
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Butter, salted",
+    "fdcId": 173410
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "cabbage": {
+   "id": "cabbage",
+   "name": "Cabbage",
+   "per100g": {
+    "calcium": 40.0,
+    "carbs": 5.8,
+    "fat": 0.1,
+    "fibre": 2.5,
+    "folate": 43.0,
+    "iron": 0.47,
+    "kcal": 25.0,
+    "magnesium": 12.0,
+    "potassium": 170.0,
+    "protein": 1.28,
+    "satfat": 0.034,
+    "sodium": 18.0,
+    "vita": 5.0,
+    "vitb12": 0.0,
+    "vitc": 36.6,
+    "zinc": 0.18
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cabbage, raw",
+    "fdcId": 169975
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "carrot": {
+   "id": "carrot",
+   "name": "Carrot",
+   "per100g": {
+    "calcium": 33.0,
+    "carbs": 9.58,
+    "fat": 0.24,
+    "fibre": 2.8,
+    "folate": 19.0,
+    "iron": 0.3,
+    "kcal": 41.0,
+    "magnesium": 12.0,
+    "potassium": 320.0,
+    "protein": 0.93,
+    "satfat": 0.032,
+    "sodium": 69.0,
+    "vita": 835.0,
+    "vitb12": 0.0,
+    "vitc": 5.9,
+    "zinc": 0.24
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Carrots, raw",
+    "fdcId": 170393
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "cauliflower": {
+   "id": "cauliflower",
+   "name": "Cauliflower",
+   "per100g": {
+    "calcium": 22.0,
+    "carbs": 4.97,
+    "fat": 0.28,
+    "fibre": 2.0,
+    "folate": 57.0,
+    "iron": 0.42,
+    "kcal": 25.0,
+    "magnesium": 15.0,
+    "potassium": 299.0,
+    "protein": 1.92,
+    "satfat": 0.13,
+    "sodium": 30.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 48.2,
+    "zinc": 0.27
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Cauliflower, raw",
+    "fdcId": 169986
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "chana": {
+   "id": "chana",
+   "name": "Chickpea (chana)",
+   "per100g": {
+    "calcium": 49.0,
+    "carbs": 27.42,
+    "fat": 2.59,
+    "fibre": 7.6,
+    "folate": 172.0,
+    "iron": 2.89,
+    "kcal": 164.0,
+    "magnesium": 48.0,
+    "potassium": 291.0,
+    "protein": 8.86,
+    "satfat": 0.269,
+    "sodium": 7.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 1.3,
+    "zinc": 1.53
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "fdcId": 173757
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "chicken": {
+   "id": "chicken",
+   "name": "Cooked chicken breast",
+   "per100g": {
+    "calcium": 15.0,
+    "carbs": 0.0,
+    "fat": 3.57,
+    "fibre": 0.0,
+    "folate": 4.0,
+    "iron": 1.04,
+    "kcal": 165.0,
+    "magnesium": 29.0,
+    "potassium": 256.0,
+    "protein": 31.02,
+    "satfat": 1.01,
+    "sodium": 74.0,
+    "vita": 6.0,
+    "vitb12": 0.34,
+    "vitc": 0.0,
+    "zinc": 1.0
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "fdcId": 171477
+   },
+   "tags": [
+    "meat",
+    "protein"
+   ]
+  },
+  "coconut": {
+   "id": "coconut",
+   "name": "Fresh coconut",
+   "per100g": {
+    "calcium": 14.0,
+    "carbs": 15.23,
+    "fat": 33.49,
+    "fibre": 9.0,
+    "folate": 26.0,
+    "iron": 2.43,
+    "kcal": 354.0,
+    "magnesium": 32.0,
+    "potassium": 356.0,
+    "protein": 3.33,
+    "satfat": 29.698,
+    "sodium": 20.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 3.3,
+    "zinc": 1.1
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Nuts, coconut meat, raw",
+    "fdcId": 170169
+   },
+   "tags": [
+    "veg",
+    "nut"
+   ]
+  },
+  "curd": {
+   "id": "curd",
+   "name": "Curd (plain yoghurt)",
+   "per100g": {
+    "calcium": 121.0,
+    "carbs": 4.66,
+    "fat": 3.25,
+    "fibre": 0.0,
+    "folate": 7.0,
+    "iron": 0.05,
+    "kcal": 61.0,
+    "magnesium": 12.0,
+    "potassium": 155.0,
+    "protein": 3.47,
+    "satfat": 2.096,
+    "sodium": 46.0,
+    "vita": 27.0,
+    "vitb12": 0.37,
+    "vitc": 0.5,
+    "zinc": 0.59
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Yogurt, plain, whole milk",
+    "fdcId": 171284
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "dates": {
+   "id": "dates",
+   "name": "Dates",
+   "per100g": {
+    "calcium": 64.0,
+    "carbs": 74.97,
+    "fat": 0.15,
+    "fibre": 6.7,
+    "folate": 15.0,
+    "iron": 0.9,
+    "kcal": 277.0,
+    "magnesium": 54.0,
+    "potassium": 696.0,
+    "protein": 1.81,
+    "satfat": 0.0,
+    "sodium": 1.0,
+    "vita": 7.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.44
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "sodium",
+    "vita",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Dates, medjool",
+    "fdcId": 168191
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "egg_boiled": {
+   "id": "egg_boiled",
+   "name": "Boiled egg",
+   "per100g": {
+    "calcium": 50.0,
+    "carbs": 1.12,
+    "fat": 10.61,
+    "fibre": 0.0,
+    "folate": 44.0,
+    "iron": 1.19,
+    "kcal": 155.0,
+    "magnesium": 10.0,
+    "potassium": 126.0,
+    "protein": 12.58,
+    "satfat": 3.267,
+    "sodium": 124.0,
+    "vita": 149.0,
+    "vitb12": 1.11,
+    "vitc": 0.0,
+    "zinc": 1.05
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Egg, whole, cooked, hard-boiled",
+    "fdcId": 173424
+   },
+   "tags": [
+    "egg",
+    "protein"
+   ]
+  },
+  "ghee": {
+   "id": "ghee",
+   "name": "Ghee",
+   "per100g": {
+    "calcium": 4.0,
+    "carbs": 0.0,
+    "fat": 99.48,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.0,
+    "kcal": 876.0,
+    "magnesium": 0.0,
+    "potassium": 5.0,
+    "protein": 0.28,
+    "satfat": 61.924,
+    "sodium": 2.0,
+    "vita": 840.0,
+    "vitb12": 0.01,
+    "vitc": 0.0,
+    "zinc": 0.01
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Butter oil, anhydrous",
+    "fdcId": 173412
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "guava": {
+   "id": "guava",
+   "name": "Guava",
+   "per100g": {
+    "calcium": 18.0,
+    "carbs": 14.32,
+    "fat": 0.95,
+    "fibre": 5.4,
+    "folate": 49.0,
+    "iron": 0.26,
+    "kcal": 68.0,
+    "magnesium": 22.0,
+    "potassium": 417.0,
+    "protein": 2.55,
+    "satfat": 0.272,
+    "sodium": 2.0,
+    "vita": 31.0,
+    "vitb12": 0.0,
+    "vitc": 228.3,
+    "zinc": 0.23
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Guavas, common, raw",
+    "fdcId": 173044
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "jaggery": {
+   "id": "jaggery",
+   "name": "Jaggery",
+   "per100g": {
+    "calcium": 85.0,
+    "carbs": 98.0,
+    "fat": 0.1,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 4.0,
+    "kcal": 383.0,
+    "magnesium": 70.0,
+    "potassium": 1050.0,
+    "protein": 0.4,
+    "satfat": 0.0,
+    "sodium": 30.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.2
+   },
+   "proxy": true,
+   "proxyNote": "Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "manual estimate, not USDA",
+    "description": "Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+    "fdcId": null
+   },
+   "tags": [
+    "veg",
+    "sugar"
+   ]
+  },
+  "masoor_dal": {
+   "id": "masoor_dal",
+   "name": "Red lentil (masoor)",
+   "per100g": {
+    "calcium": 19.0,
+    "carbs": 20.13,
+    "fat": 0.38,
+    "fibre": 7.9,
+    "folate": 181.0,
+    "iron": 3.33,
+    "kcal": 116.0,
+    "magnesium": 36.0,
+    "potassium": 369.0,
+    "protein": 9.02,
+    "satfat": 0.053,
+    "sodium": 2.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.5,
+    "zinc": 1.27
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Lentils, mature seeds, cooked, boiled, without salt",
+    "fdcId": 172421
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "milk": {
+   "id": "milk",
+   "name": "Whole milk",
+   "per100g": {
+    "calcium": 113.0,
+    "carbs": 4.8,
+    "fat": 3.25,
+    "fibre": 0.0,
+    "folate": 5.0,
+    "iron": 0.03,
+    "kcal": 61.0,
+    "magnesium": 10.0,
+    "potassium": 132.0,
+    "protein": 3.15,
+    "satfat": 1.865,
+    "sodium": 43.0,
+    "vita": 46.0,
+    "vitb12": 0.45,
+    "vitc": 0.0,
+    "zinc": 0.37
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "fdcId": 171265
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "moong_dal": {
+   "id": "moong_dal",
+   "name": "Mung bean (moong)",
+   "per100g": {
+    "calcium": 27.0,
+    "carbs": 19.15,
+    "fat": 0.38,
+    "fibre": 7.6,
+    "folate": 159.0,
+    "iron": 1.4,
+    "kcal": 105.0,
+    "magnesium": 48.0,
+    "potassium": 266.0,
+    "protein": 7.02,
+    "satfat": 0.116,
+    "sodium": 2.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 1.0,
+    "zinc": 0.84
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Mung beans, mature seeds, cooked, boiled, without salt",
+    "fdcId": 174257
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "oil": {
+   "id": "oil",
+   "name": "Cooking oil (soybean)",
+   "per100g": {
+    "calcium": 0.0,
+    "carbs": 0.0,
+    "fat": 100.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.05,
+    "kcal": 884.0,
+    "magnesium": 0.0,
+    "potassium": 0.0,
+    "protein": 0.0,
+    "satfat": 15.65,
+    "sodium": 0.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.01
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Oil, soybean, salad or cooking",
+    "fdcId": 171411
+   },
+   "tags": [
+    "veg",
+    "fat"
+   ]
+  },
+  "okra": {
+   "id": "okra",
+   "name": "Okra (bhindi)",
+   "per100g": {
+    "calcium": 82.0,
+    "carbs": 7.45,
+    "fat": 0.19,
+    "fibre": 3.2,
+    "folate": 60.0,
+    "iron": 0.62,
+    "kcal": 33.0,
+    "magnesium": 57.0,
+    "potassium": 299.0,
+    "protein": 1.93,
+    "satfat": 0.026,
+    "sodium": 7.0,
+    "vita": 36.0,
+    "vitb12": 0.0,
+    "vitc": 23.0,
+    "zinc": 0.58
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Okra, raw",
+    "fdcId": 169260
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "onion": {
+   "id": "onion",
+   "name": "Onion",
+   "per100g": {
+    "calcium": 23.0,
+    "carbs": 9.34,
+    "fat": 0.1,
+    "fibre": 1.7,
+    "folate": 19.0,
+    "iron": 0.21,
+    "kcal": 40.0,
+    "magnesium": 10.0,
+    "potassium": 146.0,
+    "protein": 1.1,
+    "satfat": 0.042,
+    "sodium": 4.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 7.4,
+    "zinc": 0.17
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Onions, raw",
+    "fdcId": 170000
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "orange": {
+   "id": "orange",
+   "name": "Orange",
+   "per100g": {
+    "calcium": 40.0,
+    "carbs": 11.75,
+    "fat": 0.12,
+    "fibre": 2.4,
+    "folate": 30.0,
+    "iron": 0.1,
+    "kcal": 47.0,
+    "magnesium": 10.0,
+    "potassium": 181.0,
+    "protein": 0.94,
+    "satfat": 0.015,
+    "sodium": 0.0,
+    "vita": 11.0,
+    "vitb12": 0.0,
+    "vitc": 53.2,
+    "zinc": 0.07
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Oranges, raw, all commercial varieties",
+    "fdcId": 169097
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "paneer": {
+   "id": "paneer",
+   "name": "Paneer",
+   "per100g": {
+    "calcium": 208.0,
+    "carbs": 1.2,
+    "fat": 20.8,
+    "fibre": 0.0,
+    "folate": 8.0,
+    "iron": 0.2,
+    "kcal": 265.0,
+    "magnesium": 22.0,
+    "potassium": 138.0,
+    "protein": 18.3,
+    "satfat": 13.0,
+    "sodium": 18.0,
+    "vita": 170.0,
+    "vitb12": 0.9,
+    "vitc": 0.0,
+    "zinc": 1.9
+   },
+   "proxy": true,
+   "proxyNote": "Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "manual estimate, not USDA",
+    "description": "Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+    "fdcId": null
+   },
+   "tags": [
+    "veg",
+    "dairy"
+   ]
+  },
+  "papaya": {
+   "id": "papaya",
+   "name": "Papaya",
+   "per100g": {
+    "calcium": 20.0,
+    "carbs": 10.82,
+    "fat": 0.26,
+    "fibre": 1.7,
+    "folate": 37.0,
+    "iron": 0.25,
+    "kcal": 43.0,
+    "magnesium": 21.0,
+    "potassium": 182.0,
+    "protein": 0.47,
+    "satfat": 0.081,
+    "sodium": 8.0,
+    "vita": 47.0,
+    "vitb12": 0.0,
+    "vitc": 60.9,
+    "zinc": 0.08
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Papayas, raw",
+    "fdcId": 169926
+   },
+   "tags": [
+    "veg",
+    "fruit"
+   ]
+  },
+  "peanut": {
+   "id": "peanut",
+   "name": "Roasted peanuts",
+   "per100g": {
+    "calcium": 58.0,
+    "carbs": 21.26,
+    "fat": 49.66,
+    "fibre": 8.4,
+    "folate": 97.0,
+    "iron": 1.58,
+    "kcal": 587.0,
+    "magnesium": 178.0,
+    "potassium": 634.0,
+    "protein": 24.35,
+    "satfat": 7.723,
+    "sodium": 6.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 2.77
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Peanuts, all types, dry-roasted, without salt",
+    "fdcId": 173806
+   },
+   "tags": [
+    "veg",
+    "nut"
+   ]
+  },
+  "peas": {
+   "id": "peas",
+   "name": "Green peas",
+   "per100g": {
+    "calcium": 25.0,
+    "carbs": 14.45,
+    "fat": 0.4,
+    "fibre": 5.7,
+    "folate": 65.0,
+    "iron": 1.47,
+    "kcal": 81.0,
+    "magnesium": 33.0,
+    "potassium": 244.0,
+    "protein": 5.42,
+    "satfat": 0.071,
+    "sodium": 5.0,
+    "vita": 38.0,
+    "vitb12": 0.0,
+    "vitc": 40.0,
+    "zinc": 1.24
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Peas, green, raw",
+    "fdcId": 170419
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "potato": {
+   "id": "potato",
+   "name": "Boiled potato",
+   "per100g": {
+    "calcium": 8.0,
+    "carbs": 20.01,
+    "fat": 0.1,
+    "fibre": 1.8,
+    "folate": 9.0,
+    "iron": 0.31,
+    "kcal": 86.0,
+    "magnesium": 20.0,
+    "potassium": 328.0,
+    "protein": 1.71,
+    "satfat": 0.026,
+    "sodium": 5.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 7.4,
+    "zinc": 0.27
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Potatoes, boiled, cooked without skin, flesh, without salt",
+    "fdcId": 170440
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "rajma": {
+   "id": "rajma",
+   "name": "Kidney bean (rajma)",
+   "per100g": {
+    "calcium": 28.0,
+    "carbs": 22.8,
+    "fat": 0.5,
+    "fibre": 7.4,
+    "folate": 130.0,
+    "iron": 2.94,
+    "kcal": 127.0,
+    "magnesium": 45.0,
+    "potassium": 403.0,
+    "protein": 8.67,
+    "satfat": 0.072,
+    "sodium": 2.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.2,
+    "zinc": 1.07
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+    "fdcId": 175194
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "rice_cooked": {
+   "id": "rice_cooked",
+   "name": "Cooked white rice",
+   "per100g": {
+    "calcium": 10.0,
+    "carbs": 28.17,
+    "fat": 0.28,
+    "fibre": 0.4,
+    "folate": 3.0,
+    "iron": 0.2,
+    "kcal": 130.0,
+    "magnesium": 12.0,
+    "potassium": 35.0,
+    "protein": 2.69,
+    "satfat": 0.077,
+    "sodium": 1.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.49
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Rice, white, long-grain, regular, unenriched, cooked without salt",
+    "fdcId": 169757
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "semolina": {
+   "id": "semolina",
+   "name": "Semolina (rava)",
+   "per100g": {
+    "calcium": 17.0,
+    "carbs": 72.83,
+    "fat": 1.05,
+    "fibre": 3.9,
+    "folate": 261.0,
+    "iron": 4.36,
+    "kcal": 360.0,
+    "magnesium": 47.0,
+    "potassium": 186.0,
+    "protein": 12.68,
+    "satfat": 0.15,
+    "sodium": 1.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.05
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Semolina, enriched",
+    "fdcId": 169715
+   },
+   "tags": [
+    "veg",
+    "grain"
+   ]
+  },
+  "soybean": {
+   "id": "soybean",
+   "name": "Soybean",
+   "per100g": {
+    "calcium": 102.0,
+    "carbs": 8.36,
+    "fat": 8.97,
+    "fibre": 6.0,
+    "folate": 54.0,
+    "iron": 5.14,
+    "kcal": 172.0,
+    "magnesium": 86.0,
+    "potassium": 515.0,
+    "protein": 18.21,
+    "satfat": 1.297,
+    "sodium": 237.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.7,
+    "zinc": 1.15
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Soybeans, mature seeds, cooked, boiled, with salt",
+    "fdcId": 174299
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "spinach": {
+   "id": "spinach",
+   "name": "Cooked spinach",
+   "per100g": {
+    "calcium": 136.0,
+    "carbs": 3.75,
+    "fat": 0.26,
+    "fibre": 2.4,
+    "folate": 146.0,
+    "iron": 3.57,
+    "kcal": 23.0,
+    "magnesium": 87.0,
+    "potassium": 466.0,
+    "protein": 2.97,
+    "satfat": 0.043,
+    "sodium": 70.0,
+    "vita": 524.0,
+    "vitb12": 0.0,
+    "vitc": 9.8,
+    "zinc": 0.76
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "fdcId": 168463
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "sprouts": {
+   "id": "sprouts",
+   "name": "Sprouted mung beans",
+   "per100g": {
+    "calcium": 13.0,
+    "carbs": 5.94,
+    "fat": 0.18,
+    "fibre": 1.8,
+    "folate": 61.0,
+    "iron": 0.91,
+    "kcal": 30.0,
+    "magnesium": 21.0,
+    "potassium": 149.0,
+    "protein": 3.04,
+    "satfat": 0.046,
+    "sodium": 6.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 13.2,
+    "zinc": 0.41
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Mung beans, mature seeds, sprouted, raw",
+    "fdcId": 169957
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "sugar": {
+   "id": "sugar",
+   "name": "Sugar",
+   "per100g": {
+    "calcium": 1.0,
+    "carbs": 99.98,
+    "fat": 0.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.05,
+    "kcal": 387.0,
+    "magnesium": 0.0,
+    "potassium": 2.0,
+    "protein": 0.0,
+    "satfat": 0.0,
+    "sodium": 1.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.01
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Sugars, granulated",
+    "fdcId": 169655
+   },
+   "tags": [
+    "veg",
+    "sugar"
+   ]
+  },
+  "tomato": {
+   "id": "tomato",
+   "name": "Tomato",
+   "per100g": {
+    "calcium": 10.0,
+    "carbs": 3.89,
+    "fat": 0.2,
+    "fibre": 1.2,
+    "folate": 15.0,
+    "iron": 0.27,
+    "kcal": 18.0,
+    "magnesium": 11.0,
+    "potassium": 237.0,
+    "protein": 0.88,
+    "satfat": 0.028,
+    "sodium": 5.0,
+    "vita": 42.0,
+    "vitb12": 0.0,
+    "vitc": 13.7,
+    "zinc": 0.17
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "fdcId": 170457
+   },
+   "tags": [
+    "veg",
+    "vegetable"
+   ]
+  },
+  "toor_dal": {
+   "id": "toor_dal",
+   "name": "Pigeon pea (toor/arhar)",
+   "per100g": {
+    "calcium": 43.0,
+    "carbs": 23.25,
+    "fat": 0.38,
+    "fibre": 6.7,
+    "folate": 111.0,
+    "iron": 1.11,
+    "kcal": 121.0,
+    "magnesium": 46.0,
+    "potassium": 384.0,
+    "protein": 6.76,
+    "satfat": 0.083,
+    "sodium": 5.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.9
+   },
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "USDA FoodData Central, SR Legacy (2018-04)",
+    "description": "Pigeon peas (red gram), mature seeds, cooked, boiled, without salt",
+    "fdcId": 172437
+   },
+   "tags": [
+    "veg",
+    "pulse"
+   ]
+  },
+  "whey_protein": {
+   "id": "whey_protein",
+   "name": "Whey protein powder",
+   "per100g": {
+    "calcium": 500.0,
+    "carbs": 8.0,
+    "fat": 6.0,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 1.0,
+    "kcal": 380.0,
+    "magnesium": 80.0,
+    "potassium": 500.0,
+    "protein": 80.0,
+    "satfat": 3.0,
+    "sodium": 300.0,
+    "vita": 0.0,
+    "vitb12": 1.5,
+    "vitc": 0.0,
+    "zinc": 3.0
+   },
+   "proxy": true,
+   "proxyNote": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
+   "reported": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
+   "source": {
+    "dataset": "manual estimate, not USDA",
+    "description": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
+    "fdcId": null
+   },
+   "tags": [
+    "veg",
+    "supplement"
+   ]
+  }
+ },
+ "market": {
+  "apple": {
+   "defaultPrice": {
+    "IN": 28.0,
+    "US": 0.9
+   },
+   "id": "apple",
+   "maxUnits": 3,
+   "name": "Apple",
+   "perUnit": {
+    "calcium": 9.0,
+    "carbs": 20.715,
+    "fat": 0.255,
+    "fibre": 3.6,
+    "folate": 4.5,
+    "iron": 0.18,
+    "kcal": 78.0,
+    "magnesium": 7.5,
+    "potassium": 160.5,
+    "protein": 0.39,
+    "satfat": 0.042,
+    "sodium": 1.5,
+    "vita": 4.5,
+    "vitb12": 0.0,
+    "vitc": 6.9,
+    "zinc": 0.06
+   },
+   "recipe": [
+    {
+     "grams": 150,
+     "ingredient": "apple"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "1 apple"
+  },
+  "banana": {
+   "defaultPrice": {
+    "IN": 7.0,
+    "US": 0.3
+   },
+   "id": "banana",
+   "maxUnits": 4,
+   "name": "Banana",
+   "perUnit": {
+    "calcium": 5.0,
+    "carbs": 22.84,
+    "fat": 0.33,
+    "fibre": 2.6,
+    "folate": 20.0,
+    "iron": 0.26,
+    "kcal": 89.0,
+    "magnesium": 27.0,
+    "potassium": 358.0,
+    "protein": 1.09,
+    "satfat": 0.112,
+    "sodium": 1.0,
+    "vita": 3.0,
+    "vitb12": 0.0,
+    "vitc": 8.7,
+    "zinc": 0.15
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "banana"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "1 banana"
+  },
+  "boiled_chana": {
+   "defaultPrice": {
+    "IN": 20.0,
+    "US": 0.7
+   },
+   "id": "boiled_chana",
+   "maxUnits": 3,
+   "name": "Boiled chana",
+   "perUnit": {
+    "calcium": 49.0,
+    "carbs": 27.42,
+    "fat": 2.59,
+    "fibre": 7.6,
+    "folate": 172.0,
+    "iron": 2.89,
+    "kcal": 164.0,
+    "magnesium": 48.0,
+    "potassium": 291.0,
+    "protein": 8.86,
+    "satfat": 0.269,
+    "sodium": 7.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 1.3,
+    "zinc": 1.53
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "chana"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "100 g"
+  },
+  "carrot_stick": {
+   "defaultPrice": {
+    "IN": 10.0,
+    "US": 0.5
+   },
+   "id": "carrot_stick",
+   "maxUnits": 2,
+   "name": "Carrot",
+   "perUnit": {
+    "calcium": 33.0,
+    "carbs": 9.58,
+    "fat": 0.24,
+    "fibre": 2.8,
+    "folate": 19.0,
+    "iron": 0.3,
+    "kcal": 41.0,
+    "magnesium": 12.0,
+    "potassium": 320.0,
+    "protein": 0.93,
+    "satfat": 0.032,
+    "sodium": 69.0,
+    "vita": 835.0,
+    "vitb12": 0.0,
+    "vitc": 5.9,
+    "zinc": 0.24
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "carrot"
+    }
+   ],
+   "tags": [
+    "veg"
+   ],
+   "unit": "100 g"
+  },
+  "curd_cup": {
+   "defaultPrice": {
+    "IN": 25.0,
+    "US": 1.2
+   },
+   "id": "curd_cup",
+   "maxUnits": 2,
+   "name": "Curd",
+   "perUnit": {
+    "calcium": 242.0,
+    "carbs": 9.32,
+    "fat": 6.5,
+    "fibre": 0.0,
+    "folate": 14.0,
+    "iron": 0.1,
+    "kcal": 122.0,
+    "magnesium": 24.0,
+    "potassium": 310.0,
+    "protein": 6.94,
+    "satfat": 4.192,
+    "sodium": 92.0,
+    "vita": 54.0,
+    "vitb12": 0.74,
+    "vitc": 1.0,
+    "zinc": 1.18
+   },
+   "recipe": [
+    {
+     "grams": 200,
+     "ingredient": "curd"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy"
+   ],
+   "unit": "200 g cup"
+  },
+  "dates": {
+   "defaultPrice": {
+    "IN": 25.0,
+    "US": 0.9
+   },
+   "id": "dates",
+   "maxUnits": 2,
+   "name": "Dates",
+   "perUnit": {
+    "calcium": 25.6,
+    "carbs": 29.988,
+    "fat": 0.06,
+    "fibre": 2.68,
+    "folate": 6.0,
+    "iron": 0.36,
+    "kcal": 110.8,
+    "magnesium": 21.6,
+    "potassium": 278.4,
+    "protein": 0.724,
+    "satfat": 0.0,
+    "sodium": 0.4,
+    "vita": 2.8,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.176
+   },
+   "recipe": [
+    {
+     "grams": 40,
+     "ingredient": "dates"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "40 g"
+  },
+  "egg": {
+   "defaultPrice": {
+    "IN": 8.0,
+    "US": 0.35
+   },
+   "id": "egg",
+   "maxUnits": 4,
+   "name": "Boiled egg",
+   "perUnit": {
+    "calcium": 25.0,
+    "carbs": 0.56,
+    "fat": 5.305,
+    "fibre": 0.0,
+    "folate": 22.0,
+    "iron": 0.595,
+    "kcal": 77.5,
+    "magnesium": 5.0,
+    "potassium": 63.0,
+    "protein": 6.29,
+    "satfat": 1.6335,
+    "sodium": 62.0,
+    "vita": 74.5,
+    "vitb12": 0.555,
+    "vitc": 0.0,
+    "zinc": 0.525
+   },
+   "recipe": [
+    {
+     "grams": 50,
+     "ingredient": "egg_boiled"
+    }
+   ],
+   "tags": [
+    "egg",
+    "protein"
+   ],
+   "unit": "1 egg"
+  },
+  "guava": {
+   "defaultPrice": {
+    "IN": 16.0,
+    "US": 1.2
+   },
+   "id": "guava",
+   "maxUnits": 3,
+   "name": "Guava",
+   "perUnit": {
+    "calcium": 27.0,
+    "carbs": 21.48,
+    "fat": 1.425,
+    "fibre": 8.1,
+    "folate": 73.5,
+    "iron": 0.39,
+    "kcal": 102.0,
+    "magnesium": 33.0,
+    "potassium": 625.5,
+    "protein": 3.825,
+    "satfat": 0.408,
+    "sodium": 3.0,
+    "vita": 46.5,
+    "vitb12": 0.0,
+    "vitc": 342.45,
+    "zinc": 0.345
+   },
+   "recipe": [
+    {
+     "grams": 150,
+     "ingredient": "guava"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "1 guava"
+  },
+  "milk_packet": {
+   "defaultPrice": {
+    "IN": 33.0,
+    "US": 0.75
+   },
+   "id": "milk_packet",
+   "maxUnits": 2,
+   "name": "Milk",
+   "perUnit": {
+    "calcium": 565.0,
+    "carbs": 24.0,
+    "fat": 16.25,
+    "fibre": 0.0,
+    "folate": 25.0,
+    "iron": 0.15,
+    "kcal": 305.0,
+    "magnesium": 50.0,
+    "potassium": 660.0,
+    "protein": 15.75,
+    "satfat": 9.325,
+    "sodium": 215.0,
+    "vita": 230.0,
+    "vitb12": 2.25,
+    "vitc": 0.0,
+    "zinc": 1.85
+   },
+   "recipe": [
+    {
+     "grams": 500,
+     "ingredient": "milk"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy"
+   ],
+   "unit": "500 ml packet"
+  },
+  "orange": {
+   "defaultPrice": {
+    "IN": 18.0,
+    "US": 0.8
+   },
+   "id": "orange",
+   "maxUnits": 3,
+   "name": "Orange",
+   "perUnit": {
+    "calcium": 52.0,
+    "carbs": 15.275,
+    "fat": 0.156,
+    "fibre": 3.12,
+    "folate": 39.0,
+    "iron": 0.13,
+    "kcal": 61.1,
+    "magnesium": 13.0,
+    "potassium": 235.3,
+    "protein": 1.222,
+    "satfat": 0.0195,
+    "sodium": 0.0,
+    "vita": 14.3,
+    "vitb12": 0.0,
+    "vitc": 69.16,
+    "zinc": 0.091
+   },
+   "recipe": [
+    {
+     "grams": 130,
+     "ingredient": "orange"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "1 orange"
+  },
+  "paneer_block": {
+   "defaultPrice": {
+    "IN": 45.0,
+    "US": 2.5
+   },
+   "id": "paneer_block",
+   "maxUnits": 2,
+   "name": "Paneer",
+   "perUnit": {
+    "calcium": 208.0,
+    "carbs": 1.2,
+    "fat": 20.8,
+    "fibre": 0.0,
+    "folate": 8.0,
+    "iron": 0.2,
+    "kcal": 265.0,
+    "magnesium": 22.0,
+    "potassium": 138.0,
+    "protein": 18.3,
+    "satfat": 13.0,
+    "sodium": 18.0,
+    "vita": 170.0,
+    "vitb12": 0.9,
+    "vitc": 0.0,
+    "zinc": 1.9
+   },
+   "proxy": true,
+   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "paneer"
+    }
+   ],
+   "tags": [
+    "veg",
+    "dairy",
+    "protein"
+   ],
+   "unit": "100 g"
+  },
+  "papaya_bowl": {
+   "defaultPrice": {
+    "IN": 25.0,
+    "US": 1.5
+   },
+   "id": "papaya_bowl",
+   "maxUnits": 2,
+   "name": "Papaya, cut",
+   "perUnit": {
+    "calcium": 40.0,
+    "carbs": 21.64,
+    "fat": 0.52,
+    "fibre": 3.4,
+    "folate": 74.0,
+    "iron": 0.5,
+    "kcal": 86.0,
+    "magnesium": 42.0,
+    "potassium": 364.0,
+    "protein": 0.94,
+    "satfat": 0.162,
+    "sodium": 16.0,
+    "vita": 94.0,
+    "vitb12": 0.0,
+    "vitc": 121.8,
+    "zinc": 0.16
+   },
+   "recipe": [
+    {
+     "grams": 200,
+     "ingredient": "papaya"
+    }
+   ],
+   "tags": [
+    "veg",
+    "fruit"
+   ],
+   "unit": "200 g bowl"
+  },
+  "peanut_butter": {
+   "defaultPrice": {
+    "IN": 18.0,
+    "US": 0.45
+   },
+   "id": "peanut_butter",
+   "maxUnits": 3,
+   "name": "Peanut butter",
+   "perUnit": {
+    "calcium": 17.4,
+    "carbs": 6.378,
+    "fat": 14.898,
+    "fibre": 2.52,
+    "folate": 29.1,
+    "iron": 0.474,
+    "kcal": 176.1,
+    "magnesium": 53.4,
+    "potassium": 190.2,
+    "protein": 7.305,
+    "satfat": 2.3169,
+    "sodium": 1.8,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 0.831
+   },
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "peanut"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "30 g"
+  },
+  "peanuts": {
+   "defaultPrice": {
+    "IN": 15.0,
+    "US": 0.6
+   },
+   "id": "peanuts",
+   "maxUnits": 3,
+   "name": "Roasted peanuts",
+   "perUnit": {
+    "calcium": 29.0,
+    "carbs": 10.63,
+    "fat": 24.83,
+    "fibre": 4.2,
+    "folate": 48.5,
+    "iron": 0.79,
+    "kcal": 293.5,
+    "magnesium": 89.0,
+    "potassium": 317.0,
+    "protein": 12.175,
+    "satfat": 3.8615,
+    "sodium": 3.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 0.0,
+    "zinc": 1.385
+   },
+   "recipe": [
+    {
+     "grams": 50,
+     "ingredient": "peanut"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "50 g"
+  },
+  "rajma_bowl": {
+   "defaultPrice": {
+    "IN": 22.0,
+    "US": 0.8
+   },
+   "id": "rajma_bowl",
+   "maxUnits": 2,
+   "name": "Rajma, boiled",
+   "perUnit": {
+    "calcium": 42.0,
+    "carbs": 34.2,
+    "fat": 0.75,
+    "fibre": 11.1,
+    "folate": 195.0,
+    "iron": 4.41,
+    "kcal": 190.5,
+    "magnesium": 67.5,
+    "potassium": 604.5,
+    "protein": 13.005,
+    "satfat": 0.108,
+    "sodium": 3.0,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.8,
+    "zinc": 1.605
+   },
+   "recipe": [
+    {
+     "grams": 150,
+     "ingredient": "rajma"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "150 g"
+  },
+  "soya_chunks": {
+   "defaultPrice": {
+    "IN": 14.0,
+    "US": 0.5
+   },
+   "id": "soya_chunks",
+   "maxUnits": 2,
+   "name": "Soya chunks",
+   "perUnit": {
+    "calcium": 81.6,
+    "carbs": 6.688,
+    "fat": 7.176,
+    "fibre": 4.8,
+    "folate": 43.2,
+    "iron": 4.112,
+    "kcal": 137.6,
+    "magnesium": 68.8,
+    "potassium": 412.0,
+    "protein": 14.568,
+    "satfat": 1.0376,
+    "sodium": 189.6,
+    "vita": 0.0,
+    "vitb12": 0.0,
+    "vitc": 1.36,
+    "zinc": 0.92
+   },
+   "recipe": [
+    {
+     "grams": 80,
+     "ingredient": "soybean"
+    }
+   ],
+   "tags": [
+    "veg",
+    "protein"
+   ],
+   "unit": "80 g cooked"
+  },
+  "spinach_side": {
+   "defaultPrice": {
+    "IN": 12.0,
+    "US": 0.9
+   },
+   "id": "spinach_side",
+   "maxUnits": 2,
+   "name": "Spinach, cooked",
+   "perUnit": {
+    "calcium": 136.0,
+    "carbs": 3.75,
+    "fat": 0.26,
+    "fibre": 2.4,
+    "folate": 146.0,
+    "iron": 3.57,
+    "kcal": 23.0,
+    "magnesium": 87.0,
+    "potassium": 466.0,
+    "protein": 2.97,
+    "satfat": 0.043,
+    "sodium": 70.0,
+    "vita": 524.0,
+    "vitb12": 0.0,
+    "vitc": 9.8,
+    "zinc": 0.76
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "spinach"
+    }
+   ],
+   "tags": [
+    "veg"
+   ],
+   "unit": "100 g"
+  },
+  "sprouts_bowl": {
+   "defaultPrice": {
+    "IN": 15.0,
+    "US": 0.9
+   },
+   "id": "sprouts_bowl",
+   "maxUnits": 2,
+   "name": "Sprouts",
+   "perUnit": {
+    "calcium": 13.0,
+    "carbs": 5.94,
+    "fat": 0.18,
+    "fibre": 1.8,
+    "folate": 61.0,
+    "iron": 0.91,
+    "kcal": 30.0,
+    "magnesium": 21.0,
+    "potassium": 149.0,
+    "protein": 3.04,
+    "satfat": 0.046,
+    "sodium": 6.0,
+    "vita": 1.0,
+    "vitb12": 0.0,
+    "vitc": 13.2,
+    "zinc": 0.41
+   },
+   "recipe": [
+    {
+     "grams": 100,
+     "ingredient": "sprouts"
+    }
+   ],
+   "tags": [
+    "veg"
+   ],
+   "unit": "100 g"
+  },
+  "whey_scoop": {
+   "defaultPrice": {
+    "IN": 60.0,
+    "US": 1.1
+   },
+   "id": "whey_scoop",
+   "maxUnits": 2,
+   "name": "Whey protein",
+   "perUnit": {
+    "calcium": 150.0,
+    "carbs": 2.4,
+    "fat": 1.8,
+    "fibre": 0.0,
+    "folate": 0.0,
+    "iron": 0.3,
+    "kcal": 114.0,
+    "magnesium": 24.0,
+    "potassium": 150.0,
+    "protein": 24.0,
+    "satfat": 0.9,
+    "sodium": 90.0,
+    "vita": 0.0,
+    "vitb12": 0.45,
+    "vitc": 0.0,
+    "zinc": 0.9
+   },
+   "proxy": true,
+   "proxyNote": "Whey protein powder: Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
+   "recipe": [
+    {
+     "grams": 30,
+     "ingredient": "whey_protein"
+    }
+   ],
+   "tags": [
+    "veg",
+    "supplement",
+    "protein"
+   ],
+   "unit": "30 g scoop"
+  }
+ },
+ "notes": {
+  "dishes": "Dishes are computed from their ingredient recipes, not estimated at dish level. Recipes are stated assumptions -- see data/build_catalog.py -- so any individual gram figure can be argued with directly.",
+  "ingredients": "Each ingredient is one USDA FoodData Central SR Legacy food, cited by fdcId, per 100 g.",
+  "market": "Market prices are seed defaults, not survey data. Every one is editable in the interface, because a price that is wrong for your campus makes the recommendation wrong for you.",
+  "proxies": "Rows marked proxy have no SR Legacy equivalent and use a named substitute. They are flagged in the interface rather than presented as measured."
+ },
+ "nutrients": [
+  {
+   "fdcNutrientId": 1008,
+   "id": "kcal",
+   "name": "Energy",
+   "unit": "kcal"
+  },
+  {
+   "fdcNutrientId": 1003,
+   "id": "protein",
+   "name": "Protein",
+   "unit": "g"
+  },
+  {
+   "fdcNutrientId": 1004,
+   "id": "fat",
+   "name": "Total fat",
+   "unit": "g"
+  },
+  {
+   "fdcNutrientId": 1258,
+   "id": "satfat",
+   "name": "Saturated fat",
+   "unit": "g"
+  },
+  {
+   "fdcNutrientId": 1005,
+   "id": "carbs",
+   "name": "Carbohydrate",
+   "unit": "g"
+  },
+  {
+   "fdcNutrientId": 1079,
+   "id": "fibre",
+   "name": "Fibre",
+   "unit": "g"
+  },
+  {
+   "fdcNutrientId": 1087,
+   "id": "calcium",
+   "name": "Calcium",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1089,
+   "id": "iron",
+   "name": "Iron",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1090,
+   "id": "magnesium",
+   "name": "Magnesium",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1092,
+   "id": "potassium",
+   "name": "Potassium",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1093,
+   "id": "sodium",
+   "name": "Sodium",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1095,
+   "id": "zinc",
+   "name": "Zinc",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1106,
+   "id": "vita",
+   "name": "Vitamin A",
+   "unit": "ug"
+  },
+  {
+   "fdcNutrientId": 1162,
+   "id": "vitc",
+   "name": "Vitamin C",
+   "unit": "mg"
+  },
+  {
+   "fdcNutrientId": 1178,
+   "id": "vitb12",
+   "name": "Vitamin B12",
+   "unit": "ug"
+  },
+  {
+   "fdcNutrientId": 1190,
+   "id": "folate",
+   "name": "Folate",
+   "unit": "ug"
+  }
+ ],
+ "schemaVersion": 1
+}

@@ -1,0 +1,81 @@
+{
+ "id": "iiit-mess",
+ "name": "IIIT hostel mess",
+ "subtitle": "A real seven-day Indian hostel mess timetable",
+ "region": "IN",
+ "currency": "INR",
+ "servingStyle": "mixed",
+ "servingStyleNote": "Staples (rice, roti, dal) are self-serve and effectively unlimited. Paneer, chicken, egg and sweets are rationed to one portion.",
+ "source": {
+  "kind": "posted weekly timetable",
+  "file": "data/menus/iiit-mess-menu.pdf"
+ },
+ "aliases": {
+  "utapam": "dosa",
+  "bada pav": "pav_bhaji",
+  "reoti": "roti",
+  "araher dal": "toor_dal_tadka",
+  "arher dal": "toor_dal_tadka",
+  "coffee": "tea",
+  "patta gobhi dry": "gobhi_dry",
+  "paneer kadhai": "paneer_bhurji",
+  "rasum": "rasam",
+  "chinees pakoda": "pakoda",
+  "muteer paneer": "mutter_paneer",
+  "kurmuri bhindi": "kurmuri_bhindi",
+  "soya badi": "soya_badi"
+ },
+ "notIncluded": [
+  "Lemon, plain sauce and coffee powder are served but contribute no meaningful nutrition at the portions used, so they are left out of the model rather than given invented numbers."
+ ],
+ "daily": {
+  "breakfast": ["boiled_sprouts", "onion_chop", "tomato_chop", "amul_butter", "jam", "milk_glass", "tea", "bread_slice"],
+  "lunch": ["salad", "pickle", "papad"],
+  "snacks": ["boiled_egg", "fruit_portion", "tea", "milk_glass", "bread_slice"],
+  "dinner": ["salad", "pickle", "papad", "plain_curd"]
+ },
+ "days": {
+  "mon": {
+   "breakfast": ["aloo_paratha", "plain_curd"],
+   "lunch": ["chole", "kadu_masala", "toor_dal_tadka", "jeera_rice", "roti", "plain_curd"],
+   "snacks": ["noodles"],
+   "dinner": ["paneer_butter_masala", "chicken_butter_masala", "dal_mix", "jeera_rice", "roti"]
+  },
+  "tue": {
+   "breakfast": ["idli", "sambhar", "nariyal_chutney"],
+   "lunch": ["rajma_dish", "aloo_jeera", "dal_tadka", "plain_rice", "roti", "boondi_raita"],
+   "snacks": ["pav_bhaji", "onion_chop", "ratlami_sev"],
+   "dinner": ["poori", "aloo_tomato", "toor_dal_tadka", "onion_rice", "kheer"]
+  },
+  "wed": {
+   "breakfast": ["poha", "matar_chola", "onion_chop", "ratlami_sev"],
+   "lunch": ["malai_kofta", "mix_veg", "toor_dal_tadka", "plain_rice", "roti", "plain_curd"],
+   "snacks": ["samosa", "ratlami_sev", "dahi", "imli_chutney", "green_chutney"],
+   "dinner": ["kadhai_chicken", "paneer_bhurji", "plain_rice", "dal_mix", "roti", "moong_halwa"]
+  },
+  "thu": {
+   "breakfast": ["vada", "dosa", "sambhar", "green_chutney"],
+   "lunch": ["black_chana_aloo", "aloo_choka", "dal_mix", "jeera_rice", "roti", "plain_curd"],
+   "snacks": ["pakoda", "red_chutney", "green_chutney"],
+   "dinner": ["chole_curry", "pyaj_muter_malai", "gobhi_dry", "jeera_rice", "dal_mix", "roti"]
+  },
+  "fri": {
+   "breakfast": ["poori", "aloo_tomato", "mix_veg"],
+   "lunch": ["soya_badi", "aloo_bhujiya", "dal_tadka", "plain_rice", "roti", "veg_raita"],
+   "snacks": ["cutlet", "red_chutney"],
+   "dinner": ["egg_curry", "egg_bhurji", "mutter_paneer", "rasam", "peas_pulao", "roti", "fruit_custard"]
+  },
+  "sat": {
+   "breakfast": ["dosa", "sambhar", "nariyal_chutney"],
+   "lunch": ["dum_aloo", "veg_kofta", "masoor_dal_dish", "jeera_rice", "roti", "plain_curd"],
+   "snacks": ["corn_chat"],
+   "dinner": ["soya_chilli", "aloo_bhujiya", "dal_makhani", "jeera_rice", "roti"]
+  },
+  "sun": {
+   "breakfast": ["dosa", "sambhar", "nariyal_chutney"],
+   "lunch": ["kurmuri_bhindi", "veg_kolhapuri", "dal_mix", "plain_rice", "roti", "plain_curd"],
+   "snacks": ["mangodi", "green_chutney", "red_chutney"],
+   "dinner": ["chicken_biryani", "veg_biryani", "veg_raita", "gulab_jamun"]
+  }
+ }
+}
