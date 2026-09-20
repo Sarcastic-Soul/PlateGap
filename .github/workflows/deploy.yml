@@ -88,8 +88,8 @@ jobs:
         if: steps.check.outputs.ready == 'true'
         run: |
           # Assets are content-hashed by nothing, so they are cached briefly
-          # and the HTML not at all. The site is three files; there is no
-          # reason to be clever about it.
+          # and the HTML not at all. The site is a dozen small static files
+          # with no build step; there is no reason to be clever about it.
           aws s3 sync web/ "s3://${{ vars.SITE_BUCKET }}/" \
             --delete \
             --exclude "index.html" \

@@ -22,73 +22,9 @@
   </div>
 </header>
 
-<main>
-  <aside>
-    <section class="panel">
-      <h2>Menu</h2>
-      <label class="field">
-        <span>Preset</span>
-        <select id="menu"></select>
-      </label>
-      <p class="note" id="menu-note"></p>
-      <label class="field">
-        <span>Day</span>
-        <select id="day"></select>
-      </label>
-    </section>
-
-    <section class="panel">
-      <h2>You</h2>
-      <label class="field">
-        <span>Diet</span>
-        <div class="chips" id="diet"></div>
-      </label>
-      <label class="field">
-        <span>Reference intakes</span>
-        <select id="region"></select>
-      </label>
-      <div class="pair">
-        <label class="field">
-          <span>Sex</span>
-          <select id="sex">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </label>
-        <label class="field">
-          <span>Activity</span>
-          <select id="activity">
-            <option value="sedentary">Sedentary</option>
-            <option value="moderate">Moderate</option>
-            <option value="active">Active</option>
-          </select>
-        </label>
-      </div>
-      <label class="field">
-        <span>How much you can eat in a day: <b id="grams-value">1400</b> g</span>
-        <input type="range" id="grams" min="700" max="2400" step="50" value="1400">
-      </label>
-      <p class="note">
-        This one matters more than it looks. Without a limit on how much food a
-        person can physically get through, the answer is often “eat twelve
-        rotis” — technically correct and no use to anyone.
-      </p>
-    </section>
-  </aside>
-
-  <section>
-    <div class="tabs" role="tablist">
-      <button class="tab" role="tab" data-tab="plan" aria-selected="true">The gap</button>
-      <button class="tab" role="tab" data-tab="frontier" aria-selected="false">What each rupee buys</button>
-      <button class="tab" role="tab" data-tab="audit" aria-selected="false">For whoever writes the menu</button>
-      <button class="tab" role="tab" data-tab="build" aria-selected="false">Build a menu</button>
-      <button class="tab" role="tab" data-tab="data" aria-selected="false">Where the numbers come from</button>
-    </div>
-
-    <div id="notice"></div>
-    <div id="view"><p class="loading">Loading…</p></div>
-  </section>
-</main>
+<div id="app">
+  <main><section><div id="view"><p class="loading">Loading…</p></div></section></main>
+</div>
 
 <footer>
   <p>
@@ -101,6 +37,6 @@
 </footer>
 
 <script src="config.js"></script>
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

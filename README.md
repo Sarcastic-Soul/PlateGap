@@ -112,7 +112,7 @@ who open the app.
 ## Architecture
 
 ```
-CloudFront ──▶ S3 (private, OAC)          the site: no framework, no build step
+CloudFront ──▶ S3 (private, OAC)          the site: Preact + htm, vendored, no build step
      │
   browser ──▶ Lambda Function URL ──▶ handler.py ──▶ solver/
                                                       simplex.py   two-phase simplex + duals
@@ -135,8 +135,9 @@ deployment package, which is 51 KB. The function's only permission is to write
 its own logs.
 
 CloudFront attaches a response headers policy carrying HSTS and a content
-security policy, and because the site is three files with no framework the
-policy could be written by reading them rather than by guessing:
+security policy, and because the site is a handful of static files with no
+build step the policy could be written by reading them rather than by
+guessing:
 
 ```
 default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:;
@@ -149,10 +150,19 @@ favicon, which is a `data:` SVG in the head, and the `fetch` to the Function
 URL, which is a different origin and so has to be named — Terraform takes it
 from the resource rather than a pasted string, so a rebuild in another account
 gets a policy that works instead of one that silently blocks every request.
-There is no `'unsafe-inline'` anywhere: the chart is an inline `<svg>` styled
-with classes, nothing assigns to `element.style`, and although `app.js` uses
-`innerHTML` freely, markup written that way cannot execute a script it
-contains under any policy.
+There is no `'unsafe-inline'` and no `'unsafe-eval'` anywhere: the chart is an
+inline `<svg>` styled with classes, nothing assigns to `element.style`, and
+the one dependency is vendored into `web/vendor/` rather than pulled from a
+CDN, so `script-src 'self'` covers the framework too.
+
+The front end is **Preact with htm**, 13 KB of it, vendored as a single
+module and loaded with a plain `<script type="module">`. There is still no
+build step, no `node_modules` and no transpiler: htm is JSX-shaped markup
+written in template literals, which the browser parses as ordinary
+JavaScript, and the standalone build has no bare import specifiers, so no
+import map is needed. The migration from the hand-rolled DOM builder it
+replaced was checked by re-running `scripts/capture_demo.py` against both:
+all seven screenshots came out byte-identical.
 
 The function has 1769 MB of memory, which is a speed setting rather than a
 memory one — it is the point at which Lambda hands out a whole vCPU, and a

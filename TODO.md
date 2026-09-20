@@ -13,8 +13,8 @@ delete when done.
 
 ## Product
 
-- [ ] Migrate the front end to Preact + htm, vendored, no build step — the UI changes get cheap after that
 - [ ] Decide whether a shared link should be able to carry prices as well as the menu
+- [ ] The tab bar wraps onto two lines at 1440 px — cosmetic, but it is the first thing on the page
 
 ## Data
 
@@ -29,4 +29,5 @@ delete when done.
 - [x] Lambda memory 1769 MB — the exact point AWS hands over one whole vCPU; above it a single-threaded interpreter pays for a core it cannot use
 - [x] arm64 stays, justified on Graviton's published price, and the repo does not claim it is faster because nobody has measured it
 - [x] Local Terraform state stays; `infra/backend.tf.example` has the S3 + DynamoDB migration for the day a second person applies
+- [x] Front end is Preact + htm, vendored in `web/vendor/`, still no build step — all seven demo screenshots came out byte-identical to the hand-rolled version, so the port changed no pixels
 - [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone

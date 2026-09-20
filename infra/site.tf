@@ -123,26 +123,31 @@ resource "aws_s3_bucket_policy" "site" {
 # Response headers: a content security policy written from what the site
 # actually does, and HSTS.
 #
-# The site is three files and no framework, so the policy can be written by
-# reading them rather than by starting permissive and hoping to tighten it
-# later. `index.html` carries two script tags, both same-origin, and no inline
-# script and no inline event handlers. `style.css` has no `@import`, no
-# `url()` and no web font. `app.js` builds the frontier chart as an inline
-# `<svg>` element with CSS classes, not a style attribute, and never touches
-# `element.style`, `eval` or `new Function`. The only asset that is not
-# same-origin is the emoji favicon, which is a `data:` SVG in the head.
+# The site is a handful of static files and no build step, so the policy can
+# be written by reading them rather than by starting permissive and hoping to
+# tighten it later. `index.html` carries two script tags, both same-origin,
+# and no inline script and no inline event handlers. `style.css` has no
+# `@import`, no `url()` and no web font. The front end is ES modules that
+# import each other by relative path, and the one dependency -- Preact with
+# htm, in `web/vendor/` -- is vendored rather than fetched from a CDN, so
+# `script-src 'self'` covers it. The standalone htm build has no bare import
+# specifiers either, so no import map is needed and nothing has to be
+# unblocked for one. The frontier chart is an inline `<svg>` element with CSS
+# classes, not a style attribute, and nothing anywhere touches `eval` or
+# `new Function`. The only asset that is not same-origin is the emoji
+# favicon, which is a `data:` SVG in the head.
 #
 # So every fetch directive can be locked to 'self' with two exceptions, and
 # `default-src 'none'` denies everything nobody asked for -- fonts, media,
 # workers, manifests, frames -- rather than leaving them to a fallback.
 #
-# `'unsafe-inline'` appears nowhere. It is worth saying why that survived
-# contact with the code: `app.js` assigns to `innerHTML` in several places,
-# which looks like it should need it and does not. CSP governs where script
-# and style *come from*, and markup written into `innerHTML` cannot execute a
-# `<script>` it contains under any policy. The directives that would matter to
-# that code -- Trusted Types -- are deliberately not set, because they would
-# break `innerHTML` outright and this is not the change to do that in.
+# `'unsafe-inline'` appears nowhere, and no directive had to be loosened when
+# the front end moved to a framework: htm compiles template literals at
+# runtime with ordinary JavaScript, not with `new Function`, which is the
+# thing that would have needed `'unsafe-eval'`. Trusted Types are deliberately
+# not set -- Preact writes to the DOM through `createElement` and property
+# assignment, so they would probably survive it, but turning them on is a
+# change to make on its own evidence rather than in passing.
 # --------------------------------------------------------------------------
 
 locals {
