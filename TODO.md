@@ -6,11 +6,11 @@ delete when done.
 ## Waiting on the account owner
 
 - [ ] Sanity-check the seed market prices against a real shop near campus
+- [ ] Decide on a licence — there is no LICENSE file, so by default nobody may reuse the code
 
 ## Product
 
 - [ ] Decide whether a shared link should be able to carry prices as well as the menu
-- [ ] The tab bar wraps onto two lines at 1440 px — cosmetic, but it is the first thing on the page
 
 ## Data
 
@@ -30,3 +30,5 @@ delete when done.
 - [x] Lambda concurrency stays at 10 — ten browsers arriving at once lost 4 of 40 calls and the whole burst was over in 5.6 s, so the front end retries a 429 with jitter instead; ten arrivals over a minute lost nothing
 - [x] Front end is Preact + htm, vendored in `web/vendor/`, still no build step — all seven demo screenshots came out byte-identical to the hand-rolled version, so the port changed no pixels
 - [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone
+- [x] The tab bar fits on one line at 1440 px — the redesign gave each tab an icon and a short label, and the bar scrolls sideways rather than wrapping
+- [x] Demo screenshots match the live site — capturing against CloudFront after the redesign produced files byte-identical to the committed ones
