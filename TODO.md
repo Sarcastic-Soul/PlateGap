@@ -6,7 +6,6 @@ delete when done.
 ## Waiting on the account owner
 
 - [ ] Submit the Anthropic use-case form in the console so Haiku 4.5 answers — Nova Lite already does
-- [ ] Ask AWS to raise the Lambda concurrency limit — this account is capped at 10, which is thin if several people click at once
 - [ ] Sanity-check the seed market prices against a real shop near campus
 - [ ] A/B Nova Lite against Claude Haiku 4.5 on explanation quality — blocked until Haiku is enabled on the account
 
@@ -29,5 +28,6 @@ delete when done.
 - [x] Lambda memory 1769 MB — the exact point AWS hands over one whole vCPU; above it a single-threaded interpreter pays for a core it cannot use
 - [x] arm64 stays, justified on Graviton's published price, and the repo does not claim it is faster because nobody has measured it
 - [x] Local Terraform state stays; `infra/backend.tf.example` has the S3 + DynamoDB migration for the day a second person applies
+- [x] Lambda concurrency stays at 10 — ten browsers arriving at once lost 4 of 40 calls and the whole burst was over in 5.6 s, so the front end retries a 429 with jitter instead; ten arrivals over a minute lost nothing
 - [x] Front end is Preact + htm, vendored in `web/vendor/`, still no build step — all seven demo screenshots came out byte-identical to the hand-rolled version, so the port changed no pixels
 - [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone

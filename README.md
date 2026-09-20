@@ -164,6 +164,18 @@ import map is needed. The migration from the hand-rolled DOM builder it
 replaced was checked by re-running `scripts/capture_demo.py` against both:
 all seven screenshots came out byte-identical.
 
+The account is capped at **ten concurrent Lambda executions**, and opening
+the page costs four calls, so three or four people following a shared link in
+the same second is the whole ceiling. Ten browsers arriving simultaneously
+threw away 4 of 40 calls with a 429 and the entire burst was over in 5.6
+seconds; the same ten spread over a minute lost nothing. A burst that short
+does not want a larger quota, so the front end retries a throttle instead,
+with jitter — every client that was refused was refused at the same instant,
+and retrying them on the same schedule would rebuild the burst. Both paths are
+tested: `scripts/smoke_ui.py` refuses exactly the four calls a page load
+makes and checks the screen recovers anyway, then refuses every call and
+checks the page says it is busy rather than "request failed".
+
 The function has 1769 MB of memory, which is a speed setting rather than a
 memory one — it is the point at which Lambda hands out a whole vCPU, and a
 single-threaded pure-Python solver cannot use a second one. That number came

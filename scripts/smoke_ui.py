@@ -27,6 +27,41 @@ async def settle(page):
     await expect(page.locator(".loading")).to_have_count(0, timeout=40_000)
     await page.wait_for_timeout(300)
 
+THROTTLED = ('{"Reason": "ConcurrentInvocationLimitExceeded", '
+             '"Type": "User", "message": "Rate Exceeded."}')
+
+
+async def throttling(browser, errors, budget):
+    """Answer the first `budget` POSTs with the 429 a throttled Lambda sends.
+
+    `budget=4` is exactly what a page load costs, so every call the app makes
+    on arrival is thrown away and only the retry can save it. `budget=None`
+    never lets one through, which is what the message has to survive.
+    """
+    page = await browser.new_page(viewport={"width": 1280, "height": 900})
+    # The 429s are the point of this page, so the browser logging each one is
+    # not a finding. Anything else it complains about still is.
+    page.on("console", lambda m: errors.append(m.text)
+            if m.type == "error" and "429" not in m.text else None)
+    page.on("pageerror", lambda e: errors.append(str(e)))
+    left = [budget]
+
+    async def intercept(route, request):
+        if request.method != "POST":
+            await route.continue_()
+        elif left[0] is None or left[0] > 0:
+            if left[0] is not None:
+                left[0] -= 1
+            await route.fulfill(status=429, content_type="application/json",
+                                body=THROTTLED)
+        else:
+            await route.continue_()
+
+    await page.route("**/*", intercept)
+    await page.goto(SITE, wait_until="domcontentloaded")
+    return page
+
+
 async def main():
     errors = []
     async with async_playwright() as p:
@@ -119,6 +154,21 @@ async def main():
         await page2.get_by_text("The gap", exact=True).click()
         await settle(page2)
         assert "nothing on" in (await page2.inner_text("#view")).lower()
+
+        # A throttled start recovers by itself, because the burst is shorter
+        # than the retry. Every call the page makes on arrival is refused.
+        page3 = await throttling(b, errors, 4)
+        await settle(page3)
+        assert await page3.locator(".error").count() == 0, \
+            "a retryable throttle reached the screen"
+        assert "targets" in (await page3.inner_text("#view")).lower()
+
+        # And when it never clears, it says what happened rather than
+        # "request failed", which reads like the solver is broken.
+        page4 = await throttling(b, errors, None)
+        await settle(page4)
+        said = await page4.inner_text("#view")
+        assert "busy" in said.lower(), said[:200]
 
         await b.close()
     if errors:
