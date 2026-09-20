@@ -9,46 +9,37 @@ CloudTrail itself.
 
 | | |
 | --- | --- |
-| Window | 2026-09-19T16:51:26Z to 2026-09-20T12:17:00Z |
-| Mutating calls | 72 |
-| Distinct API calls | 31 |
+| Window | 2026-09-20T09:19:26Z to 2026-09-20T13:44:25Z |
+| Mutating calls | 62 |
+| Distinct API calls | 22 |
 
 ## Who made the calls
 
 | Calls | Client |
 | --- | --- |
-| 48 | AWS CLI, driven by Claude Code |
+| 37 | AWS CLI, driven by Claude Code |
 | 23 | Terraform, run by the agent's bootstrap script |
 | 1 | A browser (the AWS console) |
+| 1 | Boto3/1.43.98 md/Botocore#1.43.98 md/awscrt#0.36.0 ua/2.1 os |
 
 ## What was called
 
 | Calls | API |
 | --- | --- |
-| 13 | CreateOAuth2Token |
-| 7 | CreateInvalidation |
+| 12 | CreateOAuth2Token |
+| 11 | CreateInvalidation |
+| 9 | UpdateFunctionCode20150331v2 |
 | 6 | AddPermission20150331v2 |
-| 5 | CreateRole |
-| 5 | UpdateFunctionCode20150331v2 |
-| 4 | PutRolePolicy |
 | 4 | CreateFunction20150331 |
-| 2 | CreateSchedule |
-| 2 | CreateOpenIDConnectProvider |
-| 2 | UpdateAssumeRolePolicy |
+| 2 | CreateRole |
+| 2 | PutRolePolicy |
 | 2 | RemovePermission20150331v2 |
-| 1 | CreateBudget |
-| 1 | CreateNotification |
-| 1 | CreateTopic |
-| 1 | CreateSecurityGroup |
-| 1 | CreateKeyPair |
-| 1 | AttachRolePolicy |
-| 1 | CreateInstanceProfile |
-| 1 | AddRoleToInstanceProfile |
 | 1 | CreateStack |
 | 1 | CreateOriginAccessControl |
 | 1 | CreateLogGroup |
 | 1 | CreateBucket |
 | 1 | PutRetentionPolicy |
+| 1 | CreateOpenIDConnectProvider |
 | 1 | PutBucketTagging |
 | 1 | PutBucketPublicAccessBlock |
 | 1 | PutBucketEncryption |
@@ -56,5 +47,6 @@ CloudTrail itself.
 | 1 | PutBucketOwnershipControls |
 | 1 | CreateFunctionUrlConfig |
 | 1 | PutBucketPolicy |
+| 1 | UpdateAssumeRolePolicy |
 
 Raw events: `cloudtrail-build-window.json`.

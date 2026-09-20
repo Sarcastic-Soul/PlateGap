@@ -28,6 +28,7 @@ SHOTS = [
     ("iiit", "Where the numbers come from", "04-where-the-numbers-come-from.png"),
     ("dining-hall", "The gap", "05-us-dining-hall.png"),
     ("dining-hall", "For whoever writes the menu", "06-us-dining-hall-audit.png"),
+    ("custom", "Build a menu", "07-build-a-menu.png"),
 ]
 
 # The page says one of these while a solve is in flight.

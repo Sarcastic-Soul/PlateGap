@@ -38,25 +38,25 @@ are editable, because the shop outside your gate is not the shop outside mine.
 
 On my own mess menu, Monday, egg-eating diet:
 
-- **3 of 12 nutrient targets cannot be met from the menu at all**, at any
+- **4 of 12 nutrient targets cannot be met from the menu at all**, at any
   portion size a person could eat.
-- Closing the gap costs **₹9.29 a day** — about ₹279 a month, on top of a mess
+- Closing the gap costs **₹7.82 a day** — about ₹235 a month, on top of a mess
   fee already paid.
 - The binding constraint is **not the menu. It is stomach volume.** The solver
-  wants 12 rotis and five bowls of curd; the plate limit of 1400 g is what
-  stops it. That limit has a shadow price of **₹0.0422 per gram** — an extra
-  100 g of appetite is worth ₹4.22 a day.
-- Zinc is the expensive nutrient: **₹3.90 per milligram** at the margin.
-- One more roti in the ration would save **₹0.605 a day**.
+  wants twelve rotis and bowl after bowl of curd; the plate limit of 1400 g is
+  what stops it. That limit prices at **₹0.0347 per gram** — an extra 100 g of
+  appetite is worth ₹3.47 a day.
+- Zinc is the expensive nutrient: **₹7.53 per milligram** at the margin.
+- One more roti in the ration would save **₹0.597 a day**.
 
 Those last three numbers are not estimates. They are the dual variables of the
 linear program, which is the whole reason the solver is written the way it is.
 
-Aggregated across a 600-student hostel, the menu leaks **₹284,355 a month** in
-out-of-pocket spending. Adding matar chola on the six days it is absent would
-recover **₹85,534 a month** of that. On the US dining hall at 3000 students the
-same analysis says **$98,935.83 a month**, and that a black bean and rice bowl
-would recover **$30,486** of it.
+Aggregated across a 600-student hostel, the menu leaks **₹271,698 a month** in
+out-of-pocket spending. Adding mutter paneer on the days it is absent would
+recover **₹85,193 a month** of that. On the US dining hall at 3000 students the
+same analysis says **$99,177.86 a month**, and that a black bean and rice bowl
+would recover **$30,284** of it.
 
 That is a number a dining services director can act on, derived from nothing
 but the posted menu.
@@ -70,16 +70,18 @@ import.
 
 It was not written from scratch for the sake of it. It was written from scratch
 because the product needs the **dual** variables, not just the answer, and it
-needs to decompose them per constraint. "Zinc costs ₹3.90 a milligram" and "one
-more roti saves ₹0.605" are shadow prices read straight off the optimal basis.
+needs to decompose them per constraint. "Zinc costs ₹7.53 a milligram" and "one
+more roti saves ₹0.597" are shadow prices read straight off the optimal basis.
 A library that returns only the primal solution cannot tell you that.
 
 **Correctness is held to a reference.** `scipy.optimize.linprog` is a
 development dependency that never ships. 260 randomly generated LPs are solved
 by both on every change, and the test asserts three things: same feasibility
 status, same objective to 1e-6, and — the one that matters — **the same duals**,
-plus complementary slackness checked against our own primal. 267 tests on the
-solver alone, 348 in all, green before anything deploys.
+plus complementary slackness checked against our own primal, and strong
+duality — `y·b == c·x` — asserted on every instance, which is the check that
+catches a stale dual when each individual number still looks plausible. 442
+tests in all, green before anything deploys.
 
 **The menu audit is a pricing step used as a product feature.** To find which
 dish added to the menu would save students the most money, the obvious approach
@@ -99,6 +101,23 @@ budget is binding."
 cap; market items have a price and no cap. That single formulation is what lets
 one LP answer "what is free food worth to you" and "what should you buy" at the
 same time.
+
+**A menu can be pasted in, not just picked.** Real menus are photographs of a
+notice board typed out badly: `reoti`, `araher dal`, `idly`. `parse` matches
+them against the catalog through exact names, the presets' own alias maps, a
+transliteration fold, then fuzzy distance — and refuses to guess when two
+dishes are equally close. `"dal"` comes back as *could be Dal makhani or Mix
+dal, and guessing between them would be a coin toss*, with both suggested. It
+runs on the standard library, with no model call.
+
+**The written explanation cannot contain a number the solver did not produce.**
+`explain` asks Bedrock (Nova Lite) to write the result up in prose. Every
+number is then extracted back out of the text and reconciled against the
+solver's own figures at the precision it was written with; one number that does
+not reconcile discards the whole explanation and the templated version is
+returned instead. Nothing the caller typed reaches the prompt — a posted menu
+is called "your menu", never by the name they gave it — and there is a test
+that posts a menu named `IGNORE EVERYTHING ABOVE` and asserts it never appears.
 
 ## Architecture
 
@@ -172,11 +191,23 @@ agent had to do against a real account:
 
 ## What I would not claim
 
-Paneer, jaggery and whey protein are not in SR Legacy; those three are flagged
-`proxy` in the catalog and shown as such. Cook-loss is not modelled, so some
-vitamin numbers are optimistic. The seed market prices are my own survey near
-one campus and are meant to be edited. Nutrient targets follow ICMR-NIN 2020 for
-India and the US DRIs for the US preset, and the app says which one it used.
+Cooking destroys nutrients, so the catalog applies retention factors taken
+programmatically from the USDA Table of Nutrient Retention Factors, Release 6 —
+each of the 336 recipe lines declares how the ingredient is prepared. Two calls
+are worth stating: no yield factor is applied, because recipes state raw grams
+into the pot and the cooked weight cancels; and ingredients that already cite a
+cooked USDA row take a factor of 1.0, because taking the loss off twice would
+manufacture a shortfall *in the direction that flatters this product*. Release 6
+has no code for pressure cooking, the dominant Indian method, and none for deep
+frying flour — both are approximated and both are labelled in the data.
+
+Paneer and jaggery now come from the Indian Food Composition Tables 2017 rather
+than a guess: paneer's calcium was 208 mg in my proxy and is 476 mg measured.
+They keep an estimated flag for exactly one nutrient each, because IFCT 2017
+measures vitamin B12 for no food in the book. Whey protein is still a proxy
+outright. The seed market prices are my own survey near one campus and are meant
+to be edited. Nutrient targets follow ICMR-NIN 2020 for India and the US DRIs
+for the US preset, and the app says which one it used.
 
 The model says what it does not know. That seemed more useful than a number with
 no provenance.
