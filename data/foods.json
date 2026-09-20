@@ -38,14 +38,17 @@
    "recipe": [
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 110,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 120,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -78,18 +81,22 @@
    "recipe": [
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     },
     {
      "grams": 110,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 135,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -122,14 +129,17 @@
    "recipe": [
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 120,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 125,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -146,7 +156,7 @@
     "carbs": 37.7925,
     "fat": 8.045,
     "fibre": 5.09,
-    "folate": 21.65,
+    "folate": 16.37,
     "iron": 1.583,
     "kcal": 236.58,
     "magnesium": 63.8,
@@ -162,18 +172,22 @@
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "atta"
+     "ingredient": "atta",
+     "prep": "flour_baked"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 45,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 95,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -190,7 +204,7 @@
     "carbs": 21.566,
     "fat": 6.18,
     "fibre": 2.28,
-    "folate": 15.0,
+    "folate": 13.2,
     "iron": 0.421,
     "kcal": 146.24,
     "magnesium": 24.4,
@@ -198,26 +212,30 @@
     "protein": 2.062,
     "satfat": 0.9762,
     "sodium": 7.0,
-    "vita": 16.8,
+    "vita": 15.96,
     "vitb12": 0.0,
-    "vitc": 12.88,
+    "vitc": 12.606,
     "zinc": 0.3386
    },
    "recipe": [
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 100,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     },
     {
      "grams": 40,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 145,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -250,10 +268,12 @@
    "recipe": [
     {
      "grams": 10,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 10,
+   "servingSource": "packet",
    "tags": [
     "veg",
     "side",
@@ -286,10 +306,12 @@
    "recipe": [
     {
      "grams": 180,
-     "ingredient": "apple"
+     "ingredient": "apple",
+     "prep": "raw"
     }
    ],
    "servingGrams": 180,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "fruit",
@@ -322,10 +344,12 @@
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "bacon"
+     "ingredient": "bacon",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 25,
+   "servingSource": "counted",
    "tags": [
     "meat",
     "breakfast",
@@ -358,14 +382,17 @@
    "recipe": [
     {
      "grams": 90,
-     "ingredient": "bagel"
+     "ingredient": "bagel",
+     "prep": "as_sourced"
     },
     {
      "grams": 10,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 100,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -398,14 +425,17 @@
    "recipe": [
     {
      "grams": 4,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 120,
-     "ingredient": "salmon"
+     "ingredient": "salmon",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 124,
+   "servingSource": "counted",
    "tags": [
     "meat",
     "fish",
@@ -440,22 +470,27 @@
    "recipe": [
     {
      "grams": 150,
-     "ingredient": "black_beans"
+     "ingredient": "black_beans",
+     "prep": "as_sourced"
     },
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     },
     {
      "grams": 40,
-     "ingredient": "sweetcorn"
+     "ingredient": "sweetcorn",
+     "prep": "as_sourced"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 370,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "protein",
@@ -473,7 +508,7 @@
     "carbs": 38.552,
     "fat": 8.411,
     "fibre": 8.26,
-    "folate": 164.0,
+    "folate": 163.24,
     "iron": 2.832,
     "kcal": 260.24,
     "magnesium": 57.2,
@@ -483,28 +518,33 @@
     "sodium": 10.1,
     "vita": 0.9,
     "vitb12": 0.0,
-    "vitc": 7.09,
+    "vitc": 6.868,
     "zinc": 1.5736
    },
    "recipe": [
     {
      "grams": 90,
-     "ingredient": "chana"
+     "ingredient": "chana",
+     "prep": "as_sourced"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 60,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 175,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -537,10 +577,12 @@
    "recipe": [
     {
      "grams": 50,
-     "ingredient": "egg_boiled"
+     "ingredient": "egg_boiled",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 50,
+   "servingSource": "counted",
    "tags": [
     "egg",
     "protein",
@@ -553,30 +595,32 @@
    "maxServings": 2,
    "name": "Boiled sprouts",
    "perServing": {
-    "calcium": 7.8,
+    "calcium": 6.63,
     "carbs": 3.564,
     "fat": 0.108,
     "fibre": 1.08,
-    "folate": 36.6,
-    "iron": 0.546,
+    "folate": 21.96,
+    "iron": 0.4641,
     "kcal": 18.0,
-    "magnesium": 12.6,
-    "potassium": 89.4,
+    "magnesium": 10.08,
+    "potassium": 67.05,
     "protein": 1.824,
     "satfat": 0.0276,
-    "sodium": 3.6,
-    "vita": 0.6,
+    "sodium": 3.24,
+    "vita": 0.51,
     "vitb12": 0.0,
-    "vitc": 7.92,
-    "zinc": 0.246
+    "vitc": 5.148,
+    "zinc": 0.2091
    },
    "recipe": [
     {
      "grams": 60,
-     "ingredient": "sprouts"
+     "ingredient": "sprouts",
+     "prep": "legume_boiled_drained"
     }
    ],
    "servingGrams": 60,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "breakfast",
@@ -593,7 +637,7 @@
     "carbs": 9.976,
     "fat": 7.594,
     "fibre": 1.08,
-    "folate": 50.0,
+    "folate": 34.705,
     "iron": 0.533,
     "kcal": 128.96,
     "magnesium": 27.4,
@@ -601,7 +645,7 @@
     "protein": 5.362,
     "satfat": 2.5817,
     "sodium": 47.8,
-    "vita": 24.5,
+    "vita": 24.47,
     "vitb12": 0.333,
     "vitc": 0.45,
     "zinc": 0.8124
@@ -609,18 +653,22 @@
    "recipe": [
     {
      "grams": 10,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 90,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     },
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 110,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dairy",
@@ -653,10 +701,12 @@
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "bread_white"
+     "ingredient": "bread_white",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 25,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "staple",
@@ -689,10 +739,12 @@
    "recipe": [
     {
      "grams": 56,
-     "ingredient": "brownie_mix"
+     "ingredient": "brownie_mix",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 56,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "sweet",
@@ -725,14 +777,17 @@
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "corn_flakes"
+     "ingredient": "corn_flakes",
+     "prep": "as_sourced"
     },
     {
      "grams": 200,
-     "ingredient": "milk_2pct"
+     "ingredient": "milk_2pct",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 240,
+   "servingSource": "bowl",
    "tags": [
     "veg",
     "dairy",
@@ -750,7 +805,7 @@
     "carbs": 45.169,
     "fat": 9.594,
     "fibre": 2.025,
-    "folate": 167.1,
+    "folate": 118.455,
     "iron": 2.8648,
     "kcal": 330.62,
     "magnesium": 25.55,
@@ -759,29 +814,34 @@
     "satfat": 4.1048,
     "sodium": 348.91,
     "vita": 53.75,
-    "vitb12": 0.287,
+    "vitb12": 0.1578,
     "vitc": 0.6,
     "zinc": 1.411
    },
    "recipe": [
     {
      "grams": 55,
-     "ingredient": "flour_white"
+     "ingredient": "flour_white",
+     "prep": "flour_baked"
     },
     {
      "grams": 30,
-     "ingredient": "marinara"
+     "ingredient": "marinara",
+     "prep": "as_sourced"
     },
     {
      "grams": 35,
-     "ingredient": "mozzarella"
+     "ingredient": "mozzarella",
+     "prep": "cheese_baked"
     },
     {
      "grams": 3,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 120,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "main",
@@ -814,26 +874,32 @@
    "recipe": [
     {
      "grams": 85,
-     "ingredient": "beef_patty"
+     "ingredient": "beef_patty",
+     "prep": "as_sourced"
     },
     {
      "grams": 50,
-     "ingredient": "burger_bun"
+     "ingredient": "burger_bun",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "cheddar"
+     "ingredient": "cheddar",
+     "prep": "as_sourced"
     },
     {
      "grams": 10,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 180,
+   "servingSource": "counted",
    "tags": [
     "meat",
     "main",
@@ -850,7 +916,7 @@
     "carbs": 41.306,
     "fat": 10.3755,
     "fibre": 0.9,
-    "folate": 10.2,
+    "folate": 9.06,
     "iron": 0.898,
     "kcal": 351.47,
     "magnesium": 34.75,
@@ -860,28 +926,33 @@
     "sodium": 42.9,
     "vita": 3.3,
     "vitb12": 0.187,
-    "vitc": 1.48,
+    "vitc": 1.258,
     "zinc": 1.2708
    },
    "recipe": [
     {
      "grams": 55,
-     "ingredient": "chicken"
+     "ingredient": "chicken",
+     "prep": "as_sourced"
     },
     {
      "grams": 8,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_fried"
     },
     {
      "grams": 140,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 220,
+   "servingSource": "ladle",
    "tags": [
     "meat",
     "main",
@@ -898,7 +969,7 @@
     "carbs": 2.1318,
     "fat": 10.2333,
     "fibre": 0.36,
-    "folate": 9.14,
+    "folate": 7.64,
     "iron": 0.9726,
     "kcal": 215.21,
     "magnesium": 30.11,
@@ -906,30 +977,35 @@
     "protein": 27.329,
     "satfat": 5.3493,
     "sodium": 124.44,
-    "vita": 81.62,
-    "vitb12": 0.3926,
-    "vitc": 4.11,
+    "vita": 80.99,
+    "vitb12": 0.3746,
+    "vitc": 3.9045,
     "zinc": 0.9822
    },
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "fat_heated"
     },
     {
      "grams": 85,
-     "ingredient": "chicken"
+     "ingredient": "chicken",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 145,
+   "servingSource": "ladle",
    "tags": [
     "meat",
     "protein",
@@ -962,22 +1038,27 @@
    "recipe": [
     {
      "grams": 120,
-     "ingredient": "chickpeas_canned"
+     "ingredient": "chickpeas_canned",
+     "prep": "as_sourced"
     },
     {
      "grams": 40,
-     "ingredient": "cucumber"
+     "ingredient": "cucumber",
+     "prep": "raw"
     },
     {
      "grams": 5,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "as_sourced"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 195,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "protein",
@@ -995,7 +1076,7 @@
     "carbs": 38.9535,
     "fat": 10.442,
     "fibre": 10.605,
-    "folate": 232.1,
+    "folate": 230.025,
     "iron": 3.8805,
     "kcal": 289.58,
     "magnesium": 67.65,
@@ -1003,30 +1084,35 @@
     "protein": 12.013,
     "satfat": 1.4627,
     "sodium": 11.35,
-    "vita": 11.8,
+    "vita": 11.275,
     "vitb12": 0.0,
-    "vitc": 6.965,
+    "vitc": 6.5162,
     "zinc": 2.0747
    },
    "recipe": [
     {
      "grams": 130,
-     "ingredient": "chana"
+     "ingredient": "chana",
+     "prep": "as_sourced"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 185,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -1043,7 +1129,7 @@
     "carbs": 36.406,
     "fat": 10.193,
     "fibre": 9.905,
-    "folate": 215.65,
+    "folate": 213.35,
     "iron": 3.605,
     "kcal": 274.08,
     "magnesium": 63.4,
@@ -1051,30 +1137,35 @@
     "protein": 11.171,
     "satfat": 1.4372,
     "sodium": 10.9,
-    "vita": 13.8,
+    "vita": 13.17,
     "vitb12": 0.0,
-    "vitc": 7.52,
+    "vitc": 7.037,
     "zinc": 1.9302
    },
    "recipe": [
     {
      "grams": 120,
-     "ingredient": "chana"
+     "ingredient": "chana",
+     "prep": "as_sourced"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 185,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -1087,38 +1178,42 @@
    "maxServings": 2,
    "name": "Corn chat",
    "perServing": {
-    "calcium": 19.95,
+    "calcium": 19.2,
     "carbs": 10.6545,
     "fat": 0.285,
     "fibre": 3.855,
-    "folate": 44.1,
-    "iron": 0.954,
+    "folate": 30.45,
+    "iron": 0.9099,
     "kcal": 57.3,
-    "magnesium": 22.95,
-    "potassium": 203.85,
+    "magnesium": 21.96,
+    "potassium": 189.21,
     "protein": 3.549,
     "satfat": 0.0531,
-    "sodium": 4.35,
-    "vita": 29.1,
+    "sodium": 4.2,
+    "vita": 26.82,
     "vitb12": 0.0,
-    "vitc": 27.165,
-    "zinc": 0.795
+    "vitc": 21.165,
+    "zinc": 0.7578
    },
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     },
     {
      "grams": 60,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_drained"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "snack",
@@ -1135,7 +1230,7 @@
     "carbs": 15.9429,
     "fat": 9.8478,
     "fibre": 2.106,
-    "folate": 56.49,
+    "folate": 38.136,
     "iron": 0.7272,
     "kcal": 164.7,
     "magnesium": 28.92,
@@ -1143,7 +1238,7 @@
     "protein": 3.4563,
     "satfat": 1.5034,
     "sodium": 9.93,
-    "vita": 0.24,
+    "vita": 0.204,
     "vitb12": 0.0,
     "vitc": 3.33,
     "zinc": 0.4596
@@ -1151,18 +1246,22 @@
    "recipe": [
     {
      "grams": 12,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 9,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 45,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 55,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "snack",
@@ -1195,10 +1294,12 @@
    "recipe": [
     {
      "grams": 80,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 80,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dairy",
@@ -1215,7 +1316,7 @@
     "carbs": 29.5138,
     "fat": 7.7448,
     "fibre": 10.21,
-    "folate": 208.94,
+    "folate": 207.89,
     "iron": 4.1566,
     "kcal": 230.56,
     "magnesium": 56.56,
@@ -1223,34 +1324,40 @@
     "protein": 12.39,
     "satfat": 4.5683,
     "sodium": 63.64,
-    "vita": 72.32,
-    "vitb12": 0.1036,
-    "vitc": 4.51,
+    "vita": 71.9,
+    "vitb12": 0.0856,
+    "vitc": 4.373,
     "zinc": 1.6462
    },
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "fat_heated"
     },
     {
      "grams": 70,
-     "ingredient": "masoor_dal"
+     "ingredient": "masoor_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 60,
-     "ingredient": "rajma"
+     "ingredient": "rajma",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 175,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -1267,7 +1374,7 @@
     "carbs": 28.3485,
     "fat": 5.524,
     "fibre": 9.43,
-    "folate": 175.35,
+    "folate": 174.675,
     "iron": 1.66,
     "kcal": 194.6,
     "magnesium": 62.65,
@@ -1275,30 +1382,35 @@
     "protein": 9.076,
     "satfat": 0.9144,
     "sodium": 5.45,
-    "vita": 6.9,
+    "vita": 6.585,
     "vitb12": 0.0,
-    "vitc": 2.655,
+    "vitc": 2.5522,
     "zinc": 1.16
    },
    "recipe": [
     {
      "grams": 60,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     },
     {
      "grams": 70,
-     "ingredient": "toor_dal"
+     "ingredient": "toor_dal",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -1315,7 +1427,7 @@
     "carbs": 28.1535,
     "fat": 5.539,
     "fibre": 10.705,
-    "folate": 240.4,
+    "folate": 239.155,
     "iron": 4.4035,
     "kcal": 203.7,
     "magnesium": 49.95,
@@ -1323,30 +1435,35 @@
     "protein": 12.023,
     "satfat": 0.8619,
     "sodium": 3.95,
-    "vita": 6.3,
+    "vita": 5.985,
     "vitb12": 0.0,
-    "vitc": 5.115,
+    "vitc": 4.8457,
     "zinc": 1.7025
    },
    "recipe": [
     {
      "grams": 130,
-     "ingredient": "masoor_dal"
+     "ingredient": "masoor_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 165,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -1379,10 +1496,12 @@
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "burger_bun"
+     "ingredient": "burger_bun",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 40,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "staple",
@@ -1415,18 +1534,22 @@
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 60,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -1443,7 +1566,7 @@
     "carbs": 23.954,
     "fat": 8.9625,
     "fibre": 2.22,
-    "folate": 14.65,
+    "folate": 13.75,
     "iron": 0.4115,
     "kcal": 184.17,
     "magnesium": 27.2,
@@ -1451,30 +1574,35 @@
     "protein": 2.9245,
     "satfat": 1.8102,
     "sodium": 18.0,
-    "vita": 15.15,
+    "vita": 14.73,
     "vitb12": 0.0925,
-    "vitc": 11.005,
+    "vitc": 10.868,
     "zinc": 0.4793
    },
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     },
     {
      "grams": 8,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 110,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 155,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -1491,7 +1619,7 @@
     "carbs": 3.455,
     "fat": 16.635,
     "fibre": 0.425,
-    "folate": 48.75,
+    "folate": 47.8,
     "iron": 1.2455,
     "kcal": 218.04,
     "magnesium": 12.5,
@@ -1501,24 +1629,28 @@
     "sodium": 125.0,
     "vita": 149.0,
     "vitb12": 1.11,
-    "vitc": 1.85,
+    "vitc": 1.5725,
     "zinc": 1.0931
    },
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "egg_boiled"
+     "ingredient": "egg_boiled",
+     "prep": "as_sourced"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     }
    ],
    "servingGrams": 130,
+   "servingSource": "ladle",
    "tags": [
     "egg",
     "protein",
@@ -1535,7 +1667,7 @@
     "carbs": 4.4275,
     "fat": 17.685,
     "fibre": 0.725,
-    "folate": 52.5,
+    "folate": 50.425,
     "iron": 1.3135,
     "kcal": 231.38,
     "magnesium": 15.25,
@@ -1543,30 +1675,35 @@
     "protein": 13.075,
     "satfat": 4.38,
     "sodium": 126.25,
-    "vita": 159.5,
+    "vita": 158.975,
     "vitb12": 1.11,
-    "vitc": 5.275,
+    "vitc": 4.8262,
     "zinc": 1.1357
    },
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "egg_boiled"
+     "ingredient": "egg_boiled",
+     "prep": "as_sourced"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 160,
+   "servingSource": "counted",
    "tags": [
     "egg",
     "protein",
@@ -1599,10 +1736,12 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "fries"
+     "ingredient": "fries",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 100,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "side",
@@ -1619,7 +1758,7 @@
     "carbs": 24.7916,
     "fat": 3.3655,
     "fibre": 0.91,
-    "folate": 12.0,
+    "folate": 11.25,
     "iron": 0.127,
     "kcal": 138.59,
     "magnesium": 19.45,
@@ -1628,25 +1767,29 @@
     "satfat": 1.9042,
     "sodium": 43.47,
     "vita": 47.05,
-    "vitb12": 0.45,
+    "vitb12": 0.36,
     "vitc": 3.045,
     "zinc": 0.4237
    },
    "recipe": [
     {
      "grams": 35,
-     "ingredient": "banana"
+     "ingredient": "banana",
+     "prep": "raw"
     },
     {
      "grams": 100,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 12,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sweet",
@@ -1679,14 +1822,17 @@
    "recipe": [
     {
      "grams": 80,
-     "ingredient": "apple"
+     "ingredient": "apple",
+     "prep": "raw"
     },
     {
      "grams": 100,
-     "ingredient": "banana"
+     "ingredient": "banana",
+     "prep": "raw"
     }
    ],
    "servingGrams": 180,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "fruit",
@@ -1719,26 +1865,32 @@
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "bell_pepper"
+     "ingredient": "bell_pepper",
+     "prep": "raw"
     },
     {
      "grams": 30,
-     "ingredient": "cucumber"
+     "ingredient": "cucumber",
+     "prep": "raw"
     },
     {
      "grams": 15,
-     "ingredient": "ranch_dressing"
+     "ingredient": "ranch_dressing",
+     "prep": "as_sourced"
     },
     {
      "grams": 60,
-     "ingredient": "romaine"
+     "ingredient": "romaine",
+     "prep": "raw"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 155,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "side",
@@ -1755,7 +1907,7 @@
     "carbs": 5.467,
     "fat": 6.308,
     "fibre": 2.2,
-    "folate": 62.7,
+    "folate": 43.89,
     "iron": 0.465,
     "kcal": 80.54,
     "magnesium": 16.5,
@@ -1765,20 +1917,23 @@
     "sodium": 33.0,
     "vita": 0.0,
     "vitb12": 0.0,
-    "vitc": 53.02,
+    "vitc": 45.067,
     "zinc": 0.2976
    },
    "recipe": [
     {
      "grams": 110,
-     "ingredient": "cauliflower"
+     "ingredient": "cauliflower",
+     "prep": "veg_fried"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 115,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -1811,14 +1966,17 @@
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "coconut"
+     "ingredient": "coconut",
+     "prep": "raw"
     },
     {
      "grams": 8,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     }
    ],
    "servingGrams": 20,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -1851,14 +2009,17 @@
    "recipe": [
     {
      "grams": 120,
-     "ingredient": "chicken_breast"
+     "ingredient": "chicken_breast",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 125,
+   "servingSource": "counted",
    "tags": [
     "meat",
     "protein",
@@ -1876,7 +2037,7 @@
     "carbs": 42.7095,
     "fat": 9.6334,
     "fibre": 1.605,
-    "folate": 8.6,
+    "folate": 5.89,
     "iron": 0.567,
     "kcal": 261.58,
     "magnesium": 24.55,
@@ -1885,29 +2046,34 @@
     "satfat": 5.7644,
     "sodium": 17.96,
     "vita": 85.6,
-    "vitb12": 0.1808,
+    "vitb12": 0.0998,
     "vitc": 0.0,
     "zinc": 0.5418
    },
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "atta"
+     "ingredient": "atta",
+     "prep": "flour_fried"
     },
     {
      "grams": 8,
-     "ingredient": "ghee"
+     "ingredient": "ghee",
+     "prep": "fat_heated"
     },
     {
      "grams": 40,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_long"
     },
     {
      "grams": 30,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "sweet",
@@ -1940,14 +2106,17 @@
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 45,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 60,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -1960,36 +2129,39 @@
    "maxServings": 2,
    "name": "Imli chutney",
    "perServing": {
-    "calcium": 10.0,
-    "carbs": 11.5885,
-    "fat": 0.0155,
+    "calcium": 11.76,
+    "carbs": 10.5381,
+    "fat": 0.0203,
     "fibre": 0.335,
-    "folate": 0.75,
-    "iron": 0.365,
-    "kcal": 44.49,
-    "magnesium": 8.3,
-    "potassium": 118.8,
-    "protein": 0.1225,
-    "satfat": 0.0,
-    "sodium": 2.45,
+    "folate": 1.902,
+    "iron": 0.4154,
+    "kcal": 42.178,
+    "magnesium": 11.9,
+    "potassium": 73.84,
+    "protein": 0.2385,
+    "satfat": 0.0055,
+    "sodium": 2.0804,
     "vita": 0.35,
     "vitb12": 0.0,
     "vitc": 0.0,
-    "zinc": 0.038
+    "zinc": 0.058
    },
    "proxy": true,
-   "proxyNote": "Jaggery: Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+   "proxyNote": "Jaggery: Jaggery is IFCT 2017 code I001, measured, per 100 g edible portion. This replaces a hand-entered figure whose iron was a mid-point of a 2-11 mg range; IFCT measures 4.63 mg. Vitamin B12 is the one nutrient IFCT 2017 does not carry, and is recorded as zero on the grounds that cane sugar products contain none -- reasonable, but not measured, which is why the row stays flagged.",
    "recipe": [
     {
      "grams": 5,
-     "ingredient": "dates"
+     "ingredient": "dates",
+     "prep": "as_sourced"
     },
     {
      "grams": 8,
-     "ingredient": "jaggery"
+     "ingredient": "jaggery",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 20,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -2022,10 +2194,12 @@
    "recipe": [
     {
      "grams": 12,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 15,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -2058,14 +2232,17 @@
    "recipe": [
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 155,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "staple",
@@ -2082,7 +2259,7 @@
     "carbs": 5.957,
     "fat": 7.202,
     "fibre": 1.67,
-    "folate": 33.0,
+    "folate": 25.95,
     "iron": 0.3155,
     "kcal": 89.28,
     "magnesium": 12.3,
@@ -2090,30 +2267,35 @@
     "protein": 1.362,
     "satfat": 1.1685,
     "sodium": 14.7,
-    "vita": 12.6,
+    "vita": 11.34,
     "vitb12": 0.0,
-    "vitc": 25.61,
+    "vitc": 22.1795,
     "zinc": 0.2107
    },
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "cauliflower"
+     "ingredient": "cauliflower",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 30,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_fried"
     }
    ],
    "servingGrams": 110,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -2130,7 +2312,7 @@
     "carbs": 3.7745,
     "fat": 10.1145,
     "fibre": 0.81,
-    "folate": 12.85,
+    "folate": 10.585,
     "iron": 1.018,
     "kcal": 218.63,
     "magnesium": 30.4,
@@ -2138,30 +2320,35 @@
     "protein": 26.917,
     "satfat": 1.9736,
     "sodium": 65.35,
-    "vita": 15.6,
+    "vita": 14.55,
     "vitb12": 0.289,
-    "vitc": 5.645,
+    "vitc": 5.1407,
     "zinc": 0.9442
    },
    "recipe": [
     {
      "grams": 85,
-     "ingredient": "chicken"
+     "ingredient": "chicken",
+     "prep": "as_sourced"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 30,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_fried"
     }
    ],
    "servingGrams": 145,
+   "servingSource": "ladle",
    "tags": [
     "meat",
     "protein",
@@ -2178,7 +2365,7 @@
     "carbs": 7.668,
     "fat": 6.12,
     "fibre": 2.84,
-    "folate": 46.8,
+    "folate": 37.44,
     "iron": 0.515,
     "kcal": 86.04,
     "magnesium": 14.0,
@@ -2186,26 +2373,30 @@
     "protein": 1.5,
     "satfat": 0.9814,
     "sodium": 18.8,
-    "vita": 5.0,
+    "vita": 4.5,
     "vitb12": 0.0,
-    "vitc": 38.08,
+    "vitc": 32.368,
     "zinc": 0.2146
    },
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "cabbage"
+     "ingredient": "cabbage",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     }
    ],
    "servingGrams": 120,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -2222,7 +2413,7 @@
     "carbs": 28.2795,
     "fat": 4.295,
     "fibre": 0.1,
-    "folate": 7.25,
+    "folate": 5.95,
     "iron": 0.0965,
     "kcal": 169.85,
     "magnesium": 16.0,
@@ -2231,25 +2422,29 @@
     "satfat": 2.4438,
     "sodium": 56.3,
     "vita": 59.8,
-    "vitb12": 0.585,
+    "vitb12": 0.3218,
     "vitc": 0.0,
     "zinc": 0.605
    },
    "recipe": [
     {
      "grams": 130,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_long"
     },
     {
      "grams": 25,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     },
     {
      "grams": 15,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 160,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sweet",
@@ -2266,7 +2461,7 @@
     "carbs": 13.232,
     "fat": 9.859,
     "fibre": 4.28,
-    "folate": 103.7,
+    "folate": 70.405,
     "iron": 1.1105,
     "kcal": 151.26,
     "magnesium": 73.6,
@@ -2274,26 +2469,30 @@
     "protein": 4.169,
     "satfat": 1.5038,
     "sodium": 13.4,
-    "vita": 36.2,
+    "vita": 30.77,
     "vitb12": 0.0,
-    "vitc": 23.0,
+    "vitc": 19.55,
     "zinc": 0.8619
    },
    "recipe": [
     {
      "grams": 10,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 9,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 100,
-     "ingredient": "okra"
+     "ingredient": "okra",
+     "prep": "veg_fried"
     }
    ],
    "servingGrams": 110,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -2310,7 +2509,7 @@
     "carbs": 40.6678,
     "fat": 22.1798,
     "fibre": 0.0,
-    "folate": 169.04,
+    "folate": 166.58,
     "iron": 1.7756,
     "kcal": 435.06,
     "magnesium": 42.36,
@@ -2319,29 +2518,34 @@
     "satfat": 12.384,
     "sodium": 340.44,
     "vita": 220.52,
-    "vitb12": 0.8756,
-    "vitc": 0.08,
+    "vitb12": 0.6352,
+    "vitc": 0.068,
     "zinc": 2.4952
    },
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "fat_heated"
     },
     {
      "grams": 40,
-     "ingredient": "cheddar"
+     "ingredient": "cheddar",
+     "prep": "cheese_in_liquid"
     },
     {
      "grams": 40,
-     "ingredient": "milk_2pct"
+     "ingredient": "milk_2pct",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 150,
-     "ingredient": "pasta_cooked"
+     "ingredient": "pasta_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 238,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -2354,44 +2558,49 @@
    "maxServings": 1,
    "name": "Malai kofta",
    "perServing": {
-    "calcium": 125.05,
-    "carbs": 9.744,
-    "fat": 19.2125,
+    "calcium": 245.65,
+    "carbs": 10.2885,
+    "fat": 21.0035,
     "fibre": 0.72,
-    "folate": 8.45,
-    "iron": 0.226,
-    "kcal": 248.46,
-    "magnesium": 20.4,
-    "potassium": 226.3,
-    "protein": 9.7065,
-    "satfat": 7.7351,
-    "sodium": 20.85,
-    "vita": 88.0,
-    "vitb12": 0.5175,
+    "folate": 38.2541,
+    "iron": 0.541,
+    "kcal": 266.775,
+    "magnesium": 22.479,
+    "potassium": 192.7885,
+    "protein": 9.9585,
+    "satfat": 5.8681,
+    "sodium": 20.868,
+    "vita": 20.905,
+    "vitb12": 0.3128,
     "vitc": 2.96,
-    "zinc": 1.0564
+    "zinc": 1.4344
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 9,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 45,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "cheese_baked"
     },
     {
      "grams": 40,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 130,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "main",
@@ -2408,7 +2617,7 @@
     "carbs": 14.806,
     "fat": 6.281,
     "fibre": 5.575,
-    "folate": 114.15,
+    "folate": 113.58,
     "iron": 1.0145,
     "kcal": 132.54,
     "magnesium": 35.1,
@@ -2418,24 +2627,28 @@
     "sodium": 2.0,
     "vita": 0.7,
     "vitb12": 0.0,
-    "vitc": 1.81,
+    "vitc": 1.6435,
     "zinc": 0.6141
    },
    "recipe": [
     {
      "grams": 70,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     }
    ],
    "servingGrams": 95,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -2452,7 +2665,7 @@
     "carbs": 29.583,
     "fat": 5.547,
     "fibre": 11.315,
-    "folate": 256.25,
+    "folate": 255.68,
     "iron": 4.696,
     "kcal": 212.6,
     "magnesium": 51.9,
@@ -2462,24 +2675,28 @@
     "sodium": 3.4,
     "vita": 0.0,
     "vitb12": 0.0,
-    "vitc": 3.21,
+    "vitc": 3.0435,
     "zinc": 1.804
    },
    "recipe": [
     {
      "grams": 140,
-     "ingredient": "masoor_dal"
+     "ingredient": "masoor_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     }
    ],
    "servingGrams": 160,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -2496,7 +2713,7 @@
     "carbs": 33.623,
     "fat": 8.73,
     "fibre": 9.65,
-    "folate": 195.3,
+    "folate": 191.615,
     "iron": 3.376,
     "kcal": 249.34,
     "magnesium": 59.9,
@@ -2504,30 +2721,35 @@
     "protein": 10.706,
     "satfat": 1.2377,
     "sodium": 9.3,
-    "vita": 12.4,
+    "vita": 11.83,
     "vitb12": 0.0,
-    "vitc": 14.78,
+    "vitc": 12.758,
     "zinc": 1.9366
    },
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "chana"
+     "ingredient": "chana",
+     "prep": "as_sourced"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 30,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     }
    ],
    "servingGrams": 155,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -2560,10 +2782,12 @@
    "recipe": [
     {
      "grams": 240,
-     "ingredient": "milk_2pct"
+     "ingredient": "milk_2pct",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 240,
+   "servingSource": "packet",
    "tags": [
     "veg",
     "dairy",
@@ -2581,7 +2805,7 @@
     "carbs": 9.888,
     "fat": 6.695,
     "fibre": 0.0,
-    "folate": 10.3,
+    "folate": 8.755,
     "iron": 0.0618,
     "kcal": 125.66,
     "magnesium": 20.6,
@@ -2590,17 +2814,19 @@
     "satfat": 3.8419,
     "sodium": 88.58,
     "vita": 94.76,
-    "vitb12": 0.927,
+    "vitb12": 0.7416,
     "vitc": 0.0,
     "zinc": 0.7622
    },
    "recipe": [
     {
      "grams": 206,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     }
    ],
    "servingGrams": 206,
+   "servingSource": "glass",
    "tags": [
     "veg",
     "dairy",
@@ -2617,7 +2843,7 @@
     "carbs": 15.9815,
     "fat": 6.296,
     "fibre": 3.585,
-    "folate": 42.65,
+    "folate": 36.5075,
     "iron": 0.7105,
     "kcal": 127.49,
     "magnesium": 24.35,
@@ -2625,34 +2851,40 @@
     "protein": 2.894,
     "satfat": 1.0157,
     "sodium": 32.95,
-    "vita": 260.0,
+    "vita": 234.475,
     "vitb12": 0.0,
-    "vitc": 29.19,
+    "vitc": 25.0785,
     "zinc": 0.5716
    },
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "root_boiled_in_dish"
     },
     {
      "grams": 30,
-     "ingredient": "cauliflower"
+     "ingredient": "cauliflower",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 40,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 130,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -2685,18 +2917,22 @@
    "recipe": [
     {
      "grams": 12,
-     "ingredient": "ghee"
+     "ingredient": "ghee",
+     "prep": "fat_heated"
     },
     {
      "grams": 45,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sweet",
@@ -2709,44 +2945,49 @@
    "maxServings": 1,
    "name": "Mutter paneer",
    "perServing": {
-    "calcium": 115.25,
-    "carbs": 6.63,
-    "fat": 16.59,
+    "calcium": 249.25,
+    "carbs": 7.235,
+    "fat": 18.58,
     "fibre": 2.295,
-    "folate": 30.5,
-    "iron": 0.685,
-    "kcal": 218.39,
-    "magnesium": 25.3,
-    "potassium": 213.65,
-    "protein": 11.267,
-    "satfat": 7.4708,
-    "sodium": 12.0,
-    "vita": 108.8,
-    "vitb12": 0.45,
-    "vitc": 17.425,
-    "zinc": 1.4271
+    "folate": 59.2865,
+    "iron": 1.035,
+    "kcal": 238.74,
+    "magnesium": 27.61,
+    "potassium": 176.415,
+    "protein": 11.547,
+    "satfat": 5.3963,
+    "sodium": 12.02,
+    "vita": 33.06,
+    "vitb12": 0.2475,
+    "vitc": 15.1538,
+    "zinc": 1.8471
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 50,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "cheese_in_liquid"
     },
     {
      "grams": 35,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 125,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -2779,14 +3020,17 @@
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "coconut"
+     "ingredient": "coconut",
+     "prep": "raw"
     },
     {
      "grams": 2,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 30,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -2803,7 +3047,7 @@
     "carbs": 44.858,
     "fat": 7.65,
     "fibre": 2.84,
-    "folate": 165.2,
+    "folate": 116.5,
     "iron": 2.7135,
     "kcal": 282.88,
     "magnesium": 30.6,
@@ -2811,26 +3055,30 @@
     "protein": 7.864,
     "satfat": 1.1923,
     "sodium": 4.2,
-    "vita": 1.0,
+    "vita": 0.9,
     "vitb12": 0.0,
-    "vitc": 7.32,
+    "vitc": 6.222,
     "zinc": 0.6667
    },
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "cabbage"
+     "ingredient": "cabbage",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 60,
-     "ingredient": "semolina"
+     "ingredient": "semolina",
+     "prep": "flour_boiled"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "snack",
@@ -2863,10 +3111,12 @@
    "recipe": [
     {
      "grams": 230,
-     "ingredient": "oats_cooked"
+     "ingredient": "oats_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 230,
+   "servingSource": "bowl",
    "tags": [
     "veg",
     "breakfast",
@@ -2899,10 +3149,12 @@
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     }
    ],
    "servingGrams": 30,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -2919,7 +3171,7 @@
     "carbs": 44.59,
     "fat": 4.445,
     "fibre": 1.025,
-    "folate": 9.25,
+    "folate": 8.3,
     "iron": 0.3545,
     "kcal": 240.36,
     "magnesium": 20.5,
@@ -2929,24 +3181,28 @@
     "sodium": 2.5,
     "vita": 0.0,
     "vitb12": 0.0,
-    "vitc": 1.85,
+    "vitc": 1.5725,
     "zinc": 0.7779
    },
    "recipe": [
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 175,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "staple",
@@ -2979,10 +3235,12 @@
    "recipe": [
     {
      "grams": 240,
-     "ingredient": "orange_juice"
+     "ingredient": "orange_juice",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 240,
+   "servingSource": "glass",
    "tags": [
     "veg",
     "fruit",
@@ -3000,7 +3258,7 @@
     "carbs": 19.681,
     "fat": 14.032,
     "fibre": 3.665,
-    "folate": 135.85,
+    "folate": 88.54,
     "iron": 1.5165,
     "kcal": 232.18,
     "magnesium": 52.3,
@@ -3008,26 +3266,30 @@
     "protein": 6.992,
     "satfat": 2.0964,
     "sodium": 20.2,
-    "vita": 0.6,
+    "vita": 0.51,
     "vitb12": 0.0,
-    "vitc": 1.85,
+    "vitc": 1.5725,
     "zinc": 0.8867
    },
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 12,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_fried"
     }
    ],
    "servingGrams": 60,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "snack",
@@ -3060,18 +3322,22 @@
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "as_sourced"
     },
     {
      "grams": 120,
-     "ingredient": "pancake"
+     "ingredient": "pancake",
+     "prep": "as_sourced"
     },
     {
      "grams": 12,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 140,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -3084,44 +3350,49 @@
    "maxServings": 1,
    "name": "Paneer bhurji",
    "perServing": {
-    "calcium": 142.95,
-    "carbs": 3.893,
-    "fat": 19.585,
+    "calcium": 317.15,
+    "carbs": 4.6795,
+    "fat": 22.172,
     "fibre": 0.665,
-    "folate": 12.95,
-    "iron": 0.2395,
-    "kcal": 238.89,
-    "magnesium": 19.0,
-    "potassium": 173.6,
-    "protein": 12.346,
-    "satfat": 9.4051,
-    "sodium": 13.7,
-    "vita": 118.9,
-    "vitb12": 0.585,
-    "vitc": 4.59,
-    "zinc": 1.3121
+    "folate": 54.4212,
+    "iron": 0.6945,
+    "kcal": 265.345,
+    "magnesium": 22.003,
+    "potassium": 125.1945,
+    "protein": 12.71,
+    "satfat": 6.7083,
+    "sodium": 13.726,
+    "vita": 21.145,
+    "vitb12": 0.3218,
+    "vitc": 4.1755,
+    "zinc": 1.8581
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 65,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "cheese_baked"
     },
     {
      "grams": 20,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_fried"
     }
    ],
    "servingGrams": 115,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -3134,48 +3405,54 @@
    "maxServings": 1,
    "name": "Paneer butter masala",
    "perServing": {
-    "calcium": 152.82,
-    "carbs": 3.0463,
-    "fat": 23.6888,
+    "calcium": 313.62,
+    "carbs": 3.7723,
+    "fat": 26.0768,
     "fibre": 0.42,
-    "folate": 11.29,
-    "iron": 0.2241,
-    "kcal": 270.22,
-    "magnesium": 19.21,
-    "potassium": 194.07,
-    "protein": 11.986,
-    "satfat": 12.9182,
-    "sodium": 72.59,
-    "vita": 180.62,
-    "vitb12": 0.6436,
-    "vitc": 4.795,
-    "zinc": 1.2811
+    "folate": 49.5538,
+    "iron": 0.6441,
+    "kcal": 294.64,
+    "magnesium": 21.982,
+    "potassium": 149.388,
+    "protein": 12.322,
+    "satfat": 10.4288,
+    "sodium": 72.614,
+    "vita": 90.425,
+    "vitb12": 0.3826,
+    "vitc": 4.5552,
+    "zinc": 1.7851
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 8,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 60,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "cheese_in_liquid"
     },
     {
      "grams": 35,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 130,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -3192,7 +3469,7 @@
     "carbs": 5.782,
     "fat": 4.669,
     "fibre": 1.08,
-    "folate": 43.7,
+    "folate": 28.405,
     "iron": 0.488,
     "kcal": 74.06,
     "magnesium": 16.6,
@@ -3200,7 +3477,7 @@
     "protein": 2.239,
     "satfat": 0.6953,
     "sodium": 6.4,
-    "vita": 0.2,
+    "vita": 0.17,
     "vitb12": 0.0,
     "vitc": 0.0,
     "zinc": 0.2814
@@ -3208,14 +3485,17 @@
    "recipe": [
     {
      "grams": 10,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 14,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "side",
@@ -3248,18 +3528,22 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "marinara"
+     "ingredient": "marinara",
+     "prep": "as_sourced"
     },
     {
      "grams": 5,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 200,
-     "ingredient": "pasta_cooked"
+     "ingredient": "pasta_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 305,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "main",
@@ -3276,7 +3560,7 @@
     "carbs": 40.6745,
     "fat": 10.101,
     "fibre": 3.67,
-    "folate": 107.95,
+    "folate": 104.875,
     "iron": 2.0645,
     "kcal": 277.5,
     "magnesium": 33.55,
@@ -3284,34 +3568,40 @@
     "protein": 6.515,
     "satfat": 5.5791,
     "sodium": 218.55,
-    "vita": 86.5,
+    "vita": 85.595,
     "vitb12": 0.032,
-    "vitc": 15.865,
+    "vitc": 14.4938,
     "zinc": 0.7715
    },
    "recipe": [
     {
      "grams": 50,
-     "ingredient": "bread_white"
+     "ingredient": "bread_white",
+     "prep": "as_sourced"
     },
     {
      "grams": 10,
-     "ingredient": "butter"
+     "ingredient": "butter",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 60,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 175,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "snack",
@@ -3328,7 +3618,7 @@
     "carbs": 46.59,
     "fat": 5.54,
     "fibre": 2.31,
-    "folate": 24.0,
+    "folate": 21.075,
     "iron": 0.7435,
     "kcal": 263.5,
     "magnesium": 27.9,
@@ -3336,26 +3626,30 @@
     "protein": 5.661,
     "satfat": 0.9193,
     "sodium": 3.0,
-    "vita": 11.4,
+    "vita": 10.83,
     "vitb12": 0.0,
-    "vitc": 12.0,
+    "vitc": 10.2,
     "zinc": 1.1075
    },
    "recipe": [
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 30,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 180,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "staple",
@@ -3388,10 +3682,12 @@
    "recipe": [
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 12,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -3424,10 +3720,12 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 100,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dairy",
@@ -3460,10 +3758,12 @@
    "recipe": [
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "staple",
@@ -3480,7 +3780,7 @@
     "carbs": 40.1898,
     "fat": 9.3568,
     "fibre": 1.532,
-    "folate": 15.46,
+    "folate": 14.7,
     "iron": 0.4309,
     "kcal": 268.16,
     "magnesium": 31.84,
@@ -3490,28 +3790,33 @@
     "sodium": 2.58,
     "vita": 0.0,
     "vitb12": 0.0,
-    "vitc": 1.48,
+    "vitc": 1.258,
     "zinc": 0.8931
    },
    "recipe": [
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 8,
-     "ingredient": "peanut"
+     "ingredient": "peanut",
+     "prep": "as_sourced"
     },
     {
      "grams": 130,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 160,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "breakfast",
@@ -3528,7 +3833,7 @@
     "carbs": 17.9925,
     "fat": 6.625,
     "fibre": 2.675,
-    "folate": 11.0,
+    "folate": 7.15,
     "iron": 0.903,
     "kcal": 138.04,
     "magnesium": 34.25,
@@ -3544,14 +3849,17 @@
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "atta"
+     "ingredient": "atta",
+     "prep": "flour_fried"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 32,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "staple",
@@ -3568,7 +3876,7 @@
     "carbs": 12.161,
     "fat": 7.0525,
     "fibre": 3.53,
-    "folate": 41.35,
+    "folate": 34.7675,
     "iron": 0.8295,
     "kcal": 124.79,
     "magnesium": 23.0,
@@ -3576,30 +3884,35 @@
     "protein": 3.9375,
     "satfat": 1.4575,
     "sodium": 14.85,
-    "vita": 30.5,
-    "vitb12": 0.1125,
-    "vitc": 22.96,
+    "vita": 29.55,
+    "vitb12": 0.09,
+    "vitc": 19.516,
     "zinc": 0.7811
    },
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 40,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 50,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     }
    ],
    "servingGrams": 125,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -3616,7 +3929,7 @@
     "carbs": 32.9475,
     "fat": 7.725,
     "fibre": 10.345,
-    "folate": 177.5,
+    "folate": 175.425,
     "iron": 3.9455,
     "kcal": 241.48,
     "magnesium": 63.75,
@@ -3624,30 +3937,35 @@
     "protein": 11.766,
     "satfat": 1.2066,
     "sodium": 4.85,
-    "vita": 10.5,
+    "vita": 9.975,
     "vitb12": 0.0,
-    "vitc": 6.835,
+    "vitc": 6.3863,
     "zinc": 1.4767
    },
    "recipe": [
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 130,
-     "ingredient": "rajma"
+     "ingredient": "rajma",
+     "prep": "as_sourced"
     },
     {
      "grams": 25,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 185,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -3664,7 +3982,7 @@
     "carbs": 7.3685,
     "fat": 3.175,
     "fibre": 2.155,
-    "folate": 33.75,
+    "folate": 31.95,
     "iron": 0.387,
     "kcal": 63.97,
     "magnesium": 15.9,
@@ -3672,26 +3990,30 @@
     "protein": 2.042,
     "satfat": 0.5014,
     "sodium": 3.25,
-    "vita": 16.8,
+    "vita": 15.96,
     "vitb12": 0.0,
-    "vitc": 5.48,
+    "vitc": 5.206,
     "zinc": 0.2933
    },
    "recipe": [
     {
      "grams": 3,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 40,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     },
     {
      "grams": 25,
-     "ingredient": "toor_dal"
+     "ingredient": "toor_dal",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -3708,7 +4030,7 @@
     "carbs": 12.7204,
     "fat": 11.4718,
     "fibre": 2.376,
-    "folate": 96.14,
+    "folate": 62.491,
     "iron": 1.0742,
     "kcal": 173.54,
     "magnesium": 36.52,
@@ -3716,7 +4038,7 @@
     "protein": 4.9258,
     "satfat": 1.7175,
     "sodium": 14.08,
-    "vita": 0.44,
+    "vita": 0.374,
     "vitb12": 0.0,
     "vitc": 0.0,
     "zinc": 0.6192
@@ -3724,14 +4046,17 @@
    "recipe": [
     {
      "grams": 22,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 10,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 30,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "snack",
@@ -3748,7 +4073,7 @@
     "carbs": 0.5835,
     "fat": 2.03,
     "fibre": 0.18,
-    "folate": 2.25,
+    "folate": 1.575,
     "iron": 0.0415,
     "kcal": 20.38,
     "magnesium": 1.65,
@@ -3756,22 +4081,25 @@
     "protein": 0.132,
     "satfat": 0.3172,
     "sodium": 0.75,
-    "vita": 6.3,
+    "vita": 5.67,
     "vitb12": 0.0,
-    "vitc": 2.055,
+    "vitc": 1.9522,
     "zinc": 0.0257
    },
    "recipe": [
     {
      "grams": 2,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_fried"
     }
    ],
    "servingGrams": 20,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -3788,7 +4116,7 @@
     "carbs": 21.591,
     "fat": 1.75,
     "fibre": 3.21,
-    "folate": 13.2,
+    "folate": 9.24,
     "iron": 1.0805,
     "kcal": 110.84,
     "magnesium": 41.1,
@@ -3804,14 +4132,17 @@
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "atta"
+     "ingredient": "atta",
+     "prep": "flour_baked"
     },
     {
      "grams": 1,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 35,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "staple",
@@ -3844,18 +4175,22 @@
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "raw"
     },
     {
      "grams": 25,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     },
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 75,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "side",
@@ -3872,7 +4207,7 @@
     "carbs": 21.293,
     "fat": 4.3875,
     "fibre": 6.165,
-    "folate": 95.6,
+    "folate": 92.3875,
     "iron": 1.004,
     "kcal": 141.91,
     "magnesium": 46.3,
@@ -3880,38 +4215,45 @@
     "protein": 5.5045,
     "satfat": 0.7049,
     "sodium": 19.7,
-    "vita": 178.7,
+    "vita": 161.415,
     "vitb12": 0.0,
-    "vitc": 7.795,
+    "vitc": 6.7132,
     "zinc": 0.8164
    },
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "root_boiled_in_dish"
     },
     {
      "grams": 4,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "okra"
+     "ingredient": "okra",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     },
     {
      "grams": 70,
-     "ingredient": "toor_dal"
+     "ingredient": "toor_dal",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 140,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -3928,7 +4270,7 @@
     "carbs": 25.9965,
     "fat": 12.665,
     "fibre": 3.395,
-    "folate": 14.6,
+    "folate": 10.75,
     "iron": 1.03,
     "kcal": 225.48,
     "magnesium": 42.25,
@@ -3944,18 +4286,22 @@
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "atta"
+     "ingredient": "atta",
+     "prep": "flour_fried"
     },
     {
      "grams": 12,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 40,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 70,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "snack",
@@ -3988,10 +4334,12 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "egg_scrambled"
+     "ingredient": "egg_scrambled",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 100,
+   "servingSource": "ladle",
    "tags": [
     "egg",
     "protein",
@@ -4009,7 +4357,7 @@
     "carbs": 9.334,
     "fat": 13.236,
     "fibre": 5.38,
-    "folate": 50.0,
+    "folate": 48.34,
     "iron": 4.211,
     "kcal": 202.24,
     "magnesium": 73.0,
@@ -4017,30 +4365,35 @@
     "protein": 14.964,
     "satfat": 1.9906,
     "sodium": 191.4,
-    "vita": 8.4,
+    "vita": 7.98,
     "vitb12": 0.0,
-    "vitc": 5.58,
+    "vitc": 5.221,
     "zinc": 0.9886
    },
    "recipe": [
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 80,
-     "ingredient": "soybean"
+     "ingredient": "soybean",
+     "prep": "as_sourced"
     },
     {
      "grams": 20,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     }
    ],
    "servingGrams": 125,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -4057,7 +4410,7 @@
     "carbs": 9.49,
     "fat": 14.206,
     "fibre": 5.31,
-    "folate": 48.9,
+    "folate": 47.76,
     "iron": 4.1785,
     "kcal": 211.48,
     "magnesium": 71.8,
@@ -4067,24 +4420,28 @@
     "sodium": 190.8,
     "vita": 0.0,
     "vitb12": 0.0,
-    "vitc": 3.58,
+    "vitc": 3.247,
     "zinc": 0.9717
    },
    "recipe": [
     {
      "grams": 7,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 30,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 80,
-     "ingredient": "soybean"
+     "ingredient": "soybean",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 120,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -4117,10 +4474,12 @@
    "recipe": [
     {
      "grams": 90,
-     "ingredient": "broccoli"
+     "ingredient": "broccoli",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "side",
@@ -4153,10 +4512,12 @@
    "recipe": [
     {
      "grams": 90,
-     "ingredient": "sweetcorn"
+     "ingredient": "sweetcorn",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 90,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "side",
@@ -4173,7 +4534,7 @@
     "carbs": 10.3984,
     "fat": 1.625,
     "fibre": 0.0,
-    "folate": 2.5,
+    "folate": 2.125,
     "iron": 0.019,
     "kcal": 61.46,
     "magnesium": 5.0,
@@ -4182,21 +4543,24 @@
     "satfat": 0.9325,
     "sodium": 21.58,
     "vita": 23.0,
-    "vitb12": 0.225,
+    "vitb12": 0.18,
     "vitc": 0.0,
     "zinc": 0.1858
    },
    "recipe": [
     {
      "grams": 50,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     },
     {
      "grams": 8,
-     "ingredient": "sugar"
+     "ingredient": "sugar",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 150,
+   "servingSource": "cup",
    "tags": [
     "veg",
     "beverage",
@@ -4213,7 +4577,7 @@
     "carbs": 10.4,
     "fat": 11.431,
     "fibre": 3.87,
-    "folate": 100.3,
+    "folate": 95.6,
     "iron": 2.6226,
     "kcal": 181.14,
     "magnesium": 62.4,
@@ -4221,34 +4585,40 @@
     "protein": 13.361,
     "satfat": 1.8582,
     "sodium": 148.62,
-    "vita": 101.3,
+    "vita": 95.02,
     "vitb12": 0.012,
-    "vitc": 84.4,
+    "vitc": 76.6435,
     "zinc": 1.477
    },
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "bell_pepper"
+     "ingredient": "bell_pepper",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 50,
-     "ingredient": "broccoli"
+     "ingredient": "broccoli",
+     "prep": "as_sourced"
     },
     {
      "grams": 30,
-     "ingredient": "mushroom"
+     "ingredient": "mushroom",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 6,
-     "ingredient": "olive_oil"
+     "ingredient": "olive_oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 120,
-     "ingredient": "tofu"
+     "ingredient": "tofu",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 246,
+   "servingSource": "plate",
    "tags": [
     "veg",
     "protein",
@@ -4282,10 +4652,12 @@
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     }
    ],
    "servingGrams": 30,
+   "servingSource": "spoon",
    "tags": [
     "veg",
     "side",
@@ -4318,10 +4690,12 @@
    "recipe": [
     {
      "grams": 245,
-     "ingredient": "tomato_soup"
+     "ingredient": "tomato_soup",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 245,
+   "servingSource": "bowl",
    "tags": [
     "veg",
     "side",
@@ -4338,7 +4712,7 @@
     "carbs": 32.2095,
     "fat": 5.539,
     "fibre": 9.145,
-    "folate": 149.4,
+    "folate": 148.155,
     "iron": 1.5175,
     "kcal": 210.2,
     "magnesium": 62.95,
@@ -4346,30 +4720,35 @@
     "protein": 9.085,
     "satfat": 0.9009,
     "sodium": 7.85,
-    "vita": 6.3,
+    "vita": 5.985,
     "vitb12": 0.0,
-    "vitc": 3.165,
+    "vitc": 2.8957,
     "zinc": 1.2215
    },
    "recipe": [
     {
      "grams": 5,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 15,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "tomato_boiled"
     },
     {
      "grams": 130,
-     "ingredient": "toor_dal"
+     "ingredient": "toor_dal",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 165,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dal",
@@ -4402,26 +4781,32 @@
    "recipe": [
     {
      "grams": 20,
-     "ingredient": "american_cheese"
+     "ingredient": "american_cheese",
+     "prep": "as_sourced"
     },
     {
      "grams": 60,
-     "ingredient": "bread_wheat"
+     "ingredient": "bread_wheat",
+     "prep": "as_sourced"
     },
     {
      "grams": 10,
-     "ingredient": "romaine"
+     "ingredient": "romaine",
+     "prep": "raw"
     },
     {
      "grams": 15,
-     "ingredient": "tomato"
+     "ingredient": "tomato",
+     "prep": "raw"
     },
     {
      "grams": 60,
-     "ingredient": "turkey_deli"
+     "ingredient": "turkey_deli",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 165,
+   "servingSource": "counted",
    "tags": [
     "meat",
     "main",
@@ -4438,7 +4823,7 @@
     "carbs": 36.0785,
     "fat": 6.5285,
     "fibre": 2.515,
-    "folate": 124.1,
+    "folate": 87.25,
     "iron": 2.052,
     "kcal": 229.19,
     "magnesium": 24.95,
@@ -4446,30 +4831,35 @@
     "protein": 6.0655,
     "satfat": 1.0197,
     "sodium": 11.6,
-    "vita": 125.25,
+    "vita": 106.4625,
     "vitb12": 0.0,
-    "vitc": 2.365,
+    "vitc": 1.9218,
     "zinc": 0.5431
    },
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "root_sauteed"
     },
     {
      "grams": 6,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 45,
-     "ingredient": "semolina"
+     "ingredient": "semolina",
+     "prep": "flour_boiled"
     }
    ],
    "servingGrams": 160,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "breakfast",
@@ -4502,14 +4892,17 @@
    "recipe": [
     {
      "grams": 45,
-     "ingredient": "moong_dal"
+     "ingredient": "moong_dal",
+     "prep": "as_sourced"
     },
     {
      "grams": 9,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     }
    ],
    "servingGrams": 55,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "breakfast",
@@ -4526,7 +4919,7 @@
     "carbs": 48.2625,
     "fat": 8.58,
     "fibre": 2.725,
-    "folate": 25.5,
+    "folate": 22.1125,
     "iron": 0.7465,
     "kcal": 296.22,
     "magnesium": 29.25,
@@ -4534,30 +4927,35 @@
     "protein": 5.6225,
     "satfat": 1.3933,
     "sodium": 20.0,
-    "vita": 218.25,
+    "vita": 196.9,
     "vitb12": 0.0,
-    "vitc": 11.475,
+    "vitc": 9.6062,
     "zinc": 1.1058
    },
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "root_boiled_in_dish"
     },
     {
      "grams": 8,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 150,
-     "ingredient": "rice_cooked"
+     "ingredient": "rice_cooked",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 210,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "main",
@@ -4570,44 +4968,49 @@
    "maxServings": 1,
    "name": "Veg kofta",
    "perServing": {
-    "calcium": 52.35,
-    "carbs": 18.918,
-    "fat": 15.2135,
+    "calcium": 105.95,
+    "carbs": 19.16,
+    "fat": 16.0095,
     "fibre": 2.52,
-    "folate": 71.65,
-    "iron": 0.929,
-    "kcal": 242.45,
-    "magnesium": 39.3,
-    "potassium": 318.5,
-    "protein": 7.8735,
-    "satfat": 4.282,
-    "sodium": 15.7,
-    "vita": 34.3,
-    "vitb12": 0.18,
+    "folate": 62.0371,
+    "iron": 1.069,
+    "kcal": 250.59,
+    "magnesium": 40.224,
+    "potassium": 303.606,
+    "protein": 7.9855,
+    "satfat": 3.4522,
+    "sodium": 15.708,
+    "vita": 4.435,
+    "vitb12": 0.099,
     "vitc": 3.7,
-    "zinc": 0.9375
+    "zinc": 1.1055
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "besan"
+     "ingredient": "besan",
+     "prep": "flour_fried"
     },
     {
      "grams": 10,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 20,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "cheese_baked"
     },
     {
      "grams": 50,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 115,
+   "servingSource": "counted",
    "tags": [
     "veg",
     "main",
@@ -4624,7 +5027,7 @@
     "carbs": 13.75,
     "fat": 8.288,
     "fibre": 3.365,
-    "folate": 43.65,
+    "folate": 35.7975,
     "iron": 0.6865,
     "kcal": 135.77,
     "magnesium": 22.5,
@@ -4632,34 +5035,40 @@
     "protein": 2.7725,
     "satfat": 1.3311,
     "sodium": 30.5,
-    "vita": 218.25,
+    "vita": 186.4625,
     "vitb12": 0.0,
-    "vitc": 30.565,
+    "vitc": 26.1657,
     "zinc": 0.5463
    },
    "recipe": [
     {
      "grams": 25,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "root_sauteed"
     },
     {
      "grams": 35,
-     "ingredient": "cauliflower"
+     "ingredient": "cauliflower",
+     "prep": "veg_sauteed"
     },
     {
      "grams": 8,
-     "ingredient": "oil"
+     "ingredient": "oil",
+     "prep": "fat_heated"
     },
     {
      "grams": 25,
-     "ingredient": "peas"
+     "ingredient": "peas",
+     "prep": "veg_boiled_in_dish"
     },
     {
      "grams": 30,
-     "ingredient": "potato"
+     "ingredient": "potato",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 130,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "sabzi",
@@ -4692,18 +5101,22 @@
    "recipe": [
     {
      "grams": 15,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "raw"
     },
     {
      "grams": 90,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     },
     {
      "grams": 10,
-     "ingredient": "onion"
+     "ingredient": "onion",
+     "prep": "raw"
     }
    ],
    "servingGrams": 115,
+   "servingSource": "ladle",
    "tags": [
     "veg",
     "dairy",
@@ -4736,18 +5149,22 @@
    "recipe": [
     {
      "grams": 10,
-     "ingredient": "almonds"
+     "ingredient": "almonds",
+     "prep": "as_sourced"
     },
     {
      "grams": 50,
-     "ingredient": "banana"
+     "ingredient": "banana",
+     "prep": "raw"
     },
     {
      "grams": 170,
-     "ingredient": "yogurt_lowfat"
+     "ingredient": "yogurt_lowfat",
+     "prep": "as_sourced"
     }
    ],
    "servingGrams": 230,
+   "servingSource": "cup",
    "tags": [
     "veg",
     "dairy",
@@ -6505,28 +6922,31 @@
    ]
   },
   "jaggery": {
+   "estimated": [
+    "vitb12"
+   ],
    "id": "jaggery",
    "name": "Jaggery",
    "per100g": {
-    "calcium": 85.0,
-    "carbs": 98.0,
-    "fat": 0.1,
+    "calcium": 107.0,
+    "carbs": 84.87,
+    "fat": 0.16,
     "fibre": 0.0,
-    "folate": 0.0,
-    "iron": 4.0,
-    "kcal": 383.0,
-    "magnesium": 70.0,
-    "potassium": 1050.0,
-    "protein": 0.4,
-    "satfat": 0.0,
-    "sodium": 30.0,
+    "folate": 14.4,
+    "iron": 4.63,
+    "kcal": 354.1,
+    "magnesium": 115.0,
+    "potassium": 488.0,
+    "protein": 1.85,
+    "satfat": 0.069,
+    "sodium": 25.38,
     "vita": 0.0,
     "vitb12": 0.0,
     "vitc": 0.0,
-    "zinc": 0.2
+    "zinc": 0.45
    },
    "proxy": true,
-   "proxyNote": "Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+   "proxyNote": "Jaggery is IFCT 2017 code I001, measured, per 100 g edible portion. This replaces a hand-entered figure whose iron was a mid-point of a 2-11 mg range; IFCT measures 4.63 mg. Vitamin B12 is the one nutrient IFCT 2017 does not carry, and is recorded as zero on the grounds that cane sugar products contain none -- reasonable, but not measured, which is why the row stays flagged.",
    "reported": [
     "calcium",
     "carbs",
@@ -6541,13 +6961,12 @@
     "satfat",
     "sodium",
     "vita",
-    "vitb12",
     "vitc",
     "zinc"
    ],
    "source": {
-    "dataset": "manual estimate, not USDA",
-    "description": "Hand-entered. Iron in jaggery varies enormously with processing, roughly 2-11 mg per 100 g; 4 mg is a mid estimate and should not be leaned on.",
+    "dataset": "Indian Food Composition Tables 2017 (NIN-ICMR, Hyderabad)",
+    "description": "Jaggery is IFCT 2017 code I001, measured, per 100 g edible portion. This replaces a hand-entered figure whose iron was a mid-point of a 2-11 mg range; IFCT measures 4.63 mg. Vitamin B12 is the one nutrient IFCT 2017 does not carry, and is recorded as zero on the grounds that cane sugar products contain none -- reasonable, but not measured, which is why the row stays flagged.",
     "fdcId": null
    },
    "tags": [
@@ -7288,28 +7707,31 @@
    ]
   },
   "paneer": {
+   "estimated": [
+    "vitb12"
+   ],
    "id": "paneer",
    "name": "Paneer",
    "per100g": {
-    "calcium": 208.0,
-    "carbs": 1.2,
-    "fat": 20.8,
+    "calcium": 476.0,
+    "carbs": 2.41,
+    "fat": 24.78,
     "fibre": 0.0,
-    "folate": 8.0,
-    "iron": 0.2,
-    "kcal": 265.0,
-    "magnesium": 22.0,
-    "potassium": 138.0,
-    "protein": 18.3,
-    "satfat": 13.0,
-    "sodium": 18.0,
-    "vita": 170.0,
+    "folate": 93.31,
+    "iron": 0.9,
+    "kcal": 305.7,
+    "magnesium": 26.62,
+    "potassium": 63.53,
+    "protein": 18.86,
+    "satfat": 8.851,
+    "sodium": 18.04,
+    "vita": 20.9,
     "vitb12": 0.9,
     "vitc": 0.0,
-    "zinc": 1.9
+    "zinc": 2.74
    },
    "proxy": true,
-   "proxyNote": "Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "reported": [
     "calcium",
     "carbs",
@@ -7324,13 +7746,12 @@
     "satfat",
     "sodium",
     "vita",
-    "vitb12",
     "vitc",
     "zinc"
    ],
    "source": {
-    "dataset": "manual estimate, not USDA",
-    "description": "Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+    "dataset": "Indian Food Composition Tables 2017 (NIN-ICMR, Hyderabad)",
+    "description": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
     "fdcId": null
    },
    "tags": [
@@ -8361,6 +8782,24 @@
    ]
   },
   "whey_protein": {
+   "estimated": [
+    "calcium",
+    "carbs",
+    "fat",
+    "fibre",
+    "folate",
+    "iron",
+    "kcal",
+    "magnesium",
+    "potassium",
+    "protein",
+    "satfat",
+    "sodium",
+    "vita",
+    "vitb12",
+    "vitc",
+    "zinc"
+   ],
    "id": "whey_protein",
    "name": "Whey protein powder",
    "per100g": {
@@ -8382,28 +8821,11 @@
     "zinc": 3.0
    },
    "proxy": true,
-   "proxyNote": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
-   "reported": [
-    "calcium",
-    "carbs",
-    "fat",
-    "fibre",
-    "folate",
-    "iron",
-    "kcal",
-    "magnesium",
-    "potassium",
-    "protein",
-    "satfat",
-    "sodium",
-    "vita",
-    "vitb12",
-    "vitc",
-    "zinc"
-   ],
+   "proxyNote": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only. No composition table covers a manufactured blend, so there is nothing better to replace this with.",
+   "reported": [],
    "source": {
-    "dataset": "manual estimate, not USDA",
-    "description": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
+    "dataset": "manual estimate, not from a published table",
+    "description": "Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only. No composition table covers a manufactured blend, so there is nothing better to replace this with.",
     "fdcId": null
    },
    "tags": [
@@ -8490,7 +8912,8 @@
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "almonds"
+     "ingredient": "almonds",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8528,7 +8951,8 @@
    "recipe": [
     {
      "grams": 150,
-     "ingredient": "apple"
+     "ingredient": "apple",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -8565,7 +8989,8 @@
    "recipe": [
     {
      "grams": 85,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -8602,7 +9027,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "banana"
+     "ingredient": "banana",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -8639,7 +9065,8 @@
    "recipe": [
     {
      "grams": 130,
-     "ingredient": "black_beans"
+     "ingredient": "black_beans",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8676,7 +9103,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "chana"
+     "ingredient": "chana",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8714,7 +9142,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "carrot"
+     "ingredient": "carrot",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -8750,7 +9179,8 @@
    "recipe": [
     {
      "grams": 200,
-     "ingredient": "curd"
+     "ingredient": "curd",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8788,7 +9218,8 @@
    "recipe": [
     {
      "grams": 40,
-     "ingredient": "dates"
+     "ingredient": "dates",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8826,7 +9257,8 @@
    "recipe": [
     {
      "grams": 50,
-     "ingredient": "egg_boiled"
+     "ingredient": "egg_boiled",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8863,7 +9295,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "broccoli"
+     "ingredient": "broccoli",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8899,7 +9332,8 @@
    "recipe": [
     {
      "grams": 170,
-     "ingredient": "yogurt_lowfat"
+     "ingredient": "yogurt_lowfat",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -8937,7 +9371,8 @@
    "recipe": [
     {
      "grams": 150,
-     "ingredient": "guava"
+     "ingredient": "guava",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -8959,7 +9394,7 @@
     "carbs": 24.0,
     "fat": 16.25,
     "fibre": 0.0,
-    "folate": 25.0,
+    "folate": 21.25,
     "iron": 0.15,
     "kcal": 305.0,
     "magnesium": 50.0,
@@ -8968,14 +9403,15 @@
     "satfat": 9.325,
     "sodium": 215.0,
     "vita": 230.0,
-    "vitb12": 2.25,
+    "vitb12": 1.8,
     "vitc": 0.0,
     "zinc": 1.85
    },
    "recipe": [
     {
      "grams": 500,
-     "ingredient": "milk"
+     "ingredient": "milk",
+     "prep": "milk_heated_short"
     }
    ],
    "tags": [
@@ -9012,7 +9448,8 @@
    "recipe": [
     {
      "grams": 240,
-     "ingredient": "orange_juice"
+     "ingredient": "orange_juice",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9050,7 +9487,8 @@
    "recipe": [
     {
      "grams": 130,
-     "ingredient": "orange"
+     "ingredient": "orange",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -9067,29 +9505,30 @@
    "maxUnits": 2,
    "name": "Paneer",
    "perUnit": {
-    "calcium": 208.0,
-    "carbs": 1.2,
-    "fat": 20.8,
+    "calcium": 476.0,
+    "carbs": 2.41,
+    "fat": 24.78,
     "fibre": 0.0,
-    "folate": 8.0,
-    "iron": 0.2,
-    "kcal": 265.0,
-    "magnesium": 22.0,
-    "potassium": 138.0,
-    "protein": 18.3,
-    "satfat": 13.0,
-    "sodium": 18.0,
-    "vita": 170.0,
+    "folate": 93.31,
+    "iron": 0.9,
+    "kcal": 305.7,
+    "magnesium": 26.62,
+    "potassium": 63.53,
+    "protein": 18.86,
+    "satfat": 8.851,
+    "sodium": 18.04,
+    "vita": 20.9,
     "vitb12": 0.9,
     "vitc": 0.0,
-    "zinc": 1.9
+    "zinc": 2.74
    },
    "proxy": true,
-   "proxyNote": "Paneer: Hand-entered from published paneer composition. SR Legacy has no equivalent and its nearest cheeses are far off on protein and moisture.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "paneer"
+     "ingredient": "paneer",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9127,7 +9566,8 @@
    "recipe": [
     {
      "grams": 200,
-     "ingredient": "papaya"
+     "ingredient": "papaya",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -9165,7 +9605,8 @@
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "peanut"
+     "ingredient": "peanut",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9203,7 +9644,8 @@
    "recipe": [
     {
      "grams": 50,
-     "ingredient": "peanut"
+     "ingredient": "peanut",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9240,7 +9682,8 @@
    "recipe": [
     {
      "grams": 150,
-     "ingredient": "rajma"
+     "ingredient": "rajma",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9277,7 +9720,8 @@
    "recipe": [
     {
      "grams": 80,
-     "ingredient": "soybean"
+     "ingredient": "soybean",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9315,7 +9759,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "spinach"
+     "ingredient": "spinach",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9351,7 +9796,8 @@
    "recipe": [
     {
      "grams": 100,
-     "ingredient": "sprouts"
+     "ingredient": "sprouts",
+     "prep": "raw"
     }
    ],
    "tags": [
@@ -9387,7 +9833,8 @@
    "recipe": [
     {
      "grams": 28,
-     "ingredient": "mozzarella"
+     "ingredient": "mozzarella",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9425,7 +9872,8 @@
    "recipe": [
     {
      "grams": 120,
-     "ingredient": "tofu"
+     "ingredient": "tofu",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9461,11 +9909,12 @@
     "zinc": 0.9
    },
    "proxy": true,
-   "proxyNote": "Whey protein powder: Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only.",
+   "proxyNote": "Whey protein powder: Hand-entered from a typical whey concentrate label. Brands vary widely and fortification differs, so treat the micronutrients as indicative only. No composition table covers a manufactured blend, so there is nothing better to replace this with.",
    "recipe": [
     {
      "grams": 30,
-     "ingredient": "whey_protein"
+     "ingredient": "whey_protein",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9503,7 +9952,8 @@
    "recipe": [
     {
      "grams": 227,
-     "ingredient": "yogurt_lowfat"
+     "ingredient": "yogurt_lowfat",
+     "prep": "as_sourced"
     }
    ],
    "tags": [
@@ -9518,7 +9968,9 @@
   "dishes": "Dishes are computed from their ingredient recipes, not estimated at dish level. Recipes are stated assumptions -- see data/build_catalog.py -- so any individual gram figure can be argued with directly.",
   "ingredients": "Each ingredient is one USDA FoodData Central SR Legacy food, cited by fdcId, per 100 g.",
   "market": "Market prices are seed defaults, not survey data. Every one is editable in the interface, because a price that is wrong for your campus makes the recommendation wrong for you.",
-  "proxies": "Rows marked proxy have no SR Legacy equivalent and use a named substitute. They are flagged in the interface rather than presented as measured."
+  "proxies": "Rows marked proxy have no SR Legacy equivalent and use a named substitute. They are flagged in the interface rather than presented as measured.",
+  "retention": "Cooking destroys vitamin C, folate and some B vitamins. Every recipe line says how that ingredient is prepared, and the matching retention factors are applied before it is added up. Where an ingredient's USDA row is already the cooked food, the factor is 1.0, because the loss is in the source number and applying it twice would invent a shortfall.",
+  "servings": "Every dish says what kind of estimate its serving weight is -- a counted piece, a ladle, a plated portion. None of them are weighed, and the kind of guess tells you how far to trust it."
  },
  "nutrients": [
   {
@@ -9618,5 +10070,245 @@
    "unit": "ug"
   }
  ],
- "schemaVersion": 1
+ "retention": {
+  "as_sourced": {
+   "factors": {},
+   "id": "as_sourced",
+   "name": "already cooked in the source row",
+   "usdaCode": null,
+   "usdaDescription": "",
+   "why": "The USDA row this ingredient cites is already the cooked food -- `Rice, white, cooked`, `Lentils, boiled`, `Chicken, roasted`. The cook loss is in the number we started from, and applying a factor on top would subtract it twice and invent a shortfall. Also used for shelf-stable things that are never heated at all, like sugar and pickle."
+  },
+  "cheese_baked": {
+   "factors": {
+    "folate": 0.8,
+    "vitb12": 0.55,
+    "vitc": 0.65
+   },
+   "id": "cheese_baked",
+   "name": "cheese, baked or pan cooked",
+   "usdaCode": "1",
+   "usdaDescription": "CHEESE, BAKED",
+   "why": "Paneer scrambled in a pan or fried into a kofta, and mozzarella on a pizza. Release 6 gives the baked, broiled and cooked-with-liquid cheese codes identical factors, so the choice between them changes nothing arithmetically and is made for the record rather than the number."
+  },
+  "cheese_in_liquid": {
+   "factors": {
+    "folate": 0.8,
+    "vitb12": 0.55,
+    "vitc": 0.65
+   },
+   "id": "cheese_in_liquid",
+   "name": "cheese, simmered in a gravy",
+   "usdaCode": "5",
+   "usdaDescription": "CHEESE, COOKED W/LIQUID",
+   "why": "Paneer cubes dropped into a gravy, or cheddar melted into a sauce."
+  },
+  "fat_heated": {
+   "factors": {},
+   "id": "fat_heated",
+   "name": "fat heated in a pan",
+   "usdaCode": null,
+   "usdaDescription": "",
+   "why": "Release 6 has no fats-and-oils group at all, so there is no factor to apply. It happens not to matter: the only things oil, ghee and butter contribute to this catalog in quantity are energy and fat, which Release 6 does not cover either. 1.0 here means unsourced, not measured."
+  },
+  "flour_baked": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.9,
+    "vitc": 0.8
+   },
+   "id": "flour_baked",
+   "name": "flour, baked or griddled",
+   "usdaCode": "301",
+   "usdaDescription": "FLOUR/MEAL, BAKED",
+   "why": "A roti on a tawa is dry heat on a thin dough, which is what the baked code describes. Release 6 has no griddle code."
+  },
+  "flour_boiled": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.9,
+    "vitc": 0.8
+   },
+   "id": "flour_boiled",
+   "name": "flour or semolina, boiled",
+   "usdaCode": "302",
+   "usdaDescription": "FLOUR/MEAL, BOILED, STEAMED",
+   "why": "Semolina cooked into upma or a noodle dough, water retained."
+  },
+  "flour_fried": {
+   "factors": {
+    "folate": 0.65,
+    "vita": 0.85,
+    "vitc": 0.8
+   },
+   "id": "flour_fried",
+   "name": "flour, deep fried",
+   "usdaCode": "305",
+   "usdaDescription": "FLOUR/MEAL, SAUTEED",
+   "why": "Release 6 has no deep-fry code for flour, and poori, samosa, pakoda and boondi are all deep fried. Sauteed is the nearest code and is the most generous of the flour codes' neighbours, so this one is an approximation rather than a measurement and probably understates the loss."
+  },
+  "legume_boiled_drained": {
+   "factors": {
+    "calcium": 0.85,
+    "folate": 0.6,
+    "iron": 0.85,
+    "magnesium": 0.8,
+    "potassium": 0.75,
+    "sodium": 0.9,
+    "vita": 0.85,
+    "vitc": 0.65,
+    "zinc": 0.85
+   },
+   "id": "legume_boiled_drained",
+   "name": "sprouted pulse, boiled and drained",
+   "usdaCode": "501",
+   "usdaDescription": "LEGUMES, CKD 15/20MIN, BOILED, DRAINED",
+   "why": "Sprouts boiled briefly and strained. The shortest legume code Release 6 offers is still 15 to 20 minutes, longer than sprouts need, so this probably overstates the loss. Every other pulse in the catalog cites an SR row that is already boiled and so takes no factor at all."
+  },
+  "milk_heated_long": {
+   "factors": {
+    "folate": 0.8,
+    "vitb12": 0.55,
+    "vitc": 0.65
+   },
+   "id": "milk_heated_long",
+   "name": "milk, simmered down",
+   "usdaCode": "2152",
+   "usdaDescription": "MILK, HEATED APPROX 30MIN",
+   "why": "Kheer and the khoya in a gulab jamun are milk reduced over half an hour or more. B12 is the casualty: 55 percent here against 80 for a brief heat."
+  },
+  "milk_heated_short": {
+   "factors": {
+    "folate": 0.85,
+    "vitb12": 0.8,
+    "vitc": 0.85
+   },
+   "id": "milk_heated_short",
+   "name": "milk, heated briefly",
+   "usdaCode": "2151",
+   "usdaDescription": "MILK, HEATED APPROX 10MIN",
+   "why": "Mess milk is boiled before it is served and milk stirred into a gravy is heated through. Release 6 indexes milk only by how long it is held hot, so a duration has to be chosen; ten minutes is the shortest it offers and the least it can be."
+  },
+  "raw": {
+   "factors": {},
+   "id": "raw",
+   "name": "raw",
+   "usdaCode": null,
+   "usdaDescription": "",
+   "why": "Eaten uncooked -- salad onion, a banana, coconut in a fresh chutney. Nothing has been heated, so nothing has been lost."
+  },
+  "root_boiled_in_dish": {
+   "factors": {
+    "folate": 0.8,
+    "vita": 0.9,
+    "vitc": 0.75
+   },
+   "id": "root_boiled_in_dish",
+   "name": "root vegetable, boiled into the dish",
+   "usdaCode": "3456",
+   "usdaDescription": "VEG, ROOTS, ETC, BOILED, WATER USED",
+   "why": "Carrot simmered in sambhar or a mixed sabzi, water retained."
+  },
+  "root_sauteed": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.85,
+    "vitc": 0.75
+   },
+   "id": "root_sauteed",
+   "name": "root vegetable, sauteed",
+   "usdaCode": "3460",
+   "usdaDescription": "VEG, ROOTS, ETC, SAUTEED",
+   "why": "Carrot turned in oil, as in upma or a dry kolhapuri."
+  },
+  "tomato_boiled": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.95,
+    "vitc": 0.95
+   },
+   "id": "tomato_boiled",
+   "name": "tomato, simmered",
+   "usdaCode": "3751",
+   "usdaDescription": "TOMATOES, BOILED/BAKED",
+   "why": "Tomato has its own codes because it holds vitamin C far better than other vegetables -- 95 percent against 85 -- and it is in nearly every gravy on this menu."
+  },
+  "tomato_fried": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.9,
+    "vitc": 0.95
+   },
+   "id": "tomato_fried",
+   "name": "tomato, fried",
+   "usdaCode": "3752",
+   "usdaDescription": "TOMATOES, FRIED/BROILED",
+   "why": "Tomato cooked down hard in oil, as in a bhuna masala."
+  },
+  "veg_boiled_drained": {
+   "factors": {
+    "calcium": 0.95,
+    "folate": 0.65,
+    "iron": 0.95,
+    "magnesium": 0.95,
+    "potassium": 0.9,
+    "sodium": 0.95,
+    "vita": 0.9,
+    "vitc": 0.75,
+    "zinc": 0.95
+   },
+   "id": "veg_boiled_drained",
+   "name": "vegetable, boiled and drained",
+   "usdaCode": "3775",
+   "usdaDescription": "VEG, OTHER, BLD, WATER COVER, DRAINED",
+   "why": "Boiled in plenty of water and strained, so the minerals go down the sink with it. The worst case for a vegetable and the reason the drained-or-not distinction is worth carrying."
+  },
+  "veg_boiled_in_dish": {
+   "factors": {
+    "folate": 0.85,
+    "vita": 0.95,
+    "vitc": 0.85
+   },
+   "id": "veg_boiled_in_dish",
+   "name": "vegetable, boiled into the dish",
+   "usdaCode": "3776",
+   "usdaDescription": "VEG, OTHER, BLD, WATER USED",
+   "why": "Peas and cauliflower simmered in a gravy that is then eaten. What leaches out stays in the bowl, which is why the minerals hold at 100 percent here and drop when the water is poured away."
+  },
+  "veg_fried": {
+   "factors": {
+    "folate": 0.7,
+    "vita": 0.85,
+    "vitc": 0.85
+   },
+   "id": "veg_fried",
+   "name": "vegetable, fried",
+   "usdaCode": "3780",
+   "usdaDescription": "VEG, OTHER, FRIED",
+   "why": "Harder frying than a saute -- bhindi taken to crisp, onion browned for biryani, pakoda. Costs more folate than stir frying does."
+  },
+  "veg_sauteed": {
+   "factors": {
+    "folate": 0.8,
+    "vita": 0.9,
+    "vitc": 0.85
+   },
+   "id": "veg_sauteed",
+   "name": "vegetable, sauteed",
+   "usdaCode": "3785",
+   "usdaDescription": "VEG, OTHER, STIR FRY",
+   "why": "Onion, cabbage and cauliflower turned in hot oil. Release 6 has no sauteed code for non-root vegetables; stir fry is the same treatment under a different name."
+  }
+ },
+ "schemaVersion": 1,
+ "servingSources": {
+  "bowl": "One bowl, as served. Estimated from the usual bowl in a dining hall, not weighed.",
+  "counted": "A counted object -- one roti, one egg, two gulab jamun -- taken at a typical size for that object. The count is real; the grams per piece are an estimate.",
+  "cup": "One cup or tumbler, as served. Estimated, not weighed.",
+  "glass": "One glass, taken at its stated volume and converted at roughly the density of milk or juice.",
+  "ladle": "One service-counter ladle or spoon of a wet dish. Estimated from the usual ladle sizes in a hostel mess, not weighed.",
+  "packet": "One sealed retail packet, at its labelled weight.",
+  "plate": "One plated portion of a dry or composed dish, as handed over at the counter. Estimated, not weighed.",
+  "spoon": "One spoonful of a condiment. Estimated, not weighed, and small enough that the error barely moves a day's totals."
+ }
 }

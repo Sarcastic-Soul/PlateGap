@@ -16,4 +16,4 @@ looked fine.
 
 Re-shoot them with:
 
-    uv run --with playwright python scripts/capture_demo.py
+    uv run --group dev python scripts/capture_demo.py

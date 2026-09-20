@@ -272,6 +272,17 @@ svg.chart { width: 100%; height: 230px; display: block; }
   padding: 12px 14px;
 }
 
+#notice:not(:empty) { margin-bottom: 16px; }
+
+#notice .error {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#notice .chip { border-color: currentColor; color: inherit; background: none; }
+
 footer {
   max-width: 1180px;
   margin: 10px auto 40px;
@@ -285,3 +296,105 @@ code { font-family: var(--mono); font-size: 0.92em; }
 .why { color: var(--muted); font-size: 12px; }
 
 .hidden { display: none; }
+
+/* -------------------------------------------------------- the menu builder */
+
+.chip.action {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  padding: 7px 14px;
+}
+
+/* A dish on the menu. The whole chip removes it, so it needs to be obvious
+   that the thing is a button and not a label. */
+.chip.dish { padding-right: 6px; }
+.chip.dish .x { color: var(--muted); margin-left: 6px; font-size: 14px; }
+.chip.dish:hover { border-color: var(--short); color: var(--short); }
+.chip.dish:hover .x { color: var(--short); }
+
+.chip.add { color: var(--accent); border-style: dashed; }
+
+.chips.actions { margin-top: 14px; }
+
+.daystrip { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.daystrip .why { margin-left: 4px; }
+
+/* One column on a phone, two when there is room. Four meals in a row would
+   leave each of them too narrow for a dish name anywhere. */
+.mealgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.meal {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 11px 12px;
+}
+
+.meal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.meal .chips { margin-bottom: 9px; }
+
+.picker { margin-top: 10px; }
+.picker input { margin-bottom: 6px; }
+.picker .why { margin: 0 0 6px; }
+
+.picker-list {
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dish-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.dish-option:last-child { border-bottom: 0; }
+.dish-option:hover { background: var(--accent-soft); }
+.dish-option.on { color: var(--muted); }
+.dish-option .why { display: block; }
+
+.share { display: flex; gap: 6px; align-items: center; }
+.share-url { font-family: var(--mono); font-size: 12px; }
+.share .chip { white-space: nowrap; }
+
+/* ------------------------------------------ what a recommendation costs */
+
+.costs { margin-top: 5px; display: flex; flex-wrap: wrap; gap: 4px; align-items: baseline; }
+
+.cost-pill {
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* A quarter of a day's ceiling in one serving is worth a second look. */
+.cost-pill.heavy {
+  border-color: var(--warn);
+  background: var(--warn-soft);
+  color: var(--warn);
+}

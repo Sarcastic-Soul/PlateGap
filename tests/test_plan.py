@@ -97,17 +97,41 @@ def test_every_recipe_ingredient_exists(catalog):
 
 
 def test_dish_nutrients_match_their_recipes(catalog):
-    """Dishes are computed, not estimated. Recompute one and check."""
+    """Dishes are computed, not estimated. Recompute one and check.
+
+    The recomputation has to include the cook-loss factors, because a dish's
+    figure is its ingredients scaled by how much of each nutrient survives the
+    way that dish cooks them. Leaving them out here would let the build apply
+    a factor the catalog does not declare and nobody would notice.
+    """
     for dish_id, dish in catalog["dishes"].items():
         expected = {}
         for line in dish["recipe"]:
             per100 = catalog["ingredients"][line["ingredient"]]["per100g"]
+            factors = catalog["retention"][line["prep"]]["factors"]
             scale = line["grams"] / 100.0
             for key, value in per100.items():
-                expected[key] = expected.get(key, 0.0) + value * scale
+                expected[key] = (expected.get(key, 0.0)
+                                 + value * scale * factors.get(key, 1.0))
         for key, value in expected.items():
             assert dish["perServing"][key] == pytest.approx(value, abs=1e-3), (
                 "%s %s" % (dish_id, key))
+
+
+def test_market_nutrients_match_their_recipes(catalog):
+    """A bought item comes down the same traced path as a mess dish."""
+    for item_id, item in catalog["market"].items():
+        expected = {}
+        for line in item["recipe"]:
+            per100 = catalog["ingredients"][line["ingredient"]]["per100g"]
+            factors = catalog["retention"][line["prep"]]["factors"]
+            scale = line["grams"] / 100.0
+            for key, value in per100.items():
+                expected[key] = (expected.get(key, 0.0)
+                                 + value * scale * factors.get(key, 1.0))
+        for key, value in expected.items():
+            assert item["perUnit"][key] == pytest.approx(value, abs=1e-3), (
+                "%s %s" % (item_id, key))
 
 
 def test_proxy_ingredients_are_flagged_all_the_way_up(catalog):

@@ -7,8 +7,8 @@ the browser console reports an error -- a screenshot of a broken page is worse
 than no screenshot, and a duplicated CORS header once made the site look
 perfectly healthy to curl while every request from a browser failed.
 
-    uv run --with playwright python scripts/capture_demo.py
-    uv run --with playwright python scripts/capture_demo.py http://127.0.0.1:8111
+    uv run --group dev python scripts/capture_demo.py
+    uv run --group dev python scripts/capture_demo.py http://127.0.0.1:8123
 """
 
 import asyncio

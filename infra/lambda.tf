@@ -41,6 +41,62 @@ resource "aws_iam_role_policy" "lambda_logs" {
   policy = data.aws_iam_policy_document.lambda_logs.json
 }
 
+# --------------------------------------------------------------------------
+# The one thing besides logging the function may do: ask a model to write up
+# a solve, for the `explain` action and nothing else.
+#
+# Named models, not `bedrock:*` on `*`. The endpoint is public and
+# unauthenticated, so the blast radius of an abused function is whatever this
+# statement allows -- and "two small models by name" is a bill somebody can
+# read, while "any model in any region" is not. The handler keeps its own
+# allow-list of the same two ids so that a request cannot even ask for a
+# third; this is the second half of that, on the side an attacker cannot see.
+#
+# The two entries are shaped differently on purpose. Nova Lite is invoked as
+# a foundation model, which is a region-scoped, account-less ARN. Claude
+# Haiku 4.5 is only available through a cross-region inference profile, and
+# calling one needs both the profile ARN in this account and the underlying
+# foundation model in every region the profile is allowed to route to -- a
+# grant for us-east-1 alone produces an AccessDenied from us-east-2 that
+# mentions a region nothing in this repository ever named.
+#
+# Note for whoever applies this: the grant is necessary and not sufficient
+# for the Anthropic model. This account answers InvokeModel on Haiku 4.5 with
+# ResourceNotFoundException and "Model use case details have not been
+# submitted", which is a console form, not a permission. Nova Lite answers
+# today. Nothing breaks either way: `explain` falls back to the templated
+# text and still returns 200.
+# --------------------------------------------------------------------------
+
+data "aws_caller_identity" "current" {}
+
+locals {
+  # Where the `us.` inference profile is allowed to send the request.
+  bedrock_inference_regions = ["us-east-1", "us-east-2", "us-west-2"]
+  bedrock_haiku             = "anthropic.claude-haiku-4-5-20251001-v1:0"
+}
+
+data "aws_iam_policy_document" "lambda_bedrock" {
+  statement {
+    sid     = "WriteUpASolve"
+    actions = ["bedrock:InvokeModel"]
+    resources = concat(
+      [
+        "arn:aws:bedrock:${var.region}::foundation-model/amazon.nova-lite-v1:0",
+        "arn:aws:bedrock:${var.region}:${data.aws_caller_identity.current.account_id}:inference-profile/us.${local.bedrock_haiku}",
+      ],
+      [for r in local.bedrock_inference_regions :
+      "arn:aws:bedrock:${r}::foundation-model/${local.bedrock_haiku}"],
+    )
+  }
+}
+
+resource "aws_iam_role_policy" "lambda_bedrock" {
+  name   = "bedrock"
+  role   = aws_iam_role.lambda.id
+  policy = data.aws_iam_policy_document.lambda_bedrock.json
+}
+
 resource "aws_cloudwatch_log_group" "lambda" {
   name              = "/aws/lambda/${var.name}"
   retention_in_days = var.log_retention_days

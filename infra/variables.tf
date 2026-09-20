@@ -22,12 +22,38 @@ variable "log_retention_days" {
 
 variable "lambda_memory_mb" {
   description = <<-TEXT
-    Memory, which also sets the CPU share. The solver is pure Python and
-    entirely CPU bound, so this is really a speed dial. 512 MB solves a day in
-    roughly 30 ms; less than that and the weekly audit starts to feel slow.
+    Memory, which also sets the CPU share. The solver is pure Python, single
+    threaded and entirely CPU bound, so this is a speed dial rather than a
+    memory setting -- the function's actual footprint is a few tens of MB.
+
+    1769 MB is the point at which a Lambda gets one whole vCPU. Below it the
+    function runs on a fraction of a core; above it AWS hands out a second
+    vCPU that a single-threaded interpreter cannot use, so every extra MB is
+    paid for and none of it arrives as speed. That makes 1769 the largest
+    value with any benefit and the smallest value with the full benefit, which
+    is the whole argument for it.
+
+    Raised from 512 because the weekly audit took 6.2 s live and that is long
+    enough to feel broken. `scripts/benchmark_solver.py` measures the four
+    actions locally; run under a CPU quota on one core of a 12th-gen i5, the
+    audit goes 698 ms at a whole core, 1384 ms at 58% of one and 3400 ms at
+    29% -- slightly worse than inversely proportional, because throttling adds
+    scheduling latency on top of the arithmetic. 512 MB is 29% of a vCPU, so
+    the live 6.2 s and the local 3.4 s are the same shape on different silicon
+    and the solver is confirmed to be CPU bound and nothing else. Going from
+    512 to 1769 MB is 3.45x the CPU, which should put the audit near 1.8 s.
+
+    It is close to free. Lambda bills GB-seconds, so 3.45x the memory for
+    roughly a third of the duration is the same bill to within rounding
+    (512 MB x 6.2 s = 3.2 GB-s; 1769 MB x 1.8 s = 3.2 GB-s), and at this
+    traffic the whole thing sits inside the always-free 400,000 GB-seconds a
+    month either way. It also helps with the other constraint: this account is
+    capped at 10 concurrent executions, and that cap counts executions rather
+    than megabytes, so a request that finishes in a third of the time holds
+    its slot for a third as long.
   TEXT
   type        = number
-  default     = 512
+  default     = 1769
 }
 
 variable "lambda_timeout_seconds" {

@@ -92,6 +92,46 @@ def reduced_cost_drivers(variable, program, duals, limit=3):
     return terms[:limit]
 
 
+def serving_costs(variable, program, duals):
+    """What one serving of a candidate spends, to set against what it saves.
+
+    A reduced cost is a net figure, and a net figure hides the trade. On the
+    US dining hall the second-best recommendation is french fries -- honestly
+    so, because they are a cheap route to energy, potassium and fibre -- and
+    a screen that reports only the money saved is telling a mess committee to
+    serve chips without telling it what that costs anybody.
+
+    So every `<=` row the candidate loads is reported with what one serving
+    puts against it: the ceilings on energy, saturated fat and sodium, and
+    the row for how much a person can physically eat. Deliberately, this does
+    not ask whether the row binds. A ceiling with a zero dual contributes
+    nothing to the reduced cost, and that is precisely the case where this
+    matters most -- the dish is free in the arithmetic and still costs the
+    person eating it. `binding` says which of the two a reader is looking at.
+
+    Nothing here filters a candidate out. The dish still gets recommended on
+    what it saves; the reader gets told what it costs.
+    """
+    costs = []
+    for row, y, a in zip(program.rows, duals, _column_for(variable, program)):
+        if row["kind"] not in ("ceiling", "limit") or a <= 0:
+            continue
+        target = float(row.get("target") or 0.0)
+        costs.append({
+            "kind": row["kind"],
+            "key": row["key"],
+            "perServing": round(a, 4),
+            "target": round(target, 4),
+            "percentOfTarget": round(100.0 * a / target, 1) if target else None,
+            "contribution": round(-y * a, 6),
+            "binding": abs(y) > 1e-7,
+        })
+    # Heaviest first, measured as a share of the day's allowance -- which is
+    # the only comparison that works across milligrams of sodium and calories.
+    costs.sort(key=lambda c: -(c["percentOfTarget"] or 0.0))
+    return costs
+
+
 def menu_cuisine(catalog, menu):
     """Which kitchen this menu belongs to.
 
@@ -200,6 +240,7 @@ def audit_day(catalog, menu, day, profile=None, diet="egg", prices=None,
             "tags": candidate["tags"],
             "reducedCost": round(value, 6),
             "drivers": reduced_cost_drivers(candidate, program, result.duals_ub),
+            "costs": serving_costs(candidate, program, result.duals_ub),
             "servingGrams": candidate["servingGrams"],
             "proxy": candidate["proxy"],
             "saving": None,
@@ -282,6 +323,9 @@ def audit_week(catalog, menu, profile=None, diet="egg", prices=None,
                 "proxy": candidate["proxy"],
                 "days": [],
                 "drivers": candidate["drivers"],
+                # Per serving, so the same for every day it is recommended on.
+                "costs": candidate["costs"],
+                "servingGrams": candidate["servingGrams"],
                 "weeklySavingExact": 0.0,
             })
             record["days"].append(day)

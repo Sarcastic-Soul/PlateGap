@@ -229,3 +229,47 @@ def test_nutrient_shaped_instance_matches_scipy():
     b_ub = [-55.0, -18.0, 3.0, 2.0]
     result = _assert_matches_scipy(c, A_ub, b_ub, [], [])
     assert result.objective > 0, "the free items alone should not suffice"
+
+
+def test_a_dependent_row_is_dropped_and_reports_a_zero_dual():
+    """A linearly dependent row carries no information and gets dropped.
+
+    `_drive_out_artificials` pops such a row out of the tableau. The duals are
+    read from marker columns indexed by the *original* row order, so popping a
+    row must not shift anybody's dual, and the dropped row itself must report
+    zero rather than whatever was last in that column.
+    """
+    # The third equality is the sum of the first two, so one of them is
+    # redundant and the phase-one cleanup cannot clear its artificial.
+    c = [3.0, 2.0, 4.0]
+    A_eq = [[1.0, 1.0, 0.0], [0.0, 1.0, 1.0], [1.0, 2.0, 1.0]]
+    b_eq = [4.0, 6.0, 10.0]
+    A_ub = [[1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]
+    b_ub = [3.0, 8.0]
+
+    result = simplex.solve(c, A_ub, b_ub, A_eq, b_eq)
+    assert result.status == simplex.OPTIMAL
+    assert len(result.duals_eq) == len(A_eq), "a dropped row lost its dual slot"
+    assert len(result.duals_ub) == len(A_ub)
+    assert result.duals_eq[2] == pytest.approx(0.0, abs=1e-9)
+
+
+@pytest.mark.parametrize("seed", range(40))
+def test_duals_and_primal_agree_on_the_objective(seed):
+    """Strong duality, checked against our own output on every instance.
+
+    y . b must equal c . x at the optimum. A stale dual -- one left over in a
+    marker column from an earlier pivot -- breaks this identity even when
+    every individual number looks plausible, which is exactly the failure a
+    per-row eyeball would miss.
+    """
+    rng = random.Random(40_000 + seed)
+    c, A_ub, b_ub, A_eq, b_eq = _random_instance(
+        rng, rng.randint(3, 9), rng.randint(2, 7), rng.randint(0, 2))
+    result = simplex.solve(c, A_ub, b_ub, A_eq, b_eq)
+    if result.status != simplex.OPTIMAL:
+        pytest.skip("instance not optimal")
+
+    dual_value = (sum(y * b for y, b in zip(result.duals_ub, b_ub))
+                  + sum(y * b for y, b in zip(result.duals_eq, b_eq)))
+    assert dual_value == pytest.approx(result.objective, abs=1e-6, rel=1e-7)

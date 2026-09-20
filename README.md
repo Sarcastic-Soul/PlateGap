@@ -28,7 +28,10 @@ PlateGap answers three questions, each of which is a linear program:
 
 Three presets ship: a real Indian hostel mess timetable, a representative
 North American dining hall, and a deliberately plain canteen to edit. You can
-also post your own menu.
+also build a menu of your own — start from a preset or from nothing, pick
+dishes per meal per day — paste one in as text and have it matched to the
+catalog, or share the one you built as a link. The whole menu travels in the
+URL fragment, so there is nothing stored anywhere and nothing to sign into.
 
 ## What's interesting about it
 
@@ -75,13 +78,30 @@ Dishes are computed from ingredient recipes in stated grams, not estimated at
 dish level, so any single assumption can be argued with directly rather than
 having to take the whole table on faith.
 
-Two ingredients have no SR Legacy equivalent and are hand-entered from
-published composition, flagged `proxy` and shown as *estimated* in the
-interface. Using a bad USDA substitute would have been worse than admitting
-the gap: whole-milk ricotta, the nearest fresh acid-set cheese, reports 7.5 g
-protein per 100 g against paneer's 18.3 g. Understating the single biggest
-vegetarian protein source on the menu would have inflated the very shortfall
-this project measures — in our own favour.
+**Cooking is charged for.** Every recipe line says how the ingredient is
+prepared, and the USDA Table of Nutrient Retention Factors (Release 6, 2007)
+decides how much of each nutrient survives it — boiled into a gravy keeps 85%
+of a vegetable's vitamin C and 100% of its minerals, boiled and drained keeps
+75% and 90%. The trap is double-counting: SR Legacy carries both raw and
+cooked rows, this catalog cites the cooked one wherever it exists, and taking
+the loss off *again* would manufacture a shortfall — in the direction that
+flatters a product built to sell shortfalls. So those rows take a factor of
+1.0 and a test enforces it.
+
+Paneer and jaggery have no SR Legacy equivalent. Using a bad USDA substitute
+would have been worse than admitting the gap: whole-milk ricotta, the nearest
+fresh acid-set cheese, reports 7.5 g protein per 100 g against paneer's 18.9 g.
+Both now come from the Indian Food Composition Tables 2017 (NIN-ICMR), which
+is a measured Indian table rather than a guess at an Indian food — and which
+puts paneer's calcium at 476 mg per 100 g against the 208 mg previously
+guessed. Both stay flagged as *estimated* anyway, for one honest reason:
+IFCT 2017 does not measure vitamin B12 for any food in the book, so fifteen of
+the sixteen nutrients are sourced and the sixteenth is not. The catalog names
+which.
+
+Every serving weight, recipe and retention factor is printed in
+[docs/DATA.md](docs/DATA.md), which is generated from the catalog rather than
+written, so it cannot quietly drift away from what the solver actually uses.
 
 Targets ship two reference systems, ICMR-NIN 2020 and the US DRI, because they
 disagree sharply. Iron for an adult man is 19 mg under one and 8 mg under the
@@ -92,13 +112,15 @@ who open the app.
 ## Architecture
 
 ```
-CloudFront ──▶ S3 (private, OAC)          the site: three static files
+CloudFront ──▶ S3 (private, OAC)          the site: no framework, no build step
      │
   browser ──▶ Lambda Function URL ──▶ handler.py ──▶ solver/
                                                       simplex.py   two-phase simplex + duals
                                                       model.py     menu + profile + prices → LP
                                                       plan.py      gap / cheapest / frontier / week
                                                       audit.py     reduced-cost menu search
+                                                      menutext.py  pasted menu → catalog dishes
+                                                      explain.py   Bedrock write-up, with a fallback
                                                       targets.py   ICMR and DRI reference intakes
 ```
 
@@ -112,6 +134,43 @@ explains what it costs. No database: the catalog ships inside the
 deployment package, which is 51 KB. The function's only permission is to write
 its own logs.
 
+CloudFront attaches a response headers policy carrying HSTS and a content
+security policy, and because the site is three files with no framework the
+policy could be written by reading them rather than by guessing:
+
+```
+default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:;
+connect-src 'self' https://<function-id>.lambda-url.us-east-1.on.aws;
+base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+```
+
+Everything the page loads is same-origin. The two exceptions are the emoji
+favicon, which is a `data:` SVG in the head, and the `fetch` to the Function
+URL, which is a different origin and so has to be named — Terraform takes it
+from the resource rather than a pasted string, so a rebuild in another account
+gets a policy that works instead of one that silently blocks every request.
+There is no `'unsafe-inline'` anywhere: the chart is an inline `<svg>` styled
+with classes, nothing assigns to `element.style`, and although `app.js` uses
+`innerHTML` freely, markup written that way cannot execute a script it
+contains under any policy.
+
+The function has 1769 MB of memory, which is a speed setting rather than a
+memory one — it is the point at which Lambda hands out a whole vCPU, and a
+single-threaded pure-Python solver cannot use a second one. That number came
+out of `scripts/benchmark_solver.py`, which is in the repository precisely so
+the next person does not have to take it on trust. `infra/variables.tf` has
+the full argument and the measurements.
+
+On **arm64 versus x86\_64**: the function runs on arm64 and this repository
+does not claim that is faster, because nobody has measured it. The
+architecture is worth keeping for the published Graviton price — about 20%
+less per GB-second — and that much is a price list, not a benchmark. The
+performance question is genuinely open: the solver is pure Python, its inner
+loop is list and float arithmetic in the interpreter, and which way that goes
+on Graviton is not something to assert from an armchair. Running
+`scripts/benchmark_solver.py` on an arm64 box with the same `--repeat` and
+comparing medians would settle it in a couple of minutes.
+
 Costs are in `docs/hackathon/COST-AND-INFRA.md`. In short: Lambda's million
 free requests a month and CloudFront's free tier are always-free, and the
 rest is fractions of a cent.
@@ -119,14 +178,17 @@ rest is fractions of a cent.
 ## Running it
 
 ```bash
-uv run --group dev pytest -q          # 348 tests
-uv run python scripts/dev_server.py   # http://127.0.0.1:8000
+uv run --group dev pytest -q             # 442 tests
+uv run python scripts/dev_server.py      # http://127.0.0.1:8000
+uv run python scripts/benchmark_solver.py  # times the four solver actions
 ```
 
-Rebuilding the food catalog needs the SR Legacy CSV download:
+Rebuilding the food catalog needs the SR Legacy CSV download, and the data
+document is regenerated from the rebuilt catalog:
 
 ```bash
 uv run python data/build_catalog.py --sr path/to/FoodData_Central_sr_legacy_food_csv_2018-04
+uv run python scripts/gen_data_doc.py   # rewrites docs/DATA.md
 ```
 
 ## Deploying
@@ -136,6 +198,22 @@ cd infra
 terraform init
 terraform apply
 ```
+
+Terraform keeps its state in a local file, and that is deliberate rather than
+an oversight. For one person applying from one machine, a local state file is
+one fewer bucket, one fewer table, and no chicken-and-egg problem about which
+Terraform builds the backend the state lives in; the file is gitignored, so
+nothing leaks, it simply lives in exactly one place.
+
+What it cannot survive is a second person. Two states that each believe they
+are the truth produce orphaned resources that Terraform will cheerfully create
+again, and the fix is remote state with locking.
+`infra/backend.tf.example` is the configuration, with the bucket and DynamoDB
+table creation commands and the `terraform init -migrate-state` sequence
+written out. It is an example on purpose: switching the live backend here
+would strand the state that currently describes running infrastructure, and
+the right moment to adopt it is the day a second person shows up — not
+before, and not after the first collision.
 
 Then set the four outputs as **repository variables** (not secrets — they are
 identifiers, not credentials): `AWS_DEPLOY_ROLE`, `AWS_REGION`, `SITE_BUCKET`,
@@ -153,7 +231,10 @@ infrastructure. Terraform is run by a person, deliberately.
 
 - Whether the kitchen cooked the recipe we assumed.
 - What you like eating. The plan is nutritionally cheapest, not nicest.
-- Losses in cooking, serving and reheating.
+- What a serving actually weighs. Every one is an estimate, and
+  [docs/DATA.md](docs/DATA.md) says which kind.
+- Losses in serving and reheating. Cook loss is accounted for; a dish sitting
+  in a warmer for an hour is not.
 - Anything marked *estimated*.
 
 Open problems are in [TODO.md](TODO.md).

@@ -5,10 +5,17 @@ description = "Turns a fixed campus meal plan into the cheapest way to close its
 requires-python = ">=3.12"
 dependencies = []
 
+# Pinned exactly, not floored, so a CI run and a laptop run are the same run.
+# These never ship -- the Lambda zip contains the standard library and this
+# repository's own code and nothing else -- so pinning costs nothing and stops
+# a differential test quietly changing its reference implementation underneath
+# us. `playwright` is here rather than invoked with `uv run --with` for the
+# same reason: the screenshots are checked into the repository.
 [dependency-groups]
 dev = [
-    "scipy>=1.14",
-    "pytest>=8.0",
+    "scipy==1.18.1",
+    "pytest==9.1.1",
+    "playwright==1.63.0",
 ]
 
 [tool.pytest.ini_options]

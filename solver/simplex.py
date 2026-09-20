@@ -172,9 +172,10 @@ class _Tableau:
             if best_ratio is None or ratio < best_ratio - TOL:
                 best_ratio, best_r = ratio, i
             elif abs(ratio - best_ratio) <= TOL and best_r is not None:
-                if use_bland and self.basis[i] < self.basis[best_r]:
-                    best_r = i
-                elif not use_bland and self.basis[i] < self.basis[best_r]:
+                # Ties always go to the smallest basic column index. That is
+                # Bland's rule, and applying it to ties costs nothing even
+                # before `use_bland` turns it on for the entering column.
+                if self.basis[i] < self.basis[best_r]:
                     best_r = i
         return best_r
 

@@ -3,42 +3,30 @@
 Things worth doing that aren't blocking. One line each. Add to it, tick it off,
 delete when done.
 
-## Solver
+## Waiting on the account owner
 
-- [ ] Audit takes 6.2s live — try raising Lambda memory (more memory is more CPU) before trimming candidates
-- [ ] `choose_leaving` has two tie-break branches that do the same thing — collapse them
-- [ ] If the problem ever grows past ~200 variables, switch to bounded-variable simplex so serving caps stop costing a row each
-- [ ] Confirm a row dropped by `_drive_out_artificials` reports a zero dual and not a stale one
-
-## Data
-
-- [ ] Replace the paneer and jaggery proxies with IFCT 2017 values and drop the estimated flag
+- [ ] Run `./scripts/bootstrap_aws.sh -auto-approve` to apply the CSP/HSTS policy, the Lambda memory bump and the Bedrock policy
+- [ ] Submit the Anthropic use-case form in the console so Haiku 4.5 answers — Nova Lite already does
+- [ ] Ask AWS to raise the Lambda concurrency limit — this account is capped at 10, which is thin if several people click at once
 - [ ] Sanity-check the seed market prices against a real shop near campus
-- [ ] Cook-loss factors: the catalog treats a cooked ingredient as the ingredient, which overstates some vitamins
-- [ ] Write down the serving-size assumption for each mess item so the numbers are auditable
-- [ ] Decide whether nutrient targets follow ICMR (India) or US DRI, and switch by region
-
-## Infra and repo
-
-- [ ] Pin the dev dependencies to exact versions so CI and local agree
-- [ ] Pick the number of points on the frontier chart — 30 was a guess
+- [ ] A/B Nova Lite against Claude Haiku 4.5 on explanation quality — blocked until Haiku is enabled on the account
 
 ## Product
 
-- [ ] The dining-hall audit recommends french fries second — honest LP output, cheap energy and potassium, but it reads badly; consider showing what a recommendation costs in saturated fat alongside what it saves
+- [ ] Migrate the front end to Preact + htm, vendored, no build step — the UI changes get cheap after that
+- [ ] Decide whether a shared link should be able to carry prices as well as the menu
 
-- [ ] Build the parse endpoint: paste a menu as text, or photograph the notice board, and match it to the catalog
-- [ ] Build the explain endpoint so the write-up on screen is written rather than templated
-- [ ] Let someone assemble a menu from the catalog in the interface, not just pick a preset
-- [ ] Share a menu by link so a whole hostel can use one someone already typed in
-- [ ] A/B Nova Lite against Claude Haiku 4.5 on explanation quality once explanations exist
-- [ ] Assert in tests that the explanation contains no number that wasn't in the solver output
-- [ ] Decide what the app does when the menu alone already meets every target — the answer is a good screen, not an empty one
+## Data
 
-## Infra
+- [ ] Vitamin B12 for paneer and jaggery is still estimated — IFCT 2017 measures it for no food at all, so it needs another source
+- [ ] Deep-fried flour uses the sauteed-flour retention code, which probably understates the loss; pressure cooking has no code in Release 6 at all
+- [ ] Sprouts use the shortest legume boiling code, which is longer than sprouts need and so probably overstates the loss
 
+## Settled, with the measurement that settled it
+
+- [x] Bounded-variable simplex — not needed: a real solve is 42 variables and 58 rows, nowhere near the ~200 where a row per serving cap would matter
+- [x] Frontier points stay 24 — 12 points 176 ms, 24 points 314 ms, 40 points 502 ms, and at chart width 24 is already a point every 30 px
+- [x] Lambda memory 1769 MB — the exact point AWS hands over one whole vCPU; above it a single-threaded interpreter pays for a core it cannot use
+- [x] arm64 stays, justified on Graviton's published price, and the repo does not claim it is faster because nobody has measured it
+- [x] Local Terraform state stays; `infra/backend.tf.example` has the S3 + DynamoDB migration for the day a second person applies
 - [x] `allowed_origin` stays `*` on purpose — anyone should be able to call the API from their own clone
-- [ ] Add a CloudFront response headers policy with CSP and HSTS
-- [ ] Ask AWS to raise the Lambda concurrency limit — this account is capped at 10, which is thin if several people click at once
-- [ ] Move Terraform state to S3 with DynamoDB locking if anyone else ever runs it
-- [ ] Check whether arm64 is actually faster than x86_64 for this solver before claiming it

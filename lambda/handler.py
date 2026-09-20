@@ -26,6 +26,8 @@ for _candidate in (HERE, REPO):
         sys.path.append(_candidate)
 
 from solver import audit as audit_module      # noqa: E402
+from solver import explain as explain_module  # noqa: E402
+from solver import menutext                   # noqa: E402
 from solver import model                      # noqa: E402
 from solver import plan                       # noqa: E402
 from solver import targets as targets_module  # noqa: E402
@@ -44,8 +46,19 @@ MAX_FRONTIER_POINTS = 60
 MAX_STUDENTS = 1_000_000
 MAX_PASTED_CHARS = 8_000
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
+MAX_MENU_NAME_CHARS = 120
 
 ID_PATTERN = re.compile(r"^[a-z0-9_\-]{1,64}$")
+
+# Which models `explain` may be asked for. An unauthenticated endpoint that
+# forwards an arbitrary model id to Bedrock is an invitation to run somebody
+# else's inference on this account's bill, so the choice is a short list
+# rather than a string. Both are cheap and both are enabled in this account;
+# having two is what makes comparing them on explanation quality possible.
+EXPLAIN_MODELS = (
+    "amazon.nova-lite-v1:0",
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+)
 
 
 
@@ -84,6 +97,15 @@ for _name in sorted(os.listdir(os.path.join(DATA, "menus"))):
     if _name.endswith(".json"):
         _menu = _load_json(os.path.join(DATA, "menus", _name))
         MENUS[_menu["id"]] = _menu
+
+# Every alias any shipped menu knows about, merged into one lookup for
+# `parse`. The maps are small and they do not contradict each other, and
+# somebody pasting a menu has not told us which mess they are at yet -- so
+# asking them to pick a preset before they can type in their own menu would
+# be backwards. `araher dal` means toor dal wherever it was written down.
+ALIASES = {}
+for _menu in MENUS.values():
+    ALIASES.update(_menu.get("aliases", {}))
 
 
 # --------------------------------------------------------------------------
@@ -265,6 +287,19 @@ def action_presets(body):
                 "servingStyleNote": menu.get("servingStyleNote", ""),
                 "source": menu.get("source", {}),
                 "days": sorted(menu["days"], key=model.DAYS.index),
+                # The dishes themselves, so the builder can start from a
+                # preset and edit it rather than from an empty week. `days`
+                # stays a list of day names because the interface reads it
+                # that way; this is the same menu keyed for editing, and it
+                # goes back through `_clean_menu` on the way in like anything
+                # else a caller posts.
+                "offerings": {
+                    day: {meal: list(dishes)
+                          for meal, dishes in sorted(meals.items())}
+                    for day, meals in menu["days"].items()
+                },
+                "daily": {meal: list(dishes)
+                          for meal, dishes in sorted(menu.get("daily", {}).items())},
             }
             for menu in sorted(MENUS.values(), key=lambda m: m["id"])
         ],
@@ -365,6 +400,103 @@ def action_audit(body):
                                    students=students, excluded=common["excluded"])
 
 
+def action_parse(body):
+    """Read a pasted menu and say, dish by dish, what we think it says.
+
+    No model and no network: matching written names against a fixed catalog
+    is a string problem with a right answer, and this path has to work on a
+    cold start with nothing but the standard library.
+
+    The interesting part of the response is `unmatched`. Everything we could
+    not place comes back with the near misses that were rejected, because the
+    failure mode that would ruin this product is quietly dropping half of
+    somebody's menu and then reporting a shortfall they do not have.
+    """
+    text = body.get("text")
+    if not isinstance(text, str):
+        raise BadRequest("text must be your menu, pasted as a string")
+    if len(text) > MAX_PASTED_CHARS:
+        raise BadRequest("pasted menu must be under %d characters"
+                         % MAX_PASTED_CHARS)
+    if not text.strip():
+        raise BadRequest("there is no menu in that text")
+
+    name = body.get("name")
+    if name is not None:
+        if not isinstance(name, str):
+            raise BadRequest("name must be a string")
+        name = name[:MAX_MENU_NAME_CHARS].strip() or None
+
+    region = body.get("region")
+    if region is not None and region not in targets_module.REFERENCES:
+        raise BadRequest("unknown region %r" % region)
+
+    reading = menutext.parse(CATALOG, text, aliases=ALIASES, name=name,
+                             region=region)
+    if not reading["stats"]["itemsRead"]:
+        raise BadRequest("could not find anything that looks like a dish in "
+                         "that text")
+
+    # Run the parsed menu through the same validation a caller-supplied menu
+    # gets, so that what comes back is exactly what `solve` will accept. A
+    # parser whose output the solver then rejects is worse than no parser.
+    parsed = reading["menu"]
+    ready = bool(parsed["days"])
+    return {
+        "menu": _clean_menu(parsed) if ready else None,
+        "readyToSolve": ready,
+        "days": sorted(parsed["days"], key=model.DAYS.index),
+        "matched": reading["matched"],
+        "unmatched": reading["unmatched"],
+        "warnings": reading["warnings"],
+        "stats": reading["stats"],
+    }
+
+
+def action_explain(body):
+    """Write up one day's solve in prose, and check its arithmetic.
+
+    Takes the same body as `solve`, and re-solves rather than accepting a
+    result from the caller: numbers the caller supplied are the caller's
+    numbers, and the entire point of this action is that every figure in the
+    text came out of the simplex.
+
+    Always returns 200. If Bedrock is missing, denied, slow, or writes a
+    number that does not reconcile, the templated explanation is returned
+    with `source` saying so.
+    """
+    menu = _resolve_menu(body)
+    common = _common(body)
+    day = _clean_day(body, menu)
+    profile = _profile_for(menu, common["profile"])
+
+    model_id = body.get("model")
+    if model_id is not None and model_id not in EXPLAIN_MODELS:
+        raise BadRequest("model must be one of %s" % ", ".join(EXPLAIN_MODELS))
+
+    shortfall = plan.gap(CATALOG, menu, day, profile=profile,
+                         diet=common["diet"], excluded=common["excluded"])
+    answer = plan.cheapest(CATALOG, menu, day, profile=profile,
+                           diet=common["diet"], prices=common["prices"],
+                           excluded=common["excluded"])
+
+    # A preset's name ships with us and is safe to put in a prompt. A menu
+    # the caller posted carries a name the caller wrote, so it does not go
+    # anywhere near the model.
+    label = menu["name"] if menu.get("id") != "custom" else "your menu"
+
+    written = explain_module.write(CATALOG, label, shortfall, answer,
+                                   model_id=model_id)
+    written.update({
+        "day": day,
+        "diet": common["diet"],
+        "feasible": bool(answer.get("feasible")),
+        "currency": answer.get("currency"),
+        "spend": answer.get("spend"),
+    })
+    return written
+
+
 ACTIONS = {
     "presets": action_presets,
     "catalog": action_catalog,
@@ -373,6 +505,8 @@ ACTIONS = {
     "frontier": action_frontier,
     "week": action_week,
     "audit": action_audit,
+    "parse": action_parse,
+    "explain": action_explain,
 }
 
 
