@@ -98,7 +98,12 @@ CloudFront ──▶ S3 (private, OAC)          the site: three static files
 ```
 
 No API Gateway: the function takes a JSON body and returns one, and needs no
-routing, authorizers or usage plans. No database: the catalog ships inside the
+routing, authorizers or usage plans. One wrinkle if you deploy this yourself:
+AWS accounts created from around 2024 onward block public Lambda function URLs
+by default, and the symptom is a bare 403 with a resource policy that plainly
+allows the call. Granting `lambda:InvokeFunction` to `*` alongside the
+`InvokeFunctionUrl` grant is what opens it; `infra/lambda.tf` does this and
+explains what it costs. No database: the catalog ships inside the
 deployment package, which is 51 KB. The function's only permission is to write
 its own logs.
 

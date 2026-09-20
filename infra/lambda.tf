@@ -82,3 +82,31 @@ resource "aws_lambda_function_url" "solver" {
     max_age       = 86400
   }
 }
+
+# --------------------------------------------------------------------------
+# Making the Function URL actually reachable.
+#
+# Setting the URL's auth type to NONE is not enough on its own. The provider
+# adds a resource policy statement granting `lambda:InvokeFunctionUrl` to
+# everyone, and on an older AWS account that is the end of it -- but accounts
+# created from around 2024 onward block public function URLs by default, and
+# on those the request is refused with a bare 403 AccessDeniedException even
+# though the policy plainly allows it. Granting `lambda:InvokeFunction` as
+# well is what actually opens it.
+#
+# This statement cannot be narrowed. AWS rejects the FunctionUrlAuthType
+# condition on `lambda:InvokeFunction`, so the grant is unconditional, which
+# means any AWS principal can invoke the function directly as well as
+# anonymously through its URL. That is a real widening and worth being clear
+# about. It is acceptable here because the function is deliberately public,
+# holds no credentials, reads a catalog baked into its own package and writes
+# nothing; the only cost of abuse is invocations, and account concurrency caps
+# how fast those can arrive.
+# --------------------------------------------------------------------------
+
+resource "aws_lambda_permission" "public_invoke" {
+  statement_id  = "AllowPublicInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.solver.function_name
+  principal     = "*"
+}

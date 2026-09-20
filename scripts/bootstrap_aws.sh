@@ -24,7 +24,24 @@ echo "==> Building the function package"
 echo "==> Applying Terraform"
 cd "$root/infra"
 terraform init -input=false
-terraform apply -input=false "$@"
+
+# An AWS account may only have one OIDC provider per issuer URL, and plenty of
+# accounts already have GitHub's from some earlier project. Creating it
+# unconditionally fails with EntityAlreadyExists, so look first and reuse what
+# is there. Detecting it beats asking, because the answer is knowable.
+oidc_arn="$(aws iam list-open-id-connect-providers \
+  --query "OpenIDConnectProviderList[?ends_with(Arn, ':oidc-provider/token.actions.githubusercontent.com')].Arn | [0]" \
+  --output text 2>/dev/null || true)"
+
+if [ -n "$oidc_arn" ] && [ "$oidc_arn" != "None" ]; then
+  echo "    reusing the GitHub OIDC provider this account already has"
+  oidc_args=(-var "create_github_oidc_provider=false"
+             -var "github_oidc_provider_arn=$oidc_arn")
+else
+  oidc_args=()
+fi
+
+terraform apply -input=false "${oidc_args[@]}" "$@"
 
 name="$(terraform output -raw lambda_function_name)"
 bucket="$(terraform output -raw site_bucket)"
