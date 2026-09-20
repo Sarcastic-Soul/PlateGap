@@ -134,9 +134,12 @@ built this stack, with the client that made it:
 
 | Calls | Client |
 | --- | --- |
-| 42 | AWS CLI, driven by Claude Code |
+| 48 | AWS CLI, driven by Claude Code |
 | 23 | Terraform, run by the agent's bootstrap script |
-| 2 | A browser (me, once, in the console) |
+| 1 | A browser (me, once, in the console) |
+
+(Numbers as of the last export; re-run the script before posting and copy the
+table it writes.)
 
 `CreateFunction`, `CreateBucket`, `CreateDistributionWithTags`,
 `CreateOpenIDConnectProvider`, `PutBucketPolicy`, `UpdateFunctionCode` — all of
