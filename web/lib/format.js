@@ -6,8 +6,8 @@
  */
 
 /* Digits in groups, in whatever grouping the reader's browser uses -- which
-   is 2,71,698 on an Indian locale and 271,698 on an American one, both of
-   which are easier to take in at a glance than 271698. The audit across a
+   is 2,64,486 on an Indian locale and 264,486 on an American one, both of
+   which are easier to take in at a glance than 264486. The audit across a
    whole hostel produces six-figure numbers routinely, and an ungrouped one
    has to be counted rather than read. */
 function grouped(value, decimals) {

@@ -96,7 +96,7 @@ check by counting and a number somebody eyeballed at a counter.
 | `counted` | A counted object -- one roti, one egg, two gulab jamun -- taken at a typical size for that object. The count is real; the grams per piece are an estimate. |
 | `cup` | One cup or tumbler, as served. Estimated, not weighed. |
 | `glass` | One glass, taken at its stated volume and converted at roughly the density of milk or juice. |
-| `ladle` | One service-counter ladle or spoon of a wet dish. Estimated from the usual ladle sizes in a hostel mess, not weighed. |
+| `ladle` | One service-counter ladle of a cooked dish, sized to the standard katoris in ICMR-NIN's Dietary Guidelines for Indians (2024), Annexure I: a 155 ml small katori for dal, curry, sabzi and rice, a 115 ml one for curd, raita and sprouts, a 200 ml medium one for biryani. The grams are that volume at the dish's likely density, not weighed. |
 | `packet` | One sealed retail packet, at its labelled weight. |
 | `plate` | One plated portion of a dry or composed dish, as handed over at the counter. Estimated, not weighed. |
 | `spoon` | One spoonful of a condiment. Estimated, not weighed, and small enough that the error barely moves a day's totals. |
@@ -356,13 +356,13 @@ Per serving: 164.7 kcal energy, 3.46 g protein, 9 mg calcium, 0.73 mg iron, 0.46
 
 #### Dahi
 
-`dahi` &middot; **80 g** per serving &middot; serving is a `ladle` &middot; at most 2 a day
+`dahi` &middot; **120 g** per serving &middot; serving is a `ladle` &middot; at most 2 a day
 
 | Ingredient | g | Prepared | vitc kept | folate kept |
 |---|---|---|---|---|
-| Curd (plain yoghurt) ([171284](https://fdc.nal.usda.gov/food-details/171284/nutrients)) | 80 | already cooked in the source row | 100% | 100% |
+| Curd (plain yoghurt) ([171284](https://fdc.nal.usda.gov/food-details/171284/nutrients)) | 120 | already cooked in the source row | 100% | 100% |
 
-Per serving: 48.8 kcal energy, 2.78 g protein, 96.8 mg calcium, 0.04 mg iron, 0.47 mg zinc, 0.4 mg vitamin c, 5.6 ug folate.
+Per serving: 73.2 kcal energy, 4.16 g protein, 145.2 mg calcium, 0.06 mg iron, 0.71 mg zinc, 0.6 mg vitamin c, 8.4 ug folate.
 
 #### Dal makhani
 
@@ -910,13 +910,13 @@ Per serving: 35.36 kcal energy, 0 g protein, 0 mg calcium, 0 mg iron, 0 mg zinc,
 
 #### Plain curd
 
-`plain_curd` &middot; **100 g** per serving &middot; serving is a `ladle` &middot; at most 2 a day
+`plain_curd` &middot; **120 g** per serving &middot; serving is a `ladle` &middot; at most 2 a day
 
 | Ingredient | g | Prepared | vitc kept | folate kept |
 |---|---|---|---|---|
-| Curd (plain yoghurt) ([171284](https://fdc.nal.usda.gov/food-details/171284/nutrients)) | 100 | already cooked in the source row | 100% | 100% |
+| Curd (plain yoghurt) ([171284](https://fdc.nal.usda.gov/food-details/171284/nutrients)) | 120 | already cooked in the source row | 100% | 100% |
 
-Per serving: 61 kcal energy, 3.47 g protein, 121 mg calcium, 0.05 mg iron, 0.59 mg zinc, 0.5 mg vitamin c, 7 ug folate.
+Per serving: 73.2 kcal energy, 4.16 g protein, 145.2 mg calcium, 0.06 mg iron, 0.71 mg zinc, 0.6 mg vitamin c, 8.4 ug folate.
 
 #### Plain rice
 

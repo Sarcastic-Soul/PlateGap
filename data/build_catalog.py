@@ -423,8 +423,11 @@ SERVING_SOURCES = {
         "typical size for that object. The count is real; the grams per piece "
         "are an estimate."),
     "ladle": (
-        "One service-counter ladle or spoon of a wet dish. Estimated from the "
-        "usual ladle sizes in a hostel mess, not weighed."),
+        "One service-counter ladle of a cooked dish, sized to the standard "
+        "katoris in ICMR-NIN's Dietary Guidelines for Indians (2024), Annexure "
+        "I: a 155 ml small katori for dal, curry, sabzi and rice, a 115 ml one "
+        "for curd, raita and sprouts, a 200 ml medium one for biryani. The "
+        "grams are that volume at the dish's likely density, not weighed."),
     "plate": (
         "One plated portion of a dry or composed dish, as handed over at the "
         "counter. Estimated, not weighed."),
@@ -694,15 +697,16 @@ DISHES = [
      30, 2, ["veg", "snack"], "plate"),
 
     # ---- Everyday extras
-    ("plain_curd", "Plain curd", {"curd": (100, "as_sourced")},
-     100, 2, ["veg", "dairy"], "ladle"),
+    ("plain_curd", "Plain curd", {"curd": (120, "as_sourced")},
+     120, 2, ["veg", "dairy"], "ladle"),
     ("boondi_raita", "Boondi raita",
      {"curd": (90, "as_sourced"), "besan": (10, "flour_fried"),
       "oil": (4, "fat_heated")}, 110, 2, ["veg", "dairy"], "ladle"),
     ("veg_raita", "Veg raita",
      {"curd": (90, "as_sourced"), "carrot": (15, "raw"), "onion": (10, "raw")},
      115, 2, ["veg", "dairy"], "ladle"),
-    ("dahi", "Dahi", {"curd": (80, "as_sourced")}, 80, 2, ["veg", "dairy"], "ladle"),
+    # One 115 ml katori of curd, which weighs about 120 g.
+    ("dahi", "Dahi", {"curd": (120, "as_sourced")}, 120, 2, ["veg", "dairy"], "ladle"),
     ("milk_glass", "Milk 200 ml", {"milk": (206, "milk_heated_short")},
      206, 2, ["veg", "dairy"], "glass"),
     ("tea", "Tea",

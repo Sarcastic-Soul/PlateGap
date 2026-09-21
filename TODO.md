@@ -6,7 +6,6 @@ delete when done.
 ## Waiting on the account owner
 
 - [ ] Sanity-check the seed market prices against a real shop near campus
-- [ ] Decide on a licence — there is no LICENSE file, so by default nobody may reuse the code
 
 ## Product
 
@@ -21,6 +20,9 @@ delete when done.
 - [ ] Sprouts use the shortest legume boiling code, which is longer than sprouts need and so probably overstates the loss
 
 ## Settled, with the measurement that settled it
+
+- [x] Licence: MIT for the code; third-party data keeps its own terms, listed in LICENSE
+- [x] Serving sizes follow the standard katoris in ICMR-NIN's Dietary Guidelines for Indians (2024): 155 ml for dal, curry, sabzi and rice, 115 ml for curd and raita. Only curd was outside that, at 80 g, and is now 120 g
 
 - [x] Bounded-variable simplex — not needed: a real solve is 42 variables and 58 rows, nowhere near the ~200 where a row per serving cap would matter
 - [x] Frontier points stay 24 — 12 points 176 ms, 24 points 314 ms, 40 points 502 ms, and at chart width 24 is already a point every 30 px

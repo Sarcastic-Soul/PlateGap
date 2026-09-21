@@ -95,9 +95,9 @@ price can move before the list changes: spinach stays on it anywhere from ₹4.3
 to ₹14. And the items that nearly made the list say how cheap they would have to
 get: carrot, below ₹8.42 against ₹10 today.
 
-Aggregated across a 600-student hostel, the menu leaks **₹271,698 a month** in
-out-of-pocket spending. Adding mutter paneer on the days it is absent would
-recover **₹85,193 a month** of that. On the US dining hall at 3000 students the
+Aggregated across a 600-student hostel, the menu leaks **₹264,486 a month** in
+out-of-pocket spending. Adding khada masoor dal on the days it is absent would
+recover **₹82,842 a month** of that. On the US dining hall at 3000 students the
 same analysis says **$99,177.86 a month**, and that a black bean and rice bowl
 would recover **$30,284** of it.
 
