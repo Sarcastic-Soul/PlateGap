@@ -3,7 +3,7 @@
 Decided 2026-09-20. Due 2026-10-02 23:59 PT. Twelve days.
 Category `#daily-life-enhancement` · Lane `#startup`
 
-Design detail in `ARCHITECTURE.md`. Competitive position in `BENCHMARK.md`.
+Design detail in `ARCHITECTURE.md`. Competitive position in `README.md` ("The field so far").
 
 ## Verified on the account already
 

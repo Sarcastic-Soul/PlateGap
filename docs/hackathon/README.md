@@ -1,7 +1,8 @@
 # AWS "Zero to Shipped" Hackathon — Brief
 
 Source: https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped
-Data pulled from the Builder Center API on 2026-09-20. Raw JSON is in `raw/`.
+Data pulled from the Builder Center API on 2026-09-21 (`GET /sms/hackathons/{entityId}` and
+`GET /cs/submissions/parent/{entityId}?parentContentType=HACKATHON`). Raw JSON is in `raw/`.
 
 ## Facts
 
@@ -13,8 +14,8 @@ Data pulled from the Builder Center API on 2026-09-20. Raw JSON is in `raw/`.
 | Type | Virtual, "build on your own AWS account" |
 | Opens | 2026-09-18, 09:00 PT |
 | Submissions due | 2026-10-02, 23:59 PT (= 2026-10-03 06:59 UTC) |
-| Registrations | 769 (as of 2026-09-20) |
-| Submitted projects | 19 (as of 2026-09-20) |
+| Registrations | 1,253 (as of 2026-09-21; 769 on 2026-09-20) |
+| Submitted projects | 40 (as of 2026-09-21; 19 on 2026-09-20) |
 | Prize pool | $28,000 |
 | Winners | 5 projects |
 | Per winner | $5,000 AWS promotional credits + swag bundle (jacket, backpack, keyboard, ~$600) + certificate + digital badge |
@@ -61,6 +62,21 @@ Identical rubric at both gates, 25% each:
 - Creativity & Storytelling
 
 Gate 1 (AI + human) cuts to the **top 100**. Gate 2 human panel picks 5 winners **spread across the app categories** — so category choice matters a lot: a crowded category means competing head-to-head, an empty one is a wider lane.
+
+### The field so far (40 projects, 2026-09-21)
+
+Counted from each project's tags. More than half carry no category tag at all.
+
+| Category tag | Projects |
+| --- | --- |
+| `workplace-efficiency` | 6 (one also tagged `commercial-potential`) |
+| `commercial-potential` | 5 (one also tagged `workplace-efficiency`) |
+| `social-good` | 5 |
+| `daily-life-enhancement` | 1 |
+| `personal-expression` | 0 |
+| none | 24 |
+
+Lane tags: 6 `community`, 8 `startups` (plural), 0 `startup`, 26 none.
 
 Note: half the rubric (Impact + Storytelling) is about the write-up, not the code. Round 1 is largely AI reading the markdown, so the write-up is the product as much as the app is.
 
