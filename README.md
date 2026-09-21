@@ -41,6 +41,7 @@ you short of, and the cheapest thing you can buy to fix it.**
 - [Deploying](#deploying)
 - [Infrastructure decisions, and what they cost](#infrastructure-decisions-and-what-they-cost)
 - [What it doesn't know](#what-it-doesnt-know)
+- [Licence and credits](#licence-and-credits)
 
 ---
 
@@ -439,3 +440,24 @@ always-free, and the rest is fractions of a cent.
 
 Open problems, and the measurements that settled the closed ones, are in
 **[TODO.md](TODO.md)**.
+
+## Licence and credits
+
+The code and the writing are MIT licensed; see [LICENSE](LICENSE). The data
+belongs to the people who measured it, and their terms apply:
+
+- **USDA FoodData Central SR Legacy** and the **USDA Table of Nutrient
+  Retention Factors, Release 6** are public domain. Nearly every number in
+  `data/foods.json` comes from them.
+- **Indian Food Composition Tables 2017** — Longvah T, Ananthan R,
+  Bhaskarachary K, Venkaiah K; National Institute of Nutrition (ICMR),
+  Hyderabad. Paneer (IFCT L003) and jaggery (IFCT I001) are taken from it,
+  with thanks. NIN asks for written permission before its data is reproduced
+  electronically in a product, so anyone reusing those two rows should ask NIN
+  for themselves.
+- **ICMR-NIN Nutrient Requirements for Indians (2020)** sets the Indian daily
+  targets, and the **ICMR-NIN Dietary Guidelines for Indians (2024)** sets the
+  standard katori sizes the serving weights are based on.
+- The **27 hostel menus** in `data/field/menus/` are the colleges' own
+  published menus. Each source is listed in
+  [SOURCES.csv](data/field/menus/SOURCES.csv).

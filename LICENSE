@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2026 Sarcastic-Soul
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+Third-party data
+
+The MIT licence above covers the code and the writing in this repository. It
+does not cover data that other people own. Their terms apply to it:
+
+- USDA FoodData Central SR Legacy and the USDA Table of Nutrient Retention
+  Factors, Release 6: public domain (CC0). Most of data/foods.json is built
+  from these.
+- Indian Food Composition Tables 2017 (IFCT 2017), Longvah T, Ananthan R,
+  Bhaskarachary K, Venkaiah K. National Institute of Nutrition (ICMR),
+  Hyderabad. Copyright ICMR-NIN. Two rows of data/foods.json, paneer (IFCT
+  L003) and jaggery (IFCT I001), are taken from it with acknowledgement. NIN
+  asks for written permission before its data is reproduced electronically in
+  a product. Anyone reusing those two rows needs that permission for
+  themselves.
+- ICMR-NIN Nutrient Requirements for Indians (2020) and Dietary Guidelines for
+  Indians (2024): cited for the daily targets and the standard katori sizes.
+  Only the individual figures are used, not the text or tables.
+- The hostel menus in data/field/menus/ are transcriptions of menus the
+  colleges publish on their own websites. Each one's source is listed in
+  data/field/menus/SOURCES.csv. The menus belong to those institutions.
