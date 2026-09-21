@@ -11,7 +11,7 @@ that costs in vitamins, and the USDA row every ingredient came from.
 
 It is generated rather than written so that it cannot drift away from
 `data/foods.json`. If the two disagree, the file is stale, and the test in
-`tests/test_data_doc.py` fails rather than letting it rot quietly.
+`tests/test_catalog_data.py` fails rather than letting it rot quietly.
 """
 
 import json

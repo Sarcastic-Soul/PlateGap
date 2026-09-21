@@ -2576,7 +2576,7 @@
     "zinc": 1.4344
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 25,
@@ -2963,7 +2963,7 @@
     "zinc": 1.8471
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 6,
@@ -3368,7 +3368,7 @@
     "zinc": 1.8581
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 6,
@@ -3423,7 +3423,7 @@
     "zinc": 1.7851
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 8,
@@ -4986,7 +4986,7 @@
     "zinc": 1.1055
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 15,
@@ -7731,7 +7731,7 @@
     "zinc": 2.74
    },
    "proxy": true,
-   "proxyNote": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "reported": [
     "calcium",
     "carbs",
@@ -7751,7 +7751,7 @@
    ],
    "source": {
     "dataset": "Indian Food Composition Tables 2017 (NIN-ICMR, Hyderabad)",
-    "description": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+    "description": "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
     "fdcId": null
    },
    "tags": [
@@ -9523,7 +9523,7 @@
     "zinc": 2.74
    },
    "proxy": true,
-   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
+   "proxyNote": "Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.",
    "recipe": [
     {
      "grams": 100,

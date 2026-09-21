@@ -7,7 +7,7 @@ unauthenticated by design -- a tool anyone should be able to try without
 signing up -- which means "anyone may use this" and "anyone may spend my
 money" are the same sentence unless something counts.
 
-Reserved concurrency already bounds the *rate*: ten executions, each holding
+The account's concurrency limit already bounds the *rate*: ten executions, each holding
 its slot for the ten seconds a page of PDF takes, is about one scan a second.
 That is roughly $34 a day, which is more than this project's whole budget.
 So the rate limit is not the control. This is.

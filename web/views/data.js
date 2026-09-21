@@ -64,7 +64,7 @@ export function DataTab() {
         <li>Losses in cooking, serving and reheating.</li>
         <li>Anything marked estimated: paneer and jaggery come from the Indian
         Food Composition Tables 2017 instead of USDA, and keep the flag for one
-        nutrient each — IFCT measures vitamin B12 for no food at all. Whey
+        nutrient each — IFCT measures vitamin B12 only for a few fish and meats. Whey
         protein is the only ingredient still estimated outright.</li>
       </ul>
     </section>`;

@@ -150,7 +150,7 @@ All five are fixed and tested.
 
 **The solver is written from scratch.** `solver/simplex.py` is a two-phase
 simplex with Bland's rule, in pure Python, with no dependencies at all — not
-numpy, not scipy. Lambda gets a 51 KB zip and a cold start with nothing to
+numpy, not scipy. Lambda gets an 88 KB zip and a cold start with nothing to
 import.
 
 It was not written from scratch for the sake of it. It was written from scratch
@@ -306,7 +306,7 @@ frying flour — both are approximated and both are labelled in the data.
 Paneer and jaggery now come from the Indian Food Composition Tables 2017 rather
 than a guess: paneer's calcium was 208 mg in my proxy and is 476 mg measured.
 They keep an estimated flag for exactly one nutrient each, because IFCT 2017
-measures vitamin B12 for no food in the book. Whey protein is still a proxy
+measures vitamin B12 for only a few fish and meats, and not for these. Whey protein is still a proxy
 outright. The seed market prices are my own survey near one campus and are meant
 to be edited. Nutrient targets follow ICMR-NIN 2020 for India and the US DRIs
 for the US preset, and the app says which one it used.

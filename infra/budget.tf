@@ -2,7 +2,7 @@
 # A bill that arrives as an email rather than as a discovery.
 #
 # Everything else in this repository bounds spending at the point of spending:
-# reserved concurrency bounds the rate, `scan_daily_cap` bounds the model, the
+# the account's concurrency limit bounds the rate, `scan_daily_cap` bounds the model, the
 # free tier covers the rest. This is the backstop for the case none of those
 # anticipated -- a service nobody costed, a region left running, a mistake.
 #

@@ -667,7 +667,7 @@ Recipe totals 119 g against a 130 g serving: 11 g water added in cooking.
 
 Per serving: 266.77 kcal energy, 9.96 g protein, 245.65 mg calcium, 0.54 mg iron, 1.43 mg zinc, 2.96 mg vitamin c, 38.25 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Mangodi
 
@@ -766,7 +766,7 @@ Recipe totals 116 g against a 125 g serving: 9 g water added in cooking.
 
 Per serving: 238.74 kcal energy, 11.55 g protein, 249.25 mg calcium, 1.03 mg iron, 1.85 mg zinc, 15.15 mg vitamin c, 59.29 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Noodles
 
@@ -835,7 +835,7 @@ Recipe totals 116 g against a 115 g serving: 1 g weight lost in cooking.
 
 Per serving: 265.35 kcal energy, 12.71 g protein, 317.15 mg calcium, 0.69 mg iron, 1.86 mg zinc, 4.18 mg vitamin c, 54.42 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Paneer butter masala
 
@@ -853,7 +853,7 @@ Recipe totals 127 g against a 130 g serving: 3 g water added in cooking.
 
 Per serving: 294.64 kcal energy, 12.32 g protein, 313.62 mg calcium, 0.64 mg iron, 1.79 mg zinc, 4.56 mg vitamin c, 49.55 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Papad
 
@@ -1192,7 +1192,7 @@ Recipe totals 95 g against a 115 g serving: 20 g water added in cooking.
 
 Per serving: 250.59 kcal energy, 7.99 g protein, 105.95 mg calcium, 1.07 mg iron, 1.11 mg zinc, 3.7 mg vitamin c, 62.04 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Veg kolhapuri
 
@@ -1711,7 +1711,7 @@ Per unit: 108 kcal energy, 1.68 g protein, 26.4 mg calcium, 0.48 mg iron, 0.12 m
 
 Per unit: 305.7 kcal energy, 18.86 g protein, 476 mg calcium, 0.9 mg iron, 2.74 mg zinc, 0 mg vitamin c, 93.31 ug folate.
 
-> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
+> Estimated: Paneer: Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled.
 
 #### Papaya, cut
 
@@ -1887,7 +1887,7 @@ based on instead is written against them.
 | Orange<br>`orange` | [169097](https://fdc.nal.usda.gov/food-details/169097/nutrients) Oranges, raw, all commercial varieties | 47 kcal energy, 0.94 g protein, 40 mg calcium, 0.1 mg iron, 0.07 mg zinc, 53.2 mg vitamin c, 30 ug folate |
 | Orange juice<br>`orange_juice` | [169098](https://fdc.nal.usda.gov/food-details/169098/nutrients) Orange juice, raw (Includes foods for USDA's Food Distribution Program) | 45 kcal energy, 0.7 g protein, 11 mg calcium, 0.2 mg iron, 0.05 mg zinc, 50 mg vitamin c, 30 ug folate |
 | Pancakes<br>`pancake` | [172771](https://fdc.nal.usda.gov/food-details/172771/nutrients) Pancakes plain, frozen, ready-to-heat (includes buttermilk) | 233 kcal energy, 5.23 g protein, 78 mg calcium, 5.67 mg iron, 0.4 mg zinc, 0.3 mg vitamin c, 110 ug folate |
-| Paneer<br>`paneer` | **Indian Food Composition Tables 2017 (NIN-ICMR, Hyderabad)** -- Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 does not measure for any food -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled. Still estimated: `vitb12`. | 305.7 kcal energy, 18.86 g protein, 476 mg calcium, 0.9 mg iron, 2.74 mg zinc, 0 mg vitamin c, 93.31 ug folate |
+| Paneer<br>`paneer` | **Indian Food Composition Tables 2017 (NIN-ICMR, Hyderabad)** -- Paneer is IFCT 2017 code L003, measured, per 100 g edible portion (tables 1, 2, 3, 5 and 7). Every nutrient here is from that source except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- that one figure is still a hand-entered estimate. Energy is converted from IFCT's kilojoules and vitamin A is combined from its separate retinol and carotene figures. Note also that IFCT's own fatty-acid table sums to about 55 percent of the total fat it reports in table 1, a discrepancy in the source that is reproduced here rather than quietly reconciled. Still estimated: `vitb12`. | 305.7 kcal energy, 18.86 g protein, 476 mg calcium, 0.9 mg iron, 2.74 mg zinc, 0 mg vitamin c, 93.31 ug folate |
 | Papaya<br>`papaya` | [169926](https://fdc.nal.usda.gov/food-details/169926/nutrients) Papayas, raw | 43 kcal energy, 0.47 g protein, 20 mg calcium, 0.25 mg iron, 0.08 mg zinc, 60.9 mg vitamin c, 37 ug folate |
 | Pasta, cooked<br>`pasta_cooked` | [169728](https://fdc.nal.usda.gov/food-details/169728/nutrients) Pasta, fresh-refrigerated, plain, cooked | 131 kcal energy, 5.15 g protein, 6 mg calcium, 1.14 mg iron, 0.56 mg zinc, 0 mg vitamin c, 104 ug folate |
 | Roasted peanuts<br>`peanut` | [173806](https://fdc.nal.usda.gov/food-details/173806/nutrients) Peanuts, all types, dry-roasted, without salt | 587 kcal energy, 24.35 g protein, 58 mg calcium, 1.58 mg iron, 2.77 mg zinc, 0 mg vitamin c, 97 ug folate |

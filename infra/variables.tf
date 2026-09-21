@@ -63,7 +63,7 @@ variable "scan_model" {
     This exists as a variable because it is the kill switch. The Function URL
     is public and unauthenticated, and `scan` is the only action that costs
     real money per call -- about $0.0004 of Nova Lite for a page of PDF. The
-    reserved concurrency of 10 and the ten-second read bound that to roughly
+    account's concurrency limit of 10 and the ten-second read bound that to roughly
     one call a second, so a determined stranger could spend tens of dollars a
     day and nothing else would stop them.
 

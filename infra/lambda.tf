@@ -103,7 +103,7 @@ resource "aws_iam_role_policy" "lambda_bedrock" {
 # This is the only durable shared state in the project, and it exists for the
 # only action that costs money per call on a public, unauthenticated
 # endpoint. `solver/scanbudget.py` argues the case; the short version is that
-# reserved concurrency bounds the rate to about a scan a second, which is
+# the account's concurrency limit of 10 bounds the rate to about a scan a second, which is
 # roughly $34 a day of Bedrock, and a counter is both cheaper and a better
 # fit than the WAF it would otherwise take to stop that.
 #

@@ -852,7 +852,7 @@ US_DISHES = [
 #   https://www.nin.res.in/ebooks/IFCT2017.pdf
 #
 # Both keep the `proxy` flag, for one reason each and a good one: **IFCT 2017
-# does not measure vitamin B12 for any food in the book.** Fifteen of the
+# measures vitamin B12 for only a few fish and meats, and not for either.** Fifteen of the
 # sixteen nutrients this catalog tracks are now sourced; the sixteenth is not,
 # and a flag that came off while a value was still invented would be worse
 # than no flag. Each row names exactly which nutrients are sourced, so the
@@ -892,7 +892,7 @@ MANUAL_INGREDIENTS = [
         "vitb12": 0.9, "folate": 93.31,
     }, "Paneer is IFCT 2017 code L003, measured, per 100 g edible portion "
        "(tables 1, 2, 3, 5 and 7). Every nutrient here is from that source "
-       "except vitamin B12, which IFCT 2017 does not measure for any food -- "
+       "except vitamin B12, which IFCT 2017 measures only for a few fish and meats -- "
        "that one figure is still a hand-entered estimate. Energy is converted "
        "from IFCT's kilojoules and vitamin A is combined from its separate "
        "retinol and carotene figures. Note also that IFCT's own fatty-acid "
