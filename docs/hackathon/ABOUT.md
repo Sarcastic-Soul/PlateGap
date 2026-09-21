@@ -1,8 +1,12 @@
+# Zero to Shipped: the public brief
+
+> The hackathon's public description, copied verbatim from Builder Center on 2026-09-21 (`description` in [raw/hackathon-2026-09-21.json](raw/hackathon-2026-09-21.json)). Only the formatting has changed. The full terms are in [RULES.md](RULES.md).
+
 Connect your coding agent to AWS, build a real application, and ship it live for a chance to win $5,000 in AWS credits and an AWS Builder swag bundle.
 
 Open to anyone with an AWS account, new or existing. Pick one of five app categories and a lane, Community or Startup. Shipping live is the whole point. [Terms Apply](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules)
 
-**Who can enter:** Open to builders 18 or older with a Builder Center profile. See [Rules ](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules)for country and employee exclusions.
+**Who can enter:** Open to builders 18 or older with a Builder Center profile. See [Rules](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules) for country and employee exclusions.
 
 **How to qualify:** Every submission must include:
 
@@ -44,12 +48,12 @@ Open to anyone with an AWS account, new or existing. Pick one of five app catego
 
 **Timeline**
 
-| Hackathon Milestone           | Date               |
-| ----------------------------- | ------------------ |
-| Launch                        | September 18       |
-| Projects due by               | October 2          |
-| Gate 1 (AI and human scoring) | Week of October 5  |
-| Gate 2 (human judging)        | Week of October 12 |
-| Winners Announced             | Week of October 19 |
+| Hackathon Milestone | Date |
+| --- | --- |
+| Launch | September 18 |
+| Projects due by | October 2 |
+| Gate 1 (AI and human scoring) | Week of October 5 |
+| Gate 2 (human judging) | Week of October 12 |
+| Winners Announced | Week of October 19 |
 
 NO PURCHASE NECESSARY. VOID WHERE PROHIBITED.

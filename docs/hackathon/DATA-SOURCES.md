@@ -1,16 +1,27 @@
 # Data sources for Indian food composition, portions and student nutrition
 
-Research notes, 2026-09-21. I checked every URL below on that date unless it is
-marked otherwise. Anything I could not read at source is marked
-**unverified**.
+My research notes on what data exists for Indian food composition, serving
+sizes and student nutrition, what each source's licence allows, and which ones
+PlateGap uses. For anyone extending the catalog or checking a number. The
+catalog itself is printed in [DATA.md](../DATA.md); the licence terms that
+apply to the data are in [LICENSE](../../LICENSE).
 
-Where PlateGap stands today: `data/build_catalog.py` builds `data/foods.json`
-(76 ingredients, 109 dishes) from USDA FoodData Central SR Legacy, which is
-public domain. It breaks dishes down into raw-gram recipes and applies USDA
-Retention Factors Release 6. Paneer (IFCT L003) and jaggery (IFCT I001) are
-hand-entered from IFCT 2017 and carry the `proxy` flag. `servingGrams` is an
-estimate tagged with a `servingSource` (counted, ladle, plate and so on). None
-of the serving weights were weighed.
+I checked every URL below on 2026-09-21 unless it is marked otherwise.
+Anything I could not read at source is marked **unverified**.
+
+## Where PlateGap stands
+
+- `data/build_catalog.py` builds `data/foods.json` (76 ingredients, 109
+  dishes, 28 market items) from USDA FoodData Central SR Legacy, which is
+  public domain. It breaks each dish into a raw-gram recipe and applies the
+  USDA Table of Nutrient Retention Factors, Release 6.
+- Paneer (IFCT L003) and jaggery (IFCT I001) are hand-entered from IFCT 2017.
+  They keep the `proxy` flag because their B12 is still an estimate.
+- Each dish's `servingGrams` is tagged with a `servingSource` (counted, ladle,
+  plate and so on). A ladle is sized to one of the standard katoris in ICMR-NIN's
+  *Dietary Guidelines for Indians* (2024), Annexure I: 155 ml for dal, curry,
+  sabzi and rice, 115 ml for curd, raita and sprouts, 200 ml for biryani (see
+  `SERVING_SOURCES`). None of the serving weights were weighed.
 
 ## 1. Nutrient composition
 
@@ -28,8 +39,9 @@ of the serving weights were weighed.
   a product without the prior written permission of the National Institute of
   Nutrition." A public app that ships a machine-readable copy therefore needs
   NIN's permission. This already applies to the two IFCT rows in the catalog. A
-  handful of cited values is a much weaker case than bulk redistribution, but
-  it is worth a line in the README or an email to NIN (nin@nic.in).
+  handful of cited values is a much weaker case than bulk redistribution. The
+  README and LICENSE now give the full acknowledgement NIN asks for, and say
+  that anyone reusing those rows needs NIN's permission (nin@nic.in).
 - **Vitamin B12.** IFCT 2017 has B12 for only a few foods: its introduction
   mentions 2 fish and 8 flesh foods. It has no B12 value for paneer, milk or
   curd, which is why the catalog's paneer B12 is still an estimate.
@@ -141,9 +153,9 @@ is very slow. DGI carries the same "no electronic product without permission"
 clause as IFCT, so cite its numbers rather than bundling the PDF.
 
 DGI 2024 gives raw weights per food group, not cooked weights per dish. To
-convert, a medium 200 ml katori of dal or sabzi comes to roughly 180–200 g
-cooked, taking density as close to water. That conversion is **our inference,
-not NIN's**.
+convert, a katori of dal or sabzi weighs roughly its volume in grams, taking
+density as close to water: about 155 g for the 155 ml katori the catalog uses,
+180–200 g for the 200 ml one. That conversion is **our inference, not NIN's**.
 
 Published portion-weight papers I found but could not read in full (**values
 unverified**; both publisher sites refused the connection or returned 403):
@@ -160,9 +172,10 @@ unverified**; both publisher sites refused the connection or returned 403):
   snippet. It is commercial and copyrighted.
 
 I found no published study that weighed **mess or hostel ladle portions**.
-PlateGap's `ladle` estimates are therefore not contradicted by anything, but
-they are not supported by anything either. The honest path is to weigh them: a
-kitchen scale, one mess and a week of meals.
+PlateGap's `ladle` servings are now tied to DGI's katori volumes, which anyone
+can check, but the assumption that one mess ladle fills one katori is still
+ours. The honest path is to weigh them: a kitchen scale, one mess and a week of
+meals.
 
 How the catalog compares: its roti (35 g) matches INDB's chapati (36 g). Egg
 50 g matches INDB and DGI. `plain_rice` at 150 g is half of INDB's 300 g
@@ -221,8 +234,8 @@ and PlateGap's own menu analysis. Do not cite a hostel study we have not read.
    the Indian leafy greens. Hand-cite the code and table per row, as
    `MANUAL_INGREDIENTS` already does. Take values from the NIN PDF, not the
    nodef CSV (see the paneer error), or use the CSV only after checking it
-   against the PDF. Before going further, get NIN's permission or add a clear
-   attribution and non-commercial note.
+   against the PDF. The attribution is now in README and LICENSE; before
+   adding more IFCT rows, ask NIN for permission.
 3. **Use INDB as a validator, not a source.** A small script (outside
    `data/`, reading the xlsx from a path the way `--sr` works today) would
    match about 30 PlateGap dishes to INDB codes (e.g. `dal_tadka` → BFP/ASC dal
@@ -230,11 +243,12 @@ and PlateGap's own menu analysis. Do not cite a hostel study we have not read.
    report the kcal and protein per 100 g of raw ingredients side by side and
    exclude deep-fried recipes. Use it to flag recipe decompositions that are far
    off. Record the INDB code in each dish's note as a second citation.
-4. **Anchor serving grams to cited volumes.** Add a `katori` serving source
-   that uses DGI 2024's 200 ml medium katori (and 155 ml or 115 ml small), and
-   cite DGI in `SERVING_SOURCES`. Cross-cite counted items (roti, idli, dosa,
-   egg) to INDB or the Mahajani 2019 paper once read. The most valuable data
-   anyone could add is a week of weighed ladles from one real mess.
+4. **Anchor serving grams to cited volumes.** Done for ladles: the `ladle`
+   source in `SERVING_SOURCES` now cites DGI 2024's katoris (155, 115 and
+   200 ml), and dahi and plain curd moved to 120 g to fit. Still to do:
+   cross-cite counted items (roti, idli, dosa, egg) to INDB or the Mahajani
+   2019 paper once read. The most valuable data anyone could add is a week of
+   weighed ladles from one real mess.
 5. **B12 for Indian dairy.** Neither IFCT nor INDB has it. Keep USDA or FNDDS
    dairy for B12. For paneer, USDA "cheese, cottage" or ricotta per 100 g
    protein is a stated proxy, and it should stay flagged.

@@ -1,8 +1,16 @@
-# AWS "Zero to Shipped" Hackathon — Brief
+# Zero to Shipped: the brief and the field
 
-Source: https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped
-Data pulled from the Builder Center API on 2026-09-21 (`GET /sms/hackathons/{entityId}` and
-`GET /cs/submissions/parent/{entityId}?parentContentType=HACKATHON`). Raw JSON is in `raw/`.
+My working summary of the hackathon: the facts, what an entry must have, how it
+is scored, and what the other entries look like so far. It is for me and for
+anyone deciding where PlateGap stands. The rules themselves are in
+[RULES.md](RULES.md) and the public brief in [ABOUT.md](ABOUT.md); the plan
+that follows from this is [PROJECT-PLAN.md](PROJECT-PLAN.md).
+
+Source: <https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped>.
+Pulled from the Builder Center API on 2026-09-21
+(`GET /sms/hackathons/{entityId}` and
+`GET /cs/submissions/parent/{entityId}?parentContentType=HACKATHON`). The raw
+JSON is in [raw/](raw/), and every count below can be checked against it.
 
 ## Facts
 
@@ -13,12 +21,12 @@ Data pulled from the Builder Center API on 2026-09-21 (`GET /sms/hackathons/{ent
 | Status | LIVE |
 | Type | Virtual, "build on your own AWS account" |
 | Opens | 2026-09-18, 09:00 PT |
-| Submissions due | 2026-10-02, 23:59 PT (= 2026-10-03 06:59 UTC) |
-| Registrations | 1,253 (as of 2026-09-21; 769 on 2026-09-20) |
-| Submitted projects | 40 (as of 2026-09-21; 19 on 2026-09-20) |
+| Submissions due | 2026-10-02, 23:59 PT (2026-10-03 06:59 UTC) |
+| Registrations | 1,253 on 2026-09-21 (769 on 2026-09-20) |
+| Submitted projects | 40 on 2026-09-21 (19 on 2026-09-20) |
 | Prize pool | $28,000 |
 | Winners | 5 projects |
-| Per winner | $5,000 AWS promotional credits + swag bundle (jacket, backpack, keyboard, ~$600) + certificate + digital badge |
+| Per winner | $5,000 AWS promotional credits, a swag bundle (jacket, backpack, keyboard, about $600), a certificate and a digital badge |
 | Entry limit | One entry per person |
 | Judges (Builder Center aliases) | bhavinjp, karamen, raghuramg, manubel, hamzalfa |
 
@@ -28,44 +36,67 @@ Data pulled from the Builder Center API on 2026-09-21 (`GET /sms/hackathons/{ent
 | --- | --- |
 | Launch | Sep 18 |
 | Projects due | Oct 2 |
-| Gate 1 — AI + human scoring | week of Oct 5 |
-| Gate 2 — human judging panel | week of Oct 12 |
-| Winners announced | week of Oct 19 |
+| Gate 1: AI and human scoring | Week of Oct 5 |
+| Gate 2: human judging panel | Week of Oct 12 |
+| Winners announced | Week of Oct 19 |
 
 ## Eligibility
 
-- 18+, Builder Center profile required.
-- Excluded countries: Argentina, Australia, Brazil, Hong Kong, Indonesia, Italy, Philippines, Vietnam, Singapore, Russia, Cuba, Iran, North Korea, Syria, Belarus, Crimea, DNR, LNR, UAE. **India is not excluded.**
-- Amazon/AWS employees and their households excluded.
-- Eligibility verified at finalist stage against public profiles (Builder Center, LinkedIn). Disqualification possible even after winner announcement.
+- 18 or older, with a Builder Center profile.
+- Excluded countries: Argentina, Australia, Brazil, Hong Kong, Indonesia,
+  Italy, the Philippines, Vietnam, Singapore, Russia, Cuba, Iran, North Korea,
+  Syria, Belarus, Crimea, DNR, LNR and the UAE. **India is not excluded.**
+- Amazon and AWS employees and their households are excluded.
+- Eligibility is checked at the finalist stage against public profiles
+  (Builder Center, LinkedIn). Disqualification is possible even after the
+  winners are announced.
 
-## Hard requirements (all mandatory)
+## Hard requirements
 
-1. A coding agent **connected to the AWS console**, with documented proof of that connection in the write-up.
-2. A **live application running on AWS**, publicly reachable by URL — no login wall for judges.
-3. One **app category tag**: `#workplace-efficiency`, `#daily-life-enhancement`, `#commercial-potential`, `#social-good`, `#personal-expression`.
+All six are mandatory.
+
+1. A coding agent **connected to the AWS console**, with documented proof of
+   the connection in the write-up.
+2. A **live application running on AWS**, publicly reachable by URL, with no
+   login wall for judges.
+3. One **app category tag**: `#workplace-efficiency`,
+   `#daily-life-enhancement`, `#commercial-potential`, `#social-good` or
+   `#personal-expression`.
 4. One **lane tag**: `#startup` or `#community`.
-5. Original app, not previously published.
-6. Project write-up published on Builder Center covering: the app, the development process, how the coding agent helped, AWS services used, category + lane, link to live app.
+5. An original app, not previously published.
+6. A project write-up published on Builder Center covering the app, the
+   development process, how the coding agent helped, the AWS services used,
+   the category and lane, and a link to the live app.
 
-### Ship gate — pass/fail, no exceptions
+### The ship gate
 
-Not live and reachable at evaluation time by both the AI scorer and the human judges = eliminated, regardless of idea quality. This is the single highest-risk item: keep the app up from Oct 2 through at least Oct 20.
+Pass or fail, no exceptions. An app that is not live and reachable by both the
+AI scorer and the human judges at evaluation time is eliminated, however good
+the idea. This is the highest-risk item: keep the app up from Oct 2 through at
+least Oct 20.
 
 ## Scoring
 
-Identical rubric at both gates, 25% each:
+The same rubric at both gates, 25% each:
 
 - Technical Innovation & Originality
 - Implementation Quality
 - Community / Market Impact
 - Creativity & Storytelling
 
-Gate 1 (AI + human) cuts to the **top 100**. Gate 2 human panel picks 5 winners **spread across the app categories** — so category choice matters a lot: a crowded category means competing head-to-head, an empty one is a wider lane.
+Gate 1 (AI and human) cuts to the **top 100**. The Gate 2 panel picks 5
+winners **across the app categories**, so the category matters: a crowded one
+means competing head to head, an empty one is a wider lane.
 
-### The field so far (40 projects, 2026-09-21)
+Half the rubric (Impact, Storytelling) is about the write-up rather than the
+code, and Gate 1 is largely an AI reading the markdown. The write-up is as much
+the product as the app is.
 
-Counted from each project's tags. More than half carry no category tag at all.
+## The field so far
+
+40 projects on 2026-09-21, counted from each project's tags in
+[raw/submissions-2026-09-21.json](raw/submissions-2026-09-21.json). More than
+half carry no category tag at all.
 
 | Category tag | Projects |
 | --- | --- |
@@ -76,21 +107,28 @@ Counted from each project's tags. More than half carry no category tag at all.
 | `personal-expression` | 0 |
 | none | 24 |
 
-Lane tags: 6 `community`, 8 `startups` (plural), 0 `startup`, 26 none.
-
-Note: half the rubric (Impact + Storytelling) is about the write-up, not the code. Round 1 is largely AI reading the markdown, so the write-up is the product as much as the app is.
+| Lane tag | Projects |
+| --- | --- |
+| `community` | 6 |
+| `startups` (plural, not the tag the rules name) | 8 |
+| `startup` | 0 |
+| none | 26 |
 
 ## Categories
 
-- **Workplace efficiency** — task automation, team dashboards, workflow engines.
-- **Daily life enhancement** — smart home, personal assistants, habit trackers.
-- **Commercial potential** — SaaS, marketplaces, vertical solutions.
-- **Personal expression** — art generators, music tools, content platforms.
-- **Social good** — measurable impact for underserved populations across Education, Health, Climate resilience. Partnered with the AWS Skilling and Social Impact team; qualifying orgs may also apply for AWS Social Impact Credits.
+- **Workplace efficiency**: task automation, team dashboards, workflow
+  engines.
+- **Daily life enhancement**: smart home, personal assistants, habit trackers.
+- **Commercial potential**: SaaS, marketplaces, vertical solutions.
+- **Personal expression**: art generators, music tools, content platforms.
+- **Social good**: measurable impact for underserved populations in
+  education, health or climate resilience. Run with the AWS Skilling and
+  Social Impact team; qualifying organisations may also apply for AWS Social
+  Impact Credits.
 
 ## Lanes
 
-- **Startup** — pushed toward a product; story about product-market fit, first users, path to a business.
-- **Community** — helps a group you belong to (a class, a meetup, an open-source project).
-
-Full terms: `RULES.md`. Full public description: `ABOUT.md`. Project list: `SUBMISSIONS.md`.
+- **Startup**: pushed toward a product, with a story about product-market fit,
+  first users and a path to a business.
+- **Community**: helps a group you belong to, such as a class, a meetup or an
+  open-source project.

@@ -1,7 +1,9 @@
 # TODO
 
-Things worth doing that aren't blocking. One line each. Add to it, tick it off,
-delete when done.
+What is still open, and the measurement that settled each closed item. For
+contributors; the product is described in [README.md](README.md) and the repo
+in [AGENTS.md](AGENTS.md). One line each. Add to it, tick it off, delete when
+done.
 
 ## Waiting on the account owner
 
@@ -9,21 +11,21 @@ delete when done.
 
 ## Product
 
+- [ ] Re-shoot the demo screenshots: `03-the-menu-audit.png` predates the katori serving sizes and shows the old audit (see [docs/hackathon/demo/README.md](docs/hackathon/demo/README.md))
 - [ ] Decide whether a shared link should be able to carry prices as well as the menu
 - [ ] A scanned menu's corrections are lost on "Start over" — worth keeping the edited text around
 - [ ] Only the first page of a multi-page PDF menu is reliably read; a second page would need a second call
 
 ## Data
 
-- [ ] Vitamin B12 for paneer and jaggery is still estimated — IFCT 2017 measures it for no food at all, so it needs another source
+- [ ] Vitamin B12 for paneer and jaggery is still estimated. IFCT 2017 has B12 for only a few foods (2 fish and 8 flesh foods, per its introduction) and none for paneer, milk or curd, so it needs another source; [DATA-SOURCES.md](docs/hackathon/DATA-SOURCES.md) lists the candidates
 - [ ] Deep-fried flour uses the sauteed-flour retention code, which probably understates the loss; pressure cooking has no code in Release 6 at all
 - [ ] Sprouts use the shortest legume boiling code, which is longer than sprouts need and so probably overstates the loss
 
 ## Settled, with the measurement that settled it
 
-- [x] Licence: MIT for the code; third-party data keeps its own terms, listed in LICENSE
-- [x] Serving sizes follow the standard katoris in ICMR-NIN's Dietary Guidelines for Indians (2024): 155 ml for dal, curry, sabzi and rice, 115 ml for curd and raita. Only curd was outside that, at 80 g, and is now 120 g
-
+- [x] Licence: MIT for the code; third-party data keeps its own terms, listed in [LICENSE](LICENSE)
+- [x] Serving sizes follow the standard katoris in ICMR-NIN's Dietary Guidelines for Indians (2024), Annexure I: 155 ml for dal, curry, sabzi and rice, 115 ml for curd, raita and sprouts, 200 ml for biryani. Only curd fell outside that range: dahi (80 g) and plain curd (100 g) are now both 120 g. Still estimated, not weighed
 - [x] Bounded-variable simplex — not needed: a real solve is 42 variables and 58 rows, nowhere near the ~200 where a row per serving cap would matter
 - [x] Frontier points stay 24 — 12 points 176 ms, 24 points 314 ms, 40 points 502 ms, and at chart width 24 is already a point every 30 px
 - [x] Applied: CSP and HSTS are on the live responses, the function has 1769 MB, and `explain` now answers from Nova Lite rather than the templated fallback
@@ -38,6 +40,6 @@ delete when done.
 - [x] Demo screenshots match the live site — capturing against CloudFront after the redesign produced files byte-identical to the committed ones
 - [x] A PDF goes to Bedrock whole, as a `document` block — no rasterising, so the function needs no poppler or PIL; measured at 1,862 tokens in, ~1,100 out, about ten seconds
 - [x] The model transcribes and never matches — asked to emit the days down the side instead of across the top it dropped most of the grid and looped one row to the token cap, and every instruction past "copy what is printed" cost transcription quality
-- [x] `scan` is capped at 500 reads a day, counted in DynamoDB — reserved concurrency alone allows ~1 scan/sec, which is ~$34/day of Bedrock on a public endpoint, and WAF costs more per month than the loss it would prevent
+- [x] `scan` is capped at 500 reads a day, counted in DynamoDB — the account's concurrency limit of 10 alone allows ~1 scan/sec, which is ~$34/day of Bedrock on a public endpoint, and WAF costs more per month than the loss it would prevent
 - [x] The counter fails closed and uses `ADD` rather than read-then-write — a module global is per warm container, so its real ceiling is that number times however many are alive
 - [x] Near misses are grouped by written name — a week of menu says "SAMBER" four times and "CHUTNEY" three, so 29 rows of unmatched became 11 worth a tap and 9 folded away

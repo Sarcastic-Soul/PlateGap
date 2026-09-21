@@ -1,8 +1,23 @@
-# PlateGap — architecture and technical design
+# PlateGap: architecture and technical design
+
+How PlateGap is built and why: the linear program, the solver, where a
+language model is and is not allowed, and the AWS stack. For judges and
+engineers who want the reasoning behind the [README](../../README.md). Costs
+are in [COST-AND-INFRA.md](COST-AND-INFRA.md); the evidence that a coding agent
+built the stack is in [evidence/](evidence/README.md).
+
+The document has two parts. [Part 1](#part-1-the-design-written-before-the-code)
+is the design as I wrote it before any code existed, left as written; its
+numbers are from that time. [Part 2](#what-actually-shipped-and-where-this-document-was-wrong)
+records what shipped instead and where the design was wrong, which is where
+most was learned. Current measurements are at the
+[end](#measured-not-estimated).
 
 Category `#daily-life-enhancement` · Lane `#startup` · Account 905543840246 · us-east-1
 
-## The insight the product is named after
+## Part 1: the design, written before the code
+
+### The insight the product is named after
 
 You pre-pay for a campus meal plan. The menu is fixed and posted weekly — you
 never chose it. Nobody tells you what it actually delivers nutritionally, and
@@ -12,18 +27,18 @@ ever seeing the number.
 PlateGap computes that number, tells you the cheapest way to close it, and then
 tells the institution how to stop the gap existing.
 
-## The optimization core
+### The optimization core
 
 This is the part that is not a language model, and the part the write-up leads with.
 
-### Variables
+#### Variables
 
 - `m_i ≥ 0` — servings of mess item *i* eaten today. **Cost 0** (already paid for).
   Bounded `0 ≤ m_i ≤ cap_i` by what is actually served and what a person will
   realistically eat.
 - `x_j ≥ 0` — units of outside item *j* bought with your own money. **Cost `c_j` > 0**.
 
-### Program
+#### Program
 
 ```
 minimize    Σ_j c_j · x_j                        out-of-pocket rupees
@@ -37,7 +52,7 @@ subject to  Σ_i a_ik · m_i + Σ_j b_jk · x_j ≥ RDA_k      ∀ nutrient k   
 The two-class structure — free-but-rationed goods alongside priced goods — is
 what makes this a real modelling problem rather than the textbook diet problem.
 
-### Why the dual solution is the whole product
+#### Why the dual solution is the whole product
 
 The dual variable `y_k` on nutrient *k*'s floor constraint is **rupees of
 out-of-pocket spend per additional unit of nutrient k required**. That is
@@ -53,7 +68,7 @@ model is handed `{binding: [iron, B12], duals: {...}, reduced_costs: {...}}` and
 converts it to English. It cannot invent nutrition advice because it is never
 asked to choose anything.
 
-### Institution mode — inverse optimization
+#### Institution mode — inverse optimization
 
 Solve across all seven days of the posted menu, aggregate the duals, then search
 candidate menu additions: for each candidate ingredient the mess could add within
@@ -75,7 +90,7 @@ Optimizing *the constraints* rather than within them is a genuinely higher-order
 move than any submission currently in the field, and it is what turns a student
 utility into a product an institution would buy.
 
-## Solver implementation
+### Solver implementation
 
 Two-phase simplex, dense tableau, Bland's rule for anti-cycling. Pure Python,
 **zero dependencies**, ~350 lines, runs in Lambda with no layer and no container.
@@ -113,7 +128,7 @@ A uniform sign convention silently produced duals of the wrong sign on exactly
 the rows PlateGap cares about — the nutrient floors. Without the reference
 implementation that would have shipped as confident, wrong advice.
 
-## Where the language model is used, and where it is not
+### Where the language model is used, and where it is not
 
 | Job | Tool | Constrained how |
 | --- | --- | --- |
@@ -127,7 +142,7 @@ implementation that would have shipped as confident, wrong advice.
 Claude Haiku 4.5 is available on this account via the `us.anthropic.*` inference
 profile if Nova Lite's explanation quality proves insufficient.
 
-## Nutrition data
+### Nutrition data
 
 Composite Indian dishes are **recipe-decomposed into base ingredients** rather
 than guessed at dish level — dal becomes lentils + oil + spices at standard
@@ -140,14 +155,14 @@ Indian-specific items that FDC lacks get a curated table with cited sources.
 **Open risk:** nutrient data quality is the largest technical risk in the project.
 Budget real time for it and cite every source in the repo.
 
-## Prices
+### Prices
 
 - Local survey — items sold near the hostel, collected by Anish. This is what
   makes the numbers real rather than illustrative.
 - A national retail price feed for staples, if a fetchable one checks out.
   **Unverified — do not promise this until confirmed.**
 
-## Who this is for — it is not my hostel
+### Who this is for — it is not my hostel
 
 The product is generic. A hostel menu is an *input*, never a hardcoded
 assumption. Anyone who lands on the page must reach a useful answer without
@@ -172,7 +187,7 @@ seconds of editing.
 
 My mess is the demo button and the story. It is not the schema.
 
-## AWS architecture — deliberately small
+### AWS architecture — deliberately small
 
 Every service here earns its place, and the write-up states why the obvious
 extras were left out. Right-sizing reads better to a panel of Solutions
@@ -208,7 +223,7 @@ What was considered and deliberately cut, each for a stated reason:
 | --- | --- |
 | API Gateway | A Lambda Function URL gives the same HTTPS endpoint with CORS at no cost, and API Gateway's free tier is 12-month rather than always-free |
 | Textract | Nova Lite accepts an image or a PDF directly, so a separate OCR service would be one more dependency for a job one call already does. Measured: a page of PDF is about ten seconds and $0.0004 |
-| DynamoDB, for data | Nothing that is *data* needs shared durable state. Catalog is static JSON, metrics are logs, shared plans ride in the URL fragment. **One table went in later and for a different reason:** a daily counter capping what `scan` may spend on Bedrock, which is the one number in the project that cannot be recomputed from anything else. See "Added: a spend cap" below |
+| DynamoDB, for data | Nothing that is *data* needs shared durable state. Catalog is static JSON, metrics are logs, shared plans ride in the URL fragment. **One table went in later and for a different reason:** a daily counter capping what `scan` may spend on Bedrock, which is the one number in the project that cannot be recomputed from anything else. See [Added: a spend cap](#added-a-spend-cap-and-the-one-table-in-the-project) below |
 | Step Functions | There is no long-running workflow. The solve is single-digit milliseconds |
 | EC2 | Nothing needs to be always-on, and an instance in the request path is the single most likely way to fail the ship gate between Oct 2 and Oct 19 |
 
@@ -218,7 +233,7 @@ it is unused also stops it consuming credits.
 **Total running cost: inside the always-free tier, plus a few rupees of Bedrock.**
 That number goes in the write-up.
 
-## API shapes
+### API shapes
 
 ```
 POST /solve
@@ -235,15 +250,13 @@ POST /audit
     bindingFrequency: {k: days}, bestAdditions: [{foodId, costToMess, studentSavings}] }
 ```
 
----
+## What actually shipped, and where this document was wrong
 
-# What actually shipped, and where this document was wrong
-
-This file was written before the code. Keeping it unedited and recording the
-differences is more useful than quietly rewriting it to match, because the
+Part 1 was written before the code. Keeping it as written and recording the
+differences here is more useful than quietly rewriting it to match, because the
 places the design was wrong are the places something was learned.
 
-## Added: a limit on how much a person can eat
+### Added: a limit on how much a person can eat
 
 Not in the original design at all, and it turned out to be the constraint that
 mattered most. Without it the solver meets every ICMR target from the mess
@@ -257,24 +270,25 @@ The design assumed the gap would be structural — that the menu simply would
 not contain enough calcium. On this menu it is not. The food is there; a
 person cannot eat enough of it. That is a different and more honest finding.
 
-## Added: dishes carry a cuisine
+### Added: dishes carry a cuisine
 
 The menu audit was recommending a yogurt parfait for an Indian hostel mess.
 Correct arithmetic, worthless advice. Every dish now belongs to a kitchen, and
 the audit only suggests additions that belong on the menu it is auditing.
 
-## Changed: the audit is a pricing step, not a search
+### Changed: the audit is a pricing step, not a search
 
 The design described re-solving the week once per candidate. That is about ten
 seconds. The shipped version prices every candidate against the duals from the
 single solve we already did, which costs one dot product each, and re-solves
-only the handful that price out negative. On Monday's menu: 56 candidates
-screened to 11, whole week in about a second.
+only the handful that price out negative. On Monday's IIIT menu, for the
+default egg-eating profile, 56 candidates are screened and 8 price in; the
+whole week's audit takes under a second.
 
 The screen is only legitimate if it has no false negatives, so there is a test
 that takes every rejected candidate, adds it for real and re-solves.
 
-## Changed: the model transcribes, and the catalog matching is deterministic
+### Changed: the model transcribes, and the catalog matching is deterministic
 
 The design had one endpoint turning a photograph straight into canonical food
 IDs. That is not what shipped, and the split is the point.
@@ -304,13 +318,13 @@ Two things were measured on the way and both went against the design:
 Against the real seven-day IIIT timetable: 131 names placed across all seven
 days, 26 it would not place, each reported with its near misses.
 
-## Added: a spend cap, and the one table in the project
+### Added: a spend cap, and the one table in the project
 
 `scan` calls Bedrock, and the Function URL is public and unauthenticated by
 design. That makes "anyone may try this" and "anyone may spend my money" the
 same sentence unless something counts.
 
-Reserved concurrency is not the answer. Ten executions, each holding its slot
+The account's concurrency limit is not the answer. Ten executions, each holding its slot
 for the ten seconds a page of PDF takes, is about one scan a second — roughly
 $34 a day, which is more than this project's whole budget. A per-caller rate
 limit is not the answer either: a Function URL has no API keys to count, and
@@ -336,25 +350,56 @@ Two details worth defending:
   Failing open reads better until you notice that anything breaking DynamoDB
   also removes the ceiling, which is the only thing this exists to hold up.
 
-On-demand billing rather than provisioned, because the always-free tier's 25
-write units are 25 writes a second — and 1 unit, the free-tier-shaped choice,
-is exactly the peak rate this is built to survive. On-demand at the cap is
-about two cents a month.
+On-demand billing rather than provisioned. One write unit is one write a
+second, which is exactly the peak rate this is built to survive, so a
+free-tier-sized provisioned table would throttle under the one load it exists
+for. On-demand at the cap is about two cents a month.
 
-## Changed: one action per request, not one path per endpoint
+### Changed: one action per request, not one path per endpoint
 
 The Function URL takes a JSON body with an `action` field rather than routing
 on a path. The actions are `presets`, `catalog`, `gap`, `solve`, `frontier`,
 `week`, `audit`, `parse`, `scan` and `explain`. Same shapes as designed;
 different envelope.
 
-## Measured, not estimated
+### Added: every shadow price says how far it holds
+
+A shadow price is a slope, true only until the optimal basis changes. Early
+versions of the write-up multiplied duals by 100 g or a whole roti as though
+they held for ever. The simplex now reads sensitivity ranges off the final
+tableau: for each binding row, the span of right-hand side its price holds
+over; for each item bought, the price range over which the shopping list stays
+the same. The interface shows both, rounded inward so it never claims more
+than the solver did. There is no reference implementation for ranges, so
+`tests/test_ranging.py` re-solves at and just past each edge instead.
+
+### Changed: a ladle means a standard katori
+
+Part 1 left serving weights to judgement. Every ladle is now one of the
+standard katoris in ICMR-NIN's *Dietary Guidelines for Indians* (2024),
+Annexure I: 155 ml for dal, curry, sabzi and rice, 115 ml for curd, raita and
+sprouts, 200 ml for biryani. Only curd was outside that range; dahi and plain
+curd are now 120 g. The weights are still estimates, not weighed. The reasoning
+and the sources are in [DATA-SOURCES.md](DATA-SOURCES.md).
+
+### Added: a field study
+
+One menu is an anecdote. [FIELD-STUDY.md](FIELD-STUDY.md) runs the same
+pipeline over menus other colleges publish, and fixed the parser bugs those
+menus exposed.
+
+### Measured, not estimated
+
+Measured on 2026-09-21 on a laptop (x86_64, CPython 3.13) with
+`uv run python scripts/benchmark_solver.py`, IIIT menu, Monday, median of 9
+runs. The function runs on arm64 at 1769 MB, one vCPU, and has not been
+benchmarked there.
 
 | | |
-|---|---|
-| Deployment package | 51 KB, no dependencies |
-| One day solved | ~27 ms (two solves: cheapest, then lightest plate) |
-| The gap for one day | ~8 ms |
-| Frontier, 24 points | ~320 ms |
-| Whole-week audit | ~1.2 s |
-| Tests | 348 |
+| --- | --- |
+| Deployment package | 88 KB (`scripts/package_lambda.sh`), no dependencies |
+| The gap for one day (`gap`) | 3.5 ms |
+| The cheapest top-up for one day (`cheapest`) | 18 ms |
+| Frontier, 24 points | 194 ms |
+| Whole-week audit | 774 ms |
+| Tests | 873 passed, 40 skipped |

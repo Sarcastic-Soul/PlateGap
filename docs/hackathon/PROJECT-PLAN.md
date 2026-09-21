@@ -1,18 +1,29 @@
-# PlateGap — build plan
+# PlateGap: build plan
 
-Decided 2026-09-20. Due 2026-10-02 23:59 PT. Twelve days.
+The schedule and submission checklist I decided on 2026-09-20, twelve days
+before the deadline (2026-10-02 23:59 PT). It is for me, and for anyone who
+wants to see how the build was paced. The design is in
+[ARCHITECTURE.md](ARCHITECTURE.md), the rules summary and the competing
+entries in [README.md](README.md).
+
 Category `#daily-life-enhancement` · Lane `#startup`
 
-Design detail in `ARCHITECTURE.md`. Competitive position in `README.md` ("The field so far").
+**Status on 2026-09-21:** the live URL is up, five days ahead of the Sep 26
+gate, and the CloudTrail export is in [evidence/](evidence/README.md). The
+schedule below is the plan as written; where the build went differently (for
+one, `parse` uses no model at all), [ARCHITECTURE.md](ARCHITECTURE.md#what-actually-shipped-and-where-this-document-was-wrong)
+records it.
 
-## Verified on the account already
+## Checked on the account, 2026-09-20
 
 - `905543840246` / `us-east-1` / IAM user `sarcastic-soul`
 - EC2 `i-0ee8eb55a5eadba6c` "hackathon-box", t4g.medium, running, 44.211.149.117
 - Bedrock: `amazon.nova-lite-v1:0`, `amazon.nova-micro-v1:0` and
-  `us.anthropic.claude-haiku-4-5-20251001-v1:0` all invoke successfully
+  `us.anthropic.claude-haiku-4-5-20251001-v1:0` all invoke successfully.
+  (Haiku was later refused with `ResourceNotFoundException` until a use-case
+  form is filed; see [COST-AND-INFRA.md](COST-AND-INFRA.md#why-the-model-is-the-cheap-one-anyway).)
 - Textract `DetectDocumentText` responds
-- No existing S3 buckets, Lambdas or DynamoDB tables — clean slate
+- No existing S3 buckets, Lambdas or DynamoDB tables: a clean slate
 - Local: Terraform 1.9.0, Node 22, Python 3.12, Docker, Kiro 1.1.14
 
 ## Schedule
@@ -47,15 +58,21 @@ screenshot it, so an AWS-first-party agent also appears in the record.
 
 Collect this **as we go**. Evidence assembled on Oct 1 looks assembled on Oct 1.
 
+What the export actually shows (2026-09-19 to 2026-09-21, in
+[evidence/](evidence/README.md)): 123 calls that changed something. GitHub
+Actions over OIDC made 54, Terraform 36, Claude Code's AWS CLI 26, root
+creating the IAM user 5, and the console 2. So not every call is under
+`user/sarcastic-soul`: deploys run as the OIDC role, which is the point of it.
+
 ## Submission checklist
 
 - [x] Registered on Builder Center
 - [x] Live public URL on AWS, no login wall, reachable by the AI scorer and judges
 - [x] CloudTrail export documenting the coding agent's AWS calls
 - [ ] Exactly one category tag: `#daily-life-enhancement`
-- [ ] Exactly one lane tag: `#startup` — note `#startups` plural is wrong and several entrants got it wrong
+- [ ] Exactly one lane tag: `#startup`. Not `#startups`: 8 of the 40 entries so far used the plural, which is not a tag the rules name
 - [ ] Write-up covers app, development process, coding-agent usage, AWS services, live link
 - [ ] Original, not previously published
-- [x] Three presets — Indian hostel mess, North American dining hall, generic cafeteria — each usable in one click
+- [x] Three presets (Indian hostel mess, North American dining hall, generic cafeteria), each usable in one click
 - [x] Works for a stranger with no Indian context and no signup
 - [ ] Site stays up through the week of Oct 19
