@@ -9,37 +9,53 @@ CloudTrail itself.
 
 | | |
 | --- | --- |
-| Window | 2026-09-20T09:19:26Z to 2026-09-20T13:44:25Z |
-| Mutating calls | 62 |
-| Distinct API calls | 22 |
+| Window | 2026-09-19T16:19:11Z to 2026-09-21T14:29:43Z |
+| Mutating calls | 123 |
+| Distinct API calls | 40 |
 
 ## Who made the calls
 
 | Calls | Client |
 | --- | --- |
-| 37 | AWS CLI, driven by Claude Code |
-| 23 | Terraform, run by the agent's bootstrap script |
-| 1 | A browser (the AWS console) |
-| 1 | Boto3/1.43.98 md/Botocore#1.43.98 md/awscrt#0.36.0 ua/2.1 os |
+| 54 | GitHub Actions deploying over OIDC |
+| 36 | Terraform, run by the agent's bootstrap script |
+| 26 | AWS CLI, driven by Claude Code |
+| 5 | AWS CLI as the root user, creating the IAM user |
+| 2 | A browser (the AWS console) |
 
 ## What was called
 
 | Calls | API |
 | --- | --- |
-| 12 | CreateOAuth2Token |
-| 11 | CreateInvalidation |
-| 9 | UpdateFunctionCode20150331v2 |
+| 30 | CreateInvalidation |
+| 28 | UpdateFunctionCode20150331v2 |
+| 6 | PutRolePolicy |
 | 6 | AddPermission20150331v2 |
+| 5 | CreateRole |
+| 4 | CreateNotification |
 | 4 | CreateFunction20150331 |
-| 2 | CreateRole |
-| 2 | PutRolePolicy |
+| 2 | CreateUser |
+| 2 | CreateBudget |
+| 2 | CreateSchedule |
+| 2 | CreateOpenIDConnectProvider |
+| 2 | UpdateAssumeRolePolicy |
 | 2 | RemovePermission20150331v2 |
+| 2 | UpdateFunctionConfiguration20150331v2 |
+| 1 | AttachUserPolicy |
+| 1 | CreateLoginProfile |
+| 1 | CreateAccountAlias |
+| 1 | SetIAMAccessPreference |
+| 1 | CreateTopic |
+| 1 | CreateSecurityGroup |
+| 1 | CreateKeyPair |
+| 1 | AttachRolePolicy |
+| 1 | CreateInstanceProfile |
+| 1 | AddRoleToInstanceProfile |
 | 1 | CreateStack |
 | 1 | CreateOriginAccessControl |
 | 1 | CreateLogGroup |
 | 1 | CreateBucket |
 | 1 | PutRetentionPolicy |
-| 1 | CreateOpenIDConnectProvider |
 | 1 | PutBucketTagging |
 | 1 | PutBucketPublicAccessBlock |
 | 1 | PutBucketEncryption |
@@ -47,6 +63,9 @@ CloudTrail itself.
 | 1 | PutBucketOwnershipControls |
 | 1 | CreateFunctionUrlConfig |
 | 1 | PutBucketPolicy |
-| 1 | UpdateAssumeRolePolicy |
+| 1 | CreateResponseHeadersPolicy |
+| 1 | UpdateDistribution |
+| 1 | CreateTable |
+| 1 | UpdateTimeToLive |
 
 Raw events: `cloudtrail-build-window.json`.

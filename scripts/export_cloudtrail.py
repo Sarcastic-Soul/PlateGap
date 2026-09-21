@@ -10,7 +10,7 @@ Three user agents appear in the build window and they tell the whole story:
 
   aws-cli/...            Claude Code driving the AWS CLI directly
   APN/1.0 HashiCorp/...  Terraform, run by the agent's bootstrap script
-  aws-sdk-js/...azure    GitHub Actions, deploying over OIDC with no stored key
+  aws-cli/... as a role  GitHub Actions, deploying over OIDC with no stored key
 
 Run it with credentials that can read CloudTrail:
 
@@ -88,6 +88,15 @@ def scrub(value, account):
 
 def client_of(event):
     agent = event.get("userAgent", "unknown")
+    # The user agent alone cannot tell the agent's CLI from the deploy
+    # workflow's, because the workflow shells out to the same AWS CLI. The
+    # identity can: the workflow holds a role assumed over OIDC, and the
+    # account setup before the build ran as root.
+    kind = event.get("userIdentity", {}).get("type")
+    if kind == "AssumedRole" and "aws-cli/" in agent:
+        return "GitHub Actions deploying over OIDC"
+    if kind == "Root" and "aws-cli/" in agent:
+        return "AWS CLI as the root user, creating the IAM user"
     for marker, label in CLIENTS:
         if marker in agent:
             return label
@@ -97,6 +106,10 @@ def client_of(event):
 def interesting(event):
     name = event.get("eventName", "")
     agent = event.get("userAgent", "")
+    # CloudTrail marks sign-in token grants such as CreateOAuth2Token as reads
+    # although their names start with Create.
+    if event.get("readOnly") is True:
+        return False
     if any(marker in agent for marker in MACHINE_NOISE):
         return False
     return any(name.startswith(prefix) for prefix in WRITE_PREFIXES)
