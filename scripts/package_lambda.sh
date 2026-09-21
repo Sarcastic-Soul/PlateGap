@@ -20,7 +20,7 @@ mkdir -p "$stage/data/menus" "$stage/solver"
 
 cp "$root/lambda/handler.py" "$stage/"
 cp "$root/solver/"*.py "$stage/solver/"
-cp "$root/data/foods.json" "$stage/data/"
+cp "$root/data/foods.json" "$root/data/aliases.json" "$stage/data/"
 cp "$root/data/menus/"*.json "$stage/data/menus/"
 
 find "$stage" -name '__pycache__' -type d -prune -exec rm -rf {} +

@@ -112,7 +112,11 @@ for _name in sorted(os.listdir(os.path.join(DATA, "menus"))):
 # somebody pasting a menu has not told us which mess they are at yet -- so
 # asking them to pick a preset before they can type in their own menu would
 # be backwards. `araher dal` means toor dal wherever it was written down.
-ALIASES = {}
+#
+# Under those, `aliases.json`: synonyms that hold in any mess ("chapati" is a
+# roti), gathered from the published menus in the field study. A shipped
+# menu's own spelling wins where the two meet.
+ALIASES = dict(_load_json(os.path.join(DATA, "aliases.json"))["aliases"])
 for _menu in MENUS.values():
     ALIASES.update(_menu.get("aliases", {}))
 

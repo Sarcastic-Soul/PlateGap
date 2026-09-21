@@ -159,6 +159,101 @@ def test_the_written_name_is_reported_as_written():
 
 
 # --------------------------------------------------------------------------
+# The other way round: days down the side, meals across the top
+#
+# Taken from the published menus in the field study. Half of them are drawn
+# this way, and before this was handled every one of them was read as a
+# single Monday.
+# --------------------------------------------------------------------------
+
+DAYS_DOWN = """
+| DAY | BREAK FAST | LUNCH | LUNCH EXTRAS | DINNER |
+| --- | --- | --- | --- | --- |
+| DAILY | milk, bread | chapati, rice | chicken biryani | chapati, rice |
+| MONDAY | poha | rajma | paneer tikka | dal makhani |
+| TUESDAY | idli, sambar | chole | egg curry | mix veg |
+"""
+
+
+def test_a_grid_with_days_down_the_side_is_read_as_a_week():
+    _, parsed = call(action="parse", text=DAYS_DOWN)
+    days = parsed["menu"]["days"]
+    assert set(days) == {"mon", "tue"}
+    assert days["mon"]["breakfast"] == ["poha"]
+    assert days["tue"]["breakfast"] == ["idli", "sambhar"]
+    assert days["tue"]["dinner"] == ["mix_veg"]
+
+
+def test_a_daily_row_down_the_side_is_served_every_day():
+    _, parsed = call(action="parse", text=DAYS_DOWN)
+    assert parsed["menu"]["daily"]["breakfast"] == ["milk_glass", "bread_slice"]
+    assert parsed["menu"]["daily"]["lunch"] == ["roti", "plain_rice"]
+
+
+def test_a_column_of_paid_extras_is_left_out_and_said_so():
+    """Extras are sold at the counter. Counting them as mess food would make
+    a menu that prints its price list look better fed than one that
+    doesn't."""
+    _, parsed = call(action="parse", text=DAYS_DOWN)
+    served = json.dumps(parsed["menu"])
+    assert "chicken_biryani" not in served
+    assert "egg_curry" not in served
+    assert any("paid extras" in w for w in parsed["warnings"])
+
+
+def test_extras_written_inside_a_cell_are_left_out():
+    text = ("| Day | Lunch | Dinner |\n"
+            "| Monday | Mix veg, arhar dal. Extra: kheer, paneer tikka | rajma |\n")
+    _, parsed = call(action="parse", text=text)
+    assert parsed["menu"]["days"]["mon"]["lunch"] == ["mix_veg", "toor_dal_tadka"]
+
+
+def test_a_fortnight_is_read_as_its_first_week():
+    """A dated timetable: "15th Feb, Friday" to "28th Feb, Thursday"."""
+    text = ("| Date | 15 Feb, Friday | 16 Feb, Saturday | 17 Feb, Sunday"
+            " | 22 Feb, Friday |\n"
+            "| Lunch | rajma | chole | mix veg | poha |\n")
+    _, parsed = call(action="parse", text=text)
+    days = parsed["menu"]["days"]
+    assert days["fri"]["lunch"] == ["rajma_dish"]
+    assert days["sun"]["lunch"] == ["mix_veg"]
+
+
+# --------------------------------------------------------------------------
+# Near matches that were wrong, found by checking the field study by hand
+# --------------------------------------------------------------------------
+
+@pytest.mark.parametrize("written", [
+    "curd rice",     # was plain rice, through the alias "rice"
+    "milk cake",     # a sweet, was a glass of milk
+    "dinner",        # a heading, was a dinner roll
+    "green",         # half of "green chutney", was the chutney
+    "moong",         # was moong halwa
+    "dry",           # was gobhi dry
+    "sandwich",      # was the turkey sandwich, on a vegetarian menu
+])
+def test_a_near_match_that_was_wrong_is_now_refused(written):
+    index = menutext.build_index(handler.CATALOG, handler.ALIASES)
+    assert "id" not in menutext.match_one(written, handler.CATALOG, index)
+
+
+def test_a_misspelled_meat_dish_still_matches():
+    index = menutext.build_index(handler.CATALOG, handler.ALIASES)
+    assert menutext.match_one("chiken biryani", handler.CATALOG,
+                              index)["id"] == "chicken_biryani"
+
+
+@pytest.mark.parametrize("written,dish", [
+    ("chapati", "roti"), ("chappathi", "roti"), ("phulka", "roti"),
+    ("steamed rice", "plain_rice"), ("chawal", "plain_rice"),
+    ("appalam", "papad"), ("payasam", "kheer"), ("curd", "plain_curd"),
+])
+def test_a_regional_name_for_a_dish_is_that_dish(written, dish):
+    index = menutext.build_index(handler.CATALOG, handler.ALIASES)
+    assert menutext.match_one(written, handler.CATALOG, index)["id"] == dish
+
+
+# --------------------------------------------------------------------------
 # scan: the same parse, with a model doing the typing
 # --------------------------------------------------------------------------
 

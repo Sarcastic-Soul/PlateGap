@@ -62,6 +62,7 @@ MAX_ITEMS = 300
 # "tea time" are unambiguous, so they stay.
 MEAL_LABELS = {
     "breakfast": "breakfast",
+    "break fast": "breakfast",
     "brekfast": "breakfast",
     "morning": "breakfast",
     "brunch": "lunch",
@@ -74,6 +75,8 @@ MEAL_LABELS = {
     "evening snacks": "snacks",
     "high tea": "snacks",
     "tea time": "snacks",
+    "tiffin": "snacks",
+    "evening tiffin": "snacks",
     "dinner": "dinner",
     "supper": "dinner",
     "night": "dinner",
@@ -88,6 +91,23 @@ DAY_LABELS = {
     "sat": "sat", "saturday": "sat",
     "sun": "sun", "sunday": "sun",
 }
+
+# A column of paid extras is on the menu and is not part of the mess plan:
+# the student pays for it at the counter. Reading it as free food would
+# make every menu that prints its extras look better than the one that
+# doesn't, so its heading marks it as a column to leave out.
+SKIP = "skip"
+_PAID_COLUMN = re.compile(r"\b(extras?|paid|add ons?|a la carte|optional)\b")
+
+# The same thing written inside a cell: "Mix Veg + Dal. Extra: Chicken Kali
+# Mirch, Tawa Paneer". Everything from the word to the end of the cell is
+# sold, not served.
+_PAID_TAIL = re.compile(r"\bextras?\b\s*[:\-\u2013\u2014]+.*$", re.IGNORECASE | re.DOTALL)
+
+# The first cell of a row that is served on every day of the week, in a grid
+# with the days down the side.
+_EVERY_DAY = re.compile(
+    r"^(daily|every ?day|all days|compulsory|common|regular|fixed|standard)\b")
 
 _DAY_AT_START = re.compile(
     r"^\s*(%s)\b[\s:.\-–—]*" % "|".join(
@@ -208,15 +228,33 @@ def build_index(catalog, aliases=None):
     for key, (dish_id, _) in index.items():
         owners.setdefault(fold(key), set()).add(dish_id)
 
+    # Word containment is only offered against the catalog's own names and
+    # ids. An alias is one kitchen's spelling of one dish, and it is trusted
+    # as a spelling; letting its words stand for the dish as well is how
+    # "rice" (plain rice) came to swallow "curd rice", and "milk" "milk cake".
+    named = {fold(key) for key, (_, how) in index.items() if how != "alias"}
+
     return {
         "byKey": index,
         "owners": owners,
         "folded": sorted(owners),
-        "tokens": {key: frozenset(key.split()) for key in owners},
+        "tokens": {key: (frozenset(key.split()), key.split()[-1])
+                   for key in named},
     }
 
 
-def _containment(written_tokens, key_tokens):
+# Words that describe how a dish is cooked or served, or a raw ingredient
+# put out beside it, and never name a cooked dish on their own. "Dry" is the
+# last word of "Gobhi dry" and still not a dish; "tomato" on a menu is a
+# sliced tomato, not the aloo tomato it is the last word of.
+_ONLY_DESCRIBES = frozenset(fold(word) for word in (
+    "dry", "fry", "fried", "curry", "gravy", "masala", "plain", "special",
+    "veg", "mix", "mixed", "boiled", "roasted", "stir", "side", "bowl",
+    "portion", "glass", "slice", "sweet", "green", "red", "white",
+    "tomato", "onion", "cucumber", "carrot", "lemon", "chilli", "salt"))
+
+
+def _containment(written_tokens, key_tokens, key_head=None):
     """Score a name that is one of the words of a dish, or all of them.
 
     "Curd" is not a typo for "plain curd" and no edit-distance measure will
@@ -228,7 +266,16 @@ def _containment(written_tokens, key_tokens):
     """
     if not written_tokens or not key_tokens:
         return 0.0
+    if written_tokens <= _ONLY_DESCRIBES:
+        return 0.0
     if not (written_tokens <= key_tokens or key_tokens <= written_tokens):
+        return 0.0
+    # A shorter name has to include the word the dish is named for, which in
+    # these names is the last one: "curd" is a plain curd, but "dinner" is
+    # not a dinner roll, "green" is not a green chutney and "moong" is not
+    # moong halwa.
+    if key_head is not None and written_tokens < key_tokens \
+            and key_head not in written_tokens:
         return 0.0
     shared = float(min(len(written_tokens), len(key_tokens)))
     return 0.80 + 0.20 * (shared / max(len(written_tokens), len(key_tokens)))
@@ -256,8 +303,8 @@ def _candidates(norm, index):
         offer(folded_key,
               difflib.SequenceMatcher(None, heard, folded_key).ratio())
 
-    for folded_key, key_tokens in index["tokens"].items():
-        offer(folded_key, _containment(written_tokens, key_tokens))
+    for folded_key, (key_tokens, key_head) in index["tokens"].items():
+        offer(folded_key, _containment(written_tokens, key_tokens, key_head))
 
     return sorted(((score, dish_id, folded_key)
                    for dish_id, (score, folded_key) in scores.items()),
@@ -356,6 +403,23 @@ def _match_written(written, catalog, index):
             "suggestions": suggestions,
         }
 
+    # A near match must not put meat on a plate the menu never put it on.
+    # "Sandwich" is a word of "Turkey sandwich" and of nothing else in the
+    # catalog, so it scores as a clear winner -- and a vegetarian mess that
+    # serves a sandwich would be read as serving turkey.
+    dish = catalog["dishes"][dish_id]
+    if "meat" in dish.get("tags", ()):
+        heard = fold(norm).split()
+        named = fold(normalise(dish["name"])).split()
+        if not all(difflib.get_close_matches(word, heard, n=1, cutoff=0.75)
+                   for word in named):
+            return {
+                "text": written,
+                "reason": "the closest catalog dish is %s, and this name "
+                          "does not say it is meat" % dish["name"],
+                "suggestions": suggestions,
+            }
+
     return {
         "text": written,
         "id": dish_id,
@@ -445,6 +509,17 @@ def _day_label(cell):
     return DAY_LABELS[close[0]] if close else None
 
 
+def _day_in(cell):
+    """The weekday a header cell names, also when it is written next to a
+    date: "15th Feb, Friday"."""
+    found = _day_label(cell)
+    if found:
+        return found
+    named = {DAY_LABELS[word] for word in normalise(cell).split()
+             if len(word) >= 3 and word in DAY_LABELS}
+    return named.pop() if len(named) == 1 else None
+
+
 def _is_day_header(cells):
     """A row of weekday names tells us which column is which day.
 
@@ -452,11 +527,33 @@ def _is_day_header(cells):
     one: days across the top, meals down the side. Every mess noticeboard
     worth the name is drawn this way. The first cell is allowed not to be a
     day, because it is the corner of the grid -- "Meal", "Day", or nothing.
+
+    A dated timetable can run past a week ("15th Feb, Friday" to "28th Feb,
+    Thursday"). The first time each day appears is the one that is read; a
+    column naming a day already seen comes back as None and is left out.
     """
     for skip in (0, 1):
-        days = [_day_label(cell) for cell in cells[skip:]]
-        if len(days) >= 3 and all(days) and len(set(days)) == len(days):
-            return days
+        days = [_day_in(cell) for cell in cells[skip:]]
+        if len(days) < 3 or not all(days):
+            continue
+        first = set()
+        for position, found in enumerate(days):
+            if found in first:
+                days[position] = None
+            first.add(found)
+        return days
+    return None
+
+
+def _meal_label(cell):
+    """The meal a column heading names, `SKIP` for a column of paid extras,
+    or None. A heading often carries the serving hours in brackets --
+    "Breakfast (7:30 am to 9:30 am)" -- and they are not part of the name."""
+    norm = normalise(_PARENS.sub(" ", cell))
+    if norm in MEAL_LABELS:
+        return MEAL_LABELS[norm]
+    if _PAID_COLUMN.search(norm):
+        return SKIP
     return None
 
 
@@ -465,18 +562,19 @@ def _is_meal_header(cells):
 
     The first cell is allowed not to be a meal, because a timetable's header
     row starts with something like "Day" or an empty corner cell above the
-    column of weekdays. Everything after it has to be a meal name, which is
-    what stops a line of dishes being read as a header.
+    column of weekdays. Everything after it has to be a meal name, or the
+    heading of a column of paid extras, which is what stops a line of dishes
+    being read as a header.
     """
     for skip in (0, 1):
         meals = []
         for cell in cells[skip:]:
-            label = MEAL_LABELS.get(normalise(cell))
+            label = _meal_label(cell)
             if label is None:
                 break
             meals.append(label)
         else:
-            if len(meals) >= 2:
+            if len([m for m in meals if m != SKIP]) >= 2:
                 return meals
     return None
 
@@ -494,7 +592,8 @@ def _items(text):
 # The whole job
 # --------------------------------------------------------------------------
 
-def parse(catalog, text, aliases=None, name=None, region=None):
+def parse(catalog, text, aliases=None, name=None, region=None,
+          max_items=MAX_ITEMS):
     """Turn pasted text into a menu object plus an honest account of it.
 
     The menu that comes back holds only dishes we are confident about. Every
@@ -516,6 +615,15 @@ def parse(catalog, text, aliases=None, name=None, region=None):
     assumed_day = False
     assumed_meal = False
     guessed_columns = False
+    paid_left_out = 0
+
+    def served_part(cell):
+        """A cell without its paid extras."""
+        nonlocal paid_left_out
+        kept = _PAID_TAIL.sub("", cell)
+        if kept != cell:
+            paid_left_out += 1
+        return kept
 
     def place(day_name, meal_name, written):
         nonlocal assumed_day, assumed_meal
@@ -571,7 +679,8 @@ def parse(catalog, text, aliases=None, name=None, region=None):
         grid = _grid_cells(line) if _PIPE_ROW.match(line) else None
         cells = _cells(line)
 
-        header = _is_meal_header(cells) if len(cells) >= 2 else None
+        header_cells = grid if grid is not None else cells
+        header = _is_meal_header(header_cells) if len(cells) >= 2 else None
         if header:
             columns, day_columns = header, None
             continue
@@ -606,21 +715,50 @@ def parse(catalog, text, aliases=None, name=None, region=None):
                 # merges the cells for them, so they land wherever the merge
                 # began. They belong to all seven days.
                 for cell in body:
-                    for written in _items(cell):
-                        if items_read >= MAX_ITEMS:
+                    for written in _items(served_part(cell)):
+                        if items_read >= max_items:
                             truncated = True
                             break
                         items_read += 1
                         place_daily(meal, written)
             else:
                 for column_day, cell in zip(day_columns, body):
-                    for written in _items(cell):
-                        if items_read >= MAX_ITEMS:
+                    if column_day is None:
+                        continue
+                    for written in _items(served_part(cell)):
+                        if items_read >= max_items:
                             truncated = True
                             break
                         items_read += 1
                         place(column_day, meal, written)
             continue
+
+        # A row of a grid with the days down the side and the meals across
+        # the top: the first cell names the day, or says the row is served
+        # every day, or is blank because the day carries down from above.
+        if columns is not None and grid is not None and len(grid) >= 2:
+            head = grid[0]
+            row_day = _day_label(head)
+            everyday = bool(_EVERY_DAY.match(normalise(head)))
+            if row_day or everyday or (not head and day is not None):
+                if row_day:
+                    day = row_day
+                for column_meal, cell in zip(columns, grid[1:]):
+                    if column_meal == SKIP:
+                        if cell.strip():
+                            paid_left_out += 1
+                        continue
+                    for written in _items(served_part(cell)):
+                        if items_read >= max_items:
+                            truncated = True
+                            break
+                        items_read += 1
+                        if everyday:
+                            place_daily(column_meal, written)
+                        else:
+                            place(day, column_meal, written)
+                meal = None
+                continue
 
         found_day, rest = _day_at_start(line)
         if found_day:
@@ -645,8 +783,11 @@ def parse(catalog, text, aliases=None, name=None, region=None):
                 guessed_columns = True
             if order and len(row_cells) <= len(order):
                 for column_meal, cell in zip(order, row_cells):
-                    for written in _items(cell):
-                        if items_read >= MAX_ITEMS:
+                    if column_meal == SKIP:
+                        paid_left_out += 1
+                        continue
+                    for written in _items(served_part(cell)):
+                        if items_read >= max_items:
                             truncated = True
                             break
                         items_read += 1
@@ -662,15 +803,20 @@ def parse(catalog, text, aliases=None, name=None, region=None):
                 if leading is not None:
                     meal = leading
             for written in _items(chunk):
-                if items_read >= MAX_ITEMS:
+                if items_read >= max_items:
                     truncated = True
                     break
                 items_read += 1
                 place(day, meal, written)
 
+    if paid_left_out:
+        warnings.append("%d cell%s of paid extras %s left out: they are sold "
+                        "at the counter, not served on the mess plan"
+                        % (paid_left_out, "" if paid_left_out == 1 else "s",
+                           "was" if paid_left_out == 1 else "were"))
     if truncated:
         warnings.append("only the first %d items were read; the rest of the "
-                        "paste was left alone" % MAX_ITEMS)
+                        "paste was left alone" % max_items)
     if guessed_columns:
         warnings.append("this was read as a table with no heading row, so "
                         "each day's %d columns were taken to be %s in that "
