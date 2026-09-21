@@ -10,7 +10,7 @@ import { post, known } from '../lib/api.js';
 import { useAsync } from '../lib/hooks.js';
 import { Icon } from '../lib/icons.js';
 import {
-  Stat, More, Info, NutrientTable, describeRow, Skeleton, Failed,
+  Stat, More, Info, NutrientTable, describeRow, describeRange, Skeleton, Failed,
   AskForDishes, emptyBuild
 } from './pieces.js';
 
@@ -19,6 +19,18 @@ import {
 function sentence(words) {
   if (words.length === 1) { return words[0]; }
   return words.slice(0, -1).join(', ') + ' and ' + words[words.length - 1];
+}
+
+/* How wrong a seed price can be before the shopping list changes. The solver
+   guarantees the list is unchanged anywhere in this range; outside it, it may
+   or may not change. */
+function sameList(item, currency) {
+  const from = item.sameListFrom, to = item.sameListTo;
+  if (from == null && to == null) { return null; }
+  const text = to == null
+    ? 'Same list at any price above ' + preciseMoney(from, currency)
+    : 'Same list from ' + preciseMoney(from || 0, currency) + ' to ' + preciseMoney(to, currency);
+  return html`<div class="why">${text}</div>`;
 }
 
 function ShortfallRow({ item }) {
@@ -308,7 +320,8 @@ export function PlanTab() {
               ${answer.buy.map(function (item) {
                 return html`
                   <tr key=${item.id}>
-                    <td>${item.name}<div class="why">${item.unit}</div></td>
+                    <td>${item.name}<div class="why">${item.unit}</div>
+                      ${sameList(item, currency)}</td>
                     <td class="num">${round(item.amount, 1) + '×'}</td>
                     <td class="num">
                       <input type="number" class="price-input" min="0" step="0.5"
@@ -329,6 +342,13 @@ export function PlanTab() {
             </tbody>
           </table>`
         : html`<p class="note">Nothing. The menu covers it.</p>`}
+        ${answer.nearMisses && answer.nearMisses.length ? html`
+          <p class="note">${'Not worth buying at today\'s prices: '
+            + sentence(answer.nearMisses.map(function (m) {
+                return m.name.toLowerCase() + ' unless it drops below '
+                  + preciseMoney(m.notWorthItAbove, currency)
+                  + ' (now ' + preciseMoney(m.unitPrice, currency) + ')';
+              })) + '.'}</p>` : null}
       </section>
     </div>
 
@@ -342,11 +362,17 @@ export function PlanTab() {
       <${More} label="What is actually limiting you">
         <ul>
           ${answer.binding.slice(0, 6).map(function (row) {
-            return html`<li key=${row.kind + row.key}>${describeRow(row, currency)}</li>`;
+            const range = describeRange(row, currency);
+            return html`<li key=${row.kind + row.key}>
+              ${describeRow(row, currency)}
+              ${range ? html`<div class="why">${range}</div>` : null}
+            </li>`;
           })}
         </ul>
         <p class="note">These are shadow prices from the solver, not estimates.
         Only limits you are actually up against appear here — a limit you are
-        nowhere near is worth nothing to loosen.</p>
+        nowhere near is worth nothing to loosen. Each is a marginal price, true
+        only over the stretch shown under it; multiplying it far past that
+        stretch gives a wrong number.</p>
       <//>` : null}`;
 }

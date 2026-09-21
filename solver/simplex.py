@@ -56,18 +56,29 @@ class LPResult:
             d(objective)/d(b_i), so <= 0 for a binding `<=` row.
         duals_eq: one dual per A_eq row, same convention.
         iterations: total pivots across both phases.
+        cost_ranges: one (low, high) per variable -- the interval c_j can move
+            through while the returned x stays optimal. See `_cost_ranges`.
+        rhs_ranges_ub: one (low, high) per A_ub row -- the interval b_i can
+            move through while that row's dual stays exactly what it is. None
+            for a row whose range could not be read. See `_rhs_ranges`.
+        rhs_ranges_eq: the same for A_eq rows.
     """
 
-    __slots__ = ("status", "x", "objective", "duals_ub", "duals_eq", "iterations")
+    __slots__ = ("status", "x", "objective", "duals_ub", "duals_eq", "iterations",
+                 "cost_ranges", "rhs_ranges_ub", "rhs_ranges_eq")
 
     def __init__(self, status, x=None, objective=None, duals_ub=None,
-                 duals_eq=None, iterations=0):
+                 duals_eq=None, iterations=0, cost_ranges=None,
+                 rhs_ranges_ub=None, rhs_ranges_eq=None):
         self.status = status
         self.x = x
         self.objective = objective
         self.duals_ub = duals_ub or []
         self.duals_eq = duals_eq or []
         self.iterations = iterations
+        self.cost_ranges = cost_ranges or []
+        self.rhs_ranges_ub = rhs_ranges_ub or []
+        self.rhs_ranges_eq = rhs_ranges_eq or []
 
     def __repr__(self):
         if self.status != OPTIMAL:
@@ -284,8 +295,11 @@ def _drive_out_artificials(tableau, artificial_set):
     """Pivot artificial variables out of the basis where the row allows it.
 
     A row that cannot be cleared is linearly dependent on the others; it is
-    dropped, which is harmless because it carries no information.
+    dropped, which is harmless because it carries no information. Returns the
+    artificial columns of the dropped rows, so that ranging can tell which
+    original rows no longer have a tableau row of their own.
     """
+    dropped = set()
     for i in range(tableau.n_rows - 1, -1, -1):
         if tableau.basis[i] not in artificial_set:
             continue
@@ -300,9 +314,11 @@ def _drive_out_artificials(tableau, artificial_set):
         if replacement is not None:
             tableau.pivot(i, replacement)
         else:
+            dropped.add(tableau.basis[i])
             tableau.rows.pop(i)
             tableau.basis.pop(i)
             tableau.n_rows -= 1
+    return dropped
 
 
 def _extract_duals(tableau, markers, signs):
@@ -315,6 +331,79 @@ def _extract_duals(tableau, markers, signs):
     flipped, because scaling a row by -1 scales its marginal by -1 too.
     """
     return [-sign * tableau.cost[m] for m, sign in zip(markers, signs)]
+
+
+def _cost_ranges(tableau, n, c, forbidden):
+    """How far each cost can move before the current basis stops being optimal.
+
+    The basis is optimal while every reduced cost d_j is non-negative. For a
+    non-basic x_k only its own reduced cost involves c_k, so c_k may rise
+    without limit and fall by d_k. For x_k basic in row r, moving c_k by delta
+    moves every non-basic reduced cost by -delta * alpha_rj, and the range is
+    the largest delta that keeps all of them non-negative.
+
+    This is a range over which the returned x is *guaranteed* to stay optimal.
+    On a degenerate vertex another basis can describe the same x, so the true
+    range can be wider than the one reported -- never narrower.
+    """
+    cost = tableau.cost
+    basic_row = {}
+    for r, col in enumerate(tableau.basis):
+        basic_row[col] = r
+
+    ranges = []
+    for k in range(n):
+        if k not in basic_row:
+            ranges.append((c[k] - max(cost[k], 0.0), float("inf")))
+            continue
+        row = tableau.rows[basic_row[k]]
+        up, down = float("inf"), float("inf")
+        for j in range(tableau.n_cols):
+            if forbidden[j] or j in basic_row:
+                continue
+            alpha = row[j]
+            d = max(cost[j], 0.0)
+            if alpha > TOL:
+                up = min(up, d / alpha)
+            elif alpha < -TOL:
+                down = min(down, d / -alpha)
+        ranges.append((c[k] - down, c[k] + up))
+    return ranges
+
+
+def _rhs_ranges(tableau, markers, signs, rhs, dropped):
+    """How far each right-hand side can move before its dual stops applying.
+
+    B^-1 e_i is the marker column of row i, so moving the normalised b_i by
+    delta moves the basic solution to beta + delta * B^-1 e_i. The dual is
+    valid for as long as that stays non-negative. Outside the range a
+    different basis takes over and the shadow price changes; inside it the
+    objective moves by exactly dual * delta.
+
+    Like `_cost_ranges`, this is guaranteed rather than tight on a degenerate
+    vertex. A row dropped as linearly dependent has no tableau row and gets
+    None: moving its right-hand side alone makes the program infeasible.
+    """
+    last = tableau.n_cols
+    ranges = []
+    for m, sign, b in zip(markers, signs, rhs):
+        if m in dropped:
+            ranges.append(None)
+            continue
+        up, down = float("inf"), float("inf")
+        for row in tableau.rows:
+            column = row[m]
+            beta = max(row[last], 0.0)
+            if column > TOL:
+                down = min(down, beta / column)
+            elif column < -TOL:
+                up = min(up, beta / -column)
+        # The tableau moved the normalised right-hand side, sign * b. Undo
+        # that to speak about the b the caller passed in.
+        if sign < 0:
+            up, down = down, up
+        ranges.append((float(b) - down, float(b) + up))
+    return ranges
 
 
 def solve(c, A_ub=None, b_ub=None, A_eq=None, b_eq=None):
@@ -370,7 +459,7 @@ def solve(c, A_ub=None, b_ub=None, A_eq=None, b_eq=None):
     if infeasibility > 1e-7:
         return LPResult(INFEASIBLE, iterations=iterations)
 
-    _drive_out_artificials(tableau, artificial_set)
+    dropped = _drive_out_artificials(tableau, artificial_set)
 
     # Phase two: the real objective. Artificial columns stay in the tableau so
     # that equality and `>=` rows still have a marker column to read a dual
@@ -400,4 +489,9 @@ def solve(c, A_ub=None, b_ub=None, A_eq=None, b_eq=None):
     duals_ub = _extract_duals(tableau, marker_ub, signs_ub)
     duals_eq = _extract_duals(tableau, marker_eq, signs_eq)
 
-    return LPResult(OPTIMAL, x, objective, duals_ub, duals_eq, iterations)
+    cost_ranges = _cost_ranges(tableau, n, c, forbidden)
+    rhs_ranges_ub = _rhs_ranges(tableau, marker_ub, signs_ub, b_ub, dropped)
+    rhs_ranges_eq = _rhs_ranges(tableau, marker_eq, signs_eq, b_eq, dropped)
+
+    return LPResult(OPTIMAL, x, objective, duals_ub, duals_eq, iterations,
+                    cost_ranges, rhs_ranges_ub, rhs_ranges_eq)

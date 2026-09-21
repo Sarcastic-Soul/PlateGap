@@ -409,3 +409,71 @@ def test_audit_scales_with_the_student_count(catalog, menu):
     many = audit_module.audit_week(catalog, menu, students=500, shortlist=3)
     assert many["baselineMonthlySpendAllStudents"] == pytest.approx(
         one["baselineMonthlySpendAllStudents"] * 500, rel=1e-3)
+
+
+# --------------------------------------------------------------------------
+# Ranges on the real presets
+# --------------------------------------------------------------------------
+
+def _cost_program(catalog, menu, day):
+    goals = targets.targets_for(None)
+    variables = (model.mess_variables(catalog, menu, day)
+                 + model.market_variables(catalog, region=goals["region"]))
+    return model.assemble(variables, goals, objective="cost")
+
+
+@pytest.mark.parametrize("day", model.DAYS)
+def test_each_reported_shadow_price_holds_across_its_whole_range(catalog, menu, day):
+    """On the real menu, move each binding row to the far ends of the range
+    it reports and re-solve. Spend must move by exactly shadow price * change,
+    or the range is claiming more than the solver can back."""
+    answer = plan.cheapest(catalog, menu, day)
+    program = _cost_program(catalog, menu, day)
+    base = program.solve()
+    assert base.objective == pytest.approx(answer["spendExact"], abs=1e-4)
+
+    for row in answer["binding"]:
+        index = program.dual_of(row["kind"], row["key"])
+        sign = -1.0 if row["kind"] == "floor" else 1.0
+        for edge in (row["holdsFrom"], row["holdsTo"]):
+            if edge is None:
+                continue
+            # Step a hair inside, since the edges are rounded for display.
+            target = edge + (row["target"] - edge) * 0.02
+            moved = list(program.b_ub)
+            moved[index] = sign * target
+            again = simplex.solve(program.c, program.A_ub, moved)
+            assert again.status == simplex.OPTIMAL
+            # The exact dual, not the four-place figure shown to the reader.
+            price = abs(base.duals_ub[index])
+            predicted = base.objective + price * (
+                (row["target"] - target) if row["kind"] != "floor"
+                else (target - row["target"]))
+            assert again.objective == pytest.approx(predicted, abs=1e-4), (
+                "%s %s: price %.4f claimed to hold at %.3f"
+                % (row["kind"], row["key"], row["shadowPrice"], target))
+
+
+@pytest.mark.parametrize("day", model.DAYS)
+def test_the_shopping_list_survives_any_price_inside_its_range(catalog, menu, day):
+    answer = plan.cheapest(catalog, menu, day)
+    bought = {item["id"] for item in answer["buy"]}
+    checked = 0
+    for item in answer["buy"]:
+        if item["sameListTo"] is None:
+            continue
+        for price in (item["sameListFrom"], item["sameListTo"]):
+            # A hair inside: the edges are rounded, and at an edge a tie is
+            # allowed to go either way.
+            price = price + (item["unitPrice"] - price) * 0.05
+            again = plan.cheapest(catalog, menu, day, prices={item["id"]: price})
+            assert {i["id"] for i in again["buy"]} == bought, (
+                "%s at %.2f changed the list" % (item["id"], price))
+            checked += 1
+    for miss in answer["nearMisses"]:
+        again = plan.cheapest(catalog, menu, day,
+                              prices={miss["id"]: miss["notWorthItAbove"] * 1.02})
+        assert miss["id"] not in {i["id"] for i in again["buy"]}
+        checked += 1
+    if not checked:
+        pytest.skip("nothing bought on %s" % day)

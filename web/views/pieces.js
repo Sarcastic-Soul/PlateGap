@@ -109,8 +109,18 @@ export function NutrientTable({ nutrients }) {
 export function describeRow(row, currency) {
   const price = preciseMoney(row.shadowPrice, currency);
   if (row.kind === 'limit') {
-    return 'Room for another 100 g of food would save '
-      + preciseMoney(row.shadowPrice * 100, currency) + ' a day.';
+    // Quote 100 g only if the price holds that far. Past the edge of its
+    // range the shadow price is no longer the slope, and "100 g saves X"
+    // would be a number the solver never said.
+    let grams = 100;
+    if (row.holdsTo != null && row.target != null) {
+      grams = Math.min(100, Math.floor(row.holdsTo - row.target));
+    }
+    if (grams < 1) {
+      return 'Your plate is full: one more gram of room would save ' + price + '.';
+    }
+    return 'Room for another ' + grams + ' g of food would save '
+      + preciseMoney(row.shadowPrice * grams, currency) + ' a day.';
   }
   if (row.kind === 'cap') {
     return 'One more serving of ' + dishName(row.key) + ' — you are at the '
@@ -129,6 +139,42 @@ export function describeRow(row, currency) {
       + ' would close ' + price + ' worth of the gap.';
   }
   return row.kind + ' ' + row.key;
+}
+
+/* Where a shadow price stops being true.
+ *
+ * A shadow price is a slope, and it holds only until the next corner of the
+ * program. The solver reports that stretch in the row's own units; this says
+ * it in words. Nothing is said when the stretch is open-ended on both sides,
+ * because "this holds everywhere" is not worth a line.
+ *
+ * The range is guaranteed rather than tight: on a degenerate plan the price
+ * can hold further than this, never less far. */
+export function describeRange(row, currency) {
+  const from = row.holdsFrom, to = row.holdsTo;
+  if (from == null && to == null) { return null; }
+  let unit = '', what = '';
+  if (row.kind === 'limit') { unit = ' g'; what = 'the plate limit'; }
+  else if (row.kind === 'cap') { what = 'the ration'; unit = ' servings'; }
+  else if (row.kind === 'floor' || row.kind === 'ceiling') {
+    what = 'the ' + nutrientName(row.key) + ' ' + (row.kind === 'floor' ? 'target' : 'ceiling');
+    unit = ' ' + (nutrientUnit(row.key) || '');
+  } else if (row.kind === 'budget') {
+    return null;
+  }
+  const places = Math.abs(to == null ? from : to) < 10 ? 2 : 1;
+  // Rounded inward, like the solver's own edges: a lower edge rounds up and
+  // an upper one down, so the stretch shown is never wider than the one the
+  // solver guaranteed.
+  const scale = Math.pow(10, places);
+  const inward = function (v, up) {
+    const r = (up ? Math.ceil(v * scale - 1e-9) : Math.floor(v * scale + 1e-9)) / scale;
+    return String(r) + unit;
+  };
+  if (to == null) { return 'Holds while ' + what + ' is at least ' + inward(from, true) + '.'; }
+  if (from == null || from <= 0) { return 'Holds while ' + what + ' is up to ' + inward(to, false) + '.'; }
+  return 'Holds while ' + what + ' is between ' + inward(from, true) + ' and '
+    + inward(to, false) + ' — past that, the price changes.';
 }
 
 /* ----------------------------------------------------------- skeletons
