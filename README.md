@@ -6,7 +6,7 @@ you short of, and the cheapest thing you can buy to fix it.**
 [![demo](https://img.shields.io/badge/demo-live-2ea44f)](https://d2u44arueak38s.cloudfront.net)
 [![deploy](https://img.shields.io/github/actions/workflow/status/Sarcastic-Soul/PlateGap/deploy.yml?branch=main&label=deploy)](https://github.com/Sarcastic-Soul/PlateGap/actions/workflows/deploy.yml)
 [![tests](https://img.shields.io/github/actions/workflow/status/Sarcastic-Soul/PlateGap/test.yml?branch=main&label=tests)](https://github.com/Sarcastic-Soul/PlateGap/actions/workflows/test.yml)
-[![test count](https://img.shields.io/badge/tests-442%20passing-brightgreen)](tests/)
+[![test count](https://img.shields.io/badge/tests-873%20passing-brightgreen)](tests/)
 [![python](https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![runtime dependencies](https://img.shields.io/badge/runtime%20dependencies-0-blue)](pyproject.toml)
 [![build step](https://img.shields.io/badge/build%20step-none-blue)](web/)
@@ -31,6 +31,7 @@ you short of, and the cheapest thing you can buy to fix it.**
 
 - [The three questions](#the-three-questions)
 - [Try it](#try-it)
+- [27 real menus](#27-real-menus)
 - [What's interesting about it](#whats-interesting-about-it)
 - [Architecture](#architecture)
 - [The API](#the-api)
@@ -69,6 +70,27 @@ curl -sS -X POST https://j3h24i4cnnjhwwxyoenqibxene0yrrju.lambda-url.us-east-1.o
   -d '{"action": "solve", "menuId": "iiit", "day": "mon"}'
 ```
 
+## 27 real menus
+
+PlateGap was built against one mess menu. To check the problem is not just
+that one, [`docs/hackathon/FIELD-STUDY.md`](docs/hackathon/FIELD-STUDY.md) runs
+the app's own pipeline over 27 hostel menus published by 22 Indian
+institutions: transcribed by the app's reader, matched by the live parser,
+and every leftover name settled with a written reason. Then it solves a whole
+week for each menu. For a vegetarian woman eating the best plate each menu
+allows, 26 of the 27 menus fall short of the iron target on some day, and 13
+fall short on every day. Closing all the gaps costs a median ₹249 a week.
+
+The study also found five bugs in the menu reader, all now fixed and tested:
+grids with the days down the side, paid extras counted as food, dated
+fortnights, near matches like "curd rice" read as plain rice, and a sandwich
+read as turkey. The regional names it kept meeting ship as
+[`data/aliases.json`](data/aliases.json).
+
+```
+uv run python scripts/field_study.py parse && uv run python scripts/field_study.py run
+```
+
 ## What's interesting about it
 
 ### The solver is written from scratch
@@ -86,6 +108,23 @@ negative right-hand side negates the row, and negating a row negates its
 marginal. With one uniform sign convention, 90 of 267 tests failed: objectives
 were right and duals were sign-flipped — on exactly the nutrient-floor rows
 this product exists to display. Tracking a per-row sign fixed it.
+
+### Every shadow price says how far it holds
+
+- A shadow price is a slope, true only until the plan turns a corner. The
+  solver reads, off the same final tableau, the range each right-hand side can
+  move through before its dual changes, and the range each price can move
+  through before the plan does.
+- The interface shows both: "zinc costs ₹7.53 a milligram — between 16.97 and
+  17.14 mg", and, for each thing on the shopping list, how far its price can be
+  wrong before the list changes.
+- There is no reference implementation to compare ranges against, so
+  `tests/test_ranging.py` re-solves instead: inside every range the prediction
+  must hold exactly, and just past an edge it must fail wherever the dual is
+  unique.
+- Edges are rounded inward, because the ranges are guarantees. Rounding a
+  threshold to a whole rupee once put out "not worth buying above ₹8" when the
+  true threshold was ₹8.42.
 
 ### The menu audit is the simplex pricing step used as a feature
 
@@ -318,7 +357,7 @@ uses.
 ## Running it
 
 ```bash
-uv run --group dev pytest -q                  # 442 tests
+uv run --group dev pytest -q                  # 873 tests
 uv run python scripts/dev_server.py           # http://127.0.0.1:8000
 uv run python scripts/benchmark_solver.py     # times the four solver actions
 SITE=http://127.0.0.1:8000 uv run --group dev python scripts/smoke_ui.py
@@ -373,7 +412,7 @@ infrastructure. Terraform is run by a person, deliberately.
 | **arm64** | Kept for Graviton's published price — about 20% less per GB-second. That is a price list, not a benchmark | **This repository does not claim arm64 is faster, because nobody has measured it.** The solver is pure Python and its inner loop is list and float arithmetic in the interpreter; which way that goes on Graviton is not something to assert from an armchair. Running `scripts/benchmark_solver.py` on an arm64 box with the same `--repeat` and comparing medians would settle it in a couple of minutes |
 | **Concurrency capped at 10** | Opening the page costs four calls, so three or four people following a shared link in the same second is the whole ceiling. Ten browsers arriving simultaneously threw away 4 of 40 calls with a 429 and the entire burst was over in **5.6 seconds**; the same ten spread over a minute lost nothing. A burst that short does not want a larger quota, so the front end retries with **jitter** — every client refused was refused at the same instant, and retrying them on the same schedule would rebuild the burst. `scripts/smoke_ui.py` tests both paths | — |
 | **Bedrock on Nova Lite** | One `explain` call measured at 732 tokens in and ~130 out, about **$0.075 per thousand calls**. Nova Lite and Nova Micro both produced correct, readable paragraphs that passed the reconciliation check, so there was nothing to buy by spending more | Claude Haiku 4.5 is allowed by the IAM policy and the handler's allow-list, but this account answers it with `ResourceNotFoundException` until a use-case form is submitted. Nothing breaks: `explain` falls back to the templated text and still returns 200 |
-| **`scan` on the same model** | Reading the real seven-day mess menu in `data/menus/` measured at 1,862 tokens in and ~1,100 out, about **$0.38 per thousand uploads**, in roughly ten seconds. A PDF goes to Bedrock as a `document` block with no rasterising step, so the function needs no image tooling | Transcription is not perfect and is not presented as though it were. The measured run read 127 dishes across all seven days and reported 20 names it could not place, each with the near misses it rejected. The text is shown and editable before anything is solved |
+| **`scan` on the same model** | Reading the real seven-day mess menu in `data/menus/` measured at 1,862 tokens in and ~1,100 out, about **$0.38 per thousand uploads**, in roughly ten seconds. A PDF goes to Bedrock as a `document` block with no rasterising step, so the function needs no image tooling | Transcription is not perfect and is not presented as though it were. A scan of it places 131 names across all seven days and reports 26 it could not place, each with the near misses it rejected. The text is shown and editable before anything is solved |
 | **A daily cap on `scan`, in DynamoDB** | `scan` is the only action that spends money per call, on an endpoint that is public and unauthenticated on purpose. Reserved concurrency bounds the *rate* to about one scan a second, which is **~$34/day** — more than this project's entire budget. So the spend itself is counted, and the 501st scan of a day is refused with `read: false`. 500/day is about **$0.20/day** | A per-caller rate limit would mean WAF, whose monthly minimum is several times the loss it prevents. There is no caller to count anyway: a Function URL has no API keys. The counter fails **closed** — if the tally cannot be read, the scan is refused, because anything that breaks the counter would otherwise remove the ceiling |
 | **Public Function URL** | A tool anyone should be able to try without signing up | Accounts created from around 2024 onward block public Lambda function URLs by default, and the symptom is a bare 403 with a resource policy that plainly allows the call. Granting `lambda:InvokeFunction` to `*` alongside the `InvokeFunctionUrl` grant is what opens it. That grant **cannot be narrowed** — AWS rejects the `FunctionUrlAuthType` condition on it — so any AWS principal can invoke the function directly. `infra/lambda.tf` says so and explains why that is acceptable here |
 | **Local Terraform state** | For one person applying from one machine: one fewer bucket, one fewer table, and no chicken-and-egg problem about which Terraform builds the backend the state lives in. The file is gitignored | **It cannot survive a second person.** Two states that each believe they are the truth produce orphaned resources Terraform will cheerfully create again. `infra/backend.tf.example` has the S3 + DynamoDB configuration and the `terraform init -migrate-state` sequence written out, to adopt the day a second person shows up |

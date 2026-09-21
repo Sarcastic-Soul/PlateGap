@@ -301,8 +301,8 @@ Two things were measured on the way and both went against the design:
   A sentence asking it to keep the row of items served every day made it emit
   the row label and none of the contents, twice out of two.
 
-Against the real seven-day IIIT timetable: 127 dishes read across all seven
-days, 20 names it would not place, each reported with its near misses.
+Against the real seven-day IIIT timetable: 131 names placed across all seven
+days, 26 it would not place, each reported with its near misses.
 
 ## Added: a spend cap, and the one table in the project
 

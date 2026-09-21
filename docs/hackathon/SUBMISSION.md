@@ -17,6 +17,12 @@ are buying the right thing.
 A campus dining hall in the US works the same way, with a swipe instead of a
 monthly fee.
 
+The gaps are not small or rare. 59.1% of Indian girls aged 15–19 are anaemic,
+and so are 31.1% of boys (NFHS-5). 31% of adolescents are short of vitamin B12
+(CNNS). Among young vegetarian graduates in one study, half were deficient
+(Naik et al., 2018). Iron and B12 are exactly the nutrients a vegetarian mess
+plate is thinnest on.
+
 PlateGap treats that as an optimization problem, because that is what it is.
 
 **1. Where's the gap?** Eat the menu as well as it can possibly be eaten —
@@ -44,13 +50,50 @@ On my own mess menu, Monday, egg-eating diet:
   fee already paid.
 - The binding constraint is **not the menu. It is stomach volume.** The solver
   wants twelve rotis and bowl after bowl of curd; the plate limit of 1400 g is
-  what stops it. That limit prices at **₹0.0347 per gram** — an extra 100 g of
-  appetite is worth ₹3.47 a day.
-- Zinc is the expensive nutrient: **₹7.53 per milligram** at the margin.
-- One more roti in the ration would save **₹0.597 a day**.
+  what stops it. That limit prices at **₹0.0347 per gram**, and that price
+  holds for the next 68 g of appetite — worth ₹2.36 a day.
+- Zinc is the expensive nutrient: **₹7.53 per milligram** at the margin — for
+  the first 0.14 mg. Two more milligrams cost ₹35, not ₹15.
+- Raising the roti ration from twelve to thirteen would save **₹0.51 a day**.
 
-Those last three numbers are not estimates. They are the dual variables of the
-linear program, which is the whole reason the solver is written the way it is.
+Those numbers are not estimates. They are the dual variables of the linear
+program, and the range each one holds over — which is the whole reason the
+solver is written the way it is.
+
+### Where I got those numbers wrong the first time
+
+The first draft of this post said an extra 100 g of appetite was worth ₹3.47,
+that zinc costs ₹7.53 a milligram, and that one more roti saves ₹0.597. Every
+one of those was a correct shadow price, and every one was used wrongly.
+
+A shadow price is a slope. It is the cost of the *next* unit, and it stays true
+only until the solution turns a corner — until some other food enters the plan
+or leaves it. Multiply it by 100 g, or by a whole roti, and you are assuming the
+corner is further away than it is.
+
+So the solver now reports, for every shadow price, the stretch it holds over,
+read off the same final tableau with the standard sensitivity-ranging
+arithmetic. The zinc price holds between 16.97 and 17.14 mg: a sixth of a
+milligram. The plate price holds for 68 g, not 100. The roti price holds to
+12.5 rotis, which is why a whole extra roti is worth ₹0.51 and not ₹0.597.
+
+Each range is checked the only way that means anything: move the constraint to
+the far end of its range, re-solve from scratch, and assert the cost moved by
+exactly price × distance. Then step just past the edge on an instance where the
+price is unique and assert it *stops* holding, so a solver that reported every
+range as infinite would fail. The ranges are guarantees rather than exact edges
+on a degenerate plan — the price can hold further than shown, never less — and
+the interface rounds every edge inward so the display never claims more than
+the solver did. It did claim more, once: rupee amounts are shown in whole
+rupees, so "carrot is not worth buying above ₹8" went out while the true
+threshold was ₹8.42, and at ₹8.20 the solver bought carrots. The test that
+re-solves at each threshold caught it.
+
+The same ranges answer the question every reader asks first — *these prices are
+yours, not mine* — directly. Each item on the shopping list says how far its
+price can move before the list changes: spinach stays on it anywhere from ₹4.31
+to ₹14. And the items that nearly made the list say how cheap they would have to
+get: carrot, below ₹8.42 against ₹10 today.
 
 Aggregated across a 600-student hostel, the menu leaks **₹271,698 a month** in
 out-of-pocket spending. Adding mutter paneer on the days it is absent would
@@ -61,6 +104,48 @@ would recover **$30,284** of it.
 That is a number a dining services director can act on, derived from nothing
 but the posted menu.
 
+## It is not just my mess: 27 published menus
+
+One menu is an anecdote. So I collected every hostel mess menu I could find on
+an Indian college's own website: 27 menus from 22 institutions, including IITs,
+NITs, IIITs, central and state universities, and private colleges. Each went
+through the app's own pipeline. Nova Lite transcribed the PDFs, the live parser
+matched the names, and every name it would not place was settled with a
+written reason. Then I solved a whole week for each menu, for a vegetarian man
+and a vegetarian woman. This measures the best plate each menu allows, so a
+student who eats what they like does worse:
+
+- For a woman, **26 of the 27 menus cannot reach the iron target on at least
+  one day of the week, and 13 cannot reach it on any day**.
+- For a man, **24 of 27 fall short on vitamin B12 on some day, and 13 on
+  every day**. Calcium falls short on some day at 26 of 27.
+- Closing every gap costs a median **₹249 a week** for a woman and **₹241**
+  for a man. That is around ₹1,000 a month on top of the mess fee, and it
+  ranges from ₹38 to ₹741 a week depending on the menu.
+- The fix is almost always the same short list: cooked spinach, guava, a
+  packet of milk, soya chunks, boiled rajma.
+
+The study checks itself. Settling a name can only add food to a day, so I
+solved every menu again with only the parser's own matches. No shortfall
+count went down, and most went up, so the figures above are the kinder
+reading. The
+full method, the menu-by-menu table, and what the study does *not* show (many
+menus are old, a menu is not what is served, the sample is whatever is
+online) are in [`FIELD-STUDY.md`](FIELD-STUDY.md).
+
+Running real menus also found five bugs in the menu reader that my own menu
+never exercised:
+
+- It read menus with the days down the side as a single Monday.
+- It counted paid extras as mess food.
+- It did not recognise a dated fortnight as a timetable.
+- It accepted near matches like "curd rice" as plain rice and "milk cake" as
+  milk.
+- It turned a sandwich on a vegetarian menu into the catalog's turkey
+  sandwich.
+
+All five are fixed and tested.
+
 ## What is technically unusual about it
 
 **The solver is written from scratch.** `solver/simplex.py` is a two-phase
@@ -70,9 +155,10 @@ import.
 
 It was not written from scratch for the sake of it. It was written from scratch
 because the product needs the **dual** variables, not just the answer, and it
-needs to decompose them per constraint. "Zinc costs ₹7.53 a milligram" and "one
-more roti saves ₹0.597" are shadow prices read straight off the optimal basis.
-A library that returns only the primal solution cannot tell you that.
+needs to decompose them per constraint, and it needs the range each one holds
+over. "Zinc costs ₹7.53 a milligram, for the next sixth of a milligram" is read
+straight off the optimal basis. A library that returns only the primal solution
+cannot tell you that.
 
 **Correctness is held to a reference.** `scipy.optimize.linprog` is a
 development dependency that never ships. 260 randomly generated LPs are solved
@@ -80,8 +166,10 @@ by both on every change, and the test asserts three things: same feasibility
 status, same objective to 1e-6, and — the one that matters — **the same duals**,
 plus complementary slackness checked against our own primal, and strong
 duality — `y·b == c·x` — asserted on every instance, which is the check that
-catches a stale dual when each individual number still looks plausible. 442
-tests in all, green before anything deploys.
+catches a stale dual when each individual number still looks plausible. The
+sensitivity ranges have no reference to compare against, so they are held to
+re-solving instead, on 320 random programs and every day of the real presets.
+873 tests in all, green before anything deploys.
 
 **The menu audit is a pricing step used as a product feature.** To find which
 dish added to the menu would save students the most money, the obvious approach
@@ -106,17 +194,19 @@ same time.
 `scan` sends the PDF or the photo to Nova Lite and asks for exactly one thing:
 write down the words that are printed. Which catalog dish each written name
 means is then settled by `parse`, on the standard library, with no model call
-— exact names, the presets' own alias maps, a transliteration fold, then fuzzy
-distance — and it refuses to guess when two dishes are equally close. `"dal"`
-comes back as *could be Dal makhani or Mix dal, and guessing between them would
-be a coin toss*, with both suggested.
+— exact names, a shared table of regional names (chapati, phulka, chawal,
+appalam) collected from the 27 menus in the field study, the presets' own alias
+maps, a transliteration fold, then fuzzy distance. It refuses to guess when two
+dishes are equally close. `"dal"`
+comes back as *could be Mix dal or Khada masoor dal, and guessing between them
+would be a coin toss*, with both suggested.
 
 That split is deliberate. A model asked for dish IDs returns a confident,
 plausible, unfalsifiable menu, and a shortfall computed from a hallucinated
 menu is wrong in a way the reader cannot see. So the model does the typing and
-the catalog does the deciding: on the real seven-day IIIT timetable that is 127
-dishes read and 20 names it would not place, each shown with the near misses it
-rejected and settled with one tap. The transcription is editable before
+the catalog does the deciding: a scan of the real seven-day IIIT timetable
+places 131 names and leaves 26 it would not place, each shown with the near
+misses it rejected and settled with one tap. The transcription is editable before
 anything is solved, because character recognition on a photographed noticeboard
 gets things wrong and only the person holding the phone knows which things.
 
