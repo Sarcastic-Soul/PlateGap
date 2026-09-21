@@ -1,0 +1,188 @@
+{
+ "matched": 55,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "lunch": [
+     "upma",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "dal_mix",
+     "mix_veg",
+     "dahi",
+     "mutter_paneer",
+     "egg_curry",
+     "dal_tadka"
+    ]
+   },
+   "mon": {
+    "lunch": [
+     "dosa",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "mix_veg",
+     "peas_pulao",
+     "gobhi_dry",
+     "veg_kofta",
+     "rajma_dish"
+    ]
+   },
+   "sat": {
+    "lunch": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "dal_mix",
+     "sambhar",
+     "gulab_jamun",
+     "bread_slice",
+     "gobhi_dry",
+     "mix_veg",
+     "soya_badi"
+    ]
+   },
+   "sun": {
+    "lunch": [
+     "idli",
+     "vada",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "veg_raita",
+     "mix_veg",
+     "onion_rice",
+     "aloo_tomato"
+    ]
+   },
+   "thu": {
+    "lunch": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "dal_mix",
+     "idli",
+     "mix_veg",
+     "dahi",
+     "mutter_paneer",
+     "aloo_paratha"
+    ]
+   },
+   "tue": {
+    "lunch": [
+     "poori",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "veg_kofta",
+     "salad",
+     "mix_veg",
+     "gobhi_dry",
+     "dahi",
+     "mutter_paneer",
+     "dal_tadka"
+    ]
+   },
+   "wed": {
+    "lunch": [
+     "aloo_paratha",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "mix_veg",
+     "fruit_portion",
+     "dal_tadka",
+     "dahi"
+    ]
+   }
+  },
+  "id": "pondicherry-university__madame-curie-hostel",
+  "name": "Pondicherry University",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "lunch": [
+     "upma",
+     "roti",
+     "plain_rice",
+     "rasam"
+    ]
+   },
+   "mon": {
+    "lunch": [
+     "dosa",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd"
+    ]
+   },
+   "sat": {
+    "lunch": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "dal_mix",
+     "sambhar",
+     "gulab_jamun"
+    ]
+   },
+   "sun": {
+    "lunch": [
+     "idli",
+     "vada",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "veg_raita"
+    ]
+   },
+   "thu": {
+    "lunch": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "dal_mix"
+    ]
+   },
+   "tue": {
+    "lunch": [
+     "poori",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "veg_kofta"
+    ]
+   },
+   "wed": {
+    "lunch": [
+     "aloo_paratha",
+     "roti",
+     "plain_rice",
+     "rasam",
+     "plain_curd"
+    ]
+   }
+  },
+  "id": "pondicherry-university__madame-curie-hostel",
+  "name": "Pondicherry University",
+  "region": "IN"
+ },
+ "settledByHand": 45,
+ "warnings": [
+  "some items came before any meal heading and were read as lunch"
+ ]
+}

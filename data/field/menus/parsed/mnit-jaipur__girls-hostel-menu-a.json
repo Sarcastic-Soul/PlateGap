@@ -1,0 +1,557 @@
+{
+ "matched": 204,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "fruit_portion",
+     "amul_butter",
+     "jam",
+     "tea",
+     "boondi_raita",
+     "aloo_paratha",
+     "plain_rice",
+     "salad",
+     "pickle",
+     "green_chutney",
+     "malai_kofta",
+     "roti",
+     "papad",
+     "idli",
+     "sambhar",
+     "bread_slice",
+     "egg_bhurji",
+     "cereal_bowl",
+     "milk_glass",
+     "aloo_tomato",
+     "red_chutney",
+     "chole",
+     "mix_veg"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poori",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "milk_glass",
+     "fruit_portion",
+     "aloo_jeera",
+     "plain_rice",
+     "roti",
+     "salad",
+     "green_chutney",
+     "tea",
+     "dal_mix",
+     "papad",
+     "idli",
+     "sambhar",
+     "mix_veg",
+     "bread_slice",
+     "cereal_bowl",
+     "dahi",
+     "corn_chat"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "vada",
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "chole",
+     "pickle",
+     "veg_raita",
+     "roti",
+     "plain_rice",
+     "bread_slice",
+     "cereal_bowl",
+     "milk_glass",
+     "peas_pulao",
+     "ratlami_sev",
+     "dal_tadka",
+     "black_chana_aloo",
+     "green_chutney",
+     "papad"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "aloo_paratha",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "tea",
+     "dal_tadka",
+     "roti",
+     "salad",
+     "dal_makhani",
+     "veg_biryani",
+     "papad",
+     "idli",
+     "sambhar",
+     "bread_slice",
+     "cereal_bowl",
+     "milk_glass",
+     "paneer_butter_masala",
+     "peas_pulao",
+     "ratlami_sev",
+     "fruit_custard",
+     "noodles",
+     "green_chutney"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "cutlet",
+     "boiled_sprouts",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "roti",
+     "pickle",
+     "salad",
+     "peas_pulao",
+     "gulab_jamun",
+     "idli",
+     "sambhar",
+     "milk_glass",
+     "soya_badi",
+     "onion_rice",
+     "dahi",
+     "vada",
+     "papad",
+     "mix_veg",
+     "aloo_choka",
+     "green_chutney"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "jeera_rice",
+     "roti",
+     "pickle",
+     "salad",
+     "poha",
+     "samosa",
+     "poori",
+     "plain_rice",
+     "papad",
+     "idli",
+     "dosa",
+     "bread_slice",
+     "cereal_bowl",
+     "milk_glass",
+     "kurmuri_bhindi",
+     "dahi",
+     "chole",
+     "kadu_masala",
+     "green_chutney"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pav_bhaji",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "rajma_dish",
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "pickle",
+     "salad",
+     "pakoda",
+     "green_chutney",
+     "egg_curry",
+     "idli",
+     "sambhar",
+     "bread_slice",
+     "cereal_bowl",
+     "milk_glass",
+     "mix_veg",
+     "poori",
+     "mutter_paneer",
+     "peas_pulao"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer",
+     "green_chutney"
+    ]
+   }
+  },
+  "id": "mnit-jaipur__girls-hostel-menu-a",
+  "name": "MNIT Jaipur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "fruit_portion",
+     "amul_butter",
+     "jam",
+     "tea",
+     "boondi_raita",
+     "aloo_paratha",
+     "plain_rice",
+     "salad",
+     "pickle",
+     "green_chutney",
+     "malai_kofta",
+     "roti",
+     "papad",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poori",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "milk_glass",
+     "fruit_portion",
+     "aloo_jeera",
+     "plain_rice",
+     "roti",
+     "salad",
+     "green_chutney",
+     "tea",
+     "dal_mix",
+     "papad",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "vada",
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "chole",
+     "pickle",
+     "veg_raita",
+     "roti",
+     "plain_rice"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "aloo_paratha",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "tea",
+     "dal_tadka",
+     "roti",
+     "salad",
+     "dal_makhani",
+     "veg_biryani",
+     "papad",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "cutlet",
+     "boiled_sprouts",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "roti",
+     "pickle",
+     "salad",
+     "peas_pulao",
+     "gulab_jamun",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "jeera_rice",
+     "roti",
+     "pickle",
+     "salad",
+     "poha",
+     "samosa",
+     "poori",
+     "plain_rice",
+     "papad",
+     "idli"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pav_bhaji",
+     "amul_butter",
+     "jam",
+     "tea",
+     "fruit_portion",
+     "rajma_dish",
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "pickle",
+     "salad",
+     "pakoda",
+     "green_chutney",
+     "egg_curry",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "pickle",
+     "kheer"
+    ]
+   }
+  },
+  "id": "mnit-jaipur__girls-hostel-menu-a",
+  "name": "MNIT Jaipur",
+  "region": "IN"
+ },
+ "settledByHand": 126,
+ "warnings": []
+}

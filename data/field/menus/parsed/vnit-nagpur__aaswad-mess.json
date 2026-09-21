@@ -1,0 +1,447 @@
+{
+ "matched": 109,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "egg_curry",
+     "pickle",
+     "mutter_paneer",
+     "dal_tadka",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "toor_dal_tadka",
+     "gobhi_dry",
+     "salad",
+     "roti",
+     "dahi"
+    ],
+    "snacks": [
+     "tea",
+     "idli"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "boiled_egg",
+     "green_chutney",
+     "fruit_portion",
+     "mix_veg"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "boiled_sprouts",
+     "pickle",
+     "toor_dal_tadka",
+     "mix_veg",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "boondi_raita",
+     "dal_tadka",
+     "mix_veg",
+     "salad",
+     "roti",
+     "green_chutney"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "aloo_paratha",
+     "plain_curd",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "green_chutney",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "rajma_dish",
+     "veg_kofta",
+     "rasam",
+     "pickle",
+     "onion_rice",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "plain_curd",
+     "dal_tadka",
+     "sweetcorn_side",
+     "salad",
+     "roti",
+     "green_chutney"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "tea"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "chole",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "aloo_bhujiya",
+     "veg_biryani",
+     "dahi",
+     "veg_raita",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "boondi_raita",
+     "pickle",
+     "dal_tadka",
+     "mutter_paneer",
+     "salad",
+     "roti",
+     "fruit_custard"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "vada",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "chole",
+     "poori",
+     "rasam",
+     "salad",
+     "gulab_jamun",
+     "pickle",
+     "onion_rice",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "plain_rice",
+     "dal_mix",
+     "sambhar",
+     "salad",
+     "roti",
+     "pickle",
+     "plain_curd",
+     "mix_veg",
+     "red_chutney"
+    ],
+    "snacks": [
+     "tea",
+     "corn_chat"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "green_chutney",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "onion_rice",
+     "dal_makhani",
+     "rasam",
+     "salad",
+     "pickle",
+     "papad",
+     "soya_badi",
+     "roti"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "plain_curd",
+     "dal_tadka",
+     "ratlami_sev",
+     "salad",
+     "roti",
+     "green_chutney"
+    ],
+    "snacks": [
+     "samosa",
+     "tea"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "egg_bhurji",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "jeera_rice",
+     "kadhai_chicken",
+     "paneer_butter_masala",
+     "rasam",
+     "pickle",
+     "dal_tadka",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "pakoda",
+     "sambhar",
+     "pickle",
+     "aloo_tomato",
+     "salad",
+     "roti",
+     "green_chutney"
+    ],
+    "snacks": [
+     "tea",
+     "poha"
+    ]
+   }
+  },
+  "id": "vnit-nagpur__aaswad-mess",
+  "name": "VNIT Nagpur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "egg_curry",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "boiled_sprouts",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "boondi_raita"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "aloo_paratha",
+     "plain_curd",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "rajma_dish",
+     "veg_kofta",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "plain_curd"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "tea"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "aloo_bhujiya",
+     "veg_biryani",
+     "dahi",
+     "veg_raita",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "boondi_raita",
+     "pickle"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "chole",
+     "poori",
+     "rasam",
+     "salad",
+     "gulab_jamun",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "dal_mix",
+     "sambhar",
+     "salad",
+     "roti",
+     "pickle",
+     "plain_curd"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "onion_rice",
+     "dal_makhani",
+     "rasam",
+     "salad",
+     "pickle",
+     "papad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "pickle",
+     "plain_curd"
+    ],
+    "snacks": [
+     "samosa",
+     "tea"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "bread_slice",
+     "amul_butter",
+     "jam"
+    ],
+    "dinner": [
+     "jeera_rice",
+     "kadhai_chicken",
+     "paneer_butter_masala",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "pakoda",
+     "sambhar",
+     "pickle"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   }
+  },
+  "id": "vnit-nagpur__aaswad-mess",
+  "name": "VNIT Nagpur",
+  "region": "IN"
+ },
+ "settledByHand": 94,
+ "warnings": []
+}

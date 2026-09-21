@@ -1,0 +1,320 @@
+{
+ "matched": 51,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "salad",
+     "green_chutney",
+     "mix_veg"
+    ],
+    "dinner": [
+     "sambhar",
+     "rasam",
+     "fruit_portion",
+     "milk_glass"
+    ],
+    "lunch": [
+     "cereal_bowl",
+     "chole",
+     "green_chutney"
+    ],
+    "snacks": [
+     "poori",
+     "chole"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "sambhar",
+     "salad",
+     "plain_rice",
+     "dal_mix",
+     "kurmuri_bhindi",
+     "mix_veg"
+    ],
+    "dinner": [
+     "mix_veg",
+     "kheer"
+    ],
+    "lunch": [
+     "cereal_bowl",
+     "plain_rice",
+     "green_chutney"
+    ],
+    "snacks": [
+     "peas_pulao",
+     "roti",
+     "soya_badi"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "salad",
+     "rasam",
+     "green_chutney",
+     "gobhi_dry",
+     "mix_veg",
+     "toor_dal_tadka"
+    ],
+    "dinner": [
+     "fruit_portion",
+     "ratlami_sev",
+     "milk_glass"
+    ],
+    "lunch": [
+     "cereal_bowl",
+     "boiled_sprouts",
+     "green_chutney"
+    ],
+    "snacks": [
+     "sambhar",
+     "poha",
+     "onion_rice",
+     "plain_rice",
+     "plain_curd"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "rasam",
+     "red_chutney",
+     "sambhar",
+     "salad",
+     "mix_veg"
+    ],
+    "dinner": [
+     "sambhar",
+     "fruit_portion",
+     "dahi"
+    ],
+    "lunch": [
+     "boondi_raita",
+     "gulab_jamun",
+     "oatmeal",
+     "mix_veg",
+     "plain_rice"
+    ],
+    "snacks": [
+     "bread_slice",
+     "boiled_sprouts",
+     "aloo_paratha",
+     "mix_veg"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "salad",
+     "rasam",
+     "noodles",
+     "bread_slice",
+     "dahi",
+     "mix_veg",
+     "dal_tadka"
+    ],
+    "dinner": [
+     "mix_veg",
+     "plain_rice",
+     "papad",
+     "sweetcorn_side",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "papad",
+     "oatmeal",
+     "chole",
+     "green_chutney"
+    ],
+    "snacks": [
+     "ratlami_sev",
+     "peas_pulao",
+     "kheer"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "upma",
+     "nariyal_chutney",
+     "salad",
+     "rasam",
+     "mix_veg",
+     "gobhi_dry",
+     "dal_tadka"
+    ],
+    "dinner": [
+     "mix_veg",
+     "fruit_custard",
+     "dahi"
+    ],
+    "lunch": [
+     "oatmeal",
+     "boiled_sprouts",
+     "green_chutney"
+    ],
+    "snacks": [
+     "dosa",
+     "nariyal_chutney",
+     "sweetcorn_side"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pav_bhaji",
+     "salad",
+     "sambhar",
+     "soya_badi",
+     "mix_veg"
+    ],
+    "dinner": [
+     "rasam",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "cereal_bowl",
+     "boiled_sprouts",
+     "green_chutney"
+    ],
+    "snacks": [
+     "jeera_rice",
+     "ratlami_sev",
+     "roti",
+     "mutter_paneer"
+    ]
+   }
+  },
+  "id": "iit-madras__ccw-veg-menu",
+  "name": "IIT Madras",
+  "region": "IN"
+ },
+ "noise": 7,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "salad"
+    ],
+    "dinner": [
+     "sambhar",
+     "rasam"
+    ],
+    "snacks": [
+     "poori",
+     "chole"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "sambhar",
+     "salad"
+    ],
+    "dinner": [
+     "mix_veg",
+     "kheer"
+    ],
+    "snacks": [
+     "peas_pulao"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "salad",
+     "rasam"
+    ],
+    "snacks": [
+     "sambhar"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "rasam"
+    ],
+    "dinner": [
+     "sambhar"
+    ],
+    "lunch": [
+     "boondi_raita",
+     "gulab_jamun"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "salad",
+     "rasam"
+    ],
+    "dinner": [
+     "mix_veg",
+     "plain_rice",
+     "papad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "papad"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "upma",
+     "nariyal_chutney",
+     "salad",
+     "rasam"
+    ],
+    "dinner": [
+     "mix_veg",
+     "fruit_custard"
+    ],
+    "snacks": [
+     "dosa",
+     "nariyal_chutney"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pav_bhaji",
+     "salad",
+     "sambhar"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "snacks": [
+     "jeera_rice"
+    ]
+   }
+  },
+  "id": "iit-madras__ccw-veg-menu",
+  "name": "IIT Madras",
+  "region": "IN"
+ },
+ "settledByHand": 84,
+ "warnings": [
+  "some items came before any meal heading and were read as lunch"
+ ]
+}

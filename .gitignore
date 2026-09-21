@@ -24,3 +24,7 @@ build/
 .DS_Store
 .idea/
 .vscode/
+
+# Field study: the menus themselves belong to the institutions that
+# published them. SOURCES.csv has every URL.
+data/field/menus/raw/

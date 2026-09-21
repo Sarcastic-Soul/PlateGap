@@ -1,0 +1,12 @@
+<!-- IISER Bhopal | Mess 3 & Mess 4 (Veg mess), Dining Hall 3 | read by the model -->
+<!-- page 1 -->
+| Day | Breakfast (7:30 am to 9:30 Am) | Lunch (12:30 pm to 2:30 pm) | Dinner (7:30 pm to 9:30 pm) |
+| --- | --- | --- | --- |
+| Compulsory item | Milk (200 ml), Cornflakes, Bournvita, Coffee, Tea, Butter (Solid), Jam, Ketchup, Sprouts (Mong/Chana/Other) Bread slices (brown and white) 2 Bananas | Roti (Chapati), Rice, Pickle, Butter(Solid), Salad [atleast 3] (onion, tomato, carrot, cucumber, beetroot, cabbage and radish), green chilli, lemon,Papad salt (Table, Black) | Roti (Chapati), Rice, Pickle, Butter(Solid), Salad [atleast 3] (onion, tomato, carrot, cucumber, beetroot, cabbage and radish), green chilli, lemon, salt (Table, Black),papad |
+| Monday | Mixed Parantha with tomato chutney | Maasor Daal, Kal chana masala Curd (1 Katori or 150gm) Any Fruit (Seasonal) | Mix dal, Pancer do pyaz/atofu Jeera rice, Donuts/soyamilk. |
+| Tuesday | Idli (simple and fried) with Sambar and Coconut Chutney | Daal Makhani, Sweet Lassi (150-200 ml) Mix Veg (<20% allo) Any Fruit (Seasonal) | Toor dal tadka, Jeera Rice Dahi vada |
+| Wednesday | Veg sandwich/Aloo masala sandwich with green chutney | Rajma, Aalu Tikki Mirch, Thesa Chutney, Curd (1 Katori or 150gm) | Fried Rice,Chilli paneer Moong dal/suji halwa |
+| Thursday | Medhu Vada/uttapam | Pumpkin sabzi, Kadhi-Pakoda, Any Fruit (Seasonal) | Puri and Ghugni Dal tadka, Jeera rice rice kheer |
+| Friday | Moong dal chilla/Masala parantha | Dal (Khadi masur)fry Tadka, Lauki Chana dal, Thesa chatni Nimbou Pani(150 ml) | Ahrhar dal, Paneer Bhurji/Matar paneer, Ice cream/soy milk |
+| Saturday | Poha + jalebi With chopped onion, tomato And Sev | Chole kulcha/Bhature, Bo+ Raita Green Chutney Boondi Raita (150-200 ml) | Mix Dal tadka,Kashmiri Matar pulao Methu mali matar,Raita Pastry/Brownie |
+| Sunday | Masala Dosa Sambhar and coconut chutney (8:00 am to 10:00 Am) | Dal Bafle with garlic chutney+Green baigan+Buttermilk+ kachumar salad (1:00 pm to 3:00 pm) | Aloo Bhujiyai rice) Veg Pulao (Basmati rice) Daal tadka, Besan barfi |

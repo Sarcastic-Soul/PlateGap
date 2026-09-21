@@ -1,0 +1,45 @@
+<!-- GNIOT Institute of Professional Studies, Greater Noida | Hostel mess | read by the model -->
+<!-- page 1 -->
+|  | Monday | Tuesday | Wednesday | Thursday |
+| --- | --- | --- | --- | --- |
+| Break Fast | 1 Chole Puri 2. Upma, 3. Bread Butter 4. Cornflakes & Milk 5.Tea | 1.Chole Kulche 2.Veg Poha 3. Bread-Butter 4. Cornflakes& Milk 5.Tea | 1 Veg- Upma, 2 Mix Paratha 3 Bread Butter 4 Cornflakes&Milk 5 Tea | 1 Aloo Tomato with Plain Paratha 2 Kanda Poha 3 Bread Butter |
+| Lunch | 1.Chana Dal 2 Vegetable Kofta, 3. Chate-pate Aloo 4. Rice 5. Chapati 6 Green Salad | 1 Aloo Sabji 2. Petah Sabji 3.Masala Kale Chane 4. Rice 5. Puri 6. Green Salad | 1 Hari Moong Dal 2 Karai Paneer/ Paneer Butter Masala 3 Aloo Matar 4 Rice 5 Chapati 6 Green Salad | 1 Chana Dal 2 Small Bagen masala 3 Kadi Pakora |
+| Evening Snacks | 1. Samosa/ Sandwich 2. Red and GreenChutney 3.Tea | 1. Bhelpuri 2. Aam Panna 3.Tea | 1. Vada Paw with Green and Red Chutney 2.Tea 3.Jaljera | 1.Chowmein with red and Green Chutney |
+| Dinner | 1 Arhar dal, 2 Torai Masala, 3 Veg Biryani, 4 Chapati, 5 Raita 6 Green salad 7 Khichadi | 1Chana &Urad Dal 2 Kathal Sabji 3 Veg Khichadi 4 Rice 5 Chapati, 6 Bondi- Raita 7 Green salad | 1 Mix Dal 2 Aloo Parval Sabji 3 Dal Khichadi 4 Chapati 5 Rice 6 Mix Veg Raita 7 Green Salad | 1 Black masoor Dal 2 Bhindl masala 3 Veg-Khichadi |
+
+<!-- page 2 -->
+|  | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+|  | 4 Cornflakes- Milk |  | 4 Chapati |  | 4 Chapati |  | 4 Chapati |
+|  | 5 Tea |  | 5 Rice |  | 5 Rice |  | 5 Rice |
+|  |  |  | 6 Salad |  | 6 Dahi |  | 6 Dahi |
+|  |  |  |  |  | 7 Green Salad |  | 7 Green Salad |
+|  |  | 1 Aloo-Pyaz Paratha | 1 Dal Makhani |  | 1 Aloo Tikki&Papri with Matar and Chutney (Green and Red) Bhaji | 1 Lauki Sabji | 1 Lauki Sabji |
+|  | 2 Upma | 2 Mixveg | 2 Mixveg |  | 2 Dahi Bhalla with Pappri with Green and Red Chutney | 2 Manchurian | 2 Manchurian |
+|  | 3 Bread Butter | 3 Malai-Kofta | 3 Malai-Kofta |  | 3 Khichadi Pav | 3 Khichadi | 3 Khichadi |
+|  | 4 Cornflakes- Milk | 4 Chapati | 4 Chapati |  | 4 Chapati | 4 Chapati | 4 Chapati |
+|  | 5 Tea | 5 Rice | 5 Rice |  | 5 Rice | 5 Rice | 5 Rice |
+|  | 6 Salad | 6 Salad | 6 Dahi |  | 6 Dahi | 6 Dahi | 6 Dahi |
+|  |  |  | 7 Green Salad |  | 7 Green Salad | 7 Green Salad | 7 Green Salad |
+|  |  | 1 Sandwich | 1 Soyabean Matar Sabji | 1.Macrony with Ketchup | 1.Dal Tadka | 1.Dal Tadka |  |
+|  | 2 Samiya | 2 Samiya | 2 Aloo masala Chole Bhature | 3 Tea | 2.Dum Aloo | 2.Dum Aloo |  |
+|  | 3 Tomato Poha | 3 Tomato Poha | 4.Rice |  | 3.Mong Dal | 3.Mong Dal |  |
+|  | 4 Upma | 4 Upma | 5.Masala Cach |  | -Khichadi | -Khichadi |  |
+|  | 5 Cornflakes- Milk | 5 Cornflakes- Milk | 6.Green salad |  | 4 Chapati | 4 Chapati |  |
+|  | 6 Tea | 6 Tea |  |  | 5 Rice | 5 Rice |  |
+|  |  |  |  |  | 6 Dahi | 6 Dahi |  |
+|  |  |  |  |  | 7 Green Salad | 7 Green Salad |  |
+|  | 1.Dosa, | 1 Aloo Simla | 1 Tea | 1 Rajma |  | 1 Rajma |  |
+|  | 2.Vada Sambhar, | 2 Lobiya dal | 2 Biscuit | 2 Biscuit |  | 2 Soya Keema |  |
+|  | 3.Nariyal/Green /Tomato- Chutney, | 3 Matar Paneer | 4 Chapati | 4 VegKhichadi, 5 Chapati |  | 3 Matar Masala |  |
+|  | 4. Cornflakes- milk, 5. Bread- Butter | 5 Rice | 6 Salad | 6 Rice |  | 6 Rice |  |
+|  | 6 Tea | 6 Tea | 7Green salad, | 7Green salad, |  | 7Green salad, |  |
+|  | 7 Fruit |  |  |  |  |  |  |
+
+<!-- page 3 -->
+| Meal | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Breakfast | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup | Butter, Pickle, Jam, Catchup |
+| Dessert | Ice Cream | Suji Halwa | Chena Pays | Jalebi | Gulab Jamun | Boondi Laddu | Mung Dal Halwa |
+|  |  |  |  |  | Kheer | Custard | Savai |

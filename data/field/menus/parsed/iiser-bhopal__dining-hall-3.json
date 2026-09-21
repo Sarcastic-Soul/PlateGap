@@ -1,0 +1,269 @@
+{
+ "matched": 39,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "milk_glass",
+    "tea",
+    "amul_butter",
+    "jam",
+    "cereal_bowl",
+    "boiled_sprouts",
+    "bread_slice",
+    "fruit_portion"
+   ],
+   "dinner": [
+    "roti",
+    "plain_rice",
+    "pickle",
+    "amul_butter",
+    "papad",
+    "salad",
+    "gobhi_dry"
+   ],
+   "lunch": [
+    "roti",
+    "plain_rice",
+    "pickle",
+    "amul_butter",
+    "papad",
+    "salad",
+    "gobhi_dry"
+   ]
+  },
+  "days": {
+   "fri": {
+    "breakfast": [
+     "dosa",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "paneer_bhurji",
+     "mutter_paneer",
+     "toor_dal_tadka",
+     "fruit_custard",
+     "milk_glass"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "green_chutney"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "aloo_paratha",
+     "red_chutney"
+    ],
+    "dinner": [
+     "dal_mix",
+     "jeera_rice",
+     "mutter_paneer",
+     "brownie_square",
+     "milk_glass"
+    ],
+    "lunch": [
+     "masoor_dal_dish",
+     "black_chana_aloo",
+     "plain_curd",
+     "fruit_portion"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "onion_chop",
+     "ratlami_sev",
+     "salad"
+    ],
+    "dinner": [
+     "brownie_square",
+     "dal_mix",
+     "peas_pulao",
+     "pyaj_muter_malai",
+     "veg_raita"
+    ],
+    "lunch": [
+     "chole",
+     "poori",
+     "veg_raita",
+     "green_chutney",
+     "boondi_raita"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "aloo_bhujiya",
+     "peas_pulao",
+     "dal_tadka",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "roti",
+     "red_chutney",
+     "mix_veg",
+     "dahi",
+     "salad"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "vada",
+     "dosa"
+    ],
+    "dinner": [
+     "poori",
+     "dal_tadka",
+     "jeera_rice"
+    ],
+    "lunch": [
+     "pakoda",
+     "kadu_masala",
+     "fruit_portion"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "jeera_rice"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "dahi",
+     "mix_veg",
+     "fruit_portion"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "green_chutney",
+     "bread_slice"
+    ],
+    "dinner": [
+     "peas_pulao",
+     "mutter_paneer",
+     "dal_tadka",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "cutlet",
+     "green_chutney",
+     "plain_curd"
+    ]
+   }
+  },
+  "id": "iiser-bhopal__dining-hall-3",
+  "name": "IISER Bhopal",
+  "region": "IN"
+ },
+ "noise": 1,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "milk_glass",
+    "tea",
+    "amul_butter",
+    "jam"
+   ],
+   "dinner": [
+    "roti",
+    "plain_rice",
+    "pickle",
+    "amul_butter",
+    "papad"
+   ],
+   "lunch": [
+    "roti",
+    "plain_rice",
+    "pickle",
+    "amul_butter",
+    "papad"
+   ]
+  },
+  "days": {
+   "fri": {
+    "dinner": [
+     "paneer_bhurji",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "dal_tadka"
+    ]
+   },
+   "mon": {
+    "dinner": [
+     "dal_mix",
+     "jeera_rice"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "onion_chop",
+     "ratlami_sev"
+    ],
+    "dinner": [
+     "brownie_square"
+    ],
+    "lunch": [
+     "chole"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "vada",
+     "dosa"
+    ],
+    "dinner": [
+     "poori",
+     "dal_tadka",
+     "jeera_rice"
+    ],
+    "lunch": [
+     "pakoda"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "jeera_rice"
+    ],
+    "lunch": [
+     "dal_makhani"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "green_chutney"
+    ],
+    "lunch": [
+     "rajma_dish"
+    ]
+   }
+  },
+  "id": "iiser-bhopal__dining-hall-3",
+  "name": "IISER Bhopal",
+  "region": "IN"
+ },
+ "settledByHand": 65,
+ "warnings": []
+}

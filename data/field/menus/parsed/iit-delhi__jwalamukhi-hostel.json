@@ -1,0 +1,446 @@
+{
+ "matched": 113,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "pav_bhaji",
+     "boiled_egg",
+     "jam",
+     "tea",
+     "milk_glass",
+     "upma",
+     "moong_halwa",
+     "fruit_portion",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "kadhai_chicken",
+     "jeera_rice",
+     "paneer_butter_masala",
+     "masoor_dal_dish",
+     "aloo_paratha",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "roti",
+     "papad",
+     "salad",
+     "dal_tadka",
+     "gobhi_dry",
+     "dahi"
+    ],
+    "snacks": [
+     "tea",
+     "pakoda"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poha",
+     "orange_juice_glass",
+     "jam",
+     "tea",
+     "milk_glass",
+     "noodles",
+     "egg_bhurji",
+     "amul_butter",
+     "cereal_bowl",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "chicken_biryani",
+     "mix_veg",
+     "veg_raita",
+     "roti",
+     "veg_biryani",
+     "black_chana_aloo",
+     "milk_glass"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "mix_veg",
+     "dahi"
+    ],
+    "snacks": [
+     "tea",
+     "pakoda"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass",
+     "oatmeal",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "soya_chilli",
+     "dal_mix",
+     "peas_pulao",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "paneer_bhurji",
+     "boondi_raita",
+     "plain_rice",
+     "roti",
+     "salad",
+     "dal_tadka",
+     "egg_bhurji"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "mix_veg",
+     "boiled_egg",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass",
+     "red_chutney",
+     "upma",
+     "cereal_bowl",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "veg_kolhapuri",
+     "jeera_rice",
+     "roti",
+     "dal_tadka",
+     "brownie_square",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "aloo_choka",
+     "papad",
+     "dahi",
+     "salad",
+     "chole",
+     "poori",
+     "roti"
+    ],
+    "snacks": [
+     "tea",
+     "bread_slice",
+     "jam"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass",
+     "dosa",
+     "green_chutney",
+     "noodles",
+     "upma",
+     "amul_butter",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "aloo_bhujiya",
+     "plain_rice",
+     "roti",
+     "fruit_custard",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "salad",
+     "dal_tadka"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "jam",
+     "tea",
+     "milk_glass",
+     "red_chutney",
+     "plain_rice",
+     "dal_mix",
+     "sweetcorn_side",
+     "oatmeal",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "poori",
+     "roti",
+     "kadu_masala",
+     "plain_rice",
+     "kheer",
+     "chole"
+    ],
+    "lunch": [
+     "pakoda",
+     "roti",
+     "papad",
+     "salad",
+     "dal_tadka",
+     "ratlami_sev",
+     "green_chutney"
+    ],
+    "snacks": [
+     "tea",
+     "samosa"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass",
+     "black_chana_aloo",
+     "amul_butter",
+     "cereal_bowl",
+     "bread_slice",
+     "boiled_sprouts"
+    ],
+    "dinner": [
+     "paneer_butter_masala",
+     "egg_curry",
+     "roti",
+     "plain_rice",
+     "dal_tadka",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "kurmuri_bhindi",
+     "roti",
+     "plain_rice",
+     "salad",
+     "aloo_tomato",
+     "veg_raita"
+    ],
+    "snacks": [
+     "tea",
+     "bread_slice"
+    ]
+   }
+  },
+  "id": "iit-delhi__jwalamukhi-hostel",
+  "name": "IIT Delhi",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "pav_bhaji",
+     "boiled_egg",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "kadhai_chicken",
+     "jeera_rice"
+    ],
+    "lunch": [
+     "roti",
+     "papad",
+     "salad"
+    ],
+    "snacks": [
+     "tea",
+     "pakoda"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poha",
+     "orange_juice_glass",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "chicken_biryani",
+     "mix_veg",
+     "veg_raita",
+     "roti"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "jeera_rice",
+     "roti",
+     "salad"
+    ],
+    "snacks": [
+     "tea",
+     "pakoda"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "soya_chilli",
+     "dal_mix"
+    ],
+    "lunch": [
+     "paneer_bhurji",
+     "boondi_raita",
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "mix_veg",
+     "boiled_egg",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "veg_kolhapuri",
+     "jeera_rice",
+     "roti"
+    ],
+    "lunch": [
+     "aloo_choka",
+     "papad",
+     "dahi",
+     "salad"
+    ],
+    "snacks": [
+     "tea",
+     "bread_slice",
+     "jam"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "aloo_bhujiya",
+     "plain_rice",
+     "roti",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "plain_curd",
+     "salad"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "poori",
+     "roti",
+     "kadu_masala",
+     "plain_rice",
+     "kheer"
+    ],
+    "lunch": [
+     "pakoda",
+     "roti",
+     "papad",
+     "salad"
+    ],
+    "snacks": [
+     "tea",
+     "samosa"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "fruit_portion",
+     "jam",
+     "tea",
+     "milk_glass"
+    ],
+    "dinner": [
+     "paneer_butter_masala",
+     "egg_curry",
+     "roti",
+     "plain_rice"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "kurmuri_bhindi",
+     "roti",
+     "plain_rice",
+     "salad"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   }
+  },
+  "id": "iit-delhi__jwalamukhi-hostel",
+  "name": "IIT Delhi",
+  "region": "IN"
+ },
+ "settledByHand": 103,
+ "warnings": []
+}

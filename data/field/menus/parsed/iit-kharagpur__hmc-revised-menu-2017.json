@@ -1,0 +1,359 @@
+{
+ "matched": 77,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "tea",
+     "poori",
+     "boiled_egg",
+     "fruit_portion",
+     "dum_aloo"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar",
+     "mix_veg"
+    ],
+    "snacks": [
+     "corn_chat"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "tea",
+     "idli",
+     "sambhar",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "gulab_jamun",
+     "plain_rice",
+     "sambhar"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea",
+     "upma",
+     "sambhar",
+     "nariyal_chutney",
+     "boiled_egg",
+     "fruit_portion",
+     "bread_slice"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_curd",
+     "plain_rice",
+     "sambhar",
+     "gulab_jamun"
+    ],
+    "snacks": [
+     "vada"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "tea",
+     "poha",
+     "pickle",
+     "fruit_portion",
+     "mix_veg",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "papad",
+     "plain_rice",
+     "sambhar",
+     "dal_mix",
+     "pakoda",
+     "mix_veg"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "veg_biryani",
+     "veg_raita",
+     "paneer_butter_masala",
+     "chicken_biryani",
+     "chicken_butter_masala",
+     "plain_rice",
+     "sambhar",
+     "gulab_jamun",
+     "boiled_egg"
+    ],
+    "snacks": [
+     "tea",
+     "tomato_soup_bowl",
+     "dahi",
+     "pakoda"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea",
+     "boiled_egg",
+     "aloo_paratha",
+     "fruit_portion",
+     "bread_slice",
+     "egg_bhurji"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ],
+    "snacks": [
+     "samosa"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "tea",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "dosa"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "tea",
+     "boiled_egg",
+     "fruit_portion",
+     "salad"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_rice",
+     "sambhar",
+     "boiled_egg"
+    ]
+   }
+  },
+  "id": "iit-kharagpur__hmc-revised-menu-2017",
+  "name": "IIT Kharagpur",
+  "region": "IN"
+ },
+ "noise": 54,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "tea",
+     "poori",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "tea",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea",
+     "upma",
+     "sambhar",
+     "nariyal_chutney",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "plain_curd"
+    ],
+    "snacks": [
+     "vada"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "tea",
+     "poha",
+     "pickle"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad",
+     "papad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad",
+     "veg_biryani",
+     "veg_raita",
+     "paneer_butter_masala",
+     "chicken_biryani",
+     "chicken_butter_masala"
+    ],
+    "snacks": [
+     "tea",
+     "tomato_soup_bowl"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea",
+     "boiled_egg",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "snacks": [
+     "samosa"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "tea",
+     "sambhar",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "tea",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "roti",
+     "pickle",
+     "salad"
+    ],
+    "lunch": [
+     "roti",
+     "pickle",
+     "salad"
+    ]
+   }
+  },
+  "id": "iit-kharagpur__hmc-revised-menu-2017",
+  "name": "IIT Kharagpur",
+  "region": "IN"
+ },
+ "settledByHand": 65,
+ "warnings": []
+}

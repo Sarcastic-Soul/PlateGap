@@ -1,0 +1,20 @@
+<!-- IIT Tirupati | Institute hostel mess (common menu) | read by the model -->
+<!-- page 1 -->
+| MENU | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | TEA,COFFEE,MILK | TEA,COFFEE,MILK | TEA,COFFEE,MILK | TEA,COFFEE,MILK | TEA,COFFEE,MILK | TEA,COFFEE,MILK | TEA,COFFEE,MILK |
+| Regular Items | Bread, Butter & Jam, Banana/Egg-1,Mutter | Bread, Butter & Jam + Seasonal fruit/ Egg-1, Lobia | Bread, Butter & Jam, Banana/Omelete-1, Moong | Bread, Butter & Jam, Seasonal Fruit/Egg-1, Chana | Bread, Butter & Jam, Banana/Egg-1, mix, green sprouts | Bread, Butter & Jam, Seasonal Fruit/Egg-1, Chhole | Bread, Butter & Jam, Moong |
+| Breakfast | Ravi Idli + Vada | Puri | Millet upma | Aloo/Gobhi Paratha | Uggani-Bajji | Masala dosa / Onion Dosa | Poha |
+| Accompaniments | Masala Sambar + Groundnut Chutney | Aloo Masala Curry | Ground nut Chutney and Sambar | Curd + Ketchup + Lemon chutney | Green Chutney/Mango Pickle/Ketchup | Groundnut Chutney/Onion Dosa + Sambar Chutney(for onion dosa) | Mint Chutney + Lemon + Bundi + Onion |
+| Regular Items | Roti, Rice, Ghee, Papad, Veg Salad, Salt, Curd, Mango Pickle | Roti, Rice, Ghee, fryums, Veg Salad, Salt, Curd, Salt, Butter, Tomato Pickle | Roti, Rice, Ghee, Papad, Veg Salad, Salt, Sugar, Curd, Cucumber Pickle | Roti, Rice, Ghee, fryums, Veg Salad, Salt, Butter milk, Goongra Chutney | Roti, Rice, Ghee, Papad, Veg Salad, Salt, Curd, Red Chille, Pickle | Roti, Rice, Ghee, fryums, Veg Salad, Salt, Butter milk, Curd, Butter Pickle | Roti, Rice, Ghee, Veg Salad, Salt, vegetable curd Raita, Egg-1/Banana |
+| Dry Item | Beetroot Fry | Cabbage fry | Raw Banana fry | Aloo 65 | Bindi-peanut-Onion fry | Veg mix fry |  |
+| Lunch | Curry Item | Rajma Masala | Kala Chana Masala | Veg Korma | Com palak masala | Kadi pakode curry | Meal Maker Thin Gravy |
+| Dal | Palak dal | Tomato Dal | Dal Makhani | Thokadalu Pappu | Dal Fry | Methi Dal | Chicken/Dum Biryani with non-veg shortribs+ Veg Biryani and Methi Mutter Malai Panner with Veg shortba |
+| Sambar | Drumstick Sambar | Pumpkin Sambar | Mix Veg Sambar | Tomato Onion Sambar | Bindi Sambar | Bottle guard Sambar |  |
+| Regular Items | Rice, fryums, Veg Salad, Salt,Sugar, Curd, Pickle | Roti,Rice, Papad, Veg Salad, Salt, Curd, Pickle | Roti, Rice, Papad, Veg Salad, Salt,Sugar, Curd, Pickle | Roti,Rice, Papad, Veg Salad, Salt,Sugar, Curd, Pickle | Roti,Rice, Roti, Rice, Papad, Veg Salad, Salt, Curd, Raita, Pickle | Rice, Papad, Veg Salad, Salt,Sugar, Curd, Pickle | Roti, Rice, Papad, Veg Salad, Salt, Curd, Pickle |
+| Dry Item | Pav Bhaji | Brinjal Fry | Chicken Tikka Masala / K'adai Paneer | Masala Kichdi/Vegetable Pulao(alternate weeks) | Cluster Beans | Chhole Puri | Ivy Gourd-peanut fry |
+| Curry Item | Dal | Veng Manchurian | Mutton Masala | Mutter Masala | Urad dal | Mango Dal | Cauliflower+tomato curry |
+| Dinner | Rasam | Mudda pappu | Gongura dal | Jeera Pepper Rasam | Tomato Rasam | Mysore Rasam | Bottle guard dal |
+| Rasam | Tamarind rasam | Pepper Rasam | Lemon Coriander Rasam |  |  |  | Ulavacharu |
+| Specials | Water melon/Papaya/Orange/Seasonal Fruit | Ice-Cream | Double Ka Metha | Water melon/Papaya/Orange/Seasonal Fruit | Ice-Cream |  |  |
+| Snacks | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras | TEA/COFFEE/MILK+Paid Extras |

@@ -1,0 +1,23 @@
+institution,attempted_url,status,reason,attempted_on
+IIT Gandhinagar,https://campus.iitgn.ac.in/facility/appdoc/mess_menu.pdf,failed,HTTP 404 (file removed); no current menu found on students.iitgn.ac.in,2026-09-21
+IIITDM Jabalpur,https://www.iiitdmj.ac.in/mess.iiitdmj.ac.in/Mess-1-menu.pdf,failed,HTTP 403 from Sucuri WAF (curl and WebFetch),2026-09-21
+IIITDM Jabalpur,https://mess.iiitdmj.ac.in/facilities.html,failed,connection failed (no response),2026-09-21
+Gautam Buddha University,https://hostels.gbu.ac.in/uploads/newsfiles/65b113b445808_mess-menu-24-01-2024.pdf,failed,connection timeout over https and http (3 tries); WebFetch ECONNREFUSED,2026-09-21
+Sri Sairam College of Engineering,https://www.sairamce.edu.in/wp-content/uploads/2014/06/mess-menu-2016.pdf,failed,connection timeout over https and http; WebFetch ECONNREFUSED,2026-09-21
+NIT Jamshedpur,https://www.nitjsr.ac.in/uploads/MENU%20FOR%20GIRLS%20HOSTEL.pdf,failed,returns the site's JavaScript app shell (HTML) instead of the PDF; file appears to have been removed,2026-09-21
+IIITDM Kancheepuram,http://hostel.iiitdm.ac.in/pdf/mess_menu.pdf,failed,DNS lookup fails for hostel.iiitdm.ac.in,2026-09-21
+"S.S. Jain Subodh P.G. College, Jaipur",https://www.subodhgirlscollege.ac.in/assets/-pdf/hostel-canteen-menu.pdf,failed,"bot-check page ('One moment, please...' JS reload) returned instead of the PDF",2026-09-21
+Jharkhand Rai University,https://www.jru.edu.in/wp-content/uploads/menu/mess%20menu.pdf,failed,"bot-check page ('One moment, please...' JS reload) returned instead of the PDF",2026-09-21
+Thapar Institute (Hostel J),https://sites.google.com/site/thaparhostelj/mess-menu,failed,redirects to Google sign-in (login required),2026-09-21
+NISER Bhubaneswar,https://www.niser.ac.in/hostels/canteenmenu/,failed,page loads menu from a published Google Sheet CSV that currently holds only the header row (no dishes),2026-09-21
+BITS Pilani (SSMS),https://www.ssms-pilani.in/,failed,blocked by the local network filter ('Blocked site'); WebFetch certificate error,2026-09-21
+Poornima University / Poornima Group,https://www.poornima.edu.in/life-at-poornima/menu-facility/,failed,HTTP 522 (origin down); https://www.poornima.org/hostel/dining-facilities also HTTP 522,2026-09-21
+Dr. SNS Rajalakshmi College of Arts and Science,https://drsnsrcas.ac.in/foodmenuhosteldrsnsrcas/,failed,connection refused / no response,2026-09-21
+IIT Hyderabad,https://www.gymkhana.iith.ac.in/councils/mess/,failed,DNS failure for www.gymkhana.iith.ac.in; gymkhana.iith.ac.in/mess_council.html has no menu in its static HTML,2026-09-21
+IISER Mohali,https://web.iisermohali.ac.in:8080/noticeportal/attachments/article/762/Mess%20Menu-2.pdf,excluded,"downloaded but it is a tender annexure (brand specs + indicative menu), not a hostel's published menu",2026-09-21
+IIT (BHU) Varanasi,https://iitbhu.ac.in/contents/institute/admin/doc/admin_healthy_affordable_food.pdf,excluded,"narrative note on food policy, no day-by-meal timetable",2026-09-21
+NIT Silchar,https://www.nits.ac.in/storage/files/1hostel.pdf,excluded,"linked from the hostels page but it is a student fee-dues list (personal data), not a menu; deleted",2026-09-21
+IISER Tirupati,https://www.iisertirupati.ac.in/wp-content/uploads/2024/01/south.pdf,excluded,"tender clarification document, not a menu",2026-09-21
+IIT (ISM) Dhanbad,https://people.iitism.ac.in/~download/menu/Menu%20on%20Demand%20at%20SAH%20and%20EDC%20w.e.f.%2001.01.2025%20.pdf,excluded,"priced on-demand guest-house/dining menu, not a hostel mess timetable (not downloaded)",2026-09-21
+Mayo College Girls' School,https://mcgs.ac.in/assets/img/Mess%20Menu.pdf,excluded,"downloaded but it is a school, not a college; deleted",2026-09-21
+SNS College of Technology,https://snsct.org/foodmenuhostelsnsce2/,excluded,near-identical copy of the SNS College of Engineering menu (only spelling differs),2026-09-21

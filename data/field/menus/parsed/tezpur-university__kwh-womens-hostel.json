@@ -1,0 +1,243 @@
+{
+ "matched": 36,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "tea",
+     "noodles"
+    ],
+    "dinner": [
+     "plain_rice",
+     "papad",
+     "dal_tadka",
+     "veg_kofta"
+    ],
+    "lunch": [
+     "plain_rice",
+     "imli_chutney",
+     "dal_tadka",
+     "gobhi_dry"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "tea",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_tadka",
+     "gobhi_dry",
+     "pakoda"
+    ],
+    "lunch": [
+     "plain_rice",
+     "dal_tadka",
+     "mix_veg",
+     "aloo_choka",
+     "pickle"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea",
+     "poori",
+     "matar_chola"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_tadka",
+     "mix_veg"
+    ],
+    "lunch": [
+     "plain_rice",
+     "pickle",
+     "dal_tadka",
+     "gobhi_dry"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "tea",
+     "aloo_paratha",
+     "plain_curd"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_tadka",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "papad",
+     "dal_tadka",
+     "mix_veg"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea",
+     "roti",
+     "poori"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_tadka",
+     "mutter_paneer",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad",
+     "dal_tadka",
+     "mix_veg"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "tea",
+     "roti",
+     "kadu_masala"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_tadka",
+     "veg_kofta",
+     "pakoda"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad",
+     "dal_tadka",
+     "soya_badi"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "tea",
+     "pav_bhaji"
+    ],
+    "dinner": [
+     "jeera_rice",
+     "dal_tadka",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "dal_tadka",
+     "mix_veg"
+    ]
+   }
+  },
+  "id": "tezpur-university__kwh-womens-hostel",
+  "name": "Tezpur University",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "tea"
+    ],
+    "dinner": [
+     "plain_rice",
+     "papad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "imli_chutney"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "tea"
+    ],
+    "dinner": [
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea",
+     "poori",
+     "matar_chola"
+    ],
+    "dinner": [
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice",
+     "pickle"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "tea",
+     "aloo_paratha",
+     "plain_curd"
+    ],
+    "dinner": [
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice",
+     "papad"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea",
+     "roti",
+     "poori"
+    ],
+    "dinner": [
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "tea",
+     "roti"
+    ],
+    "dinner": [
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "tea",
+     "pav_bhaji"
+    ],
+    "dinner": [
+     "jeera_rice"
+    ],
+    "lunch": [
+     "plain_rice"
+    ]
+   }
+  },
+  "id": "tezpur-university__kwh-womens-hostel",
+  "name": "Tezpur University",
+  "region": "IN"
+ },
+ "settledByHand": 44,
+ "warnings": []
+}

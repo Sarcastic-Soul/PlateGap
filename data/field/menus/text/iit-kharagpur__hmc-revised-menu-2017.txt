@@ -1,0 +1,24 @@
+<!-- IIT Kharagpur | All halls - Hall Management Centre revised menu | read by the model -->
+<!-- page 1 -->
+| Meal | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Breakfast | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) | a fruit (singapuribanana), tea/coffee (Rs. 8) |
+| Lunch | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad; Except Sunday (Rs. 12) | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad |
+| Snacks | (Tea / coffee) or (rasna/butter milk 150ml) or (Veg/tomato soup 75ml) (Rs. 4) |  |  |  |  |  |  |
+| Dinner | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad (MON, TUE, WED, FRI, SAT, SUN), Unrestricted amount:Kichri, Pickles, and 3pc (Papppad/ Beguni / Alu /Gobi Pakora) (THU) (Rs. 12) | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad | Unrestricted amount: rice, chapatti, dal & sambar (in appropriate Quantities), pickle, salad |
+
+<!-- page 2 -->
+| Day & Rs. (VEG/ NVEG) | MON (Rs57/ 63) | TUE (Rs56) | WED (Rs62/ 62) | THU (Rs43) | FRI (Rs75/ 78) | SAT (Rs 57/ 52) | SUN (Rs 73.5) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| BREAKFAST | 4pc Idli + Sambar (Rs. 12) | [1 pc regular size Masala Dosa+ Sambar + Coconut chutney (Rs. 15)] or [4 pc bread toast + egg/milk (Rs. 15)] | [2 pc Onion/Plain Uttapam (Rs. 14)] Or [4 pc bread toast, egg/milk (Rs. 15)] | [4 pc bread toast + Omelet/ boiled egg/milk (150ml) (Rs. 12)] Or [2 pc Aloo Paratha + curd (Rs. 3)] | [4 pc Dal Puri + Aloodum/sabji (Rs. 15)] Or [4 pc bread toast + egg/milk (Rs. 15)] | [Upma + Sambar + Coconut Chutni]/ [2pc Chole Bhatore] (Rs. 12)/ [4 pc bread toast, egg/milk (Rs. 15)] | [Alu/Onion Poha/] [2pc methi Parantha + Pickle] (Rs. 10) |
+| LUNCH | SVEG (Rs. 10) | SVEG (Rs. 10), Curd (75 ml) (Rs. 5) | SVEG (Rs. 10) | SVEG (Rs. 10) + SVEG (Rs. 10) + SVEG (Rs. 12) ml | SVEG (Rs. 10), Curd (75 ml) (Rs. 5) Common SVEG (Rs. 13) | SVEG (Rs. 10), Curd (75 ml) / Rasgola / Gulabjamun(Rs. 5) | [Veg Biryani (Basmati Rice), Raita, Big Rajbhog, ice-cream (Rs. 36.5)] Or [Basic Lunch Menu (Rs. 12) + Spl. Paneer Butter Masala* (Rs. 19) + Sweet (Rs. 6)] |
+|  | 50g Katla Fish Curry (Rs. 13) |  | 1 pc Egg/omelet Curry (Rs. 8) |  | 50g Fish Fry/ Kalia/ Curry (Rs. 13) |  | [Chicken Biryani (Basmati Rice), 100g chicken + half egg, Raita (Rs. 36.5)] Or [Basic Lunch Menu (Rs. 12) + Chicken Butter Masala (100g) (Rs. 25)] |
+| SNACKS | Veg Roll (Rs. 10) | Veg Chowmin (Rs. 10) | 4 pc Veg Momo (Rs. 10) | 3 pc Samosa / 3 pc Jalebi (Rs. 10) | Papri Chat/ Students Choice (Rs. 10) | Vada Pow / 2pc Sambarvada (Rs. 10) | Onion Pakora / 2pc DahiVada (Rs. 10) |
+| DINNER | SVEG (Rs. 10), Gulabjamun / Rasogola / Jalebi (Rs. 5) | SVEG (Rs. 6) | [SVEG (Rs. 10) + SVEG (Rs. 8)] Or [PVEG* (Rs. 17)] | [SVEG (Rs. 10), Ice-cream/SVEG (Rs. 10) | PVEG* (Rs. 17) + Sweet / SVEG (Fry) (Rs. 8) | NIL* (Kitchen to be Cleaned Thoroughly) (Rs. 0) | SVEG (Rs. 10), Vermicelli Payas (Rs. 7) |
+
+<!-- page 3 -->
+| Meal | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Breakfast |  |  |  |  |  |  |  |
+| Lunch |  |  |  |  |  |  |  |
+| Dinner |  |  |  |  |  |  |  |

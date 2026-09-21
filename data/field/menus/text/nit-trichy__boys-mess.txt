@@ -1,0 +1,47 @@
+<!-- NIT Tiruchirappalli | Boys mess (Rs 61/day) | read by the model -->
+<!-- page 1 -->
+| Days | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| BREAKFAST | Pongal/Uppuma, Medhu Vada(2 Nos.), Sambar, Coconut Chutney, Bread, Butter Jam, Coffee/Tea, Milk | Dosai, Sambar, Tomato Chutney, Bread, Butter Jam, Coffee/Tea, Milk | Onion oothatpam, Pudina Chutney, Bread, Butter Jam, Coffee/Tea, Milk | Masala dosai, Ground Nut Chutney, Bread Bajji, Butter Jam, Coffee/Tea, Milk | Idly, Sambar, Mint Chutney, Bread, Butter Jam, Medhu vadi (2), Coffee/Tea, Milk | Poori, Alu Sabji/Channa masala, Bread, Butter Jam, Coffee/Tea, Milk | Alu Parota(4 Nos.), Curd, Pickles, Bread, Butter Jam, Coffee/Tea, Milk |
+| LUNCH | Fulka, Peas Masala, Dry Ladies finger fry, Plain rice, sambar, Rasam, Curd, Appalam, Pickles | Chappathi, Dry Alu Gobi masala, Plain rice, Kara Kuzhambu, Rasam, Curd, Appalam, Pickles, Carrot & Peas Avial | Chappathi, Dhal Fry, Beet-Root Channa Fry, Plain rice, Sambar, Rasam, Curd, Appalam, Pickles | Chappathi, Dhal palak, Alu Lajawab, Plain rice, Morkozhambu, Rasam, Curd, Appalam, Pickles | Chappathi, Soya Beans Raita masala, Plain rice, Vethakkozhambu, Rasam, Curd, Appalam, Pickles, Vaazhaiporiyal | Fulka, Dhal Punjabi, Mix-Veg Aviyal, Plain rice, Sambar, Rasam, Curd, Appalam, Pickles | Chappathi, Dhal, Panner butter masala (1 cup), Sweet (Kesari/ Payasam), Plain rice, Sambar, Curd, Appalam, Rasam, Pickles, Cabbage Poriyal |
+| SNACKS | Thelpuri, Tea/ Coffee, Milk | Bajji (2 Nos.) Coconut chutney, Tea/Coffee, Milk | Onion Bajji (2 Nos.), Tomato Nos.), Tea/ Coffee, Milk | Potato Bonda (2 Nos.), Coconut Chutney, Tea/ Coffee, Milk | Medhu vadai (2 Nos.), Coconut chutney, Tea/ Coffee, Milk | Big size Samosa (2 Nos.), Tomato Sauce, Tea/ Coffee, Milk | Veg Cutlet (2 Nos.), Tomato Sauce, Tea/ Coffee, Milk |
+| DINNER | Chappathi, Dhal or Alu kurma, Bisibelabaath, Onion-Raitha, Fruit salad (1 cup), Ice-Cream, Potato chips, Pickles, Butter Milk | Chappathi, Malai Kofta, Veg Poriyal, Plain Rice, Tomato Rasam, Butter Milk, Banana, Pickles | Chappathi, Mutter pannier (2cups), Puliyogare, Curd Rice, Banana, Pickles, Appalam, Butter Milk | Chappathi, Veg Butter Masala, Dry Gobi Manchurian, Plain Rice, Sambar, Pepper Rasam, Butter Milk, Banana, Pickles | Chappathi, Aloo Gobi Masala, Vegetable Curry, Plain Rice, Lemon Rasam, Banana, Pickles, Butter Milk | Pav Bhaji, Curd Rice, Lemon Rice, Potato chips, Banana, Pickles, Butter Milk | Battura, Chole, Curd Rice, Banana, Curd Rice, Banana, Pickles |
+
+<!-- page 2 -->
+| Meal | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| BREAKFAST | Idli, Sambar, Vadai, Tomato chutney, Bread, Butter, Jam, Tea, Coffee, Milk | Aloo Paratha, Raita, Pickle, Bread, Butter, Jam, Tea, Coffee, Milk | Semiya kichdi, Upma, Chutney, Bread Bhaaji, Butter, Jam, Tea, Coffee, Milk | Onion Ootahppam, Mint Chutney, Sambar, Bread, Butter, Jam, Tea, Coffee, Milk | Poori, Aloo/Chenna masala, Toasted Bread, Butter, Jam, Tea, Coffee, Milk | Dosa, Malli Chutney, Sambar, Bread, Butter, Jam, Tea, Coffee, Milk | Pongal, Vadai, Chutney, Toasted Bread, Butter, Jam, Tea, Coffee, Milk |
+| LUNCH | Roti, Bengal Gram, Rice, Sambar, Rasam, Greens, Curd, Appalam, Pickle, Lime Juice | Chapati, Sprouted dhal, Rice, Karakolambu, Rasam, Red Pumpkin/Aviyal, Curd, Vathal/Potato Chips, Pickle, Lime Juice | Roti, Mixed dhal, Rice, Sambar, Rasam, Mixed Poriyal/ Bhindi Poriyal, Curd, Appalam, Pickle, Lime Juice | Chapati, Veg Kurma/ Peas Masala, Rice, Masala Sambar, Rasam, Beetroot Poriyal, Curd, Appalam, Pickle, Lime Juice | Roti, Palak Paneer, Rice, Sambar, Rasam, Salad, Curd, Appalam, Pickle, Lime Juice | Chapati, Bottle Gourd Gravy, Rice, Pulikolambu, Rasam, Cabbage Poriyal/Snake Gourd kootu, Curd, Appalam, Pickle, Lime Juice | Roti, Rajma, Rice, Morekozhambhu, Rasam, Karamani-Aloo curry, Curd, Appalam, Pickle, Lime Juice + NON VEG EXTRAS |
+| SNACKS | Veg Bonda/ Mysore Bonda, Tea, Coffee, Milk | Masala Vada/ Onion pakode, Tea, Coffee, Milk | Samosa, Sauce/ Green Chutney, Tea, Coffee, Milk | Paav Bhaaji, Tea, Coffee, Milk | Bread Samosa, Sauce/ Imi chutney, Tea, Coffee, Milk | Chenna/Peas / Bengal Gram, Tea, Coffee, Milk | Veg. Cutlet, Sauce, Tea, Coffee, Milk |
+| DINNER | Chapati, Paneer Mutter/ Malai kofta Masala, Tomato Rice, Raita, Curd Rice, Pickle, Sweet | Roti, Chenna Masala, Dhal Ghee Rice, Curd Rice, Pickle, Fruit salad + VEG EXTRAS | Chapati, Peas/Aloo Kurma, Rice, Veg. Koottu, Rasam, Pickle, Banana + NON VEG EXTRAS | Roti, Aloo Curry, Rice, Sambar, Carrot-Beans Poriyal, Buttermilk, Pickle, Banana + VEG EXTRAS | Chapati, Bhindi Masala, Rice, Gobi Manchurian/Gobi 65, Sambar, Buttermilk, Pickle, Banana | Parotta, Veg Kurma, Rice, Sambar, Rasam, Appalam, Pickle, Ice cream | Masal Dosa/ Dosa with Hot chutney, Rice, Sambar, Rasam, Veg. Koottu, Pickle, Banana |
+
+<!-- page 3 -->
+| SI. No. | ITEM | Unit | RATE (Rs.) |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1. | Extra Regular (In all Messes) |  |  |  |  |  |  |  |
+|  | (i) Night Milk | Cup of 150 ml | 6 |  |  |  |  |  |
+|  | (ii) Single Egg Omelt | 1 No. | 7 |  |  |  |  |  |
+|  | (iii) Single Egg Masala | 1 No. | 7 |  |  |  |  |  |
+|  | (iv) Boiled Egg | 1 No. | 5.50 |  |  |  |  |  |
+|  | (v) Scrambled Egg | 1 No. (1 Egg) | 5.50 |  |  |  |  |  |
+|  | (vi) Cornflakes | 30 gm | 15 |  |  |  |  |  |
+| 2. | Extra Regular (Non Vegetarian in Select Messes) |  |  |  |  |  |  |  |
+|  | (i) Chicken 65 (Dry) | Per Plate (100 grams) | 27 |  |  |  |  |  |
+|  | (ii) Chicken Masala | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (iii)Chettinad Chicken | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (iv)Ginger Chicken | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (v)Pepper Chicken | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (vi)Chili Chicken | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (vii)Garlic Chicken | Per Plate (100 grams) | 25 |  |  |  |  |  |
+|  | (viii)Chicken Biryani | Per plate300 gm | 50 |  |  |  |  |  |
+|  | (Basmathi Rice) | Rice+100 gm chicken |  |  |  |  |  |  |
+| 3. | Extra Regular Vegetarian items (in all Messes) |  |  |  |  |  |  |  |
+|  | (i) Baby Corn Masala | Per Plate (150 grams) | 35 |  |  |  |  |  |
+|  | (ii) Paneer Butter Masala | Per Plate (150 grams) | 35 |  |  |  |  |  |
+|  | (iii) Mushroom Masala | Per Plate (150 grams) | 35 |  |  |  |  |  |
+|  | (iv) Chilli panner | Per Plate (150 grams) | 35 |  |  |  |  |  |
+|  | (v) Meal Maker masala | Per Plate (150 grams) | 25 |  |  |  |  |  |
+|  | (vi) Aloo Gobi | Per Plate (150 grams) | 25 |  |  |  |  |  |
+|  | (vii) French Fries | Per Plate (150 grams) | 25 |  |  |  |  |  |
+| 4. | Other Extras (in all Messes) |  |  |  |  |  |  |  |
+|  | (i) Gulab Jamun | Two small pieces of 50gm each | 15 |  |  |  |  |  |

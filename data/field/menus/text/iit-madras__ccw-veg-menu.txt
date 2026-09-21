@@ -1,0 +1,33 @@
+<!-- IIT Madras | CCW Veg Menu (weeks A-D, without non-veg extras) | week A of 4 embedded scans, read by the model -->
+| Meal | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Week |  |  |  |  |  |  |  |
+| Cuisines | A | A | A | A | A | A | A |
+| Cereals | Chocos | Oats | Conflakes | Oats | Chocos | Conflakes | Oats |
+| Sprouts | Boiled chawl white | Green-gram sprouts | Boiled peanut | Boiled black channa | Boiled white channa | Boiled green gram | Boiled white peas |
+| Breakfast |  |  |  |  |  |  |  |
+| Main item | Pongal | Vegetable rava upma | Pab bhaji | Maggi | Masala dosa | Poha | Rava Idly+ vada(2 no) |
+| Side dish | Groundnut chutney & sambar | Coconut chutney | Lime and onion | Tomato sauce | Mint chutney + Sambar | Tamrind chutney & lime & onion | Groundnut chutney & brinjal sambar |
+| Common item |  |  |  | Brown Bread, Butter, Jam, Tea, Coffee and Milk, Sugar |  |  |  |
+|  |  |  |  |  |  |  |  |
+| Salad | Cucumber carrot salad | Beetroot tomato salad | Radish cucumber salad | Cucumber carrot salad | Beetroot tomato salad | Radish cucumber salad | Onion lemon Cucumber salad |
+| Gravy curry | Bhindi masala | Mix veg curry | Meal maker peas | Mor kuzhambu | Gutti vankaya curry | Cauliflower peas curry | Kadai Mushroom curry |
+| Dry curry | Aloo beans | Cabbage peas sabji | Tendli ki sabzi | Brinjal ki sabxi | Bitter gourd fry | Beetroot poriyal |  |
+| Dal | - | Tomato dal |  | Palak dal |  | Toor dal |  |
+| Sambar/ Rasam | Radish Sambar | Pepper rasam | Bhindi sambar | Tomato rasam | Drumstick sambar | Pepper rasam | Tomato rasam |
+| Lunch |  |  |  |  |  |  |  |
+| Pickle item | Gongura thoviyal | Mint Thoviyal | Ridge gourd thoviyal | Curry leaf thoviyal | Gongura thoviyal | Tomato Thoviyal |  |
+| Common item |  |  |  | Plain Rice, Phulka, Curd, Salt, Sugar, Papad/ Fryums |  |  |  |
+| Any additional item | - |  |  |  |  |  | Bagara rice&sherva+Boondi raita+Gulab Jamun(2) |
+|  |  |  |  |  |  |  |  |
+| Snack | Snack item | Masala corn & Lemon | Roasted phool makhana | Rusk | Bhel puri | Butter salted Popcorn | Bread pakora |
+|  |  |  |  |  |  |  | Chana chaat |
+|  |  |  |  |  |  |  |  |
+| Roti item | Pudina Chapathi |  | Methi chapathi |  |  |  | Kerala paratha |
+| Rice item/tiffin item | Corn peas pulao | Kal dosa | Jeera rice | Vegetable pulao | Chole Bature | Lemon rice+sambar rice+Curd rice |  |
+| Curry/Chutney | Meal Maker Curry | Coconut chutney | Palak Paneer | Sheva |  |  | Veg kurma |
+| Dinner |  |  |  |  |  |  |  |
+| Sambar / Rasam / Dal | Mix veg Sambar | Mix veg sambar | Garlic rasam | Mix veg sambar | Drumstick sambar, Tomato Rasam |  | Drumstick Sambar |
+| Sweetfruit | Sabudana Kheer | Fruit custard | Pineapple rava kesari | Boiled sweet corn | Papaya | Banana fruit +Potato chips | Pineapple |
+| Common Items |  |  |  | Plain Rice, Sugar, Salt, Papad/ Fryums |  |  |  |
+| Drink | Lemon water | Buttermilk | Lemon water | Buttermilk | Ragi Drink | Boost milk | Buttermilk |

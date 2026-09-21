@@ -1,0 +1,422 @@
+{
+ "matched": 144,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "gulab_jamun",
+     "kheer"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad",
+     "green_chutney",
+     "red_chutney",
+     "dal_tadka",
+     "dum_aloo",
+     "cutlet",
+     "corn_chat",
+     "mix_veg",
+     "vada",
+     "dal_mix",
+     "bread_slice"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "upma",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam",
+     "chole",
+     "poori",
+     "bread_slice",
+     "milk_glass",
+     "fruit_custard"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "veg_biryani",
+     "roti",
+     "veg_raita",
+     "salad",
+     "tea",
+     "upma",
+     "poha",
+     "dosa",
+     "fruit_portion",
+     "mix_veg",
+     "plain_rice",
+     "dal_mix",
+     "milk_glass",
+     "bread_slice",
+     "kheer",
+     "vada",
+     "sambhar",
+     "nariyal_chutney",
+     "red_chutney"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "salad",
+     "dal_tadka",
+     "veg_kofta",
+     "mix_veg"
+    ],
+    "snacks": [
+     "samosa",
+     "green_chutney",
+     "tea",
+     "bread_slice"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "fruit_custard",
+     "gulab_jamun"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad",
+     "dal_tadka",
+     "dum_aloo",
+     "rajma_dish",
+     "mix_veg",
+     "veg_kofta",
+     "dal_mix"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "moong_halwa",
+     "kheer"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad",
+     "mix_veg",
+     "veg_kofta",
+     "dal_mix"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poha",
+     "amul_butter",
+     "pickle",
+     "jam",
+     "aloo_tomato",
+     "aloo_paratha",
+     "bread_slice",
+     "gulab_jamun"
+    ],
+    "dinner": [
+     "tea",
+     "rajma_dish",
+     "roti",
+     "plain_rice",
+     "salad",
+     "masoor_dal_dish",
+     "kurmuri_bhindi",
+     "dal_mix",
+     "noodles",
+     "ratlami_sev"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "mix_veg",
+     "dahi"
+    ],
+    "snacks": [
+     "green_chutney",
+     "noodles"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "chole",
+     "poha",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam",
+     "bread_slice",
+     "milk_glass",
+     "moong_halwa"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "boondi_raita",
+     "salad",
+     "aloo_paratha",
+     "mix_veg",
+     "malai_kofta",
+     "poha",
+     "upma",
+     "tea",
+     "mutter_paneer",
+     "dal_makhani",
+     "dal_mix",
+     "bread_slice",
+     "kheer",
+     "milk_glass",
+     "rajma_dish"
+    ],
+    "lunch": [
+     "plain_rice",
+     "poori",
+     "salad",
+     "mix_veg",
+     "kadu_masala",
+     "black_chana_aloo"
+    ],
+    "snacks": [
+     "tea",
+     "corn_chat"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "upma",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam",
+     "aloo_paratha",
+     "bread_slice",
+     "milk_glass",
+     "kheer"
+    ],
+    "dinner": [
+     "dal_mix",
+     "roti",
+     "plain_rice",
+     "veg_raita",
+     "salad",
+     "dal_makhani",
+     "mix_veg",
+     "malai_kofta",
+     "dahi",
+     "tea",
+     "soya_badi",
+     "aloo_jeera",
+     "chole",
+     "poori",
+     "ratlami_sev"
+    ],
+    "lunch": [
+     "paneer_butter_masala",
+     "plain_rice",
+     "roti",
+     "salad",
+     "dal_tadka",
+     "aloo_tomato"
+    ],
+    "snacks": [
+     "red_chutney",
+     "tea",
+     "vada",
+     "bread_slice",
+     "green_chutney"
+    ]
+   }
+  },
+  "id": "gniot-greater-noida__hostel",
+  "name": "GNIOT Institute of Professional Studies, Greater Noida",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "gulab_jamun",
+     "kheer"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad",
+     "green_chutney",
+     "red_chutney",
+     "dal_tadka",
+     "dum_aloo"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "upma",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "veg_biryani",
+     "roti",
+     "veg_raita",
+     "salad",
+     "tea",
+     "upma",
+     "poha",
+     "dosa",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "snacks": [
+     "samosa",
+     "green_chutney",
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "fruit_custard"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad",
+     "dal_tadka",
+     "dum_aloo",
+     "rajma_dish"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "amul_butter",
+     "pickle",
+     "jam",
+     "moong_halwa"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "dahi",
+     "salad"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poha",
+     "amul_butter",
+     "pickle",
+     "jam"
+    ],
+    "dinner": [
+     "tea",
+     "rajma_dish",
+     "roti",
+     "plain_rice",
+     "salad"
+    ],
+    "snacks": [
+     "green_chutney"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "chole",
+     "poha",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "boondi_raita",
+     "salad",
+     "aloo_paratha",
+     "mix_veg",
+     "malai_kofta",
+     "poha",
+     "upma",
+     "tea",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "poori",
+     "salad"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "upma",
+     "tea",
+     "amul_butter",
+     "pickle",
+     "jam"
+    ],
+    "dinner": [
+     "dal_mix",
+     "roti",
+     "plain_rice",
+     "veg_raita",
+     "salad",
+     "dal_makhani",
+     "mix_veg",
+     "malai_kofta",
+     "dahi",
+     "tea"
+    ],
+    "lunch": [
+     "paneer_butter_masala",
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "snacks": [
+     "red_chutney",
+     "tea"
+    ]
+   }
+  },
+  "id": "gniot-greater-noida__hostel",
+  "name": "GNIOT Institute of Professional Studies, Greater Noida",
+  "region": "IN"
+ },
+ "settledByHand": 91,
+ "warnings": []
+}

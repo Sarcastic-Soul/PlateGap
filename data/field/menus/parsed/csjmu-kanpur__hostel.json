@@ -1,0 +1,228 @@
+{
+ "matched": 8,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "milk_glass",
+     "idli",
+     "sambhar"
+    ],
+    "dinner": [
+     "black_chana_aloo",
+     "dum_aloo",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "dal_makhani",
+     "mix_veg",
+     "peas_pulao",
+     "soya_badi",
+     "roti",
+     "salad",
+     "pickle"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "milk_glass",
+     "poha"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "dal_tadka",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle",
+     "tea",
+     "samosa"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea"
+    ],
+    "dinner": [
+     "rajma_dish",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "aloo_tomato",
+     "veg_raita",
+     "onion_rice",
+     "poori",
+     "salad",
+     "pickle"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "aloo_paratha",
+     "plain_curd",
+     "gulab_jamun"
+    ],
+    "dinner": [
+     "mutter_paneer",
+     "kadu_masala",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "toor_dal_tadka",
+     "veg_raita",
+     "veg_biryani",
+     "roti",
+     "salad",
+     "pickle"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea"
+    ],
+    "dinner": [
+     "dal_mix",
+     "aloo_jeera",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "dal_tadka",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "tea",
+     "poori",
+     "aloo_jeera"
+    ],
+    "dinner": [
+     "chole",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "dahi",
+     "pakoda",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle",
+     "gulab_jamun"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "milk_glass",
+     "upma"
+    ],
+    "dinner": [
+     "aloo_tomato",
+     "mix_veg",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "masoor_dal_dish",
+     "mix_veg",
+     "veg_raita",
+     "roti",
+     "salad",
+     "pickle"
+    ]
+   }
+  },
+  "id": "csjmu-kanpur__hostel",
+  "name": "Chhatrapati Shahu Ji Maharaj University, Kanpur",
+  "region": "IN"
+ },
+ "noise": 1,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "lunch": [
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "tea"
+    ],
+    "lunch": [
+     "tea"
+    ]
+   },
+   "sun": {
+    "lunch": [
+     "tea"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "tea"
+    ],
+    "lunch": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "lunch": [
+     "tea"
+    ]
+   },
+   "wed": {
+    "lunch": [
+     "tea"
+    ]
+   }
+  },
+  "id": "csjmu-kanpur__hostel",
+  "name": "Chhatrapati Shahu Ji Maharaj University, Kanpur",
+  "region": "IN"
+ },
+ "settledByHand": 21,
+ "warnings": []
+}

@@ -1,0 +1,253 @@
+{
+ "matched": 32,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "poori",
+     "roti",
+     "dal_makhani",
+     "mix_veg"
+    ],
+    "dinner": [
+     "pakoda",
+     "veg_raita",
+     "peas_pulao",
+     "mix_veg",
+     "dal_tadka",
+     "gulab_jamun",
+     "roti",
+     "aloo_choka"
+    ],
+    "lunch": [
+     "papad",
+     "dahi",
+     "pakoda",
+     "dal_tadka",
+     "gulab_jamun"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "green_chutney",
+     "imli_chutney",
+     "poori",
+     "aloo_tomato"
+    ],
+    "dinner": [
+     "egg_curry",
+     "milk_glass",
+     "tea",
+     "masoor_dal_dish",
+     "gulab_jamun",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "gobhi_dry",
+     "toor_dal_tadka",
+     "mix_veg",
+     "soya_badi"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney",
+     "green_chutney"
+    ],
+    "dinner": [
+     "green_chutney",
+     "veg_biryani",
+     "veg_raita",
+     "dum_aloo",
+     "gulab_jamun",
+     "mutter_paneer",
+     "mix_veg"
+    ],
+    "lunch": [
+     "mix_veg",
+     "dal_mix",
+     "tomato_soup_bowl",
+     "salad",
+     "gulab_jamun",
+     "mutter_paneer",
+     "green_chutney"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "aloo_bhujiya",
+     "plain_curd",
+     "ratlami_sev"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "plain_curd",
+     "plain_rice",
+     "dal_mix",
+     "mix_veg"
+    ],
+    "lunch": [
+     "french_fries",
+     "mutter_paneer",
+     "peas_pulao",
+     "roti",
+     "moong_halwa",
+     "fruit_custard"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "green_chutney",
+     "aloo_paratha",
+     "mix_veg"
+    ],
+    "dinner": [
+     "soya_badi",
+     "rajma_dish",
+     "poori",
+     "dum_aloo"
+    ],
+    "lunch": [
+     "mix_veg",
+     "dal_tadka"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "green_chutney",
+     "aloo_paratha",
+     "gobhi_dry",
+     "red_chutney"
+    ],
+    "dinner": [
+     "cutlet",
+     "aloo_paratha"
+    ],
+    "lunch": [
+     "roti",
+     "mix_veg",
+     "dal_tadka",
+     "mutter_paneer"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "vada",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "green_chutney"
+    ],
+    "dinner": [
+     "imli_chutney",
+     "dal_tadka",
+     "aloo_tomato",
+     "poori",
+     "kheer",
+     "mix_veg"
+    ],
+    "lunch": [
+     "imli_chutney",
+     "dal_tadka",
+     "aloo_tomato",
+     "poori",
+     "kheer",
+     "mix_veg"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-8",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "poori",
+     "roti",
+     "dal_makhani"
+    ],
+    "dinner": [
+     "pakoda",
+     "veg_raita"
+    ],
+    "lunch": [
+     "papad"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "green_chutney",
+     "imli_chutney"
+    ],
+    "dinner": [
+     "egg_curry",
+     "milk_glass",
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "green_chutney"
+    ],
+    "lunch": [
+     "mix_veg",
+     "dal_mix",
+     "tomato_soup_bowl"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "aloo_bhujiya"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "plain_curd"
+    ],
+    "lunch": [
+     "french_fries"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "green_chutney"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "green_chutney"
+    ],
+    "lunch": [
+     "roti"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "vada",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-8",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "settledByHand": 95,
+ "warnings": []
+}

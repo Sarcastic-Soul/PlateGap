@@ -1,0 +1,266 @@
+{
+ "matched": 45,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "tea",
+    "fruit_portion",
+    "bread_slice",
+    "amul_butter",
+    "jam",
+    "milk_glass",
+    "cereal_bowl",
+    "boiled_egg"
+   ],
+   "dinner": [
+    "roti",
+    "plain_rice",
+    "rasam",
+    "pickle",
+    "jam",
+    "amul_butter"
+   ],
+   "lunch": [
+    "roti",
+    "plain_rice",
+    "sambhar",
+    "pickle",
+    "plain_curd",
+    "fruit_portion",
+    "dahi"
+   ]
+  },
+  "days": {
+   "fri": {
+    "breakfast": [
+     "aloo_bhujiya",
+     "aloo_paratha",
+     "ratlami_sev"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "dal_tadka",
+     "aloo_tomato"
+    ],
+    "lunch": [
+     "mix_veg",
+     "toor_dal_tadka"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "red_chutney"
+    ],
+    "dinner": [
+     "roti",
+     "gulab_jamun",
+     "paneer_butter_masala",
+     "mutter_paneer",
+     "masoor_dal_dish",
+     "peas_pulao",
+     "french_fries",
+     "ratlami_sev"
+    ],
+    "lunch": [
+     "papad",
+     "mix_veg",
+     "plain_rice",
+     "dal_mix"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "dahi"
+    ],
+    "dinner": [
+     "veg_raita",
+     "chole",
+     "veg_biryani"
+    ],
+    "lunch": [
+     "mutter_paneer",
+     "aloo_paratha",
+     "green_chutney",
+     "mix_veg",
+     "dal_tadka"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "pav_bhaji",
+     "vada",
+     "bread_slice"
+    ],
+    "dinner": [
+     "dal_tadka",
+     "kurmuri_bhindi"
+    ],
+    "lunch": [
+     "mix_veg",
+     "dahi",
+     "pakoda"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "green_chutney",
+     "bread_slice",
+     "dosa"
+    ],
+    "dinner": [
+     "dal_makhani",
+     "mix_veg",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "mix_veg",
+     "dal_tadka",
+     "plain_rice"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "poori",
+     "moong_halwa",
+     "aloo_tomato"
+    ],
+    "dinner": [
+     "salad",
+     "papad",
+     "mutter_paneer",
+     "paneer_butter_masala",
+     "aloo_paratha",
+     "toor_dal_tadka",
+     "peas_pulao",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "mix_veg",
+     "masoor_dal_dish"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-11",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "tea",
+    "fruit_portion",
+    "bread_slice",
+    "amul_butter",
+    "jam"
+   ],
+   "dinner": [
+    "roti",
+    "plain_rice",
+    "rasam",
+    "pickle",
+    "jam"
+   ],
+   "lunch": [
+    "roti",
+    "plain_rice",
+    "sambhar",
+    "pickle",
+    "plain_curd",
+    "fruit_portion"
+   ]
+  },
+  "days": {
+   "fri": {
+    "breakfast": [
+     "aloo_bhujiya"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "dal_tadka"
+    ],
+    "lunch": [
+     "mix_veg",
+     "toor_dal_tadka"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "roti",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "papad"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "dahi"
+    ],
+    "dinner": [
+     "veg_raita"
+    ],
+    "lunch": [
+     "mutter_paneer",
+     "aloo_paratha",
+     "green_chutney"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "pav_bhaji"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "green_chutney"
+    ],
+    "dinner": [
+     "dal_makhani"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "poori",
+     "moong_halwa"
+    ],
+    "dinner": [
+     "salad",
+     "papad"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-11",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "settledByHand": 60,
+ "warnings": [
+  "14 cells of paid extras were left out: they are sold at the counter, not served on the mess plan"
+ ]
+}

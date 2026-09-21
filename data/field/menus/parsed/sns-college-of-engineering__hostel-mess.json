@@ -1,0 +1,358 @@
+{
+ "matched": 79,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "idli",
+     "nariyal_chutney",
+     "kheer",
+     "red_chutney"
+    ],
+    "dinner": [
+     "sambhar",
+     "rasam",
+     "pickle",
+     "upma",
+     "dahi"
+    ],
+    "lunch": [
+     "sambhar",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "kheer",
+     "plain_rice",
+     "mix_veg",
+     "vada"
+    ],
+    "snacks": [
+     "ratlami_sev"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "nariyal_chutney",
+     "idli",
+     "milk_glass"
+    ],
+    "dinner": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad",
+     "mix_veg"
+    ],
+    "snacks": [
+     "boiled_sprouts"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "nariyal_chutney",
+     "sambhar",
+     "dosa"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "mix_veg",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad",
+     "mix_veg"
+    ],
+    "snacks": [
+     "vada"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "bread_slice",
+     "jam",
+     "chole",
+     "plain_rice",
+     "dal_mix",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "veg_raita",
+     "rasam",
+     "mix_veg"
+    ],
+    "snacks": [
+     "pakoda"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney",
+     "red_chutney",
+     "moong_halwa"
+    ],
+    "dinner": [
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "boiled_egg",
+     "plain_curd",
+     "onion_rice",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "mix_veg",
+     "vada"
+    ],
+    "snacks": [
+     "samosa"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "idli",
+     "nariyal_chutney",
+     "plain_rice",
+     "dal_mix"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "chole",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad",
+     "kurmuri_bhindi",
+     "gobhi_dry"
+    ],
+    "snacks": [
+     "ratlami_sev"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "nariyal_chutney",
+     "plain_rice",
+     "dal_mix",
+     "upma"
+    ],
+    "dinner": [
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "dosa",
+     "red_chutney",
+     "dahi"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "rajma_dish",
+     "mix_veg",
+     "vada"
+    ],
+    "snacks": [
+     "samosa"
+    ]
+   }
+  },
+  "id": "sns-college-of-engineering__hostel-mess",
+  "name": "SNS College of Engineering, Coimbatore",
+  "region": "IN"
+ },
+ "noise": 28,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "idli",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "sambhar",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "sambhar",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "kheer"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam"
+    ],
+    "lunch": [
+     "plain_rice",
+     "sambhar",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "nariyal_chutney",
+     "sambhar"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "bread_slice",
+     "jam"
+    ],
+    "dinner": [
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "veg_raita",
+     "rasam"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle",
+     "boiled_egg"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "samosa"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "idli",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "roti",
+     "plain_rice",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle",
+     "papad"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "nariyal_chutney",
+     "plain_rice",
+     "rasam",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "rasam",
+     "plain_curd",
+     "pickle"
+    ]
+   }
+  },
+  "id": "sns-college-of-engineering__hostel-mess",
+  "name": "SNS College of Engineering, Coimbatore",
+  "region": "IN"
+ },
+ "settledByHand": 54,
+ "warnings": []
+}

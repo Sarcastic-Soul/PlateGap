@@ -1,0 +1,444 @@
+{
+ "matched": 111,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "pickle",
+     "dahi",
+     "bread_slice",
+     "amul_butter",
+     "tea",
+     "aloo_paratha",
+     "jam",
+     "egg_bhurji",
+     "boiled_egg",
+     "fruit_portion",
+     "milk_glass"
+    ],
+    "dinner": [
+     "egg_curry",
+     "plain_rice",
+     "pickle",
+     "idli",
+     "paneer_butter_masala",
+     "toor_dal_tadka",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "veg_raita",
+     "roti",
+     "salad",
+     "pickle",
+     "dahi",
+     "mutter_paneer",
+     "mix_veg"
+    ],
+    "snacks": [
+     "noodles"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "aloo_paratha",
+     "dahi",
+     "bread_slice",
+     "amul_butter",
+     "tea",
+     "cereal_bowl",
+     "jam",
+     "boiled_egg",
+     "fruit_portion",
+     "milk_glass"
+    ],
+    "dinner": [
+     "mix_veg",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "pickle",
+     "plain_rice",
+     "toor_dal_tadka",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad",
+     "pickle",
+     "poori",
+     "aloo_jeera",
+     "kadu_masala",
+     "veg_raita"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea",
+     "cereal_bowl",
+     "egg_bhurji",
+     "milk_glass"
+    ],
+    "dinner": [
+     "dum_aloo",
+     "pickle",
+     "masoor_dal_dish",
+     "roti",
+     "salad",
+     "dahi"
+    ],
+    "lunch": [
+     "chole",
+     "salad",
+     "plain_curd",
+     "papad",
+     "pickle",
+     "peas_pulao",
+     "mix_veg"
+    ],
+    "snacks": [
+     "bread_slice",
+     "tea"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "bread_slice",
+     "amul_butter",
+     "egg_bhurji",
+     "tea",
+     "green_chutney",
+     "cereal_bowl"
+    ],
+    "dinner": [
+     "chicken_biryani",
+     "malai_kofta",
+     "veg_biryani",
+     "roti",
+     "salad",
+     "pickle",
+     "fruit_custard",
+     "veg_raita"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "plain_rice",
+     "salad",
+     "boondi_raita",
+     "roti",
+     "pickle",
+     "mix_veg",
+     "papad"
+    ],
+    "snacks": [
+     "idli"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "bread_slice",
+     "amul_butter",
+     "tea",
+     "matar_chola",
+     "roti",
+     "cereal_bowl",
+     "jam",
+     "egg_bhurji",
+     "sweetcorn_side",
+     "milk_glass"
+    ],
+    "dinner": [
+     "roti",
+     "salad",
+     "boondi_raita",
+     "pickle",
+     "masoor_dal_dish",
+     "veg_kofta",
+     "peas_pulao"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "mix_veg",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "soya_badi",
+     "papad"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "pav_bhaji",
+     "bread_slice",
+     "amul_butter",
+     "egg_bhurji",
+     "milk_glass",
+     "tea"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "plain_rice",
+     "roti",
+     "salad",
+     "veg_raita",
+     "pickle",
+     "mix_veg"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "aloo_jeera",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "veg_raita",
+     "pickle",
+     "soya_badi",
+     "papad"
+    ],
+    "snacks": [
+     "samosa",
+     "tea"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "sambhar",
+     "bread_slice",
+     "boiled_egg",
+     "milk_glass",
+     "tea",
+     "idli",
+     "green_chutney"
+    ],
+    "dinner": [
+     "roti",
+     "jeera_rice",
+     "salad",
+     "pickle",
+     "gulab_jamun",
+     "paneer_butter_masala",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "roti",
+     "salad",
+     "boondi_raita",
+     "papad",
+     "pickle",
+     "black_chana_aloo",
+     "mix_veg",
+     "peas_pulao"
+    ],
+    "snacks": [
+     "dahi"
+    ]
+   }
+  },
+  "id": "iiit-delhi__both-messes",
+  "name": "IIIT Delhi",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "pickle",
+     "dahi",
+     "bread_slice",
+     "amul_butter",
+     "tea"
+    ],
+    "dinner": [
+     "egg_curry",
+     "plain_rice",
+     "pickle",
+     "idli"
+    ],
+    "lunch": [
+     "plain_rice",
+     "veg_raita",
+     "roti",
+     "salad",
+     "pickle"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "aloo_paratha",
+     "dahi",
+     "bread_slice",
+     "amul_butter",
+     "tea"
+    ],
+    "dinner": [
+     "mix_veg",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "pickle",
+     "plain_rice"
+    ],
+    "lunch": [
+     "plain_rice",
+     "salad",
+     "pickle"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea"
+    ],
+    "dinner": [
+     "dum_aloo",
+     "pickle"
+    ],
+    "lunch": [
+     "chole",
+     "salad",
+     "plain_curd",
+     "papad",
+     "pickle"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "bread_slice",
+     "amul_butter",
+     "egg_bhurji",
+     "tea"
+    ],
+    "dinner": [
+     "chicken_biryani",
+     "malai_kofta",
+     "veg_biryani",
+     "roti",
+     "salad",
+     "pickle",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "plain_rice",
+     "salad",
+     "boondi_raita",
+     "roti",
+     "pickle"
+    ],
+    "snacks": [
+     "idli"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "bread_slice",
+     "amul_butter",
+     "tea"
+    ],
+    "dinner": [
+     "roti",
+     "salad",
+     "boondi_raita",
+     "pickle"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "mix_veg",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "tea"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "pav_bhaji",
+     "bread_slice",
+     "amul_butter",
+     "egg_bhurji",
+     "milk_glass",
+     "tea"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "plain_rice",
+     "roti",
+     "salad",
+     "veg_raita",
+     "pickle"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "aloo_jeera",
+     "jeera_rice",
+     "roti",
+     "salad",
+     "veg_raita",
+     "pickle"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "sambhar",
+     "bread_slice",
+     "boiled_egg",
+     "milk_glass",
+     "tea"
+    ],
+    "dinner": [
+     "roti",
+     "jeera_rice",
+     "salad",
+     "pickle",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "roti",
+     "salad",
+     "boondi_raita",
+     "papad",
+     "pickle"
+    ],
+    "snacks": [
+     "dahi"
+    ]
+   }
+  },
+  "id": "iiit-delhi__both-messes",
+  "name": "IIIT Delhi",
+  "region": "IN"
+ },
+ "settledByHand": 72,
+ "warnings": []
+}

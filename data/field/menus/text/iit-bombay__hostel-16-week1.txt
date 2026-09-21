@@ -1,0 +1,12 @@
+<!-- IIT Bombay | Hostel 16 mess | read by the model -->
+<!-- page 1 -->
+| Day   | Breakfast | Lunch | Tiffin | Dinner |
+|-------|-----------|-------|--------|--------|
+| Daily | Banana, BBJ, Tea,Coffee, Milk | Fried Mirchi, Salad, Pickle,White Rice | Tea, Coffee, BBJ, Seasonal Fruit | Fried Mirchi, Salad |
+| Monday | Kanda Poha, Egg Burjee/Paneer Burjee,Chana Sprout | Paneer Mutter,DDR,Papad | Tawa Sandwich, Banana Shake | Alu Flower, Tomato Rice, Plain Rice, Dal, Laddu |
+| Tuesday | Mix Veg Paratha, Boiled Egg, BBJ,Chana Sprout | Aloo Bujiya Sev,DDR, CHAWLI PULSE | Macroni, Fruit | Mushroom Mutter,Turai baji, Rice, Ice Cream |
+| Wednesday | Medu Vada, Chutney Sambhar,Matki Sprout | Chole Bhature, Chutney, Jeera Rice, Dahi | Dhokla,Butterscotch Shake | Butter Chicken, Paneer Corn Baji, Dal rice, Chappati,Fruit Custard |
+| Thursday | Uttapam, Chutney, Sweet Corn | Aloo Methi bhaji, Dal,Alu Papad | Dahi Vada, Fruit | Tondli Chana, Palak Rice, Dalmakhani, DDR, Egg Curry (1),Seera |
+| Friday | Besan Chilla (VEG),BBJ,Sweet Corn | Rajma, Methi Puri, Dahi, Jeera Rice,Bobla Baji | Poha Jellebi, Cold Coffee | Paneer Chilli, Fried Rice, DDR,Chicken Chilli,Chappati, Rice Kheer |
+| Saturday | Masala Dosa(1),Sambhar Chutney, Akka Moong Sprout | Chana Soyabean, Suran Bhaji,DDR, Sabudana Papad | Mix Pakoda, Chatney, Fruit | Alu Baigan, Pudina Rice, Gulab Jamun |
+| Sunday | Onion parotha, Boiled egg,Boiled Groundnut | Mix Veg, Pulao, Boondi Raitha, Papad | Pani puri, Fruit | Doodhi bhaji,Chhole masala DDR, Dahi |

@@ -1,0 +1,32 @@
+<!-- MNIT Jaipur | Girls hostel mess - Menu B | read by the model -->
+<!-- page 1 -->
+| Meal | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1. | Aloo + Puri | Onion & Tomato Uttapam + Sambhar | Pav - Bhaji | Cutlets + Sprouts | Aloo Sandwich | Vada/ Idli + sambar | Aloo Pyaaz paratha/ Methi Paratha or Mooli Paratha |
+| 2. | Pickle | Coconut Chutney | Raw Onion + Lemon | Boiled Egg + Masala | Omlet | Coconut Chutney | Pickle |
+| 3. | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Bread + Butter + Jam + Ketchup | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam |
+| 4. | Milk+Ginger Tea | Tea ( Adrak Elaichi) + Milk | Tea ( Adrak Elaichi) + Milk | Tea ( Adrak Elaichi) + Milk | Tea ( Adrak Elaichi) + Milk | Tea ( Adrak Elaichi) + Milk + Coffee Powder | Tea (Adrak Elaichi) + Milk |
+| 5. | Coffee powder | Coffee Powder | Coffee Powder | Coffee Powder | Coffee Powder | Rooh Afza Milkshake | Coffee Powder |
+| 6. | Banana | Banana | Apple | Pear | Banana | Apple | Pear |
+| Lunch - Mon - Fri ( 12:00 pm - 2:00 pm) Sat - Sun (12:30 pm - 2:30 pm) |  |  |  |  |  |  |  |
+| 1. | Sindhi Kadhi | Arhar Dal | Rajma | Arhar Dal | Aloo Tamatar | Chole Bature | Kadai Paneer/Dal Bati Churma |
+| 2. | Jeera Aloo/ Aaloo Pyaz | Masala Bhindi | Aaloo Gobi | Soyabean Punjabi Style | Boondi ka raita | Matar Pulao | Dal Tadka Punjabi Namkeen |
+| 3. | Rice | Jeera Rice | Rice | Lemon Rice | Paratha | Vinegar Onion | Veg. Pulao+ Millets Namkeen |
+| 4. | Buttermilk Chapati | Buttermilk Chapati | Chapati | Chapati | Garlic Chutney | Pickle + Lemon | Ice Cream (Chocolate) |
+| 5. | Lemon + Pickle + fried Green Chili + Mixed Salad | Lemon + Pickle + Salad | Lemon + Pickle + Onion Salad | Lemon + Pickle + Fried Chili + Mixed Salad | Salad + Lemon + Rice | Veg. Raita | Lemon + pickle+ Mixed salad |
+| 6. | Papad/Fryums + Garlic Chutney | Papad/Fryums + Garlic Chutney | Papad/Fryums + Garlic Chutney | Papad/Fryums + Garlic Chutney Snacks | Papad/Fryums + Fried Chilli | Papad/Fryums + Garlic Chutney | Papad/Fryums + Garlic Chutney+ Fruit Raita |
+| Snacks - 5.30 pm - 06.00 pm |  |  |  |  |  |  |  |
+| 1. | Aloo Papi Chaat (with dahi) | Full Maska Bun | Kachori | Aaloo Chola Tikki | Chole Kulche (one piece) | Vada Pav(one piece) | White Pasta |
+| 2. | Green Chutney + Ketchup | Green Chutney + Ketchup | Green Chutney + Ketchup | Fryums | Tea ( Adrak Elaichi) | Potato Chips + Ketchup | Tea ( Adrak Elaichi) |
+| 3. | Tea ( Adrak Elaichi) | Tea ( Adrak Elaichi) | Tea ( Adrak Elaichi) | Tea ( Adrak Elaichi) | Green Chutney | Tea ( Adrak Elaichi) | Fryums |
+
+<!-- page 2 -->
+|        | Monday                  | Tuesday                          | Wednesday                  | Thursday                  | Friday                  | Saturday                  | Sunday                                    |
+|--------|-------------------------|----------------------------------|----------------------------|---------------------------|-------------------------|---------------------------|-------------------------------------------|
+| 1.     | Aaloo Green Matar       | Kabuli Chana + Puri              | Egg Curry                  | Gatte Ki Sabji            | Malai Kofta             | Moong Dal                 | Lachaa Paratha                           |
+| 2.     | Mixed dal                | Jeera Rice                       | Matar Paneer Masala        | Mashed Potatoes            | Gajjar Matar            | Kala Chana Masala(Fried   | Dal Makhani+Veg. Biryani                 |
+| 3.     | Rice                    | Anjuri Petha (One Piece)        | Lemon + Pickle             | Pulao                     | Lemon+Pickle+Mixed     | Gudh Tamatar Chatni      | Sev Tamatar(Dhaba Style)                 |
+| 4.     | Chapati                 | Lemon + Pickle                  | Fried Rice                 | Chapati                   | Rice                    | Roti+Rice                | Lemon + Pickle                            |
+| 5.     | Lemon + Pickle          | Mixed salad                     | Chapati                    | Rasgulla/Gulab Jamun (2   | Chapati                 | Lemon+Pickle             | Papad                                     |
+| 6.     | Papad                   | Papad                            | Mixed Salad                | Lemon + Pickle + Mixed    | Papad                   | Fryums                   | Salad                                     |
+| 7.     | Salad                   | Salad                            | Salad                      | Salad                     | Salad                   | Salad                    | Fryums                                    |

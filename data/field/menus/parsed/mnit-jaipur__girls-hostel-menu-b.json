@@ -1,0 +1,333 @@
+{
+ "matched": 130,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "lunch": [
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "fruit_portion",
+     "boondi_raita",
+     "aloo_paratha",
+     "salad",
+     "plain_rice",
+     "papad",
+     "green_chutney",
+     "malai_kofta",
+     "pickle",
+     "roti",
+     "bread_slice",
+     "egg_bhurji",
+     "cereal_bowl",
+     "aloo_tomato",
+     "red_chutney",
+     "chole",
+     "mix_veg"
+    ]
+   },
+   "mon": {
+    "lunch": [
+     "poori",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "milk_glass",
+     "tea",
+     "fruit_portion",
+     "aloo_jeera",
+     "plain_rice",
+     "salad",
+     "papad",
+     "green_chutney",
+     "dal_mix",
+     "roti",
+     "mix_veg",
+     "bread_slice",
+     "cereal_bowl",
+     "dahi",
+     "red_chutney",
+     "corn_chat"
+    ]
+   },
+   "sat": {
+    "lunch": [
+     "vada",
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "apple_whole",
+     "chole",
+     "pickle",
+     "veg_raita",
+     "papad",
+     "roti",
+     "plain_rice",
+     "salad",
+     "bread_slice",
+     "cereal_bowl",
+     "peas_pulao",
+     "red_chutney",
+     "ratlami_sev",
+     "dal_tadka",
+     "black_chana_aloo",
+     "green_chutney"
+    ]
+   },
+   "sun": {
+    "lunch": [
+     "aloo_paratha",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "dal_tadka",
+     "salad",
+     "papad",
+     "dal_makhani",
+     "veg_biryani",
+     "bread_slice",
+     "cereal_bowl",
+     "fruit_portion",
+     "paneer_butter_masala",
+     "roti",
+     "gulab_jamun",
+     "peas_pulao",
+     "ratlami_sev",
+     "fruit_custard",
+     "red_chutney",
+     "veg_raita",
+     "noodles"
+    ]
+   },
+   "thu": {
+    "lunch": [
+     "cutlet",
+     "boiled_sprouts",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "toor_dal_tadka",
+     "roti",
+     "pickle",
+     "salad",
+     "papad",
+     "peas_pulao",
+     "gulab_jamun",
+     "fruit_portion",
+     "soya_badi",
+     "onion_rice",
+     "red_chutney",
+     "mix_veg",
+     "aloo_choka"
+    ]
+   },
+   "tue": {
+    "lunch": [
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "jeera_rice",
+     "pickle",
+     "salad",
+     "papad",
+     "green_chutney",
+     "poori",
+     "dosa",
+     "bread_slice",
+     "cereal_bowl",
+     "kurmuri_bhindi",
+     "dahi",
+     "red_chutney",
+     "chole",
+     "kadu_masala"
+    ]
+   },
+   "wed": {
+    "lunch": [
+     "pav_bhaji",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "apple_whole",
+     "rajma_dish",
+     "plain_rice",
+     "roti",
+     "pickle",
+     "salad",
+     "papad",
+     "green_chutney",
+     "egg_curry",
+     "bread_slice",
+     "cereal_bowl",
+     "gobhi_dry",
+     "red_chutney",
+     "poori",
+     "mutter_paneer",
+     "peas_pulao"
+    ]
+   }
+  },
+  "id": "mnit-jaipur__girls-hostel-menu-b",
+  "name": "MNIT Jaipur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "lunch": [
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "fruit_portion",
+     "boondi_raita",
+     "aloo_paratha",
+     "salad",
+     "plain_rice",
+     "papad",
+     "green_chutney",
+     "malai_kofta",
+     "pickle",
+     "roti"
+    ]
+   },
+   "mon": {
+    "lunch": [
+     "poori",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "milk_glass",
+     "tea",
+     "fruit_portion",
+     "aloo_jeera",
+     "plain_rice",
+     "salad",
+     "papad",
+     "green_chutney",
+     "dal_mix",
+     "roti"
+    ]
+   },
+   "sat": {
+    "lunch": [
+     "vada",
+     "idli",
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "apple_whole",
+     "chole",
+     "pickle",
+     "veg_raita",
+     "papad",
+     "roti",
+     "plain_rice",
+     "salad"
+    ]
+   },
+   "sun": {
+    "lunch": [
+     "aloo_paratha",
+     "pickle",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "dal_tadka",
+     "salad",
+     "papad",
+     "dal_makhani",
+     "veg_biryani"
+    ]
+   },
+   "thu": {
+    "lunch": [
+     "cutlet",
+     "boiled_sprouts",
+     "boiled_egg",
+     "bread_slice",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "toor_dal_tadka",
+     "roti",
+     "pickle",
+     "salad",
+     "papad",
+     "peas_pulao",
+     "gulab_jamun"
+    ]
+   },
+   "tue": {
+    "lunch": [
+     "sambhar",
+     "nariyal_chutney",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "fruit_portion",
+     "toor_dal_tadka",
+     "jeera_rice",
+     "pickle",
+     "salad",
+     "papad",
+     "green_chutney",
+     "poori"
+    ]
+   },
+   "wed": {
+    "lunch": [
+     "pav_bhaji",
+     "amul_butter",
+     "jam",
+     "tea",
+     "milk_glass",
+     "apple_whole",
+     "rajma_dish",
+     "plain_rice",
+     "roti",
+     "pickle",
+     "salad",
+     "papad",
+     "green_chutney",
+     "egg_curry"
+    ]
+   }
+  },
+  "id": "mnit-jaipur__girls-hostel-menu-b",
+  "name": "MNIT Jaipur",
+  "region": "IN"
+ },
+ "settledByHand": 111,
+ "warnings": [
+  "some items came before any meal heading and were read as lunch"
+ ]
+}

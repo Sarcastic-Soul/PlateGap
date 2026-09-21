@@ -1,0 +1,276 @@
+{
+ "matched": 41,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "tea",
+    "boiled_sprouts",
+    "milk_glass",
+    "boiled_egg",
+    "fruit_portion",
+    "bread_slice",
+    "jam",
+    "amul_butter",
+    "cereal_bowl"
+   ],
+   "dinner": [
+    "plain_rice",
+    "pickle",
+    "salad",
+    "roti"
+   ],
+   "lunch": [
+    "plain_rice",
+    "pickle",
+    "salad",
+    "fruit_portion",
+    "roti",
+    "plain_curd"
+   ]
+  },
+  "days": {
+   "fri": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "sambhar",
+     "imli_chutney"
+    ],
+    "dinner": [
+     "mix_veg",
+     "dal_tadka",
+     "kheer"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "veg_raita",
+     "kurmuri_bhindi"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "bread_slice"
+    ],
+    "dinner": [
+     "roti",
+     "salad",
+     "aloo_tomato",
+     "mix_veg"
+    ],
+    "lunch": [
+     "boondi_raita",
+     "rajma_dish",
+     "onion_rice",
+     "mix_veg"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "dahi",
+     "gulab_jamun",
+     "ratlami_sev"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad",
+     "gobhi_dry",
+     "mutter_paneer",
+     "dal_tadka"
+    ],
+    "lunch": [
+     "mix_veg",
+     "toor_dal_tadka",
+     "chole",
+     "dal_tadka",
+     "green_chutney"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "roti",
+     "masoor_dal_dish",
+     "paneer_butter_masala",
+     "plain_rice",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "toor_dal_tadka",
+     "mix_veg",
+     "dahi"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poori",
+     "moong_halwa"
+    ],
+    "dinner": [
+     "jeera_rice",
+     "salad",
+     "chole",
+     "poori",
+     "dal_makhani"
+    ],
+    "lunch": [
+     "veg_biryani",
+     "dal_tadka",
+     "veg_raita"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "toor_dal_tadka",
+     "soya_badi",
+     "aloo_paratha"
+    ],
+    "lunch": [
+     "dahi",
+     "aloo_jeera",
+     "green_chutney"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "malai_kofta",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "toor_dal_tadka",
+     "mix_veg",
+     "veg_raita",
+     "veg_biryani"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-2",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {
+   "breakfast": [
+    "tea"
+   ],
+   "dinner": [
+    "plain_rice",
+    "pickle",
+    "salad"
+   ],
+   "lunch": [
+    "plain_rice",
+    "pickle",
+    "salad",
+    "fruit_portion"
+   ]
+  },
+  "days": {
+   "fri": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "sambhar"
+    ],
+    "lunch": [
+     "dal_makhani",
+     "veg_raita"
+    ]
+   },
+   "mon": {
+    "dinner": [
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "boondi_raita"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poha",
+     "dahi"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "mix_veg",
+     "toor_dal_tadka"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "roti"
+    ],
+    "lunch": [
+     "toor_dal_tadka"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poori"
+    ],
+    "dinner": [
+     "jeera_rice",
+     "salad"
+    ],
+    "lunch": [
+     "veg_biryani",
+     "dal_tadka"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "toor_dal_tadka"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "dosa",
+     "nariyal_chutney"
+    ],
+    "dinner": [
+     "malai_kofta",
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "toor_dal_tadka"
+    ]
+   }
+  },
+  "id": "iit-kanpur__hall-2",
+  "name": "IIT Kanpur",
+  "region": "IN"
+ },
+ "settledByHand": 53,
+ "warnings": [
+  "16 cells of paid extras were left out: they are sold at the counter, not served on the mess plan"
+ ]
+}

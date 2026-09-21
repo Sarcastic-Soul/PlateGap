@@ -1,0 +1,334 @@
+{
+ "matched": 83,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "aloo_paratha",
+     "amul_butter",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "egg_curry",
+     "plain_rice",
+     "roti",
+     "salad",
+     "paneer_butter_masala"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad",
+     "dal_makhani",
+     "aloo_jeera",
+     "mix_veg"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "aloo_paratha",
+     "amul_butter",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "masoor_dal_dish",
+     "plain_rice",
+     "salad",
+     "roti",
+     "gulab_jamun",
+     "pakoda"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "dahi",
+     "plain_rice",
+     "roti",
+     "salad",
+     "mix_veg"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "amul_butter",
+     "tea",
+     "dahi",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "dal_mix",
+     "gobhi_dry",
+     "plain_rice",
+     "roti",
+     "salad",
+     "papad",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad",
+     "dal_mix",
+     "soya_badi"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "bread_slice",
+     "boiled_egg",
+     "fruit_portion",
+     "tea"
+    ],
+    "dinner": [
+     "roti",
+     "salad",
+     "plain_rice",
+     "dal_tadka",
+     "veg_kofta"
+    ],
+    "lunch": [
+     "aloo_jeera",
+     "poori",
+     "plain_rice",
+     "veg_raita",
+     "chole",
+     "mix_veg"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poori",
+     "chole",
+     "tea",
+     "bread_slice"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad",
+     "dal_tadka",
+     "mix_veg",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "aloo_jeera",
+     "plain_rice",
+     "roti",
+     "salad",
+     "pakoda",
+     "dahi"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "amul_butter",
+     "dahi",
+     "tea",
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "dal_mix",
+     "roti",
+     "salad",
+     "kheer",
+     "green_chutney",
+     "peas_pulao"
+    ],
+    "lunch": [
+     "dahi",
+     "plain_rice",
+     "roti",
+     "salad",
+     "rajma_dish",
+     "mix_veg"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "amul_butter",
+     "mix_veg",
+     "aloo_paratha",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad",
+     "mix_veg",
+     "mutter_paneer",
+     "masoor_dal_dish"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad",
+     "mix_veg",
+     "black_chana_aloo"
+    ]
+   }
+  },
+  "id": "central-university-of-punjab__student-cooperative-mess",
+  "name": "Central University of Punjab",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "aloo_paratha",
+     "amul_butter",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "egg_curry",
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad",
+     "dal_makhani",
+     "aloo_jeera"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "aloo_paratha",
+     "amul_butter",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "masoor_dal_dish",
+     "plain_rice",
+     "salad",
+     "roti",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "dahi",
+     "plain_rice",
+     "roti",
+     "salad"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "amul_butter",
+     "tea",
+     "dahi"
+    ],
+    "dinner": [
+     "dal_mix",
+     "gobhi_dry",
+     "plain_rice",
+     "roti",
+     "salad",
+     "papad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad",
+     "dal_mix"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "bread_slice",
+     "boiled_egg",
+     "fruit_portion",
+     "tea"
+    ],
+    "dinner": [
+     "roti",
+     "salad",
+     "plain_rice"
+    ],
+    "lunch": [
+     "aloo_jeera",
+     "poori",
+     "plain_rice",
+     "veg_raita"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "poori",
+     "chole",
+     "tea"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "aloo_jeera",
+     "plain_rice",
+     "roti",
+     "salad"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "amul_butter",
+     "dahi",
+     "tea"
+    ],
+    "dinner": [
+     "dal_mix",
+     "roti",
+     "salad",
+     "kheer"
+    ],
+    "lunch": [
+     "dahi",
+     "plain_rice",
+     "roti",
+     "salad"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "amul_butter"
+    ],
+    "dinner": [
+     "plain_rice",
+     "roti",
+     "salad"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dahi",
+     "salad"
+    ]
+   }
+  },
+  "id": "central-university-of-punjab__student-cooperative-mess",
+  "name": "Central University of Punjab",
+  "region": "IN"
+ },
+ "settledByHand": 33,
+ "warnings": []
+}

@@ -1,0 +1,11 @@
+<!-- NIT Manipur | Hostels - revised mess menu | read by the model -->
+<!-- page 1 -->
+| Days | Breakfast | Lunch | Evening Snacks | Dinner |
+| --- | --- | --- | --- | --- |
+| Mondays | Puri + Channa Aaloo | Parval /Soybean + Green Moong Dal + Mix Chutney + Kangso | Tea + Biscuit | Challa Batura (No Roti) + Jinga Moong Dal + Onion Chop / Fish Curry (80-90g) |
+| Tuesday | Idli Vada + Chutney + Sambhar Or Maggi + Sauce | Khadi Pakora / Aaloo Tamatar + Iromba | Samosa | Rajmah + Tadka Channa Dal + Egg (2 Pcs) Curry with Aaloo |
+| Wednesday | Poha + Usal Or Chowmein + Sauce | Aaloo Began / Cauliflower + Masoor Dal + Papad + Kangso | Tea + Biscuit | Chicken + Moong Dal + Matar Paneer (130g) (60-80g) |
+| Thursday | Puri + Channa Aaloo | Jinga Aaloo Thim + Toor Dal Tadka + Veg Raita + Iromba | Tea + Biscuit | Dal Fry + Bheendi Onion Aaloo + Rasam / Sambhar + Papad + Egg (2 Pcs) Curry with Aaloo |
+| Friday | Aaloo Paratha + Sauce | Arvi Tamarind + Channa Dal + Papad Or Kangso | Kachodi | Moong Dal + Paneer Masala + Chicken Aaloo |
+| Saturday | Pav Bhaji | Pumpkin Black Channa Dal + Papad + Masoor Dal + Iromba | Tea + Biscuit | Dal Makhani + Veg Manchurian + Egg (2 Pcs) Curry with Aaloo |
+| Sunday | Masala Dosa + Sambhar + Coconut Chutney Or Bread + Butter + Jam | Rasam + Mixed Veg + Mixed Dal + Boondi Raita + Kangso | Fruit Salad | Saani Paneer + Chicken + Moon Maasor Dal |

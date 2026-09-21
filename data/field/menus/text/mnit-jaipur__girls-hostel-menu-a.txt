@@ -1,0 +1,34 @@
+<!-- MNIT Jaipur | Girls hostel mess - Menu A | read by the model -->
+<!-- page 1 -->
+| Day of the Week | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Breakfast | Aloo + Puri | Onion & Tomato Uttapam + Sambhar | Pav - Bhaji | Cutlets + Sprouts | Aloo Sandwich + Omlet | Vada/Idli + sambhar | Aloo Pyaaz paratha |
+|  | Pickle | Coconut Chutney | Raw Onion + Lemon | Boiled Egg + Masala | Banana | Coconut Chutney | Pickle |
+|  | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Bread + Butter + Jam + Ketchup | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam | Brown Bread+Cornflakes +Butter+Jam |
+|  | Milk+Ginger Tea Coffee powder | Tea ( Adrak Elaichi) + Milk Coffee Powder | Tea ( Adrak Elaichi) + Milk Coffee Powder | Tea ( Adrak Elaichi) + Milk Coffee Powder | Tea ( Adrak Elaichi) + Milk Coffee Powder | Tea ( Adrak Elaichi) + Milk Coffee Powder | Tea ( Adrak Elaichi) + Milk Coffee Powder |
+|  | Banana | Banana | Banana | Banana | Banana | Rooh Afza Milkshake | Coffee Powder |
+| Lunch - Mon - Fri (12:00 pm - 2:00 pm) Sat - Sun (12:30 pm - 2:30 pm) |  |  |  |  |  |  |  |
+|  | Sindhi Kadhi | Arhar Dal | Rajma | Arhar Dal | Aloo Tamatar | Chole Bature | Kadai Paneer |
+|  | Jeera Aloo/ Aaloo Pyaz | Masala Bhindi | Pethe ki Sabji | Soyabean Punjabi Style | Boondi ka raita | Matar Pulao | Dal Tadka Punjabi |
+|  | Rice | Jeera Rice | Rice | Lemon Rice | Paratha | Vinegar Onion | Veg. Pulao+Millets Namkeen |
+|  | Buttermilk | Buttermilk | Chapati | Chapati | Garlic Chutney | Pickle + Lemon | Ice Cream (Chocolate) |
+|  | Chapati | Chapati | Curd | Dahi Vada | Rice | Veg. Raita | Chapati |
+|  | Lemon + Pickle + fried Green Chill + Mixed Salad | Lemon + Pickle + Salad | Lemon + Pickle + Onion Salad | Lemon + Pickle + Fried Chill + Mixed Salad | Salad + Lemon + Pickle | Fried Chili | Lemon + Pickle+ Mixed salad |
+| Snacks - 5.30 pm - 06.00 pm |  |  |  |  |  |  |  |
+|  | Aloo Papi Chaat (with dahi) | Poha/Samosa | Kachori / Pakodi | Aaloo Cholay Tikki | Chole Kulche (one piece) | Vada Pav(one piece) | White Pasta |
+|  | Green Chutney + Ketchup | Fryums | Green Chutney + Ketchup | Fryums | Tea ( Adrak Elaichi) | Potato Chips + Ketchup | Tea ( Adrak Elaichi) |
+|  | Tea ( Adrak Elaichi) Ketchup | Tea ( Adrak Elaichi) | Tea ( Adrak Elaichi) | Tea ( Adrak Elaichi) | Green Chutney | Tea ( Adrak Elaichi) | Fryums |
+| Dinner - 7.30 pm - 9.30 pm |  |  |  |  |  |  |  |
+|  | Aaloo Parwal | Kabuli Chana + Puri | Egg Curry | Gatte Ki Sabji | Malai Kofta | Moong Dal | Lacha Paratha |
+|  | Mixed dal | Rice | Matar Paneer Masala | Mashed Potatoes | Seasonal Vegetable | Kala Chana Masala(Fried with Onions) | Dal Makhani+Veg. Biryani |
+|  | Rice | Angurri Petha (One Piece) | Lemon + Pickle | Pulao | Lemon+Pickle+Mixed Salad | Gujhi Tamatar Chatni | Sev Tamatar(Dhaba Style) |
+|  | Chapati | Lemon + Pickle | Fried Rice | Chapati | Rice | Roti+Rice | Lemon + Pickle |
+|  | Lemon + Pickle | Mixed salad | Chapati | Rasgulla/Gulaab Jamun (2 pieces) | Chapati | Lemon+Pickle | Papad |
+|  | Papad | Papad | Mixed Salad | Lemon + Pickle + Mixed salad | Papad | Fryums | Salad |
+
+<!-- page 2 -->
+| Meal | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Breakfast | Idly, Sambar, Chutney | Idly, Sambar, Chutney | Idly, Sambar, Chutney | Idly, Sambar, Chutney | Idly, Sambar, Chutney | Idly, Sambar, Chutney | Idly, Sambar, Chutney |
+| Lunch | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam |
+| Dinner | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam | Rice, Sambar, Rasam, Chutney, Curry, Pickle, Payasam |

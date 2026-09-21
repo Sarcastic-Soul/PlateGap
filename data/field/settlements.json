@@ -1,0 +1,1673 @@
+{
+ "_about": "How the field study settles every written name the live parser would not place. 'rules' are tried in order against the normalised name and the first whose pattern appears in it wins; each carries its reason. 'global' settles one written name by hand and beats the rules; 'menus' does the same for one menu only. A value is a catalog dish id, a list of them (a written name that is several dishes), or null (not food the study counts). 'crop' keeps the menu out of a whole web page; 'numbered' lists menus that separate dishes with numbers. The outcome for every name is in settled.csv.",
+ "numbered": [
+  "gniot-greater-noida__hostel"
+ ],
+ "rules": [
+  [
+   "\\b(chicken|mutton|fish|prawns?|keema|kosha|rogan ?josh|non ?veg|nv|meat|kabab|kebab|tikka masala chicken|katla|rohu|pomfret|koni)\\b(?!.*\\b(soya|nutrela|veg)\\b)",
+   null,
+   "meat and fish: the study solves vegetarian and egg diets, which never eat them"
+  ],
+  [
+   "^(veg|non veg|mixed|mix|plain|punjabi|day|snacks|special|students? s? special|nirf|aqar|ariia|placement|per plate.*|curry item|curry|masala|boiled|black|buttered|fried|dry|gravy|extra|extras|veg extras|non veg extras|options?|or|any|one|nos?|pcs?|quantity|unlimited|limited|sunday|monday|tuesday|wednesday|thursday|friday|saturday|breakfast|lunch|dinner|mess|menu|week|red|green|white|hot|cold|sweet dish|tandoor veg)$",
+   null,
+   "a heading, a label or a word left over from a split cell, not a dish"
+  ],
+  [
+   "\\b(sns college|university|institute|hostel|warden|committee|signature|note|timing|timings|contractor|rate|price|coupon)\\b",
+   null,
+   "page furniture: names, notes and signatures, not food"
+  ],
+  [
+   "^(salt|sugar|ketchup|catchup|tomato sauce|sauce|chilli sauce|soya sauce|vinegar|vinegar onion|green chill(i|y|ies)|red chill(i|e|y)|fried (mirchi|chil+i|chil+y)|mirchi|sounf|saunf|fennel|mouth freshener|lemon|lemons|lemon slices?|lemon wedges?|lime|nimbu|masala papad|chat masala|ice|water)$",
+   null,
+   "a condiment or garnish: served in amounts too small to move a nutrient"
+  ],
+  [
+   "\\b(lemon (juice|water)|lime (juice|water)|nimbu pani|nimbou pani|shikanji|shikanjvi|roo?h ?af[a-z]*|aam panna|sharbat|sherbet|jal ?jee?ra|jaljera|rasna|tang)\\b",
+   null,
+   "a sweetened water drink: sugar, and no nutrient the study measures in any amount"
+  ],
+  [
+   "\\b(butter ?milk|chaa?ch|chaas|chanch|mor|majjiga|mattha|lassi|chhachh)\\b",
+   "dahi",
+   "buttermilk and lassi are thinned curd: stood in for by a small curd (80 g)"
+  ],
+  [
+   "\\b(curd rice|dahi chawal|thayir sadam|thayir sadham|curd sadam)\\b",
+   [
+    "plain_rice",
+    "plain_curd"
+   ],
+   "curd rice is rice and curd"
+  ],
+  [
+   "\\b(bournvita|horlicks|boost|complan|milk ?shake|banana shake|shake|cold coffee|badam milk|haldi milk|turmeric milk|rose milk|flavou?red milk|cornflakes milk|milk)\\b",
+   "milk_glass",
+   "a milk drink: a glass of milk"
+  ],
+  [
+   "\\b(coffee|tea|chai|chaya)\\b",
+   "tea",
+   "coffee and tea are made with milk in a mess: the catalog's tea stands in for both"
+  ],
+  [
+   "\\b(corn ?flakes|conflakes|chocos|muesli|cereal)\\b",
+   "cereal_bowl",
+   "breakfast cereal"
+  ],
+  [
+   "\\b(oats|oat meal|oatmeal|porridge)\\b",
+   "oatmeal",
+   "oats"
+  ],
+  [
+   "\\b(rait[h]?a|ratia|pachadi)\\b",
+   "veg_raita",
+   "a raita: curd with a vegetable"
+  ],
+  [
+   "\\b(curd|dahi|yogh?urt|thayir)\\b(?!.*\\b(vada|bhalla|puri|papdi)\\b)",
+   "plain_curd",
+   "curd"
+  ],
+  [
+   "\\b(om(e|m)?l(e|a)?tt?e?|omlet|egg bhurj[a-z]*|egg burj[a-z]*|scrambled|anda bhurji)\\b",
+   "egg_bhurji",
+   "an omelette or scrambled egg: egg cooked in oil"
+  ],
+  [
+   "\\begg (curry|masala|roast|gravy)|anda curry|piyazat egg|egg biryani\\b",
+   "egg_curry",
+   "egg curry"
+  ],
+  [
+   "\\beggs?\\b",
+   "boiled_egg",
+   "an egg"
+  ],
+  [
+   "\\b(biryani|biriyani|tahari|tehari|dum biryani)\\b",
+   "veg_biryani",
+   "a vegetable biryani"
+  ],
+  [
+   "\\b(pulao|pulav|polav|pulaav|pulau|fried rice|ghee rice|peas rice|matar rice|kashmiri)\\b",
+   "peas_pulao",
+   "a pulao or fried rice: rice cooked with oil and a vegetable"
+  ],
+  [
+   "\\b(khic?hd[a-z]*|khichadi|khichuri|kichadi|pongal|bisi ?bele|bisibele)\\b",
+   [
+    "plain_rice",
+    "dal_mix"
+   ],
+   "khichdi and pongal are rice cooked with dal"
+  ],
+  [
+   "\\b(sambh?a?r rice|sambar sadam|sambar sadham)\\b",
+   [
+    "plain_rice",
+    "sambhar"
+   ],
+   "rice with sambar"
+  ],
+  [
+   "\\b(lemon|tamarind|tomato|coconut|pudina|mint|palak|masala|curry leaf|jeera|puliyogare|puliyodharai|vangi|capsicum|onion|mango|chitranna|veg|vegetable|methi|carrot|coriander|garlic)( [a-z]+)? rice\\b|\\b(puliyogare|puliyodharai|chitranna|tamarind sadam|lemon sadam)\\b",
+   "onion_rice",
+   "a flavoured rice: rice tempered in oil"
+  ],
+  [
+   "\\b(jeera rice|jira rice|jeeera rice)\\b",
+   "jeera_rice",
+   "jeera rice"
+  ],
+  [
+   "\\b(rice|chawal|sadam|sadham|annam|bhaat|bhat)\\b",
+   "plain_rice",
+   "rice"
+  ],
+  [
+   "\\b(bbj|bread butter jam|bread butter and jam|bread jam butter)\\b",
+   [
+    "bread_slice",
+    "amul_butter",
+    "jam"
+   ],
+   "bread, butter and jam"
+  ],
+  [
+   "\\b(bread|toast|bun|pav|pao|sandwich|burger|sandwitch|s w)\\b",
+   "bread_slice",
+   "bread, however it is served"
+  ],
+  [
+   "\\b(par[ao]n?th?as?|parantha|paranthe|paratha|parotha|parotta|porotta|thepla|lachha|laccha|aloo s w)\\b",
+   "aloo_paratha",
+   "a paratha: the catalog's paratha stands in for all of them"
+  ],
+  [
+   "\\b(poo?ri|bhatt?ur[ae]|batt?ur[ae]|bhattra|luchi|kach[oa][rd]i|khasta)\\b",
+   "poori",
+   "a deep-fried bread"
+  ],
+  [
+   "\\b(naan|nan|kulcha|kulche|missi|makk?e? ?ki ?roti|rumali|tandoori roti|rot+i|rott|chapp?at+h?i|phulka|pulka|fulka|jowar|bajra|ragi|bhakri)\\b",
+   "roti",
+   "a flatbread"
+  ],
+  [
+   "\\b(sambh?a?r|sambaar|samber)\\b",
+   "sambhar",
+   "sambar"
+  ],
+  [
+   "\\b(rasam|rasum|saaru|chaaru|kuzhambu|kulambu|kuzhmabu|karakuzhambu|vathakuzhambu|morkuzhambu)\\b",
+   "rasam",
+   "a thin tamarind or pepper gravy"
+  ],
+  [
+   "\\b(kadh?i|khadi|kari pakora|kadi pakora|kadhi pakor[a-z]*)\\b",
+   "dahi",
+   "kadhi is curd thickened with gram flour: stood in for by a small curd"
+  ],
+  [
+   "\\b(dal ma?kh?a?ni|dal makhni|dal malka|maa ki dal|kali dal|urad dal|dal bukhara|black urad)\\b",
+   "dal_makhani",
+   "a black dal"
+  ],
+  [
+   "\\b(rajm[ah]+|razma|rajmah)\\b",
+   "rajma_dish",
+   "rajma"
+  ],
+  [
+   "\\b(lobi[ay]a|lobhia|rongi|chawli|chavli|moth|matki|matkee|kulthi|horse gram|red beans?|beans curry|usal|usli|misal)\\b",
+   "rajma_dish",
+   "a whole-bean curry: rajma stands in"
+  ],
+  [
+   "\\b(sprout[a-z]*|sabut moong|moong salad|boiled chana|chana chaat|sundal|sundhal|green gram|bengal gram|boiled (ground ?nuts?|peanuts?|corn))\\b",
+   "boiled_sprouts",
+   "sprouts or boiled pulses"
+  ],
+  [
+   "\\b(kala chana|kale chane|black chana|kala chane|ghugni|ghughni)\\b",
+   "black_chana_aloo",
+   "black chana"
+  ],
+  [
+   "\\b(ch+ole|ch+ola|ch+ana masala|chen+a masala|chan+a masala|chickpea|kabuli|pindi|chana curry|chana gravy|safed chana|white chana|channa|chenna)\\b(?! dal)",
+   "chole",
+   "a chickpea curry"
+  ],
+  [
+   "\\b(masoor|masur|mashoor|maasor|masoon)\\b",
+   "masoor_dal_dish",
+   "masoor dal"
+  ],
+  [
+   "\\b(arhar|arahar|ahrhar|arthar|arkar|toor|tuvar|tur|togari|yellow dal|dal yellow|peeli dal|dal peeli|moong daal peeli)\\b",
+   "toor_dal_tadka",
+   "toor dal"
+  ],
+  [
+   "\\b(mix dal|mixed dal|dal mix|panchmel|panchratan|mixed daal|mix daal)\\b",
+   "dal_mix",
+   "mixed dal"
+  ],
+  [
+   "\\b(d[a]+h?l|daal|dhal|paruppu|pappu|dalma|bafl[ae]|moong|mung|mong|chana dal|chana daal|chanadal)\\b",
+   "dal_tadka",
+   "a dal: the catalog's dal tadka stands in"
+  ],
+  [
+   "\\b(soya|soyabean|soyabeen|soybean|soya been|nutrela|nutri|meal maker|mealmaker|chunks)\\b",
+   "soya_badi",
+   "soya chunks"
+  ],
+  [
+   "\\b(paneer bhurj[a-z]*|paneer burji)\\b",
+   "paneer_bhurji",
+   "paneer bhurji"
+  ],
+  [
+   "\\b(paneer butter|butter paneer|shahi paneer|paneer makhani|paneer lababdar|paneer labdabar|kadai paneer|kadhai paneer|karai paneer|paneer do py[a-z]*)\\b",
+   "paneer_butter_masala",
+   "a rich paneer gravy"
+  ],
+  [
+   "\\b(pa[nm]c?e+r|panir|pancer)\\b",
+   "mutter_paneer",
+   "a paneer dish: mutter paneer stands in"
+  ],
+  [
+   "\\btofu\\b",
+   "tofu_stirfry",
+   "tofu"
+  ],
+  [
+   "\\bmalai kofta\\b",
+   "malai_kofta",
+   "malai kofta"
+  ],
+  [
+   "\\b(kofta|manchurian|manchuria)\\b",
+   "veg_kofta",
+   "fried vegetable balls in gravy"
+  ],
+  [
+   "\\bdum aa?loo\\b",
+   "dum_aloo",
+   "dum aloo"
+  ],
+  [
+   "\\b(kheer|khir|payas[a-z]*|payesh|chena pays|firni|phirni|sev[ae]?i[a-z]*|sewai[a-z]*|seviy[a-z]*|semiya|samiya|vermicelli|vermisli|savai|rabdi|rabri|basundi)\\b",
+   "kheer",
+   "a milk pudding"
+  ],
+  [
+   "\\b(halwa|halva|sheera|seera|kesari|kesri|sooji|suji)\\b",
+   "moong_halwa",
+   "a halwa"
+  ],
+  [
+   "\\b(custard|trifle|pudding|ice ?cream|kulfi)\\b",
+   "fruit_custard",
+   "a milk dessert: fruit custard stands in"
+  ],
+  [
+   "\\b(brownie|pastry|cake|muffin|donuts?|doughnuts?)\\b",
+   "brownie_square",
+   "a baked sweet"
+  ],
+  [
+   "\\b(gulab ?jamun|jamun|rasgul+a|rasagul+a|rosogol+a|rasmalai|ras malai|cham ?cham|imarti|jal[ae]bi|jelebi|jil[ae]bi|jellebi|lad+o+|lad+u|barfi|burfi|mysore pak|kaju katli|gujiya|malpua|mithai|milk cake|sweet(?! ?corn)|boondi|shahi toast|double ka meetha)\\b(?! raita)",
+   "gulab_jamun",
+   "an Indian sweet: gulab jamun stands in"
+  ],
+  [
+   "\\b(fruits?|banana|kela|apple|papaya|pear|guava|orange|water ?melon|musk ?melon|pine ?apple|grapes|chikoo|sapota|mango|pomegranate|mosambi|sweet lime|singapuribanana)\\b(?! (juice|shake|custard|rice))",
+   "fruit_portion",
+   "a piece of fruit"
+  ],
+  [
+   "\\bjuice\\b",
+   "orange_juice_glass",
+   "a fruit juice"
+  ],
+  [
+   "\\b(idl[iy]|idiyappam|puttu|dhokla|khaman|khandvi|handvo)\\b",
+   "idli",
+   "a steamed batter or dough"
+  ],
+  [
+   "\\b(d[o]+sai?|ut+[ae]?h?p+[ae]?m|uth?app?am|o+th?a+h?t?p+a?m|ootahppam|utahppam|appam|pesarattu|adai|chill?a|cheela|neer dosa|rava dosa)\\b",
+   "dosa",
+   "a pancake of fermented batter or gram flour: dosa stands in"
+  ],
+  [
+   "\\b(medu vada|vadai|vada|wada|vadagam)\\b(?! pav)",
+   "vada",
+   "a vada"
+  ],
+  [
+   "\\b(vada pav|vada paw|wada pav)\\b",
+   [
+    "vada",
+    "bread_slice"
+   ],
+   "vada pav is a vada in a bun"
+  ],
+  [
+   "\\b(pav bh?aa?ji|misal pav|dabeli)\\b",
+   "pav_bhaji",
+   "pav bhaji"
+  ],
+  [
+   "\\b(upma|uppuma|uppittu|daliya|dalia|dalhiya|sabudana|sabu dana|rava)\\b",
+   "upma",
+   "upma, or a grain porridge made like it"
+  ],
+  [
+   "\\b(poha|pohe|aval|avalakki|chivda|chuda|murmura|puffed rice|kurmura)\\b",
+   "poha",
+   "flattened or puffed rice"
+  ],
+  [
+   "\\b(pasta|macaroni|macroni|maggi|noodles|chow ?mein|chowmin|hakka|chow)\\b",
+   "noodles",
+   "noodles or pasta"
+  ],
+  [
+   "\\b(samosa|patt?ies|puff|kachori)\\b",
+   "samosa",
+   "a samosa or a pastry like it"
+  ],
+  [
+   "\\b(cutlet|tikki|hara bhara|aloo chop|alu chop)\\b",
+   "cutlet",
+   "a cutlet"
+  ],
+  [
+   "\\b(pakod[a-z]*|pakor[a-z]*|bajji|bhajji|bhajiya|bajia|bonda|bujji|pakodi|pakori|alo 65|aloo 65|gobi 65|potato 65)\\b",
+   "pakoda",
+   "a fritter"
+  ],
+  [
+   "\\b(bhel|chaa?t|pani ?puri|gol ?gappa|papdi|sev puri|dahi puri|dahi vada|dahi bhalla)\\b",
+   "corn_chat",
+   "a chaat"
+  ],
+  [
+   "\\b(fry[a-z]*ms?|fryums|fryams|fryumes|vadam|papp?ad[a-z]*|appalam|pappadam)\\b",
+   "papad",
+   "a papad or fryum"
+  ],
+  [
+   "\\b(chips|kurkure|namkeen|bhujia|bhujiya|mixture|sev|biscuits?|cookies|rusk|nimki|mathri)\\b",
+   "ratlami_sev",
+   "a packaged or fried namkeen: sev stands in"
+  ],
+  [
+   "\\b(soup)\\b",
+   "tomato_soup_bowl",
+   "a soup"
+  ],
+  [
+   "\\b(sweet ?corn|corn)\\b",
+   "sweetcorn_side",
+   "sweetcorn"
+  ],
+  [
+   "\\b(pickle|achaa?r|oorugai|aqar|avakaya)\\b",
+   "pickle",
+   "pickle"
+  ],
+  [
+   "\\b(coconut chutney|nariyal chutney|thengai chutney)\\b",
+   "nariyal_chutney",
+   "coconut chutney"
+  ],
+  [
+   "\\b(imli|tamarind|saunth|sonth|meethi chutney)\\b",
+   "imli_chutney",
+   "a tamarind chutney"
+  ],
+  [
+   "\\b(tomato|onion|red|garlic|peanut|ground ?nut|kara|tomato onion) ch[a-z]*t?n[a-z]*\\b|\\bthokku\\b",
+   "red_chutney",
+   "a red chutney"
+  ],
+  [
+   "\\b(ch[au]tn[a-z]*|chatn[a-z]*|chatney|chutny|thuvaiyal|thogayal|thov?iyal|thuvayal|podi|gun ?powder|pachadi)\\b",
+   "green_chutney",
+   "a chutney"
+  ],
+  [
+   "\\b(ghee|butter)\\b",
+   "amul_butter",
+   "butter or ghee"
+  ],
+  [
+   "\\bjam\\b",
+   "jam",
+   "jam"
+  ],
+  [
+   "\\b(aa?lo+o? ?(matt?ar|mutter|tamatar|tomato|tamar|tom)|potato (peas|tomato))\\b",
+   "aloo_tomato",
+   "a potato gravy"
+  ],
+  [
+   "\\b(aa?l[ou]+ (jeera|jira)|jeera aa?loo|jeeraa aloo)\\b",
+   "aloo_jeera",
+   "jeera aloo"
+  ],
+  [
+   "\\b(gobh?i|cauliflower|cabbage|patta ?gobhi|band+ha ?kobi|bondh?akobi|fulkobi|phool ?gobhi)\\b",
+   "gobhi_dry",
+   "a cabbage or cauliflower sabzi"
+  ],
+  [
+   "\\b(bhi?ndi|bhindl|okra|ladies ?finger|lady ?finger|vendakkai)\\b",
+   "kurmuri_bhindi",
+   "a bhindi sabzi"
+  ],
+  [
+   "\\b(pumpkin|kaddu|kadu|kashifal|sitaphal|pet?ha|petah|red pumpkin)\\b",
+   "kadu_masala",
+   "a pumpkin sabzi"
+  ],
+  [
+   "\\b(salad|kachumb?er|kachumar|cucumber|kheera|khira|onion|tomato|carrot|gajar|beet ?root|radish|mooli|lettuce)\\b(?!.*\\b(poriyal|sabzi|sabji|subzi|fry|curry|masala|thoran|halwa|matar|matter|mutter|gravy|dry|bhaji|kootu|koottu)\\b)",
+   "salad",
+   "raw vegetables"
+  ],
+  [
+   "\\b(poriyal|thoran|sabz?i|sabji|subzi|subji|bh?aa?ji|fry|dry|curry|kootu|koottu|kurma|korma|kuruma|avial|aviyal|stew|jal ?fr[ae]zi|jhalfr[ae]zi|gravy|masala|seasonal|vegetables?|veg|lauki|gh?iya|gheeya|dudhi|doodhi|torai|turai|tinda|parwal|parval|baing[ae]n|brinjal|begun|bengena|bharta|karela|beans|french beans|yam|arvi|kundru|tondli|methi|palak|saag|sarso|spinach|drumstick|capsicum|shimla|mushroom|baby ?corn|peas|matt?ar|mutter|kathal|jackfruit|chow chow|gourd|raw banana|plantain|kosambari|potato|aa?l[ou]+|besan gatt[a-z]*|gatt[ae]|carrot|beet ?root|kerrai|keerai|colocasia|okra)\\b",
+   "mix_veg",
+   "a vegetable dish: mix veg stands in"
+  ]
+ ],
+ "global": {
+  "ddr": "dal_tadka",
+  "kangso": "mix_veg",
+  "iromba": "mix_veg",
+  "lobia": "rajma_dish",
+  "alog tamar": "aloo_tomato",
+  "poor atta maid ra bathuai": "poori",
+  "bichotala": null,
+  "salan": "mix_veg",
+  "mashed potatoes": "aloo_choka",
+  "ulavacharu": "rasam",
+  "double ka metha": "gulab_jamun",
+  "curdy": "plain_curd",
+  "matta": "dahi",
+  "alog pyao gorbi": "gobhi_dry",
+  "green dhanya": null,
+  "pudna": null,
+  "daji kabar": null,
+  "spcl": null,
+  "chittan panner thika": "mutter_paneer",
+  "green chantey": "green_chutney",
+  "madira": null,
+  "pattisapta": "gulab_jamun",
+  "alog soyabiran": "soya_badi",
+  "tebri": "peas_pulao",
+  "alog dum": "dum_aloo",
+  "plain holrlcks": "milk_glass",
+  "milkcurd": "plain_curd",
+  "finger fries": "french_fries",
+  "medhu vadi 2": "vada",
+  "morkozhambu": "dahi",
+  "vethakkozhambu": "rasam",
+  "vaazhaiporiyal": "mix_veg",
+  "thelpuri": "corn_chat",
+  "bisibelabaath": [
+   "plain_rice",
+   "dal_mix"
+  ],
+  "greens": "mix_veg",
+  "karakolambu": "rasam",
+  "vathal": "papad",
+  "pulikolambu": "rasam",
+  "morekozhambhu": "dahi",
+  "iv chilli panner": "mutter_paneer",
+  "raw kitchidi": "upma",
+  "ladis finger": "kurmuri_bhindi",
+  "mochachi": "mix_veg",
+  "besibela bath": [
+   "plain_rice",
+   "dal_mix"
+  ],
+  "patoria": "pakoda",
+  "kadai panner": "paneer_butter_masala",
+  "vadacury": "mix_veg",
+  "rav kitchidi": "upma",
+  "morkuzhanbu": "dahi",
+  "mochhai": "mix_veg",
+  "raima": "rajma_dish",
+  "daalfried urad sabut": "dal_makhani",
+  "rasogulla": "gulab_jamun",
+  "idlyappam": "idli",
+  "ponnga": [
+   "plain_rice",
+   "dal_mix"
+  ],
+  "keera kuttu": "mix_veg",
+  "bottle guard kuttu": "mix_veg",
+  "mixveg poryal alternate weeks": "mix_veg",
+  "soyamilk": "milk_glass",
+  "green baigan": "mix_veg",
+  "bhelpuri": "corn_chat",
+  "bondi raita": "boondi_raita",
+  "macrony with ketchup": "noodles",
+  "vegkhichadi": [
+   "plain_rice",
+   "dal_mix"
+  ],
+  "white santhagi": "idli",
+  "santhagai": "idli",
+  "lemon tomato santhagai": "idli",
+  "karaichutney": "red_chutney",
+  "rcie": "plain_rice",
+  "rti": "roti",
+  "fried green chill": null,
+  "fried chill": null,
+  "fried green chili": null,
+  "salt table": null,
+  "coriander": null,
+  "item": null,
+  "unit": null,
+  "extra regular in all messes": null,
+  "cup of 150 ml": null,
+  "extra regular non vegetarian in select messes": null,
+  "extra regular vegetarian items in all messes": null,
+  "other extras in all messes": null,
+  "two small pieces of 50gm each": null,
+  "eggplant 2p": "mix_veg",
+  "popcorn 50gm": "poha",
+  "millets chiva": "poha",
+  "packet item": null,
+  "amti": "dal_tadka",
+  "palad dalitur": "dal_tadka",
+  "raam": null,
+  "alupitika": "aloo_choka",
+  "khorisa": "pickle",
+  "kaskol": "mix_veg",
+  "tue": null,
+  "wed": null,
+  "sat": null,
+  "sun": null,
+  "unrestricted amount kichri": [
+   "plain_rice",
+   "dal_mix"
+  ],
+  "beguni": "pakoda",
+  "aloodum": "dum_aloo",
+  "rasgola": "gulab_jamun",
+  "big rajbhog": "gulab_jamun",
+  "kalia": "mix_veg",
+  "rasogola": "gulab_jamun",
+  "utterpam": "dosa",
+  "special dinner": null,
+  "hari mirch": null,
+  "fried mirch": null,
+  "squash": null,
+  "sweets": "gulab_jamun",
+  "shahi tukda": "gulab_jamun",
+  "boiled chawl white": "plain_rice",
+  "snack item": null,
+  "roasted phool makhana": "ratlami_sev",
+  "sheva": "kheer",
+  "maithi": "mix_veg",
+  "paper": null,
+  "besan batta": "pakoda",
+  "mater": "mix_veg",
+  "kunru tendla": "mix_veg",
+  "boiled corns": "sweetcorn_side",
+  "chass": "dahi",
+  "marti": null,
+  "aloo bhujiyai rice veg pulao basmati rice daal tadka": [
+   "aloo_bhujiya",
+   "peas_pulao",
+   "dal_tadka"
+  ],
+  "aloo gajar matar masoor dal roti chawal": [
+   "mix_veg",
+   "masoor_dal_dish",
+   "roti",
+   "plain_rice"
+  ],
+  "aloo gobhi matar gravy as per season": [
+   "gobhi_dry"
+  ],
+  "aloo matar tomato sabzi pudina raita masala rice poori salad achar": [
+   "aloo_tomato",
+   "veg_raita",
+   "onion_rice",
+   "poori",
+   "salad",
+   "pickle"
+  ],
+  "aloo papi chaat with dahi": [
+   "corn_chat",
+   "dahi"
+  ],
+  "aloo pyaaz rajma roti chawal": [
+   "mix_veg",
+   "rajma_dish",
+   "roti",
+   "plain_rice"
+  ],
+  "aloo tikki papri with matar": [
+   "cutlet",
+   "corn_chat"
+  ],
+  "aloo tom sabzi seasonal veg plain rice phulka salad achar": [
+   "aloo_tomato",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "aloo tomato with plain paratha": [
+   "aloo_tomato",
+   "aloo_paratha"
+  ],
+  "baati chokha non veg chicken biryani": [
+   "roti",
+   "aloo_choka"
+  ],
+  "baigan bharta chatni salad dahi": [
+   "mix_veg",
+   "green_chutney",
+   "salad",
+   "dahi"
+  ],
+  "banana 01 kala chana maggi t souce": [
+   "fruit_portion",
+   "black_chana_aloo",
+   "noodles"
+  ],
+  "banana milk tea aloo parantha": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "aloo_paratha"
+  ],
+  "banana milk tea aloo poori dalhiya": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "poori",
+   "upma"
+  ],
+  "banana milk tea idli with sambar": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "idli",
+   "sambhar"
+  ],
+  "banana milk tea methi parantha white matar": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "aloo_paratha",
+   "matar_chola"
+  ],
+  "banana milk tea pav bhaji dalhiya": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "pav_bhaji",
+   "upma"
+  ],
+  "banana milk tea poha chutney aloo sandwich": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "poha",
+   "green_chutney",
+   "bread_slice"
+  ],
+  "banana milk tea uttapam with sambar coconut chutney": [
+   "fruit_portion",
+   "milk_glass",
+   "tea",
+   "dosa",
+   "sambhar",
+   "nariyal_chutney"
+  ],
+  "boiled egg 01 no or 04 numbers of bread slices sandwich bread cake size with 17 gram butter or 20 gram jam or boiled egg 01 no or 8 5 gram butter": [
+   "boiled_egg",
+   "bread_slice",
+   "amul_butter",
+   "jam"
+  ],
+  "boiled egg 01 no or 04 numbers of bread slices sandwich bread cake size with 17 gram butter or boiled egg 01 no or 8 5 gram butter": [
+   "boiled_egg",
+   "bread_slice",
+   "amul_butter"
+  ],
+  "boondi raita with quantity of curd 100 gram": [
+   "boondi_raita"
+  ],
+  "butter milk 150ml or veg": [
+   "dahi"
+  ],
+  "chanamasala dum alu curry matar pullow moong dal halwa": [
+   "chole",
+   "dum_aloo",
+   "peas_pulao",
+   "moong_halwa"
+  ],
+  "channa daal sweet maalpuja veg": [
+   "dal_tadka",
+   "gulab_jamun"
+  ],
+  "chappathi 2 x 60 g boiled rice aloo gobi masala 100g masoor dal 100g pepper rasam pickle": [
+   "roti",
+   "plain_rice",
+   "gobhi_dry",
+   "masoor_dal_dish",
+   "rasam",
+   "pickle"
+  ],
+  "chappathi 2 x 60 g boiled rice aviyal 100g sambar rasam 100g pepper rasam 1 curd 1": [
+   "roti",
+   "plain_rice",
+   "mix_veg",
+   "sambhar",
+   "rasam",
+   "plain_curd"
+  ],
+  "chappathi 2 x 60 g boiled rice beetroot poriyal 100g masoor dal tomato rasam 100g pepper rasam 1 curd": [
+   "roti",
+   "plain_rice",
+   "mix_veg",
+   "masoor_dal_dish",
+   "rasam",
+   "plain_curd"
+  ],
+  "chappathi 2 x 60 g boiled rice boiled rice raita 100g plantain fry 100g dal rasam 1 curd": [
+   "roti",
+   "plain_rice",
+   "veg_raita",
+   "mix_veg",
+   "dal_tadka",
+   "rasam",
+   "plain_curd"
+  ],
+  "chappathi 2 x 60 g boiled rice buttermilk 100g chola masala 100g sambar pickle": [
+   "roti",
+   "plain_rice",
+   "dahi",
+   "chole",
+   "sambhar",
+   "pickle"
+  ],
+  "chappathi 2 x 60 g boiled rice carrot beans poriyal cabbage": [
+   "roti",
+   "plain_rice",
+   "mix_veg",
+   "gobhi_dry"
+  ],
+  "chappathi 2 x 60 g boiled rice gobi 65 masala 100g sambar rasam pickle": [
+   "roti",
+   "plain_rice",
+   "pakoda",
+   "sambhar",
+   "rasam",
+   "pickle"
+  ],
+  "chappathi 2 x 60 g boiled rice masoor mong dal bhindi masala 100g pepper rasam 1 curd": [
+   "roti",
+   "plain_rice",
+   "masoor_dal_dish",
+   "kurmuri_bhindi",
+   "rasam",
+   "plain_curd"
+  ],
+  "chappathi 2 x 60 g boiled rice mixed dal fried potato masala 100g pepper rasam 1 curd 100ml": [
+   "roti",
+   "plain_rice",
+   "dal_mix",
+   "aloo_jeera",
+   "rasam",
+   "plain_curd"
+  ],
+  "chappathi 2 x 60 g boiled rice mixed dal veg kuruma 100g tomoto rasam pickle": [
+   "roti",
+   "plain_rice",
+   "dal_mix",
+   "mix_veg",
+   "rasam",
+   "pickle"
+  ],
+  "chappathi 2 x 60 g boiled rice sambar egg masala": [
+   "roti",
+   "plain_rice",
+   "sambhar",
+   "egg_curry"
+  ],
+  "chappathi 2 x 60 g boiled rice soya chunks masala 100g biryani 1g toor dal fry pepper rasam 1 pickle": [
+   "roti",
+   "plain_rice",
+   "soya_badi",
+   "veg_biryani",
+   "toor_dal_tadka",
+   "rasam",
+   "pickle"
+  ],
+  "chicken curry 2 pos matar pulav": [
+   "peas_pulao"
+  ],
+  "chola masala seasonal veg plain rice phulka salad achar": [
+   "chole",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dahi bhalla with pappri with green": [
+   "dahi",
+   "vada",
+   "corn_chat",
+   "green_chutney"
+  ],
+  "dal ahar moong kofta curry veg biryani": [
+   "toor_dal_tadka",
+   "veg_kofta",
+   "veg_biryani"
+  ],
+  "dal ahar tahari moong kofta curry alu soya been curry dahi sewai": [
+   "toor_dal_tadka",
+   "veg_biryani",
+   "veg_kofta",
+   "soya_badi",
+   "dahi",
+   "kheer"
+  ],
+  "dal bafle with garlic chutney": [
+   "dal_tadka",
+   "roti",
+   "red_chutney"
+  ],
+  "dal chana louki alu f beens dahi salad hari chatni": [
+   "dal_tadka",
+   "mix_veg",
+   "dahi",
+   "salad",
+   "green_chutney"
+  ],
+  "dal chaney ki gattey ki sabzi plain rice phulka salad achar kheer": [
+   "dal_tadka",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle",
+   "kheer"
+  ],
+  "dal gobhi fried alu arhar chatni": [
+   "toor_dal_tadka",
+   "gobhi_dry",
+   "green_chutney"
+  ],
+  "dal kali masoor seasonal veg raita phulka salad achar": [
+   "masoor_dal_dish",
+   "mix_veg",
+   "veg_raita",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dal lauki chana seasonal veg plain rice phulka salad achar": [
+   "dal_tadka",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dal makhani seasonal veg pulao soyabeen phulka salad achar": [
+   "dal_makhani",
+   "mix_veg",
+   "peas_pulao",
+   "soya_badi",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dal mix achar aloo plain rice phulka salad achar": [
+   "dal_mix",
+   "aloo_jeera",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dal mix tadka cabbage mater dahi": [
+   "dal_mix",
+   "gobhi_dry",
+   "dahi"
+  ],
+  "dal mix tadka tawa veg fry": [
+   "dal_mix",
+   "mix_veg"
+  ],
+  "dal mix tadka zeera rice kala jam": [
+   "dal_mix",
+   "jeera_rice",
+   "gulab_jamun"
+  ],
+  "dal yellow baigan bharta plain rice phulka salad achar": [
+   "toor_dal_tadka",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "dal yellow raita tehari vegetable phulka salad achar": [
+   "toor_dal_tadka",
+   "veg_raita",
+   "veg_biryani",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "doosa 4 groundnut chutney 150 ml with tea": [
+   "dosa",
+   "red_chutney",
+   "tea"
+  ],
+  "dry fruit ladot sweet maalpuja veg": [
+   "gulab_jamun"
+  ],
+  "dum alog non veg mutton biryani salan sweet karijatti": [
+   "dum_aloo"
+  ],
+  "dum aloo palak urad dal roti chawal": [
+   "dum_aloo",
+   "dal_makhani",
+   "roti",
+   "plain_rice"
+  ],
+  "egg 2 pcs banana 2 pcs": [
+   "boiled_egg",
+   "fruit_portion"
+  ],
+  "egg crr dal makhani onion rice nariyal laddo": [
+   "egg_curry",
+   "dal_makhani",
+   "onion_rice",
+   "gulab_jamun"
+  ],
+  "g mix veg sambar pepper rasam 1 curd": [
+   "mix_veg",
+   "sambhar",
+   "rasam",
+   "plain_curd"
+  ],
+  "gram jam along with 8 00 am 9 15 am on saturday": [
+   "gulab_jamun"
+  ],
+  "groundnut chutney 150 ml with tea": [
+   "red_chutney",
+   "tea"
+  ],
+  "hut stuffed khasta kachori alu gravy": [
+   "poori",
+   "aloo_tomato"
+  ],
+  "idly 6 x 50 g medhu vada 1 x 40 g sambar onion tomato chutney milk 150 ml with tea": [
+   "idli",
+   "vada",
+   "sambhar",
+   "red_chutney",
+   "milk_glass",
+   "tea"
+  ],
+  "jam egg bhurji 2 eggs boiled corn milk": [
+   "jam",
+   "egg_bhurji",
+   "sweetcorn_side",
+   "milk_glass"
+  ],
+  "jam egg bhurji 2 eggs boiled egg": [
+   "jam",
+   "egg_bhurji",
+   "boiled_egg"
+  ],
+  "kadhi pakori aloo parwal steamed rice phulka salad achar gulabjamun": [
+   "dahi",
+   "pakoda",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle",
+   "gulab_jamun"
+  ],
+  "kal chana masala curd 1 katori or 150gm any fruit seasonal": [
+   "black_chana_aloo",
+   "plain_curd",
+   "fruit_portion"
+  ],
+  "kala chana masala dum aloo plain rice phulka salad achar": [
+   "black_chana_aloo",
+   "dum_aloo",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "kashmiri matar pulao methu mali matar": [
+   "peas_pulao",
+   "pyaj_muter_malai"
+  ],
+  "kofta arhar dal roti chawal": [
+   "veg_kofta",
+   "toor_dal_tadka",
+   "roti",
+   "plain_rice"
+  ],
+  "louki kofta curry dal arhar gulabjamun zeera rice": [
+   "veg_kofta",
+   "toor_dal_tadka",
+   "gulab_jamun",
+   "jeera_rice"
+  ],
+  "malai soya curd non veg": [
+   "soya_badi"
+  ],
+  "masala mushroom non veg chicken masa": [
+   "mix_veg"
+  ],
+  "masoor sabut kala channa alu sp onion": [
+   "masoor_dal_dish",
+   "black_chana_aloo"
+  ],
+  "matar paneer kashifal sabzi jeeera rice phulka salad achar": [
+   "mutter_paneer",
+   "kadu_masala",
+   "jeera_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "matar paneer mix dal roti chawal kheer": [
+   "mutter_paneer",
+   "dal_mix",
+   "roti",
+   "plain_rice",
+   "kheer"
+  ],
+  "methi malai paneer non veg": [
+   "mutter_paneer"
+  ],
+  "methi mutter malai panner with veg shortba": [
+   "pyaj_muter_malai"
+  ],
+  "mix veg moong dal roti chawal raita": [
+   "mix_veg",
+   "dal_tadka",
+   "roti",
+   "plain_rice",
+   "veg_raita"
+  ],
+  "mix vegetables red masoor dal roti chawal": [
+   "mix_veg",
+   "masoor_dal_dish",
+   "roti",
+   "plain_rice"
+  ],
+  "mixed parantha with tomato chutney": [
+   "aloo_paratha",
+   "red_chutney"
+  ],
+  "moong chhilka dal sweet kheer": [
+   "dal_tadka",
+   "kheer"
+  ],
+  "mushroom biryani 2 x 60 g boiled rice raitha pickle": [
+   "veg_biryani",
+   "plain_rice",
+   "veg_raita",
+   "pickle"
+  ],
+  "onion tomato raita with quantity of curd 100 gram": [
+   "veg_raita"
+  ],
+  "onion utahppam 2 100 g sambar tomato": [
+   "dosa",
+   "sambhar"
+  ],
+  "paneer 150g sambar rasam pickle": [
+   "mutter_paneer",
+   "sambhar",
+   "rasam",
+   "pickle"
+  ],
+  "paneer chana dal roti chawal gulab jamun": [
+   "mutter_paneer",
+   "dal_tadka",
+   "roti",
+   "plain_rice",
+   "gulab_jamun"
+  ],
+  "paneer kali mirch or aloo chicken gravy": [
+   "mutter_paneer"
+  ],
+  "paner roll non veg chicken biryani": [
+   "mutter_paneer"
+  ],
+  "plain paratha or chicken rogan josh": [
+   "aloo_paratha"
+  ],
+  "plain parathas with alu sabzi or 04 numbers of bread slices sandwich bread cake size with 17 gram butter or 20 gram jam or boiled egg 01 no 8 5 gram egg": [
+   "aloo_paratha",
+   "aloo_jeera",
+   "bread_slice",
+   "amul_butter",
+   "jam",
+   "boiled_egg"
+  ],
+  "poha or 04 numbers of bread slices sandwich bread cake size with 17 gram butter or 20 gram jam or boiled egg 01 no or 8 5 gram butter": [
+   "poha",
+   "bread_slice",
+   "amul_butter",
+   "jam",
+   "boiled_egg"
+  ],
+  "poori 4 6 channa masala 150 g milk 150 ml with tea": [
+   "poori",
+   "chole",
+   "milk_glass",
+   "tea"
+  ],
+  "poori 6 aloo masala 150 g milk 150 ml with tea": [
+   "poori",
+   "aloo_jeera",
+   "milk_glass",
+   "tea"
+  ],
+  "poori aloo ki sabji pumpkin": [
+   "poori",
+   "aloo_jeera",
+   "kadu_masala"
+  ],
+  "potato 65 100g sambar rasam 1 pepper rasam 1 pickle": [
+   "pakoda",
+   "sambhar",
+   "rasam",
+   "pickle"
+  ],
+  "raima veg green peas kachori": [
+   "rajma_dish",
+   "poori"
+  ],
+  "raita green chutney boondi raita 150 200 ml": [
+   "veg_raita",
+   "green_chutney",
+   "boondi_raita"
+  ],
+  "rajma masala seasonal veg plain rice phulka salad achar": [
+   "rajma_dish",
+   "mix_veg",
+   "plain_rice",
+   "roti",
+   "salad",
+   "pickle"
+  ],
+  "rice 200g raw rice per head papad 6 1 per head chappathi 6 2 per head thick curd without adding water banana 5 inch": [
+   "plain_rice",
+   "papad",
+   "roti",
+   "plain_curd",
+   "fruit_portion"
+  ],
+  "sambar chutney for onion dosa": [
+   "sambhar",
+   "green_chutney"
+  ],
+  "sambhar salad hari chatni dal chana alu gajar fried booondi raita salad chatni": [
+   "sambhar",
+   "salad",
+   "green_chutney",
+   "dal_tadka",
+   "mix_veg",
+   "boondi_raita"
+  ],
+  "sarso saag arhar dal roti chawal": [
+   "mix_veg",
+   "toor_dal_tadka",
+   "roti",
+   "plain_rice"
+  ],
+  "seasonable green vegetable sweet dish fruit custard": [
+   "mix_veg",
+   "fruit_custard"
+  ],
+  "seasonable green vegetable sweet dish gulab jamun": [
+   "mix_veg",
+   "gulab_jamun"
+  ],
+  "seasonal vegetable kadhi roti chawal": [
+   "mix_veg",
+   "dahi",
+   "roti",
+   "plain_rice"
+  ],
+  "sewai ki khi non veg": [
+   "kheer"
+  ],
+  "soya aloo masoor dal roti": [
+   "soya_badi",
+   "masoor_dal_dish",
+   "roti"
+  ],
+  "sprouted grains milk withbournvita or horlicks": [
+   "boiled_sprouts",
+   "milk_glass"
+  ],
+  "sprouted oats sandwich bread cake size with 17 gram butter or 04 numbers of bread slices sandwich bread cake size with 17 gram butter or boiled egg 01 no or 8 5 gram butter": [
+   "boiled_sprouts",
+   "oatmeal",
+   "bread_slice",
+   "amul_butter",
+   "boiled_egg"
+  ],
+  "stuffed paranthas with 100 gram curd": [
+   "aloo_paratha",
+   "plain_curd"
+  ],
+  "sweet lassi 150 200 ml mix veg 20 allo any fruit seasonal": [
+   "dahi",
+   "mix_veg",
+   "fruit_portion"
+  ],
+  "thesa chatni nimbou pani 150 ml": [
+   "green_chutney"
+  ],
+  "thoran arhar dal roti chawal": [
+   "mix_veg",
+   "toor_dal_tadka",
+   "roti",
+   "plain_rice"
+  ],
+  "upma 9 g sambar banana or egg 1 milk 150 ml with tea": [
+   "upma",
+   "sambhar",
+   "fruit_portion",
+   "boiled_egg",
+   "milk_glass",
+   "tea"
+  ],
+  "veg chicken stew with vegetables": [
+   "mix_veg"
+  ],
+  "veg kabab pariata non veg kabil chicken": [
+   "cutlet",
+   "aloo_paratha"
+  ],
+  "veg kadai veg curry with paneer n veg egg curry": [
+   "mix_veg",
+   "mutter_paneer",
+   "egg_curry"
+  ],
+  "veg mushroom masala n veg chiken chettinad each one 2 inches size": [
+   "mix_veg"
+  ],
+  "vegetable biryani dal makhani tawa parantha raita": [
+   "veg_biryani",
+   "dal_makhani",
+   "aloo_paratha",
+   "veg_raita"
+  ],
+  "wheat bread toasted or plain 6 jam butter 10 g banana egg 1 channa masala 150 ml with tea": [
+   "bread_slice",
+   "jam",
+   "amul_butter",
+   "fruit_portion",
+   "boiled_egg",
+   "chole",
+   "tea"
+  ],
+  "fry praw": null,
+  "boiled sweet corn": "sweetcorn_side",
+  "tomato santhagai": "idli",
+  "bheendi onion aaloo": "kurmuri_bhindi",
+  "stuffed tomato": "mix_veg",
+  "carrot peas avial": "mix_veg",
+  "tomato ketchup": null,
+  "namkeen sevaiyan": "upma",
+  "semiya kichdi": "upma",
+  "ragi drink": "milk_glass",
+  "ice cream jowa roti": [
+   "roti",
+   "fruit_custard"
+  ],
+  "rice kheer": "kheer",
+  "jeerera rice": "jeera_rice",
+  "kaccha mango chutney": "green_chutney",
+  "dahi tea": [
+   "dahi",
+   "tea"
+  ],
+  "jam banana 01": [
+   "jam",
+   "fruit_portion"
+  ],
+  "cholla samose daila jam": [
+   "chole",
+   "samosa",
+   "upma",
+   "jam"
+  ],
+  "butter pickle": [
+   "amul_butter",
+   "pickle"
+  ],
+  "lititi with ghee": [
+   "roti",
+   "amul_butter"
+  ],
+  "paneer dal": [
+   "mutter_paneer",
+   "dal_tadka"
+  ],
+  "chilli paneer moong dal": [
+   "mutter_paneer",
+   "dal_tadka"
+  ],
+  "moong dal chilla": "dosa",
+  "moong chilla": "dosa",
+  "moong dal paneer chilla": "dosa",
+  "moong dal chutney": "green_chutney",
+  "paruppu vadai": "vada",
+  "shahi paneer arhar daal": [
+   "paneer_butter_masala",
+   "toor_dal_tadka"
+  ],
+  "dal bati churma": [
+   "dal_tadka",
+   "roti",
+   "gulab_jamun"
+  ],
+  "pumpkin black channa dal": [
+   "kadu_masala",
+   "dal_tadka"
+  ],
+  "vada pav": [
+   "vada",
+   "bread_slice"
+  ],
+  "vada pav one piece": [
+   "vada",
+   "bread_slice"
+  ],
+  "vada paw with green": [
+   "vada",
+   "bread_slice",
+   "green_chutney"
+  ],
+  "bread bajji": "pakoda",
+  "bread bhaaji": "pakoda",
+  "toast butter jam": [
+   "bread_slice",
+   "amul_butter",
+   "jam"
+  ],
+  "sev bhaji": "ratlami_sev",
+  "idli vada": [
+   "idli",
+   "vada"
+  ],
+  "dahi vada": [
+   "dahi",
+   "vada"
+  ],
+  "dhahi vada 2 nos": [
+   "dahi",
+   "vada"
+  ],
+  "curd lemon water": "plain_curd",
+  "nutrela keema": "soya_badi",
+  "tea samosa": [
+   "tea",
+   "samosa"
+  ],
+  "samosa tea": [
+   "samosa",
+   "tea"
+  ],
+  "tea bread pakora": [
+   "tea",
+   "pakoda"
+  ],
+  "bread pakora tea": [
+   "pakoda",
+   "tea"
+  ],
+  "tea cutlet": [
+   "tea",
+   "cutlet"
+  ],
+  "tea noodles": [
+   "tea",
+   "noodles"
+  ],
+  "tea onion pakori": [
+   "tea",
+   "pakoda"
+  ],
+  "tea poori bhaji": [
+   "tea",
+   "poori",
+   "aloo_jeera"
+  ],
+  "tea black chana masala": [
+   "tea",
+   "black_chana_aloo"
+  ],
+  "masala idli coffee": [
+   "idli",
+   "tea"
+  ],
+  "milk tea": [
+   "milk_glass",
+   "tea"
+  ],
+  "milk with corn flakes": "cereal_bowl",
+  "banana milk": [
+   "fruit_portion",
+   "milk_glass"
+  ],
+  "ginger tea coffee powder": "tea",
+  "aldo paratha curd": [
+   "aloo_paratha",
+   "plain_curd"
+  ],
+  "kachumar salad 1 00 pm to 3 00 pm": "salad",
+  "coconut chutney 8 00 am to 10 00 am": "nariyal_chutney",
+  "fruit raita": "veg_raita",
+  "roti salad": [
+   "roti",
+   "salad"
+  ],
+  "rice chapati hari mirch": [
+   "plain_rice",
+   "roti"
+  ],
+  "khichadi pav": [
+   "plain_rice",
+   "dal_mix",
+   "bread_slice"
+  ],
+  "sambar rice": [
+   "plain_rice",
+   "sambhar"
+  ],
+  "idli sambhar": [
+   "idli",
+   "sambhar"
+  ],
+  "vada sambhar": [
+   "vada",
+   "sambhar"
+  ],
+  "masala dosa sambhar": [
+   "dosa",
+   "sambhar"
+  ],
+  "sambhar n chatni egg": [
+   "sambhar",
+   "green_chutney",
+   "boiled_egg"
+  ],
+  "poha with tomato chutney": [
+   "poha",
+   "red_chutney"
+  ],
+  "dhokala with chutney": [
+   "idli",
+   "green_chutney"
+  ],
+  "dosa with hot chutney": [
+   "dosa",
+   "red_chutney"
+  ],
+  "pongal with cocunut chutney": [
+   "plain_rice",
+   "dal_mix",
+   "nariyal_chutney"
+  ],
+  "baigaan aloo": "mix_veg",
+  "chole puri": [
+   "chole",
+   "poori"
+  ],
+  "aloo masala chole bhature": [
+   "aloo_jeera",
+   "chole",
+   "poori"
+  ],
+  "challa batura no roti": [
+   "chole",
+   "poori"
+  ],
+  "chhola bhattra": [
+   "chole",
+   "poori"
+  ],
+  "poori aloo ki sabji": [
+   "poori",
+   "aloo_jeera"
+  ],
+  "chana": "boiled_sprouts",
+  "bundi": "boondi_raita",
+  "gobii": "gobhi_dry",
+  "white 2 bananas": "fruit_portion",
+  "nariyal": "nariyal_chutney",
+  "fri": null,
+  "aaloo chola tikki": "cutlet",
+  "chole kulche one piece": [
+   "chole",
+   "roti"
+  ],
+  "cornflakes banana 01": [
+   "cereal_bowl",
+   "fruit_portion"
+  ],
+  "hot milk idli sambhar": [
+   "milk_glass",
+   "idli",
+   "sambhar"
+  ],
+  "hot milk indori poha": [
+   "milk_glass",
+   "poha"
+  ],
+  "hot milk veg upma": [
+   "milk_glass",
+   "upma"
+  ],
+  "matar kulcha cornflakes": [
+   "matar_chola",
+   "roti",
+   "cereal_bowl"
+  ],
+  "milk with cornflakes": "cereal_bowl",
+  "omlet 2 eggs milk": [
+   "egg_bhurji",
+   "milk_glass"
+  ],
+  "jam 2 pc boiled eggs": [
+   "jam",
+   "boiled_egg"
+  ],
+  "jam 1 slice butter": [
+   "jam",
+   "amul_butter"
+  ],
+  "jam or bread butter": [
+   "jam",
+   "bread_slice",
+   "amul_butter"
+  ],
+  "suji halwa egg": [
+   "moong_halwa",
+   "boiled_egg"
+  ],
+  "veg butter masala": "mix_veg",
+  "butter salted popcorn": "poha",
+  "raw banana fry": "mix_veg",
+  "raw banana poriyal": "mix_veg",
+  "kaccha banana veg": "mix_veg",
+  "salad papaya sambhar": [
+   "salad",
+   "fruit_portion",
+   "sambhar"
+  ],
+  "groundnut chutney brinjal sambar": [
+   "red_chutney",
+   "sambhar"
+  ],
+  "jeeraa aloo green chutney": [
+   "aloo_jeera",
+   "green_chutney"
+  ],
+  "kadhi pakodi dal": [
+   "dahi",
+   "pakoda",
+   "dal_tadka"
+  ],
+  "kadhi pyaz pakori": [
+   "dahi",
+   "pakoda"
+  ],
+  "besan pakora kadhi": [
+   "dahi",
+   "pakoda"
+  ],
+  "kadi pakode curry": [
+   "dahi",
+   "pakoda"
+  ],
+  "usal or chowmein": [
+   "rajma_dish",
+   "noodles"
+  ],
+  "veg sandwich coffee": [
+   "bread_slice",
+   "tea"
+  ],
+  "dal palak channa": "dal_tadka",
+  "palak kaddu kheer achar": [
+   "mix_veg",
+   "kheer",
+   "pickle"
+  ],
+  "chhole masala ddr": [
+   "chole",
+   "dal_tadka",
+   "plain_rice"
+  ],
+  "brownie with ice cream": [
+   "brownie_square",
+   "fruit_custard"
+  ],
+  "dhal ghee rice": [
+   "dal_tadka",
+   "plain_rice"
+  ],
+  "veg pulao chilli gobhi": [
+   "peas_pulao",
+   "gobhi_dry"
+  ],
+  "coffee or rasna": "tea",
+  "chappathi 2 x 60 g boiled rice chicken briyani": [
+   "roti",
+   "plain_rice"
+  ],
+  "veg bryand raiata": [
+   "veg_biryani",
+   "veg_raita"
+  ]
+ },
+ "menus": {},
+ "crop": {
+  "sns-college-of-engineering__hostel-mess": [
+   "mon day",
+   "Contact us"
+  ]
+ }
+}

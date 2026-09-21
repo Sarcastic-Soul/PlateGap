@@ -1,0 +1,258 @@
+{
+ "matched": 44,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "jam",
+     "aloo_paratha",
+     "plain_curd",
+     "amul_butter",
+     "boiled_egg",
+     "bread_slice"
+    ],
+    "lunch": [
+     "milk_glass",
+     "papad",
+     "tea",
+     "roti",
+     "plain_rice",
+     "boiled_sprouts",
+     "veg_raita",
+     "toor_dal_tadka",
+     "mix_veg"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "jam",
+     "aloo_paratha",
+     "plain_curd",
+     "amul_butter",
+     "boiled_egg",
+     "bread_slice",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "milk_glass",
+     "tea",
+     "roti",
+     "plain_rice",
+     "boiled_sprouts",
+     "plain_curd",
+     "dal_tadka",
+     "mix_veg"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "aloo_paratha"
+    ],
+    "lunch": [
+     "milk_glass",
+     "tea",
+     "roti",
+     "plain_rice",
+     "kheer",
+     "boiled_sprouts",
+     "plain_curd",
+     "mix_veg",
+     "rajma_dish",
+     "fruit_custard"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "sambhar",
+     "jam",
+     "poha",
+     "red_chutney",
+     "idli",
+     "dal_tadka",
+     "boiled_sprouts",
+     "oatmeal",
+     "bread_slice",
+     "amul_butter",
+     "boiled_egg"
+    ],
+    "lunch": [
+     "poori",
+     "boondi_raita",
+     "tea",
+     "roti",
+     "plain_rice",
+     "peas_pulao",
+     "chole",
+     "mix_veg",
+     "dal_tadka"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "jam",
+     "upma",
+     "poha",
+     "bread_slice",
+     "amul_butter",
+     "boiled_egg"
+    ],
+    "lunch": [
+     "milk_glass",
+     "boondi_raita",
+     "pakoda",
+     "tea",
+     "roti",
+     "plain_rice",
+     "boiled_sprouts",
+     "masoor_dal_dish",
+     "mix_veg",
+     "gulab_jamun"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "jam",
+     "aloo_paratha",
+     "aloo_jeera",
+     "bread_slice",
+     "amul_butter",
+     "boiled_egg"
+    ],
+    "lunch": [
+     "milk_glass",
+     "papad",
+     "samosa",
+     "tea",
+     "roti",
+     "plain_rice",
+     "boiled_sprouts",
+     "veg_raita",
+     "dal_makhani",
+     "mix_veg"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pickle",
+     "mix_veg",
+     "plain_curd",
+     "green_chutney"
+    ],
+    "lunch": [
+     "milk_glass",
+     "boondi_raita",
+     "tea",
+     "poori",
+     "boiled_sprouts",
+     "chole",
+     "paneer_butter_masala",
+     "mutter_paneer",
+     "peas_pulao"
+    ]
+   }
+  },
+  "id": "sliet-longowal__hostel-mess",
+  "name": "Sant Longowal Institute of Engineering and Technology (SLIET)",
+  "region": "IN"
+ },
+ "noise": 28,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "jam"
+    ],
+    "lunch": [
+     "milk_glass",
+     "papad",
+     "tea",
+     "roti",
+     "plain_rice"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "jam"
+    ],
+    "lunch": [
+     "milk_glass",
+     "tea",
+     "roti",
+     "plain_rice"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "aloo_paratha"
+    ],
+    "lunch": [
+     "milk_glass",
+     "tea",
+     "roti",
+     "plain_rice",
+     "kheer"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "sambhar",
+     "jam"
+    ],
+    "lunch": [
+     "poori",
+     "boondi_raita",
+     "tea",
+     "roti",
+     "plain_rice"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "jam"
+    ],
+    "lunch": [
+     "milk_glass",
+     "boondi_raita",
+     "pakoda",
+     "tea",
+     "roti",
+     "plain_rice"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "jam"
+    ],
+    "lunch": [
+     "milk_glass",
+     "papad",
+     "samosa",
+     "tea",
+     "roti",
+     "plain_rice"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "pickle"
+    ],
+    "lunch": [
+     "milk_glass",
+     "boondi_raita",
+     "tea",
+     "poori"
+    ]
+   }
+  },
+  "id": "sliet-longowal__hostel-mess",
+  "name": "Sant Longowal Institute of Engineering and Technology (SLIET)",
+  "region": "IN"
+ },
+ "settledByHand": 67,
+ "warnings": []
+}

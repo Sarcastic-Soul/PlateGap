@@ -1,0 +1,511 @@
+{
+ "matched": 219,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "jam",
+     "fruit_portion",
+     "tea",
+     "idli",
+     "sambhar",
+     "plain_rice",
+     "roti",
+     "aloo_paratha",
+     "plain_curd",
+     "boiled_sprouts",
+     "egg_bhurji",
+     "orange_juice_glass",
+     "green_chutney",
+     "boiled_egg",
+     "cereal_bowl",
+     "aloo_tomato",
+     "soya_badi"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dal_mix",
+     "dum_aloo",
+     "plain_curd",
+     "salad",
+     "jeera_rice",
+     "dal_tadka",
+     "rajma_dish",
+     "moong_halwa",
+     "mix_veg",
+     "papad",
+     "dahi"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poha",
+     "jam",
+     "milk_glass",
+     "tea",
+     "upma",
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "toor_dal_tadka",
+     "salad",
+     "green_chutney",
+     "boiled_sprouts",
+     "egg_bhurji",
+     "sweetcorn_side",
+     "orange_juice_glass",
+     "gobhi_dry",
+     "mix_veg"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "mix_veg",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "plain_curd",
+     "salad",
+     "egg_curry",
+     "toor_dal_tadka",
+     "dal_tadka",
+     "veg_kofta",
+     "mix_veg",
+     "paneer_butter_masala",
+     "moong_halwa",
+     "kurmuri_bhindi",
+     "dahi",
+     "mutter_paneer"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "jam",
+     "fruit_portion",
+     "tea",
+     "plain_curd",
+     "boiled_egg",
+     "aloo_choka",
+     "green_chutney",
+     "boiled_sprouts",
+     "orange_juice_glass",
+     "aloo_paratha",
+     "plain_rice",
+     "dal_mix",
+     "amul_butter"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "kheer",
+     "mix_veg"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "salad",
+     "dal_tadka",
+     "kurmuri_bhindi",
+     "gulab_jamun",
+     "pickle",
+     "mix_veg",
+     "plain_curd",
+     "fruit_portion"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poori",
+     "pav_bhaji",
+     "jam",
+     "egg_bhurji",
+     "tea",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "milk_glass",
+     "plain_rice",
+     "roti",
+     "dal_mix",
+     "boiled_sprouts",
+     "cereal_bowl",
+     "veg_kofta"
+    ],
+    "dinner": [
+     "fruit_custard",
+     "gulab_jamun",
+     "mix_veg"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dal_mix",
+     "dahi",
+     "salad",
+     "pickle",
+     "fruit_custard",
+     "toor_dal_tadka",
+     "soya_badi",
+     "mix_veg",
+     "papad",
+     "masoor_dal_dish",
+     "mutter_paneer"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "jam",
+     "boiled_egg",
+     "milk_glass",
+     "tea",
+     "poha",
+     "amul_butter",
+     "plain_rice",
+     "roti",
+     "rajma_dish",
+     "idli",
+     "green_chutney",
+     "cereal_bowl",
+     "boiled_sprouts",
+     "egg_bhurji",
+     "salad",
+     "bread_slice",
+     "mix_veg"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "toor_dal_tadka",
+     "boondi_raita",
+     "plain_curd",
+     "salad",
+     "kheer",
+     "gobhi_dry",
+     "mix_veg",
+     "dal_tadka",
+     "papad",
+     "veg_raita"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "jam",
+     "boiled_egg",
+     "fruit_portion",
+     "tea",
+     "chole",
+     "plain_curd",
+     "amul_butter",
+     "milk_glass",
+     "plain_rice",
+     "roti",
+     "green_chutney",
+     "boiled_sprouts",
+     "bread_slice",
+     "cereal_bowl",
+     "dal_tadka",
+     "mix_veg"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "kurmuri_bhindi",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "pakoda",
+     "dum_aloo",
+     "veg_raita",
+     "salad",
+     "dal_makhani",
+     "mix_veg",
+     "kurmuri_bhindi",
+     "papad",
+     "peas_pulao",
+     "fruit_custard",
+     "dal_tadka"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "jam",
+     "milk_glass",
+     "tea",
+     "pav_bhaji",
+     "green_chutney",
+     "egg_bhurji",
+     "plain_rice",
+     "roti",
+     "dal_makhani",
+     "boiled_sprouts",
+     "boiled_egg",
+     "dal_mix",
+     "mix_veg"
+    ],
+    "dinner": [
+     "noodles",
+     "fruit_custard",
+     "veg_kofta"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "salad",
+     "aloo_choka",
+     "veg_biryani",
+     "veg_raita",
+     "pickle",
+     "kheer",
+     "tomato_soup_bowl",
+     "masoor_dal_dish",
+     "gobhi_dry",
+     "mix_veg",
+     "dahi",
+     "amul_butter",
+     "poori",
+     "kurmuri_bhindi",
+     "ratlami_sev",
+     "plain_curd",
+     "peas_pulao"
+    ]
+   }
+  },
+  "id": "nalanda-university__hostel-mess",
+  "name": "Nalanda University",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "jam",
+     "fruit_portion",
+     "tea",
+     "idli",
+     "sambhar",
+     "plain_rice",
+     "roti"
+    ],
+    "dinner": [
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dal_mix",
+     "dum_aloo",
+     "plain_curd",
+     "salad",
+     "jeera_rice",
+     "dal_tadka",
+     "rajma_dish",
+     "moong_halwa"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "poha",
+     "jam",
+     "milk_glass",
+     "tea",
+     "upma",
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "toor_dal_tadka"
+    ],
+    "dinner": [
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "plain_curd",
+     "salad",
+     "egg_curry",
+     "toor_dal_tadka"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "jam",
+     "fruit_portion",
+     "tea",
+     "plain_curd",
+     "boiled_egg",
+     "aloo_choka"
+    ],
+    "dinner": [
+     "salad",
+     "pickle",
+     "kheer"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "salad",
+     "dal_tadka",
+     "kurmuri_bhindi",
+     "gulab_jamun",
+     "pickle"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poori",
+     "pav_bhaji",
+     "jam",
+     "egg_bhurji",
+     "tea",
+     "dosa",
+     "sambhar",
+     "nariyal_chutney",
+     "milk_glass",
+     "plain_rice",
+     "roti",
+     "dal_mix"
+    ],
+    "dinner": [
+     "fruit_custard",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "dal_mix",
+     "dahi",
+     "salad",
+     "pickle",
+     "fruit_custard",
+     "toor_dal_tadka"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "jam",
+     "boiled_egg",
+     "milk_glass",
+     "tea",
+     "poha",
+     "amul_butter",
+     "plain_rice",
+     "roti",
+     "rajma_dish"
+    ],
+    "dinner": [
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "toor_dal_tadka",
+     "boondi_raita",
+     "plain_curd",
+     "salad",
+     "kheer"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "jam",
+     "boiled_egg",
+     "fruit_portion",
+     "tea",
+     "chole",
+     "plain_curd",
+     "amul_butter",
+     "milk_glass",
+     "plain_rice",
+     "roti"
+    ],
+    "dinner": [
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "pakoda",
+     "dum_aloo",
+     "veg_raita",
+     "salad",
+     "dal_makhani",
+     "mix_veg"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "jam",
+     "milk_glass",
+     "tea",
+     "pav_bhaji",
+     "green_chutney",
+     "egg_bhurji",
+     "plain_rice",
+     "roti",
+     "dal_makhani"
+    ],
+    "dinner": [
+     "noodles",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "plain_rice",
+     "roti",
+     "papad",
+     "salad",
+     "aloo_choka",
+     "veg_biryani",
+     "veg_raita",
+     "pickle",
+     "kheer",
+     "tomato_soup_bowl"
+    ]
+   }
+  },
+  "id": "nalanda-university__hostel-mess",
+  "name": "Nalanda University",
+  "region": "IN"
+ },
+ "settledByHand": 164,
+ "warnings": []
+}

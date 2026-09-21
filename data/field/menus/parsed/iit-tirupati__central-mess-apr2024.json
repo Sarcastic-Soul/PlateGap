@@ -1,0 +1,542 @@
+{
+ "matched": 175,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "green_chutney",
+     "pickle",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pakoda",
+     "amul_butter",
+     "mix_veg"
+    ],
+    "dinner": [
+     "rasam",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "veg_raita",
+     "pickle",
+     "boiled_egg",
+     "boiled_sprouts",
+     "mix_veg",
+     "dal_tadka",
+     "dal_makhani"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "red_chutney",
+     "amul_butter",
+     "mix_veg"
+    ],
+    "dinner": [
+     "rasam",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "pav_bhaji",
+     "boiled_egg",
+     "mix_veg",
+     "dal_tadka",
+     "papad"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "roti",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "red_chutney",
+     "sambhar",
+     "green_chutney",
+     "amul_butter",
+     "papad",
+     "dahi",
+     "mix_veg"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "chole",
+     "sambhar",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "poori",
+     "boiled_egg",
+     "dahi",
+     "pakoda",
+     "dal_tadka"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "roti",
+     "plain_rice",
+     "salad",
+     "fruit_portion",
+     "green_chutney",
+     "boondi_raita",
+     "amul_butter",
+     "veg_raita",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "dal_tadka",
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "veg_biryani",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "dal_tadka",
+     "soya_badi",
+     "pyaj_muter_malai",
+     "mix_veg",
+     "gobhi_dry"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "plain_curd",
+     "roti",
+     "plain_rice",
+     "salad",
+     "mix_veg",
+     "aloo_paratha",
+     "green_chutney",
+     "amul_butter",
+     "papad",
+     "dahi",
+     "pakoda"
+    ],
+    "dinner": [
+     "rasam",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "boiled_egg",
+     "boiled_sprouts",
+     "mix_veg",
+     "dal_tadka",
+     "peas_pulao"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "poori",
+     "roti",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "amul_butter",
+     "pickle",
+     "mix_veg",
+     "papad",
+     "gobhi_dry"
+    ],
+    "dinner": [
+     "rasam",
+     "dal_tadka",
+     "fruit_custard"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "rajma_dish",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "boiled_egg",
+     "dal_tadka",
+     "mix_veg",
+     "veg_kofta"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "upma",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "red_chutney",
+     "amul_butter",
+     "mix_veg"
+    ],
+    "dinner": [
+     "rasam",
+     "dal_tadka",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "dal_makhani",
+     "mix_veg",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "egg_bhurji",
+     "dal_tadka",
+     "black_chana_aloo",
+     "mutter_paneer"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   }
+  },
+  "id": "iit-tirupati__central-mess-apr2024",
+  "name": "IIT Tirupati",
+  "region": "IN"
+ },
+ "noise": 7,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "green_chutney",
+     "pickle",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "veg_raita",
+     "pickle"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "idli",
+     "vada",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "dinner": [
+     "rasam",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "pav_bhaji"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "dosa",
+     "roti",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "chole",
+     "sambhar",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle",
+     "poori"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "poha",
+     "roti",
+     "plain_rice",
+     "salad",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "veg_biryani",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "plain_curd",
+     "roti",
+     "plain_rice",
+     "salad"
+    ],
+    "dinner": [
+     "rasam",
+     "fruit_portion"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "poori",
+     "roti",
+     "plain_rice",
+     "salad",
+     "plain_curd",
+     "amul_butter",
+     "pickle"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "rajma_dish",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "upma",
+     "sambhar",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "dinner": [
+     "rasam"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass",
+     "bread_slice",
+     "jam",
+     "fruit_portion",
+     "dal_makhani",
+     "mix_veg",
+     "roti",
+     "plain_rice",
+     "papad",
+     "salad",
+     "plain_curd",
+     "pickle"
+    ],
+    "snacks": [
+     "tea",
+     "milk_glass"
+    ]
+   }
+  },
+  "id": "iit-tirupati__central-mess-apr2024",
+  "name": "IIT Tirupati",
+  "region": "IN"
+ },
+ "settledByHand": 112,
+ "warnings": [
+  "some items came before any meal heading and were read as lunch"
+ ]
+}
