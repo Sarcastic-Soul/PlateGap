@@ -1,17 +1,22 @@
 """Generate the Builder Center cover image for PlateGap.
 
-No text (the platform discourages it). The idea, drawn instead of stated: a
-row of nutrient meters, each filled to what the menu actually provides, with
-the shortfall to target shown as an open gap -- literally the product. Colors
-are pulled straight from web/style.css so the cover matches the live app.
+Minimal text only: the product name and the nutrient each bar stands for,
+so the graphic reads on its own instead of looking like an abstract bar
+chart. The platform's no-text guidance is about SEO keyword-stuffed covers,
+not labeling a chart. Colors are pulled straight from web/style.css so the
+cover matches the live app.
 """
 
 import pathlib
 import random
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 random.seed(7)
+
+FONT_DIR = pathlib.Path("/usr/share/fonts/truetype/liberation")
+F_TITLE = ImageFont.truetype(str(FONT_DIR / "LiberationSans-Bold.ttf"), 64)
+F_NUT = ImageFont.truetype(str(FONT_DIR / "LiberationSans-Regular.ttf"), 20)
 
 W, H = 1200, 675
 SCALE = 4  # supersample then downsize for clean anti-aliasing
@@ -52,15 +57,15 @@ for gx in range(0, W, 28):
 # margin where the next unit gets expensive (the shadow price idea).
 
 bars = [
-    {"met": 0.58},
-    {"met": 0.27},
-    {"met": 0.86},
-    {"met": 0.15},
-    {"met": 0.68},
-    {"met": 0.41},
-    {"met": 0.93},
-    {"met": 0.33},
-    {"met": 0.77},
+    {"met": 0.58, "label": "Protein"},
+    {"met": 0.27, "label": "Iron"},
+    {"met": 0.86, "label": "Calcium"},
+    {"met": 0.15, "label": "Zinc"},
+    {"met": 0.68, "label": "Vitamin A"},
+    {"met": 0.41, "label": "Vitamin C"},
+    {"met": 0.93, "label": "Folate"},
+    {"met": 0.33, "label": "Potassium"},
+    {"met": 0.77, "label": "Fiber"},
 ]
 
 n = len(bars)
@@ -68,8 +73,8 @@ bar_w = 58
 gap_w = 30
 total_w = n * bar_w + (n - 1) * gap_w
 start_x = (W - total_w) // 2
-base_y = 565
-top_y = 110
+base_y = 530
+top_y = 150
 max_h = base_y - top_y
 radius = bar_w // 2
 
@@ -132,6 +137,10 @@ for i, b in enumerate(bars):
         width=s(3),
     )
 
+    # Nutrient label, rotated to fit the narrow column, drawn at full scale
+    # (not supersampled) and composited after downsizing so it stays crisp.
+    b["label_xy"] = (x0 + bar_w / 2, base_y + 60)
+
 # --- A faint baseline, like a table rule ------------------------------------
 draw.line(
     [s(start_x - 40), s(base_y + 40), s(start_x + total_w + 40), s(base_y + 40)],
@@ -139,8 +148,24 @@ draw.line(
     width=s(2),
 )
 
-# Downsample for clean edges.
-img = img.resize((W, H), Image.LANCZOS)
+# Downsample for clean edges, then composite crisp (non-supersampled) text.
+img = img.resize((W, H), Image.LANCZOS).convert("RGBA")
+overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+odraw = ImageDraw.Draw(overlay)
+
+title = "PlateGap"
+tw = odraw.textlength(title, font=F_TITLE)
+odraw.text(((W - tw) / 2, 34), title, font=F_TITLE, fill=(*INK, 255))
+
+for b in bars:
+    tmp = Image.new("RGBA", (140, 40), (0, 0, 0, 0))
+    tdraw = ImageDraw.Draw(tmp)
+    tdraw.text((0, 0), b["label"], font=F_NUT, fill=(*INK, 210))
+    rotated = tmp.rotate(-50, expand=True, resample=Image.BICUBIC)
+    lx, ly = b["label_xy"]
+    overlay.alpha_composite(rotated, (int(lx - rotated.width * 0.15), int(ly - rotated.height * 0.35)))
+
+img = Image.alpha_composite(img, overlay).convert("RGB")
 out = pathlib.Path(__file__).resolve().parent.parent / "docs" / "hackathon" / "cover.png"
 img.save(out, "PNG", optimize=True)
 print("wrote", out, img.size)
