@@ -131,7 +131,7 @@ count went down, and most went up, so the figures above are the kinder
 reading. The
 full method, the menu-by-menu table, and what the study does *not* show (a
 menu is not what is served, the sample is whatever is online) are in
-[`FIELD-STUDY.md`](FIELD-STUDY.md).
+[`FIELD-STUDY.md`](https://github.com/Sarcastic-Soul/PlateGap/blob/main/docs/hackathon/FIELD-STUDY.md).
 
 Running real menus also found five bugs in the menu reader that my own menu
 never exercised:
@@ -161,7 +161,7 @@ So far the only user is me, on my own mess menu, plus whoever finds this and
 points it at their own timetable — the app needs no signup and no account to
 do that. The path to more than that is the same pipeline the field study
 already runs on: more real menus scanned in (the raw source list is public, in
-[`SOURCES.csv`](../../data/field/menus/SOURCES.csv)), and the institutional
+[`SOURCES.csv`](https://github.com/Sarcastic-Soul/PlateGap/blob/main/data/field/menus/SOURCES.csv)), and the institutional
 audit — the one priced in rupees a month, not per student — put in front of an
 actual mess committee, since that is the reader who can act on it without
 first being convinced the number is real.
