@@ -146,6 +146,26 @@ never exercised:
 
 All five are fixed and tested.
 
+## Who this is for, and what happens next
+
+Every hostel and dining hall I found runs the same shape: a fixed fee paid up
+front, a rationed line, and nobody accountable for the gap between what is
+served and what a body needs. That is not particular to my own mess — it is
+the field study's 12 institutions, and the US dining-hall preset runs on the
+same structure with a swipe instead of a monthly fee. The audit view is built
+for whoever can act on the number: a student deciding what to buy at the shop
+outside the gate, or a mess committee or dining-services office deciding which
+single dish, added to the menu, stops hundreds of people from having to.
+
+So far the only user is me, on my own mess menu, plus whoever finds this and
+points it at their own timetable — the app needs no signup and no account to
+do that. The path to more than that is the same pipeline the field study
+already runs on: more real menus scanned in (the raw source list is public, in
+[`SOURCES.csv`](../../data/field/menus/SOURCES.csv)), and the institutional
+audit — the one priced in rupees a month, not per student — put in front of an
+actual mess committee, since that is the reader who can act on it without
+first being convinced the number is real.
+
 ## What is technically unusual about it
 
 **The solver is written from scratch.** `solver/simplex.py` is a two-phase

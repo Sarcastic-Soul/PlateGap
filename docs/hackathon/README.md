@@ -7,10 +7,11 @@ anyone deciding where PlateGap stands. The rules themselves are in
 that follows from this is [PROJECT-PLAN.md](PROJECT-PLAN.md).
 
 Source: <https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped>.
-Pulled from the Builder Center API on 2026-09-21
-(`GET /sms/hackathons/{entityId}` and
-`GET /cs/submissions/parent/{entityId}?parentContentType=HACKATHON`). The raw
-JSON is in [raw/](raw/), and every count below can be checked against it.
+Pulled from the Builder Center API on 2026-09-22
+(`GET https://api.builder.aws.com/sms/hackathons/{entityId}` and
+`GET https://api.builder.aws.com/cs/submissions/parent/{entityId}?parentContentType=HACKATHON`,
+paginated on `cursor`). No auth needed — both are public. The raw JSON is in
+[raw/](raw/), and every count below can be checked against it.
 
 ## Facts
 
@@ -22,8 +23,8 @@ JSON is in [raw/](raw/), and every count below can be checked against it.
 | Type | Virtual, "build on your own AWS account" |
 | Opens | 2026-09-18, 09:00 PT |
 | Submissions due | 2026-10-02, 23:59 PT (2026-10-03 06:59 UTC) |
-| Registrations | 1,253 on 2026-09-21 (769 on 2026-09-20) |
-| Submitted projects | 40 on 2026-09-21 (19 on 2026-09-20) |
+| Registrations | 1,594 on 2026-09-22 (1,253 on 2026-09-21, 769 on 2026-09-20) |
+| Submitted projects | 55 on 2026-09-22 (40 on 2026-09-21, 19 on 2026-09-20) |
 | Prize pool | $28,000 |
 | Winners | 5 projects |
 | Per winner | $5,000 AWS promotional credits, a swag bundle (jacket, backpack, keyboard, about $600), a certificate and a digital badge |
@@ -94,25 +95,30 @@ the product as the app is.
 
 ## The field so far
 
-40 projects on 2026-09-21, counted from each project's tags in
-[raw/submissions-2026-09-21.json](raw/submissions-2026-09-21.json). More than
-half carry no category tag at all.
+55 projects on 2026-09-22, counted from each project's tags in
+[raw/submissions-2026-09-22.json](raw/submissions-2026-09-22.json). Over half
+carry no category tag at all, and PlateGap is not among them yet.
 
 | Category tag | Projects |
 | --- | --- |
-| `workplace-efficiency` | 6 (one also tagged `commercial-potential`) |
-| `commercial-potential` | 5 (one also tagged `workplace-efficiency`) |
-| `social-good` | 5 |
-| `daily-life-enhancement` | 1 |
-| `personal-expression` | 0 |
-| none | 24 |
+| `workplace-efficiency` | 7 |
+| `social-good` | 7 |
+| `commercial-potential` | 6 |
+| `daily-life-enhancement` | 3 |
+| `personal-expression` | 1 |
+| none | 32 |
+
+The three `daily-life-enhancement` entries so far (a garden planner, a legal-
+document reader built on Google Gemini rather than AWS, and an ASL sign
+detector) are all thin — 0–1 likes or comments, one to three short paragraphs.
+None runs a real audit against real field data the way PlateGap's does.
 
 | Lane tag | Projects |
 | --- | --- |
-| `community` | 6 |
-| `startups` (plural, not the tag the rules name) | 8 |
+| `startups` (plural, not the tag the rules name) | 11 |
+| `community` | 9 |
 | `startup` | 0 |
-| none | 26 |
+| none | 35 |
 
 ## Categories
 
