@@ -1,8 +1,0 @@
-<!-- IIIT Lucknow | Institute mess | read by the model -->
-<!-- page 1 -->
-| Meal | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Breakfast | Banana Milk & Tea Methi Parantha & White Matar | Banana Milk & Tea Pav Bhaji Dalhiya | Banana Milk & Tea Uttapam with Sambar & Coconut Chutney | Banana Milk & Tea Aloo Parantha + Achaar Dalhiya | Banana Milk & Tea Idli with Sambar and Coconut Chutney | Banana Milk & Tea Aloo Poori Dalhiya | Banana Milk & Tea Poha & Chutney Aloo Sandwich |
-| Lunch | Kofta Arhar Dal Roti Chawal | Aloo Pyaaz Rajma Roti Chawal | Mix Veg Moong Dal Roti Chawal & Raita | Seasonal Vegetable Kadhi Roti Chawal | Chole Bhature Chawal Boondi Raita | Aloo Gajar Matar Masoor Dal Roti Chawal | Vegetable Biryani Dal Makhani Tawa Parantha Raita |
-| Snacks | Tea Samosa | Tea Noodles | Tea Black Chana Masala | Tea Bread Pakora | Tea Biscuit | Tea Cutlet | Tea Dhokla |
-| Dinner | Dum Aloo Palak Urad Dal Roti Chawal | Mix Vegetables Red Masoor Dal Roti Chawal | Paneer Chana Dal Roti & Chawal Gulab Jamun/Sevaiyaan | Soya Methi/Sarso Saag Arhar Dal Roti Chawal | Soya Aloo Masoor Dal Roti, Chawal, Jalebi | Veg Jalfrezi/Thoran Arhar Dal Roti Chawal | Matar Paneer Mix Dal Roti & Chawal Kheer/Custard/Firni |

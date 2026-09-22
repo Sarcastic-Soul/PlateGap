@@ -165,6 +165,14 @@ def transcribe_one(row):
         notes.append("week A of %d embedded scans, read by the model" % len(images))
         if "error" in answer:
             notes.append("read failed: " + answer["error"])
+    elif ext in ("jpg", "jpeg", "png"):
+        with open(path, "rb") as handle:
+            data = handle.read()
+        answer = _read(data, "png" if ext == "png" else "jpeg")
+        parts.append(answer.get("text", ""))
+        notes.extend(answer.get("warnings", []))
+        if "error" in answer:
+            notes.append("read failed: " + answer["error"])
     else:
         for number, page in enumerate(_pdf_pages(path), 1):
             answer = _read(page, "pdf")

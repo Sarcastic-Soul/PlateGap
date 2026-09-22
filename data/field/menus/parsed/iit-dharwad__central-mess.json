@@ -1,0 +1,319 @@
+{
+ "matched": 66,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "egg_bhurji"
+    ],
+    "dinner": [
+     "plain_rice",
+     "salad",
+     "pickle",
+     "paneer_butter_masala"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "plain_rice",
+     "salad",
+     "tea",
+     "milk_glass",
+     "dal_tadka",
+     "roti",
+     "dahi",
+     "green_chutney"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "boiled_egg"
+    ],
+    "dinner": [
+     "plain_rice",
+     "salad",
+     "pickle",
+     "dal_tadka",
+     "roti"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "plain_rice",
+     "rasam",
+     "salad",
+     "pickle",
+     "vada",
+     "tea",
+     "milk_glass",
+     "chole"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "sambhar"
+    ],
+    "dinner": [
+     "roti",
+     "peas_pulao",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "rajma_dish",
+     "egg_curry",
+     "salad",
+     "pickle",
+     "idli",
+     "tea",
+     "milk_glass",
+     "plain_rice",
+     "plain_curd",
+     "roti"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "aloo_paratha",
+     "boiled_egg"
+    ],
+    "dinner": [
+     "mutter_paneer",
+     "roti",
+     "dal_tadka",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "plain_rice",
+     "pickle",
+     "samosa",
+     "tea",
+     "milk_glass",
+     "sambhar",
+     "mix_veg",
+     "roti",
+     "green_chutney"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "boiled_egg"
+    ],
+    "dinner": [
+     "plain_rice",
+     "dal_mix",
+     "plain_curd"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "salad",
+     "gulab_jamun",
+     "pakoda",
+     "tea",
+     "milk_glass",
+     "peas_pulao",
+     "roti"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "boiled_egg"
+    ],
+    "dinner": [
+     "salad",
+     "onion_rice",
+     "roti",
+     "plain_curd"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "plain_rice",
+     "salad",
+     "tea",
+     "milk_glass",
+     "roti",
+     "plain_curd",
+     "corn_chat"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "plain_rice",
+     "dal_mix",
+     "fruit_portion"
+    ],
+    "dinner": [
+     "plain_rice",
+     "pickle",
+     "paneer_butter_masala"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "veg_biryani",
+     "salad",
+     "noodles",
+     "tea",
+     "milk_glass",
+     "mix_veg",
+     "roti",
+     "dahi"
+    ]
+   }
+  },
+  "id": "iit-dharwad__central-mess",
+  "name": "IIT Dharwad",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "dinner": [
+     "plain_rice",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "plain_rice",
+     "salad",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "mon": {
+    "dinner": [
+     "plain_rice",
+     "salad",
+     "pickle"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "plain_rice",
+     "rasam",
+     "salad",
+     "pickle",
+     "vada",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sat": {
+    "dinner": [
+     "roti"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "rajma_dish",
+     "egg_curry",
+     "salad",
+     "pickle",
+     "idli",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "aloo_paratha"
+    ],
+    "dinner": [
+     "mutter_paneer"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "plain_rice",
+     "pickle",
+     "samosa",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "thu": {
+    "dinner": [
+     "plain_rice",
+     "dal_mix"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "salad",
+     "gulab_jamun",
+     "pakoda",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "tue": {
+    "dinner": [
+     "salad"
+    ],
+    "lunch": [
+     "tea"
+    ],
+    "snacks": [
+     "plain_rice",
+     "salad",
+     "tea",
+     "milk_glass"
+    ]
+   },
+   "wed": {
+    "dinner": [
+     "plain_rice",
+     "pickle"
+    ],
+    "lunch": [
+     "tea",
+     "milk_glass"
+    ],
+    "snacks": [
+     "veg_biryani",
+     "salad",
+     "noodles",
+     "tea",
+     "milk_glass"
+    ]
+   }
+  },
+  "id": "iit-dharwad__central-mess",
+  "name": "IIT Dharwad",
+  "region": "IN"
+ },
+ "settledByHand": 79,
+ "warnings": []
+}

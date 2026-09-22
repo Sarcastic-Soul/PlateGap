@@ -31,7 +31,7 @@ you short of, and the cheapest thing you can buy to fix it.**
 
 - [The three questions](#the-three-questions)
 - [Try it](#try-it)
-- [27 real menus](#27-real-menus)
+- [14 real menus](#14-real-menus)
 - [What's interesting about it](#whats-interesting-about-it)
 - [Architecture](#architecture)
 - [The API](#the-api)
@@ -71,16 +71,16 @@ curl -sS -X POST https://j3h24i4cnnjhwwxyoenqibxene0yrrju.lambda-url.us-east-1.o
   -d '{"action": "solve", "menuId": "iiit", "day": "mon"}'
 ```
 
-## 27 real menus
+## 14 real menus
 
 PlateGap was built against one mess menu. To check the problem is not just
 that one, [`docs/hackathon/FIELD-STUDY.md`](docs/hackathon/FIELD-STUDY.md) runs
-the app's own pipeline over 27 hostel menus published by 22 Indian
+the app's own pipeline over 14 hostel menus published by 12 Indian
 institutions: transcribed by the app's reader, matched by the live parser,
 and every leftover name settled with a written reason. Then it solves a whole
 week for each menu. For a vegetarian woman eating the best plate each menu
-allows, 26 of the 27 menus fall short of the iron target on some day, and 13
-fall short on every day. Closing all the gaps costs a median ₹249 a week.
+allows, 12 of the 14 menus fall short of the iron target on some day, and 6
+fall short on every day. Closing all the gaps costs a median ₹267 a week.
 
 The study also found five bugs in the menu reader, all now fixed and tested:
 grids with the days down the side, paid extras counted as food, dated
@@ -458,6 +458,6 @@ belongs to the people who measured it, and their terms apply:
 - **ICMR-NIN Nutrient Requirements for Indians (2020)** sets the Indian daily
   targets, and the **ICMR-NIN Dietary Guidelines for Indians (2024)** sets the
   standard katori sizes the serving weights are based on.
-- The **27 hostel menus** in `data/field/menus/` are the colleges' own
+- The **14 hostel menus** in `data/field/menus/` are the colleges' own
   published menus. Each source is listed in
   [SOURCES.csv](data/field/menus/SOURCES.csv).

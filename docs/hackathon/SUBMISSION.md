@@ -104,24 +104,24 @@ would recover **$30,284** of it.
 That is a number a dining services director can act on, derived from nothing
 but the posted menu.
 
-## It is not just my mess: 27 published menus
+## It is not just my mess: 14 published menus
 
 One menu is an anecdote. So I collected every hostel mess menu I could find on
-an Indian college's own website: 27 menus from 22 institutions, including IITs,
-NITs, IIITs, central and state universities, and private colleges. Each went
-through the app's own pipeline. Nova Lite transcribed the PDFs, the live parser
-matched the names, and every name it would not place was settled with a
+an Indian college's own website: 14 menus from 12 institutions, including IITs,
+an NIT, an IISER, a central university, a deemed university, and private
+colleges. Each went through the app's own pipeline. Nova Lite transcribed the PDFs, the live
+parser matched the names, and every name it would not place was settled with a
 written reason. Then I solved a whole week for each menu, for a vegetarian man
 and a vegetarian woman. This measures the best plate each menu allows, so a
 student who eats what they like does worse:
 
-- For a woman, **26 of the 27 menus cannot reach the iron target on at least
-  one day of the week, and 13 cannot reach it on any day**.
-- For a man, **24 of 27 fall short on vitamin B12 on some day, and 13 on
-  every day**. Calcium falls short on some day at 26 of 27.
-- Closing every gap costs a median **₹249 a week** for a woman and **₹241**
+- For a woman, **12 of the 14 menus cannot reach the iron target on at least
+  one day of the week, and 6 cannot reach it on any day**.
+- For a man, **10 of 14 fall short on vitamin B12 on some day, and 3 on
+  every day**. Calcium falls short on some day at 13 of 14.
+- Closing every gap costs a median **₹267 a week** for a woman and **₹222**
   for a man. That is around ₹1,000 a month on top of the mess fee, and it
-  ranges from ₹38 to ₹741 a week depending on the menu.
+  ranges from ₹36 to ₹621 a week depending on the menu.
 - The fix is almost always the same short list: cooked spinach, guava, a
   packet of milk, soya chunks, boiled rajma.
 
@@ -129,9 +129,9 @@ The study checks itself. Settling a name can only add food to a day, so I
 solved every menu again with only the parser's own matches. No shortfall
 count went down, and most went up, so the figures above are the kinder
 reading. The
-full method, the menu-by-menu table, and what the study does *not* show (many
-menus are old, a menu is not what is served, the sample is whatever is
-online) are in [`FIELD-STUDY.md`](FIELD-STUDY.md).
+full method, the menu-by-menu table, and what the study does *not* show (a
+menu is not what is served, the sample is whatever is online) are in
+[`FIELD-STUDY.md`](FIELD-STUDY.md).
 
 Running real menus also found five bugs in the menu reader that my own menu
 never exercised:
@@ -195,7 +195,7 @@ same time.
 write down the words that are printed. Which catalog dish each written name
 means is then settled by `parse`, on the standard library, with no model call
 — exact names, a shared table of regional names (chapati, phulka, chawal,
-appalam) collected from the 27 menus in the field study, the presets' own alias
+appalam) collected from the 14 menus in the field study, the presets' own alias
 maps, a transliteration fold, then fuzzy distance. It refuses to guess when two
 dishes are equally close. `"dal"`
 comes back as *could be Mix dal or Khada masoor dal, and guessing between them

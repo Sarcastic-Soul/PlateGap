@@ -21,3 +21,66 @@ IISER Tirupati,https://www.iisertirupati.ac.in/wp-content/uploads/2024/01/south.
 IIT (ISM) Dhanbad,https://people.iitism.ac.in/~download/menu/Menu%20on%20Demand%20at%20SAH%20and%20EDC%20w.e.f.%2001.01.2025%20.pdf,excluded,"priced on-demand guest-house/dining menu, not a hostel mess timetable (not downloaded)",2026-09-21
 Mayo College Girls' School,https://mcgs.ac.in/assets/img/Mess%20Menu.pdf,excluded,"downloaded but it is a school, not a college; deleted",2026-09-21
 SNS College of Technology,https://snsct.org/foodmenuhostelsnsce2/,excluded,near-identical copy of the SNS College of Engineering menu (only spelling differs),2026-09-21
+IIIT Lucknow,https://iiitl.ac.in/wp-content/uploads/2019/11/MessMenu.pdf,retired,menu dated 2019-11; replaced by a current north IIIT/college menu,2026-09-22
+NIT Tiruchirappalli,https://www.nitt.edu/home/students/facilitiesnservices/hostelsnmess/messes/Mess_Menu.pdf,retired,menu dated 2012; replaced by a current south menu,2026-09-22
+NIT Tiruchirappalli,https://www.nitt.edu/home/MENU-NITT-MESSES.pdf,retired,menu dated 2015 (tentative); replaced by a current south menu,2026-09-22
+MNIT Jaipur,https://mnit.ac.in/cms/uploads/2022/12/MenuA.pdf,retired,menu dated 2022; replaced by a current north women's-hostel menu,2026-09-22
+MNIT Jaipur,https://mnit.ac.in/cms/uploads/2022/12/MenuB.pdf,retired,menu dated 2022; replaced by a current north women's-hostel menu,2026-09-22
+IIIT Delhi,https://www.iiitd.ac.in/sites/default/files/docs/mess/messmenu-wef-oct19.pdf,retired,menu dated 2019-10; replaced by a current north menu,2026-09-22
+"Chhatrapati Shahu Ji Maharaj University, Kanpur",https://csjmu.ac.in/wp-content/uploads/docs/2022/08/Hostel-Menu.pdf,retired,menu dated 2022-08; replaced by a current north menu,2026-09-22
+Pondicherry University,https://www.pondiuni.edu.in/wp-content/uploads/2022/08/Menulist-Madame-Curie-Hostel.pdf,retired,menu dated 2022; replaced by a current south menu,2026-09-22
+Pondicherry University,https://www.pondiuni.edu.in/wp-content/uploads/2022/08/Menulist-Ilango-Adigal-Mess.pdf,retired,menu dated 2022; replaced by a current south menu,2026-09-22
+NIT Manipur,https://nitmanipur.ac.in/LatestUpdate/Revised_Mess_Menu.pdf,retired,menu dated 2015; replaced by a current northeast menu,2026-09-22
+IIT Bombay,https://gymkhana.iitb.ac.in/~hostel16/messMenus/Menu-week1.pdf,retired,"menu dated 2018; replaced by iit-bombay__hostel-3.jpeg (current, HTTP Last-Modified 2024-02-21)",2026-09-22
+IIT Kharagpur,https://hmc.iitkgp.ac.in/web/wp-content/uploads/2017/01/Revised-mess-menu-19.01.17.pdf,retired,menu dated 2017; replaced by a current east menu,2026-09-22
+IIT Roorkee,https://www.iitr.ac.in/azadbhawan/assets/img/mess_menu.pdf,retired,menu dated 2021; replaced by a current north menu,2026-09-22
+Central University of Punjab,https://docs.google.com/document/d/1gzxsW4FOnIw4eEKlbsnlTyVf84zNAtUPyM7e5WwDhkY/export?format=pdf,retired,menu dated 2016; replaced by a current north menu,2026-09-22
+Nalanda University,https://nalandauniv.edu.in/wp-content/uploads/2019/07/mess_menu-pdf.pdf,retired,menu dated 2016/2019; replaced by a current east menu,2026-09-22
+NIT Tiruchirappalli,https://www.nitt.edu/home/MENU-NITT-MESSES.pdf,failed,same 2012/2015 files still the only ones live on site; no newer menu found,2026-09-22
+Pondicherry University,https://www.pondiuni.edu.in/hostels/,failed,2022 PDFs still the only ones live; a Jan-2025 news notice mentions a new caterer but links no menu document,2026-09-22
+IIT Kharagpur HMC,https://hmc.iitkgp.ac.in/web/,failed,only the 2017 revised-menu PDF and unrelated tender/rules docs found; no per-hall current menu on site,2026-09-22
+Nalanda University,https://nalandauniv.edu.in,failed,no menu document found via search or site,2026-09-22
+NIT Rourkela,https://www.nitrkl.ac.in,failed,no PDF menu found; official site connection timed out,2026-09-22
+IIT Bhubaneswar,https://www.iitbbs.ac.in,failed,only general hostel-info PDF; no daily/weekly menu,2026-09-22
+NIT Durgapur,https://nitdgp.ac.in/p/notices-2/hostel,failed,"all PDFs on hostel notices page are allotment/fee notices, no menu; Scribd copies exist but are third-party uploads, excluded",2026-09-22
+IIT Patna,https://www.iitp.ac.in/hostels,failed,site connection failed; only a third-party Scribd copy found,2026-09-22
+Jadavpur University,https://jadavpuruniversity.in,excluded,"menu set informally by student mess committee, never published as a document",2026-09-22
+IIEST Shibpur,https://iiest.ac.in,excluded,"menu set informally by student mess committee, never published as a document",2026-09-22
+KIIT Bhubaneswar,https://kiit.ac.in,failed,no menu PDF found on official site,2026-09-22
+Visva-Bharati,https://visva-bharati.ac.in,failed,no menu PDF found on official site,2026-09-22
+Ravenshaw University,https://ravenshawuniversity.ac.in,failed,no menu PDF found on official site,2026-09-22
+Utkal University,https://utkaluniversity.ac.in,failed,no menu PDF found on official site,2026-09-22
+Sambalpur University,https://suniv.ac.in,failed,no menu PDF found on official site,2026-09-22
+Central University of Tamil Nadu,https://cutn.ac.in,failed,only fee/manual PDFs found; no menu,2026-09-22
+Central University of Kerala,https://cukerala.ac.in,failed,only fee/manual PDFs found; no menu,2026-09-22
+VIT Vellore,https://vit.ac.in,failed,no official menu PDF found,2026-09-22
+SASTRA Thanjavur,https://sastra.edu,failed,no official menu PDF found,2026-09-22
+Amrita Vishwa Vidyapeetham,https://amrita.edu,failed,no official menu PDF found,2026-09-22
+Manipal Institute of Technology,https://manipal.edu,failed,no official menu PDF found,2026-09-22
+IISER Thiruvananthapuram,https://iisertvm.ac.in,excluded,menu rotates informally and is not published,2026-09-22
+IIST Thiruvananthapuram,https://iist.ac.in,excluded,menu rotates informally and is not published,2026-09-22
+NIT Puducherry,https://nitpy.ac.in,failed,hostel docs directory has rules/facilities PDFs only; no menu,2026-09-22
+NIT Karnataka Surathkal,https://nitk.ac.in,excluded,"only document found is a tender document (TenderDocumentHostelMess25.pdf), not a published menu",2026-09-22
+Cochin University of Science and Technology (CUSAT),https://hostels.cusat.ac.in,failed,connection failed; only a food-policy PDF found (no day-by-meal menu),2026-09-22
+IIIT Lucknow,https://iiitl.ac.in,failed,no menu newer than the 2019 PDF found,2026-09-22
+MNIT Jaipur,https://mnit.ac.in/cms/uploads/2022/12/MenuC.pdf,failed,Menu C also from 2022; same batch as A/B,2026-09-22
+IIIT Delhi,https://www.iiitd.ac.in/facilities/dining,failed,page has a mess photo only; no menu PDF link,2026-09-22
+"Chhatrapati Shahu Ji Maharaj University, Kanpur",https://csjmu.ac.in/facilities/hostels/,failed,still links the same 2022 PDF,2026-09-22
+IIT Roorkee,multiple bhawan sites (Azad/Sarojini/Kasturba/Indira/Govind/Jawahar/Ravindra),failed,no bhawan publishes a menu PDF or image publicly,2026-09-22
+Central University of Punjab,https://cup.edu.in/hostel,failed,HTTP 404,2026-09-22
+NIT Manipur,https://nitmanipur.ac.in/hostel,failed,generic error page; no working hostel section found,2026-09-22
+Banasthali Vidyapith,site search,failed,no public menu PDF,2026-09-22
+IIIT Allahabad,site search,failed,only Scribd reposts; no official current PDF,2026-09-22
+DTU Delhi,https://hostels.dtu.ac.in,failed,no menu PDF linked,2026-09-22
+HBTU Kanpur,https://hbtu.ac.in,failed,no menu PDF found,2026-09-22
+NIT Meghalaya,https://nitm.ac.in,failed,no menu PDF found,2026-09-22
+IIIT Manipur,https://iiitmanipur.ac.in,failed,no menu PDF found,2026-09-22
+IIT Jodhpur,https://iitj.ac.in,failed,menu only via internal app; no public PDF,2026-09-22
+GNDU Amritsar,https://gndu.ac.in,failed,no menu PDF found,2026-09-22
+MANIT Bhopal,https://manit.ac.in/content/hostels,failed,only a 2017 mess-charge fee PDF; no menu,2026-09-22
+MBM University Jodhpur,https://mbm.ac.in,failed,only a Scribd repost exists; no official PDF found,2026-09-22
+UPES Dehradun,site search,failed,no official PDF found,2026-09-22
+Graphic Era University Dehradun,site search,failed,menu only on internal student portal,2026-09-22
+MMMUT Gorakhpur,https://mmmut.ac.in/Hostel,failed,no menu PDF found,2026-09-22
+Panjab University Chandigarh,https://hostels.puchd.ac.in,failed,no menu PDF linked,2026-09-22
+KMC Language University Lucknow,https://kmclu.ac.in,excluded,narrative facilities description with photos; not a day-by-meal timetable,2026-09-22

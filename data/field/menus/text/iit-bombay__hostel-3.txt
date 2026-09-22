@@ -1,0 +1,24 @@
+<!-- IIT Bombay | Hostel 3 mess | read by the model -->
+| DAY | STRUCTURE | MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY | SUNDAY |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BREAKFA | Main dish | upma+sheera, Omlette | Aloo Paratha, Curd, egg Bhurji | idli, Sambhar, Chatni, Boiled Egg | thepla,curd,paneer bhurji | mendu vada, Sambhar, Chatni, Boiled Egg | puri bhaji,curd,Boiled Egg | Masala Dosa, Sambhar, Chatni, Boiled Egg |
+| ST | Sprouts | Moong | sweet corn | red chana | Boiled peanut | Red Chana | Sweet Corn | Peanuts |
+|  | Chocos/ cornflakes | Cornflakes | musli | chocos | Cornflakes | Chocos | Musli | Cornflakes |
+|  | Banana | Banana | Banana + Juice | Banana | Banana | Banana + Juice | Banana | Banana |
+|  | Plain rice, Special rice | Rice | jeera rice | rice | Jeera Rice | Rice | khichdi | Rice |
+|  | Dal | moong Dal | Dal fry | Butter Fried Dal | Dal fry | moong Dal | Dal punjabi fry | Toor Dal |
+|  | Roti/ Puri | Roti | Methi Puri | Roti | bhature | Roti | Roti | Roti |
+|  | Dry Vegetable | Aloo 65 |  | chilli gobi |  | mixed veg | kadhi pakode |  |
+| LUNCH | Curry Vegetable | soya bean masala | Rajma masala | chawli masala | Chole | sev bhaji | veg kurma | paneer kohlapuri |
+|  | Curd/ Raita/ Lassi/ Chaas | Curd | Chaas | rasna | Lassi | nimbu paani | curd | rasna |
+|  | Papad |  |  | Papad |  |  | papad | French Fries |
+| TIFFIN | Fruit/ Juice/ Shake | noodles | vada pav | panipuri | pav bhaji | samosa | ragda pattice | bread pakoda |
+|  | Others | Fruit | fruit |  | strawberry milkshake |  | Fruit | chocolate milkshake |
+|  | Plain rice, Special rice | veg pulao | Rice | Veg Biryani | kashmiri pulao | Tomato Rice | Veg Pulao | Rice |
+|  | Dal | Dal tadka | butter fried daal |  | Dal | Butter Fried Dal | Dal fry | Dal Tadka |
+|  | Roti/ Puri | Roti | Roti | Roti | Roti | tandoori Roti | Roti | Roti |
+|  | Curry Vegetable | bhindi fry | palak Paneer | Veg kohlapuri | dry Chana | paneer tikka | pindi chole | methi muuter mala |
+| DINNER | Dry Vegies | chana masala |  |  | veg kofta |  | baigan bhrata |  |
+|  | Sweet dish | kalakaand | rasgulla | rasmalai | moong halwa | kaju katli | burfi | gulab jamun |
+|  |  |  | french fries | Veg Raita |  | corn salad | masala papad | Pasta Salad |
+|  | Extras |  |  | Chicken Biriyani |  | butter chicken |  | egg masala |

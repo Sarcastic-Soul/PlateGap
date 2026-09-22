@@ -1,7 +1,0 @@
-<!-- Central University of Punjab | Student Cooperative Mess | read by the model -->
-<!-- page 1 -->
-| Days | Monday | Tuesday | Wednes day | Thurs day | Friday | Sater day | Sunday |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Break Fast | Aloo Paratha, Butter, Dahi, Tea | Gobhi Paratha, Butter,Dahi, Tea | Maithi/Onion Paratha, Butter, Dahi Tea. | Puri/Bread Plate, Chhole, Tea | Daal Paratha, Butter,Dahi, Coffee | Paneer Paratha, Butter, Tea, Aalu Dahi | Poha/ Bread, Egg/Banana, Tea |
-| Lunch | Rajma, Gheeya, Dahi, Rice, Roti, Salad | Lobia, Mix Vegetable, Dahi, Rice, Roti, Salad, Paper. | Mutter-Aloo/Shimla Mirch-Aalu, Kala Chana, Rice, Roti,Dahi, Salad | Crudhi-Pakora, Jeera-Aloo, Rice, Roti,Salad, Kadhi-Palk | Rice, Roti, Dahi, Salad, Gajar-Matar, Daal Makhni, Jeera Aalu | Rice, Roti, Dahi, Salad, Soybean Vegetable, Mix Daal | Safed Chana, Jeera Aloo, Puri/Batture, Rice, Mirch Fry, Raita |
-| Dinner | Masoor Daal, Besan Batta, Rice, Salad, Roti, Gulab Jamun | Mix Daal, Pyaaj Tamater Chatni, Polav Rice, Roti, Salad, Kheer | Mater/Palak-Paneer, Moong Masoor Daal, Rice, Roti, Salad | Chana Dal, Baingan Bharta, Rice, Roti, Salad, Sujee Halwa | Shahi-Paneer/Egg-Cur di, Rice, Roti, Salad | Mix Daal, Gobi Fry, Rice, Roti, Salad, Sevai, Papad, | Mung Shabbat, Kofta, Roti, Salad, Rice |

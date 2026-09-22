@@ -64,6 +64,7 @@ MEAL_LABELS = {
     "breakfast": "breakfast",
     "break fast": "breakfast",
     "brekfast": "breakfast",
+    "breakfa": "breakfast",
     "morning": "breakfast",
     "brunch": "lunch",
     "lunch": "lunch",
@@ -525,14 +526,19 @@ def _is_day_header(cells):
 
     This is the other way a timetable can be laid out, and by far the commoner
     one: days across the top, meals down the side. Every mess noticeboard
-    worth the name is drawn this way. The first cell is allowed not to be a
-    day, because it is the corner of the grid -- "Meal", "Day", or nothing.
+    worth the name is drawn this way. The first one or two cells are allowed
+    not to be a day, because they are the corner of the grid -- "Meal",
+    "Day", "Day | Structure", or nothing.
 
     A dated timetable can run past a week ("15th Feb, Friday" to "28th Feb,
     Thursday"). The first time each day appears is the one that is read; a
     column naming a day already seen comes back as None and is left out.
+
+    Returns `(skip, days)`, `skip` being how many corner cells came before
+    the day columns, so a caller reading the body rows knows where the label
+    ends and the days begin. `None` if the row is not a day header.
     """
-    for skip in (0, 1):
+    for skip in (0, 1, 2):
         days = [_day_in(cell) for cell in cells[skip:]]
         if len(days) < 3 or not all(days):
             continue
@@ -541,7 +547,7 @@ def _is_day_header(cells):
             if found in first:
                 days[position] = None
             first.add(found)
-        return days
+        return skip, days
     return None
 
 
@@ -610,6 +616,7 @@ def parse(catalog, text, aliases=None, name=None, region=None,
     meal = None
     columns = None
     day_columns = None
+    day_skip = 1
     items_read = 0
     truncated = False
     assumed_day = False
@@ -688,18 +695,19 @@ def parse(catalog, text, aliases=None, name=None, region=None,
         if grid is not None and len(grid) >= 4:
             found_days = _is_day_header(grid)
             if found_days:
-                day_columns, columns = found_days, None
+                day_skip, day_columns = found_days
+                columns = None
                 continue
 
-        # A row of a day-column grid. The first cell names the meal, or is
-        # blank because the meal is the one named a row or two above and the
-        # kitchen only wrote it once.
-        if day_columns is not None and grid is not None and len(grid) >= 2:
+        # A row of a day-column grid. The leading cell or two names the
+        # meal, or is blank because the meal is the one named a row or two
+        # above and the kitchen only wrote it once.
+        if day_columns is not None and grid is not None and len(grid) >= day_skip + 1:
             head = normalise(grid[0])
             label = MEAL_LABELS.get(head)
             if label is not None:
                 meal = label
-            body = grid[1:]
+            body = grid[day_skip:]
             filled = [cell for cell in body if cell]
             # A "daily" row whose items are spread across the day columns is
             # not a daily row at all -- it is a row of ordinary per-day

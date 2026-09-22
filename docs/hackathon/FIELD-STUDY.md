@@ -1,9 +1,9 @@
-# Field study: 27 published mess menus
+# Field study: 14 published mess menus
 
 One menu is an anecdote. PlateGap was built against the menu of the mess I
 eat at, and that proves the solver works on one menu. It does not show that
 the problem is common. So I took every hostel mess menu I could find on an
-Indian college website, 27 menus from 22 institutions, and ran each one
+Indian college website, 14 menus from 12 institutions, and ran each one
 through the same pipeline a person uses in the app. Then I solved a whole
 week for each.
 
@@ -27,32 +27,37 @@ which is part of why this study was worth doing.
 
 1. **Collected.** Every menu comes from an institution's own website. The URL,
    the date I retrieved it and the date the menu gives for itself are in
-   `data/field/menus/SOURCES.csv`. I tried 15 more that failed to download
-   (removed files, bot walls, login pages, dead servers). I set aside 7
-   documents that turned out not to be a hostel's menu: tender papers, a
-   priced guest-house list, a school, a duplicate. One of those was a list of
-   students' fee dues, which I deleted. All 22 are in
+   `data/field/menus/SOURCES.csv`. I tried 57 more that failed to download
+   (removed files, bot walls, login pages, dead servers, DNS failures, or no
+   public menu at all). I set aside 13 documents that turned out not to be a
+   hostel's published menu: tender documents, food-policy notes, a priced
+   guest-house list, a school, a duplicate, and four institutions whose menu
+   is only ever set informally by a student mess committee and never
+   published. One earlier excluded document was a list of students' fee
+   dues, which I deleted. 15 more menus that were in an earlier version of
+   this study were retired for being out of date (2012–2022) and, where a
+   current one could be found, replaced. All 85 are in
    `data/field/menus/FAILED.csv`.
-2. **Transcribed.** 25 of the menus are PDFs or scans. The app's own reader,
-   Amazon Nova Lite on Bedrock (`solver/menuscan.py`), copied them into text
-   one page at a time. The other two, a JSON feed and an HTML table, were
-   converted directly with no model involved. The raw documents belong to
-   the institutions and are not committed. The transcriptions are, in
-   `data/field/menus/text/`, so every number below can be traced back to the
-   text it came from.
+2. **Transcribed.** 12 of the 14 menus are PDFs, scans or a photo. The app's
+   own reader, Amazon Nova Lite on Bedrock (`solver/menuscan.py`), copied
+   them into text a page (or image) at a time. The other two, a JSON feed
+   and an HTML table, were converted directly with no model involved. The
+   raw documents belong to the institutions and are not committed. The
+   transcriptions are, in `data/field/menus/text/`, so every number below
+   can be traced back to the text it came from.
 3. **Parsed.** The live parser (`solver/menutext.py`, the one behind the
-   app's paste box) matched 2,577 written names to catalog dishes on its own.
+   app's paste box) matched 1,053 written names to catalog dishes on its own.
 4. **Settled.** The parser refuses to guess, so it left the rest. Every name
    it would not place was then settled in `data/field/settlements.json`,
    with a stated reason for each decision:
-   - 86 ordered rules covered 895 distinct names. For example, "any dal the
+   - 86 ordered rules covered 558 distinct names. For example, "any dal the
      catalog doesn't have becomes dal tadka", and "meat and fish are not
      counted, because the study solves vegetarian and egg diets".
-   - 349 more names were settled by hand. These were mostly cells where
+   - 149 more names were settled by hand. These were mostly cells where
      several dishes run together with no separator, such as "dal lauki chana
      seasonal veg plain rice phulka salad achar".
 
-   158 fragments were page furniture (serving hours, prices, page numbers)
+   71 fragments were page furniture (serving hours, prices, page numbers)
    and were dropped by pattern. At the end, no name was left unaccounted for.
    What every name became, and why, is listed in `data/field/settled.csv`.
 5. **Solved.** For each menu and each day, the solver answered the app's two
@@ -101,21 +106,22 @@ payasam and others.
 
 ### What the mess alone cannot reach
 
-A vegetarian eating the best plate the menu allows, every day of the week, within the portion limits. Out of 27 menus:
+A vegetarian eating the best plate the menu allows, every day of the week, within the portion limits. Out of 14 menus:
 
 | Nutrient | Women: short some day | Women: short every day | Men: short some day | Men: short every day |
 | --- | --- | --- | --- | --- |
-| Iron | 26 | 13 | 20 | 2 |
-| Vitamin B12 | 21 | 9 | 24 | 13 |
-| Calcium | 24 | 8 | 26 | 9 |
-| Zinc | 27 | 13 | 27 | 27 |
-| Potassium | 23 | 3 | 25 | 2 |
-| Vitamin C | 8 | 0 | 19 | 0 |
-| Vitamin A | 9 | 0 | 13 | 0 |
-| Magnesium | 4 | 0 | 8 | 0 |
-| Energy | 2 | 0 | 8 | 0 |
+| Iron | 12 | 6 | 9 | 1 |
+| Vitamin B12 | 9 | 2 | 10 | 3 |
+| Calcium | 11 | 3 | 13 | 2 |
+| Zinc | 14 | 4 | 14 | 14 |
+| Potassium | 13 | 2 | 13 | 3 |
+| Vitamin C | 4 | 0 | 8 | 1 |
+| Vitamin A | 6 | 0 | 8 | 0 |
+| Magnesium | 2 | 0 | 5 | 0 |
+| Energy | 2 | 0 | 5 | 0 |
 | Protein | 1 | 0 | 1 | 0 |
 | Fibre | 1 | 0 | 1 | 0 |
+| Folate | 0 | 0 | 1 | 0 |
 
 ### Menu by menu
 
@@ -123,35 +129,22 @@ Days of the week (out of 7) on which the best vegetarian plate from the mess is 
 
 | Institution | Mess | Menu dated | Dishes | Iron | B12 | Calcium | Top-up a week (woman) | Top-up a week (man) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| IIT Kharagpur | All halls - Hall Management Centre revised menu | effective 23/01/2017 | 35 | 7 | 7 | 7 | ₹741 | ₹454 |
-| SNS College of Engineering, Coimbatore | Hostel mess | not stated | 32 | 7 | 6 | 7 | ₹602 | ₹658 |
-| Pondicherry University | Madame Curie Mess - PhD scholars | 2022-2023 | 29 | 7 | 7 | 7 | ₹493 | ₹441 |
-| IIT Roorkee | Azad Bhawan mess | 15-11-2021 to 21-11-2021 | 47 | 4 | 4 | 6 | ₹454 | ₹537 |
-| Chhatrapati Shahu Ji Maharaj University, Kanpur | University hostel mess | not stated (uploaded 2022-08) | 38 | 7 | 7 | 7 | ₹403 | ₹271 |
-| IIT Kanpur | Hall VIII mess | Dated 20/01/2025 | 46 | 6 | 7 | 6 | ₹394 | ₹382 |
-| Pondicherry University | Ilango Adigal Hostel Mess - PhD scholars | 2022-23 (signed 28/06/2022) | 36 | 7 | 5 | 6 | ₹329 | ₹189 |
-| IIT Madras | CCW Veg Menu (weeks A-D, without non-veg extras) | not stated (signed 8/7) | 48 | 4 | 2 | 4 | ₹326 | ₹470 |
-| Central University of Punjab | Student Cooperative Mess | W.E.F. 12/12/2016 | 35 | 7 | 7 | 7 | ₹324 | ₹202 |
-| Sant Longowal Institute of Engineering and Technology (SLIET) | Hostel mess (common) | not stated (uploaded 2025-02; PDF created 2025-01-02) | 39 | 7 | 2 | 7 | ₹297 | ₹325 |
-| NIT Manipur | Hostels - revised mess menu | not stated (PDF created 2015-02-27) | 42 | 4 | 7 | 7 | ₹289 | ₹353 |
-| GNIOT Institute of Professional Studies, Greater Noida | Hostel mess | not stated (PDF created 2025-09-01) | 52 | 7 | 5 | 5 | ₹284 | ₹241 |
-| Tezpur University | KWH women's hostel mess | 15-28 Feb (year not stated) | 24 | 3 | 7 | 7 | ₹270 | ₹303 |
-| IIIT Lucknow | Institute mess | not stated (uploaded 2019-11; PDF created 2019-11-10) | 39 | 7 | 6 | 4 | ₹249 | ₹196 |
-| VNIT Nagpur | Aaswad mess (boys hostels) | Effective from 19 January 2026 | 54 | 7 | 7 | 6 | ₹235 | ₹197 |
-| IIT Bombay | Hostel 16 mess | 1/10/18 to 7/10/18 | 44 | 7 | 7 | 5 | ₹196 | ₹337 |
-| MNIT Jaipur | Girls hostel mess - Menu B | not stated (uploaded 2022-12) | 58 | 4 | 1 | 2 | ₹188 | ₹350 |
-| IIIT Delhi | Both messes (common menu) | w.e.f. 14 October 2019 | 53 | 4 | 2 | 1 | ₹182 | ₹157 |
-| NIT Tiruchirappalli | Boys mess (Rs 61/day) | not stated (PDF created 2012-07-06) | 59 | 6 | 0 | 4 | ₹156 | ₹75 |
-| IIT Tirupati | Institute hostel mess (common menu) | New Mess Menu Apr 2024 | 46 | 7 | 0 | 5 | ₹143 | ₹105 |
-| MNIT Jaipur | Girls hostel mess - Menu A | not stated (uploaded 2022-12) | 62 | 4 | 1 | 1 | ₹141 | ₹293 |
-| NIT Tiruchirappalli | All NITT messes - South Indian and North Indian tentative menus | not stated; marked TENTATIVE (PDF created 2015-07-12) | 56 | 7 | 0 | 4 | ₹137 | ₹72 |
-| IIT Delhi | Jwalamukhi hostel mess | month 'September 26' (Sept 2026) | 64 | 4 | 2 | 3 | ₹110 | ₹126 |
-| Nalanda University | University hostel mess | rotating weeks (1st&3rd / 2nd&4th); not dated (uploaded 2019-07; PDF created 2016-07-02) | 60 | 3 | 1 | 1 | ₹82 | ₹81 |
-| IIT Kanpur | Hall II mess | not stated | 49 | 1 | 0 | 0 | ₹66 | ₹76 |
-| IISER Bhopal | Mess 3 & Mess 4 (Veg mess), Dining Hall 3 | 17/09/2026 | 52 | 0 | 0 | 0 | ₹51 | ₹73 |
-| IIT Kanpur | Hall XI mess | 01-10-2024 | 47 | 1 | 0 | 0 | ₹38 | ₹74 |
+| SNS College of Engineering, Coimbatore | Hostel mess | not stated | 32 | 7 | 6 | 7 | ₹559 | ₹621 |
+| IIT Kanpur | Hall VIII mess | Dated 20/01/2025 | 46 | 6 | 6 | 6 | ₹387 | ₹375 |
+| IIT Dharwad | Central mess (common) | not stated (PDF created 2026-09-10) | 33 | 7 | 1 | 6 | ₹334 | ₹251 |
+| IIT Madras | CCW Veg Menu (weeks A-D, without non-veg extras) | not stated (signed 8/7) | 48 | 4 | 2 | 4 | ₹318 | ₹464 |
+| Sant Longowal Institute of Engineering and Technology (SLIET) | Hostel mess (common) | not stated (uploaded 2025-02; PDF created 2025-01-02) | 39 | 7 | 2 | 7 | ₹297 | ₹319 |
+| Tezpur University | KWH women's hostel mess | 15-28 Feb (year not stated) | 24 | 3 | 7 | 7 | ₹269 | ₹303 |
+| GNIOT Institute of Professional Studies, Greater Noida | Hostel mess | not stated (PDF created 2025-09-01) | 52 | 7 | 5 | 5 | ₹267 | ₹222 |
+| VNIT Nagpur | Aaswad mess (boys hostels) | Effective from 19 January 2026 | 54 | 7 | 7 | 6 | ₹223 | ₹184 |
+| IIT Tirupati | Institute hostel mess (common menu) | New Mess Menu Apr 2024 | 46 | 7 | 0 | 5 | ₹142 | ₹100 |
+| IIT Delhi | Jwalamukhi hostel mess | month 'September 26' (Sept 2026) | 64 | 4 | 2 | 3 | ₹109 | ₹121 |
+| IIT Kanpur | Hall II mess | not stated | 49 | 1 | 0 | 0 | ₹64 | ₹70 |
+| IISER Bhopal | Mess 3 & Mess 4 (Veg mess), Dining Hall 3 | 17/09/2026 | 52 | 0 | 0 | 0 | ₹48 | ₹68 |
+| IIT Bombay | Hostel 3 mess | not stated | 53 | 0 | 0 | 2 | ₹43 | ₹87 |
+| IIT Kanpur | Hall XI mess | 01-10-2024 | 47 | 1 | 0 | 0 | ₹36 | ₹68 |
 
-Median top-up: ₹249 a week for a woman, ₹241 for a man. Range ₹38 to ₹741 (women) and ₹72 to ₹658 (men).
+Median top-up: ₹267 a week for a woman, ₹222 for a man. Range ₹36 to ₹559 (women) and ₹68 to ₹621 (men).
 
 ### What closes the gap
 
@@ -159,31 +152,31 @@ How many menus' cheapest weekly top-up (for either sex) includes each item.
 
 | Item | Menus |
 | --- | --- |
-| Spinach, cooked | 27 |
-| Guava | 27 |
-| Milk | 25 |
-| Carrot | 20 |
-| Soya chunks | 17 |
-| Rajma, boiled | 15 |
-| Boiled chana | 14 |
-| Paneer | 6 |
-| Curd | 5 |
-| Roasted peanuts | 5 |
+| Spinach, cooked | 14 |
+| Guava | 14 |
+| Milk | 11 |
+| Carrot | 11 |
+| Rajma, boiled | 6 |
+| Soya chunks | 6 |
+| Boiled chana | 6 |
+| Roasted peanuts | 3 |
+| Curd | 1 |
+| Paneer | 1 |
 
 ### With and without the hand-settled names
 
-The 22 menus the live parser alone gave a dish for every day, solved twice: with every settled name, and with only the parser's own matches. Menus short on a nutrient on every day of the week:
+The 13 menus the live parser alone gave a dish for every day, solved twice: with every settled name, and with only the parser's own matches. Menus short on a nutrient on every day of the week:
 
 | Nutrient | Women, settled | Women, parser only | Men, settled | Men, parser only |
 | --- | --- | --- | --- | --- |
-| Iron | 10 | 21 | 2 | 9 |
-| Vitamin B12 | 8 | 13 | 10 | 15 |
-| Calcium | 7 | 16 | 7 | 15 |
-| Zinc | 9 | 19 | 22 | 22 |
-| Potassium | 2 | 5 | 1 | 3 |
-| Vitamin C | 0 | 8 | 0 | 13 |
-| Vitamin A | 0 | 4 | 0 | 4 |
-| Energy | 0 | 0 | 0 | 3 |
+| Iron | 6 | 13 | 1 | 6 |
+| Vitamin B12 | 2 | 7 | 3 | 7 |
+| Calcium | 3 | 9 | 2 | 10 |
+| Zinc | 4 | 12 | 13 | 12 |
+| Potassium | 1 | 5 | 2 | 3 |
+| Vitamin C | 0 | 5 | 1 | 7 |
+| Vitamin A | 0 | 3 | 0 | 3 |
+| Energy | 0 | 0 | 0 | 2 |
 
 <!-- end generated -->
 
@@ -218,15 +211,10 @@ The 22 menus the live parser alone gave a dish for every day, solved twice: with
 - **A published menu is an intention.** It is not what was served, in what
   amount, or what was eaten. Serving sizes are the catalog's, because no
   mess publishes its ladle weights.
-- **Many menus are old.** Only a few are current (IISER Bhopal, IIT Delhi,
-  VNIT Nagpur). The "Menu dated" column says what each one claims. Several
-  are from 2016–2019. The study is about what messes plan, and old plans are
-  still plans, but I would not call any single row a description of that mess
-  today.
 - **It is a convenience sample.** These are the menus that are online, which
-  over-represents IITs and NITs. Four institutions have more than one menu
-  here (IIT Kanpur, MNIT Jaipur, Pondicherry University, NIT Trichy). Twenty-
-  two institutions do not make a claim about Indian hostels in general.
+  over-represents IITs. One institution has more than one menu here (IIT
+  Kanpur, three halls). Twelve institutions do not make a claim about Indian
+  hostels in general.
 - **Stand-ins are approximations.** A dish the catalog does not have is
   counted as the nearest dish it does have: any dal as dal tadka, any
   vegetable sabzi as mix veg. `settled.csv` has every one of these, so each

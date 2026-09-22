@@ -1,0 +1,383 @@
+{
+ "matched": 79,
+ "menu": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "orange_juice_glass",
+     "plain_rice",
+     "roti",
+     "mix_veg",
+     "green_chutney",
+     "red_chutney",
+     "cereal_bowl",
+     "dal_tadka"
+    ],
+    "dinner": [
+     "salad",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "ratlami_sev"
+    ],
+    "snacks": [
+     "samosa",
+     "roti",
+     "onion_rice",
+     "dal_tadka",
+     "mutter_paneer"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "upma",
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "moong_halwa",
+     "egg_bhurji",
+     "dal_tadka",
+     "cereal_bowl",
+     "pakoda"
+    ],
+    "dinner": [
+     "chole",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "plain_curd",
+     "soya_badi"
+    ],
+    "snacks": [
+     "noodles",
+     "fruit_portion",
+     "dal_tadka",
+     "roti",
+     "peas_pulao",
+     "kurmuri_bhindi"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poori",
+     "plain_curd",
+     "boiled_egg",
+     "sweetcorn_side",
+     "fruit_portion",
+     "roti",
+     "cereal_bowl",
+     "plain_rice",
+     "dal_mix",
+     "dal_tadka",
+     "dahi"
+    ],
+    "dinner": [
+     "papad",
+     "mix_veg",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "plain_curd",
+     "papad",
+     "mix_veg"
+    ],
+    "snacks": [
+     "fruit_portion",
+     "roti",
+     "chole",
+     "corn_chat",
+     "peas_pulao",
+     "dal_tadka"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "green_chutney",
+     "boiled_sprouts",
+     "cereal_bowl",
+     "toor_dal_tadka"
+    ],
+    "dinner": [
+     "gulab_jamun",
+     "salad",
+     "egg_curry"
+    ],
+    "lunch": [
+     "french_fries",
+     "mutter_paneer"
+    ],
+    "snacks": [
+     "pakoda",
+     "plain_rice",
+     "dal_tadka",
+     "roti",
+     "milk_glass",
+     "mix_veg"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "plain_curd",
+     "paneer_bhurji",
+     "fruit_portion",
+     "jeera_rice",
+     "aloo_paratha",
+     "boiled_sprouts",
+     "cereal_bowl",
+     "dal_tadka",
+     "poori"
+    ],
+    "dinner": [
+     "veg_kofta",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "chole",
+     "dahi"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "roti",
+     "milk_glass",
+     "peas_pulao",
+     "dal_tadka",
+     "mix_veg"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "plain_curd",
+     "egg_bhurji",
+     "sweetcorn_side",
+     "fruit_portion",
+     "orange_juice_glass",
+     "jeera_rice",
+     "poori",
+     "cereal_bowl",
+     "dal_tadka"
+    ],
+    "dinner": [
+     "french_fries",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "rajma_dish",
+     "dahi"
+    ],
+    "snacks": [
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "vada",
+     "bread_slice",
+     "dal_tadka",
+     "mutter_paneer"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "plain_rice",
+     "roti",
+     "green_chutney",
+     "red_chutney",
+     "cereal_bowl",
+     "dal_tadka",
+     "gobhi_dry"
+    ],
+    "dinner": [
+     "veg_raita",
+     "chicken_biryani",
+     "gulab_jamun"
+    ],
+    "lunch": [
+     "papad",
+     "rajma_dish"
+    ],
+    "snacks": [
+     "veg_biryani",
+     "roti",
+     "veg_kolhapuri",
+     "corn_chat"
+    ]
+   }
+  },
+  "id": "iit-bombay__hostel-3",
+  "name": "IIT Bombay",
+  "region": "IN"
+ },
+ "noise": 0,
+ "open": [],
+ "parserOnly": {
+  "cuisine": "indian",
+  "daily": {},
+  "days": {
+   "fri": {
+    "breakfast": [
+     "vada",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "orange_juice_glass",
+     "plain_rice",
+     "roti",
+     "mix_veg"
+    ],
+    "dinner": [
+     "salad"
+    ],
+    "snacks": [
+     "samosa",
+     "roti"
+    ]
+   },
+   "mon": {
+    "breakfast": [
+     "upma",
+     "fruit_portion",
+     "plain_rice",
+     "roti"
+    ],
+    "lunch": [
+     "plain_curd"
+    ],
+    "snacks": [
+     "noodles",
+     "fruit_portion",
+     "dal_tadka",
+     "roti"
+    ]
+   },
+   "sat": {
+    "breakfast": [
+     "poori",
+     "plain_curd",
+     "boiled_egg",
+     "sweetcorn_side",
+     "fruit_portion",
+     "roti"
+    ],
+    "dinner": [
+     "papad"
+    ],
+    "lunch": [
+     "plain_curd",
+     "papad"
+    ],
+    "snacks": [
+     "fruit_portion",
+     "roti",
+     "chole"
+    ]
+   },
+   "sun": {
+    "breakfast": [
+     "dosa",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "plain_rice",
+     "roti"
+    ],
+    "dinner": [
+     "gulab_jamun",
+     "salad"
+    ],
+    "lunch": [
+     "french_fries"
+    ],
+    "snacks": [
+     "pakoda",
+     "plain_rice",
+     "dal_tadka",
+     "roti"
+    ]
+   },
+   "thu": {
+    "breakfast": [
+     "plain_curd",
+     "paneer_bhurji",
+     "fruit_portion",
+     "jeera_rice"
+    ],
+    "dinner": [
+     "veg_kofta",
+     "moong_halwa"
+    ],
+    "lunch": [
+     "chole"
+    ],
+    "snacks": [
+     "pav_bhaji",
+     "roti"
+    ]
+   },
+   "tue": {
+    "breakfast": [
+     "aloo_paratha",
+     "plain_curd",
+     "egg_bhurji",
+     "sweetcorn_side",
+     "fruit_portion",
+     "orange_juice_glass",
+     "jeera_rice",
+     "poori"
+    ],
+    "dinner": [
+     "french_fries"
+    ],
+    "lunch": [
+     "rajma_dish"
+    ],
+    "snacks": [
+     "fruit_portion",
+     "plain_rice",
+     "roti"
+    ]
+   },
+   "wed": {
+    "breakfast": [
+     "idli",
+     "sambhar",
+     "boiled_egg",
+     "fruit_portion",
+     "plain_rice",
+     "roti"
+    ],
+    "dinner": [
+     "veg_raita",
+     "chicken_biryani"
+    ],
+    "lunch": [
+     "papad"
+    ],
+    "snacks": [
+     "veg_biryani",
+     "roti",
+     "veg_kolhapuri"
+    ]
+   }
+  },
+  "id": "iit-bombay__hostel-3",
+  "name": "IIT Bombay",
+  "region": "IN"
+ },
+ "settledByHand": 67,
+ "warnings": []
+}
