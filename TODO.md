@@ -11,7 +11,6 @@ done.
 
 ## Product
 
-- [ ] Re-shoot the demo screenshots: `03-the-menu-audit.png` predates the katori serving sizes and shows the old audit (see [docs/hackathon/demo/README.md](docs/hackathon/demo/README.md))
 - [ ] Decide whether a shared link should be able to carry prices as well as the menu
 - [ ] A scanned menu's corrections are lost on "Start over" — worth keeping the edited text around
 - [ ] Only the first page of a multi-page PDF menu is reliably read; a second page would need a second call

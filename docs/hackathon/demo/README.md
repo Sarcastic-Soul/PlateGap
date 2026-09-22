@@ -18,11 +18,6 @@ looked fine.
 | [06-us-dining-hall-audit.png](06-us-dining-hall-audit.png) | The dining-hall audit at 600 students: $19,835.57 a month, of which a black bean and rice bowl recovers $6,056.85. At the 3,000 students the write-up quotes, that is $99,177.86 and $30,284. Each recommendation shows what it costs in energy, saturated fat and sodium next to what it saves. |
 | [07-build-a-menu.png](07-build-a-menu.png) | The builder: start from a preset or from nothing, pick dishes per meal per day, and share the result as a link that carries the whole menu in the URL fragment. |
 
-**03 is out of date.** It was shot before servings were resized to the
-standard katori on 2026-09-21, and still shows the old audit (₹271,698 a month,
-mutter paneer first). The caption above gives what the live site shows now.
-Re-shoot before submitting.
-
 Re-shoot them with:
 
 ```bash
