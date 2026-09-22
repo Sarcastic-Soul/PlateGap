@@ -9,15 +9,15 @@ CloudTrail itself.
 
 | | |
 | --- | --- |
-| Window | 2026-09-19T16:19:11Z to 2026-09-21T14:29:43Z |
-| Mutating calls | 123 |
+| Window | 2026-09-19T16:19:11Z to 2026-09-22T13:27:12Z |
+| Mutating calls | 133 |
 | Distinct API calls | 40 |
 
 ## Who made the calls
 
 | Calls | Client |
 | --- | --- |
-| 54 | GitHub Actions deploying over OIDC |
+| 64 | GitHub Actions deploying over OIDC |
 | 36 | Terraform, run by the agent's bootstrap script |
 | 26 | AWS CLI, driven by Claude Code |
 | 5 | AWS CLI as the root user, creating the IAM user |
@@ -27,8 +27,8 @@ CloudTrail itself.
 
 | Calls | API |
 | --- | --- |
-| 30 | CreateInvalidation |
-| 28 | UpdateFunctionCode20150331v2 |
+| 35 | CreateInvalidation |
+| 33 | UpdateFunctionCode20150331v2 |
 | 6 | PutRolePolicy |
 | 6 | AddPermission20150331v2 |
 | 5 | CreateRole |

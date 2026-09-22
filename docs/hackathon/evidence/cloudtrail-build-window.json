@@ -6895,5 +6895,615 @@
    "sessionContext": {},
    "type": "AssumedRole"
   }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "d8aeb6e2-5ef5-4dcb-9d85-d83d4c6009f6",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-21T14:49:21Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "903feb46-4985-4413-99dd-11c6e2e96536",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "rOXDO4PuALI9/KtxiEWIk920g8VU9Od9mNr+CCUUPjY=",
+   "codeSize": 88371,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-21T14:49:21.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 1769,
+   "packageType": "Zip",
+   "revisionId": "c2b835cf-8c04-4335-9fda-7a6ad2907e93",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 30,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/99c0a5687f53 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "0027ccd5-a3b7-4d41-ba95-61f70a0d9b42",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-21T14:49:30Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "6a3192da-d40a-43a1-8fdf-8192949cc212",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1790002170-181173",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-21T14:49:30Z",
+    "id": "ICY97A88M7IZ4GDWKI4JMYX0JB",
+    "invalidationBatch": {
+     "callerReference": "cli-1790002170-181173",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/ICY97A88M7IZ4GDWKI4JMYX0JB"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/99c0a5687f53 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "91aa0a8f-7acc-46f3-98e4-0535df0a59d1",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-21T15:28:02Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "0dd56e1d-f4bb-46a1-9415-c09d61c97d0e",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "t3MdI8/ejsBDI/T9bq+7wO3rbCl8bk+eUQOQlZjMwYk=",
+   "codeSize": 88399,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-21T15:28:02.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 1769,
+   "packageType": "Zip",
+   "revisionId": "05fe8f1b-8a3e-4bf7-8914-53689b3da4f8",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 30,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/0ad97d4753d9 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "fb0931d0-da23-4f50-a6c9-67e6265ed2ac",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-21T15:28:13Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "dbe1e3b8-aa57-45d5-9815-36d3390f7445",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1790004493-927044",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-21T15:28:13Z",
+    "id": "I9X7ONEIHD759ZEW047W09BMVC",
+    "invalidationBatch": {
+     "callerReference": "cli-1790004493-927044",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/I9X7ONEIHD759ZEW047W09BMVC"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/0ad97d4753d9 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "3dc1ffbd-ef56-4194-9d90-bf765b64cea3",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-22T12:40:52Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "73709f0f-f8ea-4193-ae48-9224bfbd07aa",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "G4ikSyrDsmIt1H/xGEH/kCo1nXpXc+AyzPMdrPlnlfE=",
+   "codeSize": 88551,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-22T12:40:52.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 1769,
+   "packageType": "Zip",
+   "revisionId": "cd2213ba-0701-4c6e-9d9a-5af6e0556e79",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 30,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/d7dd384b07d7 md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "225afc33-ef0b-4021-b8ae-186ed6923dfe",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-22T12:41:00Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "6fff6b0d-0be3-49e5-afc1-0a349dbd7f74",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1790080860-166351",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-22T12:41:00Z",
+    "id": "I13NI2JRV2NSDZ0XGWBZKT8W5P",
+    "invalidationBatch": {
+     "callerReference": "cli-1790080860-166351",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/I13NI2JRV2NSDZ0XGWBZKT8W5P"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/d7dd384b07d7 md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "9955b1a6-00c7-498a-9501-b800fc92aa54",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-22T12:53:33Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "1f69b841-fa4a-409d-b767-f7ea68f2b5e2",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "G4ikSyrDsmIt1H/xGEH/kCo1nXpXc+AyzPMdrPlnlfE=",
+   "codeSize": 88551,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-22T12:53:33.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 1769,
+   "packageType": "Zip",
+   "revisionId": "a3d2426b-7cdd-4610-bf17-083fa02eee75",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 30,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/0f57b6e65d9a md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "0bec5146-e622-4d7e-a919-acdf4a7c715c",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-22T12:53:42Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "92b3e093-760e-4b9d-a9bb-a9104e7381c6",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1790081622-119399",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-22T12:53:42Z",
+    "id": "ICHJXXETS94WUJL9GSJ3GA9EF2",
+    "invalidationBatch": {
+     "callerReference": "cli-1790081622-119399",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/ICHJXXETS94WUJL9GSJ3GA9EF2"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/0f57b6e65d9a md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "a6944d7a-f759-4917-b9ae-dd198d280425",
+  "eventName": "UpdateFunctionCode20150331v2",
+  "eventSource": "lambda.amazonaws.com",
+  "eventTime": "2026-09-22T13:27:01Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "93613b6c-3721-4fd1-9fc8-42e19f3ddf0b",
+  "requestParameters": {
+   "dryRun": false,
+   "functionName": "plategap",
+   "publish": false
+  },
+  "responseElements": {
+   "architectures": [
+    "arm64"
+   ],
+   "codeSha256": "G4ikSyrDsmIt1H/xGEH/kCo1nXpXc+AyzPMdrPlnlfE=",
+   "codeSize": 88551,
+   "description": "",
+   "environment": {},
+   "ephemeralStorage": {
+    "size": 512
+   },
+   "functionArn": "arn:aws:lambda:us-east-1:ACCOUNT:function:plategap",
+   "functionName": "plategap",
+   "handler": "handler.handler",
+   "lastModified": "2026-09-22T13:27:01.000+0000",
+   "lastUpdateStatus": "InProgress",
+   "lastUpdateStatusReason": "The function is being created.",
+   "lastUpdateStatusReasonCode": "Creating",
+   "loggingConfig": {
+    "logFormat": "Text",
+    "logGroup": "/aws/lambda/plategap"
+   },
+   "memorySize": 1769,
+   "packageType": "Zip",
+   "revisionId": "9e4b8589-4ab5-4a11-b37f-0671aa311aab",
+   "role": "arn:aws:iam::ACCOUNT:role/plategap-lambda",
+   "runtime": "python3.12",
+   "runtimeVersionConfig": {
+    "runtimeVersionArn": "arn:aws:lambda:us-east-1::runtime:0fec05b8b43b0ecfbabe4fd585b35e423f655861556712f8a10b0e8739c36c07"
+   },
+   "snapStart": {
+    "applyOn": "None",
+    "optimizationStatus": "Off"
+   },
+   "state": "Active",
+   "timeout": 30,
+   "tracingConfig": {
+    "mode": "PassThrough"
+   },
+   "version": "$LATEST"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "lambda.us-east-1.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/b13a37bf099e md/distrib#ubuntu.24 md/prompt#off md/command#lambda.update-function-code",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
+ },
+ {
+  "apiVersion": "2020_05_31",
+  "awsRegion": "us-east-1",
+  "eventCategory": "Management",
+  "eventID": "3c946966-5979-404e-90cc-ed7ea453998f",
+  "eventName": "CreateInvalidation",
+  "eventSource": "cloudfront.amazonaws.com",
+  "eventTime": "2026-09-22T13:27:12Z",
+  "eventType": "AwsApiCall",
+  "eventVersion": "1.11",
+  "managementEvent": true,
+  "readOnly": false,
+  "requestID": "cc9506b4-f248-4871-a157-4746dbd06d59",
+  "requestParameters": {
+   "distributionId": "EE87SI0UJ2WTE",
+   "invalidationBatch": {
+    "callerReference": "cli-1790083631-271534",
+    "paths": {
+     "items": [
+      "/*"
+     ],
+     "quantity": 1
+    }
+   }
+  },
+  "responseElements": {
+   "invalidation": {
+    "createTime": "2026-09-22T13:27:12Z",
+    "id": "I1QHZ6R39Q4BNQUPBYHXYO0IIH",
+    "invalidationBatch": {
+     "callerReference": "cli-1790083631-271534",
+     "paths": {
+      "items": [
+       "/*"
+      ],
+      "quantity": 1
+     }
+    },
+    "status": "InProgress"
+   },
+   "location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/EE87SI0UJ2WTE/invalidation/I1QHZ6R39Q4BNQUPBYHXYO0IIH"
+  },
+  "tlsDetails": {
+   "cipherSuite": "TLS_AES_128_GCM_SHA256",
+   "clientProvidedHostHeader": "cloudfront.amazonaws.com",
+   "tlsVersion": "TLSv1.3"
+  },
+  "userAgent": "aws-cli/2.36.40 md/awscrt#0.36.2 ua/2.1 os/linux#6.17.0-1022-azure md/arch#x86_64 lang/python#3.14.6 md/pyimpl#CPython m/g,E,Z,b cfg/retry-mode#standard md/installer#exe sid/b13a37bf099e md/distrib#ubuntu.24 md/prompt#off md/command#cloudfront.create-invalidation",
+  "userIdentity": {
+   "sessionContext": {},
+   "type": "AssumedRole"
+  }
  }
 ]

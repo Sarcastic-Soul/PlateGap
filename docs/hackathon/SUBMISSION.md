@@ -273,14 +273,14 @@ built this stack, with the client that made it:
 
 | Calls | Client |
 | --- | --- |
-| 54 | GitHub Actions deploying over OIDC, set up by the agent |
+| 64 | GitHub Actions deploying over OIDC, set up by the agent |
 | 36 | Terraform, run by the agent's bootstrap script |
 | 26 | AWS CLI, driven by Claude Code |
 | 5 | AWS CLI as the root user, creating the IAM user the agent works as |
 | 2 | A browser (me, in the console) |
 
-(Export of 2026-09-21. Re-run the script before posting and copy the table it
-writes.)
+(Export of 2026-09-22, window 2026-09-19T16:19:11Z to 2026-09-22T13:27:12Z,
+133 mutating calls across 40 distinct APIs.)
 
 `CreateFunction`, `CreateBucket`, `CreateDistributionWithTags`,
 `CreateOpenIDConnectProvider`, `PutBucketPolicy`, `UpdateFunctionCode` — all of
