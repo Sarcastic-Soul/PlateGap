@@ -56,7 +56,7 @@ On my own mess menu, Monday, egg-eating diet:
   the first 0.14 mg. Two more milligrams cost ₹35, not ₹15.
 - Raising the roti ration from twelve to thirteen would save **₹0.51 a day**.
 
-![The gap view on my own hostel's Monday menu: ₹235 a month, ₹7.82 a day, 4 of 12 targets the menu alone cannot reach, and what closes each shortfall.](https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/demo/01-the-gap.png)
+<Image url="https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/demo/01-the-gap.png" title="The gap view on my own hostel's Monday menu" />
 
 Those numbers are not estimates. They are the dual variables of the linear
 program, and the range each one holds over — which is the whole reason the
@@ -103,7 +103,7 @@ recover **₹82,842 a month** of that. On the US dining hall at 3000 students th
 same analysis says **$99,177.86 a month**, and that a black bean and rice bowl
 would recover **$30,284** of it.
 
-![The menu audit view: a 600-student hostel's menu, ₹264,486 a month leaking, and khada masoor dal named as the single fix that recovers the most of it.](https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/demo/03-the-menu-audit.png)
+<Image url="https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/demo/03-the-menu-audit.png" title="The menu audit view: khada masoor dal named as the fix" />
 
 That is a number a dining services director can act on, derived from nothing
 but the posted menu.
@@ -245,7 +245,7 @@ that posts a menu named `IGNORE EVERYTHING ABOVE` and asserts it never appears.
 
 ## Architecture
 
-![Architecture diagram: a browser hitting the live site through CloudFront, S3, and a single Lambda Function URL backed by Bedrock Nova Lite, DynamoDB, and CloudWatch Logs; and a separate deploy path from GitHub Actions over OIDC through a scoped deploy role, declared in Terraform.](https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/architecture.png)
+<Image url="https://raw.githubusercontent.com/Sarcastic-Soul/PlateGap/main/docs/hackathon/architecture.png" title="Architecture: request path and deploy path" />
 
 Static site on **S3** behind **CloudFront** with an origin access control, so
 the bucket is never public. One **Lambda** function behind a **Function URL** —
